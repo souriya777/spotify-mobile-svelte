@@ -1,0 +1,29 @@
+:root {
+  --color-bg-dark: #000;
+  --color-bg: #121212;
+  --color-text-white: #fff;
+  --color-text-grey: #a7a7a7;
+  --color-spotify: #1db954;
+}
+
+body {
+  font-family: 'circularsp-book';
+  // FIXME
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  height: 100vh;
+    background: aquamarine;
+    display: grid;
+    place-items: center;
+}
+
+button {
+  cursor: pointer;
+}
