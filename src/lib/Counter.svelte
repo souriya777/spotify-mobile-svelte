@@ -1,8 +1,12 @@
 <script>
-  let count = 0
+  console.log('toto');
+  console.log('toto');
+  console.log('toto');
+
+  let count = 0;
   const increment = () => {
-    count += 1
-  }
+    count += 1;
+  };
 </script>
 
 <button on:click={increment}>
