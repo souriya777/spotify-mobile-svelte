@@ -1,9 +1,11 @@
 :root {
   --color-bg-dark: #000;
-  --color-bg: #121212;
+  --color-bg-spotify: #121212;
   --color-text-white: #fff;
   --color-text-grey: #a7a7a7;
   --color-spotify: #1db954;
+  --FIXME-font-weight-bold: bold;
+  --font-size-iphone-top: 11px;
 }
 
 body {
@@ -19,11 +21,14 @@ body {
 
 main {
   height: 100vh;
-  background: aquamarine;
   display: grid;
   place-items: center;
 }
 
 button {
   cursor: pointer;
+}
+
+svg {
+  display: flex;
 }
