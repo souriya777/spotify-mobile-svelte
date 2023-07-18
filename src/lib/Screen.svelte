@@ -6,6 +6,7 @@
   import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
   import SpotifyAuthorize from '@/lib/SpotifyAuthorize.svelte';
   import SpotifyToken from '@/lib/SpotifyToken.svelte';
+  import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
 
   let now = Date.now();
   $: time = hourMinute(now);
@@ -80,6 +81,7 @@
 
     <SpotifyAuthorize />
     <SpotifyToken />
+    <SpotifyMyAlbums />
 
     <p>40 Most Beautiful Piano Classics</p>
     <div class="temp">

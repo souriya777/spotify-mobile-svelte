@@ -8,7 +8,6 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## MVP
 
-- feat(spotify-api) load 50 1st albums
 - feat(spotify-api): can: play a song, move to next/previous track !
 - refactor(general): refactor all my code
 
