@@ -1,6 +1,7 @@
 <script>
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
-  import { SPOTIFY_ACCESS_TOKEN } from '@/js/store';
+  import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_GRANT_WAITING } from '@/js/store';
+  import { forceSpotifyGrant } from '@/js/spotify-utils';
 
   const script = document.createElement('script');
   script.src = 'https://sdk.scdn.co/spotify-player.js';
@@ -14,12 +15,14 @@
   // let TRACK_URI = "0xtN05SZDvg943I3x08KT7";
 
   window.onSpotifyWebPlaybackSDKReady = () => {
+    console.log('onSpotifyWebPlaybackSDKReady');
+
     PLAYER = new window.Spotify.Player({
-      name: 'Spotify svelte',
+      name: 'Spotify svelte', // FIXME move in .env
       getOAuthToken: (cb) => {
         cb($SPOTIFY_ACCESS_TOKEN);
       },
-      volume: 1,
+      volume: 0.7,
     });
 
     PLAYER.addListener('ready', ({ device_id }) => {
@@ -31,7 +34,24 @@
       console.log('Device ID has gone offline', device_id);
     });
 
+    // PLAYER.on('initialization_error', ({ message }) => {
+    //   console.error('Failed to initialize', message);
+    // });
+
+    // PLAYER.on('authentication_error', ({ message }) => {
+    //   console.error('Failed to authenticate', message);
+    // });
+
+    // PLAYER.on('account_error', ({ message }) => {
+    //   console.error('Failed to validate Spotify account', message);
+    // });
+
+    // PLAYER.on('playback_error', ({ message }) => {
+    //   console.error('Failed to perform playback', message);
+    // });
+
     PLAYER.connect();
+    playMe();
   };
 
   function playMe() {
@@ -47,7 +67,15 @@
     })
       .then((response) => console.log(response?.data))
       .catch((error) => {
-        console.error(error.toJSON());
+        const errorJSON = error.toJSON();
+        console.error('🌱', error.toJSON());
+        if (401 === errorJSON?.status) {
+          console.log(
+            '[souriya 😎]: Spotify returns 401 -> refresh access',
+            !$SPOTIFY_GRANT_WAITING
+          );
+          forceSpotifyGrant();
+        }
       });
   }
 </script>

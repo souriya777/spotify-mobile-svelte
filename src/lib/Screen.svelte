@@ -5,10 +5,11 @@
   import IosAirplaneSvg from '@/lib/svg/IosAirplaneSvg.svelte';
   import IosSignalSvg from '@/lib/svg/IosSignalSvg.svelte';
   import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
-  import SpotifyAuthorize from '@/lib/SpotifyAuthorize.svelte';
-  import SpotifyToken from '@/lib/SpotifyToken.svelte';
+  import SpotifyGrant from '@/lib/SpotifyGrant.svelte';
   import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
   import WebPlayer from '@/lib/WebPlayer.svelte';
+
+  // import { authorize } from '@/js/spotify-utils';
 
   let now = Date.now();
   $: time = hourMinute(now);
@@ -81,8 +82,7 @@
 
     <a href="/"><img src="/spotify-logo.svg" class="logo" alt="spotify logo" /></a>
 
-    <SpotifyAuthorize />
-    <SpotifyToken />
+    <SpotifyGrant />
     <SpotifyMyAlbums />
 
     {#if $CAN_PLAY}

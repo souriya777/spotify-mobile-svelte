@@ -6,12 +6,11 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 # TODO
 
-## MVP
+## mvp
 
-- feat(persistence): find a way to automate & keep spotify-flow
 - refactor(general): refactor all my code
 
-## MAIN SCREENS
+## main screens
 
 - feat(home): design
 - feat(player): design
@@ -21,14 +20,18 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 - feat(queue): design
 - feat(detail): design
 
-## SPOTIFY API
+## spotify api
 
 - postman first call
 
-## DEMO
+## demo
 
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
+
+## bonus
+
+- fix(js): `removeEventListener` on store localStorage => works ???
 
 # spotify flow
 
