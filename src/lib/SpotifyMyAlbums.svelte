@@ -7,6 +7,8 @@
   async function getMyAlbums(offset) {
     let url = `/me/albums?limit=${ALBUM_LIMIT}`;
 
+    console.log(offset);
+
     // if (offset) {
     //   url += `&offset=${offset}`;
     // }

@@ -8,6 +8,7 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## MVP
 
+- feat(persistence): find a way to automate & keep spotify-flow
 - refactor(general): refactor all my code
 
 ## MAIN SCREENS

@@ -1,6 +1,6 @@
 <script>
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
-  export let token = '';
+  import { SPOTIFY_ACCESS_TOKEN } from '@/js/store';
 
   const script = document.createElement('script');
   script.src = 'https://sdk.scdn.co/spotify-player.js';
@@ -17,7 +17,7 @@
     PLAYER = new window.Spotify.Player({
       name: 'Spotify svelte',
       getOAuthToken: (cb) => {
-        cb(token);
+        cb($SPOTIFY_ACCESS_TOKEN);
       },
       volume: 1,
     });
@@ -55,7 +55,7 @@
 <div class="web-player">
   WEB PLAYER 🚀
   <p>device id : {DEVICE_ID}</p>
-  <p>token : {token}</p>
+  <p>token : {$SPOTIFY_ACCESS_TOKEN}</p>
   <button on:click={PLAYER.previousTrack()}>⏮️</button>
   <button on:click={playMe}>▶️</button>
   <button on:click={PLAYER.nextTrack()}>⏭️</button>

@@ -1,12 +1,14 @@
 <script>
   import { onMount } from 'svelte';
   import { hourMinute } from '@/js/souriya-utils';
+  import { CAN_PLAY } from '@/js/store';
   import IosAirplaneSvg from '@/lib/svg/IosAirplaneSvg.svelte';
   import IosSignalSvg from '@/lib/svg/IosSignalSvg.svelte';
   import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
   import SpotifyAuthorize from '@/lib/SpotifyAuthorize.svelte';
   import SpotifyToken from '@/lib/SpotifyToken.svelte';
   import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
+  import WebPlayer from '@/lib/WebPlayer.svelte';
 
   let now = Date.now();
   $: time = hourMinute(now);
@@ -82,6 +84,12 @@
     <SpotifyAuthorize />
     <SpotifyToken />
     <SpotifyMyAlbums />
+
+    {#if $CAN_PLAY}
+      <WebPlayer />
+    {:else}
+      <p>cannot play</p>
+    {/if}
 
     <p>40 Most Beautiful Piano Classics</p>
     <div class="temp">
