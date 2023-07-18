@@ -8,14 +8,13 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## MVP
 
-- feat(spotify-api): can: play a song, move to next/previous track !
 - refactor(general): refactor all my code
 
 ## MAIN SCREENS
 
-- list all screens
 - feat(home): design
 - feat(player): design
+- list all screens
 - feat(search): design
 - feat(mylib): design
 - feat(queue): design

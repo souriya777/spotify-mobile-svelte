@@ -1,5 +1,9 @@
 <script>
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
+  // FIXME move elsewhere
+  import WebPlayer from '@/lib/WebPlayer.svelte';
+  // FIXME move elsewhere
+  let CAN_PLAY = false;
 
   const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
@@ -48,6 +52,30 @@
 
     return [data.access_token, data.refresh_token];
   }
+
+  // FIXME move elsewhere
+  function play(accessToken, trackUri, deviceId) {
+    CAN_PLAY = true;
+    // AXIOS_INSTANCE({
+    //   method: "PUT",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: `Bearer ${accessToken}`,
+    //   },
+    //   data: JSON.stringify({
+    //     uris: [trackUri],
+    //   }),
+    //   url: `https://api.spotify.com/v1/me/player/play?device_id=${TEMP_DEVICE_ID}`,
+    // });
+  }
 </script>
 
 <button on:click={getToken}>get token</button>
+
+<!-- FIXME move elsewhere -->
+<button on:click={play}>play sherry</button>
+{#if CAN_PLAY}
+  <WebPlayer token={TEMP_ACCESS_TOKEN} />
+{:else}
+  <p>cannot play</p>
+{/if}
