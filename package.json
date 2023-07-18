@@ -27,5 +27,8 @@
       "pnpm format",
       "pnpm lint"
     ]
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
   }
 }

@@ -8,8 +8,7 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## MVP
 
-- feat(spotify-api): can get "authorized" from spotify !
-- feat(spotify-api): can get token from spotify, load 50 1st albums
+- feat(spotify-api) load 50 1st albums
 - feat(spotify-api): can: play a song, move to next/previous track !
 - refactor(general): refactor all my code
 
@@ -25,12 +24,18 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## SPOTIFY API
 
-- postman all call
+- postman first call
 
 ## DEMO
 
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
+
+# spotify flow
+
+1. GET /authorize => authorization code
+2. GET /token => access token + refresh token
+3. GET /me => user id (useful for getting my playlists)
 
 # commit message
 
