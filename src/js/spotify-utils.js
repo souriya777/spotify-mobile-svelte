@@ -1,3 +1,5 @@
+'use strict';
+
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_REFRESH_TOKEN, SPOTIFY_GRANT_WAITING } from '@/js/store';
 
@@ -6,14 +8,14 @@ const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
 const SPOTIFY_REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 const SPOTIFY_SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
 
-export function authorize() {
-  window.location = `https://accounts.spotify.com/authorize?response_type=code&client_id=${SPOTIFY_CLIENT_ID}&scope=${encodeURIComponent(
+function authorize() {
+  window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${SPOTIFY_CLIENT_ID}&scope=${encodeURIComponent(
     SPOTIFY_SCOPES
   )}&redirect_uri=${encodeURIComponent(SPOTIFY_REDIRECT_URI)}`;
 }
 
-export async function getToken() {
-  const authorizationCode = new URL(window.location).searchParams.get('code');
+async function getToken() {
+  const authorizationCode = new URL(window.location.href).searchParams.get('code');
 
   const spotifyData = {
     code: authorizationCode,
@@ -25,12 +27,12 @@ export async function getToken() {
 
   const options = {
     method: 'POST',
+    url: 'https://accounts.spotify.com/api/token',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: `Basic ${window.btoa(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`)}`,
     },
     data: new URLSearchParams(spotifyData).toString(),
-    url: 'https://accounts.spotify.com/api/token',
   };
 
   const data = await AXIOS_INSTANCE(options)
@@ -44,9 +46,11 @@ export async function getToken() {
   // initSpotifyPlayer(TEMP_ACCESS_TOKEN);
 }
 
-export function forceSpotifyGrant() {
+function forceSpotifyGrant() {
   SPOTIFY_GRANT_WAITING.set(null);
   SPOTIFY_ACCESS_TOKEN.set(null);
   SPOTIFY_REFRESH_TOKEN.set(null);
-  window.location = '/';
+  window.location.href = '/';
 }
+
+export { authorize, getToken, forceSpotifyGrant };

@@ -2,26 +2,23 @@
   import { onMount } from 'svelte';
   import { hourMinute } from '@/js/souriya-utils';
   import { CAN_PLAY } from '@/js/store';
+  import WebPlayer from '@/lib/WebPlayer.svelte';
   import IosAirplaneSvg from '@/lib/svg/IosAirplaneSvg.svelte';
   import IosSignalSvg from '@/lib/svg/IosSignalSvg.svelte';
   import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
   import SpotifyGrant from '@/lib/SpotifyGrant.svelte';
   import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
-  import WebPlayer from '@/lib/WebPlayer.svelte';
-
-  // import { authorize } from '@/js/spotify-utils';
 
   let now = Date.now();
-  $: time = hourMinute(now);
+  let batteryLevel = 100;
   let online = navigator.onLine;
-  let level = 100;
+  $: time = hourMinute(now);
 
   function updateBatteryUI(battery) {
-    level = battery.level * 100;
+    batteryLevel = battery.level * 100;
   }
 
   function monitorBattery(battery) {
-    // Update the initial UI.
     updateBatteryUI(battery);
 
     // Monitor for futher updates.
@@ -31,29 +28,23 @@
     battery.addEventListener('chargingtimechange', updateBatteryUI.bind(null, battery));
   }
 
-  if ('getBattery' in navigator) {
-    navigator.getBattery().then(monitorBattery);
-  } else {
-    console.log('not supported');
-  }
-
   onMount(() => {
+    if ('getBattery' in navigator) {
+      navigator.getBattery().then(monitorBattery);
+    }
+
     window.addEventListener('offline', () => {
-      console.log('offline');
+      console.log('[souriya 😎]: offline');
       online = false;
     });
     window.addEventListener('online', () => {
-      console.log('online');
+      console.log('[souriya 😎]: online');
       online = true;
     });
 
-    const interval = setInterval(
-      () => {
-        now = Date.now();
-      },
-
-      6000
-    );
+    const interval = setInterval(() => {
+      now = Date.now();
+    }, 6000);
 
     return () => {
       clearInterval(interval);
@@ -61,7 +52,7 @@
   });
 </script>
 
-<div class="shell">
+<div class="phoneShell">
   <div class="screen">
     <div class="top">
       <div class="hour">{time}</div>
@@ -72,7 +63,7 @@
         {:else}
           <IosAirplaneSvg />
         {/if}
-        <IosBatterySvg {level} />
+        <IosBatterySvg level={batteryLevel} />
       </div>
     </div>
     <div class="button-left-1" />
@@ -105,10 +96,9 @@
   :root {
     --border-radius-shell: 46px;
     --border-radius-screen: 42px;
-    --color-shell: #5e5566; /* deep purple */
   }
 
-  .shell {
+  .phoneShell {
     border: 4px solid var(--color-shell);
     border-radius: var(--border-radius-shell);
   }
@@ -118,11 +108,11 @@
     position: relative;
     border: 8px solid black;
     border-radius: var(--border-radius-screen);
-    background-color: var(--color-bg-spotify);
-    color: var(--color-text-white);
     height: 147.46mm;
     width: 71.45mm;
     margin-inline: auto;
+    background-color: var(--color-bg-spotify);
+    color: var(--color-text-white);
   }
 
   p {

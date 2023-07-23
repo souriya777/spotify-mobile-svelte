@@ -9,7 +9,7 @@
       authorize();
     }
 
-    const codeParam = new URL(window.location).searchParams.get('code');
+    const codeParam = new URL(window.location.href).searchParams.get('code');
     if (codeParam) {
       getToken();
     }

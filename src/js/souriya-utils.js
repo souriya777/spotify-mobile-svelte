@@ -65,6 +65,13 @@ function hourMinute(timeInMillis) {
   return DATE_TIME_FORMAT.format(timeInMillis);
 }
 
+function appendScriptToBody(scriptUrl, async = true) {
+  const script = document.createElement('script');
+  script.src = scriptUrl;
+  script.async = async;
+  document.body.appendChild(script);
+}
+
 export {
   NAME_REGEX,
   BIRTHDAY_REGEX,
@@ -74,5 +81,6 @@ export {
   noScroll,
   decodeHtml,
   observeElementScrolled,
+  appendScriptToBody,
   hourMinute,
 };

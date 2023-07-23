@@ -6,12 +6,6 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 # TODO
 
-## mvp
-
-- refactor(general): refactor all my code
-
-## main screens
-
 - feat(home): design
 - feat(player): design
 - list all screens

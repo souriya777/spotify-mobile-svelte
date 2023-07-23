@@ -1,7 +1,9 @@
-import { writable, derived } from 'svelte/store';
-import { AXIOS_INSTANCE } from '@/js/axios-utils';
+'use strict';
 
-function writableAndLocalStorage(key, initialValue) {
+import { writable, derived } from 'svelte/store';
+import { setAxiosAuthorization } from '@/js/axios-utils';
+
+function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
 
   const write = (key, initialValue) => {
@@ -18,8 +20,7 @@ function writableAndLocalStorage(key, initialValue) {
       document.addEventListener('storage', write);
 
       if ('SPOTIFY_ACCESS_TOKEN' === key) {
-        // set defaut axios headers
-        AXIOS_INSTANCE.defaults.headers.common.Authorization = `Bearer ${val}`;
+        setAxiosAuthorization(val);
       }
     }
   });
@@ -27,9 +28,9 @@ function writableAndLocalStorage(key, initialValue) {
   return value;
 }
 
-export const SPOTIFY_GRANT_WAITING = writableAndLocalStorage('SPOTIFY_GRANT_WAITING', false);
-export const SPOTIFY_ACCESS_TOKEN = writableAndLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
-export const SPOTIFY_REFRESH_TOKEN = writableAndLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
+export const SPOTIFY_GRANT_WAITING = writableLocalStorage('SPOTIFY_GRANT_WAITING', false);
+export const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
+export const SPOTIFY_REFRESH_TOKEN = writableLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
 export const CAN_PLAY = derived(
   SPOTIFY_ACCESS_TOKEN,
   ($SPOTIFY_ACCESS_TOKEN) => $SPOTIFY_ACCESS_TOKEN !== ''

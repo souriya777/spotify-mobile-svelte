@@ -1,5 +1,4 @@
 <script>
-  // import "https://sdk.scdn.co/spotify-player.js";
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
 
   const ALBUM_LIMIT = 50;
