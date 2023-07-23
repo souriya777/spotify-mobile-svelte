@@ -3,9 +3,11 @@
   import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_GRANT_WAITING } from '@/js/store';
   import { forceSpotifyGrant } from '@/js/spotify-utils';
   import { appendScriptToBody } from '@/js/souriya-utils';
+  import { getDevice } from '@/js/browser-utils';
 
   let DEVICE_ID = '';
   let PLAYER = '';
+  const name = `${getDevice()}.${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}`;
   // FIXME
   // let TRACK_URI = "0xtN05SZDvg943I3x08KT7";
 
@@ -13,7 +15,7 @@
 
   window.onSpotifyWebPlaybackSDKReady = () => {
     PLAYER = new window.Spotify.Player({
-      name: import.meta.env.VITE_SPOTIFY_DEVICE_NAME,
+      name,
       getOAuthToken: (cb) => {
         cb($SPOTIFY_ACCESS_TOKEN);
       },

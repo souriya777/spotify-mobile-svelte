@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/spotify-tokens/",
+      "destination": "/"
+    }
+  ]
+}

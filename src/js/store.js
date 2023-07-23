@@ -28,10 +28,24 @@ function writableLocalStorage(key, initialValue) {
   return value;
 }
 
-export const SPOTIFY_GRANT_WAITING = writableLocalStorage('SPOTIFY_GRANT_WAITING', false);
-export const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
-export const SPOTIFY_REFRESH_TOKEN = writableLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
-export const CAN_PLAY = derived(
+function clearLocalStorage() {
+  SPOTIFY_GRANT_WAITING.set(null);
+  SPOTIFY_ACCESS_TOKEN.set(null);
+  SPOTIFY_REFRESH_TOKEN.set(null);
+}
+
+const SPOTIFY_GRANT_WAITING = writableLocalStorage('SPOTIFY_GRANT_WAITING', false);
+const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
+const SPOTIFY_REFRESH_TOKEN = writableLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
+const CAN_PLAY = derived(
   SPOTIFY_ACCESS_TOKEN,
   ($SPOTIFY_ACCESS_TOKEN) => $SPOTIFY_ACCESS_TOKEN !== ''
 );
+
+export {
+  SPOTIFY_GRANT_WAITING,
+  SPOTIFY_ACCESS_TOKEN,
+  SPOTIFY_REFRESH_TOKEN,
+  CAN_PLAY,
+  clearLocalStorage,
+};

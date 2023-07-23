@@ -1,7 +1,7 @@
 'use strict';
 
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
-import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_REFRESH_TOKEN, SPOTIFY_GRANT_WAITING } from '@/js/store';
+import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_REFRESH_TOKEN, clearLocalStorage } from '@/js/store';
 
 const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
@@ -47,9 +47,7 @@ async function getToken() {
 }
 
 function forceSpotifyGrant() {
-  SPOTIFY_GRANT_WAITING.set(null);
-  SPOTIFY_ACCESS_TOKEN.set(null);
-  SPOTIFY_REFRESH_TOKEN.set(null);
+  clearLocalStorage();
   window.location.href = '/';
 }
 

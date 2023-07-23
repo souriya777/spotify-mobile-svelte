@@ -8,6 +8,7 @@
   import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
   import SpotifyGrant from '@/lib/SpotifyGrant.svelte';
   import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
+  import Debug from '@/lib/Debug.svelte';
 
   let now = Date.now();
   let batteryLevel = 100;
@@ -72,6 +73,8 @@
     <div class="button-right" />
 
     <a href="/"><img src="/spotify-logo.svg" class="logo" alt="spotify logo" /></a>
+
+    <Debug />
 
     <SpotifyGrant />
     <SpotifyMyAlbums />
