@@ -4,7 +4,10 @@
   --color-text-white: #fff;
   --color-text-grey: #a7a7a7;
   --color-spotify: #1db954;
-  --color-shell: #5e5566; /* deeppurple */
+  --color-shell: #5e5566;
+  --border-width-shell: 4px;
+  --border-width-screen: 8px;
+  /* deeppurple */
   --FIXME-font-weight-bold: bold;
   --font-size-iphone-top: 11px;
 }
@@ -32,4 +35,10 @@ button {
 
 svg {
   display: flex;
+}
+
+ul {
+  list-style: none;
+  margin-block: 0;
+  padding-inline-start: 0;
 }

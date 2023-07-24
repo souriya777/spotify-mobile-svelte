@@ -6,13 +6,18 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 # TODO
 
-- feat(home): design
+- feat(home): web player
+- feat(home): scroll
 - feat(player): design
-- list all screens
+- feat(router): add svelte router
+- feat(button): onTap ?
+
 - feat(search): design
 - feat(mylib): design
 - feat(queue): design
 - feat(detail): design
+- feat(loading): which device
+- feat(login)
 
 ## spotify api
 

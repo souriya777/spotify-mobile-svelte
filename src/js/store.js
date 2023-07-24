@@ -37,12 +37,16 @@ function clearLocalStorage() {
 const SPOTIFY_GRANT_WAITING = writableLocalStorage('SPOTIFY_GRANT_WAITING', false);
 const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
 const SPOTIFY_REFRESH_TOKEN = writableLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
+
+const PANEL_OPENED = writable(false);
+
 const CAN_PLAY = derived(
   SPOTIFY_ACCESS_TOKEN,
   ($SPOTIFY_ACCESS_TOKEN) => $SPOTIFY_ACCESS_TOKEN !== ''
 );
 
 export {
+  PANEL_OPENED,
   SPOTIFY_GRANT_WAITING,
   SPOTIFY_ACCESS_TOKEN,
   SPOTIFY_REFRESH_TOKEN,
