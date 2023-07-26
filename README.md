@@ -6,9 +6,9 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 # TODO
 
-- feat(home): web player
-- feat(home): scroll
-- feat(player): design
+## prototype
+
+- feat(layout): how stack views ?
 - feat(router): add svelte router
 - feat(button): onTap ?
 
@@ -19,12 +19,22 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 - feat(loading): which device
 - feat(login)
 
+- feat(loading) : add spotify logo (ball)
+- space
+- color
+- px
+
 ## spotify api
 
 - postman first call
 
+## perf
+
+- lazy load images
+
 ## demo
 
+- TODO uncomment
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
 

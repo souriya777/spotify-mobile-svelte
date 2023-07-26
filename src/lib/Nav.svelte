@@ -36,7 +36,6 @@
 <style>
   nav {
     background-color: pink;
-    height: 52px;
   }
 
   ul {

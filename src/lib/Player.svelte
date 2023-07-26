@@ -1,9 +1,10 @@
 <script>
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
-  import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_GRANT_WAITING } from '@/js/store';
+  import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_GRANT_WAITING, CAN_PLAY, PLAYER_FULL } from '@/js/store';
   import { forceSpotifyGrant } from '@/js/spotify-utils';
   import { appendScriptToBody } from '@/js/souriya-utils';
   import { DEVICE } from '@/js/browser-utils';
+  import { onTap } from '@/js/event-utils';
 
   let DEVICE_ID = '';
   let PLAYER = '';
@@ -76,17 +77,52 @@
   }
 </script>
 
-<div class="web-player">
-  WEB PLAYER 🚀
-  <!-- <p>device id : {DEVICE_ID}</p>
-  <p>token : {$SPOTIFY_ACCESS_TOKEN}</p> -->
-  <button on:click={() => PLAYER.previousTrack()}>⏮️</button>
-  <button on:click={playMe}>▶️</button>
-  <button on:click={() => PLAYER.nextTrack()}>⏭️</button>
-</div>
+{#if $CAN_PLAY}
+  <div class="player" use:onTap={() => PLAYER_FULL.set(true)}>
+    <div class="bar" use:onTap={() => PLAYER_FULL.set(false)}>
+      <button>back</button>
+      <p>Liked Songs</p>
+    </div>
+    <img
+      src="https://i.scdn.co/image/ab67616d00001e02d9aae5518aa56971b3f406ea"
+      alt="La Dura Vida del Joven Rapero"
+    />
+    <div class="title">Contando Lunares (feat. Cruz Cafuné)</div>
+    <div class="artist">Don Patricio, Cruz Cafuné</div>
+    <button>+✅</button>
+    <div class="progress">
+      <div>bar</div>
+      <div class="time">
+        <div class="begin">0:32</div>
+        <div class="end">-2:28</div>
+      </div>
+    </div>
+    <button>shuffle</button>
+    <button on:click={() => PLAYER.previousTrack()}>⏮️</button>
+    <button on:click={playMe}>▶️</button>
+    <button on:click={() => PLAYER.nextTrack()}>⏭️</button>
+    <button>repeat</button>
+    <div class="device">💻 Souriya</div>
+  </div>
+{:else}
+  <p>cannot play</p>
+{/if}
 
 <style>
-  .web-player {
+  .player {
     background-color: deeppink;
+  }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .progress {
+    background-color: orange;
+  }
+
+  .time {
+    display: flex;
   }
 </style>

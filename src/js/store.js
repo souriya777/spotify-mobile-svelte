@@ -39,6 +39,7 @@ const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
 const SPOTIFY_REFRESH_TOKEN = writableLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
 
 const PANEL_OPENED = writable(false);
+const PLAYER_FULL = writable(false);
 
 const CAN_PLAY = derived(
   SPOTIFY_ACCESS_TOKEN,
@@ -51,5 +52,6 @@ export {
   SPOTIFY_ACCESS_TOKEN,
   SPOTIFY_REFRESH_TOKEN,
   CAN_PLAY,
+  PLAYER_FULL,
   clearLocalStorage,
 };

@@ -1,9 +1,9 @@
 <script>
-  import { CAN_PLAY, PANEL_OPENED } from '@/js/store';
-  import WebPlayer from '@/lib/WebPlayer.svelte';
+  import { PANEL_OPENED, PLAYER_FULL } from '@/js/store';
+  import Player from '@/lib/Player.svelte';
   import SpotifyGrant from '@/lib/SpotifyGrant.svelte';
   import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
-  import Menu from '@/lib/Menu.svelte';
+  import Nav from '@/lib/Nav.svelte';
   import ScreenTop from '@/lib/ScreenTop.svelte';
   import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
   import Panel from '@/lib/Panel.svelte';
@@ -15,7 +15,7 @@
   <div class="button-left-3" />
   <div class="button-right" />
 
-  <div class="screen">
+  <div class="screen" class:playerFull={$PLAYER_FULL}>
     <ScreenTop />
 
     <div class="content">
@@ -51,15 +51,8 @@
       <Panel />
     </div>
 
-    <div class="interaction">
-      {#if $CAN_PLAY}
-        <WebPlayer />
-      {:else}
-        <p>cannot play</p>
-      {/if}
-
-      <Menu />
-    </div>
+    <Player />
+    <Nav />
   </div>
 </div>
 
@@ -68,6 +61,8 @@
     --border-radius-shell: 48px;
     --border-radius-screen: 42px;
     --inline-position-button: -7px;
+    --height-screen-top: 43px;
+    --height-screen-nav: 52px;
   }
 
   .phoneShell {
@@ -84,16 +79,23 @@
     width: 71.45mm;
     margin-inline: auto;
     display: grid;
-    grid-template-rows: 43px auto 1fr;
-    overflow: hidden;
+    grid-template-rows: var(--height-screen-top) auto 32px var(--height-screen-nav);
+    /* TODO uncomment */
+    /* overflow: hidden; */
     background-color: var(--color-bg-spotify);
     color: var(--color-text-white);
+  }
+
+  .playerFull {
+    grid-template-rows: var(--height-screen-top) 0 auto var(--height-screen-nav);
   }
 
   .content {
     background-color: bisque;
     position: relative;
     overflow-y: scroll;
+    /* TODO uncomment */
+    /* overflow-x: hidden; */
   }
 
   .content__header {
