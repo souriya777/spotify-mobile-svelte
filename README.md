@@ -8,8 +8,8 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## prototype
 
+- feat(router): init routing
 - feat(layout): how stack views ?
-- feat(router): add svelte router
 - feat(button): onTap ?
 
 - feat(search): design
