@@ -1,7 +1,7 @@
 'use strict';
 
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
-import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_REFRESH_TOKEN, clearLocalStorage } from '@/js/store';
+import { SPOTIFY_ACCESS_TOKEN, clearLocalStorage } from '@/js/store';
 
 const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
@@ -42,13 +42,35 @@ async function getToken() {
     });
 
   SPOTIFY_ACCESS_TOKEN.set(data.access_token);
-  SPOTIFY_REFRESH_TOKEN.set(data.refresh_token);
+  console.log('[souriya 😎][spotify-utils]: token OK !', data.access_token);
   // initSpotifyPlayer(TEMP_ACCESS_TOKEN);
 }
 
-function forceSpotifyGrant() {
+function forceSpotifyAuthorization() {
   clearLocalStorage();
   window.location.href = '/';
 }
 
-export { authorize, getToken, forceSpotifyGrant };
+function playMe(deviceId) {
+  // SPOTIFY_PLAYER.togglePlay();
+  const TRACK_URI = 'spotify:album:7oWx4auBp2kCb54VkRCCUq';
+
+  AXIOS_INSTANCE({
+    method: 'PUT',
+    data: JSON.stringify({
+      context_uri: TRACK_URI,
+    }),
+    url: `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
+  })
+    .then((response) => console.log(response?.data))
+    .catch((error) => {
+      const errorJSON = error.toJSON();
+      console.error('🌱', error.toJSON());
+      if (401 === errorJSON?.status) {
+        console.log('[souriya 😎]: Spotify returns 401 -> refresh access');
+        forceSpotifyAuthorization();
+      }
+    });
+}
+
+export { authorize, getToken, forceSpotifyAuthorization, playMe };

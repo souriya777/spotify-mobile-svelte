@@ -8,9 +8,16 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 ## prototype
 
-- feat(router): init routing
-- feat(layout): how stack views ?
+- position fixed : player & menu
+- feat(navigation): improve player & menu
+- +end content height === player + nav
+- refactor: WYSIWYG
+- utiliser le view transition API à la "svelte menu"
+- **feat(layout): implement stack views**
+
+- feat(layout): one stack views by `route`
 - feat(button): onTap ?
+- init JSDoc
 
 - feat(search): design
 - feat(mylib): design
@@ -37,9 +44,12 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 - TODO uncomment
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
+- feat(app): add a direct shortcut
 
 ## bonus
 
+- make scroll lib by date ?
+- make vibration
 - fix(js): `removeEventListener` on store localStorage => works ???
 
 # spotify flow

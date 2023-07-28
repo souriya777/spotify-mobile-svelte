@@ -1,12 +1,12 @@
 <script>
-  import { Router, Route } from 'svelte-routing';
-  import { PLAYER_FULL } from '@/js/store';
+  import { Router } from 'svelte-routing';
+  import { PLAYER_FULL_MODE } from '@/js/store';
   import Player from '@/lib/Player.svelte';
   import Nav from '@/lib/Nav.svelte';
   import ScreenTop from '@/lib/ScreenTop.svelte';
-  import HomeView from '@/lib/views/HomeView.svelte';
-  import SearchView from '@/lib/views/SearchView.svelte';
-  import LibView from '@/lib/views/LibView.svelte';
+  import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
+  import SpotifyAuthorization from '@/lib/SpotifyAuthorization.svelte';
+  import StackUiManager from '@/lib/StackUIManager.svelte';
 
   export let url = '/';
 </script>
@@ -17,15 +17,29 @@
   <div class="button-left-3" />
   <div class="button-right" />
 
-  <div class="screen" class:playerFull={$PLAYER_FULL}>
-    <ScreenTop />
-    <Router {url}>
-      <Route path="/" component={HomeView} />
-      <Route path="/search" component={SearchView} />
-      <Route path="/lib" component={LibView} />
+  <SpotifyAuthorization />
 
-      <Player />
-      <Nav />
+  <div class="screen" class:screen--full-player={$PLAYER_FULL_MODE}>
+    <Router {url}>
+      <div class="screen__top">
+        <ScreenTop />
+      </div>
+
+      <div class="screen__content">
+        <div class="content__header">
+          <div class="title">Good evening TODO</div>
+          <button on:click={() => console.log('move to stackUIManager')}>
+            <SettingsSvg />
+          </button>
+        </div>
+
+        <StackUiManager />
+      </div>
+
+      <div class="screen__bottom">
+        <Player />
+        <Nav />
+      </div>
     </Router>
   </div>
 </div>
@@ -47,21 +61,43 @@
 
   .screen {
     box-sizing: content-box;
+    position: relative;
     border: var(--border-width-screen) solid indianred;
     border-radius: var(--border-radius-screen);
     height: 147.46mm;
     width: 71.45mm;
     margin-inline: auto;
     display: grid;
-    grid-template-rows: var(--height-screen-top) auto 32px var(--height-screen-nav);
+    grid-template-rows: var(--height-screen-top) auto;
+    /* display: grid;
+    grid-template-rows: var(--height-screen-top) auto 32px var(--height-screen-nav); */
     /* TODO uncomment */
     /* overflow: hidden; */
     background-color: var(--color-bg-spotify);
     color: var(--color-text-white);
   }
 
-  .playerFull {
-    grid-template-rows: var(--height-screen-top) 0 auto var(--height-screen-nav);
+  .screen--full-player {
+    /* grid-template-rows: var(--height-screen-top) 0 auto var(--height-screen-nav); */
+  }
+
+  .screen__content {
+    background-color: bisque;
+    position: relative;
+    overflow-y: scroll;
+    /* TODO uncomment */
+    /* overflow-x: hidden; */
+  }
+
+  .screen__bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .content__header {
+    display: flex;
+    justify-content: space-between;
   }
 
   .button-left-1,

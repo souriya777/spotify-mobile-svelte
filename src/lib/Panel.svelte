@@ -1,17 +1,16 @@
 <script>
-  import { PANEL_OPENED } from '@/js/store';
   import ArrowBackSvg from '@/lib/svg/ArrowBackSvg.svelte';
-  import Debug from '@/lib/Debug.svelte';
-  import Logo from '@/lib/Logo.svelte';
+
+  export let active;
 </script>
 
-<div class="panel" class:active={$PANEL_OPENED}>
-  <button on:click={() => PANEL_OPENED.set(false)}>
+<div class="panel" class:active>
+  <button on:click={() => (active = false)}>
     <ArrowBackSvg />
   </button>
-  <Debug />
-  <Logo />
-  panel
+  <code>
+    active={active}
+  </code>
   <slot />
 </div>
 
@@ -19,10 +18,16 @@
   .panel {
     background-color: seagreen;
     position: absolute;
-    top: 0;
+
+    /* top: 0; */
+    bottom: 0;
+
     right: 0;
     width: 100%;
-    height: 100%;
+
+    /* height: 100%; */
+    height: 50%;
+
     opacity: 0.8;
     transform: translateX(100%);
   }

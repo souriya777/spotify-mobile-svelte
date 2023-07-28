@@ -29,29 +29,29 @@ function writableLocalStorage(key, initialValue) {
 }
 
 function clearLocalStorage() {
-  SPOTIFY_GRANT_WAITING.set(null);
+  SPOTIFY_AUTHORIZE_WAITING.set(null);
   SPOTIFY_ACCESS_TOKEN.set(null);
-  SPOTIFY_REFRESH_TOKEN.set(null);
 }
 
-const SPOTIFY_GRANT_WAITING = writableLocalStorage('SPOTIFY_GRANT_WAITING', false);
+// SPOTIFY
 const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
-const SPOTIFY_REFRESH_TOKEN = writableLocalStorage('SPOTIFY_REFRESH_TOKEN', '');
+const SPOTIFY_DEVICE_ID = writable('');
+const SPOTIFY_AUTHORIZE_WAITING = writableLocalStorage('SPOTIFY_AUTHORIZE_WAITING', false);
 
-const PANEL_OPENED = writable(false);
-const PLAYER_FULL = writable(false);
-
-const CAN_PLAY = derived(
-  SPOTIFY_ACCESS_TOKEN,
-  ($SPOTIFY_ACCESS_TOKEN) => $SPOTIFY_ACCESS_TOKEN !== ''
+// PLAYER
+const PLAYER = writable(null);
+const PLAYER_FULL_MODE = writable(false);
+const PLAYER_READY = derived(
+  [SPOTIFY_DEVICE_ID, PLAYER],
+  ($SPOTIFY_DEVICE_ID, $PLAYER) => $SPOTIFY_DEVICE_ID && $PLAYER != null
 );
 
 export {
-  PANEL_OPENED,
-  SPOTIFY_GRANT_WAITING,
   SPOTIFY_ACCESS_TOKEN,
-  SPOTIFY_REFRESH_TOKEN,
-  CAN_PLAY,
-  PLAYER_FULL,
+  SPOTIFY_AUTHORIZE_WAITING,
+  SPOTIFY_DEVICE_ID,
+  PLAYER,
+  PLAYER_READY,
+  PLAYER_FULL_MODE,
   clearLocalStorage,
 };
