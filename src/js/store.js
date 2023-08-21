@@ -13,7 +13,7 @@ const PLAYER = writable(null);
 const PLAYER_FULL_MODE = writable(false);
 const PLAYER_READY = derived(
   [SPOTIFY_DEVICE_ID, PLAYER],
-  ($SPOTIFY_DEVICE_ID, $PLAYER) => $SPOTIFY_DEVICE_ID && $PLAYER != null
+  ([$SPOTIFY_DEVICE_ID, $PLAYER]) => $SPOTIFY_DEVICE_ID != null && $PLAYER != null
 );
 
 function writableLocalStorage(key, initialValue) {

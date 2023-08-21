@@ -65,7 +65,7 @@ function playMe(deviceId) {
     }),
     url: `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
   })
-    .then((response) => console.log(response?.data))
+    .then((response) => console.log('[souriya 😎][spotify-utils]: playMe', response?.data))
     .catch((error) => {
       const errorJSON = error.toJSON();
       console.error('🌱', error.toJSON());

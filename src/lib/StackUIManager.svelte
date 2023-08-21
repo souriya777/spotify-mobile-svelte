@@ -4,6 +4,7 @@
   import LibView from '@/lib/views/LibViewGrandChild.svelte';
   import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
   import Panel from '@/lib/Panel.svelte';
+  import Player from '@/lib/Player.svelte';
   import { onMount, setContext } from 'svelte';
 
   onMount(() => {
@@ -39,6 +40,10 @@
       <button on:click={() => console.log('move to stackUIManager')}>
         <SettingsSvg />
       </button>
+    </div>
+
+    <div class="toto">
+      <Player />
     </div>
 
     <!-- here -->

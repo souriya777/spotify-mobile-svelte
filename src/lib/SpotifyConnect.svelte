@@ -22,9 +22,10 @@
     });
 
     SPOTIFY_PLAYER.addListener('not_ready', ({ device_id }) => {
-      console.log('[souriya 😎] device ID has gone offline', device_id);
+      console.log('[souriya 😎][SpotifyConnect] device ID has gone offline', device_id);
     });
 
+    // FIXME useful ?
     // SPOTIFY_PLAYER.on('initialization_error', ({ message }) => {
     //   console.error('Failed to initialize', message);
     // });

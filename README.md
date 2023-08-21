@@ -78,6 +78,7 @@ DRY
 1. GET /authorize => authorization code
 2. GET /token => access token + refresh token
 3. GET /me => user id (useful for getting my playlists)
+   benefits: it you receive `401`, you know that your previous `access_token` is obsolete
 
 # commit message
 

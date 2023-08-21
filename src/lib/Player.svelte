@@ -1,11 +1,11 @@
 <script>
-  import { PLAYER, PLAYER_FULL_MODE, SPOTIFY_DEVICE_ID, PLAYER_READY } from '@/js/store';
+  import { PLAYER, PLAYER_FULL_MODE, SPOTIFY_DEVICE_ID } from '@/js/store';
   import { playMe } from '@/js/spotify-utils';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
 </script>
 
-{#if $PLAYER_READY}
+{#if $SPOTIFY_DEVICE_ID && $PLAYER != null}
   <div class="player" use:onTap={() => PLAYER_FULL_MODE.set(true)}>
     <div class="bar" use:onTap={() => PLAYER_FULL_MODE.set(false)}>
       <button>back</button>
