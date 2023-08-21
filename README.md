@@ -13,6 +13,7 @@ DRY
 
 ## prototype MONOVIEW
 
+- factorize spotify-utils error management
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav

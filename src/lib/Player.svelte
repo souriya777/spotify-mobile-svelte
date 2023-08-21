@@ -1,6 +1,6 @@
 <script>
-  import { PLAYER, PLAYER_FULL_MODE, SPOTIFY_DEVICE_ID } from '@/js/store';
-  import { playMe } from '@/js/spotify-utils';
+  import { PLAYER, PLAYER_FULL_MODE, SPOTIFY_DEVICE_ID, IS_PLAYING } from '@/js/store';
+  import { playMe, pause } from '@/js/spotify-utils';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
 </script>
@@ -27,7 +27,11 @@
     </div>
     <button>shuffle</button>
     <button on:click={() => $PLAYER.previousTrack()}>⏮️</button>
-    <button on:click={() => playMe($SPOTIFY_DEVICE_ID)}>▶️</button>
+    {#if $IS_PLAYING}
+      <button on:click={() => pause($SPOTIFY_DEVICE_ID)}>⏸️</button>
+    {:else}
+      <button on:click={() => playMe($SPOTIFY_DEVICE_ID)}>▶️</button>
+    {/if}
     <button on:click={() => $PLAYER.nextTrack()}>⏭️</button>
     <button>repeat</button>
     <div class="device">💻 Souriya</div>

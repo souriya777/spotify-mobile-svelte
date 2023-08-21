@@ -15,6 +15,7 @@ const PLAYER_READY = derived(
   [SPOTIFY_DEVICE_ID, PLAYER],
   ([$SPOTIFY_DEVICE_ID, $PLAYER]) => $SPOTIFY_DEVICE_ID != null && $PLAYER != null
 );
+const IS_PLAYING = writable(false);
 
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
@@ -53,5 +54,6 @@ export {
   PLAYER,
   PLAYER_READY,
   PLAYER_FULL_MODE,
+  IS_PLAYING,
   clearLocalStorage,
 };

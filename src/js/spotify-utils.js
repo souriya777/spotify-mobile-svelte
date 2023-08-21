@@ -1,7 +1,7 @@
 'use strict';
 
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
-import { SPOTIFY_ACCESS_TOKEN, clearLocalStorage } from '@/js/store';
+import { SPOTIFY_ACCESS_TOKEN, IS_PLAYING, clearLocalStorage } from '@/js/store';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
 
 const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -55,7 +55,6 @@ function forceSpotifyAuthorization() {
 }
 
 function playMe(deviceId) {
-  // SPOTIFY_PLAYER.togglePlay();
   const TRACK_URI = 'spotify:album:7oWx4auBp2kCb54VkRCCUq';
 
   AXIOS_INSTANCE({
@@ -65,7 +64,10 @@ function playMe(deviceId) {
     }),
     url: `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
   })
-    .then((response) => console.log('[souriya 😎][spotify-utils]: playMe', response?.data))
+    .then((response) => {
+      console.log('[souriya 😎][spotify-utils]: PLAY', response?.data);
+      IS_PLAYING.set(true);
+    })
     .catch((error) => {
       const errorJSON = error.toJSON();
       console.error('🌱', error.toJSON());
@@ -76,4 +78,18 @@ function playMe(deviceId) {
     });
 }
 
-export { PLAYER_NAME, authorize, getToken, forceSpotifyAuthorization, playMe };
+function pause(deviceId) {
+  AXIOS_INSTANCE({
+    method: 'PUT',
+    url: `https://api.spotify.com/v1/me/player/pause?device_id=${deviceId}`,
+  })
+    .then((response) => {
+      console.log('[souriya 😎][spotify-utils]: PAUSE', response?.data);
+      IS_PLAYING.set(false);
+    })
+    .catch((error) => {
+      console.error('🌱', error.toJSON());
+    });
+}
+
+export { PLAYER_NAME, authorize, getToken, forceSpotifyAuthorization, playMe, pause };
