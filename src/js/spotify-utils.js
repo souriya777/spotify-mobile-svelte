@@ -2,11 +2,14 @@
 
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import { SPOTIFY_ACCESS_TOKEN, clearLocalStorage } from '@/js/store';
+import { BROWSER_DEVICE } from '@/js/browser-utils';
 
 const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
 const SPOTIFY_REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
 const SPOTIFY_SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
+
+const PLAYER_NAME = `${BROWSER_DEVICE}.${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}`;
 
 function authorize() {
   window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${SPOTIFY_CLIENT_ID}&scope=${encodeURIComponent(
@@ -73,4 +76,4 @@ function playMe(deviceId) {
     });
 }
 
-export { authorize, getToken, forceSpotifyAuthorization, playMe };
+export { PLAYER_NAME, authorize, getToken, forceSpotifyAuthorization, playMe };

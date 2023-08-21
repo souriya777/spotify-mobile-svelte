@@ -1,11 +1,15 @@
 <script>
   import { PLAYER_FULL_MODE } from '@/js/store';
   import Player from '@/lib/Player.svelte';
-  import Nav from '@/lib/Nav.svelte';
+  // FIXME
+  // import Nav from '@/lib/Nav.svelte';
   import ScreenTop from '@/lib/ScreenTop.svelte';
-  import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
+  // FIXME
+  // import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
   import SpotifyAuthorization from '@/lib/SpotifyAuthorization.svelte';
-  import StackUiManager from '@/lib/StackUIManager.svelte';
+  // FIXME
+  // import StackUiManager from '@/lib/StackUIManager.svelte';
+  import Debug from '@/lib/Debug.svelte';
 </script>
 
 <div class="phoneShell">
@@ -17,26 +21,30 @@
   <SpotifyAuthorization />
 
   <div class="screen" class:screen--full-player={$PLAYER_FULL_MODE}>
-    <StackUiManager>
-      <div class="screen__top">
-        <ScreenTop />
-      </div>
+    <!-- <StackUiManager> -->
+    <!-- FIXME not in StackUIManager -->
+    <div class="screen__top">
+      <ScreenTop />
+    </div>
 
-      <!-- <div class="screen__content">
-        <div class="content__header">
-          <div class="title">Good evening TODO</div>
-          <button on:click={() => console.log('move to stackUIManager')}>
-            <SettingsSvg />
-          </button>
-        </div>
+    <div class="screen__content">
+      <!-- <div class="content__header">
+        <div class="title">Good evening TODO</div>
+        <button on:click={() => console.log('move to stackUIManager')}>
+          <SettingsSvg />
+        </button>
       </div> -->
-      <span slot="content" />
+      <Debug />
+      <Player />
+    </div>
+    <!-- <span slot="content" /> -->
 
-      <div class="screen__bottom">
-        <Player />
-        <Nav />
-      </div>
-    </StackUiManager>
+    <!-- FIXME not in StackUIManager -->
+    <div class="screen__bottom">
+      <!-- <Player /> -->
+      <!-- <Nav /> -->
+    </div>
+    <!-- </StackUiManager> -->
   </div>
 </div>
 
@@ -73,12 +81,12 @@
     color: var(--color-text-white);
   }
 
-  .screen--full-player {
-    /* grid-template-rows: var(--height-screen-top) 0 auto var(--height-screen-nav); */
-  }
+  /* .screen--full-player {
+    grid-template-rows: var(--height-screen-top) 0 auto var(--height-screen-nav);
+  } */
 
   .screen__content {
-    background-color: bisque;
+    background-color: slategray;
     position: relative;
     overflow-y: scroll;
     /* TODO uncomment */
@@ -91,10 +99,11 @@
     width: 100%;
   }
 
-  .content__header {
+  /* FIXME */
+  /* .content__header {
     display: flex;
     justify-content: space-between;
-  }
+  } */
 
   .button-left-1,
   .button-left-2,

@@ -1,7 +1,20 @@
 'use strict';
 
 import { writable, derived } from 'svelte/store';
-import { setAxiosAuthorization } from '@/js/axios-utils';
+import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
+
+// SPOTIFY
+const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
+const SPOTIFY_DEVICE_ID = writable('');
+const SPOTIFY_AUTHORIZE_WAITING = writableLocalStorage('SPOTIFY_AUTHORIZE_WAITING', false);
+
+// PLAYER
+const PLAYER = writable(null);
+const PLAYER_FULL_MODE = writable(false);
+const PLAYER_READY = derived(
+  [SPOTIFY_DEVICE_ID, PLAYER],
+  ($SPOTIFY_DEVICE_ID, $PLAYER) => $SPOTIFY_DEVICE_ID && $PLAYER != null
+);
 
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
@@ -20,7 +33,7 @@ function writableLocalStorage(key, initialValue) {
       document.addEventListener('storage', write);
 
       if ('SPOTIFY_ACCESS_TOKEN' === key) {
-        setAxiosAuthorization(val);
+        setAxiosHeaderAuthorization(val);
       }
     }
   });
@@ -32,19 +45,6 @@ function clearLocalStorage() {
   SPOTIFY_AUTHORIZE_WAITING.set(null);
   SPOTIFY_ACCESS_TOKEN.set(null);
 }
-
-// SPOTIFY
-const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
-const SPOTIFY_DEVICE_ID = writable('');
-const SPOTIFY_AUTHORIZE_WAITING = writableLocalStorage('SPOTIFY_AUTHORIZE_WAITING', false);
-
-// PLAYER
-const PLAYER = writable(null);
-const PLAYER_FULL_MODE = writable(false);
-const PLAYER_READY = derived(
-  [SPOTIFY_DEVICE_ID, PLAYER],
-  ($SPOTIFY_DEVICE_ID, $PLAYER) => $SPOTIFY_DEVICE_ID && $PLAYER != null
-);
 
 export {
   SPOTIFY_ACCESS_TOKEN,

@@ -8,7 +8,8 @@ export const AXIOS_INSTANCE = axios.create({
   baseURL: SPOTIFY_API_URL,
 });
 
-export function setAxiosAuthorization(accessToken) {
+export function setAxiosHeaderAuthorization(accessToken) {
   // set defaut axios headers
   AXIOS_INSTANCE.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+  console.log('[souriya 😎][axios-utils]:', AXIOS_INSTANCE.defaults.headers.common.Authorization);
 }

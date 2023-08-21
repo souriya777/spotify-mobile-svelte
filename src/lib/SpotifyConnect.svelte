@@ -1,14 +1,11 @@
 <script>
   import { SPOTIFY_ACCESS_TOKEN, PLAYER, SPOTIFY_DEVICE_ID } from '@/js/store';
   import { appendScriptToBody } from '@/js/souriya-utils';
-  import { playMe } from '@/js/spotify-utils';
-  import { DEVICE } from '@/js/browser-utils';
-
-  const PLAYER_NAME = `${DEVICE}.${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}`;
+  import { PLAYER_NAME, playMe } from '@/js/spotify-utils';
 
   appendScriptToBody('https://sdk.scdn.co/spotify-player.js');
 
-  console.log('[souriya 😎][SpotifyConnect] try connecting player...');
+  console.log('[souriya 😎][SpotifyConnect] try connecting player...', PLAYER_NAME);
 
   window.onSpotifyWebPlaybackSDKReady = () => {
     const SPOTIFY_PLAYER = new window.Spotify.Player({
@@ -50,6 +47,6 @@
     console.log('[souriya 😎][SpotifyConnect] player OK !', SPOTIFY_PLAYER);
 
     // trick : if ACCESS_TOKEN is "invalid", Spotify API returns 401 => so we can "force" ACCESS_TOKEN's regeneration ;)
-    playMe();
+    playMe(PLAYER_NAME);
   };
 </script>

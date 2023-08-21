@@ -11,17 +11,17 @@ DRY
 
 # TODO
 
-## prototype
+## prototype MONOVIEW
 
-- test(tool): use `vitest` ?
-- resolve slot child direct
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
 - refactor: WYSIWYG
 - utiliser le view transition API à la "svelte menu"
-- feat(layout): one stack views by `route`
+
 - **FEAT(LAYOUT): IMPLEMENT STACK VIEWS**
+- feat(layout): one stack views by `route`
+- resolve child, grand-child etc...
 
 - refactor(phonetime): use `readable` from svelte
 - refactor(svelte): use `bind:online`
@@ -64,6 +64,8 @@ DRY
 
 ## bonus
 
+- test(tool): use `vitest` ?
+- pause écouteurs bluetooth ?
 - make scroll lib by date ?
 - make vibration
 - fix(js): `removeEventListener` on store localStorage => works ???

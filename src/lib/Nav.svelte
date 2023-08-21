@@ -1,7 +1,7 @@
 <script>
-  import { getContext } from 'svelte';
+  // import { getContext } from 'svelte';
 
-  const { createView } = getContext('StackUIManager');
+  // const { createView } = getContext('StackUIManager');
 </script>
 
 <nav>
