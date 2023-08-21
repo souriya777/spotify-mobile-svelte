@@ -1,5 +1,4 @@
 <script>
-  import { Router } from 'svelte-routing';
   import { PLAYER_FULL_MODE } from '@/js/store';
   import Player from '@/lib/Player.svelte';
   import Nav from '@/lib/Nav.svelte';
@@ -7,8 +6,6 @@
   import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
   import SpotifyAuthorization from '@/lib/SpotifyAuthorization.svelte';
   import StackUiManager from '@/lib/StackUIManager.svelte';
-
-  export let url = '/';
 </script>
 
 <div class="phoneShell">
@@ -20,27 +17,26 @@
   <SpotifyAuthorization />
 
   <div class="screen" class:screen--full-player={$PLAYER_FULL_MODE}>
-    <Router {url}>
+    <StackUiManager>
       <div class="screen__top">
         <ScreenTop />
       </div>
 
-      <div class="screen__content">
+      <!-- <div class="screen__content">
         <div class="content__header">
           <div class="title">Good evening TODO</div>
           <button on:click={() => console.log('move to stackUIManager')}>
             <SettingsSvg />
           </button>
         </div>
-
-        <StackUiManager />
-      </div>
+      </div> -->
+      <span slot="content" />
 
       <div class="screen__bottom">
         <Player />
         <Nav />
       </div>
-    </Router>
+    </StackUiManager>
   </div>
 </div>
 

@@ -1,12 +1,18 @@
 <script>
   import HomeView from '@/lib/views/HomeView.svelte';
   import SearchView from '@/lib/views/SearchView.svelte';
-  import LibView from '@/lib/views/LibView.svelte';
-  import Panel from './Panel.svelte';
-  import { onMount } from 'svelte';
+  import LibView from '@/lib/views/LibViewGrandChild.svelte';
+  import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
+  import Panel from '@/lib/Panel.svelte';
+  import { onMount, setContext } from 'svelte';
 
   onMount(() => {
     console.log('StackUIManager');
+  });
+
+  setContext('StackUIManager', {
+    createView: (viewName) => console.log('createView', viewName),
+    createPanel: (panelName) => console.log('createPanel', panelName),
   });
 
   let stack = [];
@@ -26,12 +32,24 @@
   }
 </script>
 
-<button on:click={() => createView('home')}>Home</button>
-<button on:click={() => createView('search')}>Search</button>
-<button on:click={() => createView('lib')}>Lib</button>
+<div>
+  <div class="screen__content">
+    <div class="content__header">
+      <div class="title">Good evening TODO</div>
+      <button on:click={() => console.log('move to stackUIManager')}>
+        <SettingsSvg />
+      </button>
+    </div>
 
-{#each stack as [view, props]}
-  <Panel active={props.active}>
-    <svelte:component this={view} />
-  </Panel>
-{/each}
+    <!-- here -->
+    <button on:click={() => createView('home')}>Home</button>
+    <button on:click={() => createView('search')}>Search</button>
+    <button on:click={() => createView('lib')}>Lib</button>
+
+    {#each stack as [view, props]}
+      <Panel active={props.active}>
+        <svelte:component this={view} />
+      </Panel>
+    {/each}
+  </div>
+</div>

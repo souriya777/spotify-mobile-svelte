@@ -4,18 +4,33 @@ A clone of Spotify mobile app, in svelte 🚀
 
 Demo: https://spotify-mobile-svelte.vercel.app/
 
+# philosophie ⚜️
+
+KISS
+DRY
+
 # TODO
 
 ## prototype
 
+- test(tool): use `vitest` ?
+- resolve slot child direct
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
 - refactor: WYSIWYG
 - utiliser le view transition API à la "svelte menu"
-- **feat(layout): implement stack views**
-
 - feat(layout): one stack views by `route`
+- **FEAT(LAYOUT): IMPLEMENT STACK VIEWS**
+
+- refactor(phonetime): use `readable` from svelte
+- refactor(svelte): use `bind:online`
+- refactor(svelte): use `bind:this`
+- refactor(svelte): use `custom-store`
+- refactor(svelte): use `store-binding`
+- refactor(js): where can I use `optional chaining` ?
+- refactor(js): where can I use `nullish coalescing` ?
+- refactor(js): where can I use `generator yield` ?
 - feat(button): onTap ?
 - init JSDoc
 
@@ -34,6 +49,7 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 ## spotify api
 
 - postman first call
+- manage API exception
 
 ## perf
 
@@ -51,6 +67,9 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 - make scroll lib by date ?
 - make vibration
 - fix(js): `removeEventListener` on store localStorage => works ???
+- 🟢//learn.svelte.dev/tutorial/updating-arrays-and-objects
+  "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
+- use svelte `animation` ?
 
 # spotify flow
 
