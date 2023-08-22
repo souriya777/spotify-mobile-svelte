@@ -46,7 +46,6 @@ async function getToken() {
 
   SPOTIFY_ACCESS_TOKEN.set(data.access_token);
   console.log('[souriya 😎][spotify-utils]: token OK !', data.access_token);
-  // initSpotifyPlayer(TEMP_ACCESS_TOKEN);
 }
 
 function forceSpotifyAuthorization() {
@@ -92,4 +91,33 @@ function pause(deviceId) {
     });
 }
 
-export { PLAYER_NAME, authorize, getToken, forceSpotifyAuthorization, playMe, pause };
+function getRecentlyPlayedTracks() {
+  return AXIOS_INSTANCE({
+    method: 'GET',
+    url: `https://api.spotify.com/v1/me/player/recently-played
+    `,
+  })
+    .then((response) => {
+      console.log('[souriya 😎][spotify-utils]: me/player/recently-played', response?.data);
+      IS_PLAYING.set(false);
+      return response?.data;
+    })
+    .catch((error) => {
+      console.error('🌱', error.toJSON());
+    });
+}
+
+function getLastTrack() {
+  getRecentlyPlayedTracks().then((arr) => console.log(arr?.[0]));
+}
+
+export {
+  PLAYER_NAME,
+  authorize,
+  getToken,
+  forceSpotifyAuthorization,
+  playMe,
+  pause,
+  getRecentlyPlayedTracks,
+  getLastTrack,
+};

@@ -9,12 +9,12 @@
   } from '@/js/store';
   import { BROWSER_DEVICE } from '@/js/browser-utils';
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
-  import { PLAYER_NAME } from '@/js/spotify-utils';
+  import { PLAYER_NAME, getRecentlyPlayedTracks, getLastTrack } from '@/js/spotify-utils';
 
   $: spotifyDeviceId = $SPOTIFY_DEVICE_ID?.slice(0, 8)?.concat('...');
   $: player = JSON.stringify($PLAYER?._options);
 
-  let open = false;
+  let open = true;
 </script>
 
 <details {open}>
@@ -34,4 +34,6 @@
     <li>{$PLAYER_READY ? '🟢' : '🔴'}PLAYER_READY:{$PLAYER_READY}</li>
   </ul>
   <button on:click={clearLocalStorage}>🗑️ localStorage</button>
+  <button on:click={getRecentlyPlayedTracks}>recently-played</button>
+  <button on:click={getLastTrack}>last-track</button>
 </details>

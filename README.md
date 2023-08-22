@@ -14,6 +14,13 @@ DRY
 ## prototype MONOVIEW
 
 - factorize spotify-utils error management
+- factorize logging traces
+- feat(player): can play last song
+- feat(player): can shuffle
+- feat(player): can repeat
+- feat(player): can repeat single song
+- feat(player): can view progress
+
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
