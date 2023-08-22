@@ -2,18 +2,18 @@ import { writable, derived } from 'svelte/store';
 import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
 
 // SPOTIFY
-const SPOTIFY_ACCESS_TOKEN = writableLocalStorage('SPOTIFY_ACCESS_TOKEN', '');
-const SPOTIFY_DEVICE_ID = writable('');
-const SPOTIFY_AUTHORIZE_WAITING = writableLocalStorage('SPOTIFY_AUTHORIZE_WAITING', false);
+const spotifyAccessToken = writableLocalStorage('spotifyAccessToken', '');
+const spotifyDeviceId = writable('');
+const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', false);
 
 // PLAYER
-const PLAYER = writable(null);
-const PLAYER_FULL_MODE = writable(false);
-const PLAYER_READY = derived(
-  [SPOTIFY_DEVICE_ID, PLAYER],
-  ([$SPOTIFY_DEVICE_ID, $PLAYER]) => $SPOTIFY_DEVICE_ID != null && $PLAYER != null,
+const player = writable(null);
+const playerFullMode = writable(false);
+const isPlayerReady = derived(
+  [spotifyDeviceId, player],
+  ([$spotifyDeviceId, $player]) => $spotifyDeviceId != null && $player != null,
 );
-const IS_PLAYING = writable(false);
+const isPlaying = writable(false);
 
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
@@ -31,7 +31,7 @@ function writableLocalStorage(key, initialValue) {
       localStorage.setItem(key, val);
       document.addEventListener('storage', write);
 
-      if ('SPOTIFY_ACCESS_TOKEN' === key) {
+      if ('spotifyAccessToken' === key) {
         setAxiosHeaderAuthorization(val);
       }
     }
@@ -40,18 +40,18 @@ function writableLocalStorage(key, initialValue) {
   return value;
 }
 
-function clearLocalStorage() {
-  SPOTIFY_AUTHORIZE_WAITING.set(null);
-  SPOTIFY_ACCESS_TOKEN.set(null);
+function clearWritableLocalStorage() {
+  spotifyAuthorizeWaiting.set(null);
+  spotifyAccessToken.set(null);
 }
 
 export {
-  SPOTIFY_ACCESS_TOKEN,
-  SPOTIFY_AUTHORIZE_WAITING,
-  SPOTIFY_DEVICE_ID,
-  PLAYER,
-  PLAYER_READY,
-  PLAYER_FULL_MODE,
-  IS_PLAYING,
-  clearLocalStorage,
+  spotifyAccessToken,
+  spotifyAuthorizeWaiting,
+  spotifyDeviceId,
+  player,
+  isPlayerReady,
+  playerFullMode,
+  isPlaying,
+  clearWritableLocalStorage,
 };

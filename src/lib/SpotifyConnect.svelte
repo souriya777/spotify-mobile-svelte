@@ -1,5 +1,5 @@
 <script>
-  import { SPOTIFY_ACCESS_TOKEN, SPOTIFY_DEVICE_ID, PLAYER } from '@/js/store';
+  import { spotifyAccessToken, spotifyDeviceId, player } from '@/js/store';
   import { appendScriptToBody } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
 
@@ -7,18 +7,20 @@
 
   console.log('[souriya 😎][SpotifyConnect] try connecting player...', SpotifyApi.playerName);
 
+  // @ts-ignore
   window.onSpotifyWebPlaybackSDKReady = () => {
+    // @ts-ignore
     const SPOTIFY_PLAYER = new window.Spotify.Player({
       name: SpotifyApi.playerName,
       getOAuthToken: (cb) => {
-        cb($SPOTIFY_ACCESS_TOKEN);
+        cb($spotifyAccessToken);
       },
       volume: 0.7,
     });
 
     SPOTIFY_PLAYER.addListener('ready', ({ device_id }) => {
       console.log('[souriya 😎][SpotifyConnect] device ready !', device_id);
-      SPOTIFY_DEVICE_ID.set(device_id);
+      spotifyDeviceId.set(device_id);
     });
 
     SPOTIFY_PLAYER.addListener('not_ready', ({ device_id }) => {
@@ -43,7 +45,7 @@
     // });
 
     SPOTIFY_PLAYER.connect();
-    PLAYER.set(SPOTIFY_PLAYER);
+    player.set(SPOTIFY_PLAYER);
 
     console.log('[souriya 😎][SpotifyConnect] player OK !', SPOTIFY_PLAYER);
 

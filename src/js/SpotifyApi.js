@@ -1,6 +1,6 @@
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
-import { SPOTIFY_ACCESS_TOKEN, IS_PLAYING, clearLocalStorage } from '@/js/store';
+import { spotifyAccessToken, isPlaying, clearWritableLocalStorage } from '@/js/store';
 
 class SpotifyApi {
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -47,12 +47,12 @@ class SpotifyApi {
         console.error(error.toJSON());
       });
 
-    SPOTIFY_ACCESS_TOKEN.set(data.access_token);
+    spotifyAccessToken.set(data.access_token);
     console.log('[souriya 😎][Spotify]: token OK !', data.access_token);
   }
 
   forceSpotifyAuthorization() {
-    clearLocalStorage();
+    clearWritableLocalStorage();
     window.location.href = '/';
   }
 
@@ -68,7 +68,7 @@ class SpotifyApi {
     })
       .then((response) => {
         console.log('[souriya 😎][Spotify]: PLAY', response?.data);
-        IS_PLAYING.set(true);
+        isPlaying.set(true);
       })
       .catch((error) => {
         const errorJSON = error.toJSON();
@@ -87,7 +87,7 @@ class SpotifyApi {
     })
       .then((response) => {
         console.log('[souriya 😎][Spotify]: PAUSE', response?.data);
-        IS_PLAYING.set(false);
+        isPlaying.set(false);
       })
       .catch((error) => {
         console.error('🌱', error.toJSON());
@@ -102,7 +102,7 @@ class SpotifyApi {
     })
       .then((response) => {
         console.log('[souriya 😎][Spotify]: me/player/recently-played', response?.data);
-        IS_PLAYING.set(false);
+        isPlaying.set(false);
         return response?.data;
       })
       .catch((error) => {

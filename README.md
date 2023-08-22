@@ -13,9 +13,6 @@ DRY
 
 ## prototype MONOVIEW
 
-- rename clearLocalStorage
-- resolve onSpotifyWebPlaybackSDKReady eslint
-- rename store to camelCase
 - factorize Spotify error management
 - factorize logging traces
 - feat(player): can play last song

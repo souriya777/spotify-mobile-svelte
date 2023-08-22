@@ -1,5 +1,5 @@
 <script>
-  import { PLAYER_FULL_MODE } from '@/js/store';
+  import { playerFullMode } from '@/js/store';
   import Player from '@/lib/Player.svelte';
   // FIXME
   // import Nav from '@/lib/Nav.svelte';
@@ -20,7 +20,7 @@
 
   <SpotifyAuthorization />
 
-  <div class="screen" class:screen--full-player={$PLAYER_FULL_MODE}>
+  <div class="screen" class:screen--full-player={$playerFullMode}>
     <!-- <StackUiManager> -->
     <!-- FIXME not in StackUIManager -->
     <div class="screen__top">
