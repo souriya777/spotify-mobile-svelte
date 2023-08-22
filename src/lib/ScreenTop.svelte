@@ -4,6 +4,9 @@
   import IosAirplaneSvg from '@/lib/svg/IosAirplaneSvg.svelte';
   import IosSignalSvg from '@/lib/svg/IosSignalSvg.svelte';
   import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
+  import Logger from '@/js/Logger';
+
+  const LOGGER = Logger.getNewInstance('ScreenTop.svelte');
 
   let now = Date.now();
   let batteryLevel = 100;
@@ -30,11 +33,11 @@
     }
 
     window.addEventListener('offline', () => {
-      console.log('[souriya 😎]: offline');
+      LOGGER.log('offline');
       online = false;
     });
     window.addEventListener('online', () => {
-      console.log('[souriya 😎]: online');
+      LOGGER.log('online');
       online = true;
     });
 

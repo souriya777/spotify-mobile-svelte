@@ -6,14 +6,17 @@
   import Panel from '@/lib/Panel.svelte';
   import Player from '@/lib/Player.svelte';
   import { onMount, setContext } from 'svelte';
+  import Logger from '@/js/Logger';
+
+  const LOGGER = Logger.getNewInstance('StackUIManager.js');
 
   onMount(() => {
-    console.log('StackUIManager');
+    LOGGER.log('StackUIManager');
   });
 
   setContext('StackUIManager', {
-    createView: (viewName) => console.log('createView', viewName),
-    createPanel: (panelName) => console.log('createPanel', panelName),
+    createView: (viewName) => LOGGER.log('createView', viewName),
+    createPanel: (panelName) => LOGGER.log('createPanel', panelName),
   });
 
   let stack = [];
@@ -37,7 +40,7 @@
   <div class="screen__content">
     <div class="content__header">
       <div class="title">Good evening TODO</div>
-      <button on:click={() => console.log('move to stackUIManager')}>
+      <button on:click={() => LOGGER.log('move to stackUIManager')}>
         <SettingsSvg />
       </button>
     </div>

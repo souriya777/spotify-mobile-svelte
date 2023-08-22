@@ -30,7 +30,7 @@
     <div class="screen__content">
       <!-- <div class="content__header">
         <div class="title">Good evening TODO</div>
-        <button on:click={() => console.log('move to stackUIManager')}>
+        <button on:click={() => LOGGER.log('move to stackUIManager')}>
           <SettingsSvg />
         </button>
       </div> -->

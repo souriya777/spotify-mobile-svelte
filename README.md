@@ -13,8 +13,11 @@ DRY
 
 ## prototype MONOVIEW
 
+- resolve this 1st error `SpotifyApi.js?t=1692724118871:65     PUT https://api.spotify.com/v1/me/player/play?device_id=undefined 404`
 - factorize Spotify error management
-- factorize logging traces
+- implement JSDoc basic
+- use typecheck's method from svelte ?
+
 - feat(player): can play last song
 - feat(player): can shuffle
 - feat(player): can repeat

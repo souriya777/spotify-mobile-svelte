@@ -1,6 +1,9 @@
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
+import Logger from '@/js/Logger';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
 import { spotifyAccessToken, isPlaying, clearWritableLocalStorage } from '@/js/store';
+
+const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -44,11 +47,11 @@ class SpotifyApi {
     const data = await AXIOS_INSTANCE(options)
       .then((response) => response?.data)
       .catch((error) => {
-        console.error(error.toJSON());
+        LOGGER.error('', error.toJSON());
       });
 
     spotifyAccessToken.set(data.access_token);
-    console.log('[souriya 😎][Spotify]: token OK !', data.access_token);
+    LOGGER.log('token OK !', data.access_token);
   }
 
   forceSpotifyAuthorization() {
@@ -67,14 +70,14 @@ class SpotifyApi {
       url: `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
     })
       .then((response) => {
-        console.log('[souriya 😎][Spotify]: PLAY', response?.data);
+        LOGGER.log('PLAY', response?.data);
         isPlaying.set(true);
       })
       .catch((error) => {
         const errorJSON = error.toJSON();
-        console.error('🌱', error.toJSON());
+        LOGGER.error('🌱', error.toJSON());
         if (401 === errorJSON?.status) {
-          console.log('[souriya 😎]: Spotify returns 401 -> refresh access');
+          LOGGER.log('Spotify returns 401 -> refresh access');
           this.forceSpotifyAuthorization();
         }
       });
@@ -86,11 +89,11 @@ class SpotifyApi {
       url: `https://api.spotify.com/v1/me/player/pause?device_id=${deviceId}`,
     })
       .then((response) => {
-        console.log('[souriya 😎][Spotify]: PAUSE', response?.data);
+        LOGGER.log('PAUSE', response?.data);
         isPlaying.set(false);
       })
       .catch((error) => {
-        console.error('🌱', error.toJSON());
+        LOGGER.error('🌱', error.toJSON());
       });
   }
 
@@ -101,17 +104,17 @@ class SpotifyApi {
       `,
     })
       .then((response) => {
-        console.log('[souriya 😎][Spotify]: me/player/recently-played', response?.data);
+        LOGGER.log('me/player/recently-played', response?.data);
         isPlaying.set(false);
         return response?.data;
       })
       .catch((error) => {
-        console.error('🌱', error.toJSON());
+        LOGGER.error('🌱', error.toJSON());
       });
   }
 
   getLastSong() {
-    this.getRecentlyPlayedSongs().then((arr) => console.log(arr?.[0]));
+    this.getRecentlyPlayedSongs().then((arr) => LOGGER.log('', arr?.[0]));
   }
 }
 
