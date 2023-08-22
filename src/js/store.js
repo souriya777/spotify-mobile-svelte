@@ -1,5 +1,3 @@
-'use strict';
-
 import { writable, derived } from 'svelte/store';
 import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
 
@@ -13,7 +11,7 @@ const PLAYER = writable(null);
 const PLAYER_FULL_MODE = writable(false);
 const PLAYER_READY = derived(
   [SPOTIFY_DEVICE_ID, PLAYER],
-  ([$SPOTIFY_DEVICE_ID, $PLAYER]) => $SPOTIFY_DEVICE_ID != null && $PLAYER != null
+  ([$SPOTIFY_DEVICE_ID, $PLAYER]) => $SPOTIFY_DEVICE_ID != null && $PLAYER != null,
 );
 const IS_PLAYING = writable(false);
 

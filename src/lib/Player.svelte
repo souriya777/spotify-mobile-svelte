@@ -1,11 +1,17 @@
 <script>
-  import { PLAYER, PLAYER_FULL_MODE, SPOTIFY_DEVICE_ID, IS_PLAYING } from '@/js/store';
-  import { playMe, pause } from '@/js/spotify-utils';
+  import {
+    PLAYER_FULL_MODE,
+    IS_PLAYING,
+    PLAYER,
+    SPOTIFY_DEVICE_ID,
+    PLAYER_READY,
+  } from '@/js/store';
+  import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
 </script>
 
-{#if $SPOTIFY_DEVICE_ID && $PLAYER != null}
+{#if $PLAYER_READY}
   <div class="player" use:onTap={() => PLAYER_FULL_MODE.set(true)}>
     <div class="bar" use:onTap={() => PLAYER_FULL_MODE.set(false)}>
       <button>back</button>
@@ -28,9 +34,9 @@
     <button>shuffle</button>
     <button on:click={() => $PLAYER.previousTrack()}>⏮️</button>
     {#if $IS_PLAYING}
-      <button on:click={() => pause($SPOTIFY_DEVICE_ID)}>⏸️</button>
+      <button on:click={() => SpotifyApi.pause($SPOTIFY_DEVICE_ID)}>⏸️</button>
     {:else}
-      <button on:click={() => playMe($SPOTIFY_DEVICE_ID)}>▶️</button>
+      <button on:click={() => SpotifyApi.play($SPOTIFY_DEVICE_ID)}>▶️</button>
     {/if}
     <button on:click={() => $PLAYER.nextTrack()}>⏭️</button>
     <button>repeat</button>

@@ -42,7 +42,7 @@ function observeElementScrolled(elementToObserve, elementToAddClass, theClass, t
         elementToAddClass.classList.add(theClass);
       }
     },
-    { threshold: [threshold] }
+    { threshold: [threshold] },
   );
 
   OBSERVER.observe(elementToObserve);
