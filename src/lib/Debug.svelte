@@ -1,7 +1,8 @@
 <script>
   import {
-    playerFullMode,
     spotifyAccessToken,
+    spotifyUserId,
+    playerFullMode,
     spotifyDeviceId,
     player,
     isPlayerReady,
@@ -12,18 +13,19 @@
 
   $: deviceId = $spotifyDeviceId?.slice(0, 8)?.concat('...');
 
-  let open = false;
+  let open = true;
 </script>
 
 <details {open}>
   <summary>Debug</summary>
   <ul>
+    <li>😎:{$spotifyUserId}</li>
     <li>BROWSER_DEVICE:{BROWSER_DEVICE}</li>
     <li>deviceId:{deviceId}</li>
     <li>playerName:{SpotifyApi.playerName}</li>
     <li>player:{JSON.stringify($player?._options)}</li>
     <li>playerFullMode:{$playerFullMode}</li>
-    <li>spotifyAccessToken:{$spotifyAccessToken?.slice(0, 8)?.concat('...')}</li>
+    <li>token:{$spotifyAccessToken?.slice(0, 8)?.concat('...')}</li>
     <li>
       AXIOS_HEADER:{AXIOS_INSTANCE.defaults.headers.common.Authorization?.toString()
         ?.slice(0, 18)
@@ -31,7 +33,9 @@
     </li>
     <li>{$isPlayerReady ? '🟢' : '🔴'}isPlayerReady:{$isPlayerReady}</li>
   </ul>
+
   <button on:click={SpotifyApi.forceSpotifyAuthorization}>🗑️ forceSpotifyAuthorization</button>
   <button on:click={SpotifyApi.getRecentlyPlayedSongs}>recently-played</button>
   <button on:click={SpotifyApi.getLastSong}>last-track</button>
+  <button on:click={SpotifyApi.getMyPlaylists}>my-playlists</button>
 </details>

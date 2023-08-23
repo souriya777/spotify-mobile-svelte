@@ -53,6 +53,6 @@
     LOGGER.log('player OK !', SPOTIFY_PLAYER);
 
     // trick : if ACCESS_TOKEN is "invalid", Spotify API returns 401 => so we can "force" ACCESS_TOKEN's regeneration ;)
-    SpotifyApi.play();
+    SpotifyApi.me();
   };
 </script>

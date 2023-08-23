@@ -1,7 +1,13 @@
+import { get } from 'svelte/store';
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import Logger from '@/js/Logger';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
-import { spotifyAccessToken, isPlaying, clearWritableLocalStorage } from '@/js/store';
+import {
+  spotifyAccessToken,
+  spotifyUserId,
+  isPlaying,
+  clearWritableLocalStorage,
+} from '@/js/store';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -59,19 +65,17 @@ class SpotifyApi {
     window.location.href = '/';
   }
 
-  play(deviceId) {
-    const TRACK_URI = 'spotify:album:7oWx4auBp2kCb54VkRCCUq';
-
+  me() {
     AXIOS_INSTANCE({
-      method: 'PUT',
-      data: JSON.stringify({
-        context_uri: TRACK_URI,
-      }),
-      url: `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
+      method: 'GET',
+      url: `https://api.spotify.com/v1/me`,
     })
       .then((response) => {
-        LOGGER.log('PLAY', response?.data);
-        isPlaying.set(true);
+        LOGGER.log('me 😎', response?.data);
+        const userId = response?.data?.id;
+        if (userId) {
+          spotifyUserId.set(userId);
+        }
       })
       .catch((error) => {
         const errorJSON = error.toJSON();
@@ -83,13 +87,57 @@ class SpotifyApi {
       });
   }
 
+  play(deviceId) {
+    if (!deviceId) {
+      LOGGER.log('device_id is not yet initialize!', deviceId);
+    }
+
+    // const URI = 'spotify:track:6ZFbXIJkuI1dVNWvzJzown';
+    const URI = 'spotify:playlist:17eOVmN640LTnMK3fsGWVF';
+
+    AXIOS_INSTANCE({
+      method: 'PUT',
+      data: JSON.stringify({
+        context_uri: URI,
+      }),
+      url: `https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`,
+    }).then((response) => {
+      LOGGER.log('play', response?.data);
+      isPlaying.set(true);
+    });
+    // FIXME useless because of /me ?
+    // .catch((error) => {
+    //   const errorJSON = error.toJSON();
+    //   LOGGER.error('🌱', error.toJSON());
+    //   if (401 === errorJSON?.status) {
+    //     LOGGER.log('Spotify returns 401 -> refresh access');
+    //     this.forceSpotifyAuthorization();
+    //   }
+    // });
+  }
+
   pause(deviceId) {
     return AXIOS_INSTANCE({
       method: 'PUT',
       url: `https://api.spotify.com/v1/me/player/pause?device_id=${deviceId}`,
     })
       .then((response) => {
-        LOGGER.log('PAUSE', response?.data);
+        LOGGER.log('pause', response?.data);
+        isPlaying.set(false);
+      })
+      .catch((error) => {
+        LOGGER.error('🌱', error.toJSON());
+      });
+  }
+
+  getMyPlaylists() {
+    console.log(`https://api.spotify.com/v1/${get(spotifyUserId)}/playlists`);
+    return AXIOS_INSTANCE({
+      method: 'GET',
+      url: `https://api.spotify.com/v1/users/${get(spotifyUserId)}/playlists`,
+    })
+      .then((response) => {
+        LOGGER.log('my-playlists', response?.data);
         isPlaying.set(false);
       })
       .catch((error) => {

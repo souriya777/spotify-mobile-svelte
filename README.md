@@ -11,29 +11,18 @@ DRY
 
 # TODO
 
-## prototype MONOVIEW
+## MVP
 
-- resolve this 1st error `SpotifyApi.js?t=1692724118871:65     PUT https://api.spotify.com/v1/me/player/play?device_id=undefined 404`
+✅✅✅ OBJECTIF DU JOUR ✅✅✅
+
 - factorize Spotify error management
 - implement JSDoc basic
 - use typecheck's method from svelte ?
-
 - feat(player): can play last song
 - feat(player): can shuffle
 - feat(player): can repeat
 - feat(player): can repeat single song
 - feat(player): can view progress
-
-- position fixed : player & menu
-- feat(navigation): improve player & menu
-- +end content height === player + nav
-- refactor: WYSIWYG
-- utiliser le view transition API à la "svelte menu"
-
-- **FEAT(LAYOUT): IMPLEMENT STACK VIEWS**
-- feat(layout): one stack views by `route`
-- resolve child, grand-child etc...
-
 - refactor(phonetime): use `readable` from svelte
 - refactor(svelte): use `bind:online`
 - refactor(svelte): use `bind:this`
@@ -43,7 +32,15 @@ DRY
 - refactor(js): where can I use `nullish coalescing` ?
 - refactor(js): where can I use `generator yield` ?
 - feat(button): onTap ?
-- init JSDoc
+- position fixed : player & menu
+- feat(navigation): improve player & menu
+- +end content height === player + nav
+- refactor: WYSIWYG
+- utiliser le view transition API à la "svelte menu"
+- **FEAT(LAYOUT): IMPLEMENT STACK VIEWS**
+- feat(layout): one stack views by `route`
+- resolve child, grand-child etc...
+  🎉🎉🎉 FIN 🎉🎉🎉
 
 - feat(search): design
 - feat(mylib): design
@@ -52,29 +49,25 @@ DRY
 - feat(loading): which device
 - feat(login)
 
-- feat(loading) : add spotify logo (ball)
 - space
 - color
 - px
 
-## spotify api
-
-- postman first call
-- manage API exception
-
 ## perf
 
 - lazy load images
+- lighthouse
 
 ## demo
 
-- TODO uncomment
+- TODO/FIXME uncomment
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
 - feat(app): add a direct shortcut
 
 ## bonus
 
+- feat(loading) : add spotify logo (ball)
 - test(tool): use `vitest` ?
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?

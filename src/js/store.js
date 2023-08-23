@@ -3,6 +3,7 @@ import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
 
 // SPOTIFY
 const spotifyAccessToken = writableLocalStorage('spotifyAccessToken', '');
+const spotifyUserId = writableLocalStorage('spotifyUserId');
 const spotifyDeviceId = writable('');
 const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', false);
 
@@ -47,6 +48,7 @@ function clearWritableLocalStorage() {
 
 export {
   spotifyAccessToken,
+  spotifyUserId,
   spotifyAuthorizeWaiting,
   spotifyDeviceId,
   player,
