@@ -8,13 +8,13 @@
 
   appendScriptToBody('https://sdk.scdn.co/spotify-player.js');
 
-  LOGGER.log('try connecting player...', SpotifyApi.playerName);
+  LOGGER.log('try connecting player...', SpotifyApi.PLAYER_NAME);
 
   // @ts-ignore
   window.onSpotifyWebPlaybackSDKReady = () => {
     // @ts-ignore
     const SPOTIFY_PLAYER = new window.Spotify.Player({
-      name: SpotifyApi.playerName,
+      name: SpotifyApi.PLAYER_NAME,
       getOAuthToken: (cb) => {
         cb($spotifyAccessToken);
       },
