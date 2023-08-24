@@ -1,11 +1,10 @@
 <script>
   import {
-    player,
+    playerPlaybackState,
     playerCurrentTrack,
     playerShuffle,
     playerRepeat,
     isPlayerFull,
-    isPlaying,
     isPlayerReady,
   } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
@@ -13,16 +12,20 @@
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 
-  $: artistsDisplay = $playerCurrentTrack?.artists?.map((item) => item.name).join(', ');
-  $: imageUrl = $playerCurrentTrack?.album?.images?.[0]?.url;
-
+  // TODO move in transformers ???
+  $: track = $playerCurrentTrack;
+  $: artistsDisplay = track?.artists?.map((item) => item.name).join(', ');
+  $: imageUrl = track?.album?.images?.[0]?.url;
   $: currentTrack = {
-    ...$playerCurrentTrack,
-    albumName: $playerCurrentTrack?.album?.name,
+    ...track,
+    albumName: track?.album?.name,
     artistsDisplay,
     imageUrl,
   };
-  $: console.log(currentTrack);
+
+  $: if ($isPlayerReady) {
+    SpotifyApi.synchronize();
+  }
 </script>
 
 {#if $isPlayerReady}
@@ -43,13 +46,13 @@
       </div>
     </div>
     <button on:click={() => SpotifyApi.shuffle()}>🔀{$playerShuffle ? '🟢' : '🔴'}</button>
-    <button on:click={() => $player.previousTrack()}>⏮️</button>
-    {#if $isPlaying}
+    <button on:click={() => SpotifyApi.previous()}>⏮️</button>
+    {#if $playerPlaybackState?.is_playing}
       <button on:click={() => SpotifyApi.pause()}>⏸️</button>
     {:else}
       <button on:click={() => SpotifyApi.play()}>▶️</button>
     {/if}
-    <button on:click={() => $player.nextTrack()}>⏭️</button>
+    <button on:click={() => SpotifyApi.next()}>⏭️</button>
     <button on:click={() => SpotifyApi.repeat()}
       >🔁{$playerRepeat === SpotifyRepeatState.OFF
         ? '🔴'
@@ -57,6 +60,7 @@
         ? '🟢🟢🟢'
         : '🟢'}</button
     >
+    <div class="progress">progress{$playerPlaybackState?.progress_ms}</div>
     <div class="device">💻 Souriya</div>
   </div>
 {:else}

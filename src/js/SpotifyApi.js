@@ -5,7 +5,7 @@ import { BROWSER_DEVICE } from '@/js/browser-utils';
 import {
   spotifyAccessToken,
   spotifyUserId,
-  isPlaying,
+  playerPlaybackState,
   playerCurrentTrack,
   playerShuffle,
   playerRepeat,
@@ -17,12 +17,14 @@ import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
 import SpotifySongsCursor from '@/js/SpotifySongsCursor';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
+import SpotifyQueue from '@/js/SpotifyQueue';
+import SpotifyTrack from '@/js/SpotifyTrack';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
-  DEFAULT_VOLUME = 0.1;
+  DEFAULT_VOLUME = 0.2;
 
   authorize() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
@@ -69,7 +71,7 @@ class SpotifyApi {
    * @returns {Promise<SpotifyUser>}
    */
   async me() {
-    const data = await this.#get('/me');
+    const { data } = await this.#get('/me');
 
     const user = new SpotifyUser(data);
     spotifyUserId.set(user?.id);
@@ -77,23 +79,41 @@ class SpotifyApi {
     return user;
   }
 
+  async synchronize() {
+    const song = await this.getQueueLastSong();
+    playerCurrentTrack.set(song);
+    LOGGER.log('last song loaded ✅', song);
+
+    const playbackState = await this.getPlaybackState();
+    playerPlaybackState.set(playbackState);
+    LOGGER.log('last state loaded ✅', playbackState);
+  }
+
+  // FIXME
   /**
    * @returns {Promise<import('./spotify').SpotifyPlaybackState>}
    */
   async getPlaybackState() {
-    const data = await this.#get('/me/player');
-    return new SpotifyPlaybackState(data);
+    const { data } = await this.#get('/me/player');
+    const playbackState = new SpotifyPlaybackState(data);
+    LOGGER.log('playbackState', playbackState);
+    return playbackState;
   }
 
-  /**
-   * @returns {Promise<import('./spotify').SpotifyTrackObject>}
-   */
-  async getCurrentTrack() {
-    const playbackState = await this.getPlaybackState();
-    const currentTrack = playbackState.item;
-    playerCurrentTrack.set(currentTrack);
-    LOGGER.log('current-track', currentTrack);
-    return currentTrack;
+  // FIXME NOT USED NOW
+  async transfertPlayback() {
+    const deviceId = get(spotifyDeviceId);
+    return this.#put('/me/player', {
+      device_ids: [deviceId],
+      play: true,
+    });
+  }
+
+  // FIXME NOT USED NOW
+  async getAvailableDevice() {
+    const devices = await this.#get('/me/player/devices');
+    console.log(devices);
+    return devices;
   }
 
   async play() {
@@ -102,22 +122,33 @@ class SpotifyApi {
       LOGGER.log('device_id is not yet initialize!', deviceId);
     }
 
-    // const URI = 'spotify:track:6ZFbXIJkuI1dVNWvzJzown';
-    const URI = 'spotify:playlist:17eOVmN640LTnMK3fsGWVF';
+    const uri = get(playerCurrentTrack)?.album?.uri;
 
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
       JSON.stringify({
-        context_uri: URI,
+        // FIXME
+        // context_uri: uri,
+        uris: [uri],
       }),
     );
-    isPlaying.set(true);
+    LOGGER.log('play', uri);
   }
 
   async pause() {
     const deviceId = get(spotifyDeviceId);
     await this.#put(`/me/player/pause?device_id=${deviceId}`);
-    isPlaying.set(false);
+  }
+
+  async previous() {
+    await this.#post(`/me/player/previous`);
+    // TODO play
+  }
+
+  async next() {
+    await this.#post(`/me/player/next`);
+    this.synchronize();
+    // TODO play
   }
 
   async shuffle() {
@@ -143,7 +174,7 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifyPlaylist[]>}
    */
   async getMyPlaylists(userId) {
-    const data = await this.#get(`/users/${userId}/playlists`);
+    const { data } = await this.#get(`/users/${userId}/playlists`);
     return new SpotifyPlaylistCursor(data)?.items;
   }
 
@@ -151,17 +182,40 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifySong[]>}
    */
   async getRecentlyPlayedSongs() {
-    const data = await this.#get(`/me/player/recently-played`);
+    const { data } = await this.#get(`/me/player/recently-played`);
     return new SpotifySongsCursor(data)?.items;
+  }
+
+  /**
+   * @returns {Promise<import('./spotify').SpotifyQueue>}
+   */
+  async getQueue() {
+    const { data } = await this.#get('/me/player/queue');
+    const queue = new SpotifyQueue(data);
+    LOGGER.log('queue', queue);
+    return queue;
+  }
+
+  /**
+   * @returns {Promise<import('./spotify').SpofityTrack>}
+   */
+  async getQueueLastSong() {
+    const queue = await this.getQueue();
+    return new SpotifyTrack(queue.currently_playing);
   }
 
   /**
    * @returns {Promise<import('./spotify').SpotifySong>}
    */
   async getLastSong() {
-    const data = await this.getRecentlyPlayedSongs();
-    LOGGER.log('last-song', data?.[0]);
-    return data?.[0];
+    const songs = await this.getRecentlyPlayedSongs();
+
+    const lastSong = songs?.[0];
+    if (lastSong) {
+      playerCurrentTrack.set(lastSong);
+      LOGGER.log('last-song', lastSong);
+    }
+    return lastSong;
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -173,25 +227,41 @@ class SpotifyApi {
     return `https://api.spotify.com/v1${endpoint}`;
   }
 
+  /**
+   * @param {string} endpoint
+   * @param {object} options
+   * @returns { Promise<{ data: object, status: number }> }
+   */
   #axios(endpoint, options) {
     return AXIOS_INSTANCE(options)
       .then((response) => {
-        LOGGER.log(endpoint, response?.data);
-        return response?.data;
+        const data = response?.data;
+        const status = response?.status;
+        LOGGER.log(options?.method, endpoint, data, status);
+        return { data, status };
       })
       .catch((err) => {
         const errorJSON = err.toJSON();
-        LOGGER.error('🌱', err.toJSON());
-        if (401 === errorJSON?.status) {
+        const status = errorJSON?.status;
+        LOGGER.error('🌱', err.toJSON(), status);
+        if (401 === status) {
           LOGGER.log('Spotify returns 401 -> refresh access');
           this.forceSpotifyAuthorization();
         }
+        return { data: {}, status: 500 };
       });
   }
 
   async #get(endpoint) {
     return this.#axios(endpoint, {
       method: 'GET',
+      url: this.#url(endpoint),
+    });
+  }
+
+  async #post(endpoint) {
+    return this.#axios(endpoint, {
+      method: 'POST',
       url: this.#url(endpoint),
     });
   }

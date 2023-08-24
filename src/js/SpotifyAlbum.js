@@ -5,6 +5,7 @@ import SpotifyImage from '@/js/SpotifyImage';
  */
 class SpotifyAlbum {
   constructor(fromApi) {
+    this.uri = fromApi?.uri;
     this.name = fromApi?.name;
     this.images = fromApi?.images?.map((img) => new SpotifyImage(img));
   }

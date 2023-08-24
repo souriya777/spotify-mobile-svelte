@@ -47,12 +47,11 @@
     //   LOGGER.error('Failed to perform playback', message);
     // });
 
-    SPOTIFY_PLAYER.connect();
-    player.set(SPOTIFY_PLAYER);
-
-    LOGGER.log('player OK !', SPOTIFY_PLAYER);
-
     // trick : if ACCESS_TOKEN is "invalid", Spotify API returns 401 => so we can "force" ACCESS_TOKEN's regeneration ;)
     SpotifyApi.me();
+
+    SPOTIFY_PLAYER.connect();
+    player.set(SPOTIFY_PLAYER);
+    LOGGER.log('player OK ✅', SPOTIFY_PLAYER);
   };
 </script>

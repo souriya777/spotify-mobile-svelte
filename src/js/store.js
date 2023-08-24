@@ -1,7 +1,8 @@
 import { writable, derived } from 'svelte/store';
 import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
-import SpotifyTrackObject from '@/js/SpotifyTrackObject';
+import SpotifyTrack from '@/js/SpotifyTrack';
+import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 
 // SPOTIFY
 const spotifyAccessToken = writableLocalStorage('spotifyAccessToken', '');
@@ -9,18 +10,22 @@ const spotifyUserId = writableLocalStorage('spotifyUserId');
 const spotifyDeviceId = writable('');
 const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', false);
 
+// FIXME RENAME ALL
+
 // PLAYER
 const player = writable(null);
-/** @type {import('svelte/store').Writable<SpotifyTrackObject>} */
-const playerCurrentTrack = writable(new SpotifyTrackObject());
+/** @type {import('svelte/store').Writable<SpotifyTrack>} */
+const playerCurrentTrack = writable(new SpotifyTrack());
+/** @type {import('svelte/store').Writable<SpotifyPlaybackState>} */
+const playerPlaybackState = writable(new SpotifyPlaybackState());
 const playerShuffle = writable(false);
 const playerRepeat = writable(SpotifyRepeatState.OFF);
+
 const isPlayerFull = writable(false);
 const isPlayerReady = derived(
   [spotifyDeviceId, player],
-  ([$spotifyDeviceId, $player]) => $spotifyDeviceId != null && $player != null,
+  ([$spotifyDeviceId, $player]) => $spotifyDeviceId && $player != null,
 );
-const isPlaying = writable(false);
 
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
@@ -58,11 +63,11 @@ export {
   spotifyAuthorizeWaiting,
   spotifyDeviceId,
   player,
+  playerPlaybackState,
   playerCurrentTrack,
   playerShuffle,
   playerRepeat,
   isPlayerFull,
   isPlayerReady,
-  isPlaying,
   clearWritableLocalStorage,
 };

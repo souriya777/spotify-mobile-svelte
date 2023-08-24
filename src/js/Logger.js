@@ -9,14 +9,14 @@ class LoggerFile {
     this.filename = filename;
   }
 
-  log(message = '', objectToDebug = {}) {
+  log(message = '', objectToDebug = {}, ...args) {
     const trace = this.#trace(message);
-    console.log(trace, objectToDebug);
+    console.log(trace, objectToDebug, ...args);
   }
 
-  error(message = '', objectToDebug = '') {
+  error(message = '', objectToDebug = '', ...args) {
     const trace = this.#trace(message);
-    console.error(trace, objectToDebug);
+    console.error(trace, objectToDebug, ...args);
   }
 
   #trace(message) {

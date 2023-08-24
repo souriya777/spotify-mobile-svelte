@@ -15,9 +15,13 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
-- feat(player): can retrieve current playing
-  ==> transformers
-  ===> when to load get "current-track"
+- feat(player): synchronize shuffle & repeat
+- feat(player): auto-synchronize
+  ==> when play next previous
+  ==> isPlaying still useful ?
+  ==> // FIXME SpotifyPlaybackStatus
+  ==> // FIXME context_uri: uri,
+  ==> transformers // TODO move in transformers ???
 
 - feat(player): can view progress
 - position fixed : player & menu
@@ -33,6 +37,7 @@ HARD
 
 - utiliser le view transition API à la "svelte menu"
 - how to make bi-directionnel player ????
+  ==> how to listen to push ?
   🎉🎉🎉 FIN 🎉🎉🎉
 
 - feat(mylib): design
