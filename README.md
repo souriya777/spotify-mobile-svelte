@@ -15,9 +15,7 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
-- feat(player): can shuffle
-- feat(player): can repeat
-- feat(player): can repeat single song
+- feat(player): can repeat "track" or "context"
 - feat(player): can view progress
 - refactor(phonetime): use `readable` from svelte
 - refactor(svelte): use `bind:online`
@@ -37,6 +35,8 @@ DRY
 - feat(layout): one stack views by `route`
 - resolve child, grand-child etc...
   🎉🎉🎉 FIN 🎉🎉🎉
+
+- how to make bi-directionnel player ????
 
 - feat(search): design
 - feat(mylib): design

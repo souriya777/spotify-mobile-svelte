@@ -2,14 +2,15 @@
   import {
     isPlayerFull,
     isPlaying,
-    isPlayerShuffle,
+    playerShuffle,
     player,
-    spotifyDeviceId,
     isPlayerReady,
+    playerRepeat,
   } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
+  import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 </script>
 
 {#if $isPlayerReady}
@@ -32,17 +33,21 @@
         <div class="end">-2:28</div>
       </div>
     </div>
-    <button on:click={() => SpotifyApi.shuffle($isPlayerShuffle)}
-      >🔀{$isPlayerShuffle ? '🟢' : '🔴'}</button
-    >
+    <button on:click={() => SpotifyApi.shuffle()}>🔀{$playerShuffle ? '🟢' : '🔴'}</button>
     <button on:click={() => $player.previousTrack()}>⏮️</button>
     {#if $isPlaying}
-      <button on:click={() => SpotifyApi.pause($spotifyDeviceId)}>⏸️</button>
+      <button on:click={() => SpotifyApi.pause()}>⏸️</button>
     {:else}
-      <button on:click={() => SpotifyApi.play($spotifyDeviceId)}>▶️</button>
+      <button on:click={() => SpotifyApi.play()}>▶️</button>
     {/if}
     <button on:click={() => $player.nextTrack()}>⏭️</button>
-    <button>repeat</button>
+    <button on:click={() => SpotifyApi.repeat()}
+      >🔁{$playerRepeat === SpotifyRepeatState.OFF
+        ? '🔴'
+        : $playerRepeat === SpotifyRepeatState.CONTEXT
+        ? '🟢🟢🟢'
+        : '🟢'}</button
+    >
     <div class="device">💻 Souriya</div>
   </div>
 {:else}

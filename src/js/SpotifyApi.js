@@ -1,3 +1,4 @@
+import { get } from 'svelte/store';
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import Logger from '@/js/Logger';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
@@ -5,18 +6,21 @@ import {
   spotifyAccessToken,
   spotifyUserId,
   isPlaying,
-  isPlayerShuffle,
+  playerShuffle,
+  playerRepeat,
   clearWritableLocalStorage,
+  spotifyDeviceId,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from './SpotifyPlaylistCursor';
 import SpotifySongsCursor from '@/js/SpotifySongsCursor';
+import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
-  DEFAULT_VOLUME = 0.3;
+  DEFAULT_VOLUME = 0.1;
 
   authorize() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
@@ -71,10 +75,8 @@ class SpotifyApi {
     return user;
   }
 
-  /**
-   * @param {string} deviceId
-   */
-  async play(deviceId) {
+  async play() {
+    const deviceId = get(spotifyDeviceId);
     if (!deviceId) {
       LOGGER.log('device_id is not yet initialize!', deviceId);
     }
@@ -91,20 +93,28 @@ class SpotifyApi {
     isPlaying.set(true);
   }
 
-  /**
-   * @param {string} deviceId
-   */
-  async pause(deviceId) {
+  async pause() {
+    const deviceId = get(spotifyDeviceId);
     await this.#put(`me/player/pause?device_id=${deviceId}`);
     isPlaying.set(false);
   }
 
-  /**
-   * @param {boolean} shuffleState
-   */
-  async shuffle(shuffleState) {
+  async shuffle() {
+    const shuffleState = get(playerShuffle);
     await this.#put(`me/player/shuffle?state=${!shuffleState}`);
-    isPlayerShuffle.set(!shuffleState);
+    playerShuffle.set(!shuffleState);
+  }
+
+  async repeat() {
+    let state = get(playerRepeat);
+    state =
+      state === SpotifyRepeatState.OFF
+        ? SpotifyRepeatState.ALL
+        : state === SpotifyRepeatState.ALL
+        ? SpotifyRepeatState.SINGLE
+        : SpotifyRepeatState.OFF;
+    await this.#put(`me/player/repeat?state=${state}`);
+    playerRepeat.set(state);
   }
 
   /**
