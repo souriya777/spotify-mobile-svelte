@@ -9,7 +9,7 @@ class LoggerFile {
     this.filename = filename;
   }
 
-  log(message = '', objectToDebug = '') {
+  log(message = '', objectToDebug = {}) {
     const trace = this.#trace(message);
     console.log(trace, objectToDebug);
   }

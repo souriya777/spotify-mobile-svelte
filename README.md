@@ -15,9 +15,8 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
-- factorize Spotify error management
-- implement JSDoc basic
-- use typecheck's method from svelte ?
+- style(type-checking): implement TS-JSDoc as svelte does
+- improve cursor concept
 - feat(player): can play last song
 - feat(player): can shuffle
 - feat(player): can repeat

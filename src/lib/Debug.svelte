@@ -38,5 +38,5 @@
   <button on:click={() => SpotifyApi.me()}>me</button>
   <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played</button>
   <button on:click={() => SpotifyApi.getLastSong()}>last-song</button>
-  <button on:click={() => SpotifyApi.getMyPlaylists()}>my-playlists</button>
+  <button on:click={() => SpotifyApi.getMyPlaylists($spotifyUserId)}>my-playlists</button>
 </details>

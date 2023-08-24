@@ -1,4 +1,3 @@
-import { get } from 'svelte/store';
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import Logger from '@/js/Logger';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
@@ -8,15 +7,14 @@ import {
   isPlaying,
   clearWritableLocalStorage,
 } from '@/js/store';
+import SpotifyUser from '@/js/SpotifyUser';
+import SpotifyPlaylistCursor from './SpotifyPlaylistCursor';
+import SpotifySongsCursor from '@/js/SpotifySongsCursor';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
-  PLAYER_NAME = null;
-
-  constructor() {
-    this.PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
-  }
+  PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
 
   authorize() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
@@ -59,14 +57,21 @@ class SpotifyApi {
     }
   }
 
+  /**
+   * @returns {Promise<SpotifyUser>}
+   */
   async me() {
     const data = await this.#get('me');
-    const userId = data?.id;
-    if (userId) {
-      spotifyUserId.set(userId);
-    }
+
+    const user = new SpotifyUser(data);
+    spotifyUserId.set(user?.id);
+
+    return user;
   }
 
+  /**
+   * @param {string} deviceId
+   */
   async play(deviceId) {
     if (!deviceId) {
       LOGGER.log('device_id is not yet initialize!', deviceId);
@@ -84,23 +89,38 @@ class SpotifyApi {
     isPlaying.set(true);
   }
 
+  /**
+   * @param {string} deviceId
+   */
   async pause(deviceId) {
     await this.#put(`me/player/pause?device_id=${deviceId}`);
     isPlaying.set(false);
   }
 
-  async getMyPlaylists() {
-    return await this.#get(`users/${get(spotifyUserId)}/playlists`);
+  /**
+   * @param {string} userId
+   * @returns {Promise<import('./spotify').SpotifyPlaylist[]>}
+   */
+  async getMyPlaylists(userId) {
+    const data = await this.#get(`users/${userId}/playlists`);
+    return new SpotifyPlaylistCursor(data)?.items;
   }
 
+  /**
+   * @returns {Promise<import('./spotify').SpotifySong[]>}
+   */
   async getRecentlyPlayedSongs() {
-    return await this.#get(`me/player/recently-played`);
+    const data = await this.#get(`me/player/recently-played`);
+    return new SpotifySongsCursor(data)?.items;
   }
 
+  /**
+   * @returns {Promise<import('./spotify').SpotifySong>}
+   */
   async getLastSong() {
     const data = await this.getRecentlyPlayedSongs();
-    LOGGER.log('last-song', data?.items?.[0]);
-    return data?.items?.[0];
+    LOGGER.log('last-song', data?.[0]);
+    return data?.[0];
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
