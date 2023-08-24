@@ -1,16 +1,28 @@
 <script>
   import {
+    player,
+    playerCurrentTrack,
+    playerShuffle,
+    playerRepeat,
     isPlayerFull,
     isPlaying,
-    playerShuffle,
-    player,
     isPlayerReady,
-    playerRepeat,
   } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
+
+  $: artistsDisplay = $playerCurrentTrack?.artists?.map((item) => item.name).join(', ');
+  $: imageUrl = $playerCurrentTrack?.album?.images?.[0]?.url;
+
+  $: currentTrack = {
+    ...$playerCurrentTrack,
+    albumName: $playerCurrentTrack?.album?.name,
+    artistsDisplay,
+    imageUrl,
+  };
+  $: console.log(currentTrack);
 </script>
 
 {#if $isPlayerReady}
@@ -19,12 +31,9 @@
       <button>back</button>
       <p>Liked Songs</p>
     </div>
-    <img
-      src="https://i.scdn.co/image/ab67616d00001e02d9aae5518aa56971b3f406ea"
-      alt="La Dura Vida del Joven Rapero"
-    />
-    <div class="title">Contando Lunares (feat. Cruz Cafuné)</div>
-    <div class="artist">Don Patricio, Cruz Cafuné</div>
+    <img src={imageUrl} alt={currentTrack.albumName} />
+    <div class="title">{currentTrack.name}</div>
+    <div class="artist">{currentTrack.artistsDisplay}</div>
     <button>+✅</button>
     <div class="progress">
       <div>bar</div>

@@ -1,6 +1,7 @@
 import { writable, derived } from 'svelte/store';
 import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
+import SpotifyTrackObject from '@/js/SpotifyTrackObject';
 
 // SPOTIFY
 const spotifyAccessToken = writableLocalStorage('spotifyAccessToken', '');
@@ -10,6 +11,8 @@ const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', 
 
 // PLAYER
 const player = writable(null);
+/** @type {import('svelte/store').Writable<SpotifyTrackObject>} */
+const playerCurrentTrack = writable(new SpotifyTrackObject());
 const playerShuffle = writable(false);
 const playerRepeat = writable(SpotifyRepeatState.OFF);
 const isPlayerFull = writable(false);
@@ -55,6 +58,7 @@ export {
   spotifyAuthorizeWaiting,
   spotifyDeviceId,
   player,
+  playerCurrentTrack,
   playerShuffle,
   playerRepeat,
   isPlayerFull,

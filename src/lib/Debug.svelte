@@ -13,7 +13,7 @@
 
   $: deviceId = $spotifyDeviceId?.slice(0, 8)?.concat('...');
 
-  let open = false;
+  let open = true;
 </script>
 
 <details {open}>
@@ -40,4 +40,5 @@
   <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played</button>
   <button on:click={() => SpotifyApi.getLastSong()}>last-song</button>
   <button on:click={() => SpotifyApi.getMyPlaylists($spotifyUserId)}>my-playlists</button>
+  <button on:click={() => SpotifyApi.getCurrentTrack()}>current-track</button>
 </details>

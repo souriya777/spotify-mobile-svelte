@@ -15,29 +15,30 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
+- feat(player): can retrieve current playing
+  ==> transformers
+  ===> when to load get "current-track"
+
 - feat(player): can view progress
-- refactor(svelte): use `bind:online`
-- refactor(svelte): use `bind:this`
-- refactor(svelte): use `custom-store`
-- refactor(svelte): use `store-binding`
-- refactor(js): where can I use `optional chaining` ?
-- refactor(js): where can I use `nullish coalescing` ?
-- refactor(js): where can I use `generator yield` ?
-- feat(button): onTap ?
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
 - refactor: WYSIWYG
-- utiliser le view transition API à la "svelte menu"
 - **FEAT(LAYOUT): IMPLEMENT STACK VIEWS**
 - feat(layout): one stack views by `route`
 - resolve child, grand-child etc...
+- feat(button): onTap ?
+
+HARD
+
+- utiliser le view transition API à la "svelte menu"
+- how to make bi-directionnel player ????
   🎉🎉🎉 FIN 🎉🎉🎉
 
-- how to make bi-directionnel player ????
+- feat(mylib): design
+- feat(mylib): can select other song
 
 - feat(search): design
-- feat(mylib): design
 - feat(queue): design
 - feat(detail): design
 - feat(loading): which device

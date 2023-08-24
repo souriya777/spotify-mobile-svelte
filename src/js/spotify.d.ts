@@ -39,3 +39,22 @@ export type SpotifyImage = {
   height: number;
   width: number;
 };
+
+export type SpotifyPlaybackState = {
+  item: SpotifyTrackObject;
+};
+
+export type SpotifyTrackObject = {
+  name: string;
+  album: SpotifyAlbum;
+  artists: SpotifyArtist[];
+};
+
+export type SpotifyAlbum = {
+  name: string;
+  images: SpotifyImage[];
+};
+
+export type SpotifyArtist = {
+  name: string;
+};

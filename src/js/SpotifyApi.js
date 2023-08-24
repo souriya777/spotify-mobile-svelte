@@ -6,15 +6,17 @@ import {
   spotifyAccessToken,
   spotifyUserId,
   isPlaying,
+  playerCurrentTrack,
   playerShuffle,
   playerRepeat,
   clearWritableLocalStorage,
   spotifyDeviceId,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
-import SpotifyPlaylistCursor from './SpotifyPlaylistCursor';
+import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
 import SpotifySongsCursor from '@/js/SpotifySongsCursor';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
+import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -67,12 +69,31 @@ class SpotifyApi {
    * @returns {Promise<SpotifyUser>}
    */
   async me() {
-    const data = await this.#get('me');
+    const data = await this.#get('/me');
 
     const user = new SpotifyUser(data);
     spotifyUserId.set(user?.id);
 
     return user;
+  }
+
+  /**
+   * @returns {Promise<import('./spotify').SpotifyPlaybackState>}
+   */
+  async getPlaybackState() {
+    const data = await this.#get('/me/player');
+    return new SpotifyPlaybackState(data);
+  }
+
+  /**
+   * @returns {Promise<import('./spotify').SpotifyTrackObject>}
+   */
+  async getCurrentTrack() {
+    const playbackState = await this.getPlaybackState();
+    const currentTrack = playbackState.item;
+    playerCurrentTrack.set(currentTrack);
+    LOGGER.log('current-track', currentTrack);
+    return currentTrack;
   }
 
   async play() {
@@ -85,7 +106,7 @@ class SpotifyApi {
     const URI = 'spotify:playlist:17eOVmN640LTnMK3fsGWVF';
 
     await this.#put(
-      `me/player/play?device_id=${deviceId}`,
+      `/me/player/play?device_id=${deviceId}`,
       JSON.stringify({
         context_uri: URI,
       }),
@@ -95,13 +116,13 @@ class SpotifyApi {
 
   async pause() {
     const deviceId = get(spotifyDeviceId);
-    await this.#put(`me/player/pause?device_id=${deviceId}`);
+    await this.#put(`/me/player/pause?device_id=${deviceId}`);
     isPlaying.set(false);
   }
 
   async shuffle() {
     const shuffleState = get(playerShuffle);
-    await this.#put(`me/player/shuffle?state=${!shuffleState}`);
+    await this.#put(`/me/player/shuffle?state=${!shuffleState}`);
     playerShuffle.set(!shuffleState);
   }
 
@@ -109,11 +130,11 @@ class SpotifyApi {
     let state = get(playerRepeat);
     state =
       state === SpotifyRepeatState.OFF
-        ? SpotifyRepeatState.ALL
-        : state === SpotifyRepeatState.ALL
-        ? SpotifyRepeatState.SINGLE
+        ? SpotifyRepeatState.CONTEXT
+        : state === SpotifyRepeatState.CONTEXT
+        ? SpotifyRepeatState.TRACK
         : SpotifyRepeatState.OFF;
-    await this.#put(`me/player/repeat?state=${state}`);
+    await this.#put(`/me/player/repeat?state=${state}`);
     playerRepeat.set(state);
   }
 
@@ -122,7 +143,7 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifyPlaylist[]>}
    */
   async getMyPlaylists(userId) {
-    const data = await this.#get(`users/${userId}/playlists`);
+    const data = await this.#get(`/users/${userId}/playlists`);
     return new SpotifyPlaylistCursor(data)?.items;
   }
 
@@ -130,7 +151,7 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifySong[]>}
    */
   async getRecentlyPlayedSongs() {
-    const data = await this.#get(`me/player/recently-played`);
+    const data = await this.#get(`/me/player/recently-played`);
     return new SpotifySongsCursor(data)?.items;
   }
 
@@ -149,7 +170,7 @@ class SpotifyApi {
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
 
   #url(endpoint) {
-    return `https://api.spotify.com/v1/${endpoint}`;
+    return `https://api.spotify.com/v1${endpoint}`;
   }
 
   #axios(endpoint, options) {
