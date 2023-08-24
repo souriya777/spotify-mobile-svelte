@@ -15,9 +15,6 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
-- style(type-checking): implement TS-JSDoc as svelte does
-- improve cursor concept
-- feat(player): can play last song
 - feat(player): can shuffle
 - feat(player): can repeat
 - feat(player): can repeat single song
@@ -47,6 +44,8 @@ DRY
 - feat(detail): design
 - feat(loading): which device
 - feat(login)
+
+- improve cursor concept
 
 - space
 - color

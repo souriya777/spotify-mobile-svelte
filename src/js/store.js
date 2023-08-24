@@ -9,7 +9,8 @@ const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', 
 
 // PLAYER
 const player = writable(null);
-const playerFullMode = writable(false);
+const isPlayerShuffle = writable(false);
+const isPlayerFull = writable(false);
 const isPlayerReady = derived(
   [spotifyDeviceId, player],
   ([$spotifyDeviceId, $player]) => $spotifyDeviceId != null && $player != null,
@@ -52,8 +53,9 @@ export {
   spotifyAuthorizeWaiting,
   spotifyDeviceId,
   player,
+  isPlayerShuffle,
+  isPlayerFull,
   isPlayerReady,
-  playerFullMode,
   isPlaying,
   clearWritableLocalStorage,
 };

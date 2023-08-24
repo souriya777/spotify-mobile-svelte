@@ -18,7 +18,7 @@
       getOAuthToken: (cb) => {
         cb($spotifyAccessToken);
       },
-      volume: 0.7,
+      volume: SpotifyApi.DEFAULT_VOLUME,
     });
 
     SPOTIFY_PLAYER.addListener('ready', ({ device_id }) => {

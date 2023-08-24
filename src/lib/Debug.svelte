@@ -2,7 +2,7 @@
   import {
     spotifyAccessToken,
     spotifyUserId,
-    playerFullMode,
+    isPlayerFull,
     spotifyDeviceId,
     player,
     isPlayerReady,
@@ -13,7 +13,7 @@
 
   $: deviceId = $spotifyDeviceId?.slice(0, 8)?.concat('...');
 
-  let open = true;
+  let open = false;
 </script>
 
 <details {open}>
@@ -24,7 +24,7 @@
     <li>deviceId:{deviceId}</li>
     <li>PLAYER_NAME:{SpotifyApi.PLAYER_NAME}</li>
     <li>player:{JSON.stringify($player?._options)}</li>
-    <li>playerFullMode:{$playerFullMode}</li>
+    <li>isPlayerFull:{$isPlayerFull}</li>
     <li>token:{$spotifyAccessToken?.slice(0, 8)?.concat('...')}</li>
     <li>
       AXIOS_HEADER:{AXIOS_INSTANCE.defaults.headers.common.Authorization?.toString()
@@ -32,6 +32,7 @@
         ?.concat('...')}
     </li>
     <li>{$isPlayerReady ? '🟢' : '🔴'}isPlayerReady:{$isPlayerReady}</li>
+    <li>volume:{SpotifyApi.DEFAULT_VOLUME}</li>
   </ul>
 
   <button on:click={SpotifyApi.forceSpotifyAuthorization}>🗑️ forceSpotifyAuthorization</button>

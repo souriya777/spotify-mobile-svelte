@@ -1,13 +1,20 @@
 <script>
-  import { playerFullMode, isPlaying, player, spotifyDeviceId, isPlayerReady } from '@/js/store';
+  import {
+    isPlayerFull,
+    isPlaying,
+    isPlayerShuffle,
+    player,
+    spotifyDeviceId,
+    isPlayerReady,
+  } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
 </script>
 
 {#if $isPlayerReady}
-  <div class="player" use:onTap={() => playerFullMode.set(true)}>
-    <div class="bar" use:onTap={() => playerFullMode.set(false)}>
+  <div class="player" use:onTap={() => isPlayerFull.set(true)}>
+    <div class="bar" use:onTap={() => isPlayerFull.set(false)}>
       <button>back</button>
       <p>Liked Songs</p>
     </div>
@@ -25,7 +32,9 @@
         <div class="end">-2:28</div>
       </div>
     </div>
-    <button>shuffle</button>
+    <button on:click={() => SpotifyApi.shuffle($isPlayerShuffle)}
+      >🔀{$isPlayerShuffle ? '🟢' : '🔴'}</button
+    >
     <button on:click={() => $player.previousTrack()}>⏮️</button>
     {#if $isPlaying}
       <button on:click={() => SpotifyApi.pause($spotifyDeviceId)}>⏸️</button>

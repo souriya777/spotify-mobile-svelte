@@ -5,6 +5,7 @@ import {
   spotifyAccessToken,
   spotifyUserId,
   isPlaying,
+  isPlayerShuffle,
   clearWritableLocalStorage,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
@@ -15,6 +16,7 @@ const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
+  DEFAULT_VOLUME = 0.3;
 
   authorize() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
@@ -95,6 +97,14 @@ class SpotifyApi {
   async pause(deviceId) {
     await this.#put(`me/player/pause?device_id=${deviceId}`);
     isPlaying.set(false);
+  }
+
+  /**
+   * @param {boolean} shuffleState
+   */
+  async shuffle(shuffleState) {
+    await this.#put(`me/player/shuffle?state=${!shuffleState}`);
+    isPlayerShuffle.set(!shuffleState);
   }
 
   /**
