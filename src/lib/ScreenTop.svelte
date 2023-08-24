@@ -7,7 +7,7 @@
 
   let now = Date.now();
   let batteryLevel = 100;
-  let online = navigator.onLine;
+  let online;
   $: time = hourMinute(now);
 
   function updateBatteryUI(battery) {
@@ -29,15 +29,6 @@
       navigator.getBattery().then(monitorBattery);
     }
 
-    window.addEventListener('offline', () => {
-      LOGGER.log('offline');
-      online = false;
-    });
-    window.addEventListener('online', () => {
-      LOGGER.log('online');
-      online = true;
-    });
-
     const interval = setInterval(() => {
       now = Date.now();
     }, 6000);
@@ -47,6 +38,8 @@
     };
   });
 </script>
+
+<svelte:window bind:online />
 
 <div class="screenTop">
   <div class="hour">{time}</div>

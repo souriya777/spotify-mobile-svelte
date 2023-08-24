@@ -15,9 +15,7 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
-- feat(player): can repeat "track" or "context"
 - feat(player): can view progress
-- refactor(phonetime): use `readable` from svelte
 - refactor(svelte): use `bind:online`
 - refactor(svelte): use `bind:this`
 - refactor(svelte): use `custom-store`
