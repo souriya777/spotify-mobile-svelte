@@ -13,7 +13,7 @@ export type SpofityTrack = {
 export type SpotifyPlaybackState = {
   is_playing: boolean;
   shuffle_state: boolean;
-  repeat_state: string; // FIXME SpotifyPlaybackStatus
+  repeat_state: string; // FIXME SpotifyStatus
   progress_ms: number;
   item: SpotifyTrack;
 };
@@ -40,6 +40,7 @@ export type SpotifyPlaylist = {
 export type SpotifyQueue = {
   currently_playing: SpotifyTrack;
   queue: SpotifyTrack[];
+  isEmpty: () => boolean;
 };
 
 export type SpotifySongsCursor = {

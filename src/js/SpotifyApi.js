@@ -19,8 +19,12 @@ import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 import SpotifyQueue from '@/js/SpotifyQueue';
 import SpotifyTrack from '@/js/SpotifyTrack';
+import QueueEmptyError from '@/js/QueueEmptyError';
+import SpotifyStatus from './SpotifyStatus';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
+
+// TODO can status is useful ?
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
@@ -80,13 +84,8 @@ class SpotifyApi {
   }
 
   async synchronize() {
-    const song = await this.getQueueLastSong();
-    playerCurrentTrack.set(song);
-    LOGGER.log('last song loaded ✅', song);
-
-    const playbackState = await this.getPlaybackState();
-    playerPlaybackState.set(playbackState);
-    LOGGER.log('last state loaded ✅', playbackState);
+    this.#synchronizeTrack();
+    this.#synchronizePlaybackState();
   }
 
   // FIXME
@@ -188,20 +187,36 @@ class SpotifyApi {
 
   /**
    * @returns {Promise<import('./spotify').SpotifyQueue>}
+   * @throws QueueEmptyError
    */
   async getQueue() {
     const { data } = await this.#get('/me/player/queue');
     const queue = new SpotifyQueue(data);
     LOGGER.log('queue', queue);
+
+    if (queue.isEmpty()) {
+      throw new QueueEmptyError('queue is empty');
+    }
+
     return queue;
   }
 
   /**
    * @returns {Promise<import('./spotify').SpofityTrack>}
+   * @throws QueueEmptyError
    */
   async getQueueLastSong() {
-    const queue = await this.getQueue();
-    return new SpotifyTrack(queue.currently_playing);
+    let queueSong = null;
+
+    try {
+      const queue = await this.getQueue();
+      queueSong = new SpotifyTrack(queue.currently_playing);
+    } catch (err) {
+      LOGGER.error(err?.message);
+      throw err;
+    }
+
+    return queueSong;
   }
 
   /**
@@ -209,19 +224,39 @@ class SpotifyApi {
    */
   async getLastSong() {
     const songs = await this.getRecentlyPlayedSongs();
-
-    const lastSong = songs?.[0];
-    if (lastSong) {
-      playerCurrentTrack.set(lastSong);
-      LOGGER.log('last-song', lastSong);
-    }
-    return lastSong;
+    return songs?.[0];
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
   #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
+
+  async #synchronizeTrack() {
+    let track = null;
+
+    try {
+      // if song in queue, load it...
+      track = await this.getQueueLastSong();
+    } catch (err) {
+      if (err instanceof QueueEmptyError) {
+        // ... otherwise take it from recently-played
+        const song = await this.getLastSong();
+        track = song?.track;
+      }
+    }
+
+    if (track) {
+      playerCurrentTrack.set(track);
+      LOGGER.log('last track loaded ✅', track);
+    }
+  }
+
+  async #synchronizePlaybackState() {
+    const playbackState = await this.getPlaybackState();
+    playerPlaybackState.set(playbackState);
+    LOGGER.log('last state loaded ✅', playbackState);
+  }
 
   #url(endpoint) {
     return `https://api.spotify.com/v1${endpoint}`;
@@ -230,22 +265,24 @@ class SpotifyApi {
   /**
    * @param {string} endpoint
    * @param {object} options
-   * @returns { Promise<{ data: object, status: number }> }
+   * @returns { Promise<object> } data
    */
+  // FIXME axios return jsdoc
+  // https://stackoverflow.com/questions/69337592/how-to-set-the-response-type-using-axios-with-javascript-and-jsdocs
   #axios(endpoint, options) {
     return AXIOS_INSTANCE(options)
       .then((response) => {
         const data = response?.data;
         const status = response?.status;
         LOGGER.log(options?.method, endpoint, data, status);
-        return { data, status };
+        return data;
       })
       .catch((err) => {
         const errorJSON = err.toJSON();
         const status = errorJSON?.status;
         LOGGER.error('🌱', err.toJSON(), status);
-        if (401 === status) {
-          LOGGER.log('Spotify returns 401 -> refresh access');
+        if (SpotifyStatus.UNAUTHORIZED === status) {
+          LOGGER.error('Spotify returns 401 -> refresh access');
           this.forceSpotifyAuthorization();
         }
         return { data: {}, status: 500 };

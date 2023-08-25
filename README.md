@@ -15,13 +15,21 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
+// FIXME axios return jsdoc
+
 - feat(player): synchronize shuffle & repeat
 - feat(player): auto-synchronize
   ==> when play next previous
   ==> isPlaying still useful ?
-  ==> // FIXME SpotifyPlaybackStatus
+  ==> // FIXME SpotifyStatus
   ==> // FIXME context_uri: uri,
   ==> transformers // TODO move in transformers ???
+  ==> resolve last FIXME
+  ==> resolve last TODO
+
+- feat(player): what is default queue ?
+
+- refactor(project-structure): move SpotifyRepeatState & SpotifyStatus
 
 - feat(player): can view progress
 - position fixed : player & menu

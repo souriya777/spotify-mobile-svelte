@@ -22,7 +22,7 @@
     });
 
     SPOTIFY_PLAYER.addListener('ready', ({ device_id }) => {
-      LOGGER.log('device ready !', device_id);
+      LOGGER.log('device ready ✅', device_id);
       spotifyDeviceId.set(device_id);
     });
 

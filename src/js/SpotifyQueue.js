@@ -8,6 +8,10 @@ class SpotifyQueue {
     this.currently_playing = new SpotifyTrack(fromApi?.currently_playing);
     this.queue = fromApi?.queue?.map((item) => new SpotifyTrack(item));
   }
+
+  isEmpty() {
+    return this.queue?.length === 0;
+  }
 }
 
 export default SpotifyQueue;

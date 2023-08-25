@@ -1,3 +1,4 @@
+/** @enum {string} */
 const SpotifyRepeatState = {
   OFF: 'off',
   CONTEXT: 'context',
