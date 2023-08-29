@@ -1,0 +1,36 @@
+{
+  "is_playing": true,
+  "shuffle_state": false,
+  "repeat_state": "off",
+  "progress_ms": 6156,
+  "item": {
+    "uri": "spotify:track:3xPNasHy69FFGxyxYApJPS",
+    "name": "Laisse moi t'aimer",
+    "album": {
+      "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
+      "name": "20eme anniversaire",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27367ed9c2113d97a041e1985a8",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0267ed9c2113d97a041e1985a8",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485167ed9c2113d97a041e1985a8",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    "artists": [
+      {
+        "name": "Mike Brant"
+      }
+    ]
+  }
+}

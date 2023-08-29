@@ -20,11 +20,10 @@ import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 import SpotifyQueue from '@/js/SpotifyQueue';
 import SpotifyTrack from '@/js/SpotifyTrack';
 import QueueEmptyError from '@/js/QueueEmptyError';
-import SpotifyStatus from './SpotifyStatus';
+import SpotifyStatus from '@/js/SpotifyStatus';
+import SpotifyDeviceList from '@/js/SpotifyDeviceList';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
-
-// TODO can status is useful ?
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
@@ -76,10 +75,8 @@ class SpotifyApi {
    */
   async me() {
     const data = await this.#get('/me');
-
     const user = new SpotifyUser(data);
     spotifyUserId.set(user?.id);
-
     return user;
   }
 
@@ -88,7 +85,6 @@ class SpotifyApi {
     this.#synchronizePlaybackState();
   }
 
-  // FIXME
   /**
    * @returns {Promise<import('./spotify').SpotifyPlaybackState>}
    */
@@ -96,6 +92,7 @@ class SpotifyApi {
     const data = await this.#get('/me/player');
     const playbackState = new SpotifyPlaybackState(data);
     LOGGER.log('getPlaybackState()', playbackState);
+    console.log(playbackState);
     return playbackState;
   }
 
@@ -109,10 +106,14 @@ class SpotifyApi {
   }
 
   // FIXME NOT USED NOW
+  /**
+   *
+   * @returns {Promise<import('./spotify').SpotifyDeviceList>}
+   */
   async getAvailableDevice() {
-    const devices = await this.#get('/me/player/devices');
-    console.log(devices);
-    return devices;
+    const data = await this.#get('/me/player/devices');
+    const deviceList = new SpotifyDeviceList(data);
+    return deviceList;
   }
 
   async play() {

@@ -1,0 +1,18 @@
+{
+  "devices": [
+    {
+      "id": "51babb5648c473f66f261d7f0d8e3be99a284ab6",
+      "is_active": false,
+      "name": "Souriya",
+      "type": "Computer",
+      "volume_percent": 50
+    },
+    {
+      "id": "13f9f9f2ec6bee88555e6fa955c0392c55349265",
+      "is_active": false,
+      "name": "svelte.mac.chrome",
+      "type": "Computer",
+      "volume_percent": 20
+    }
+  ]
+}

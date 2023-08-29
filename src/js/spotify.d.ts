@@ -18,7 +18,12 @@ export type SpotifyPlaybackState = {
   item: SpotifyTrack;
 };
 
+export type SpotifyDeviceList = {
+  devices: SpotifyDevice[];
+};
+
 export type SpotifyDevice = {
+  id: string;
   is_active: boolean;
   name: string;
   type: string;

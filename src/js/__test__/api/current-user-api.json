@@ -1,0 +1,33 @@
+{
+  "display_name": "Souriya Phongsavanh",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/laosoupi59"
+  },
+  "href": "https://api.spotify.com/v1/users/laosoupi59",
+  "id": "laosoupi59",
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab67757000003b82cb34cdbd967e0be9df6c15d5",
+      "height": 64,
+      "width": 64
+    },
+    {
+      "url": "https://i.scdn.co/image/ab6775700000ee85cb34cdbd967e0be9df6c15d5",
+      "height": 300,
+      "width": 300
+    }
+  ],
+  "type": "user",
+  "uri": "spotify:user:laosoupi59",
+  "followers": {
+    "href": null,
+    "total": 5
+  },
+  "country": "FR",
+  "product": "premium",
+  "explicit_content": {
+    "filter_enabled": false,
+    "filter_locked": false
+  },
+  "email": "laosoupi59@gmail.com"
+}
