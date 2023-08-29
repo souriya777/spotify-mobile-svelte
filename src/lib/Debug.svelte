@@ -31,7 +31,7 @@
     </li>
     <li>{$isPlayerReady ? '🟢' : '🔴'}isPlayerReady:{$isPlayerReady}</li>
     <li>vol.:{$player?._options?.volume}</li>
-    <li>🎵song.:{$playerCurrentTrack?.album?.name}</li>
+    <li>🎵song.:{$playerCurrentTrack?.name}</li>
   </ul>
 
   <button on:click={SpotifyApi.forceSpotifyAuthorization}>🗑️ FORCE</button>

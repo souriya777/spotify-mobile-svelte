@@ -75,7 +75,7 @@ class SpotifyApi {
    * @returns {Promise<SpotifyUser>}
    */
   async me() {
-    const { data } = await this.#get('/me');
+    const data = await this.#get('/me');
 
     const user = new SpotifyUser(data);
     spotifyUserId.set(user?.id);
@@ -93,9 +93,9 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifyPlaybackState>}
    */
   async getPlaybackState() {
-    const { data } = await this.#get('/me/player');
+    const data = await this.#get('/me/player');
     const playbackState = new SpotifyPlaybackState(data);
-    LOGGER.log('playbackState', playbackState);
+    LOGGER.log('getPlaybackState()', playbackState);
     return playbackState;
   }
 
@@ -131,7 +131,7 @@ class SpotifyApi {
         uris: [uri],
       }),
     );
-    LOGGER.log('play', uri);
+    LOGGER.log('play()', uri);
   }
 
   async pause() {
@@ -173,7 +173,7 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifyPlaylist[]>}
    */
   async getMyPlaylists(userId) {
-    const { data } = await this.#get(`/users/${userId}/playlists`);
+    const data = await this.#get(`/users/${userId}/playlists`);
     return new SpotifyPlaylistCursor(data)?.items;
   }
 
@@ -181,7 +181,7 @@ class SpotifyApi {
    * @returns {Promise<import('./spotify').SpotifySong[]>}
    */
   async getRecentlyPlayedSongs() {
-    const { data } = await this.#get(`/me/player/recently-played`);
+    const data = await this.#get(`/me/player/recently-played`);
     return new SpotifySongsCursor(data)?.items;
   }
 
@@ -190,9 +190,9 @@ class SpotifyApi {
    * @throws QueueEmptyError
    */
   async getQueue() {
-    const { data } = await this.#get('/me/player/queue');
+    const data = await this.#get('/me/player/queue');
     const queue = new SpotifyQueue(data);
-    LOGGER.log('queue', queue);
+    LOGGER.log('getQueue()', queue);
 
     if (queue.isEmpty()) {
       throw new QueueEmptyError('queue is empty');
@@ -211,6 +211,8 @@ class SpotifyApi {
     try {
       const queue = await this.getQueue();
       queueSong = new SpotifyTrack(queue.currently_playing);
+
+      LOGGER.log('getQueueLastSong()', queueSong);
     } catch (err) {
       LOGGER.error(err?.message);
       throw err;
@@ -238,8 +240,15 @@ class SpotifyApi {
     try {
       // if song in queue, load it...
       track = await this.getQueueLastSong();
+
+      if (!track) {
+        throw new QueueEmptyError();
+      }
     } catch (err) {
+      console.log('err', err);
       if (err instanceof QueueEmptyError) {
+        LOGGER.error(err.message);
+        console.log('QueueEmptyError', QueueEmptyError);
         // ... otherwise take it from recently-played
         const song = await this.getLastSong();
         track = song?.track;
@@ -265,10 +274,8 @@ class SpotifyApi {
   /**
    * @param {string} endpoint
    * @param {object} options
-   * @returns { Promise<object> } data
+   * @returns { Promise<{object}> } data
    */
-  // FIXME axios return jsdoc
-  // https://stackoverflow.com/questions/69337592/how-to-set-the-response-type-using-axios-with-javascript-and-jsdocs
   #axios(endpoint, options) {
     return AXIOS_INSTANCE(options)
       .then((response) => {
@@ -285,7 +292,7 @@ class SpotifyApi {
           LOGGER.error('Spotify returns 401 -> refresh access');
           this.forceSpotifyAuthorization();
         }
-        return { data: {}, status: 500 };
+        throw err;
       });
   }
 

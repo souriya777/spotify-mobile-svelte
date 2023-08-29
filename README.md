@@ -15,17 +15,17 @@ DRY
 
 ✅✅✅ OBJECTIF DU JOUR ✅✅✅
 
-// FIXME axios return jsdoc
-
-- feat(player): synchronize shuffle & repeat
+- test(spotify-api): mock axios calls
+- test(spotify-api): test transformers
 - feat(player): auto-synchronize
   ==> when play next previous
-  ==> isPlaying still useful ?
   ==> // FIXME SpotifyStatus
   ==> // FIXME context_uri: uri,
   ==> transformers // TODO move in transformers ???
   ==> resolve last FIXME
   ==> resolve last TODO
+- fix get last playback state
+- feat(player): synchronize shuffle & repeat
 
 - feat(player): what is default queue ?
 
@@ -78,7 +78,6 @@ HARD
 ## bonus
 
 - feat(loading) : add spotify logo (ball)
-- test(tool): use `vitest` ?
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
 - make vibration
