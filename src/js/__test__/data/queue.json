@@ -1,0 +1,334 @@
+{
+  "currently_playing": {
+    "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
+    "name": "La bohème",
+    "album": {
+      "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
+      "name": "Reprises, Vol. 2",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    "artists": [
+      {
+        "name": "Chloé Stafler"
+      }
+    ]
+  },
+  "queue": [
+    {
+      "uri": "spotify:track:6htdm2zhPzphFnHWQVQBJd",
+      "name": "Le Coup de Soleil",
+      "album": {
+        "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
+        "name": "Reprises",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e258ced2f5e48a23a120f58",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e021e258ced2f5e48a23a120f58",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e258ced2f5e48a23a120f58",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
+      "name": "La vie en rose",
+      "album": {
+        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
+        "name": "Reprises, Vol. 2",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:6ioe6K8aDV0A65qz6Huzs2",
+      "name": "Bella Ciao",
+      "album": {
+        "uri": "spotify:album:1k8zteiBvZDtW1BlnXPVZ8",
+        "name": "Bella Ciao",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273cc565bc8762a333bd4abc2aa",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02cc565bc8762a333bd4abc2aa",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851cc565bc8762a333bd4abc2aa",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
+      "name": "Despacito",
+      "album": {
+        "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
+        "name": "Despacito",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273fe3a59387691ffc0527e46e4",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02fe3a59387691ffc0527e46e4",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851fe3a59387691ffc0527e46e4",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:3Arm3BlSs9GAAMHSWZCIdd",
+      "name": "Tous les garçons et les filles",
+      "album": {
+        "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
+        "name": "Reprises",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e258ced2f5e48a23a120f58",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e021e258ced2f5e48a23a120f58",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e258ced2f5e48a23a120f58",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:0HkKfLlhuQrtGXofsoF0qu",
+      "name": "Mistral Gagnant",
+      "album": {
+        "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
+        "name": "Reprises",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e258ced2f5e48a23a120f58",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e021e258ced2f5e48a23a120f58",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e258ced2f5e48a23a120f58",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:1IMqGGJRazA5aYRT3Y02K9",
+      "name": "Sympathique",
+      "album": {
+        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
+        "name": "Reprises, Vol. 2",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:4PtAtIm8JeOdLG61Bwy96A",
+      "name": "Voyage voyage",
+      "album": {
+        "uri": "spotify:album:3ol1OlBfANygZVAzfXrf4t",
+        "name": "Voyage voyage",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273851812580ebd12cc3291707a",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02851812580ebd12cc3291707a",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851851812580ebd12cc3291707a",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
+      "name": "Je te laisserai des mots",
+      "album": {
+        "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",
+        "name": "Je te laisserai des mots",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27362cbca387081645514c28794",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0262cbca387081645514c28794",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485162cbca387081645514c28794",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    },
+    {
+      "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
+      "name": "Je te laisserai des mots",
+      "album": {
+        "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",
+        "name": "Je te laisserai des mots",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27362cbca387081645514c28794",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0262cbca387081645514c28794",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485162cbca387081645514c28794",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "name": "Chloé Stafler"
+        }
+      ]
+    }
+  ]
+}
