@@ -1,0 +1,30 @@
+{
+  "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
+  "name": "La bohème",
+  "album": {
+    "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
+    "name": "Reprises, Vol. 2",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+        "height": 64,
+        "width": 64
+      }
+    ]
+  },
+  "artists": [
+    {
+      "name": "Chloé Stafler"
+    }
+  ]
+}

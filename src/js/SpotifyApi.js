@@ -212,7 +212,6 @@ class SpotifyApi {
     try {
       const queue = await this.getQueue();
       queueSong = new SpotifyTrack(queue.currently_playing);
-
       LOGGER.log('getQueueLastSong()', queueSong);
     } catch (err) {
       LOGGER.error(err?.message);
