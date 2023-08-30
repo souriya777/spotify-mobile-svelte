@@ -15,6 +15,7 @@ DRY
 
 ✅✅✅ GOAL : player synced ✅✅✅
 
+- empty
 - test(spotify-api): mock axios calls
 - feat(player): auto-synchronize
   ==> when play next previous

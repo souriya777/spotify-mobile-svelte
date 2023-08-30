@@ -8,6 +8,7 @@ import CURRENT_PLAYING_TRACK_JSON from './data/current-playing-track.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_JSON from './data/my-playlists.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
+import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
 import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
 
@@ -54,5 +55,11 @@ test(`/me/player/queue returns SpotifyQueue`, async () => {
 test(`getQueueLastSong() returns SpofityTrack`, async () => {
   const actual = await SpotifyApi.getQueueLastSong();
   const expected = { ...QUEUE_LAST_SONG_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getLastSong returns SpotifySong`, async () => {
+  const actual = await SpotifyApi.getLastSong();
+  const expected = { ...LAST_SONG_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });

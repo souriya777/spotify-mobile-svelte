@@ -187,6 +187,14 @@ class SpotifyApi {
   }
 
   /**
+   * @returns {Promise<import('./spotify').SpotifySong>}
+   */
+  async getLastSong() {
+    const songs = await this.getRecentlyPlayedSongs();
+    return songs?.[0];
+  }
+
+  /**
    * @returns {Promise<import('./spotify').SpotifyQueue>}
    * @throws QueueEmptyError
    */
@@ -219,14 +227,6 @@ class SpotifyApi {
     }
 
     return queueSong;
-  }
-
-  /**
-   * @returns {Promise<import('./spotify').SpotifySong>}
-   */
-  async getLastSong() {
-    const songs = await this.getRecentlyPlayedSongs();
-    return songs?.[0];
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;

@@ -1,0 +1,39 @@
+{
+  "track": {
+    "uri": "spotify:track:2u9VGZmVz7Rm01SfDgzcfA",
+    "name": "Liebestraum No. 3 in A-Flat Major, S. 541 / 3",
+    "album": {
+      "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
+      "name": "Liszt - My Piano Hero",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    "artists": [
+      {
+        "name": "Franz Liszt"
+      },
+      {
+        "name": "Lang Lang"
+      }
+    ]
+  },
+  "context": {
+    "type": "album",
+    "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu"
+  }
+}
