@@ -4,6 +4,7 @@ import CURRENT_USER_API_JSON from './api/current-user-api.json';
 import CURRENT_PLAYING_TRACK_API_JSON from './api/current-playing-track-api.json';
 import AVAILABLE_DEVICES_API_JSON from './api/available-devices-api.json';
 import MY_PLAYLISTS_API_JSON from './api/my-playlists-api.json';
+import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
 
 export function initSpotifyApi() {
   vi.mock('@/js/axios-utils', () => {
@@ -40,6 +41,8 @@ function getData(method, endpoint) {
       return { ...AVAILABLE_DEVICES_API_JSON };
     } else if (endpoint === '/users/laosoupi59/playlists') {
       return { ...MY_PLAYLISTS_API_JSON };
+    } else if (endpoint === '/me/player/recently-played') {
+      return { ...RECENTLY_PLAYED_API_JSON };
     }
   }
 }

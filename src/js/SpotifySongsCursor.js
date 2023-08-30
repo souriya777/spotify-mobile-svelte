@@ -5,7 +5,7 @@ import SpotifySong from '@/js/SpotifySong';
  */
 class SpotifySongsCursor {
   constructor(fromApi) {
-    this.items = fromApi?.items.map((item) => new SpotifySong(item));
+    this.items = fromApi?.items?.map((item) => new SpotifySong(item));
     this.next = fromApi?.next;
   }
 }

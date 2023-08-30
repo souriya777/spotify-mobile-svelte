@@ -7,6 +7,7 @@ import CURRENT_USER_JSON from './data/current-user.json';
 import CURRENT_PLAYING_TRACK_JSON from './data/current-playing-track.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_JSON from './data/my-playlists.json';
+import RECENTLY_PLAYED_JSON from './data/recently-played.json';
 
 initSpotifyApi();
 
@@ -30,8 +31,14 @@ test(`/me/player/devices returns SpotifyDeviceList`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/users/laosoupi59/playlists returns SpotifyPlaylist`, async () => {
+test(`/users/laosoupi59/playlists returns SpotifyPlaylist[]`, async () => {
   const actual = await SpotifyApi.getMyPlaylists('laosoupi59');
   const expected = [...MY_PLAYLISTS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/me/player/recently-played returns SpotifySong[]`, async () => {
+  const actual = await SpotifyApi.getRecentlyPlayedSongs();
+  const expected = [...RECENTLY_PLAYED_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
