@@ -3,6 +3,7 @@
     "track": {
       "uri": "spotify:track:2u9VGZmVz7Rm01SfDgzcfA",
       "name": "Liebestraum No. 3 in A-Flat Major, S. 541 / 3",
+      "duration_ms": 293146,
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
@@ -26,10 +27,12 @@
       },
       "artists": [
         {
-          "name": "Franz Liszt"
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
-          "name": "Lang Lang"
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
       ]
     },
@@ -42,6 +45,7 @@
     "track": {
       "uri": "spotify:track:0HlYo1qgQYTAaPar58UjmW",
       "name": "Grand Galop chromatique in E-Flat Major, S. 219",
+      "duration_ms": 238413,
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
@@ -65,10 +69,12 @@
       },
       "artists": [
         {
-          "name": "Franz Liszt"
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
-          "name": "Lang Lang"
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
       ]
     },
@@ -81,6 +87,7 @@
     "track": {
       "uri": "spotify:track:0Jp7n6FKqGVxtXPMVYtMQr",
       "name": "Consolation No. 3 in D-Flat Major, S. 172",
+      "duration_ms": 259573,
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
@@ -104,10 +111,12 @@
       },
       "artists": [
         {
-          "name": "Franz Liszt"
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
-          "name": "Lang Lang"
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
       ]
     },
@@ -120,6 +129,7 @@
     "track": {
       "uri": "spotify:track:2Hnurh1BcigGbCGFOb4Uid",
       "name": "La campanella in G-Sharp Minor (From \"Grandes études de Paganini\", S. 141 / 3)",
+      "duration_ms": 287986,
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
@@ -143,10 +153,12 @@
       },
       "artists": [
         {
-          "name": "Franz Liszt"
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
-          "name": "Lang Lang"
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
       ]
     },
@@ -159,6 +171,7 @@
     "track": {
       "uri": "spotify:track:4wKGetA5crT9tZhjqTLTka",
       "name": "Romance \"O pourquoi donc\" in E Minor, S. 169",
+      "duration_ms": 185493,
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
@@ -182,10 +195,12 @@
       },
       "artists": [
         {
-          "name": "Franz Liszt"
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
-          "name": "Lang Lang"
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
       ]
     },
@@ -198,6 +213,7 @@
     "track": {
       "uri": "spotify:track:1MOSRjdAbUhvLNnHCdUEL5",
       "name": "Mistral gagnant",
+      "duration_ms": 165933,
       "album": {
         "uri": "spotify:album:3RNhp7YkJXZe3KJ3xlTHWb",
         "name": "Mistral gagnant",
@@ -221,7 +237,8 @@
       },
       "artists": [
         {
-          "name": "Renaud"
+          "name": "Renaud",
+          "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
         }
       ]
     },
@@ -231,6 +248,7 @@
     "track": {
       "uri": "spotify:track:1ue54Yyh1O9kMbxEGmuyXo",
       "name": "Une autre histoire",
+      "duration_ms": 271728,
       "album": {
         "uri": "spotify:album:3IKoAluhjCmtH178ee69Or",
         "name": "Ailleurs pour un ailleurs...",
@@ -254,7 +272,8 @@
       },
       "artists": [
         {
-          "name": "Gérard Blanc"
+          "name": "Gérard Blanc",
+          "uri": "spotify:artist:7DXIujatSYhHHsoS8Hx8QI"
         }
       ]
     },
@@ -264,6 +283,7 @@
     "track": {
       "uri": "spotify:track:616O2jmafiModH0RgonGqf",
       "name": "Tu m'oublieras",
+      "duration_ms": 219760,
       "album": {
         "uri": "spotify:album:5BXw5K0WzAncb6uMnCrnyW",
         "name": "Simplement",
@@ -287,7 +307,8 @@
       },
       "artists": [
         {
-          "name": "Larusso"
+          "name": "Larusso",
+          "uri": "spotify:artist:07sMHU0vu01xrz1gnNrNry"
         }
       ]
     },
@@ -297,6 +318,7 @@
     "track": {
       "uri": "spotify:track:0aJtKOPiQiMROH8hNhhRoJ",
       "name": "C'est comme ça que je t'aime",
+      "duration_ms": 199979,
       "album": {
         "uri": "spotify:album:4MZO9vKKh1XOxQ0TsQA5h6",
         "name": "Dis-lui",
@@ -320,7 +342,8 @@
       },
       "artists": [
         {
-          "name": "Mike Brant"
+          "name": "Mike Brant",
+          "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
         }
       ]
     },
@@ -330,6 +353,7 @@
     "track": {
       "uri": "spotify:track:3xPNasHy69FFGxyxYApJPS",
       "name": "Laisse moi t'aimer",
+      "duration_ms": 203093,
       "album": {
         "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
         "name": "20eme anniversaire",
@@ -353,7 +377,8 @@
       },
       "artists": [
         {
-          "name": "Mike Brant"
+          "name": "Mike Brant",
+          "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
         }
       ]
     },
@@ -363,6 +388,7 @@
     "track": {
       "uri": "spotify:track:6ktEMYUXbgl0LB36hVmFKL",
       "name": "A Thousand Miles",
+      "duration_ms": 203571,
       "album": {
         "uri": "spotify:album:2f1C7eXLkRfi1qftEZd2Nt",
         "name": "A Thousand Miles",
@@ -386,7 +412,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -399,6 +426,7 @@
     "track": {
       "uri": "spotify:track:5IrPn0YoTqtBF54egBinvS",
       "name": "Tout oublier",
+      "duration_ms": 192071,
       "album": {
         "uri": "spotify:album:3xLQwjdgvbolBJmnPw4bH7",
         "name": "Tout oublier",
@@ -422,7 +450,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -435,6 +464,7 @@
     "track": {
       "uri": "spotify:track:3iAaNU2tT2WwxVeYPyO905",
       "name": "Dis, quand reviendras-tu?",
+      "duration_ms": 288874,
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
@@ -458,7 +488,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -471,6 +502,7 @@
     "track": {
       "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
       "name": "La vie en rose",
+      "duration_ms": 175875,
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
@@ -494,7 +526,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -507,6 +540,7 @@
     "track": {
       "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
       "name": "La bohème",
+      "duration_ms": 212124,
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
@@ -530,7 +564,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -543,6 +578,7 @@
     "track": {
       "uri": "spotify:track:1IMqGGJRazA5aYRT3Y02K9",
       "name": "Sympathique",
+      "duration_ms": 160488,
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
@@ -566,7 +602,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -579,6 +616,7 @@
     "track": {
       "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
       "name": "Despacito",
+      "duration_ms": 220846,
       "album": {
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
         "name": "Despacito",
@@ -602,7 +640,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -615,6 +654,7 @@
     "track": {
       "uri": "spotify:track:0zybgnHwo9jZ0xx2lNjXQE",
       "name": "Souvenirs",
+      "duration_ms": 178811,
       "album": {
         "uri": "spotify:album:2Nzu9FszfqMFnq0I80hQq3",
         "name": "Souvenirs",
@@ -638,7 +678,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -651,6 +692,7 @@
     "track": {
       "uri": "spotify:track:4PtAtIm8JeOdLG61Bwy96A",
       "name": "Voyage voyage",
+      "duration_ms": 211094,
       "album": {
         "uri": "spotify:album:3ol1OlBfANygZVAzfXrf4t",
         "name": "Voyage voyage",
@@ -674,7 +716,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },
@@ -687,6 +730,7 @@
     "track": {
       "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
       "name": "Je te laisserai des mots",
+      "duration_ms": 156144,
       "album": {
         "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",
         "name": "Je te laisserai des mots",
@@ -710,7 +754,8 @@
       },
       "artists": [
         {
-          "name": "Chloé Stafler"
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
       ]
     },

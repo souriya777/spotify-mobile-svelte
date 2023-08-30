@@ -6,6 +6,7 @@ export type SpotifySong = {
 export type SpofityTrack = {
   uri: string;
   name: string;
+  duration_ms: number;
   album: SpotifyAlbum;
   artists: SpotifyArtist[];
 };
@@ -13,9 +14,37 @@ export type SpofityTrack = {
 export type SpotifyPlaybackState = {
   is_playing: boolean;
   shuffle_state: boolean;
-  repeat_state: string; // FIXME SpotifyStatus
+  repeat_state: string;
   progress_ms: number;
   item: SpotifyTrack;
+};
+
+export type SpotifyPlayerState = {
+  paused: boolean;
+  shuffle: boolean;
+  repeat_mode: number;
+  duration: number;
+  position: number;
+  context: {
+    metadata: {
+      current_item: SpotifyPlayerMetadataItem;
+      previous_items: SpotifyPlayerMetadataItem[];
+      next_items: SpotifyPlayerMetadataItem[];
+    };
+  };
+  track_window: {
+    current_track: SpofityTrack;
+    previous_tracks: SpofityTrack[];
+    next_tracks: SpofityTrack[];
+  };
+};
+
+export type SpotifyPlayerMetadataItem = {
+  name: string;
+  uri: string;
+  estimated_duration: number;
+  artists: SpotifyArtist[];
+  images: SpotifyImage[];
 };
 
 export type SpotifyDeviceList = {
@@ -83,4 +112,5 @@ export type SpotifyAlbum = {
 
 export type SpotifyArtist = {
   name: string;
+  uri: string;
 };

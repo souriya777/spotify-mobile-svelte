@@ -4,13 +4,16 @@ import { initSpotifyApi } from './spotify-api-test'; // 🔴 it has to be among 
 import SpotifyApi from '@/js/SpotifyApi';
 
 import CURRENT_USER_JSON from './data/current-user.json';
-import CURRENT_PLAYING_TRACK_JSON from './data/current-playing-track.json';
+import PLAYBACK_STATE_JSON from './data/playback-state.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_JSON from './data/my-playlists.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
 import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
 import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
+import PLAYER_STATE_JSON from './data/player-state.json';
+
+import PLAYER_STATE_API_JSON from './api/player-state-api.json';
 
 initSpotifyApi();
 
@@ -23,7 +26,7 @@ test(`/me returns SpotifyUser`, async () => {
 
 test(`/me/player returns SpotifyPlaybackState`, async () => {
   const actual = await SpotifyApi.getPlaybackState();
-  const expected = { ...CURRENT_PLAYING_TRACK_JSON };
+  const expected = { ...PLAYBACK_STATE_JSON };
 
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
@@ -61,5 +64,11 @@ test(`getQueueLastSong() returns SpofityTrack`, async () => {
 test(`getLastSong returns SpotifySong`, async () => {
   const actual = await SpotifyApi.getLastSong();
   const expected = { ...LAST_SONG_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getPlayerState(state) returns SpotifyPlayerState`, async () => {
+  const actual = await SpotifyApi.getPlayerState({ ...PLAYER_STATE_API_JSON });
+  const expected = { ...PLAYER_STATE_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });

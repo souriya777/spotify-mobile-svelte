@@ -30,6 +30,10 @@
       LOGGER.log('device ID has gone offline', device_id);
     });
 
+    SPOTIFY_PLAYER.addListener('player_state_changed', (state) => {
+      SpotifyApi.synchronize(state);
+    });
+
     // FIXME useful ?
     // SPOTIFY_PLAYER.on('initialization_error', ({ message }) => {
     //   LOGGER.error('Failed to initialize', message);

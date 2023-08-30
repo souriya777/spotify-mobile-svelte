@@ -8,7 +8,6 @@ class SpotifyDevice {
     this.name = fromApi?.name;
     this.type = fromApi?.type;
     this.volume_percent = fromApi?.volume_percent;
-    console.log(this.id, this.is_active, this.name, this.type, this.volume_percent);
   }
 }
 

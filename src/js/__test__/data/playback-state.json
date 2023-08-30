@@ -6,6 +6,7 @@
   "item": {
     "uri": "spotify:track:3xPNasHy69FFGxyxYApJPS",
     "name": "Laisse moi t'aimer",
+    "duration_ms": 203093,
     "album": {
       "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
       "name": "20eme anniversaire",
@@ -29,7 +30,8 @@
     },
     "artists": [
       {
-        "name": "Mike Brant"
+        "name": "Mike Brant",
+        "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
       }
     ]
   }

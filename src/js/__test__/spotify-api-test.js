@@ -1,7 +1,7 @@
 import { vi } from 'vitest';
 
 import CURRENT_USER_API_JSON from './api/current-user-api.json';
-import CURRENT_PLAYING_TRACK_API_JSON from './api/current-playing-track-api.json';
+import PLAYBACK_STATE_API_JSON from './api/playback-state-api.json';
 import AVAILABLE_DEVICES_API_JSON from './api/available-devices-api.json';
 import MY_PLAYLISTS_API_JSON from './api/my-playlists-api.json';
 import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
@@ -37,7 +37,7 @@ function getData(method, endpoint) {
     if (endpoint === '/me') {
       return { ...CURRENT_USER_API_JSON };
     } else if (endpoint === '/me/player') {
-      return { ...CURRENT_PLAYING_TRACK_API_JSON };
+      return { ...PLAYBACK_STATE_API_JSON };
     } else if (endpoint === '/me/player/devices') {
       return { ...AVAILABLE_DEVICES_API_JSON };
     } else if (endpoint === '/users/laosoupi59/playlists') {

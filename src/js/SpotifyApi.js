@@ -22,6 +22,9 @@ import SpotifyTrack from '@/js/SpotifyTrack';
 import QueueEmptyError from '@/js/QueueEmptyError';
 import SpotifyStatus from '@/js/SpotifyStatus';
 import SpotifyDeviceList from '@/js/SpotifyDeviceList';
+import SpotifyPlayerState from '@/js/SpotifyPlayerState';
+import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
+import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -80,9 +83,28 @@ class SpotifyApi {
     return user;
   }
 
-  async synchronize() {
-    this.#synchronizeTrack();
-    this.#synchronizePlaybackState();
+  async synchronize(state) {
+    let track = null;
+    let playbackState = null;
+
+    if (state) {
+      LOGGER.log('SPOTIFY NOTIFICATION');
+      const playerState = this.getPlayerState(state);
+
+      track = SpotifyTrackAdapter.adapt(playerState);
+      playbackState = SpotifyPlaybackStateAdapter.adapt(playerState);
+    }
+
+    this.#synchronizeTrack(track);
+    this.#synchronizePlaybackState(playbackState);
+  }
+
+  /**
+   * @param {any} state
+   * @returns {import('./spotify').SpotifyPlayerState}
+   */
+  getPlayerState(state) {
+    return new SpotifyPlayerState(state);
   }
 
   /**
@@ -92,7 +114,6 @@ class SpotifyApi {
     const data = await this.#get('/me/player');
     const playbackState = new SpotifyPlaybackState(data);
     LOGGER.log('getPlaybackState()', playbackState);
-    console.log(playbackState);
     return playbackState;
   }
 
@@ -127,7 +148,7 @@ class SpotifyApi {
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
       JSON.stringify({
-        // FIXME
+        // FIXME context_uri or uris ?
         // context_uri: uri,
         uris: [uri],
       }),
@@ -234,7 +255,32 @@ class SpotifyApi {
   #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
 
-  async #synchronizeTrack() {
+  /**
+   * @param {null | import('./spotify').SpotifyPlaybackState} state
+   */
+  async #synchronizePlaybackState(state = null) {
+    const playbackState = state ? state : await this.getPlaybackState();
+
+    playerPlaybackState.set(playbackState);
+    playerShuffle.set(playbackState?.shuffle_state);
+    playerRepeat.set(playbackState?.repeat_state);
+
+    LOGGER.log('last state loaded ✅', playbackState);
+  }
+
+  /**
+   * @param {import('./spotify').SpofityTrack} foundTrack
+   */
+  async #synchronizeTrack(foundTrack = null) {
+    const track = foundTrack ? foundTrack : await this.#searchLastTrack();
+
+    if (track) {
+      playerCurrentTrack.set(track);
+      LOGGER.log('last track loaded ✅', track);
+    }
+  }
+
+  async #searchLastTrack() {
     let track = null;
 
     try {
@@ -245,26 +291,15 @@ class SpotifyApi {
         throw new QueueEmptyError();
       }
     } catch (err) {
-      console.log('err', err);
       if (err instanceof QueueEmptyError) {
         LOGGER.error(err.message);
-        console.log('QueueEmptyError', QueueEmptyError);
         // ... otherwise take it from recently-played
         const song = await this.getLastSong();
         track = song?.track;
       }
     }
 
-    if (track) {
-      playerCurrentTrack.set(track);
-      LOGGER.log('last track loaded ✅', track);
-    }
-  }
-
-  async #synchronizePlaybackState() {
-    const playbackState = await this.getPlaybackState();
-    playerPlaybackState.set(playbackState);
-    LOGGER.log('last state loaded ✅', playbackState);
+    return track;
   }
 
   #url(endpoint) {
@@ -290,6 +325,9 @@ class SpotifyApi {
         // LOGGER.error('🌱', err.toJSON(), status);
         if (SpotifyStatus.UNAUTHORIZED === status) {
           LOGGER.error('Spotify returns 401 -> refresh access');
+          this.forceSpotifyAuthorization();
+        } else if (SpotifyStatus.BAD_REQUEST === status) {
+          LOGGER.error('Spotify returns 400 -> bad request', err);
           this.forceSpotifyAuthorization();
         }
         throw err;

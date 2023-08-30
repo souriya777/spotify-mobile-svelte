@@ -15,20 +15,18 @@ DRY
 
 ✅✅✅ GOAL : player synced ✅✅✅
 
-- empty
-- test(spotify-api): mock axios calls
-- feat(player): auto-synchronize
-  ==> when play next previous
-  ==> // FIXME context_uri: uri,
-- fix get last playback state
-- feat(player): synchronize shuffle & repeat
+- merge syncPlaybackState & syncTrack
+- TODO transfert state (after 400 error)
+
+- feat(player): autoplay when click on next/previous
 - feat(player): what is default queue ?
-- refactor(project-structure): move SpotifyRepeatState & SpotifyStatus
-  ==> resolve last FIXME
-  ==> resolve last TODO
 - feat(player): can view progress
 - list all api calls
+  ==> // FIXME context_uri: uri,
   🎉🎉🎉 FIN 🎉🎉🎉
+
+- 🚀 EXTRA : tag liked songs
+- 🚀 EXTRA : shuffle from all playlist
 
 - position fixed : player & menu
 - feat(navigation): improve player & menu
@@ -41,6 +39,8 @@ DRY
 
 HARD
 
+- fix when long-time-inactivity ""Request failed with status code 400"
+- feat(spotify-api): implement quota-limit with code `429`
 - utiliser le view transition API à la "svelte menu"
 - how to make bi-directionnel player ????
   ==> how to listen to push ?
@@ -74,6 +74,7 @@ HARD
 
 ## bonus
 
+- test-unit on CI
 - feat(loading) : add spotify logo (ball)
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
