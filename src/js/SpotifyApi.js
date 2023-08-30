@@ -288,7 +288,7 @@ class SpotifyApi {
       .catch((err) => {
         const errorJSON = err.toJSON();
         const status = errorJSON?.status;
-        LOGGER.error('🌱', err.toJSON(), status);
+        // LOGGER.error('🌱', err.toJSON(), status);
         if (SpotifyStatus.UNAUTHORIZED === status) {
           LOGGER.error('Spotify returns 401 -> refresh access');
           this.forceSpotifyAuthorization();

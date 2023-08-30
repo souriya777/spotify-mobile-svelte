@@ -13,25 +13,22 @@ DRY
 
 ## MVP
 
-✅✅✅ OBJECTIF DU JOUR ✅✅✅
+✅✅✅ GOAL : player synced ✅✅✅
 
 - test(spotify-api): mock axios calls
-- test(spotify-api): test transformers
 - feat(player): auto-synchronize
   ==> when play next previous
-  ==> // FIXME SpotifyStatus
   ==> // FIXME context_uri: uri,
-  ==> transformers // TODO move in transformers ???
-  ==> resolve last FIXME
-  ==> resolve last TODO
 - fix get last playback state
 - feat(player): synchronize shuffle & repeat
-
 - feat(player): what is default queue ?
-
 - refactor(project-structure): move SpotifyRepeatState & SpotifyStatus
-
+  ==> resolve last FIXME
+  ==> resolve last TODO
 - feat(player): can view progress
+- list all api calls
+  🎉🎉🎉 FIN 🎉🎉🎉
+
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
@@ -46,7 +43,6 @@ HARD
 - utiliser le view transition API à la "svelte menu"
 - how to make bi-directionnel player ????
   ==> how to listen to push ?
-  🎉🎉🎉 FIN 🎉🎉🎉
 
 - feat(mylib): design
 - feat(mylib): can select other song

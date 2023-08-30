@@ -6,25 +6,32 @@ import SpotifyApi from '@/js/SpotifyApi';
 import CURRENT_USER_JSON from './data/current-user.json';
 import CURRENT_PLAYING_TRACK_JSON from './data/current-playing-track.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
+import MY_PLAYLISTS_JSON from './data/my-playlists.json';
 
 initSpotifyApi();
 
-test(`/me returns user information`, async () => {
+test(`/me returns SpotifyUser`, async () => {
   const actual = await SpotifyApi.me();
   const expected = { ...CURRENT_USER_JSON };
 
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/me/player get playback state`, async () => {
+test(`/me/player returns SpotifyPlaybackState`, async () => {
   const actual = await SpotifyApi.getPlaybackState();
   const expected = { ...CURRENT_PLAYING_TRACK_JSON };
 
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/me/player/devices get all devices`, async () => {
+test(`/me/player/devices returns SpotifyDeviceList`, async () => {
   const actual = await SpotifyApi.getAvailableDevice();
   const expected = { ...AVAILABLE_DEVICES_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/users/laosoupi59/playlists returns SpotifyPlaylist`, async () => {
+  const actual = await SpotifyApi.getMyPlaylists('laosoupi59');
+  const expected = [...MY_PLAYLISTS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
