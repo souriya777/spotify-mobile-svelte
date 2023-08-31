@@ -1,4 +1,11 @@
 {
+  "device": {
+    "id": "51babb5648c473f66f261d7f0d8e3be99a284ab6",
+    "is_active": true,
+    "name": "Souriya",
+    "type": "Computer",
+    "volume_percent": 50
+  },
   "is_playing": true,
   "shuffle_state": false,
   "repeat_state": "off",

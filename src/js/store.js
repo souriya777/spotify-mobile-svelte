@@ -26,7 +26,6 @@ const isPlayerReady = derived(
   [spotifyDeviceId, player],
   ([$spotifyDeviceId, $player]) => $spotifyDeviceId && $player != null,
 );
-
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
 

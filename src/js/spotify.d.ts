@@ -12,6 +12,7 @@ export type SpofityTrack = {
 };
 
 export type SpotifyPlaybackState = {
+  device: SpotifyDevice;
   is_playing: boolean;
   shuffle_state: boolean;
   repeat_state: string;
@@ -55,7 +56,7 @@ export type SpotifyDevice = {
   id: string;
   is_active: boolean;
   name: string;
-  type: string;
+  type: 'Computer' | 'Smartphone';
   volume_percent: number;
 };
 

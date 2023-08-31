@@ -88,7 +88,7 @@ class SpotifyApi {
     let playbackState = null;
 
     if (state) {
-      LOGGER.log('SPOTIFY NOTIFICATION');
+      LOGGER.log('SPOTIFY NOTIFICATION', state);
       const playerState = this.getPlayerState(state);
 
       track = SpotifyTrackAdapter.adapt(playerState);

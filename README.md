@@ -15,32 +15,39 @@ DRY
 
 ✅✅✅ GOAL : player synced ✅✅✅
 
-- merge syncPlaybackState & syncTrack
-- TODO transfert state (after 400 error)
-
+- sync => only playback state ?
+- feat(player): can synchronise when another device is active
+- merge sync-playbackstate & sync-track ? (redundant infos)
+- feat(player): can view progress
 - feat(player): autoplay when click on next/previous
 - feat(player): what is default queue ?
-- feat(player): can view progress
-- list all api calls
-  ==> // FIXME context_uri: uri,
-  🎉🎉🎉 FIN 🎉🎉🎉
+- feat(player): load song in advance ?
 
-- 🚀 EXTRA : tag liked songs
-- 🚀 EXTRA : shuffle from all playlist
+ALL API CALLS
+
+- feat(player): see device's playing
+- feat(player): list all devices
+- feat(player): select/transfert to device
+- feat(player): can seek position by drag'n'drop progress bar
+- TODO ...
+
+ERROS
+
+- FIXME fix when long-time-inactivity ""Request failed with status code 400"
+- TODO transfert state (after 400 error)
+- FIXMEfeat(spotify-api): implement quota-limit with code `429`
+
+- 🎉🎉🎉 FIN 🎉🎉🎉
 
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
 - refactor: WYSIWYG
-- **FEAT(LAYOUT): IMPLEMENT STACK VIEWS**
+  FEAT(LAYOUT): IMPLEMENT STACK VIEWS
 - feat(layout): one stack views by `route`
 - resolve child, grand-child etc...
 - feat(button): onTap ?
-
-HARD
-
-- fix when long-time-inactivity ""Request failed with status code 400"
-- feat(spotify-api): implement quota-limit with code `429`
+  TRANSITION
 - utiliser le view transition API à la "svelte menu"
 - how to make bi-directionnel player ????
   ==> how to listen to push ?
@@ -74,6 +81,8 @@ HARD
 
 ## bonus
 
+- 🚀 EXTRA : tag liked songs
+- 🚀 EXTRA : shuffle from all playlist
 - test-unit on CI
 - feat(loading) : add spotify logo (ball)
 - pause écouteurs bluetooth ?

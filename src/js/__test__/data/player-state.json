@@ -161,11 +161,7 @@
             }
           ]
         }
-      ],
-      "options": {
-        "shuffled": true,
-        "repeat_mode": "TRACK"
-      }
+      ]
     }
   },
   "track_window": {

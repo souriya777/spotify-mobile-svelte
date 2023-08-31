@@ -1,5 +1,7 @@
 <script>
+  import { onMount } from 'svelte';
   import {
+    spotifyDeviceId,
     playerPlaybackState,
     playerCurrentTrack,
     playerShuffle,
@@ -26,6 +28,18 @@
   $: if ($isPlayerReady) {
     SpotifyApi.synchronize();
   }
+
+  onMount(() => {
+    const frequency = import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS;
+
+    const interval = setInterval(() => {
+      // FIXME tune it
+      SpotifyApi.synchronize();
+      console.log('...refresh PLAYBACK_STATE 🔴');
+    }, frequency);
+
+    return () => clearInterval(interval);
+  });
 </script>
 
 {#if $isPlayerReady}
@@ -61,7 +75,13 @@
         : '🟢'}</button
     >
     <div class="progress">progress{$playerPlaybackState?.progress_ms}</div>
-    <div class="device">💻 Souriya</div>
+    <div class="device">
+      {$spotifyDeviceId}
+      {$playerPlaybackState?.device?.id}
+      {$playerPlaybackState.isMyDeviceActive($spotifyDeviceId) ? '🟢' : '🔴'}
+      {$playerPlaybackState?.device?.type === 'Computer' ? '💻' : '📱'}
+      {$playerPlaybackState?.device?.name}
+    </div>
   </div>
 {:else}
   <SpotifyConnect />
