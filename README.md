@@ -15,8 +15,6 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- synchronizePlaybackState useful ?
-
 - feat(player): what is default queue ?
 - feat(player): can set volume of device
 - feat(player): autoplay when click on next/previous

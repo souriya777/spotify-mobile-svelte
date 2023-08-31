@@ -6,7 +6,6 @@ import {
   spotifyAccessToken,
   spotifyUserId,
   playerPlaybackState,
-  playerCurrentTrack,
   clearWritableLocalStorage,
   spotifyDeviceId,
   devices,
@@ -143,7 +142,7 @@ class SpotifyApi {
       LOGGER.log('device_id is not yet initialize!', deviceId);
     }
 
-    const uri = get(playerCurrentTrack)?.album?.uri;
+    const uri = get(playerPlaybackState)?.item?.album?.uri;
 
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
@@ -277,7 +276,10 @@ class SpotifyApi {
     const track = foundTrack ? foundTrack : await this.#searchLastTrack();
 
     if (track) {
-      playerCurrentTrack.set(track);
+      const playbackState = get(playerPlaybackState);
+      playbackState.item = track;
+
+      playerPlaybackState.set(playbackState);
       LOGGER.log('last track loaded ✅', track);
     }
   }

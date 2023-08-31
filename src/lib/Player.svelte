@@ -3,7 +3,6 @@
   import {
     spotifyDeviceId,
     playerPlaybackState,
-    playerCurrentTrack,
     isPlayerFull,
     isPlayerReady,
     devices,
@@ -15,7 +14,7 @@
   import SpotifyPlaybackStateService from '@/js/SpotifyPlaybackStateService';
 
   // TODO move in transformers ???
-  $: track = $playerCurrentTrack;
+  $: track = $playerPlaybackState?.item;
   $: artistsDisplay = track?.artists?.map((item) => item.name).join(', ');
   $: imageUrl = track?.album?.images?.[0]?.url;
   $: currentTrack = {

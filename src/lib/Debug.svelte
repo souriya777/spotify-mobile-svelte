@@ -2,7 +2,7 @@
   import {
     spotifyAccessToken,
     spotifyUserId,
-    playerCurrentTrack,
+    playerPlaybackState,
     isPlayerFull,
     spotifyDeviceId,
     player,
@@ -31,7 +31,7 @@
     </li>
     <li>{$isPlayerReady ? '🟢' : '🔴'}isPlayerReady:{$isPlayerReady}</li>
     <li>vol.:{$player?._options?.volume}</li>
-    <li>🎵song.:{$playerCurrentTrack?.name}</li>
+    <li>🎵song.:{$playerPlaybackState?.item?.name}</li>
     <li>refresh frequency.:{import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS}</li>
   </ul>
 
