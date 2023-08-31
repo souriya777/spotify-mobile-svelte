@@ -8,6 +8,7 @@
     playerRepeat,
     isPlayerFull,
     isPlayerReady,
+    devices,
   } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
@@ -29,13 +30,17 @@
     SpotifyApi.synchronize();
   }
 
+  $: activeDevice = $devices?.find((device) => device.is_active === true);
+
+  let selectedDevice;
+
   onMount(() => {
     const frequency = import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS;
 
     const interval = setInterval(() => {
       // FIXME tune it
-      SpotifyApi.synchronize();
-      console.log('...refresh PLAYBACK_STATE 🔴');
+      // SpotifyApi.synchronize();
+      // console.log('...refresh PLAYBACK_STATE 🔴');
     }, frequency);
 
     return () => clearInterval(interval);
@@ -81,6 +86,17 @@
       {$playerPlaybackState.isMyDeviceActive($spotifyDeviceId) ? '🟢' : '🔴'}
       {$playerPlaybackState?.device?.type === 'Computer' ? '💻' : '📱'}
       {$playerPlaybackState?.device?.name}
+    </div>
+    <div>
+      <select bind:value={selectedDevice}>
+        {#each $devices as device}
+          <option value={device}>
+            {device.name}
+          </option>
+        {/each}
+      </select>
+      <p>active:{activeDevice?.name}({activeDevice?.id})</p>
+      <p>selected:{selectedDevice?.name}({selectedDevice?.id})</p>
     </div>
   </div>
 {:else}

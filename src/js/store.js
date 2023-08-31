@@ -10,8 +10,6 @@ const spotifyUserId = writableLocalStorage('spotifyUserId');
 const spotifyDeviceId = writable('');
 const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', false);
 
-// FIXME RENAME ALL
-
 // PLAYER
 const player = writable(null);
 /** @type {import('svelte/store').Writable<SpotifyTrack>} */
@@ -26,6 +24,10 @@ const isPlayerReady = derived(
   [spotifyDeviceId, player],
   ([$spotifyDeviceId, $player]) => $spotifyDeviceId && $player != null,
 );
+
+/** @type {import('svelte/store').Writable<import('./spotify').SpotifyDevice[]>} */
+const devices = writable([]);
+
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
 
@@ -68,5 +70,6 @@ export {
   playerRepeat,
   isPlayerFull,
   isPlayerReady,
+  devices,
   clearWritableLocalStorage,
 };

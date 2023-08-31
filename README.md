@@ -11,33 +11,27 @@ DRY
 
 # TODO
 
-## MVP
+## mvp
 
-✅✅✅ GOAL : player synced ✅✅✅
+✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- sync => only playback state ?
-- feat(player): can synchronise when another device is active
-- merge sync-playbackstate & sync-track ? (redundant infos)
+- feat(player): see device's playing
+- feat(player): can seek position by drag'n'drop progress bar
+- feat(player): select/transfert to device
+- feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
 - feat(player): can view progress
 - feat(player): autoplay when click on next/previous
+- sync => only playback state ?
 - feat(player): what is default queue ?
 - feat(player): load song in advance ?
 
-ALL API CALLS
-
-- feat(player): see device's playing
-- feat(player): list all devices
-- feat(player): select/transfert to device
-- feat(player): can seek position by drag'n'drop progress bar
-- TODO ...
-
-ERROS
+ERRORS
 
 - FIXME fix when long-time-inactivity ""Request failed with status code 400"
 - TODO transfert state (after 400 error)
 - FIXMEfeat(spotify-api): implement quota-limit with code `429`
 
-- 🎉🎉🎉 FIN 🎉🎉🎉
+✅✅✅ ------------- ✅✅✅
 
 - position fixed : player & menu
 - feat(navigation): improve player & menu
@@ -49,16 +43,12 @@ ERROS
 - feat(button): onTap ?
   TRANSITION
 - utiliser le view transition API à la "svelte menu"
-- how to make bi-directionnel player ????
-  ==> how to listen to push ?
 
 - feat(mylib): design
 - feat(mylib): can select other song
-
 - feat(search): design
 - feat(queue): design
 - feat(detail): design
-- feat(loading): which device
 - feat(login)
 
 - improve cursor concept

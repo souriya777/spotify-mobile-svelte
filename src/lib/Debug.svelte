@@ -13,7 +13,7 @@
 
   $: deviceId = $spotifyDeviceId?.slice(0, 8)?.concat('...');
 
-  let open = false;
+  let open = true;
 </script>
 
 <details {open}>
@@ -32,7 +32,7 @@
     <li>{$isPlayerReady ? '🟢' : '🔴'}isPlayerReady:{$isPlayerReady}</li>
     <li>vol.:{$player?._options?.volume}</li>
     <li>🎵song.:{$playerCurrentTrack?.name}</li>
-    <li>refresh frequency.:TODO</li>
+    <li>refresh frequency.:{import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS}</li>
   </ul>
 
   <button on:click={SpotifyApi.forceSpotifyAuthorization}>🗑️ FORCE</button>

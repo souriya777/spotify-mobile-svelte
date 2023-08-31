@@ -11,6 +11,7 @@ import {
   playerRepeat,
   clearWritableLocalStorage,
   spotifyDeviceId,
+  devices,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -126,15 +127,16 @@ class SpotifyApi {
     });
   }
 
-  // FIXME NOT USED NOW
   /**
-   *
-   * @returns {Promise<import('./spotify').SpotifyDeviceList>}
+   * @returns {Promise<import('./spotify').SpotifyDevice[]>}
    */
   async getAvailableDevice() {
     const data = await this.#get('/me/player/devices');
     const deviceList = new SpotifyDeviceList(data);
-    return deviceList;
+    if (deviceList?.devices) {
+      devices.set(deviceList?.devices);
+    }
+    return deviceList?.devices;
   }
 
   async play() {
