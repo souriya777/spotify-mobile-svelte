@@ -33,7 +33,7 @@ test(`/me/player returns SpotifyPlaybackState`, async () => {
 
 test(`/me/player/devices returns SpotifyDeviceList`, async () => {
   const actual = await SpotifyApi.getAvailableDevice();
-  const expected = { ...AVAILABLE_DEVICES_JSON };
+  const expected = [...AVAILABLE_DEVICES_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
