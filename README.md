@@ -15,8 +15,8 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- feat(player): only /me/player/devices determines the active device
-- feat(player): select/transfert to device
+- feat(player): can transfert to device
+- feat(player): can set volume of device
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
 - feat(player): can view progress

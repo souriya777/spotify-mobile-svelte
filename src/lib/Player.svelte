@@ -34,8 +34,6 @@
 
   $: isAnotherDeviceActive = $spotifyDeviceId !== activeDevice?.id;
 
-  let selectedDevice;
-
   onMount(() => {
     const frequency = import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS;
 
@@ -82,22 +80,23 @@
         : '🟢'}</button
     >
     <div class="progress">progress{$playerPlaybackState?.progress_ms}</div>
-    <div class="device">
-      {$spotifyDeviceId}
-      {$playerPlaybackState?.device?.id}
-      {$playerPlaybackState?.device?.type === 'Computer' ? '💻' : '📱'}
-      {$playerPlaybackState?.device?.name}
+    <div class:isAnotherDeviceActive class="device">
+      {activeDevice?.type === 'Computer' ? '💻' : '📱'}
+      {activeDevice?.name}
     </div>
     <div>
-      <select bind:value={selectedDevice}>
+      <ul>
         {#each $devices as device}
-          <option value={device}>
-            {device.name}
-          </option>
+          <li>
+            <input
+              type="radio"
+              bind:group={activeDevice.id}
+              value={device.id}
+              on:click={() => SpotifyApi.transfertPlayback(device.id)}
+            />{device.name}
+          </li>
         {/each}
-      </select>
-      <p class:isAnotherDeviceActive>active:{activeDevice?.name}({activeDevice?.id})</p>
-      <p>selected:{selectedDevice?.name}({selectedDevice?.id})</p>
+      </ul>
     </div>
   </div>
 {:else}

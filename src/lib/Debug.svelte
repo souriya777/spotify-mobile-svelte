@@ -39,7 +39,8 @@
   <button on:click={() => SpotifyApi.synchronize()}>♻️sync</button>
   <button on:click={() => SpotifyApi.me()}>me</button>
   <button on:click={() => SpotifyApi.getPlaybackState()}>playback-state</button>
-  <button on:click={() => SpotifyApi.transfertPlayback()}>transfert-state</button>
+  <button on:click={() => SpotifyApi.transfertPlayback($spotifyDeviceId)}>transfert-playback</button
+  >
   <button on:click={() => SpotifyApi.getAvailableDevice()}>devices</button>
   <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
   <button on:click={() => SpotifyApi.getLastSong()}>last-song</button>

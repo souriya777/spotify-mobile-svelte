@@ -118,10 +118,9 @@ class SpotifyApi {
     return playbackState;
   }
 
-  // FIXME NOT USED NOW
-  async transfertPlayback() {
-    const deviceId = get(spotifyDeviceId);
-    return this.#put('/me/player', {
+  /** @param {string} deviceId */
+  async transfertPlayback(deviceId) {
+    this.#put('/me/player', {
       device_ids: [deviceId],
       play: true,
     });
