@@ -12,7 +12,7 @@
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
   import SpotifyPlaybackStateService from '@/js/SpotifyPlaybackStateService';
-  import ProgressBar from './ProgressBar.svelte';
+  import ProgressBar from '@/lib/ProgressBar.svelte';
 
   // TODO move in transformers ???
   $: track = $playerPlaybackState?.item;
@@ -69,7 +69,10 @@
     <button>+✅</button>
     <div class="progress">
       <div>
-        <ProgressBar progress_percent={$playerPlaybackState?.progress_percent} />
+        <ProgressBar
+          duration_ms={$playerPlaybackState?.item?.duration_ms}
+          progress_percent={$playerPlaybackState?.progress_percent}
+        />
       </div>
       <div class="time">
         <div class="begin">{$playerPlaybackState?.current_m_ss}</div>

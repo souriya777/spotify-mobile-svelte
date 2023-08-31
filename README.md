@@ -15,11 +15,11 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
+- fix(player): resolve "flash" when seek position
 - feat(player): what is default queue ?
 - feat(player): can set volume of device
 - feat(player): autoplay when click on next/previous
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
-- feat(player): can seek position by drag'n'drop progress bar
 
 - sync : what and when ?
   -- sync playbackState
@@ -45,6 +45,8 @@ ERRORS
 - feat(button): onTap ?
   TRANSITION
 - utiliser le view transition API à la "svelte menu"
+- implement <ProgressBar>
+- feat(player): can seek position by drag'n'drop progress bar
 
 - feat(mylib): design
 - feat(mylib): can select other song

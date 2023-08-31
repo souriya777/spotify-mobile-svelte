@@ -9,6 +9,7 @@ import {
   clearWritableLocalStorage,
   spotifyDeviceId,
   devices,
+  player,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -252,6 +253,14 @@ class SpotifyApi {
     }
 
     return queueSong;
+  }
+
+  /** @param {number} positionMs */
+  async seekPosition(positionMs) {
+    const p = get(player);
+    p.seek(positionMs).then(() => {
+      LOGGER.log('changed position!', positionMs);
+    });
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
