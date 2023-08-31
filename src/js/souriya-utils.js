@@ -1,5 +1,3 @@
-'use strict';
-
 const NAME_REGEX = /^[a-zA-Z\u00C0-\u00D6\u00D9-\u00F6\u00F9-\u00FF ,.'-]+$/;
 
 const BIRTHDAY_REGEX = /^(?:19|20)\d\d-(?:0[1-9]|1[012])-(?:0[1-9]|[12]\d|3[01])$/;

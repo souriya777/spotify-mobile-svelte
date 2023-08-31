@@ -12,6 +12,9 @@ class SpotifyPlaybackState {
     this.repeat_state = fromApi?.repeat_state;
     this.progress_ms = fromApi?.progress_ms;
     this.item = new SpotifyTrack(fromApi?.item);
+    this.current_m_ss = '0:00';
+    this.end_m_ss = '0:00';
+    this.progress_percent = 0;
   }
 }
 

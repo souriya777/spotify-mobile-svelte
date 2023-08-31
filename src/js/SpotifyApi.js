@@ -115,6 +115,7 @@ class SpotifyApi {
     const data = await this.#get('/me/player');
     const playbackState = new SpotifyPlaybackState(data);
     LOGGER.log('getPlaybackState()', playbackState);
+    playerPlaybackState.set(playbackState);
     return playbackState;
   }
 
@@ -263,6 +264,8 @@ class SpotifyApi {
     const playbackState = state ? state : await this.getPlaybackState();
 
     playerPlaybackState.set(playbackState);
+
+    // FIXME redundant playerShuffle & playerRepeat
     playerShuffle.set(playbackState?.shuffle_state);
     playerRepeat.set(playbackState?.repeat_state);
 

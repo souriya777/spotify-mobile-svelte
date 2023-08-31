@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { initSpotifyApi } from './spotify-api-test'; // 🔴 it has to be among 1st import
+import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
 
 import SpotifyApi from '@/js/SpotifyApi';
 

@@ -18,6 +18,9 @@ export type SpotifyPlaybackState = {
   repeat_state: string;
   progress_ms: number;
   item: SpotifyTrack;
+  current_m_ss: string;
+  end_m_ss: string;
+  progress_percent: number;
 };
 
 export type SpotifyPlayerState = {

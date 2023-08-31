@@ -14,6 +14,7 @@
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
+  import SpotifyPlaybackStateService from '@/js/SpotifyPlaybackStateService';
 
   // TODO move in transformers ???
   $: track = $playerCurrentTrack;
@@ -37,13 +38,25 @@
   onMount(() => {
     const frequency = import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS;
 
-    const interval = setInterval(() => {
+    const intervalRefresh = setInterval(() => {
       // FIXME tune it
       // SpotifyApi.synchronize();
       // console.log('...refresh PLAYBACK_STATE 🔴');
     }, frequency);
 
-    return () => clearInterval(interval);
+    const intervalPlayer = setInterval(() => {
+      // FIXME if null
+      // do here to make it reactive
+      $playerPlaybackState.progress_ms += 1000;
+
+      // update store
+      playerPlaybackState.set(SpotifyPlaybackStateService.refreshProgress($playerPlaybackState));
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalRefresh);
+      clearInterval(intervalPlayer);
+    };
   });
 </script>
 
@@ -58,10 +71,10 @@
     <div class="artist">{currentTrack.artistsDisplay}</div>
     <button>+✅</button>
     <div class="progress">
-      <div>bar</div>
+      <div>bar {$playerPlaybackState?.progress_percent}</div>
       <div class="time">
-        <div class="begin">0:32</div>
-        <div class="end">-2:28</div>
+        <div class="begin">{$playerPlaybackState?.current_m_ss}</div>
+        <div class="end">{$playerPlaybackState?.end_m_ss}</div>
       </div>
     </div>
     <button on:click={() => SpotifyApi.shuffle()}>🔀{$playerShuffle ? '🟢' : '🔴'}</button>
@@ -79,7 +92,6 @@
         ? '🟢🟢🟢'
         : '🟢'}</button
     >
-    <div class="progress">progress{$playerPlaybackState?.progress_ms}</div>
     <div class:isAnotherDeviceActive class="device">
       {activeDevice?.type === 'Computer' ? '💻' : '📱'}
       {activeDevice?.name}
@@ -119,6 +131,7 @@
 
   .time {
     display: flex;
+    justify-content: space-between;
   }
 
   .isAnotherDeviceActive {

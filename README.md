@@ -15,7 +15,10 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- feat(player): can view progress
+/ FIXME redundant playerShuffle & playerRepeat
+
+- synchronizePlaybackState useful ?
+
 - feat(player): what is default queue ?
 - feat(player): can set volume of device
 - feat(player): autoplay when click on next/previous
@@ -23,6 +26,10 @@ DRY
 - feat(player): can seek position by drag'n'drop progress bar
 
 - sync : what and when ?
+  -- sync playbackState
+  -- sync device
+  ---- at the end of song
+  ---- next/prev ?
 
 ERRORS
 
