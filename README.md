@@ -15,8 +15,6 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-/ FIXME redundant playerShuffle & playerRepeat
-
 - synchronizePlaybackState useful ?
 
 - feat(player): what is default queue ?

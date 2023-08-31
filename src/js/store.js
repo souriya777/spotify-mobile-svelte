@@ -1,6 +1,5 @@
 import { writable, derived } from 'svelte/store';
 import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
-import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 import SpotifyTrack from '@/js/SpotifyTrack';
 import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 
@@ -16,8 +15,6 @@ const player = writable(null);
 const playerCurrentTrack = writable(new SpotifyTrack());
 /** @type {import('svelte/store').Writable<SpotifyPlaybackState>} */
 const playerPlaybackState = writable(new SpotifyPlaybackState());
-const playerShuffle = writable(false);
-const playerRepeat = writable(SpotifyRepeatState.OFF);
 
 const isPlayerFull = writable(false);
 const isPlayerReady = derived(
@@ -66,8 +63,6 @@ export {
   player,
   playerPlaybackState,
   playerCurrentTrack,
-  playerShuffle,
-  playerRepeat,
   isPlayerFull,
   isPlayerReady,
   devices,

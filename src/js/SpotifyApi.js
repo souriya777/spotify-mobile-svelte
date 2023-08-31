@@ -7,8 +7,6 @@ import {
   spotifyUserId,
   playerPlaybackState,
   playerCurrentTrack,
-  playerShuffle,
-  playerRepeat,
   clearWritableLocalStorage,
   spotifyDeviceId,
   devices,
@@ -175,21 +173,26 @@ class SpotifyApi {
   }
 
   async shuffle() {
-    const shuffleState = get(playerShuffle);
-    await this.#put(`/me/player/shuffle?state=${!shuffleState}`);
-    playerShuffle.set(!shuffleState);
+    const playbackState = get(playerPlaybackState);
+
+    await this.#put(`/me/player/shuffle?state=${!playbackState.shuffle_state}`);
+
+    playerPlaybackState.set(playbackState);
   }
 
   async repeat() {
-    let state = get(playerRepeat);
-    state =
-      state === SpotifyRepeatState.OFF
+    const playbackState = get(playerPlaybackState);
+
+    playbackState.repeat_state =
+      playbackState.repeat_state === SpotifyRepeatState.OFF
         ? SpotifyRepeatState.CONTEXT
-        : state === SpotifyRepeatState.CONTEXT
+        : playbackState.repeat_state === SpotifyRepeatState.CONTEXT
         ? SpotifyRepeatState.TRACK
         : SpotifyRepeatState.OFF;
-    await this.#put(`/me/player/repeat?state=${state}`);
-    playerRepeat.set(state);
+
+    await this.#put(`/me/player/repeat?state=${playbackState.repeat_state}`);
+
+    playerPlaybackState.set(playbackState);
   }
 
   /**
@@ -264,11 +267,6 @@ class SpotifyApi {
     const playbackState = state ? state : await this.getPlaybackState();
 
     playerPlaybackState.set(playbackState);
-
-    // FIXME redundant playerShuffle & playerRepeat
-    playerShuffle.set(playbackState?.shuffle_state);
-    playerRepeat.set(playbackState?.repeat_state);
-
     LOGGER.log('last state loaded ✅', playbackState);
   }
 

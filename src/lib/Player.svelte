@@ -4,8 +4,6 @@
     spotifyDeviceId,
     playerPlaybackState,
     playerCurrentTrack,
-    playerShuffle,
-    playerRepeat,
     isPlayerFull,
     isPlayerReady,
     devices,
@@ -45,7 +43,6 @@
     }, frequency);
 
     const intervalPlayer = setInterval(() => {
-      // FIXME if null
       // do here to make it reactive
       $playerPlaybackState.progress_ms += 1000;
 
@@ -77,7 +74,9 @@
         <div class="end">{$playerPlaybackState?.end_m_ss}</div>
       </div>
     </div>
-    <button on:click={() => SpotifyApi.shuffle()}>🔀{$playerShuffle ? '🟢' : '🔴'}</button>
+    <button on:click={() => SpotifyApi.shuffle()}
+      >🔀{$playerPlaybackState?.shuffle_state ? '🟢' : '🔴'}</button
+    >
     <button on:click={() => SpotifyApi.previous()}>⏮️</button>
     {#if $playerPlaybackState?.is_playing}
       <button on:click={() => SpotifyApi.pause()}>⏸️</button>
@@ -86,9 +85,9 @@
     {/if}
     <button on:click={() => SpotifyApi.next()}>⏭️</button>
     <button on:click={() => SpotifyApi.repeat()}
-      >🔁{$playerRepeat === SpotifyRepeatState.OFF
+      >🔁{$playerPlaybackState?.repeat_state === SpotifyRepeatState.OFF
         ? '🔴'
-        : $playerRepeat === SpotifyRepeatState.CONTEXT
+        : $playerPlaybackState?.repeat_state === SpotifyRepeatState.CONTEXT
         ? '🟢🟢🟢'
         : '🟢'}</button
     >
