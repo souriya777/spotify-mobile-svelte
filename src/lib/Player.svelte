@@ -32,7 +32,7 @@
 
   $: activeDevice = $devices?.find((device) => device.is_active === true);
 
-  $: isAnotherDeviceActive = $spotifyDeviceId !== activeDevice.id;
+  $: isAnotherDeviceActive = $spotifyDeviceId !== activeDevice?.id;
 
   let selectedDevice;
 
@@ -85,8 +85,6 @@
     <div class="device">
       {$spotifyDeviceId}
       {$playerPlaybackState?.device?.id}
-      <!-- FIXME isMyDeviceActive -->
-      {$playerPlaybackState.isMyDeviceActive($spotifyDeviceId) ? '🟢' : '🔴'}
       {$playerPlaybackState?.device?.type === 'Computer' ? '💻' : '📱'}
       {$playerPlaybackState?.device?.name}
     </div>

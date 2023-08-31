@@ -13,14 +13,6 @@ class SpotifyPlaybackState {
     this.progress_ms = fromApi?.progress_ms;
     this.item = new SpofityTrack(fromApi?.item);
   }
-
-  /**
-   * @param {string} deviceId
-   * @returns {boolean}
-   */
-  isMyDeviceActive(deviceId) {
-    return deviceId === this.device?.id ? true : false;
-  }
 }
 
 export default SpotifyPlaybackState;

@@ -15,8 +15,7 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- feat(player): available-device or playback-state to determine active device
-  ---- <!-- FIXME isMyDeviceActive -->
+- feat(player): only /me/player/devices determines the active device
 - feat(player): select/transfert to device
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
