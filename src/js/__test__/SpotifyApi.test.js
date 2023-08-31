@@ -55,7 +55,7 @@ test(`/me/player/queue returns SpotifyQueue`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`getQueueLastSong() returns SpofityTrack`, async () => {
+test(`getQueueLastSong() returns SpotifyTrack`, async () => {
   const actual = await SpotifyApi.getQueueLastSong();
   const expected = { ...QUEUE_LAST_SONG_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);

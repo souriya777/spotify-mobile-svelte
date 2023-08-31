@@ -15,15 +15,14 @@ DRY
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- feat(player): can transfert to device
-- feat(player): can set volume of device
-- feat(player): can seek position by drag'n'drop progress bar
-- feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
 - feat(player): can view progress
-- feat(player): autoplay when click on next/previous
-- sync => only playback state ?
 - feat(player): what is default queue ?
-- feat(player): load song in advance ?
+- feat(player): can set volume of device
+- feat(player): autoplay when click on next/previous
+- feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
+- feat(player): can seek position by drag'n'drop progress bar
+
+- sync : what and when ?
 
 ERRORS
 
@@ -73,6 +72,7 @@ ERRORS
 
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist
+- feat(player): load song in advance ?
 - test-unit on CI
 - feat(loading) : add spotify logo (ball)
 - pause écouteurs bluetooth ?

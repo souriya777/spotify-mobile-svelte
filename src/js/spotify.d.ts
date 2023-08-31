@@ -1,9 +1,9 @@
 export type SpotifySong = {
   context: SpotifyContext;
-  track: SpofityTrack;
+  track: SpotifyTrack;
 };
 
-export type SpofityTrack = {
+export type SpotifyTrack = {
   uri: string;
   name: string;
   duration_ms: number;
@@ -34,9 +34,9 @@ export type SpotifyPlayerState = {
     };
   };
   track_window: {
-    current_track: SpofityTrack;
-    previous_tracks: SpofityTrack[];
-    next_tracks: SpofityTrack[];
+    current_track: SpotifyTrack;
+    previous_tracks: SpotifyTrack[];
+    next_tracks: SpotifyTrack[];
   };
 };
 

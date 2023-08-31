@@ -1,4 +1,4 @@
-import SpofityTrack from '@/js/SpofityTrack';
+import SpotifyTrack from '@/js/SpotifyTrack';
 import SpotifyPlayerMetadataItem from '@/js/SpotifyPlayerMetadataItem';
 
 /**
@@ -23,11 +23,11 @@ class SpotifyPlayerState {
       },
     };
     this.track_window = {
-      current_track: new SpofityTrack(fromApi?.track_window?.current_track),
+      current_track: new SpotifyTrack(fromApi?.track_window?.current_track),
       previous_tracks: fromApi?.track_window?.previous_tracks?.map(
-        (item) => new SpofityTrack(item),
+        (item) => new SpotifyTrack(item),
       ),
-      next_tracks: fromApi?.track_window?.next_tracks?.map((item) => new SpofityTrack(item)),
+      next_tracks: fromApi?.track_window?.next_tracks?.map((item) => new SpotifyTrack(item)),
     };
   }
 }

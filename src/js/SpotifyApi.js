@@ -233,7 +233,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpofityTrack>}
+   * @returns {Promise<import('./spotify').SpotifyTrack>}
    * @throws QueueEmptyError
    */
   async getQueueLastSong() {
@@ -270,7 +270,7 @@ class SpotifyApi {
   }
 
   /**
-   * @param {import('./spotify').SpofityTrack} foundTrack
+   * @param {import('./spotify').SpotifyTrack} foundTrack
    */
   async #synchronizeTrack(foundTrack = null) {
     const track = foundTrack ? foundTrack : await this.#searchLastTrack();

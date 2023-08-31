@@ -1,4 +1,4 @@
-import SpofityTrack from '@/js/SpofityTrack';
+import SpotifyTrack from '@/js/SpotifyTrack';
 import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 import SpotifyRepeatMode from './SpotifyRepeatMode';
 
@@ -14,7 +14,7 @@ class SpotifyPlaybackStateAdapter {
     adaptee.shuffle_state = playerState?.shuffle;
     adaptee.repeat_state = SpotifyRepeatMode.toSpotifyRepeatState(playerState?.repeat_mode);
     adaptee.progress_ms = playerState?.position;
-    adaptee.item = new SpofityTrack(playerState?.track_window?.current_track);
+    adaptee.item = new SpotifyTrack(playerState?.track_window?.current_track);
 
     return new SpotifyPlaybackState(adaptee);
   }

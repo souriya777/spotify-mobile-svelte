@@ -5,7 +5,7 @@ import SpotifyArtist from '@/js/SpotifyArtist';
 class SpotifyTrackAdapter {
   /**
    * @param {import('./spotify').SpotifyPlayerState} playerState
-   * @returns {import('./spotify').SpofityTrack}
+   * @returns {import('./spotify').SpotifyTrack}
    */
   static adapt(playerState) {
     const adaptee = {};

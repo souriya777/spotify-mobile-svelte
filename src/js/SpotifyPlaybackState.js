@@ -1,4 +1,4 @@
-import SpofityTrack from '@/js/SpofityTrack';
+import SpotifyTrack from '@/js/SpotifyTrack';
 import SpotifyDevice from '@/js/SpotifyDevice';
 
 /**
@@ -11,7 +11,7 @@ class SpotifyPlaybackState {
     this.shuffle_state = fromApi?.shuffle_state;
     this.repeat_state = fromApi?.repeat_state;
     this.progress_ms = fromApi?.progress_ms;
-    this.item = new SpofityTrack(fromApi?.item);
+    this.item = new SpotifyTrack(fromApi?.item);
   }
 }
 
