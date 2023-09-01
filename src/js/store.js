@@ -28,16 +28,21 @@ const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const isPlaying = writable(false);
 const progressMs = writable(0);
-const progressMsTick = derived(progressMs, ($progressMs, set, update) => {
-  set($progressMs);
-  const interval = setInterval(() => {
-    update((n) => n + 1000);
-  }, 1000);
+const progressMsTick = derived(
+  [progressMs, isPlaying],
+  ([$progressMs, $isPlaying], set, update) => {
+    set($progressMs);
+    const interval = setInterval(() => {
+      if ($isPlaying) {
+        update((n) => n + 1000);
+      }
+    }, 1000);
 
-  return () => {
-    clearInterval(interval);
-  };
-});
+    return () => {
+      clearInterval(interval);
+    };
+  },
+);
 const durationMs = writable(0);
 const current_m_ss = derived(progressMsTick, ($progressMsTick) =>
   millisToMinuteSecond($progressMsTick),

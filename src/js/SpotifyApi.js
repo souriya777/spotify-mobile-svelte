@@ -16,6 +16,7 @@ import {
   repeatState,
   isPlaying,
   progressMs,
+  progressMsTick,
   durationMs,
   apiTimestamp,
   devices,
@@ -166,6 +167,7 @@ class SpotifyApi {
     }
 
     const uri = get(songUri);
+    const position_ms = get(progressMsTick);
 
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
@@ -173,12 +175,13 @@ class SpotifyApi {
         // FIXME context_uri or uris ?
         // context_uri: uri,
         uris: [uri],
+        position_ms,
       }),
     );
 
     isPlaying.set(true);
 
-    LOGGER.log('play()', uri);
+    LOGGER.log('play', position_ms, uri);
   }
 
   async pause() {
@@ -193,9 +196,9 @@ class SpotifyApi {
   }
 
   async next() {
-    await this.#post(`/me/player/next`);
-    this.synchronize();
-    // TODO play
+    // TODO extract track_window next_tracks
+    // TODO play with uri & position ?
+    // await this.#post(`/me/player/next`);
   }
 
   /** @param {number} positionMs */
