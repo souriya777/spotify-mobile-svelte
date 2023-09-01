@@ -17,8 +17,8 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- manage pause
 - feat(player): autoplay when click on next/previous
+- resolve bug when batch play/pause button
 
 - refactor(namming): rename "Spotify\*"
 - feat(player): what is default queue ?

@@ -10,7 +10,6 @@ import {
   songUri,
   songName,
   albumName,
-  albumUri,
   imageUrl,
   artists,
   shuffleState,
@@ -144,6 +143,7 @@ class SpotifyApi {
       device_ids: [deviceId],
       play: true,
     });
+    isPlaying.set(true);
   }
 
   /**
@@ -162,9 +162,10 @@ class SpotifyApi {
     const deviceId = get(spotifyDeviceId);
     if (!deviceId) {
       LOGGER.log('device_id is not yet initialize!', deviceId);
+      return;
     }
 
-    const uri = get(albumUri);
+    const uri = get(songUri);
 
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
@@ -174,12 +175,16 @@ class SpotifyApi {
         uris: [uri],
       }),
     );
+
+    isPlaying.set(true);
+
     LOGGER.log('play()', uri);
   }
 
   async pause() {
     const deviceId = get(spotifyDeviceId);
     await this.#put(`/me/player/pause?device_id=${deviceId}`);
+    isPlaying.set(false);
   }
 
   async previous() {
@@ -191,6 +196,14 @@ class SpotifyApi {
     await this.#post(`/me/player/next`);
     this.synchronize();
     // TODO play
+  }
+
+  /** @param {number} positionMs */
+  async seekPosition(positionMs) {
+    const p = get(player);
+    p.seek(positionMs).then(() => {
+      LOGGER.log('changed position!', positionMs, millisToMinuteSecond(positionMs));
+    });
   }
 
   async shuffle() {
@@ -272,14 +285,6 @@ class SpotifyApi {
     }
 
     return queueSong;
-  }
-
-  /** @param {number} positionMs */
-  async seekPosition(positionMs) {
-    const p = get(player);
-    p.seek(positionMs).then(() => {
-      LOGGER.log('changed position!', positionMs, millisToMinuteSecond(positionMs));
-    });
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;

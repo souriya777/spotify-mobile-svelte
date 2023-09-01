@@ -5,6 +5,7 @@
     playerIsFull,
     playerIsReady,
     devices,
+    songUri,
     songName,
     albumName,
     imageUrl,
@@ -59,7 +60,7 @@
       <p>Liked Songs</p>
     </div>
     <img src={$imageUrl} alt={$albumName} />
-    <div class="title">{$songName}</div>
+    <div class="title">{$songName}{$songUri}</div>
     <div class="artist">{$artistsDisplay}</div>
     <button>+✅</button>
     <div class="progress">
