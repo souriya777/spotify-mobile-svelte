@@ -2,30 +2,26 @@
   import { onMount } from 'svelte';
   import {
     spotifyDeviceId,
-    playerPlaybackState,
-    isPlayerFull,
-    isPlayerReady,
+    playerIsFull,
+    playerIsReady,
     devices,
+    songName,
+    albumName,
+    imageUrl,
+    artistsDisplay,
+    shuffleState,
+    repeatState,
+    isPlaying,
+    current_m_ss,
+    end_m_ss,
   } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
-  import SpotifyPlaybackStateService from '@/js/SpotifyPlaybackStateService';
   import ProgressBar from '@/lib/ProgressBar.svelte';
 
-  // TODO move in transformers ???
-  $: track = $playerPlaybackState?.item;
-  $: artistsDisplay = track?.artists?.map((item) => item.name).join(', ');
-  $: imageUrl = track?.album?.images?.[0]?.url;
-  $: currentTrack = {
-    ...track,
-    albumName: track?.album?.name,
-    artistsDisplay,
-    imageUrl,
-  };
-
-  $: if ($isPlayerReady) {
+  $: if ($playerIsReady) {
     SpotifyApi.synchronize();
   }
 
@@ -42,57 +38,51 @@
       // console.log('...refresh PLAYBACK_STATE 🔴');
     }, frequency);
 
-    const intervalPlayer = setInterval(() => {
-      // do here to make it reactive
-      $playerPlaybackState.progress_ms += 1000;
-
-      // update store
-      playerPlaybackState.set(SpotifyPlaybackStateService.refreshProgress($playerPlaybackState));
-    }, 1000);
+    // const intervalPlayer = setInterval(() => {
+    // FIXME refresh progress_ms
+    // FIXME do here to make it reactive
+    // progressMs.update(n => n + 1000);
+    // }, 1000);
+    // FIXME make interval via '.subscribe()' ?
 
     return () => {
       clearInterval(intervalRefresh);
-      clearInterval(intervalPlayer);
+      // clearInterval(intervalPlayer);
     };
   });
 </script>
 
-{#if $isPlayerReady}
-  <div class="player" use:onTap={() => isPlayerFull.set(true)}>
-    <div class="bar" use:onTap={() => isPlayerFull.set(false)}>
+{#if $playerIsReady}
+  <div class="player" use:onTap={() => playerIsFull.set(true)}>
+    <div class="bar" use:onTap={() => playerIsFull.set(false)}>
       <button>back</button>
       <p>Liked Songs</p>
     </div>
-    <img src={imageUrl} alt={currentTrack.albumName} />
-    <div class="title">{currentTrack.name}</div>
-    <div class="artist">{currentTrack.artistsDisplay}</div>
+    <img src={$imageUrl} alt={$albumName} />
+    <div class="title">{$songName}</div>
+    <div class="artist">{$artistsDisplay}</div>
     <button>+✅</button>
     <div class="progress">
       <div>
-        <ProgressBar
-          duration_ms={$playerPlaybackState?.item?.duration_ms}
-          progress_percent={$playerPlaybackState?.progress_percent}
-        />
+        <ProgressBar />
       </div>
       <div class="time">
-        <div class="begin">{$playerPlaybackState?.current_m_ss}</div>
-        <div class="end">{$playerPlaybackState?.end_m_ss}</div>
+        <div class="begin">{$current_m_ss}</div>
+        <div class="end">{$end_m_ss}</div>
       </div>
     </div>
-    <button on:click={() => SpotifyApi.shuffle()}
-      >🔀{$playerPlaybackState?.shuffle_state ? '🟢' : '🔴'}</button
-    >
+    <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
     <button on:click={() => SpotifyApi.previous()}>⏮️</button>
-    {#if $playerPlaybackState?.is_playing}
+    {#if $isPlaying}
       <button on:click={() => SpotifyApi.pause()}>⏸️</button>
     {:else}
       <button on:click={() => SpotifyApi.play()}>▶️</button>
     {/if}
     <button on:click={() => SpotifyApi.next()}>⏭️</button>
     <button on:click={() => SpotifyApi.repeat()}
-      >🔁{$playerPlaybackState?.repeat_state === SpotifyRepeatState.OFF
+      >🔁{$repeatState === SpotifyRepeatState.OFF
         ? '🔴'
-        : $playerPlaybackState?.repeat_state === SpotifyRepeatState.CONTEXT
+        : $repeatState === SpotifyRepeatState.CONTEXT
         ? '🟢🟢🟢'
         : '🟢'}</button
     >

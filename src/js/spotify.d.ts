@@ -12,18 +12,16 @@ export type SpotifyTrack = {
 };
 
 export type SpotifyPlaybackState = {
-  device: SpotifyDevice;
   is_playing: boolean;
   shuffle_state: boolean;
   repeat_state: string;
   progress_ms: number;
   item: SpotifyTrack;
-  current_m_ss: string;
-  end_m_ss: string;
-  progress_percent: number;
+  device: SpotifyDevice;
 };
 
 export type SpotifyPlayerState = {
+  timestamp: number;
   paused: boolean;
   shuffle: boolean;
   repeat_mode: number;

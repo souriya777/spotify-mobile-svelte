@@ -6,6 +6,7 @@ import SpotifyPlayerMetadataItem from '@/js/SpotifyPlayerMetadataItem';
  */
 class SpotifyPlayerState {
   constructor(fromApi) {
+    this.timestamp = fromApi?.timestamp;
     this.paused = fromApi?.paused;
     this.shuffle = fromApi?.shuffle;
     this.repeat_mode = fromApi?.repeat_mode;

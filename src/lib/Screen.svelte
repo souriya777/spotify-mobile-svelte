@@ -1,5 +1,5 @@
 <script>
-  import { isPlayerFull } from '@/js/store';
+  import { playerIsFull } from '@/js/store';
   import Player from '@/lib/Player.svelte';
   // FIXME
   // import Nav from '@/lib/Nav.svelte';
@@ -20,7 +20,7 @@
 
   <SpotifyAuthorization />
 
-  <div class="screen" class:screen--full-player={$isPlayerFull}>
+  <div class="screen" class:screen--full-player={$playerIsFull}>
     <!-- <StackUiManager> -->
     <!-- FIXME not in StackUIManager -->
     <div class="screen__top">

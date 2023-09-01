@@ -10,6 +10,15 @@ function millisToMinuteSecond(timeInMillis) {
 }
 
 /**
+ * @param {number} progressMs
+ * @param {number} durationMs
+ * @returns {number}
+ */
+function progressPercent(progressMs, durationMs) {
+  return (progressMs / durationMs ?? 0) * 100;
+}
+
+/**
  * @param {number} percent
  * @param {number} durationMillis
  * @returns {number}
@@ -18,4 +27,8 @@ function percentToMillis(percent, durationMillis) {
   return (percent * durationMillis) / 100;
 }
 
-export { millisToMinuteSecond, percentToMillis };
+function areTimestampsSeparateBy(initialTimestamp, currentTimestamp, minGapMillis) {
+  return !initialTimestamp || currentTimestamp - initialTimestamp >= minGapMillis;
+}
+
+export { millisToMinuteSecond, progressPercent, percentToMillis, areTimestampsSeparateBy };

@@ -5,11 +5,22 @@ import { BROWSER_DEVICE } from '@/js/browser-utils';
 import {
   spotifyAccessToken,
   spotifyUserId,
-  playerPlaybackState,
-  clearWritableLocalStorage,
-  spotifyDeviceId,
-  devices,
   player,
+  spotifyDeviceId,
+  songUri,
+  songName,
+  albumName,
+  albumUri,
+  imageUrl,
+  artists,
+  shuffleState,
+  repeatState,
+  isPlaying,
+  progressMs,
+  durationMs,
+  apiTimestamp,
+  devices,
+  clearWritableLocalStorage,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -24,12 +35,14 @@ import SpotifyDeviceList from '@/js/SpotifyDeviceList';
 import SpotifyPlayerState from '@/js/SpotifyPlayerState';
 import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
+import { areTimestampsSeparateBy, millisToMinuteSecond } from '@/js/time-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
   DEFAULT_VOLUME = 0.2;
+  TIMESTAMP_MIN_GAP_MS = Number(`${import.meta.env.VITE_SPOTIFY_TIMESTAMP_MIN_GAP_MS}`);
 
   authorize() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
@@ -82,24 +95,32 @@ class SpotifyApi {
     return user;
   }
 
-  async synchronize(state) {
+  /** @param {null | import('@/js/spotify').SpotifyPlayerState} state */
+  async synchronize(state = null) {
     let track = null;
     let playbackState = null;
 
     if (state) {
-      LOGGER.log('SPOTIFY NOTIFICATION', state);
-      const playerState = this.getPlayerState(state);
+      if (this.#isSpotifyNotificationValid(state?.timestamp)) {
+        LOGGER.log('SPOTIFY NOTIFICATION', state);
+        const playerState = this.getPlayerState(state);
 
-      track = SpotifyTrackAdapter.adapt(playerState);
-      playbackState = SpotifyPlaybackStateAdapter.adapt(playerState);
+        track = SpotifyTrackAdapter.adapt(playerState);
+        playbackState = SpotifyPlaybackStateAdapter.adapt(playerState);
+
+        this.#synchronizeTrack(track);
+        this.#synchronizePlaybackState(playbackState);
+      } else {
+        LOGGER.log('SPOTIFY NOTIFICATION is too close...');
+      }
+    } else {
+      this.#synchronizeTrack(track);
+      this.#synchronizePlaybackState(playbackState);
     }
-
-    this.#synchronizeTrack(track);
-    this.#synchronizePlaybackState(playbackState);
   }
 
   /**
-   * @param {any} state
+   * @param {import('@/js/spotify').SpotifyPlayerState} state
    * @returns {import('@/js/spotify').SpotifyPlayerState}
    */
   getPlayerState(state) {
@@ -113,7 +134,7 @@ class SpotifyApi {
     const data = await this.#get('/me/player');
     const playbackState = new SpotifyPlaybackState(data);
     LOGGER.log('getPlaybackState()', playbackState);
-    playerPlaybackState.set(playbackState);
+    this.#writeStorePlaybackInfos(playbackState);
     return playbackState;
   }
 
@@ -143,7 +164,7 @@ class SpotifyApi {
       LOGGER.log('device_id is not yet initialize!', deviceId);
     }
 
-    const uri = get(playerPlaybackState)?.item?.album?.uri;
+    const uri = get(albumUri);
 
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
@@ -173,26 +194,24 @@ class SpotifyApi {
   }
 
   async shuffle() {
-    const playbackState = get(playerPlaybackState);
+    await this.#put(`/me/player/shuffle?state=${!get(shuffleState)}`);
 
-    await this.#put(`/me/player/shuffle?state=${!playbackState.shuffle_state}`);
-
-    playerPlaybackState.set(playbackState);
+    shuffleState.update((n) => !n);
   }
 
   async repeat() {
-    const playbackState = get(playerPlaybackState);
+    const currentRepeatState = get(repeatState);
 
-    playbackState.repeat_state =
-      playbackState.repeat_state === SpotifyRepeatState.OFF
+    const newRepeatState =
+      currentRepeatState === SpotifyRepeatState.OFF
         ? SpotifyRepeatState.CONTEXT
-        : playbackState.repeat_state === SpotifyRepeatState.CONTEXT
+        : currentRepeatState === SpotifyRepeatState.CONTEXT
         ? SpotifyRepeatState.TRACK
         : SpotifyRepeatState.OFF;
 
-    await this.#put(`/me/player/repeat?state=${playbackState.repeat_state}`);
+    await this.#put(`/me/player/repeat?state=${newRepeatState}`);
 
-    playerPlaybackState.set(playbackState);
+    repeatState.set(newRepeatState);
   }
 
   /**
@@ -259,7 +278,7 @@ class SpotifyApi {
   async seekPosition(positionMs) {
     const p = get(player);
     p.seek(positionMs).then(() => {
-      LOGGER.log('changed position!', positionMs);
+      LOGGER.log('changed position!', positionMs, millisToMinuteSecond(positionMs));
     });
   }
 
@@ -274,7 +293,8 @@ class SpotifyApi {
   async #synchronizePlaybackState(state = null) {
     const playbackState = state ? state : await this.getPlaybackState();
 
-    playerPlaybackState.set(playbackState);
+    // FIXME rewrite
+    this.#writeStorePlaybackInfos(playbackState);
     LOGGER.log('last state loaded ✅', playbackState);
   }
 
@@ -285,10 +305,7 @@ class SpotifyApi {
     const track = foundTrack ? foundTrack : await this.#searchLastTrack();
 
     if (track) {
-      const playbackState = get(playerPlaybackState);
-      playbackState.item = track;
-
-      playerPlaybackState.set(playbackState);
+      this.#writeStoreTrackInfos(track);
       LOGGER.log('last track loaded ✅', track);
     }
   }
@@ -313,6 +330,37 @@ class SpotifyApi {
     }
 
     return track;
+  }
+
+  /**
+   * @param {number} timestamp
+   * @returns {boolean}
+   */
+  #isSpotifyNotificationValid(timestamp) {
+    const existingTimestamp = get(apiTimestamp);
+
+    // update timestamp
+    apiTimestamp.set(timestamp);
+
+    return areTimestampsSeparateBy(existingTimestamp, timestamp, this.TIMESTAMP_MIN_GAP_MS);
+  }
+
+  /** @param {import('@/js/spotify').SpotifyPlaybackState} playbackState */
+  #writeStorePlaybackInfos(playbackState) {
+    shuffleState.set(playbackState?.shuffle_state);
+    repeatState.set(playbackState?.repeat_state);
+    isPlaying.set(playbackState?.is_playing);
+    progressMs.set(playbackState?.progress_ms);
+  }
+
+  /** @param {import('@/js/spotify').SpotifyTrack} track */
+  #writeStoreTrackInfos(track) {
+    songUri.set(track?.uri);
+    songName.set(track?.name);
+    durationMs.set(track?.duration_ms);
+    albumName.set(track?.album?.name);
+    artists.set(track?.artists);
+    imageUrl.set(track?.album?.images?.[0]?.url);
   }
 
   #url(endpoint) {

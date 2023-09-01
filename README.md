@@ -17,11 +17,14 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- fix(player): resolve "flash" when seek position
+- manage pause
+- feat(player): autoplay when click on next/previous
+
+- refactor(namming): rename "Spotify\*"
 - feat(player): what is default queue ?
 - feat(player): can set volume of device
-- feat(player): autoplay when click on next/previous
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
+- feat(player): can manage other players
 
 - sync : what and when ?
   -- sync playbackState
@@ -29,6 +32,7 @@ Stone soup
   -- transfert state
   ---- at the end of song
   ---- next/prev ?
+  ---- few actions ARE NOT possible when not transfert-playback
 
 ERRORS
 
@@ -38,6 +42,7 @@ ERRORS
 
 ✅✅✅ ------------- ✅✅✅
 
+- reflect a "car" presentation (audible-like)
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
@@ -63,8 +68,6 @@ ERRORS
 - space
 - color
 - px
-
-// TODO move in transformers ???
 
 ## perf
 
@@ -95,6 +98,7 @@ ERRORS
 - 🟢//learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
 - use svelte `animation` ?
+- // TODO refactor in smaller function or custom stores ?
 
 # spotify flow
 
