@@ -6,7 +6,7 @@
     player,
     playerIsFull,
     playerIsReady,
-    songName,
+    trackName,
   } from '@/js/store';
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
   import SpotifyApi from '@/js/SpotifyApi';
@@ -31,7 +31,7 @@
     </li>
     <li>{$playerIsReady ? '🟢' : '🔴'}playerIsReady:{$playerIsReady}</li>
     <li>vol.:{$player?._options?.volume}</li>
-    <li>🎵song.:{$songName}</li>
+    <li>🎵song.:{$trackName}</li>
     <li>refresh frequency.:{import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS}</li>
   </ul>
 

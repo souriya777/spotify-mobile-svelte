@@ -1,29 +1,22 @@
 import { writable, derived } from 'svelte/store';
-import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
+import { writableLocalStorage } from '@/js/store-utils';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 import { millisToMinuteSecond, progressPercent } from '@/js/time-utils';
 
 // PERSISTENT
 const spotifyAccessToken = writableLocalStorage('spotifyAccessToken', '');
 const spotifyUserId = writableLocalStorage('spotifyUserId', '');
-const spotifyDeviceId = writableLocalStorage('spotifyDeviceId', '');
 const spotifyAuthorizeWaiting = writableLocalStorage('spotifyAuthorizeWaiting', false);
 
 // WRITABLE ONLY
+const spotifyDeviceId = writable('');
+const apiTimestamp = writable(null);
 const player = writable(null);
 const playerIsFull = writable(false);
 const playerIsReady = derived(
   [spotifyDeviceId, player],
   ([$spotifyDeviceId, $player]) => $spotifyDeviceId && $player != null,
 );
-const songUri = writable('');
-const songName = writable('');
-const albumName = writable('');
-const albumUri = writable('');
-const imageUrl = writable('');
-/** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyArtist[]>} */
-const artists = writable([]);
-const artistsDisplay = derived(artists, ($artists) => $artists.map((item) => item.name).join(', '));
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const isPlaying = writable(false);
@@ -51,39 +44,18 @@ const end_m_ss = derived(durationMs, ($durationMs) => millisToMinuteSecond($dura
 const progress_percent = derived([progressMsTick, durationMs], ([$progressMsTick, $durationMs]) =>
   progressPercent($progressMsTick, $durationMs),
 );
+
+const trackUri = writable('');
+const trackName = writable('');
+const albumUri = writable('');
+const albumName = writable('');
+const imageUrl = writable('');
+/** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyArtist[]>} */
+const artists = writable([]);
+const artistsDisplay = derived(artists, ($artists) => $artists.map((item) => item.name).join(', '));
+
 /** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyDevice[]>} */
 const devices = writable([]);
-const apiTimestamp = writable(null);
-
-function writableLocalStorage(key, initialValue) {
-  let value = writable(localStorage.getItem(key) || initialValue);
-
-  const write = (key, initialValue) => {
-    const lastValue = localStorage.getItem(key) || initialValue;
-    value = writable(lastValue);
-  };
-
-  value.subscribe((val) => {
-    if ([null, undefined].includes(val)) {
-      localStorage.removeItem(key);
-      document.removeEventListener('storage', write);
-    } else {
-      localStorage.setItem(key, val);
-      document.addEventListener('storage', write);
-
-      if ('spotifyAccessToken' === key) {
-        setAxiosHeaderAuthorization(val);
-      }
-    }
-  });
-
-  return value;
-}
-
-function clearWritableLocalStorage() {
-  spotifyAuthorizeWaiting.set(null);
-  spotifyAccessToken.set(null);
-}
 
 export {
   spotifyAccessToken,
@@ -93,8 +65,8 @@ export {
   player,
   playerIsFull,
   playerIsReady,
-  songUri,
-  songName,
+  trackUri,
+  trackName,
   albumName,
   albumUri,
   imageUrl,
@@ -111,5 +83,4 @@ export {
   progress_percent,
   apiTimestamp,
   devices,
-  clearWritableLocalStorage,
 };

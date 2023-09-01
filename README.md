@@ -17,6 +17,7 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
+- TODO refactor store in multiple files
 - feat(player): autoplay when click on next/previous
 - resolve bug when batch play/pause button
 
@@ -25,6 +26,7 @@ Stone soup
 - feat(player): can set volume of device
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
 - feat(player): can manage other players
+- test fiability of player
 
 - sync : what and when ?
   -- sync playbackState

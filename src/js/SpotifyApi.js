@@ -7,8 +7,8 @@ import {
   spotifyUserId,
   player,
   spotifyDeviceId,
-  songUri,
-  songName,
+  trackUri,
+  trackName,
   albumName,
   imageUrl,
   artists,
@@ -20,7 +20,6 @@ import {
   durationMs,
   apiTimestamp,
   devices,
-  clearWritableLocalStorage,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -36,6 +35,7 @@ import SpotifyPlayerState from '@/js/SpotifyPlayerState';
 import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy, millisToMinuteSecond } from '@/js/time-utils';
+import { clearWritableLocalStorage } from '@/js/store-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -166,7 +166,7 @@ class SpotifyApi {
       return;
     }
 
-    const uri = get(songUri);
+    const uri = get(trackUri);
     const position_ms = get(progressMsTick);
 
     await this.#put(
@@ -363,8 +363,8 @@ class SpotifyApi {
 
   /** @param {import('@/js/spotify').SpotifyTrack} track */
   #writeStoreTrackInfos(track) {
-    songUri.set(track?.uri);
-    songName.set(track?.name);
+    trackUri.set(track?.uri);
+    trackName.set(track?.name);
     durationMs.set(track?.duration_ms);
     albumName.set(track?.album?.name);
     artists.set(track?.artists);
