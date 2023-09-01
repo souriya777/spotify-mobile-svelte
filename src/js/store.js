@@ -19,7 +19,7 @@ const isPlayerReady = derived(
   ([$spotifyDeviceId, $player]) => $spotifyDeviceId && $player != null,
 );
 
-/** @type {import('svelte/store').Writable<import('./spotify').SpotifyDevice[]>} */
+/** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyDevice[]>} */
 const devices = writable([]);
 
 function writableLocalStorage(key, initialValue) {

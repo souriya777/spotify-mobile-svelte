@@ -1,7 +1,7 @@
 import SpotifySong from '@/js/SpotifySong';
 
 /**
- * @type {import('./spotify').SpotifySongsCursor}
+ * @type {import('@/js/spotify').SpotifySongsCursor}
  */
 class SpotifySongsCursor {
   constructor(fromApi) {

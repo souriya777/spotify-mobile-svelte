@@ -2,8 +2,8 @@ import { millisToMinuteSecond } from '@/js/time-utils';
 
 class SpotifyPlaybackStateService {
   /**
-   * @param {import('./spotify').SpotifyPlaybackState} playbackState
-   * @returns {import('./spotify').SpotifyPlaybackState}
+   * @param {import('@/js/spotify').SpotifyPlaybackState} playbackState
+   * @returns {import('@/js/spotify').SpotifyPlaybackState}
    */
   static refreshProgress(playbackState) {
     const {

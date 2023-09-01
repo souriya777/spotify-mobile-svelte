@@ -1,5 +1,5 @@
 /**
- * @type {import('./spotify').SpotifyArtist}
+ * @type {import('@/js/spotify').SpotifyArtist}
  */
 class SpotifyArtist {
   constructor(fromApi) {

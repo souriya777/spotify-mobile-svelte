@@ -4,8 +4,8 @@ import SpotifyRepeatMode from './SpotifyRepeatMode';
 
 class SpotifyPlaybackStateAdapter {
   /**
-   * @param {import('./spotify').SpotifyPlayerState} playerState
-   * @returns {import('./spotify').SpotifyPlaybackState}
+   * @param {import('@/js/spotify').SpotifyPlayerState} playerState
+   * @returns {import('@/js/spotify').SpotifyPlaybackState}
    */
   static adapt(playerState) {
     const adaptee = {};

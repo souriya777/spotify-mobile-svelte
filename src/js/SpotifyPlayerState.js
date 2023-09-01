@@ -2,7 +2,7 @@ import SpotifyTrack from '@/js/SpotifyTrack';
 import SpotifyPlayerMetadataItem from '@/js/SpotifyPlayerMetadataItem';
 
 /**
- * @type {import('./spotify').SpotifyPlayerState}
+ * @type {import('@/js/spotify').SpotifyPlayerState}
  */
 class SpotifyPlayerState {
   constructor(fromApi) {

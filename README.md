@@ -8,6 +8,8 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 KISS
 DRY
+No broken windows
+Stone soup
 
 # TODO
 
@@ -24,6 +26,7 @@ DRY
 - sync : what and when ?
   -- sync playbackState
   -- sync device
+  -- transfert state
   ---- at the end of song
   ---- next/prev ?
 
@@ -61,6 +64,8 @@ ERRORS
 - color
 - px
 
+// TODO move in transformers ???
+
 ## perf
 
 - lazy load images
@@ -72,6 +77,9 @@ ERRORS
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
 - feat(app): add a direct shortcut
+- present it to `Svelte Society`
+- make article
+- live coding
 
 ## bonus
 

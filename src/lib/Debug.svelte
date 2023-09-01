@@ -13,7 +13,7 @@
 
   $: deviceId = $spotifyDeviceId?.slice(0, 8)?.concat('...');
 
-  let open = true;
+  let open = false;
 </script>
 
 <details {open}>

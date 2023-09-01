@@ -2,7 +2,7 @@ import SpotifyArtist from '@/js/SpotifyArtist';
 import SpotifyImage from '@/js/SpotifyImage';
 
 /**
- * @type {import('./spotify').SpotifyPlayerMetadataItem}
+ * @type {import('@/js/spotify').SpotifyPlayerMetadataItem}
  */
 class SpotifyPlayerMetadataItem {
   constructor(fromApi) {

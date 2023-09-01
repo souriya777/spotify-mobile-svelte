@@ -100,14 +100,14 @@ class SpotifyApi {
 
   /**
    * @param {any} state
-   * @returns {import('./spotify').SpotifyPlayerState}
+   * @returns {import('@/js/spotify').SpotifyPlayerState}
    */
   getPlayerState(state) {
     return new SpotifyPlayerState(state);
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpotifyPlaybackState>}
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaybackState>}
    */
   async getPlaybackState() {
     const data = await this.#get('/me/player');
@@ -126,7 +126,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpotifyDevice[]>}
+   * @returns {Promise<import('@/js/spotify').SpotifyDevice[]>}
    */
   async getAvailableDevice() {
     const data = await this.#get('/me/player/devices');
@@ -197,7 +197,7 @@ class SpotifyApi {
 
   /**
    * @param {string} userId
-   * @returns {Promise<import('./spotify').SpotifyPlaylist[]>}
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
    */
   async getMyPlaylists(userId) {
     const data = await this.#get(`/users/${userId}/playlists`);
@@ -205,7 +205,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpotifySong[]>}
+   * @returns {Promise<import('@/js/spotify').SpotifySong[]>}
    */
   async getRecentlyPlayedSongs() {
     const data = await this.#get(`/me/player/recently-played`);
@@ -213,7 +213,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpotifySong>}
+   * @returns {Promise<import('@/js/spotify').SpotifySong>}
    */
   async getLastSong() {
     const songs = await this.getRecentlyPlayedSongs();
@@ -221,7 +221,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpotifyQueue>}
+   * @returns {Promise<import('@/js/spotify').SpotifyQueue>}
    * @throws QueueEmptyError
    */
   async getQueue() {
@@ -237,7 +237,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('./spotify').SpotifyTrack>}
+   * @returns {Promise<import('@/js/spotify').SpotifyTrack>}
    * @throws QueueEmptyError
    */
   async getQueueLastSong() {
@@ -269,7 +269,7 @@ class SpotifyApi {
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
 
   /**
-   * @param {null | import('./spotify').SpotifyPlaybackState} state
+   * @param {null | import('@/js/spotify').SpotifyPlaybackState} state
    */
   async #synchronizePlaybackState(state = null) {
     const playbackState = state ? state : await this.getPlaybackState();
@@ -279,7 +279,7 @@ class SpotifyApi {
   }
 
   /**
-   * @param {import('./spotify').SpotifyTrack} foundTrack
+   * @param {import('@/js/spotify').SpotifyTrack} foundTrack
    */
   async #synchronizeTrack(foundTrack = null) {
     const track = foundTrack ? foundTrack : await this.#searchLastTrack();
