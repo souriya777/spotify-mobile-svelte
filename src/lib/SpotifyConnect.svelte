@@ -1,5 +1,5 @@
 <script>
-  import { spotifyAccessToken, spotifyDeviceId, player } from '@/js/store';
+  import { accessToken, deviceId, player } from '@/js/store/store';
   import { appendScriptToBody } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import Logger from '@/js/Logger';
@@ -16,14 +16,14 @@
     const SPOTIFY_PLAYER = new window.Spotify.Player({
       name: SpotifyApi.PLAYER_NAME,
       getOAuthToken: (cb) => {
-        cb($spotifyAccessToken);
+        cb($accessToken);
       },
       volume: SpotifyApi.DEFAULT_VOLUME,
     });
 
     SPOTIFY_PLAYER.addListener('ready', ({ device_id }) => {
       LOGGER.log('device ready ✅', device_id);
-      spotifyDeviceId.set(device_id);
+      deviceId.set(device_id);
     });
 
     SPOTIFY_PLAYER.addListener('not_ready', ({ device_id }) => {

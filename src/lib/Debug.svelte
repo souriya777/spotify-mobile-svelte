@@ -1,17 +1,15 @@
 <script>
   import {
-    spotifyAccessToken,
-    spotifyUserId,
-    spotifyDeviceId,
+    accessToken,
+    userId,
+    deviceId,
     player,
     playerIsFull,
     playerIsReady,
     trackName,
-  } from '@/js/store';
+  } from '@/js/store/store';
   import { AXIOS_INSTANCE } from '@/js/axios-utils';
   import SpotifyApi from '@/js/SpotifyApi';
-
-  $: deviceId = $spotifyDeviceId?.slice(0, 8)?.concat('...');
 
   let open = false;
 </script>
@@ -19,9 +17,9 @@
 <details {open}>
   <summary>Debug</summary>
   <ul>
-    <li>😎:{$spotifyUserId}</li>
-    <li>🪙:{$spotifyAccessToken?.slice(0, 8)?.concat('...')}</li>
-    <li>📱deviceId:{deviceId}</li>
+    <li>😎:{$userId}</li>
+    <li>🪙:{$accessToken?.slice(0, 8)?.concat('...')}</li>
+    <li>📱deviceId:{$deviceId}</li>
     <li>📻player:{$player?._options?.name}</li>
     <li>playerIsFull:{$playerIsFull}</li>
     <li>
@@ -37,9 +35,7 @@
 
   <button on:click={SpotifyApi.forceSpotifyAuthorization}>🗑️ FORCE</button>
   <button on:click={() => SpotifyApi.synchronize()}>♻️sync</button>
-  <button on:click={() => SpotifyApi.transfertPlayback($spotifyDeviceId)}>
-    transfert-playback
-  </button>
+  <button on:click={() => SpotifyApi.transfertPlayback($deviceId)}> transfert-playback </button>
   <button on:click={() => SpotifyApi.getPlaybackState()}>playback-state</button>
   <button on:click={() => SpotifyApi.getAvailableDevice()}>devices</button>
   <button on:click={() => SpotifyApi.me()}>me</button>
@@ -47,5 +43,5 @@
   <button on:click={() => SpotifyApi.getLastSong()}>last-song</button>
   <button on:click={() => SpotifyApi.getQueue()}>queue</button>
   <button on:click={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
-  <button on:click={() => SpotifyApi.getMyPlaylists($spotifyUserId)}>my-playlists</button>
+  <button on:click={() => SpotifyApi.getMyPlaylists($userId)}>my-playlists</button>
 </details>

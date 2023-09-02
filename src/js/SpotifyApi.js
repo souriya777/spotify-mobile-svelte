@@ -3,10 +3,9 @@ import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import Logger from '@/js/Logger';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
 import {
-  spotifyAccessToken,
-  spotifyUserId,
+  accessToken,
+  userId,
   player,
-  spotifyDeviceId,
   trackUri,
   trackName,
   albumName,
@@ -14,13 +13,12 @@ import {
   artists,
   shuffleState,
   repeatState,
-  isPlaying,
+  playing,
   progressMs,
-  progressMsTick,
   durationMs,
   apiTimestamp,
   devices,
-} from '@/js/store';
+} from '@/js/store/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
 import SpotifySongsCursor from '@/js/SpotifySongsCursor';
@@ -35,7 +33,6 @@ import SpotifyPlayerState from '@/js/SpotifyPlayerState';
 import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy, millisToMinuteSecond } from '@/js/time-utils';
-import { clearWritableLocalStorage } from '@/js/store-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -53,7 +50,7 @@ class SpotifyApi {
   }
 
   forceSpotifyAuthorization() {
-    clearWritableLocalStorage();
+    localStorage.clear();
     window.location.href = '/';
   }
 
@@ -78,7 +75,7 @@ class SpotifyApi {
         headers,
       });
 
-      spotifyAccessToken.set(resp?.data.access_token);
+      accessToken.set(resp?.data.access_token);
       LOGGER.log('token ✅', resp?.data.access_token);
     } catch (err) {
       LOGGER.error('', err.toJSON());
@@ -91,7 +88,7 @@ class SpotifyApi {
   async me() {
     const data = await this.#get('/me');
     const user = new SpotifyUser(data);
-    spotifyUserId.set(user?.id);
+    userId.set(user?.id);
     return user;
   }
 
@@ -144,7 +141,7 @@ class SpotifyApi {
       device_ids: [deviceId],
       play: true,
     });
-    isPlaying.set(true);
+    playing.set(true);
   }
 
   /**
@@ -159,15 +156,11 @@ class SpotifyApi {
     return deviceList?.devices;
   }
 
-  async play() {
-    const deviceId = get(spotifyDeviceId);
+  async play(deviceId, uri, positionMs) {
     if (!deviceId) {
       LOGGER.log('device_id is not yet initialize!', deviceId);
       return;
     }
-
-    const uri = get(trackUri);
-    const position_ms = get(progressMsTick);
 
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
@@ -175,19 +168,18 @@ class SpotifyApi {
         // FIXME context_uri or uris ?
         // context_uri: uri,
         uris: [uri],
-        position_ms,
+        position_ms: positionMs,
       }),
     );
 
-    isPlaying.set(true);
+    playing.set(true);
 
-    LOGGER.log('play', position_ms, uri);
+    LOGGER.log('play', positionMs, uri);
   }
 
-  async pause() {
-    const deviceId = get(spotifyDeviceId);
+  async pause(deviceId) {
     await this.#put(`/me/player/pause?device_id=${deviceId}`);
-    isPlaying.set(false);
+    playing.set(false);
   }
 
   async previous() {
@@ -357,7 +349,7 @@ class SpotifyApi {
   #writeStorePlaybackInfos(playbackState) {
     shuffleState.set(playbackState?.shuffle_state);
     repeatState.set(playbackState?.repeat_state);
-    isPlaying.set(playbackState?.is_playing);
+    playing.set(playbackState?.is_playing);
     progressMs.set(playbackState?.progress_ms);
   }
 

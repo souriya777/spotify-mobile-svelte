@@ -1,5 +1,5 @@
 <script>
-  import { playerIsFull } from '@/js/store';
+  import { playerIsFull } from '@/js/store/store';
   import Player from '@/lib/Player.svelte';
   // FIXME
   // import Nav from '@/lib/Nav.svelte';

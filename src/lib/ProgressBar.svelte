@@ -1,7 +1,13 @@
 <script>
   import SpotifyApi from '@/js/SpotifyApi';
   import { percentToMillis } from '@/js/time-utils';
-  import { progressMs, progressMsTick, isPlaying, durationMs, progress_percent } from '@/js/store';
+  import {
+    progressMs,
+    progressMsTick,
+    playing,
+    durationMs,
+    progress_percent,
+  } from '@/js/store/store';
 
   $: safeProgressPercent =
     !Number.isFinite($progress_percent) || isNaN($progress_percent) ? 0 : $progress_percent;
@@ -18,7 +24,7 @@
 <div>
   🟢progressMs:{$progressMs}
   🔴progress:{$progressMsTick}
-  isPlaying:{$isPlaying}
+  playing:{$playing}
 </div>
 
 <button on:click={seekPosition}>seek-position {positionPercent}%</button>

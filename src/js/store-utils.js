@@ -1,6 +1,5 @@
 import { writable } from 'svelte/store';
 import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
-import { spotifyAccessToken, spotifyAuthorizeWaiting } from '@/js/store';
 
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);
@@ -18,7 +17,7 @@ function writableLocalStorage(key, initialValue) {
       localStorage.setItem(key, val);
       document.addEventListener('storage', write);
 
-      if ('spotifyAccessToken' === key) {
+      if ('accessToken' === key) {
         setAxiosHeaderAuthorization(val);
       }
     }
@@ -27,9 +26,4 @@ function writableLocalStorage(key, initialValue) {
   return value;
 }
 
-function clearWritableLocalStorage() {
-  spotifyAuthorizeWaiting.set(null);
-  spotifyAccessToken.set(null);
-}
-
-export { writableLocalStorage, clearWritableLocalStorage };
+export { writableLocalStorage };

@@ -1,9 +1,10 @@
 <script>
   import { onMount } from 'svelte';
   import {
-    spotifyDeviceId,
+    deviceId,
     playerIsFull,
     playerIsReady,
+    progressMsTick,
     devices,
     trackUri,
     trackName,
@@ -12,10 +13,10 @@
     artistsDisplay,
     shuffleState,
     repeatState,
-    isPlaying,
+    playing,
     current_m_ss,
     end_m_ss,
-  } from '@/js/store';
+  } from '@/js/store/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
   import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
@@ -28,7 +29,7 @@
 
   $: activeDevice = $devices?.find((device) => device.is_active === true);
 
-  $: isAnotherDeviceActive = $spotifyDeviceId !== activeDevice?.id;
+  $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
 
   onMount(() => {
     const frequency = import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS;
@@ -74,10 +75,10 @@
     </div>
     <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
     <button on:click={() => SpotifyApi.previous()}>⏮️</button>
-    {#if $isPlaying}
-      <button on:click={() => SpotifyApi.pause()}>⏸️</button>
+    {#if $playing}
+      <button on:click={() => SpotifyApi.pause($deviceId)}>⏸️</button>
     {:else}
-      <button on:click={() => SpotifyApi.play()}>▶️</button>
+      <button on:click={() => SpotifyApi.play($deviceId, $trackUri, $progressMsTick)}>▶️</button>
     {/if}
     <button on:click={() => SpotifyApi.next()}>⏭️</button>
     <button on:click={() => SpotifyApi.repeat()}
