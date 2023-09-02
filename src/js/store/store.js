@@ -5,7 +5,7 @@ import { millisToMinuteSecond, progressPercent } from '@/js/time-utils';
 
 // ACCESS
 const accessToken = writableLocalStorage('accessToken', '');
-const authorizationWaiting = writableLocalStorage('authorizationWaiting', false);
+const authorizationOk = writableLocalStorage('authorizationOk', false);
 
 // USER
 const userId = writable('');
@@ -18,20 +18,18 @@ const albumName = writable('');
 const imageUrl = writable('');
 /** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyArtist[]>} */
 const artists = writable([]);
-const artistsDisplay = derived(artists, ($artists) => $artists.map((item) => item.name).join(', '));
+const artistsDisplay = derived(artists, ($artists) =>
+  $artists?.map((item) => item.name).join(', '),
+);
 
 // DEVICE
-const deviceId = writable('');
+const deviceId = writableLocalStorage('deviceId', '');
 /** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyDevice[]>} */
 const devices = writable([]);
 
 // PLAYER
 const player = writable(null);
 const playerIsFull = writable(false);
-const playerIsReady = derived(
-  [deviceId, player],
-  ([$deviceId, $player]) => $deviceId && $player != null,
-);
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const playing = writable(false);
@@ -63,11 +61,10 @@ const apiTimestamp = writable(null);
 export {
   accessToken,
   userId,
-  authorizationWaiting,
+  authorizationOk,
   deviceId,
   player,
   playerIsFull,
-  playerIsReady,
   trackUri,
   trackName,
   albumName,

@@ -18,6 +18,7 @@ import {
   durationMs,
   apiTimestamp,
   devices,
+  deviceId,
 } from '@/js/store/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -33,6 +34,7 @@ import SpotifyPlayerState from '@/js/SpotifyPlayerState';
 import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy, millisToMinuteSecond } from '@/js/time-utils';
+import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -41,7 +43,7 @@ class SpotifyApi {
   DEFAULT_VOLUME = 0.2;
   TIMESTAMP_MIN_GAP_MS = Number(`${import.meta.env.VITE_SPOTIFY_TIMESTAMP_MIN_GAP_MS}`);
 
-  authorize() {
+  async authorize() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
       this.#CLIENT_ID
     }&scope=${encodeURIComponent(this.#SCOPES)}&redirect_uri=${encodeURIComponent(
@@ -76,15 +78,15 @@ class SpotifyApi {
       });
 
       accessToken.set(resp?.data.access_token);
-      LOGGER.log('token ✅', resp?.data.access_token);
+      window.history.pushState({}, 'token ok', '/');
+
+      LOGGER.log('token ✅');
     } catch (err) {
       LOGGER.error('', err.toJSON());
     }
   }
 
-  /**
-   * @returns {Promise<SpotifyUser>}
-   */
+  /** @returns {Promise<SpotifyUser>} */
   async me() {
     const data = await this.#get('/me');
     const user = new SpotifyUser(data);
@@ -92,36 +94,46 @@ class SpotifyApi {
     return user;
   }
 
-  /** @param {null | import('@/js/spotify').SpotifyPlayerState} state */
-  async synchronize(state = null) {
-    let track = null;
+  /** @param {null | import('@/js/spotify').SpotifyPlayerState} playerState */
+  async synchronize(playerState = null) {
+    // SYNC PLAYBACK & TRACK
     let playbackState = null;
+    let track = null;
 
-    if (state) {
-      if (this.#isSpotifyNotificationValid(state?.timestamp)) {
-        LOGGER.log('SPOTIFY NOTIFICATION', state);
-        const playerState = this.getPlayerState(state);
-
-        track = SpotifyTrackAdapter.adapt(playerState);
-        playbackState = SpotifyPlaybackStateAdapter.adapt(playerState);
-
-        this.#synchronizeTrack(track);
-        this.#synchronizePlaybackState(playbackState);
-      } else {
-        LOGGER.log('SPOTIFY NOTIFICATION is too close...');
-      }
-    } else {
-      this.#synchronizeTrack(track);
-      this.#synchronizePlaybackState(playbackState);
+    if (playerState && !this.#isSpotifyNotificationValid(playerState?.timestamp)) {
+      // uncomment to debug
+      // LOGGER.log('🟡 ---> spotify notification is TOO CLOSE...', playerState);
+      return;
     }
-  }
 
-  /**
-   * @param {import('@/js/spotify').SpotifyPlayerState} state
-   * @returns {import('@/js/spotify').SpotifyPlayerState}
-   */
-  getPlayerState(state) {
-    return new SpotifyPlayerState(state);
+    if (playerState) {
+      LOGGER.log('---> notification', playerState);
+      const spotifyPlayerState = this.getPlayerState(playerState);
+
+      playbackState = SpotifyPlaybackStateAdapter.adapt(spotifyPlayerState);
+      track = SpotifyTrackAdapter.adapt(spotifyPlayerState);
+    } else {
+      try {
+        playbackState = await this.getPlaybackState();
+        track = playbackState?.item ? playbackState?.item : await this.#determineLastSong();
+      } catch (err) {
+        LOGGER.log('wait for "notification" from spotify :)');
+        return;
+      }
+    }
+
+    this.#writeStorePlaybackInfos(playbackState);
+    this.#writeStoreTrackInfos(track);
+
+    // SYNC DEVICES
+    setTimeout(() => {
+      /* 
+        Hack with a timeout, because when we've just 
+        auto-transfert the playback (eg. after a 204), our devices is not instantanely active.
+        I do this hack, because it's simpler
+      */
+      this.getAvailableDevice().then((availableDevices) => devices.set(availableDevices));
+    }, 3000);
   }
 
   /**
@@ -129,10 +141,7 @@ class SpotifyApi {
    */
   async getPlaybackState() {
     const data = await this.#get('/me/player');
-    const playbackState = new SpotifyPlaybackState(data);
-    LOGGER.log('getPlaybackState()', playbackState);
-    this.#writeStorePlaybackInfos(playbackState);
-    return playbackState;
+    return new SpotifyPlaybackState(data);
   }
 
   /** @param {string} deviceId */
@@ -242,7 +251,7 @@ class SpotifyApi {
   /**
    * @returns {Promise<import('@/js/spotify').SpotifySong>}
    */
-  async getLastSong() {
+  async determineLastSong() {
     const songs = await this.getRecentlyPlayedSongs();
     return songs?.[0];
   }
@@ -254,7 +263,6 @@ class SpotifyApi {
   async getQueue() {
     const data = await this.#get('/me/player/queue');
     const queue = new SpotifyQueue(data);
-    LOGGER.log('getQueue()', queue);
 
     if (queue.isEmpty()) {
       throw new QueueEmptyError('queue is empty');
@@ -268,18 +276,25 @@ class SpotifyApi {
    * @throws QueueEmptyError
    */
   async getQueueLastSong() {
-    let queueSong = null;
+    let track = null;
 
     try {
       const queue = await this.getQueue();
-      queueSong = new SpotifyTrack(queue.currently_playing);
-      LOGGER.log('getQueueLastSong()', queueSong);
+      track = new SpotifyTrack(queue.currently_playing);
     } catch (err) {
       LOGGER.error(err?.message);
       throw err;
     }
 
-    return queueSong;
+    return track;
+  }
+
+  /**
+   * @param {import('@/js/spotify').SpotifyPlayerState} playerState
+   * @returns {import('@/js/spotify').SpotifyPlayerState}
+   */
+  getPlayerState(playerState) {
+    return new SpotifyPlayerState(playerState);
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -287,30 +302,7 @@ class SpotifyApi {
   #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
 
-  /**
-   * @param {null | import('@/js/spotify').SpotifyPlaybackState} state
-   */
-  async #synchronizePlaybackState(state = null) {
-    const playbackState = state ? state : await this.getPlaybackState();
-
-    // FIXME rewrite
-    this.#writeStorePlaybackInfos(playbackState);
-    LOGGER.log('last state loaded ✅', playbackState);
-  }
-
-  /**
-   * @param {import('@/js/spotify').SpotifyTrack} foundTrack
-   */
-  async #synchronizeTrack(foundTrack = null) {
-    const track = foundTrack ? foundTrack : await this.#searchLastTrack();
-
-    if (track) {
-      this.#writeStoreTrackInfos(track);
-      LOGGER.log('last track loaded ✅', track);
-    }
-  }
-
-  async #searchLastTrack() {
+  async #determineLastSong() {
     let track = null;
 
     try {
@@ -324,7 +316,7 @@ class SpotifyApi {
       if (err instanceof QueueEmptyError) {
         LOGGER.error(err.message);
         // ... otherwise take it from recently-played
-        const song = await this.getLastSong();
+        const song = await this.determineLastSong();
         track = song?.track;
       }
     }
@@ -378,19 +370,30 @@ class SpotifyApi {
         const data = response?.data;
         const status = response?.status;
         LOGGER.log(options?.method, endpoint, data, status);
+
+        if (SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status) {
+          LOGGER.error('Spotify returns 204 -> playback not available or active');
+          this.transfertPlayback(get(deviceId));
+          throw new PlaybackNotAvailableOrActiveError();
+        }
+
         return data;
       })
       .catch((err) => {
-        const errorJSON = err.toJSON();
+        const errorJSON = err?.toJSON();
         const status = errorJSON?.status;
-        // LOGGER.error('🌱', err.toJSON(), status);
+        LOGGER.error('🌱', err?.toJSON(), status);
+
         if (SpotifyStatus.UNAUTHORIZED === status) {
-          LOGGER.error('Spotify returns 401 -> refresh access');
+          LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
           this.forceSpotifyAuthorization();
         } else if (SpotifyStatus.BAD_REQUEST === status) {
-          LOGGER.error('Spotify returns 400 -> bad request', err);
-          this.forceSpotifyAuthorization();
+          LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
+
+          // FIXME is it mandatory here ?
+          // this.forceSpotifyAuthorization();
         }
+
         throw err;
       });
   }

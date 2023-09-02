@@ -9,17 +9,25 @@ class LoggerFile {
     this.filename = filename;
   }
 
-  log(message = '', objectToDebug = {}, ...args) {
-    const trace = this.#trace(message);
-    console.log(trace, objectToDebug, ...args);
+  log(message = '', toDebug = null, ...args) {
+    const prefix = this.#prefix(message);
+    if (toDebug) {
+      console.log(prefix, toDebug, ...args);
+    } else {
+      console.log(prefix);
+    }
   }
 
-  error(message = '', objectToDebug = '', ...args) {
-    const trace = this.#trace(message);
-    console.error(trace, objectToDebug, ...args);
+  error(message = '', toDebug = '', ...args) {
+    const prefix = this.#prefix(message);
+    if (toDebug) {
+      console.error(prefix, toDebug, ...args);
+    } else {
+      console.error(prefix);
+    }
   }
 
-  #trace(message) {
+  #prefix(message) {
     return `[souriya 😎][${this.filename}]: ${message}`;
   }
 }

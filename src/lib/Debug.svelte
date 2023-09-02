@@ -1,47 +1,33 @@
 <script>
-  import {
-    accessToken,
-    userId,
-    deviceId,
-    player,
-    playerIsFull,
-    playerIsReady,
-    trackName,
-  } from '@/js/store/store';
-  import { AXIOS_INSTANCE } from '@/js/axios-utils';
+  import { accessToken, userId, deviceId, player, playerIsFull, trackName } from '@/js/store/store';
   import SpotifyApi from '@/js/SpotifyApi';
 
-  let open = false;
+  let open = true;
 </script>
 
 <details {open}>
   <summary>Debug</summary>
   <ul>
     <li>😎:{$userId}</li>
-    <li>🪙:{$accessToken?.slice(0, 8)?.concat('...')}</li>
-    <li>📱deviceId:{$deviceId}</li>
+    <li>🪙:{$accessToken?.substr(0, 8)}</li>
+    <li>📱deviceId:{$deviceId?.substr(0, 8)}</li>
     <li>📻player:{$player?._options?.name}</li>
     <li>playerIsFull:{$playerIsFull}</li>
-    <li>
-      ⚡️axios:{AXIOS_INSTANCE.defaults.headers.common.Authorization?.toString()
-        ?.slice(0, 8 + 8)
-        ?.concat('...')}
-    </li>
-    <li>{$playerIsReady ? '🟢' : '🔴'}playerIsReady:{$playerIsReady}</li>
     <li>vol.:{$player?._options?.volume}</li>
     <li>🎵song.:{$trackName}</li>
     <li>refresh frequency.:{import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS}</li>
   </ul>
 
   <button on:click={SpotifyApi.forceSpotifyAuthorization}>🗑️ FORCE</button>
-  <button on:click={() => SpotifyApi.synchronize()}>♻️sync</button>
+  <button on:click={() => SpotifyApi.synchronize()}>🟢🟢🟢sync</button>
+  <button on:click={() => SpotifyApi.getPlaybackState()}>🟢playback-state</button>
+  <button on:click={() => SpotifyApi.getAvailableDevice()}>🟢devices</button>
   <button on:click={() => SpotifyApi.transfertPlayback($deviceId)}> transfert-playback </button>
-  <button on:click={() => SpotifyApi.getPlaybackState()}>playback-state</button>
-  <button on:click={() => SpotifyApi.getAvailableDevice()}>devices</button>
   <button on:click={() => SpotifyApi.me()}>me</button>
   <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
-  <button on:click={() => SpotifyApi.getLastSong()}>last-song</button>
+  <button on:click={() => SpotifyApi.determineLastSong()}>last-song</button>
   <button on:click={() => SpotifyApi.getQueue()}>queue</button>
   <button on:click={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
   <button on:click={() => SpotifyApi.getMyPlaylists($userId)}>my-playlists</button>
+  <button on:click={() => $player.disconnect()}>disconnect</button>
 </details>

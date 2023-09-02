@@ -17,6 +17,9 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
+- I am not able to catch "PlaybackNotAvailableOrActiveError" => err instance of PlaybackNotAvailableOrActiveError is `false`...
+- Spotify.Player#getCurrentState... => for what ?
+- fix(spotify-connect): only a single instance in devices...
 - TODO feat(store): refactor store in multiple files
 - feat(player): autoplay when click on next/previous
 - resolve bug when batch play/pause button
@@ -26,6 +29,7 @@ Stone soup
 - feat(player): can set volume of device
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
 - feat(player): can manage other players
+  ====> just `synchronize()`
   -- `/repeat` or `/shuffle` => we can set `device_id`
 - test fiability of player
 
@@ -36,12 +40,6 @@ Stone soup
   ---- at the end of song
   ---- next/prev ?
   ---- few actions ARE NOT possible when not transfert-playback
-
-ERRORS
-
-- FIXME fix when long-time-inactivity ""Request failed with status code 400"
-- TODO transfert state (after 400 error)
-- FIXMEfeat(spotify-api): implement quota-limit with code `429`
 
 ✅✅✅ ------------- ✅✅✅
 
@@ -79,6 +77,7 @@ ERRORS
 
 ## demo
 
+- ERRORS feat(spotify-api): implement quota-limit with code `429`
 - TODO/FIXME uncomment
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
@@ -105,10 +104,28 @@ ERRORS
 
 # spotify flow
 
-1. GET /authorize => authorization code
-2. GET /token => access token + refresh token
-3. GET /me => user id (useful for getting my playlists)
-   benefits: it you receive `401`, you know that your previous `access_token` is obsolete
+## check token validity
+
+0. GET /me => if `401` the `access_token` is obsolete
+   => force `authentication flow`
+
+## authentication flow
+
+1. GET /authorize => `authorization code` in `redirect URL`
+2. GET /token => `access_token`
+3. `new Spotify.Player()`, then `player.connect()` => if `ready`, obtain a `device_id` & `player` (we can interact with `play()`, `seek()`)
+
+WHEN SYNC :
+after transfert-playback
+--> sync : hack settimeout set device
+
+## player flow
+
+`synchronize(spotifyPlayerState)`
+--> if `spotifyPlayerState`, we extract `playbackState` & `track`(from`playbackState`, `queue`or`recently-played`)
+--> otherwise, we call api
+
+if `204` => `playback not available or active` (when no device playing something), we `transfert-playback` to us
 
 # commit message
 

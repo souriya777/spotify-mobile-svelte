@@ -61,8 +61,8 @@ test(`getQueueLastSong() returns SpotifyTrack`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`getLastSong returns SpotifySong`, async () => {
-  const actual = await SpotifyApi.getLastSong();
+test(`determineLastSong returns SpotifySong`, async () => {
+  const actual = await SpotifyApi.determineLastSong();
   const expected = { ...LAST_SONG_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });

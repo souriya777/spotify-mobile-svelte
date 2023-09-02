@@ -6,7 +6,7 @@
   import ScreenTop from '@/lib/ScreenTop.svelte';
   // FIXME
   // import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
-  import SpotifyAuthorization from '@/lib/SpotifyAuthorization.svelte';
+  import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
   // FIXME
   // import StackUiManager from '@/lib/StackUIManager.svelte';
   import Debug from '@/lib/Debug.svelte';
@@ -18,7 +18,7 @@
   <div class="button-left-3" />
   <div class="button-right" />
 
-  <SpotifyAuthorization />
+  <SpotifyAuthentication />
 
   <div class="screen" class:screen--full-player={$playerIsFull}>
     <!-- <StackUiManager> -->

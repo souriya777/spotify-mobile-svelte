@@ -3,7 +3,6 @@
   import {
     deviceId,
     playerIsFull,
-    playerIsReady,
     progressMsTick,
     devices,
     trackUri,
@@ -19,13 +18,9 @@
   } from '@/js/store/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
-  import SpotifyConnect from '@/lib/SpotifyConnect.svelte';
+  import SpotifyPlayerConnect from '@/lib/SpotifyPlayerConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
   import ProgressBar from '@/lib/ProgressBar.svelte';
-
-  $: if ($playerIsReady) {
-    SpotifyApi.synchronize();
-  }
 
   $: activeDevice = $devices?.find((device) => device.is_active === true);
 
@@ -54,7 +49,9 @@
   });
 </script>
 
-{#if $playerIsReady}
+<SpotifyPlayerConnect />
+
+{#if $deviceId}
   <div class="player" use:onTap={() => playerIsFull.set(true)}>
     <div class="bar" use:onTap={() => playerIsFull.set(false)}>
       <button>back</button>
@@ -98,17 +95,17 @@
           <li>
             <input
               type="radio"
-              bind:group={activeDevice.id}
+              bind:group={activeDevice}
               value={device.id}
-              on:click={() => SpotifyApi.transfertPlayback(device.id)}
+              on:click={() => {
+                SpotifyApi.transfertPlayback(device.id);
+              }}
             />{device.name}
           </li>
         {/each}
       </ul>
     </div>
   </div>
-{:else}
-  <SpotifyConnect />
 {/if}
 
 <style>

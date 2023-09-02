@@ -9,7 +9,9 @@ export const AXIOS_INSTANCE = axios.create({
 });
 
 export function setAxiosHeaderAuthorization(accessToken) {
-  // set defaut axios headers
-  AXIOS_INSTANCE.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
-  LOGGER.log('', AXIOS_INSTANCE.defaults.headers.common.Authorization);
+  if (accessToken) {
+    // set defaut axios headers
+    AXIOS_INSTANCE.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+    LOGGER.log('', AXIOS_INSTANCE.defaults.headers.common.Authorization);
+  }
 }
