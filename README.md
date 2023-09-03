@@ -17,7 +17,7 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- I am not able to catch "PlaybackNotAvailableOrActiveError" => err instance of PlaybackNotAvailableOrActiveError is `false`...
+- test other methods in SpotifyApi
 - Spotify.Player#getCurrentState... => for what ?
 - fix(spotify-connect): only a single instance in devices...
 - TODO feat(store): refactor store in multiple files

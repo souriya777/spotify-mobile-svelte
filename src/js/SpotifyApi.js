@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { get } from 'svelte/store';
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import Logger from '@/js/Logger';
@@ -117,8 +118,10 @@ class SpotifyApi {
         playbackState = await this.getPlaybackState();
         track = playbackState?.item ? playbackState?.item : await this.#determineLastSong();
       } catch (err) {
-        LOGGER.log('wait for "notification" from spotify :)');
-        return;
+        if (err instanceof PlaybackNotAvailableOrActiveError) {
+          LOGGER.log('wait for "notification" from spotify :)');
+          return;
+        }
       }
     }
 
@@ -374,15 +377,22 @@ class SpotifyApi {
         if (SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status) {
           LOGGER.error('Spotify returns 204 -> playback not available or active');
           this.transfertPlayback(get(deviceId));
-          throw new PlaybackNotAvailableOrActiveError();
+          throw new PlaybackNotAvailableOrActiveError(
+            'Spotify returns 204 -> playback not available or active',
+          );
         }
 
         return data;
       })
       .catch((err) => {
-        const errorJSON = err?.toJSON();
-        const status = errorJSON?.status;
-        LOGGER.error('🌱', err?.toJSON(), status);
+        let status = null;
+
+        if (axios.isAxiosError(err)) {
+          const errorJSON = err?.toJSON();
+          // @ts-ignore
+          status = errorJSON?.status;
+          LOGGER.error('🌱', errorJSON.toString(), status);
+        }
 
         if (SpotifyStatus.UNAUTHORIZED === status) {
           LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
