@@ -87,6 +87,11 @@ class SpotifyApi {
     }
   }
 
+  disconnect() {
+    get(player).disconnect();
+    LOGGER.log(`disconnect ${get(deviceId)}`);
+  }
+
   /** @returns {Promise<SpotifyUser>} */
   async me() {
     const data = await this.#get('/me');

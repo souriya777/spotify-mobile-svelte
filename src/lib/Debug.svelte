@@ -29,5 +29,5 @@
   <button on:click={() => SpotifyApi.getQueue()}>queue</button>
   <button on:click={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
   <button on:click={() => SpotifyApi.getMyPlaylists($userId)}>my-playlists</button>
-  <button on:click={() => $player.disconnect()}>disconnect</button>
+  <button on:click={() => SpotifyApi.disconnect()}>disconnect</button>
 </details>
