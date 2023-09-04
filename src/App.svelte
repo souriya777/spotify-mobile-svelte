@@ -1,8 +1,9 @@
 <script>
   import '@/css/main.scss';
-  import Screen from '@/lib/Screen.svelte';
+  import Phone from '@/lib/Phone.svelte';
 </script>
 
 <main>
-  <Screen />
+  <!-- FIXME switch to <Phone /> <Desktop /> ?  -->
+  <Phone />
 </main>

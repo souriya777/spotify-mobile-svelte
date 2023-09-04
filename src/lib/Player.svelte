@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import {
     deviceId,
-    playerIsFull,
     progressMsTick,
     devices,
     trackUri,
@@ -52,8 +51,8 @@
 <SpotifyPlayerConnect />
 
 {#if $deviceId}
-  <div class="player" use:onTap={() => playerIsFull.set(true)}>
-    <div class="bar" use:onTap={() => playerIsFull.set(false)}>
+  <div class="player" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
+    <div class="bar" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
       <button>back</button>
       <p>Liked Songs</p>
     </div>

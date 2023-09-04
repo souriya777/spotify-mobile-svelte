@@ -7,6 +7,16 @@
 
   const codeParam = new URL(window.location.href).searchParams.get('code');
 
+  $: if (window.location.href.search(/\/login/)) {
+    console.log('TODO loging');
+
+    // TODO implement routing
+    // TODO changer window pushState to routing solution
+    // TODO can I catch 400 'Failed to authenticate Authentication failed' in order to switch to "default" routing
+
+    // TODO do I use refresh_token ?
+  }
+
   // 1/ if client has a token, check it
   $: if ($accessToken) {
     LOGGER.log('test IF token is valid');

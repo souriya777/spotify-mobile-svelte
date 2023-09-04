@@ -17,6 +17,7 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
+- Logger with stacktrace
 - test other methods in SpotifyApi
 - Spotify.Player#getCurrentState... => for what ?
 - fix(spotify-connect): only a single instance in devices...
@@ -43,11 +44,13 @@ Stone soup
 
 ✅✅✅ ------------- ✅✅✅
 
+- feat(login) => resolve multiple-cloned-device ?
+
 - reflect a "car" presentation (audible-like)
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
-- refactor: WYSIWYG
+- StackUIManager FIXME
   FEAT(LAYOUT): IMPLEMENT STACK VIEWS
 - feat(layout): one stack views by `route`
 - resolve child, grand-child etc...
@@ -62,7 +65,6 @@ Stone soup
 - feat(search): design
 - feat(queue): design
 - feat(detail): design
-- feat(login)
 
 - improve cursor concept
 

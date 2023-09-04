@@ -1,8 +1,8 @@
 <script>
-  import { accessToken, userId, deviceId, player, playerIsFull, trackName } from '@/js/store/store';
+  import { accessToken, userId, deviceId, player, trackName } from '@/js/store/store';
   import SpotifyApi from '@/js/SpotifyApi';
 
-  let open = true;
+  let open = false;
 </script>
 
 <details {open}>
@@ -12,7 +12,6 @@
     <li>🪙:{$accessToken?.substr(0, 8)}</li>
     <li>📱deviceId:{$deviceId?.substr(0, 8)}</li>
     <li>📻player:{$player?._options?.name}</li>
-    <li>playerIsFull:{$playerIsFull}</li>
     <li>vol.:{$player?._options?.volume}</li>
     <li>🎵song.:{$trackName}</li>
     <li>refresh frequency.:{import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS}</li>

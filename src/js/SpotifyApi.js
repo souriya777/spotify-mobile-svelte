@@ -161,9 +161,7 @@ class SpotifyApi {
     playing.set(true);
   }
 
-  /**
-   * @returns {Promise<import('@/js/spotify').SpotifyDevice[]>}
-   */
+  /** @returns {Promise<import('@/js/spotify').SpotifyDevice[]>} */
   async getAvailableDevice() {
     const data = await this.#get('/me/player/devices');
     const deviceList = new SpotifyDeviceList(data);

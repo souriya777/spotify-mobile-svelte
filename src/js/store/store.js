@@ -29,7 +29,6 @@ const devices = writable([]);
 
 // PLAYER
 const player = writable(null);
-const playerIsFull = writable(false);
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const playing = writable(false);
@@ -64,7 +63,6 @@ export {
   authorizationOk,
   deviceId,
   player,
-  playerIsFull,
   trackUri,
   trackName,
   albumName,

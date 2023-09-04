@@ -1,5 +1,6 @@
 <script>
   import { accessToken, deviceId, player } from '@/js/store/store';
+  import { navigate } from 'svelte-routing';
   import { appendScriptToBody } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import Logger from '@/js/Logger';
@@ -40,6 +41,7 @@
 
     SPOTIFY_PLAYER.on('authentication_error', ({ message }) => {
       LOGGER.error('Failed to authenticate', message);
+      navigate('/login');
     });
 
     SPOTIFY_PLAYER.on('account_error', ({ message }) => {

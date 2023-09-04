@@ -41,7 +41,7 @@
 
 <svelte:window bind:online />
 
-<div class="screenTop">
+<div class="phone-status">
   <div class="hour">{time}</div>
   <div class="island" />
   <div class="infos">
@@ -55,7 +55,7 @@
 </div>
 
 <style>
-  .screenTop {
+  .phone-status {
     background-color: dodgerblue;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
