@@ -56,6 +56,10 @@ const progress_percent = derived([progressMsTick, durationMs], ([$progressMsTick
 
 // MISCELLANEOUS
 const apiTimestamp = writable(null);
+const appReady = derived(
+  [authorizationOk, accessToken, deviceId],
+  ([$authorizationOk, $accessToken, $deviceId]) => $authorizationOk && $accessToken && $deviceId,
+);
 
 export {
   accessToken,
@@ -81,4 +85,5 @@ export {
   progress_percent,
   apiTimestamp,
   devices,
+  appReady,
 };

@@ -20,7 +20,7 @@ import {
   apiTimestamp,
   devices,
   deviceId,
-} from '@/js/store/store';
+} from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
 import SpotifySongsCursor from '@/js/SpotifySongsCursor';
@@ -180,8 +180,6 @@ class SpotifyApi {
     await this.#put(
       `/me/player/play?device_id=${deviceId}`,
       JSON.stringify({
-        // FIXME context_uri or uris ?
-        // context_uri: uri,
         uris: [uri],
         position_ms: positionMs,
       }),

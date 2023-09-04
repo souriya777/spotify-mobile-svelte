@@ -17,24 +17,20 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- Logger with stacktrace
+- // TODO auto-deploy .env.prod in vercel
+
 - test other methods in SpotifyApi
 - Spotify.Player#getCurrentState... => for what ?
 - fix(spotify-connect): only a single instance in devices...
-- TODO feat(store): refactor store in multiple files
 - feat(player): autoplay when click on next/previous
 - resolve bug when batch play/pause button
 
-- refactor(namming): rename "Spotify\*"
-- feat(player): what is default queue ?
 - feat(player): can set volume of device
 - feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
 - feat(player): can manage other players
   ====> just `synchronize()`
   -- `/repeat` or `/shuffle` => we can set `device_id`
-- test fiability of player
-
-- sync : what and when ?
+- SYNC : what and when ?
   -- sync playbackState
   -- sync device
   -- transfert state
@@ -44,6 +40,7 @@ Stone soup
 
 ✅✅✅ ------------- ✅✅✅
 
+- feat(player): what is default queue ?
 - feat(login) => resolve multiple-cloned-device ?
 
 - reflect a "car" presentation (audible-like)
@@ -79,6 +76,7 @@ Stone soup
 
 ## demo
 
+- TODO feat(store): refactor store in multiple files
 - ERRORS feat(spotify-api): implement quota-limit with code `429`
 - TODO/FIXME uncomment
 - how to test on mobile/desktop ?
@@ -90,6 +88,7 @@ Stone soup
 
 ## bonus
 
+- TODO do I use refresh_token ?
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist
 - feat(player): load song in advance ?

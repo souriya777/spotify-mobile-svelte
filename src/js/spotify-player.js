@@ -1,12 +1,12 @@
-<script>
-  import { accessToken, deviceId, player } from '@/js/store/store';
-  import { navigate } from 'svelte-routing';
-  import { appendScriptToBody } from '@/js/souriya-utils';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import Logger from '@/js/Logger';
+import { deviceId, player } from '@/js/store';
+import { appendScriptToBody } from '@/js/souriya-utils';
+import SpotifyApi from '@/js/SpotifyApi';
+import Logger from '@/js/Logger';
 
-  const LOGGER = Logger.getNewInstance('SpotifyPlayerConnect.svelte');
+const LOGGER = Logger.getNewInstance('spotify-player.js');
 
+/** @param {string} accessToken */
+function createPlayer(accessToken) {
   appendScriptToBody('https://sdk.scdn.co/spotify-player.js');
 
   // @ts-ignore
@@ -15,7 +15,7 @@
     const SPOTIFY_PLAYER = new window.Spotify.Player({
       name: SpotifyApi.PLAYER_NAME,
       getOAuthToken: (cb) => {
-        cb($accessToken);
+        cb(accessToken);
       },
       volume: SpotifyApi.DEFAULT_VOLUME,
     });
@@ -36,23 +36,25 @@
     });
 
     SPOTIFY_PLAYER.on('initialization_error', ({ message }) => {
-      LOGGER.error('Failed to initialize', message);
+      LOGGER.error('Failed to initialize:', message);
     });
 
     SPOTIFY_PLAYER.on('authentication_error', ({ message }) => {
-      LOGGER.error('Failed to authenticate', message);
-      navigate('/login');
+      LOGGER.error('Failed to authenticate:', message);
+      SpotifyApi.forceSpotifyAuthorization();
     });
 
     SPOTIFY_PLAYER.on('account_error', ({ message }) => {
-      LOGGER.error('Failed to validate Spotify account', message);
+      LOGGER.error('Failed to validate Spotify account:', message);
     });
 
     SPOTIFY_PLAYER.on('playback_error', ({ message }) => {
-      LOGGER.error('Failed to perform playback', message);
+      LOGGER.error('Failed to perform playback:', message);
     });
 
     LOGGER.log('try to CONNECT player...');
     SPOTIFY_PLAYER.connect();
   };
-</script>
+}
+
+export { createPlayer };

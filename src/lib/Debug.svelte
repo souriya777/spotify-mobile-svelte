@@ -1,5 +1,5 @@
 <script>
-  import { accessToken, userId, deviceId, player, trackName } from '@/js/store/store';
+  import { accessToken, userId, deviceId, player, trackName } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
 
   let open = false;

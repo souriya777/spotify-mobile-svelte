@@ -1,31 +1,23 @@
 <script>
-  import { Router, Route } from 'svelte-routing';
-  import Login from '@/lib/Login.svelte';
-  import Player from '@/lib/Player.svelte';
-  // FIXME
-  // import Nav from '@/lib/Nav.svelte';
   import PhoneStatus from '@/lib/PhoneStatus.svelte';
-  // FIXME
   import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
   import Debug from '@/lib/Debug.svelte';
-
-  export let url = '';
+  import { appReady } from '@/js/store';
+  import Player from './Player.svelte';
 </script>
 
 <div class="screen">
-  <!-- <SpotifyAuthentication /> -->
-
   <div class="screen__top">
     <PhoneStatus />
   </div>
 
   <div class="screen__content">
     <Debug />
+    <SpotifyAuthentication />
 
-    <Router {url}>
-      <Route path="/login" component={Login} />
-      <Route component={Player} />
-    </Router>
+    {#if $appReady}
+      <Player />
+    {/if}
   </div>
 </div>
 

@@ -1,13 +1,7 @@
 <script>
   import SpotifyApi from '@/js/SpotifyApi';
   import { percentToMillis } from '@/js/time-utils';
-  import {
-    progressMs,
-    progressMsTick,
-    playing,
-    durationMs,
-    progress_percent,
-  } from '@/js/store/store';
+  import { progressMs, progressMsTick, playing, durationMs, progress_percent } from '@/js/store';
 
   $: safeProgressPercent =
     !Number.isFinite($progress_percent) || isNaN($progress_percent) ? 0 : $progress_percent;

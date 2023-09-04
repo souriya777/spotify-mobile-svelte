@@ -14,10 +14,9 @@
     playing,
     current_m_ss,
     end_m_ss,
-  } from '@/js/store/store';
+  } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import { onTap } from '@/js/event-utils';
-  import SpotifyPlayerConnect from '@/lib/SpotifyPlayerConnect.svelte';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
   import ProgressBar from '@/lib/ProgressBar.svelte';
 
@@ -34,13 +33,6 @@
       // console.log('...refresh PLAYBACK_STATE 🔴');
     }, frequency);
 
-    // const intervalPlayer = setInterval(() => {
-    // FIXME refresh progress_ms
-    // FIXME do here to make it reactive
-    // progressMs.update(n => n + 1000);
-    // }, 1000);
-    // FIXME make interval via '.subscribe()' ?
-
     return () => {
       clearInterval(intervalRefresh);
       // clearInterval(intervalPlayer);
@@ -48,64 +40,60 @@
   });
 </script>
 
-<SpotifyPlayerConnect />
-
-{#if $deviceId}
-  <div class="player" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
-    <div class="bar" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
-      <button>back</button>
-      <p>Liked Songs</p>
-    </div>
-    <img src={$imageUrl} alt={$albumName} />
-    <div class="title">{$trackName}{$trackUri}</div>
-    <div class="artist">{$artistsDisplay}</div>
-    <button>+✅</button>
-    <div class="progress">
-      <div>
-        <ProgressBar />
-      </div>
-      <div class="time">
-        <div class="begin">{$current_m_ss}</div>
-        <div class="end">{$end_m_ss}</div>
-      </div>
-    </div>
-    <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
-    <button on:click={() => SpotifyApi.previous()}>⏮️</button>
-    {#if $playing}
-      <button on:click={() => SpotifyApi.pause($deviceId)}>⏸️</button>
-    {:else}
-      <button on:click={() => SpotifyApi.play($deviceId, $trackUri, $progressMsTick)}>▶️</button>
-    {/if}
-    <button on:click={() => SpotifyApi.next()}>⏭️</button>
-    <button on:click={() => SpotifyApi.repeat()}
-      >🔁{$repeatState === SpotifyRepeatState.OFF
-        ? '🔴'
-        : $repeatState === SpotifyRepeatState.CONTEXT
-        ? '🟢🟢🟢'
-        : '🟢'}</button
-    >
-    <div class:isAnotherDeviceActive class="device">
-      {activeDevice?.type === 'Computer' ? '💻' : '📱'}
-      {activeDevice?.name}
-    </div>
+<div class="player" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
+  <div class="bar" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
+    <button>back</button>
+    <p>Liked Songs</p>
+  </div>
+  <img src={$imageUrl} alt={$albumName} />
+  <div class="title">{$trackName}{$trackUri}</div>
+  <div class="artist">{$artistsDisplay}</div>
+  <button>+✅</button>
+  <div class="progress">
     <div>
-      <ul>
-        {#each $devices as device}
-          <li>
-            <input
-              type="radio"
-              bind:group={activeDevice}
-              value={device.id}
-              on:click={() => {
-                SpotifyApi.transfertPlayback(device.id);
-              }}
-            />{device.name}
-          </li>
-        {/each}
-      </ul>
+      <ProgressBar />
+    </div>
+    <div class="time">
+      <div class="begin">{$current_m_ss}</div>
+      <div class="end">{$end_m_ss}</div>
     </div>
   </div>
-{/if}
+  <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
+  <button on:click={() => SpotifyApi.previous()}>⏮️</button>
+  {#if $playing}
+    <button on:click={() => SpotifyApi.pause($deviceId)}>⏸️</button>
+  {:else}
+    <button on:click={() => SpotifyApi.play($deviceId, $trackUri, $progressMsTick)}>▶️</button>
+  {/if}
+  <button on:click={() => SpotifyApi.next()}>⏭️</button>
+  <button on:click={() => SpotifyApi.repeat()}
+    >🔁{$repeatState === SpotifyRepeatState.OFF
+      ? '🔴'
+      : $repeatState === SpotifyRepeatState.CONTEXT
+      ? '🟢🟢🟢'
+      : '🟢'}</button
+  >
+  <div class:isAnotherDeviceActive class="device">
+    {activeDevice?.type === 'Computer' ? '💻' : '📱'}
+    {activeDevice?.name}
+  </div>
+  <div>
+    <ul>
+      {#each $devices as device}
+        <li>
+          <input
+            type="radio"
+            bind:group={activeDevice}
+            value={device.id}
+            on:click={() => {
+              SpotifyApi.transfertPlayback(device.id);
+            }}
+          />{device.name}
+        </li>
+      {/each}
+    </ul>
+  </div>
+</div>
 
 <style>
   .player {
