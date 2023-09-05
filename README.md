@@ -17,8 +17,6 @@ Stone soup
 
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- // TODO auto-deploy .env.prod in vercel
-
 - test other methods in SpotifyApi
 - Spotify.Player#getCurrentState... => for what ?
 - fix(spotify-connect): only a single instance in devices...
@@ -40,6 +38,7 @@ Stone soup
 
 ✅✅✅ ------------- ✅✅✅
 
+- FIXME bug : no sound in `svelte.iph.safari`
 - feat(player): what is default queue ?
 - feat(login) => resolve multiple-cloned-device ?
 
