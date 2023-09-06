@@ -1,4 +1,4 @@
-import { expect, test } from 'vitest';
+import { expect, test, vi } from 'vitest';
 import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
 
 import SpotifyApi from '@/js/SpotifyApi';
@@ -16,6 +16,26 @@ import PLAYER_STATE_JSON from './data/player-state.json';
 import PLAYER_STATE_API_JSON from './api/player-state-api.json';
 
 initSpotifyApi();
+
+test(`authorize() redirect to a generated a sportify-authorization-url"`, async () => {
+  SpotifyApi.authorize();
+  expect(window.location.href).toEqual(
+    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
+  );
+});
+
+test(`forceSpotifyAuthorization() to clear localStorage & redirect"`, async () => {
+  const clearSpy = vi.spyOn(Storage.prototype, 'clear');
+  await SpotifyApi.forceSpotifyAuthorization();
+
+  // test localStorage.clear
+  expect(clearSpy).toHaveBeenCalledOnce();
+
+  // test redirect to "/"
+  const match = window.location.href.match(/(https?):\/\/(www\.)?([^/]+)(\/.*)/);
+  const path = match[4];
+  expect(path).toEqual('/');
+});
 
 test(`/me returns SpotifyUser`, async () => {
   const actual = await SpotifyApi.me();
