@@ -57,7 +57,8 @@ class SpotifyApi {
     window.location.href = '/';
   }
 
-  async getToken() {
+  /** @returns  */
+  async initToken() {
     const authorizationCode = new URL(window.location.href).searchParams.get('code');
 
     const data = new URLSearchParams({
@@ -74,14 +75,19 @@ class SpotifyApi {
     };
 
     try {
-      const resp = await AXIOS_INSTANCE.post('https://accounts.spotify.com/api/token', data, {
+      const resp = await AXIOS_INSTANCE({
+        method: 'POST',
+        url: 'https://accounts.spotify.com/api/token',
         headers,
+        data,
       });
 
       accessToken.set(resp?.data.access_token);
       window.history.pushState({}, 'token ok', '/');
 
       LOGGER.log('token ✅');
+
+      return resp?.data.access_token;
     } catch (err) {
       LOGGER.error('', err.toJSON());
     }

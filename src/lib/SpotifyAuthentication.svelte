@@ -27,6 +27,6 @@
   // 2/ get token
   $: if (!$accessToken && codeParam) {
     LOGGER.log('get token...');
-    SpotifyApi.getToken();
+    SpotifyApi.initToken();
   }
 </script>

@@ -1,5 +1,7 @@
 import { expect, test, vi } from 'vitest';
+import { get } from 'svelte/store';
 import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
+import { accessToken } from '@/js/store';
 
 import SpotifyApi from '@/js/SpotifyApi';
 
@@ -35,6 +37,21 @@ test(`forceSpotifyAuthorization() to clear localStorage & redirect"`, async () =
   const match = window.location.href.match(/(https?):\/\/(www\.)?([^/]+)(\/.*)/);
   const path = match[4];
   expect(path).toEqual('/');
+});
+
+test(`initToken set access_token in store and change url to "/"`, async () => {
+  const pushStateSpy = vi.spyOn(window.history, 'pushState');
+
+  window.location.href = '/spotify-tokens/?code=AQBxGP9Zt32';
+  await SpotifyApi.initToken();
+
+  // test store value access_token
+  expect(get(accessToken)).toEqual(
+    'BQD2Wg2mWl1EiTEG9kwkwK1jZgJU-Ytd2cyXpRjm3CS4Je71lEAZfxCF2zkWjdAXFricABDPbB2Ap_dtA-A_CVz5JW-pV9MQerAejAhpkjDCYK0fDEDDnHUag34D7TVeCTXLcP29caaXD90lXSOO0-IR5zylPfAMbObDK9gmYc1E0056SHe-pqmIubWPs_lFdctbjGA4wYhYErMjheW56hZ55jwFddzs1bnsUw',
+  );
+
+  // test change url
+  expect(pushStateSpy).toHaveBeenLastCalledWith({}, 'token ok', '/');
 });
 
 test(`/me returns SpotifyUser`, async () => {
