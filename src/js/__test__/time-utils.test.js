@@ -34,6 +34,20 @@ test(`progress 103578ms for duration 203094ms is equal to 51.000029542970246%`, 
   expect(progressPercent(progressMs, durationMs)).toEqual(51.000029542970246);
 });
 
+test(`progressPercent(): if wrong progressMs or durationMs provided, returns 0`, async () => {
+  const progressMs = 103578;
+  const durationMs = 203094;
+  // @ts-ignore
+  expect(progressPercent('abc', durationMs)).toEqual(0);
+  // @ts-ignore
+  expect(progressPercent(progressMs, 'abc')).toEqual(0);
+});
+
+test(`progressPercent(): if durationMs equals 0, returns 0`, async () => {
+  const progressMs = 103578;
+  expect(progressPercent(progressMs, 0)).toEqual(0);
+});
+
 test(`50% of 3:00 returns 90000ms`, async () => {
   expect(percentToMillis(50, 180000)).toBe(90000);
 });

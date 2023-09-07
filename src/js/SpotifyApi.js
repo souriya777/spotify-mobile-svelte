@@ -20,7 +20,7 @@ import {
   apiTimestamp,
   devices,
   deviceId,
-  progressMsTick,
+  realTimeProgressMs,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -104,11 +104,13 @@ class SpotifyApi {
 
   /** @param {null | import('@/js/spotify').SpotifyPlayerState} playerState */
   async synchronize(playerState = null) {
-    if (playerState && !this.#isPlayerNotificationValid(playerState?.timestamp)) {
-      // uncomment to debug
-      // LOGGER.log('🟡 ---> spotify notification is TOO CLOSE...', playerState);
-      return;
-    }
+    // FIXME seems that synchronization is disrupted if we accept
+    // an unique notification in perdiod of time
+    // if (playerState && !this.#isPlayerNotificationValid(playerState?.timestamp)) {
+    //   // uncomment to debug
+    //   LOGGER.log('🟡 ---> spotify notification is TOO CLOSE...', playerState);
+    //   return;
+    // }
 
     // SYNC PLAYBACK & TRACK
     let playbackState = null;
@@ -119,8 +121,6 @@ class SpotifyApi {
 
       playbackState = SpotifyPlaybackStateAdapter.adapt(spotifyPlayerState);
       track = SpotifyTrackAdapter.adapt(spotifyPlayerState);
-
-      LOGGER.log('---> notification', playerState);
     } else {
       try {
         playbackState = await this.getPlaybackState();
@@ -136,15 +136,20 @@ class SpotifyApi {
     this.#writeStorePlaybackInfos(playbackState);
     this.#writeStoreTrackInfos(track);
 
-    // SYNC DEVICES
-    setTimeout(() => {
+    if (playerState && this.#isPlayerNotificationValid(playerState?.timestamp)) {
+      // logged here to be not polluated
+      LOGGER.log('---> notification', playerState);
+
+      // SYNC DEVICES
       /* 
-        Hack with a timeout, because when we've just 
-        auto-transfert the playback (eg. after a 204), our devices is not instantanely active.
-        I do this hack, because it's simpler
-      */
-      this.getAvailableDevice().then((availableDevices) => devices.set(availableDevices));
-    }, 3000);
+      Hack with a timeout, because when we've just 
+      auto-transfert the playback (eg. after a 204), our devices is not instantanely active.
+      I do this hack, because it's simpler
+    */
+      setTimeout(() => {
+        this.getAvailableDevice().then((availableDevices) => devices.set(availableDevices));
+      }, 3000);
+    }
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyPlaybackState>} */
@@ -175,7 +180,7 @@ class SpotifyApi {
       return;
     }
 
-    console.log('🔴', get(progressMsTick));
+    console.log('🔴', get(realTimeProgressMs));
     get(player).resume();
 
     // await this.#put(
@@ -192,7 +197,7 @@ class SpotifyApi {
   }
 
   async pause(deviceId) {
-    console.log('🔴', get(progressMsTick), deviceId);
+    console.log('🔴', get(realTimeProgressMs), deviceId);
     get(player).pause();
     // await this.#put(`/me/player/pause?device_id=${deviceId}`);
     playing.set(false);

@@ -15,7 +15,11 @@ function millisToMinuteSecond(timeInMillis) {
  * @returns {number}
  */
 function progressPercent(progressMs, durationMs) {
-  return (progressMs / durationMs ?? 0) * 100;
+  if (isNaN(progressMs) || isNaN(durationMs) || durationMs === 0) {
+    return 0;
+  }
+
+  return (progressMs / durationMs) * 100;
 }
 
 /**

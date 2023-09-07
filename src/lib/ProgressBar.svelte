@@ -1,10 +1,9 @@
 <script>
   import SpotifyApi from '@/js/SpotifyApi';
-  import { percentToMillis } from '@/js/time-utils';
-  import { progressMs, progressMsTick, playing, durationMs, progress_percent } from '@/js/store';
+  import { percentToMillis, progressPercent } from '@/js/time-utils';
+  import { progressMs, realTimeProgressMs, playing, durationMs } from '@/js/store';
 
-  $: safeProgressPercent =
-    !Number.isFinite($progress_percent) || isNaN($progress_percent) ? 0 : $progress_percent;
+  $: percent = progressPercent($realTimeProgressMs, $durationMs);
 
   let positionPercent = 15;
   function seekPosition() {
@@ -13,12 +12,14 @@
   }
 </script>
 
-<progress max="100" value={safeProgressPercent} />
-{safeProgressPercent}
+<progress max="100" value={percent} />
+{percent}
 <div>
-  🟢progressMs:{$progressMs}
-  🔴progress:{$progressMsTick}
-  playing:{$playing}
+  <ul>
+    <li>playing:{$playing}</li>
+    <li>🔴progressMs:{$progressMs}</li>
+    <li>🟢real-progress:{$realTimeProgressMs}</li>
+  </ul>
 </div>
 
 <button on:click={seekPosition}>seek-position {positionPercent}%</button>

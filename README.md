@@ -21,7 +21,6 @@ Stone soup
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
 - add previous offset
-- real progress
 - fix(player): multiple play/pause offset
 - feat(player): autoplay when click on next/previous
 - resolve bug when batch play/pause button
