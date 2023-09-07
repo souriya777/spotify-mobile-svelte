@@ -21,12 +21,12 @@
   $: if (!$accessToken && !$authorizationOk) {
     LOGGER.log('authorize...');
     authorizationOk.set(true);
-    SpotifyApi.authorize();
+    SpotifyApi.goToAuthorizeUrl();
   }
 
   // 2/ get token
   $: if (!$accessToken && codeParam) {
     LOGGER.log('get token...');
-    SpotifyApi.initToken();
+    SpotifyApi.initAccessToken();
   }
 </script>

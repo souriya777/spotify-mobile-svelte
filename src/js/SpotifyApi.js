@@ -20,6 +20,7 @@ import {
   apiTimestamp,
   devices,
   deviceId,
+  progressMsTick,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -40,11 +41,9 @@ import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActive
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
-  PLAYER_NAME = `${import.meta.env.VITE_SPOTIFY_DEVICE_NAME}.${BROWSER_DEVICE}`;
-  DEFAULT_VOLUME = 0.2;
-  TIMESTAMP_MIN_GAP_MS = Number(`${import.meta.env.VITE_SPOTIFY_TIMESTAMP_MIN_GAP_MS}`);
+  PLAYER_NAME = `${import.meta.env.VITE_PLAYER_NAME_PREFIX}${BROWSER_DEVICE}`;
 
-  async authorize() {
+  goToAuthorizeUrl() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
       this.#CLIENT_ID
     }&scope=${encodeURIComponent(this.#SCOPES)}&redirect_uri=${encodeURIComponent(
@@ -52,13 +51,12 @@ class SpotifyApi {
     )}`;
   }
 
-  forceSpotifyAuthorization() {
+  forceAuthorization() {
     localStorage.clear();
     window.location.href = '/';
   }
 
-  /** @returns  */
-  async initToken() {
+  async initAccessToken() {
     const authorizationCode = new URL(window.location.href).searchParams.get('code');
 
     const data = new URLSearchParams({
@@ -86,8 +84,6 @@ class SpotifyApi {
       window.history.pushState({}, 'token ok', '/');
 
       LOGGER.log('token ✅');
-
-      return resp?.data.access_token;
     } catch (err) {
       LOGGER.error('', err.toJSON());
     }
@@ -108,26 +104,27 @@ class SpotifyApi {
 
   /** @param {null | import('@/js/spotify').SpotifyPlayerState} playerState */
   async synchronize(playerState = null) {
-    // SYNC PLAYBACK & TRACK
-    let playbackState = null;
-    let track = null;
-
-    if (playerState && !this.#isSpotifyNotificationValid(playerState?.timestamp)) {
+    if (playerState && !this.#isPlayerNotificationValid(playerState?.timestamp)) {
       // uncomment to debug
       // LOGGER.log('🟡 ---> spotify notification is TOO CLOSE...', playerState);
       return;
     }
 
+    // SYNC PLAYBACK & TRACK
+    let playbackState = null;
+    let track = null;
+
     if (playerState) {
-      LOGGER.log('---> notification', playerState);
-      const spotifyPlayerState = this.getPlayerState(playerState);
+      const spotifyPlayerState = this.extractPlayerStateFrom(playerState);
 
       playbackState = SpotifyPlaybackStateAdapter.adapt(spotifyPlayerState);
       track = SpotifyTrackAdapter.adapt(spotifyPlayerState);
+
+      LOGGER.log('---> notification', playerState);
     } else {
       try {
         playbackState = await this.getPlaybackState();
-        track = playbackState?.item ? playbackState?.item : await this.#determineLastSong();
+        track = playbackState?.item ? playbackState.item : await this.#determineLastSong();
       } catch (err) {
         if (err instanceof PlaybackNotAvailableOrActiveError) {
           LOGGER.log('wait for "notification" from spotify :)');
@@ -150,9 +147,7 @@ class SpotifyApi {
     }, 3000);
   }
 
-  /**
-   * @returns {Promise<import('@/js/spotify').SpotifyPlaybackState>}
-   */
+  /** @returns {Promise<import('@/js/spotify').SpotifyPlaybackState>} */
   async getPlaybackState() {
     const data = await this.#get('/me/player');
     return new SpotifyPlaybackState(data);
@@ -171,9 +166,6 @@ class SpotifyApi {
   async getAvailableDevice() {
     const data = await this.#get('/me/player/devices');
     const deviceList = new SpotifyDeviceList(data);
-    if (deviceList?.devices) {
-      devices.set(deviceList?.devices);
-    }
     return deviceList?.devices;
   }
 
@@ -183,13 +175,16 @@ class SpotifyApi {
       return;
     }
 
-    await this.#put(
-      `/me/player/play?device_id=${deviceId}`,
-      JSON.stringify({
-        uris: [uri],
-        position_ms: positionMs,
-      }),
-    );
+    console.log('🔴', get(progressMsTick));
+    get(player).resume();
+
+    // await this.#put(
+    //   `/me/player/play?device_id=${deviceId}`,
+    //   JSON.stringify({
+    //     uris: [uri],
+    //     position_ms: positionMs,
+    //   }),
+    // );
 
     playing.set(true);
 
@@ -197,19 +192,23 @@ class SpotifyApi {
   }
 
   async pause(deviceId) {
-    await this.#put(`/me/player/pause?device_id=${deviceId}`);
+    console.log('🔴', get(progressMsTick), deviceId);
+    get(player).pause();
+    // await this.#put(`/me/player/pause?device_id=${deviceId}`);
     playing.set(false);
   }
 
   async previous() {
     await this.#post(`/me/player/previous`);
+    get(player).resume();
     // TODO play
+    // get(player).previousTrack();
   }
 
   async next() {
-    // TODO extract track_window next_tracks
     // TODO play with uri & position ?
-    // await this.#post(`/me/player/next`);
+    await this.#post(`/me/player/next`);
+    get(player).resume();
   }
 
   /** @param {number} positionMs */
@@ -220,12 +219,14 @@ class SpotifyApi {
     });
   }
 
+  // FIXME
   async shuffle() {
     await this.#put(`/me/player/shuffle?state=${!get(shuffleState)}`);
 
     shuffleState.update((n) => !n);
   }
 
+  // FIXME
   async repeat() {
     const currentRepeatState = get(repeatState);
 
@@ -250,20 +251,10 @@ class SpotifyApi {
     return new SpotifyPlaylistCursor(data)?.items;
   }
 
-  /**
-   * @returns {Promise<import('@/js/spotify').SpotifySong[]>}
-   */
+  /** @returns {Promise<import('@/js/spotify').SpotifySong[]>} */
   async getRecentlyPlayedSongs() {
     const data = await this.#get(`/me/player/recently-played`);
     return new SpotifySongsCursor(data)?.items;
-  }
-
-  /**
-   * @returns {Promise<import('@/js/spotify').SpotifySong>}
-   */
-  async determineLastSong() {
-    const songs = await this.getRecentlyPlayedSongs();
-    return songs?.[0];
   }
 
   /**
@@ -300,17 +291,18 @@ class SpotifyApi {
   }
 
   /**
-   * @param {import('@/js/spotify').SpotifyPlayerState} playerState
+   * @param {import('@/js/spotify').SpotifyPlayerState} playerStateApi
    * @returns {import('@/js/spotify').SpotifyPlayerState}
    */
-  getPlayerState(playerState) {
-    return new SpotifyPlayerState(playerState);
+  extractPlayerStateFrom(playerStateApi) {
+    return new SpotifyPlayerState(playerStateApi);
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
   #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
+  #API_NOTIFICATION_DELAY_MS = Number(`${import.meta.env.VITE_API_NOTIFICATION_DELAY_MS}`);
 
   async #determineLastSong() {
     let track = null;
@@ -326,8 +318,8 @@ class SpotifyApi {
       if (err instanceof QueueEmptyError) {
         LOGGER.error(err.message);
         // ... otherwise take it from recently-played
-        const song = await this.determineLastSong();
-        track = song?.track;
+        const songs = await this.getRecentlyPlayedSongs();
+        track = songs?.[0]?.track;
       }
     }
 
@@ -338,13 +330,13 @@ class SpotifyApi {
    * @param {number} timestamp
    * @returns {boolean}
    */
-  #isSpotifyNotificationValid(timestamp) {
+  #isPlayerNotificationValid(timestamp) {
     const existingTimestamp = get(apiTimestamp);
 
     // update timestamp
     apiTimestamp.set(timestamp);
 
-    return areTimestampsSeparateBy(existingTimestamp, timestamp, this.TIMESTAMP_MIN_GAP_MS);
+    return areTimestampsSeparateBy(existingTimestamp, timestamp, this.#API_NOTIFICATION_DELAY_MS);
   }
 
   /** @param {import('@/js/spotify').SpotifyPlaybackState} playbackState */
@@ -403,12 +395,12 @@ class SpotifyApi {
 
         if (SpotifyStatus.UNAUTHORIZED === status) {
           LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
-          this.forceSpotifyAuthorization();
+          this.forceAuthorization();
         } else if (SpotifyStatus.BAD_REQUEST === status) {
           LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
 
           // FIXME is it mandatory here ?
-          // this.forceSpotifyAuthorization();
+          // this.forceAuthorization();
         }
 
         throw err;

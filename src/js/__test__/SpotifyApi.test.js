@@ -1,8 +1,8 @@
 import { expect, test, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
-import { accessToken } from '@/js/store';
 
+import { accessToken, playing } from '@/js/store';
 import SpotifyApi from '@/js/SpotifyApi';
 
 import CURRENT_USER_JSON from './data/current-user.json';
@@ -14,21 +14,20 @@ import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
 import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
 import PLAYER_STATE_JSON from './data/player-state.json';
-
 import PLAYER_STATE_API_JSON from './api/player-state-api.json';
 
 initSpotifyApi();
 
-test(`authorize() redirect to a generated a sportify-authorization-url"`, async () => {
-  SpotifyApi.authorize();
+test(`goToAuthorizeUrl() redirect to a generated a sportify-authorization-url"`, async () => {
+  SpotifyApi.goToAuthorizeUrl();
   expect(window.location.href).toEqual(
     'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
   );
 });
 
-test(`forceSpotifyAuthorization() to clear localStorage & redirect"`, async () => {
+test(`forceAuthorization() to clear localStorage & redirect"`, async () => {
   const clearSpy = vi.spyOn(Storage.prototype, 'clear');
-  await SpotifyApi.forceSpotifyAuthorization();
+  await SpotifyApi.forceAuthorization();
 
   // test localStorage.clear
   expect(clearSpy).toHaveBeenCalledOnce();
@@ -39,11 +38,11 @@ test(`forceSpotifyAuthorization() to clear localStorage & redirect"`, async () =
   expect(path).toEqual('/');
 });
 
-test(`initToken set access_token in store and change url to "/"`, async () => {
+test(`initAccessToken set access_token in store and change url to "/"`, async () => {
   const pushStateSpy = vi.spyOn(window.history, 'pushState');
 
   window.location.href = '/spotify-tokens/?code=AQBxGP9Zt32';
-  await SpotifyApi.initToken();
+  await SpotifyApi.initAccessToken();
 
   // test store value access_token
   expect(get(accessToken)).toEqual(
@@ -98,14 +97,23 @@ test(`getQueueLastSong() returns SpotifyTrack`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`determineLastSong returns SpotifySong`, async () => {
-  const actual = await SpotifyApi.determineLastSong();
+test(`get last recently-played-songs returns SpotifySong`, async () => {
+  const songs = await SpotifyApi.getRecentlyPlayedSongs();
+  const actual = songs[0];
   const expected = { ...LAST_SONG_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`getPlayerState(state) returns SpotifyPlayerState`, async () => {
-  const actual = await SpotifyApi.getPlayerState({ ...PLAYER_STATE_API_JSON });
+test(`extractPlayerStateFrom(playerStateApi) returns SpotifyPlayerState`, async () => {
+  const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });
   const expected = { ...PLAYER_STATE_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`transfertPlayback() set playing true`, async () => {
+  playing.set(false);
+
+  await SpotifyApi.transfertPlayback('my-device-id-123');
+
+  expect(get(playing)).toBeTruthy();
 });

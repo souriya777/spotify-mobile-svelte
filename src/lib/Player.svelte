@@ -25,7 +25,7 @@
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
 
   onMount(() => {
-    const frequency = import.meta.env.VITE_SPOTIFY_SYNC_FREQUENCY_MS;
+    const frequency = import.meta.env.VITE_API_SYNC_FREQUENCY_MS;
 
     const intervalRefresh = setInterval(() => {
       // FIXME tune it
@@ -48,7 +48,7 @@
   <img src={$imageUrl} alt={$albumName} />
   <div class="title">{$trackName}{$trackUri}</div>
   <div class="artist">{$artistsDisplay}</div>
-  <button>+✅</button>
+  <button>+❤️</button>
   <div class="progress">
     <div>
       <ProgressBar />

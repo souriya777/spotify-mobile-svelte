@@ -8,6 +8,8 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 
 KISS
 DRY
+ACID
+ETC (Easier To Change) : decoupling, single responsability principle
 No broken windows
 Stone soup
 
@@ -15,11 +17,12 @@ Stone soup
 
 ## mvp
 
+✅✅✅ GOAL : PLAYER/PROGRESS CLEAN ! ✅✅✅
 ✅✅✅ GOAL : MOST API CALLS ✅✅✅
 
-- test other methods in SpotifyApi
-- Spotify.Player#getCurrentState... => for what ?
-- fix(spotify-connect): only a single instance in devices...
+- add previous offset
+- real progress
+- fix(player): multiple play/pause offset
 - feat(player): autoplay when click on next/previous
 - resolve bug when batch play/pause button
 
@@ -37,6 +40,8 @@ Stone soup
   ---- few actions ARE NOT possible when not transfert-playback
 
 ✅✅✅ ------------- ✅✅✅
+
+// TODO extract track_window next_tracks
 
 - FIXME bug : no sound in `svelte.iph.safari`
 - feat(player): what is default queue ?
@@ -75,6 +80,8 @@ Stone soup
 
 ## demo
 
+- test `synchronize`... hard...
+- TODO test ?
 - TODO feat(store): refactor store in multiple files
 - ERRORS feat(spotify-api): implement quota-limit with code `429`
 - TODO/FIXME uncomment
@@ -87,6 +94,7 @@ Stone soup
 
 ## bonus
 
+- fix(spotify-connect): only a single instance in devices...
 - TODO do I use refresh_token ?
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist

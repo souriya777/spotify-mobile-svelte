@@ -17,7 +17,7 @@ function createPlayer(accessToken) {
       getOAuthToken: (cb) => {
         cb(accessToken);
       },
-      volume: SpotifyApi.DEFAULT_VOLUME,
+      volume: Number(import.meta.env.VITE_PLAYER_VOLUME),
     });
 
     SPOTIFY_PLAYER.addListener('ready', ({ device_id }) => {
@@ -41,7 +41,7 @@ function createPlayer(accessToken) {
 
     SPOTIFY_PLAYER.on('authentication_error', ({ message }) => {
       LOGGER.error('Failed to authenticate:', message);
-      SpotifyApi.forceSpotifyAuthorization();
+      SpotifyApi.forceAuthorization();
     });
 
     SPOTIFY_PLAYER.on('account_error', ({ message }) => {
