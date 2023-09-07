@@ -20,7 +20,7 @@ import {
   apiTimestamp,
   devices,
   deviceId,
-  realTimeProgressMs,
+  volumePercent,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -136,7 +136,7 @@ class SpotifyApi {
     this.#writeStorePlaybackInfos(playbackState);
     this.#writeStoreTrackInfos(track);
 
-    if (playerState && this.#isPlayerNotificationValid(playerState?.timestamp)) {
+    if (this.#isPlayerNotificationValid(playerState?.timestamp)) {
       // logged here to be not polluated
       LOGGER.log('---> notification', playerState);
 
@@ -164,7 +164,6 @@ class SpotifyApi {
       device_ids: [deviceId],
       play: true,
     });
-    playing.set(true);
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyDevice[]>} */
@@ -174,65 +173,40 @@ class SpotifyApi {
     return deviceList?.devices;
   }
 
-  async play(deviceId, uri, positionMs) {
-    if (!deviceId) {
-      LOGGER.log('device_id is not yet initialize!', deviceId);
-      return;
-    }
-
-    console.log('🔴', get(realTimeProgressMs));
+  async play() {
     get(player).resume();
-
-    // await this.#put(
-    //   `/me/player/play?device_id=${deviceId}`,
-    //   JSON.stringify({
-    //     uris: [uri],
-    //     position_ms: positionMs,
-    //   }),
-    // );
-
-    playing.set(true);
-
-    LOGGER.log('play', positionMs, uri);
+    LOGGER.log('play');
   }
 
-  async pause(deviceId) {
-    console.log('🔴', get(realTimeProgressMs), deviceId);
+  pause() {
     get(player).pause();
-    // await this.#put(`/me/player/pause?device_id=${deviceId}`);
-    playing.set(false);
+    LOGGER.log('pause');
   }
 
-  async previous() {
-    await this.#post(`/me/player/previous`);
-    get(player).resume();
-    // TODO play
-    // get(player).previousTrack();
+  previous() {
+    get(player).previousTrack();
+    LOGGER.log('prev');
   }
 
-  async next() {
-    // TODO play with uri & position ?
-    await this.#post(`/me/player/next`);
-    get(player).resume();
+  next() {
+    get(player).nextTrack();
+    LOGGER.log('next');
   }
 
   /** @param {number} positionMs */
-  async seekPosition(positionMs) {
+  seekPosition(positionMs) {
     const p = get(player);
     p.seek(positionMs).then(() => {
       LOGGER.log('changed position!', positionMs, millisToMinuteSecond(positionMs));
     });
   }
 
-  // FIXME
-  async shuffle() {
-    await this.#put(`/me/player/shuffle?state=${!get(shuffleState)}`);
-
-    shuffleState.update((n) => !n);
+  shuffle() {
+    this.#put(`/me/player/shuffle?state=${!get(shuffleState)}`);
+    LOGGER.log('shuffle', `${!get(shuffleState)}`);
   }
 
-  // FIXME
-  async repeat() {
+  repeat() {
     const currentRepeatState = get(repeatState);
 
     const newRepeatState =
@@ -242,9 +216,9 @@ class SpotifyApi {
         ? SpotifyRepeatState.TRACK
         : SpotifyRepeatState.OFF;
 
-    await this.#put(`/me/player/repeat?state=${newRepeatState}`);
+    this.#put(`/me/player/repeat?state=${newRepeatState}`);
 
-    repeatState.set(newRepeatState);
+    LOGGER.log('repeat', newRepeatState);
   }
 
   /**
@@ -301,6 +275,20 @@ class SpotifyApi {
    */
   extractPlayerStateFrom(playerStateApi) {
     return new SpotifyPlayerState(playerStateApi);
+  }
+
+  async setVolume(volume) {
+    let newVolumePercent = Number(volume);
+
+    if (newVolumePercent < 0) {
+      newVolumePercent = 0;
+    } else if (newVolumePercent > 100) {
+      newVolumePercent = 100;
+    }
+
+    this.#put(`/me/player/volume?volume_percent=${newVolumePercent}`);
+
+    volumePercent.set(newVolumePercent);
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -378,7 +366,10 @@ class SpotifyApi {
         const status = response?.status;
         LOGGER.log(options?.method, endpoint, data, status);
 
-        if (SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status) {
+        if (
+          endpoint === '/me/player' &&
+          SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status
+        ) {
           LOGGER.error('Spotify returns 204 -> playback not available or active');
           this.transfertPlayback(get(deviceId));
           throw new PlaybackNotAvailableOrActiveError(

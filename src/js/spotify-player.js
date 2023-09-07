@@ -1,4 +1,4 @@
-import { deviceId, player } from '@/js/store';
+import { deviceId, player, volumePercent } from '@/js/store';
 import { appendScriptToBody } from '@/js/souriya-utils';
 import SpotifyApi from '@/js/SpotifyApi';
 import Logger from '@/js/Logger';
@@ -11,18 +11,21 @@ function createPlayer(accessToken) {
 
   // @ts-ignore
   window.onSpotifyWebPlaybackSDKReady = () => {
+    const DEFAULT_VOLUME = import.meta.env.VITE_PLAYER_VOLUME_PERCENT;
+
     // @ts-ignore
     const SPOTIFY_PLAYER = new window.Spotify.Player({
       name: SpotifyApi.PLAYER_NAME,
       getOAuthToken: (cb) => {
         cb(accessToken);
       },
-      volume: Number(import.meta.env.VITE_PLAYER_VOLUME),
+      volume: DEFAULT_VOLUME / 100,
     });
 
     SPOTIFY_PLAYER.addListener('ready', ({ device_id }) => {
       deviceId.set(device_id);
       player.set(SPOTIFY_PLAYER);
+      volumePercent.set(DEFAULT_VOLUME);
 
       LOGGER.log('device & player ready ✅', device_id, SPOTIFY_PLAYER?._options?.name);
     });

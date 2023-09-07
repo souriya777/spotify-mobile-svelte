@@ -74,5 +74,13 @@ function getData(method, url, headers, data) {
         };
       }
     }
+  } else if (method === 'PUT') {
+    console.log(endpoint, headers, data);
+    if (endpoint === '/me/player') {
+      // @ts-ignore
+      if (!data.device_ids[0] === 'my-device-id-123' || !data.play === true) {
+        throw new Error();
+      }
+    }
   }
 }

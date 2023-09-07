@@ -12,7 +12,6 @@
     <li>🪙:{$accessToken?.substr(0, 8)}</li>
     <li>📱deviceId:{$deviceId?.substr(0, 8)}</li>
     <li>📻player:{$player?._options?.name}</li>
-    <li>vol.:{$player?._options?.volume}</li>
     <li>🎵song.:{$trackName}</li>
   </ul>
 

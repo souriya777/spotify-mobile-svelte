@@ -2,7 +2,7 @@ import { expect, test, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
 
-import { accessToken, playing } from '@/js/store';
+import { accessToken } from '@/js/store';
 import SpotifyApi from '@/js/SpotifyApi';
 
 import CURRENT_USER_JSON from './data/current-user.json';
@@ -110,10 +110,10 @@ test(`extractPlayerStateFrom(playerStateApi) returns SpotifyPlayerState`, async 
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`transfertPlayback() set playing true`, async () => {
-  playing.set(false);
-
+test(`transfertPlayback() not throwing exception`, async () => {
   await SpotifyApi.transfertPlayback('my-device-id-123');
+});
 
-  expect(get(playing)).toBeTruthy();
+test(`transfertPlayback() not throwing exception`, async () => {
+  await SpotifyApi.transfertPlayback('my-device-id-123');
 });

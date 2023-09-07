@@ -16,9 +16,9 @@
   } from '@/js/store';
   import { millisToMinuteSecond } from '@/js/time-utils';
   import SpotifyApi from '@/js/SpotifyApi';
-  import { onTap } from '@/js/event-utils';
   import SpotifyRepeatState from '@/js/SpotifyRepeatState';
   import ProgressBar from '@/lib/ProgressBar.svelte';
+  import Volume from '@/lib/Volume.svelte';
 
   $: activeDevice = $devices?.find((device) => device.is_active === true);
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
@@ -41,8 +41,8 @@
   });
 </script>
 
-<div class="player" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
-  <div class="bar" use:onTap={() => console.log('FIXME playerIsFull.set(true)')}>
+<div class="player">
+  <div class="bar">
     <button>back</button>
     <p>Liked Songs</p>
   </div>
@@ -54,6 +54,7 @@
     <div>
       <ProgressBar />
     </div>
+    <div><Volume /></div>
     <div class="time">
       <div class="begin">{progress_m_ss}</div>
       <div class="end">{duration_m_ss}</div>
@@ -62,9 +63,9 @@
   <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
   <button on:click={() => SpotifyApi.previous()}>⏮️</button>
   {#if $playing}
-    <button on:click={() => SpotifyApi.pause($deviceId)}>⏸️</button>
+    <button on:click={() => SpotifyApi.pause()}>⏸️</button>
   {:else}
-    <button on:click={() => SpotifyApi.play($deviceId, $trackUri, $realTimeProgressMs)}>▶️</button>
+    <button on:click={() => SpotifyApi.play()}>▶️</button>
   {/if}
   <button on:click={() => SpotifyApi.next()}>⏭️</button>
   <button on:click={() => SpotifyApi.repeat()}

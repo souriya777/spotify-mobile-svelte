@@ -31,6 +31,7 @@ const player = writable(null);
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const playing = writable(false);
+const volumePercent = writable(0);
 const progressMs = writable(0);
 const durationMs = writable(0);
 const realTimeProgressMs = derived(
@@ -72,6 +73,7 @@ export {
   shuffleState,
   repeatState,
   playing,
+  volumePercent,
   progressMs,
   realTimeProgressMs,
   durationMs,

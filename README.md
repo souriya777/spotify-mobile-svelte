@@ -17,36 +17,42 @@ Stone soup
 
 ## mvp
 
-✅✅✅ GOAL : PLAYER/PROGRESS CLEAN ! ✅✅✅
-✅✅✅ GOAL : MOST API CALLS ✅✅✅
+- feat(player): previous click < 1s restart song at beginning
+- fix(player): no sound in `svelte.iph.safari`
 
-- add previous offset
-- fix(player): multiple play/pause offset
-- feat(player): autoplay when click on next/previous
-- resolve bug when batch play/pause button
+- LIST MOST API CALLS
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
 
-- feat(player): can set volume of device
-- feat(player): merge sync-playbackstate & sync-track ? (redundant infos)
-- feat(player): can manage other players
-  ====> just `synchronize()`
-  -- `/repeat` or `/shuffle` => we can set `device_id`
-- SYNC : what and when ?
-  -- sync playbackState
-  -- sync device
-  -- transfert state
-  ---- at the end of song
-  ---- next/prev ?
-  ---- few actions ARE NOT possible when not transfert-playback
+- feat(sync) : when ?
 
-✅✅✅ ------------- ✅✅✅
-
-// TODO extract track_window next_tracks
-
-- FIXME bug : no sound in `svelte.iph.safari`
-- feat(player): what is default queue ?
-- feat(login) => resolve multiple-cloned-device ?
-
-- reflect a "car" presentation (audible-like)
+- use use:onTap
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
@@ -64,9 +70,12 @@ Stone soup
 - feat(mylib): can select other song
 - feat(search): design
 - feat(queue): design
+  -- feat(player): what is default queue ?
+  -- extract track_window next_tracks ?
 - feat(detail): design
 
-- improve cursor concept
+- feat(spotify): can load next songs
+- feat(spotify): can load next playlists
 
 - space
 - color
@@ -79,6 +88,7 @@ Stone soup
 
 ## demo
 
+- reflect a "car" presentation (audible-like)
 - test `synchronize`... hard...
 - TODO test ?
 - TODO feat(store): refactor store in multiple files
@@ -93,6 +103,7 @@ Stone soup
 
 ## bonus
 
+- feat(player): can manage other players
 - fix(spotify-connect): only a single instance in devices...
 - TODO do I use refresh_token ?
 - 🚀 EXTRA : tag liked songs
