@@ -16,7 +16,12 @@
   </ul>
 
   <button on:click={SpotifyApi.forceAuthorization}>🗑️ FORCE</button>
-  <button on:click={() => SpotifyApi.synchronize()}>🟢🟢🟢sync</button>
+  <button
+    on:click={() => {
+      $player.activateElement();
+      SpotifyApi.synchronize();
+    }}>🟢🟢🟢sync</button
+  >
   <button on:click={() => SpotifyApi.getPlaybackState()}>🟢playback-state</button>
   <button on:click={() => SpotifyApi.getAvailableDevice()}>🟢devices</button>
   <button on:click={() => SpotifyApi.transfertPlayback($deviceId)}> transfert-playback </button>

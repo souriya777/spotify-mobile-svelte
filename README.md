@@ -17,8 +17,6 @@ Stone soup
 
 ## mvp
 
-- fix(player): no sound in `svelte.iph.safari`
-
 - LIST MOST API CALLS
 - feat(spotify): select playlist
 - feat(spotify):
@@ -87,6 +85,7 @@ Stone soup
 
 ## demo
 
+- move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - reflect a "car" presentation (audible-like)
 - test `synchronize`... hard...
 - TODO test ?
