@@ -21,6 +21,7 @@ import {
   devices,
   deviceId,
   volumePercent,
+  realTimeProgressMs,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
@@ -35,13 +36,15 @@ import SpotifyDeviceList from '@/js/SpotifyDeviceList';
 import SpotifyPlayerState from '@/js/SpotifyPlayerState';
 import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
-import { areTimestampsSeparateBy, millisToMinuteSecond } from '@/js/time-utils';
+import { areTimestampsSeparateBy } from '@/js/time-utils';
 import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
 class SpotifyApi {
   PLAYER_NAME = `${import.meta.env.VITE_PLAYER_NAME_PREFIX}${BROWSER_DEVICE}`;
+  TRANSFERT_PLAYBACK_TIMEOUT_MS = Number(`${import.meta.env.VITE_TRANSFERT_PLAYBACK_TIMEOUT_MS}`);
+  PREVIOUS_SONG_DELAY_MS = Number(`${import.meta.env.VITE_PREVIOUS_SONG_DELAY_MS}`);
 
   goToAuthorizeUrl() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
@@ -112,6 +115,24 @@ class SpotifyApi {
     //   return;
     // }
 
+    if (this.#isPlayerNotificationValid(playerState?.timestamp)) {
+      // logged here to be not polluated
+      LOGGER.log('---> notification', playerState);
+
+      // SYNC DEVICES
+      /* 
+      Hack with a timeout, because when we've just 
+      auto-transfert the playback (eg. after a 204), our devices is not instantanely active.
+      I do this hack, because it's simpler
+    */
+      setTimeout(() => {
+        this.getAvailableDevice().then((availableDevices) => devices.set(availableDevices));
+      }, this.TRANSFERT_PLAYBACK_TIMEOUT_MS);
+    }
+
+    // TIMESTAMP
+    apiTimestamp.set(playerState?.timestamp);
+
     // SYNC PLAYBACK & TRACK
     let playbackState = null;
     let track = null;
@@ -135,21 +156,6 @@ class SpotifyApi {
 
     this.#writeStorePlaybackInfos(playbackState);
     this.#writeStoreTrackInfos(track);
-
-    if (this.#isPlayerNotificationValid(playerState?.timestamp)) {
-      // logged here to be not polluated
-      LOGGER.log('---> notification', playerState);
-
-      // SYNC DEVICES
-      /* 
-      Hack with a timeout, because when we've just 
-      auto-transfert the playback (eg. after a 204), our devices is not instantanely active.
-      I do this hack, because it's simpler
-    */
-      setTimeout(() => {
-        this.getAvailableDevice().then((availableDevices) => devices.set(availableDevices));
-      }, 3000);
-    }
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyPlaybackState>} */
@@ -184,8 +190,13 @@ class SpotifyApi {
   }
 
   previous() {
-    get(player).previousTrack();
-    LOGGER.log('prev');
+    if (get(realTimeProgressMs) < this.PREVIOUS_SONG_DELAY_MS) {
+      get(player).previousTrack();
+      LOGGER.log('prev');
+    } else {
+      this.seekPosition(0);
+      LOGGER.log('prev -> restart to 0');
+    }
   }
 
   next() {
@@ -195,10 +206,8 @@ class SpotifyApi {
 
   /** @param {number} positionMs */
   seekPosition(positionMs) {
-    const p = get(player);
-    p.seek(positionMs).then(() => {
-      LOGGER.log('changed position!', positionMs, millisToMinuteSecond(positionMs));
-    });
+    const position = Math.trunc(positionMs);
+    this.#put(`/me/player/seek?position_ms=${position}`);
   }
 
   shuffle() {
@@ -325,10 +334,6 @@ class SpotifyApi {
    */
   #isPlayerNotificationValid(timestamp) {
     const existingTimestamp = get(apiTimestamp);
-
-    // update timestamp
-    apiTimestamp.set(timestamp);
-
     return areTimestampsSeparateBy(existingTimestamp, timestamp, this.#API_NOTIFICATION_DELAY_MS);
   }
 

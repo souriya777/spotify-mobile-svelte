@@ -26,6 +26,13 @@ const deviceId = writableLocalStorage('deviceId', '');
 /** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyDevice[]>} */
 const devices = writable([]);
 
+// MISCELLANEOUS
+const apiTimestamp = writable(null);
+const appReady = derived(
+  [authorizationOk, accessToken, deviceId],
+  ([$authorizationOk, $accessToken, $deviceId]) => $authorizationOk && $accessToken && $deviceId,
+);
+
 // PLAYER
 const player = writable(null);
 const shuffleState = writable(false);
@@ -35,8 +42,13 @@ const volumePercent = writable(0);
 const progressMs = writable(0);
 const durationMs = writable(0);
 const realTimeProgressMs = derived(
-  [progressMs, playing],
-  ([$progressMs, $playing], set, update) => {
+  /* 
+  apiTimestamp is to force update => because progressMs.set(0)
+  does not trigger derived value recalculation
+  */
+  [progressMs, playing, apiTimestamp],
+  // eslint-disable-next-line no-unused-vars
+  ([$progressMs, $playing, $apiTimestamp], set, update) => {
     set($progressMs);
     const interval = setInterval(() => {
       if ($playing) {
@@ -48,13 +60,6 @@ const realTimeProgressMs = derived(
       clearInterval(interval);
     };
   },
-);
-
-// MISCELLANEOUS
-const apiTimestamp = writable(null);
-const appReady = derived(
-  [authorizationOk, accessToken, deviceId],
-  ([$authorizationOk, $accessToken, $deviceId]) => $authorizationOk && $accessToken && $deviceId,
 );
 
 export {

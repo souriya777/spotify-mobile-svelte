@@ -1,9 +1,9 @@
 <script>
   import SpotifyApi from '@/js/SpotifyApi';
-  import { percentToMillis, progressPercent } from '@/js/time-utils';
+  import { percentToMillis, progressPercentInteger } from '@/js/time-utils';
   import { progressMs, realTimeProgressMs, playing, durationMs } from '@/js/store';
 
-  $: percent = progressPercent($realTimeProgressMs, $durationMs);
+  $: percent = progressPercentInteger($realTimeProgressMs, $durationMs);
 
   let positionPercent = 15;
   function seekPosition() {

@@ -14,12 +14,12 @@ function millisToMinuteSecond(timeInMillis) {
  * @param {number} durationMs
  * @returns {number}
  */
-function progressPercent(progressMs, durationMs) {
+function progressPercentInteger(progressMs, durationMs) {
   if (isNaN(progressMs) || isNaN(durationMs) || durationMs === 0) {
     return 0;
   }
 
-  return (progressMs / durationMs) * 100;
+  return Math.trunc((progressMs / durationMs) * 100);
 }
 
 /**
@@ -35,4 +35,4 @@ function areTimestampsSeparateBy(initialTimestamp, currentTimestamp, minGapMilli
   return !initialTimestamp || currentTimestamp - initialTimestamp >= minGapMillis;
 }
 
-export { millisToMinuteSecond, progressPercent, percentToMillis, areTimestampsSeparateBy };
+export { millisToMinuteSecond, progressPercentInteger, percentToMillis, areTimestampsSeparateBy };

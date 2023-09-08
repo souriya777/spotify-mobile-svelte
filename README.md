@@ -17,11 +17,10 @@ Stone soup
 
 ## mvp
 
-- feat(player): previous click < 1s restart song at beginning
 - fix(player): no sound in `svelte.iph.safari`
 
 - LIST MOST API CALLS
-- feat(spotify):
+- feat(spotify): select playlist
 - feat(spotify):
 - feat(spotify):
 - feat(spotify):
