@@ -11,6 +11,88 @@ export type SpotifyTrack = {
   artists: SpotifyArtist[];
 };
 
+export type SpotifyAlbum = {
+  uri: string;
+  name: string;
+  images: SpotifyImage[];
+};
+
+export type SpotifyArtist = {
+  name: string;
+  uri: string;
+};
+
+export type SpotifyPlaylist = {
+  uri: string;
+  name: string;
+  owner: SpotifyUser;
+  images: SpotifyImage[];
+};
+
+export type SpotifyQueue = {
+  currently_playing: SpotifyTrack;
+  queue: SpotifyTrack[];
+  isEmpty: () => boolean;
+};
+
+export type SpotifyImage = {
+  url: string;
+  height: number;
+  width: number;
+};
+
+export type SpotifySongsCursor = {
+  next: string;
+  items: SpotifySong[];
+};
+
+export type SpotifyAlbumCursor = {
+  href: string;
+  limit: number;
+  offset: number;
+  total: number;
+  next: string;
+  previous: string;
+  items: SpotifyAlbumItemCursor[];
+};
+
+export type SpotifyAlbumItemCursor = {
+  album: SpotifyAlbum;
+};
+
+export type SpotifyPlaylistCursor = {
+  href: string;
+  limit: number;
+  offset: number;
+  total: number;
+  next: string;
+  previous: string;
+  items: SpotifyPlaylist[];
+};
+
+export type SpotifyDevice = {
+  id: string;
+  is_active: boolean;
+  name: string;
+  type: 'Computer' | 'Smartphone';
+  volume_percent: number;
+};
+
+export type SpotifyDeviceList = {
+  devices: SpotifyDevice[];
+};
+
+export type SpotifyUser = {
+  id: string;
+  display_name: string;
+  images: SpotifyImage[];
+};
+
+export type SpotifyContext = {
+  type: string;
+  uri: string;
+};
+
 export type SpotifyPlaybackState = {
   is_playing: boolean;
   shuffle_state: boolean;
@@ -47,72 +129,4 @@ export type SpotifyPlayerMetadataItem = {
   estimated_duration: number;
   artists: SpotifyArtist[];
   images: SpotifyImage[];
-};
-
-export type SpotifyDeviceList = {
-  devices: SpotifyDevice[];
-};
-
-export type SpotifyDevice = {
-  id: string;
-  is_active: boolean;
-  name: string;
-  type: 'Computer' | 'Smartphone';
-  volume_percent: number;
-};
-
-export type SpotifyContext = {
-  type: string;
-  uri: string;
-};
-
-export type SpotifyPlaylist = {
-  uri: string;
-  name: string;
-  owner: SpotifyUser;
-  images: SpotifyImage[];
-};
-
-export type SpotifyQueue = {
-  currently_playing: SpotifyTrack;
-  queue: SpotifyTrack[];
-  isEmpty: () => boolean;
-};
-
-export type SpotifySongsCursor = {
-  items: SpotifySong[];
-  next: string;
-};
-
-export type SpotifyPlaylistCursor = {
-  href: string;
-  limit: number;
-  offset: number;
-  total: number;
-  next: string;
-  previous: string;
-  items: SpotifyPlaylist[];
-};
-
-export type SpotifyUser = {
-  id: string;
-  display_name: string;
-  images: SpotifyImage[];
-};
-
-export type SpotifyImage = {
-  url: string;
-  height: number;
-  width: number;
-};
-
-export type SpotifyAlbum = {
-  uri: string;
-  name: string;
-  images: SpotifyImage[];
-};
-
-export type SpotifyArtist = {
-  name: string;
-  uri: string;
 };

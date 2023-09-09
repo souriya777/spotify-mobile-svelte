@@ -2,7 +2,7 @@
   import { accessToken, userId, deviceId, player, trackName } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
 
-  let open = true;
+  let open = false;
 </script>
 
 <details {open}>
@@ -29,6 +29,7 @@
   <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
   <button on:click={() => SpotifyApi.getQueue()}>queue</button>
   <button on:click={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
-  <button on:click={() => SpotifyApi.getMyPlaylists($userId)}>my-playlists</button>
+  <button on:click={() => SpotifyApi.getPlaylists($userId)}>my-playlists</button>
+  <button on:click={() => SpotifyApi.getMyAlbums()}>my-albums</button>
   <button on:click={() => SpotifyApi.disconnect()}>disconnect</button>
 </details>

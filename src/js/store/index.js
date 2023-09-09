@@ -7,7 +7,7 @@ const accessToken = writableLocalStorage('accessToken', '');
 const authorizationOk = writableLocalStorage('authorizationOk', false);
 
 // USER
-const userId = writable('');
+const userId = writableLocalStorage('userId', '');
 
 // TRACK
 const trackUri = writable('');

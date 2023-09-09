@@ -38,6 +38,7 @@ import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy } from '@/js/time-utils';
 import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
+import SpotifyAlbumCursor from '@/js/SpotifyAlbumCursor';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -234,9 +235,15 @@ class SpotifyApi {
    * @param {string} userId
    * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
    */
-  async getMyPlaylists(userId) {
+  async getPlaylists(userId) {
     const data = await this.#get(`/users/${userId}/playlists`);
     return new SpotifyPlaylistCursor(data)?.items;
+  }
+
+  /** @return {Promise<import('@/js/spotify').SpotifyAlbum[]>} */
+  async getMyAlbums() {
+    const data = await this.#get('/me/albums');
+    return new SpotifyAlbumCursor(data)?.items?.map((item) => item?.album);
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifySong[]>} */

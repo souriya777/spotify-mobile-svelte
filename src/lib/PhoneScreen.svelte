@@ -3,7 +3,8 @@
   import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
   import Debug from '@/lib/Debug.svelte';
   import { appReady } from '@/js/store';
-  import Player from './Player.svelte';
+  // import Player from '@/lib/Player.svelte';
+  import MyLib from '@/lib/MyLib.svelte';
 </script>
 
 <div class="screen">
@@ -16,7 +17,8 @@
     <SpotifyAuthentication />
 
     {#if $appReady}
-      <Player />
+      <!-- <Player /> -->
+      <MyLib />
     {/if}
   </div>
 </div>

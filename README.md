@@ -18,8 +18,7 @@ Stone soup
 ## mvp
 
 - LIST MOST API CALLS
-- feat(spotify): select playlist
-- feat(spotify):
+- feat(spotify): playlist details
 - feat(spotify):
 - feat(spotify):
 - feat(spotify):

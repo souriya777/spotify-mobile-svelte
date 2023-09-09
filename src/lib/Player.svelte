@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
   import {
     deviceId,
     devices,
@@ -24,21 +23,6 @@
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
   $: progress_m_ss = millisToMinuteSecond($realTimeProgressMs);
   $: duration_m_ss = millisToMinuteSecond($durationMs);
-
-  onMount(() => {
-    const frequency = import.meta.env.VITE_API_SYNC_FREQUENCY_MS;
-
-    const intervalRefresh = setInterval(() => {
-      // FIXME tune it
-      // SpotifyApi.synchronize();
-      // console.log('...refresh PLAYBACK_STATE 🔴');
-    }, frequency);
-
-    return () => {
-      clearInterval(intervalRefresh);
-      // clearInterval(intervalPlayer);
-    };
-  });
 </script>
 
 <div class="player">
