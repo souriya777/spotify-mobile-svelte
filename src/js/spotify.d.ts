@@ -60,15 +60,18 @@ export type SpotifyAlbumItemCursor = {
   album: SpotifyAlbum;
 };
 
-export type SpotifyPlaylistCursor = {
+export interface Cursor {
   href: string;
   limit: number;
   offset: number;
   total: number;
   next: string;
   previous: string;
+}
+
+export interface SpotifyPlaylistCursor extends Cursor {
   items: SpotifyPlaylist[];
-};
+}
 
 export type SpotifyDevice = {
   id: string;

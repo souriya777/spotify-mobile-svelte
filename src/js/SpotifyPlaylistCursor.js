@@ -1,16 +1,12 @@
+import Cursor from '@/js/Cursor';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 
 /**
  * @type {import('@/js/spotify').SpotifyPlaylistCursor}
  */
-class SpotifyPlaylistCursor {
+class SpotifyPlaylistCursor extends Cursor {
   constructor(fromApi) {
-    this.href = fromApi?.href;
-    this.limit = fromApi?.limit;
-    this.offset = fromApi?.offset;
-    this.total = fromApi?.total;
-    this.next = fromApi?.next;
-    this.previous = fromApi?.previous;
+    super(fromApi);
     this.items = fromApi?.items.map((item) => new SpotifyPlaylist(item));
   }
 }

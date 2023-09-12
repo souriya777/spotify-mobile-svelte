@@ -7,6 +7,9 @@ import MY_PLAYLISTS_API_JSON from './api/my-playlists-api.json';
 import MY_ALBUMS_API_JSON from './api/my-albums-api.json';
 import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
 import QUEUE_API_JSON from './api/queue-api.json';
+import MY_PLAYLISTS_OFFSET_0_API_JSON from './api/my-playlists-offset-0-api.json';
+import MY_PLAYLISTS_OFFSET_50_API_JSON from './api/my-playlists-offset-50-api.json';
+import MY_PLAYLISTS_OFFSET_100_API_JSON from './api/my-playlists-offset-100-api.json';
 
 const REGEX_CLIENT_ID_OR_SECRET = /\w{10,}/i;
 
@@ -51,6 +54,12 @@ function getData(method, url, headers, data) {
       return { ...RECENTLY_PLAYED_API_JSON };
     } else if (endpoint === '/me/player/queue') {
       return { ...QUEUE_API_JSON };
+    } else if (endpoint === '/users/laosoupi59/playlists?limit=50') {
+      return { ...MY_PLAYLISTS_OFFSET_0_API_JSON };
+    } else if (endpoint === '/users/laosoupi59/playlists?offset=50&limit=50') {
+      return { ...MY_PLAYLISTS_OFFSET_50_API_JSON };
+    } else if (endpoint === '/users/laosoupi59/playlists?offset=100&limit=50') {
+      return { ...MY_PLAYLISTS_OFFSET_100_API_JSON };
     }
   } else if (method === 'POST') {
     if (url === 'https://accounts.spotify.com/api/token') {
@@ -78,7 +87,6 @@ function getData(method, url, headers, data) {
       }
     }
   } else if (method === 'PUT') {
-    console.log(endpoint, headers, data);
     if (endpoint === '/me/player') {
       // @ts-ignore
       if (!data.device_ids[0] === 'my-device-id-123' || !data.play === true) {

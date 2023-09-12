@@ -39,6 +39,7 @@ import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy } from '@/js/time-utils';
 import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
 import SpotifyAlbumCursor from '@/js/SpotifyAlbumCursor';
+import CursorFactory from '@/js/CursorFactory';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -240,6 +241,19 @@ class SpotifyApi {
     return new SpotifyPlaylistCursor(data)?.items;
   }
 
+  /**
+   * @param {string} userId
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
+   */
+  async getPlaylistsSortedAlphabetically(userId) {
+    /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
+    const playlists = await this.#iterateOverCursor(
+      `/users/${userId}/playlists?limit=50`,
+      'SpotifyPlaylistCursor',
+    );
+    return playlists?.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
   /** @return {Promise<import('@/js/spotify').SpotifyAlbum[]>} */
   async getMyAlbums() {
     const data = await this.#get('/me/albums');
@@ -312,6 +326,7 @@ class SpotifyApi {
   #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
   #API_NOTIFICATION_DELAY_MS = Number(`${import.meta.env.VITE_API_NOTIFICATION_DELAY_MS}`);
+  #API_URL = 'https://api.spotify.com/v1';
 
   async #determineLastSong() {
     let track = null;
@@ -362,8 +377,32 @@ class SpotifyApi {
     imageUrl.set(track?.album?.images?.[0]?.url);
   }
 
+  async #iterateOverCursor(endpoint, cursorType) {
+    let accumulator = [];
+
+    let data = await this.#get(endpoint);
+    let cursor = CursorFactory.createCursor(cursorType, data);
+
+    if (cursor?.items) {
+      accumulator = [...accumulator, ...cursor.items];
+    }
+
+    while (cursor?.next) {
+      const endpoint = /(?<=api.spotify.com\/v1).*/g.exec(cursor.next)?.[0];
+
+      data = await this.#get(endpoint);
+      cursor = CursorFactory.createCursor(cursorType, data);
+
+      if (cursor?.items) {
+        accumulator = [...accumulator, ...cursor.items];
+      }
+    }
+
+    return accumulator;
+  }
+
   #url(endpoint) {
-    return `https://api.spotify.com/v1${endpoint}`;
+    return `${this.#API_URL}${endpoint}`;
   }
 
   /**
@@ -406,9 +445,6 @@ class SpotifyApi {
           this.forceAuthorization();
         } else if (SpotifyStatus.BAD_REQUEST === status) {
           LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
-
-          // FIXME is it mandatory here ?
-          // this.forceAuthorization();
         }
 
         throw err;
@@ -418,13 +454,6 @@ class SpotifyApi {
   async #get(endpoint) {
     return this.#axios(endpoint, {
       method: 'GET',
-      url: this.#url(endpoint),
-    });
-  }
-
-  async #post(endpoint) {
-    return this.#axios(endpoint, {
-      method: 'POST',
       url: this.#url(endpoint),
     });
   }

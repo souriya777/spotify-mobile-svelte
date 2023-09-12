@@ -18,13 +18,15 @@ Stone soup
 ## mvp
 
 - LIST MOST API CALLS
-- feat(spotify): playlist details
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
+- feat(spotify): can get all `Liked` playlists
+- feat(spotify): can get all playlists sorted "recently-added"
+- feat(spotify): can get all playlists sorted "last-played"
+- feat(spotify): can get all albums sorted alphabetically
+- feat(spotify): can get all albums sorted "recently-added"
+- feat(spotify): can get all albums sorted "last-played"
+- feat(spotify): can search a song/artist/album/playlist
+- feat(spotify): can add song to playlist
+- feat(spotify): can liked a song
 - feat(spotify):
 - feat(spotify):
 - feat(spotify):
@@ -84,6 +86,7 @@ Stone soup
 
 ## demo
 
+- found in code where can I use `isEmpty` from `string-utils`
 - move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - reflect a "car" presentation (audible-like)
 - test `synchronize`... hard...

@@ -2,9 +2,12 @@
   import { onMount } from 'svelte';
   import { userId } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
+  import { isEmpty } from '@/js/string-utils';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
+  /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
+  let playlistsAlphabetically = [];
   /** @type {import('@/js/spotify').SpotifyAlbum[]} */
   let albums = [];
 
@@ -15,9 +18,31 @@
     // get album
     albums = await SpotifyApi.getMyAlbums();
   });
+
+  async function getAlphabetically() {
+    playlistsAlphabetically = await SpotifyApi.getPlaylistsSortedAlphabetically($userId);
+  }
 </script>
 
 <h1>My Lib</h1>
+
+<h2>Playlists ABC</h2>
+
+<detail>
+  <summary
+    ><button on:click={getAlphabetically}>playlists ABC</button
+    >{playlistsAlphabetically?.length}</summary
+  >
+  {#if playlistsAlphabetically}
+    <ul>
+      {#each playlistsAlphabetically as list}
+        <li>
+          {isEmpty(list?.name) ? '🟡' + list?.owner?.display_name : list?.name}
+        </li>
+      {/each}
+    </ul>
+  {/if}
+</detail>
 
 <h2>Playlists</h2>
 
