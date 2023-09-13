@@ -32,6 +32,7 @@ const appReady = derived(
   [authorizationOk, accessToken, deviceId],
   ([$authorizationOk, $accessToken, $deviceId]) => $authorizationOk && $accessToken && $deviceId,
 );
+const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
 
 // PLAYER
 const player = writable(null);
@@ -85,4 +86,5 @@ export {
   apiTimestamp,
   devices,
   appReady,
+  serviceWorkerNotification,
 };

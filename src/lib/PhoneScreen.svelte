@@ -5,6 +5,7 @@
   import { appReady } from '@/js/store';
   // import Player from '@/lib/Player.svelte';
   import MyLib from '@/lib/MyLib.svelte';
+  import Notification from '@/lib/Notification.svelte';
 </script>
 
 <div class="screen">
@@ -13,6 +14,7 @@
   </div>
 
   <div class="screen__content">
+    <Notification />
     <Debug />
     <SpotifyAuthentication />
 

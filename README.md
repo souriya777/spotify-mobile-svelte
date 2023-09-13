@@ -19,8 +19,8 @@ Stone soup
 
 - LIST MOST API CALLS
 - feat(service-worker): test on mobile
-- feat(service-worker): force reload of `service-workers`... how ? => activate it
 - feat(service-worker): invalidate when like song ?
+
 - feat(spotify): can get all playlists sorted `recently-added`
 - feat(spotify): can get all playlists sorted `last-played`
 - feat(spotify): can get all albums sorted alphabetically
@@ -91,6 +91,9 @@ Stone soup
 - lighthouse
 
 ## demo
+
+- feat(service-worker): automate `swVersion` when building app ?
+- force refresh by reload '/'
 
 - found in code where can I use `isEmpty` from `string-utils`
 - move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)

@@ -1,9 +1,16 @@
+// @ts-nocheck
 self.addEventListener('install', () => {
   console.log('service-worker installed ✅');
 });
 
 self.addEventListener('activate', () => {
   console.log('service-worker activated ✅');
+});
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', (e) => {
