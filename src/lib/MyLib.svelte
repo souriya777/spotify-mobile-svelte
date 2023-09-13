@@ -39,9 +39,13 @@
   {#if likedTracks}
     <ul>
       {#each likedTracks as track, i}
+        {@const album = track?.album}
+        <!-- TODO tune it for performance -->
+        {@const image = album?.images?.[2]}
         <li>
+          <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
           {i + 1}
-          {track?.name} <small>{track?.album?.name}</small>
+          {track?.name} <small>{album?.name}</small>
         </li>
       {/each}
     </ul>
@@ -83,3 +87,9 @@
     {/each}
   </ul>
 {/if}
+
+<style>
+  img {
+    display: inline-block;
+  }
+</style>
