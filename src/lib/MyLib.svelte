@@ -41,7 +41,7 @@
       {#each likedTracks as track, i}
         {@const album = track?.album}
         <!-- TODO tune it for performance -->
-        {@const image = album?.images?.[2]}
+        {@const image = album?.images?.at(-1)}
         <li>
           <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
           {i + 1}
@@ -73,7 +73,12 @@
 {#if playlists}
   <ul>
     {#each playlists as list}
-      <li>{list?.name}</li>
+      {@const image = list?.images?.at(-1)}
+
+      <li>
+        <img src={image?.url} alt={list?.name} height={image?.height} width={image?.width} />
+        {list?.name}
+      </li>
     {/each}
   </ul>
 {/if}
@@ -82,8 +87,12 @@
 
 {#if albums}
   <ul>
-    {#each albums as list}
-      <li>{list?.name}</li>
+    {#each albums as album}
+      {@const image = album?.images?.at(-1)}
+      <li>
+        <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
+        {album?.name}
+      </li>
     {/each}
   </ul>
 {/if}
@@ -91,5 +100,7 @@
 <style>
   img {
     display: inline-block;
+    max-width: 50px;
+    height: auto;
   }
 </style>
