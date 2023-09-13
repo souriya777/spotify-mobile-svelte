@@ -7,7 +7,6 @@ class SpotifyUser {
   constructor(fromApi) {
     this.id = fromApi?.id;
     this.display_name = fromApi?.display_name;
-    console.log(fromApi?.display_name);
     this.images = fromApi?.images?.map((img) => new SpotifyImage(img));
   }
 }

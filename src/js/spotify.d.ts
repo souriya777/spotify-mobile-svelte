@@ -1,6 +1,7 @@
 export type SpotifySong = {
-  context: SpotifyContext;
   track: SpotifyTrack;
+  context: SpotifyContext;
+  added_at: date;
 };
 
 export type SpotifyTrack = {
@@ -41,11 +42,6 @@ export type SpotifyImage = {
   width: number;
 };
 
-export type SpotifySongsCursor = {
-  next: string;
-  items: SpotifySong[];
-};
-
 export type SpotifyAlbumCursor = {
   href: string;
   limit: number;
@@ -67,6 +63,10 @@ export interface Cursor {
   total: number;
   next: string;
   previous: string;
+}
+
+export interface SpotifySongCursor extends Cursor {
+  items: SpotifySong[];
 }
 
 export interface SpotifyPlaylistCursor extends Cursor {

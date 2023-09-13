@@ -10,6 +10,22 @@ import QUEUE_API_JSON from './api/queue-api.json';
 import MY_PLAYLISTS_OFFSET_0_API_JSON from './api/my-playlists-offset-0-api.json';
 import MY_PLAYLISTS_OFFSET_50_API_JSON from './api/my-playlists-offset-50-api.json';
 import MY_PLAYLISTS_OFFSET_100_API_JSON from './api/my-playlists-offset-100-api.json';
+import LIKED_SONGS_OFFSET_0_API from './api/liked-songs-offset-0-api.json';
+import LIKED_SONGS_OFFSET_50_API from './api/liked-songs-offset-50-api.json';
+import LIKED_SONGS_OFFSET_100_API from './api/liked-songs-offset-100-api.json';
+import LIKED_SONGS_OFFSET_150_API from './api/liked-songs-offset-150-api.json';
+import LIKED_SONGS_OFFSET_200_API from './api/liked-songs-offset-200-api.json';
+import LIKED_SONGS_OFFSET_250_API from './api/liked-songs-offset-250-api.json';
+import LIKED_SONGS_OFFSET_300_API from './api/liked-songs-offset-300-api.json';
+import LIKED_SONGS_OFFSET_350_API from './api/liked-songs-offset-350-api.json';
+import LIKED_SONGS_OFFSET_400_API from './api/liked-songs-offset-400-api.json';
+import LIKED_SONGS_OFFSET_450_API from './api/liked-songs-offset-450-api.json';
+import LIKED_SONGS_OFFSET_500_API from './api/liked-songs-offset-500-api.json';
+import LIKED_SONGS_OFFSET_550_API from './api/liked-songs-offset-550-api.json';
+import LIKED_SONGS_OFFSET_600_API from './api/liked-songs-offset-600-api.json';
+import LIKED_SONGS_OFFSET_650_API from './api/liked-songs-offset-650-api.json';
+import LIKED_SONGS_OFFSET_700_API from './api/liked-songs-offset-700-api.json';
+import LIKED_SONGS_OFFSET_750_API from './api/liked-songs-offset-750-api.json';
 
 const REGEX_CLIENT_ID_OR_SECRET = /\w{10,}/i;
 
@@ -60,6 +76,38 @@ function getData(method, url, headers, data) {
       return { ...MY_PLAYLISTS_OFFSET_50_API_JSON };
     } else if (endpoint === '/users/laosoupi59/playlists?offset=100&limit=50') {
       return { ...MY_PLAYLISTS_OFFSET_100_API_JSON };
+    } else if (endpoint === '/me/tracks?limit=50') {
+      return { ...LIKED_SONGS_OFFSET_0_API };
+    } else if (endpoint === '/me/tracks?offset=50&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_50_API };
+    } else if (endpoint === '/me/tracks?offset=100&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_100_API };
+    } else if (endpoint === '/me/tracks?offset=150&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_150_API };
+    } else if (endpoint === '/me/tracks?offset=200&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_200_API };
+    } else if (endpoint === '/me/tracks?offset=250&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_250_API };
+    } else if (endpoint === '/me/tracks?offset=300&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_300_API };
+    } else if (endpoint === '/me/tracks?offset=350&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_350_API };
+    } else if (endpoint === '/me/tracks?offset=400&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_400_API };
+    } else if (endpoint === '/me/tracks?offset=450&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_450_API };
+    } else if (endpoint === '/me/tracks?offset=500&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_500_API };
+    } else if (endpoint === '/me/tracks?offset=550&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_550_API };
+    } else if (endpoint === '/me/tracks?offset=600&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_600_API };
+    } else if (endpoint === '/me/tracks?offset=650&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_650_API };
+    } else if (endpoint === '/me/tracks?offset=700&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_700_API };
+    } else if (endpoint === '/me/tracks?offset=750&limit=50') {
+      return { ...LIKED_SONGS_OFFSET_750_API };
     }
   } else if (method === 'POST') {
     if (url === 'https://accounts.spotify.com/api/token') {

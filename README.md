@@ -18,12 +18,19 @@ Stone soup
 ## mvp
 
 - LIST MOST API CALLS
-- feat(spotify): can get all `Liked` playlists
-- feat(spotify): can get all playlists sorted "recently-added"
-- feat(spotify): can get all playlists sorted "last-played"
+- feat(cache): store `Liked songs` in `localStorage`
+- feat(spotify): put `Liked` songs in cache ? 771 items => 16 calls to API...
+- feat(spotify): see image of song
+- feat(spotify): see image of playlist
+- feat(spotify): can get all playlists sorted `recently-added`
+- feat(spotify): can get all playlists sorted `last-played`
 - feat(spotify): can get all albums sorted alphabetically
-- feat(spotify): can get all albums sorted "recently-added"
-- feat(spotify): can get all albums sorted "last-played"
+- feat(spotify): can get all albums sorted `recently-added`
+- feat(spotify): can get all albums sorted `last-played`
+- feat(spotify): can sort song by `added_date`
+- feat(spotify): can sort song by `title`
+- feat(spotify): can sort song by `artist`
+- feat(spotify): can sort song by `album` ???
 - feat(spotify): can search a song/artist/album/playlist
 - feat(spotify): can add song to playlist
 - feat(spotify): can liked a song

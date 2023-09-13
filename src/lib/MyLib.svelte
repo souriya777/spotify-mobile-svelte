@@ -10,6 +10,8 @@
   let playlistsAlphabetically = [];
   /** @type {import('@/js/spotify').SpotifyAlbum[]} */
   let albums = [];
+  /** @type {import('@/js/spotify').SpotifyTrack[]} */
+  let likedTracks = [];
 
   onMount(async () => {
     // get playlist
@@ -22,11 +24,29 @@
   async function getAlphabetically() {
     playlistsAlphabetically = await SpotifyApi.getPlaylistsSortedAlphabetically($userId);
   }
+
+  async function getLikedTracks() {
+    likedTracks = await SpotifyApi.getLikedSongs();
+  }
 </script>
 
 <h1>My Lib</h1>
 
 <h2>Playlists ABC</h2>
+
+<detail>
+  <summary><button on:click={getLikedTracks}>LIKED❤️</button></summary>
+  {#if likedTracks}
+    <ul>
+      {#each likedTracks as track, i}
+        <li>
+          {i + 1}
+          {track?.name} <small>{track?.album?.name}</small>
+        </li>
+      {/each}
+    </ul>
+  {/if}
+</detail>
 
 <detail>
   <summary

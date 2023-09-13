@@ -25,7 +25,7 @@ import {
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
-import SpotifySongsCursor from '@/js/SpotifySongsCursor';
+import SpotifySongCursor from '@/js/SpotifySongCursor';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
 import SpotifyQueue from '@/js/SpotifyQueue';
@@ -254,6 +254,13 @@ class SpotifyApi {
     return playlists?.sort((a, b) => a.name.localeCompare(b.name));
   }
 
+  /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */
+  async getLikedSongs() {
+    /** @type {import('@/js/spotify').SpotifySong[]} */
+    const songs = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
+    return songs?.sort((a, b) => b.added_at - a.added_at).map((song) => song?.track);
+  }
+
   /** @return {Promise<import('@/js/spotify').SpotifyAlbum[]>} */
   async getMyAlbums() {
     const data = await this.#get('/me/albums');
@@ -263,7 +270,7 @@ class SpotifyApi {
   /** @returns {Promise<import('@/js/spotify').SpotifySong[]>} */
   async getRecentlyPlayedSongs() {
     const data = await this.#get(`/me/player/recently-played`);
-    return new SpotifySongsCursor(data)?.items;
+    return new SpotifySongCursor(data)?.items;
   }
 
   /**
