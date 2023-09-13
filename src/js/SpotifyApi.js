@@ -255,10 +255,10 @@ class SpotifyApi {
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */
-  async getLikedSongs() {
+  async getLikedTracks() {
     /** @type {import('@/js/spotify').SpotifySong[]} */
-    const songs = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
-    return songs?.sort((a, b) => b.added_at - a.added_at).map((song) => song?.track);
+    const tracks = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
+    return tracks?.sort((a, b) => b.added_at - a.added_at).map((song) => song?.track);
   }
 
   /** @return {Promise<import('@/js/spotify').SpotifyAlbum[]>} */

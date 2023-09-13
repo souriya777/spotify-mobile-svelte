@@ -26,7 +26,7 @@
   }
 
   async function getLikedTracks() {
-    likedTracks = await SpotifyApi.getLikedSongs();
+    likedTracks = await SpotifyApi.getLikedTracks();
   }
 </script>
 

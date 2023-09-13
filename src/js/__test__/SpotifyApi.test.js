@@ -88,8 +88,8 @@ test(`getPlaylistsSortedAlphabetically() returns SpotifyPlaylist[] sorted alphab
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`getLikedSongs() returns SpotifyTrack[] sorted by added_at`, async () => {
-  const actual = await SpotifyApi.getLikedSongs();
+test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {
+  const actual = await SpotifyApi.getLikedTracks();
   const expected = [...LIKED_SONGS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });

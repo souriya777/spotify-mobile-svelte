@@ -18,10 +18,9 @@ Stone soup
 ## mvp
 
 - LIST MOST API CALLS
-- feat(cache): store `Liked songs` in `localStorage`
-- feat(spotify): put `Liked` songs in cache ? 771 items => 16 calls to API...
-- feat(spotify): see image of song
-- feat(spotify): see image of playlist
+- feat(service-worker): test on mobile
+- feat(service-worker): force reload of `service-workers`... how ? => activate it
+- feat(service-worker): invalidate when like song ?
 - feat(spotify): can get all playlists sorted `recently-added`
 - feat(spotify): can get all playlists sorted `last-played`
 - feat(spotify): can get all albums sorted alphabetically
