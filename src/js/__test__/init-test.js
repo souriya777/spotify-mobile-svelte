@@ -1,4 +1,5 @@
 import { vi } from 'vitest';
+import Logger from '@/js/Logger';
 
 import CURRENT_USER_API_JSON from './api/current-user-api.json';
 import PLAYBACK_STATE_API_JSON from './api/playback-state-api.json';
@@ -27,6 +28,8 @@ import LIKED_SONGS_OFFSET_700_API from './api/liked-songs-offset-700-api.json';
 import LIKED_SONGS_OFFSET_750_API from './api/liked-songs-offset-750-api.json';
 
 const REGEX_CLIENT_ID_OR_SECRET = /\w{10,}/i;
+
+Logger.TEST_MODE = true;
 
 export function initSpotifyApi() {
   vi.mock('@/js/axios-utils', () => {

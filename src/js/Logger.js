@@ -1,4 +1,6 @@
 class Logger {
+  static TEST_MODE = false;
+
   static getNewInstance(filename) {
     return new LoggerFile(filename);
   }
@@ -10,6 +12,10 @@ class LoggerFile {
   }
 
   log(message = '', toDebug = null, ...args) {
+    if (Logger.TEST_MODE) {
+      return;
+    }
+
     const prefix = this.#prefix(message);
     if (toDebug) {
       console.log(prefix, toDebug, ...args);
@@ -19,6 +25,10 @@ class LoggerFile {
   }
 
   error(message = '', toDebug = '', ...args) {
+    if (Logger.TEST_MODE) {
+      return;
+    }
+
     const prefix = this.#prefix(message);
     if (toDebug) {
       console.error(prefix, toDebug, ...args);
