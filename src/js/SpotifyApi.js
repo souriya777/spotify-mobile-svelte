@@ -24,7 +24,6 @@ import {
   realTimeProgressMs,
 } from '@/js/store';
 import SpotifyUser from '@/js/SpotifyUser';
-import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
 import SpotifySongCursor from '@/js/SpotifySongCursor';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
@@ -40,6 +39,7 @@ import { areTimestampsSeparateBy } from '@/js/time-utils';
 import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
 import SpotifyAlbumCursor from '@/js/SpotifyAlbumCursor';
 import CursorFactory from '@/js/CursorFactory';
+import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -236,9 +236,8 @@ class SpotifyApi {
    * @param {string} userId
    * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
    */
-  async getPlaylists(userId) {
-    const data = await this.#get(`/users/${userId}/playlists`);
-    return new SpotifyPlaylistCursor(data)?.items;
+  async getPlaylistsRecentlyAdded(userId) {
+    return await this.#getAllPlaylists(userId);
   }
 
   /**
@@ -246,12 +245,45 @@ class SpotifyApi {
    * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
    */
   async getPlaylistsSortedAlphabetically(userId) {
-    /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
-    const playlists = await this.#iterateOverCursor(
-      `/users/${userId}/playlists?limit=50`,
-      'SpotifyPlaylistCursor',
-    );
+    const playlists = await this.#getAllPlaylists(userId);
     return playlists?.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  /**
+   * @param {string} userId
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
+   */
+  async getPlaylistsSortedAddedAtFIXME(userId) {
+    const playlists = await this.#getAllPlaylists(userId);
+
+    // FIXME add to service-worker ?
+    const playlistExtendedPromises = playlists.map(async (list) => {
+      const playlistExtended = { ...list };
+      const total = playlistExtended?.tracks?.total;
+      const offset = total === 0 ? 0 : total - 1;
+
+      const data = await this.#get(
+        `/playlists/${playlistExtended.id}/tracks?fields=items%28added_at%29&limit=1&offset=${offset}`,
+      );
+      const lastItem = new SpotifyPlaylistItems(data)?.items;
+      const added_at = lastItem?.[0]?.['added_at'];
+
+      if (added_at) {
+        playlistExtended.added_at = new Date(added_at);
+      }
+
+      return playlistExtended;
+    });
+
+    const playlistsWithDate = await Promise.all(playlistExtendedPromises);
+
+    // FIXME
+    // console.log(
+    //   playlistsWithDate?.sort((a, b) => b.added_at - a.added_at),
+    //   '🟡🟡🟡',
+    // );
+
+    return playlistsWithDate?.sort((a, b) => b.added_at - a.added_at);
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */
@@ -334,6 +366,14 @@ class SpotifyApi {
   #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
   #API_NOTIFICATION_DELAY_MS = Number(`${import.meta.env.VITE_API_NOTIFICATION_DELAY_MS}`);
   #API_URL = 'https://api.spotify.com/v1';
+
+  /**
+   * @param {string} userId
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
+   */
+  async #getAllPlaylists(userId) {
+    return this.#iterateOverCursor(`/users/${userId}/playlists?limit=50`, 'SpotifyPlaylistCursor');
+  }
 
   async #determineLastSong() {
     let track = null;

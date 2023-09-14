@@ -2,12 +2,9 @@
   import { onMount } from 'svelte';
   import { userId } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
-  import { isEmpty } from '@/js/string-utils';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
-  /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
-  let playlistsAlphabetically = [];
   /** @type {import('@/js/spotify').SpotifyAlbum[]} */
   let albums = [];
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
@@ -15,14 +12,18 @@
 
   onMount(async () => {
     // get playlist
-    playlists = await SpotifyApi.getPlaylists($userId);
+    playlists = await SpotifyApi.getPlaylistsRecentlyAdded($userId);
 
     // get album
     albums = await SpotifyApi.getMyAlbums();
   });
 
-  async function getAlphabetically() {
-    playlistsAlphabetically = await SpotifyApi.getPlaylistsSortedAlphabetically($userId);
+  async function sortAlphabetically() {
+    playlists = await SpotifyApi.getPlaylistsSortedAlphabetically($userId);
+  }
+
+  async function sortRecentlyAddedAt() {
+    playlists = await SpotifyApi.getPlaylistsSortedAddedAtFIXME($userId);
   }
 
   async function getLikedTracks() {
@@ -36,66 +37,49 @@
 
 <detail>
   <summary><button on:click={getLikedTracks}>LIKED❤️</button></summary>
-  {#if likedTracks}
-    <ul>
-      {#each likedTracks as track, i}
-        {@const album = track?.album}
-        <!-- TODO tune it for performance -->
-        {@const image = album?.images?.at(-1)}
-        <li>
-          <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
-          {i + 1}
-          {track?.name} <small>{album?.name}</small>
-        </li>
-      {/each}
-    </ul>
-  {/if}
-</detail>
+  <ul>
+    {#each likedTracks as track, i}
+      {@const album = track?.album}
+      {@const image = album?.images?.at(-1)}
 
-<detail>
-  <summary
-    ><button on:click={getAlphabetically}>playlists ABC</button
-    >{playlistsAlphabetically?.length}</summary
-  >
-  {#if playlistsAlphabetically}
-    <ul>
-      {#each playlistsAlphabetically as list}
-        <li>
-          {isEmpty(list?.name) ? '🟡' + list?.owner?.display_name : list?.name}
-        </li>
-      {/each}
-    </ul>
-  {/if}
+      <li>
+        <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
+        {i + 1}
+        {track?.name} <small>{album?.name}</small>
+      </li>
+    {/each}
+  </ul>
 </detail>
 
 <h2>Playlists</h2>
 
-{#if playlists}
-  <ul>
-    {#each playlists as list}
-      {@const image = list?.images?.at(-1)}
+<div>
+  <button on:click={sortAlphabetically}>🗂️abc</button>
+  <button on:click={sortRecentlyAddedAt}>🗂️recently-added-atFIXME</button>
+</div>
 
-      <li>
-        <img src={image?.url} alt={list?.name} height={image?.height} width={image?.width} />
-        {list?.name}
-      </li>
-    {/each}
-  </ul>
-{/if}
+<ul>
+  {#each playlists as list}
+    {@const image = list?.images?.at(-1)}
+
+    <li>
+      <img src={image?.url} alt={list?.name} height={image?.height} width={image?.width} />
+      {list?.name}
+    </li>
+  {/each}
+</ul>
 
 <h2>Albums</h2>
 
-{#if albums}
-  <ul>
-    {#each albums as album}
-      {@const image = album?.images?.at(-1)}
-      <li>
-        <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
-        {album?.name}
-      </li>
-    {/each}
-  </ul>
-{/if}
+<ul>
+  {#each albums as album}
+    {@const image = album?.images?.at(-1)}
+    <li>
+      <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
+      {album?.name}
+    </li>
+  {/each}
+</ul>
 
 <style>
   img {

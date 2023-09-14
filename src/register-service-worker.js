@@ -2,7 +2,7 @@ import { serviceWorkerNotification } from '@/js/store';
 import Logger from '@/js/Logger';
 
 const LOGGER = Logger.getNewInstance('register-service-worker.js');
-const SW_VERSION = '1694633582590'; // timestamp when of last change
+const SW_VERSION = '1694675557476'; // timestamp when of last change
 
 if ('serviceWorker' in navigator) {
   addEventListener('load', function () {
@@ -20,7 +20,6 @@ if ('serviceWorker' in navigator) {
     if (registration && registration.active) {
       // Check if there's a new service worker waiting
       if (registration.waiting) {
-        console.log('🔴');
         serviceWorkerNotification.set(true);
 
         // // Display a notification to the user

@@ -14,8 +14,12 @@ self.addEventListener('message', (event) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  // Check if the request is for an external API
-  if (!/\/me\/tracks/g.test(e.request.url)) {
+  // Check if the request is for an spotify API
+  if (
+    !/\/me\/tracks/g.test(e.request.url) &&
+    !/\/users\/.*\/playlists/g.test(e.request.url) &&
+    !/\/playlists\/(\w)*\/tracks\?fields=items%28added_at/g.test(e.request.url)
+  ) {
     return;
   }
 

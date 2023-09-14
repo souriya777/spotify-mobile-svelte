@@ -18,43 +18,45 @@ Stone soup
 ## mvp
 
 - LIST MOST API CALLS
-- feat(service-worker): test on mobile
-- feat(service-worker): invalidate when like song ?
 
-- feat(spotify): can get all playlists sorted `recently-added`
-- feat(spotify): can get all playlists sorted `last-played`
-- feat(spotify): can get all albums sorted alphabetically
-- feat(spotify): can get all albums sorted `recently-added`
-- feat(spotify): can get all albums sorted `last-played`
-- feat(spotify): can sort song by `added_date`
-- feat(spotify): can sort song by `title`
-- feat(spotify): can sort song by `artist`
-- feat(spotify): can sort song by `album` ???
-- feat(spotify): can search a song/artist/album/playlist
-- feat(spotify): can add song to playlist
-- feat(spotify): can liked a song
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
+- feat(playlist): identify 2 way of sort playlists: `recently-added` & `recently-added-at`
+- feat(playlist): can get all playlists sorted `last-played`
+- feat(playlist): add `Liked` to all playlist
+- feat(playlist): add `pinned-playlists` to all playlist
 
-- feat(sync) : when ?
+- feat(album): can get all albums sorted alphabetically
+- feat(album): can get all albums sorted `recently-added`
+- feat(album): can get all albums sorted `last-played`
+- feat(song): can sort song by `added_date`
+- feat(song): can sort song by `title`
+- feat(song): can sort song by `artist`
+- feat(song): can sort song by `album` ???
+- answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
+- feat(search): can search a song/artist/album/playlist
+- feat(playlist): can add song to playlist
+- feat(song): can liked a song
+- feat(service-worker): invalidate when add like song ?
+- feat(playlist): can create a playlist
+- feat(playlist): can rename it
+- feat(playlist): can remove it
+- feat(browse): can see album detail
+- feat(browse): can see playlist detail
+- feat(song): can change order of a song in playlist
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify): `getPlaylists` deprecated ?
 
 - use use:onTap
 - position fixed : player & menu
@@ -69,7 +71,7 @@ Stone soup
 - utiliser le view transition API à la "svelte menu"
 - implement <ProgressBar>
 - feat(player): can seek position by drag'n'drop progress bar
-
+- feat(ui): add waiting visual indication when fetching is too long
 - feat(mylib): design
 - feat(mylib): can select other song
 - feat(search): design
@@ -77,16 +79,15 @@ Stone soup
   -- feat(player): what is default queue ?
   -- extract track_window next_tracks ?
 - feat(detail): design
-
-- feat(spotify): can load next songs
-- feat(spotify): can load next playlists
-
 - space
 - color
 - px
 
 ## perf
 
+- manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
+- feat(service-worker): strategy `what`, `when`
+- feat(realtime) : sync when ?
 - lazy load images
 - lighthouse
 
@@ -106,6 +107,7 @@ Stone soup
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
 - feat(app): add a direct shortcut
+
 - present it to `Svelte Society`
 - make article
 - live coding
@@ -128,6 +130,7 @@ Stone soup
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
 - use svelte `animation` ?
 - // TODO refactor in smaller function or custom stores ?
+- spotify bug "recently-added" order
 
 # spotify flow
 

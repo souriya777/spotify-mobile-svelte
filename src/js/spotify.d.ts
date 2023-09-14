@@ -24,10 +24,26 @@ export type SpotifyArtist = {
 };
 
 export type SpotifyPlaylist = {
+  id: string;
   uri: string;
   name: string;
   owner: SpotifyUser;
   images: SpotifyImage[];
+  tracks: SpotifyPlaylistTracks;
+  added_at: date;
+};
+
+export type SpotifyPlaylistTracks = {
+  href: string;
+  total: number;
+};
+
+export type SpotifyPlaylistItems = {
+  items: SpotifyPlaylistItem[];
+};
+
+export type SpotifyPlaylistItem = {
+  added_at: string;
 };
 
 export type SpotifyQueue = {
