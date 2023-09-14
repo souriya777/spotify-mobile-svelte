@@ -2,7 +2,7 @@ import { serviceWorkerNotification } from '@/js/store';
 import Logger from '@/js/Logger';
 
 const LOGGER = Logger.getNewInstance('register-service-worker.js');
-const SW_VERSION = '1694675557476'; // timestamp when of last change
+const SW_VERSION = '1694718875585'; // timestamp when of last change
 
 if ('serviceWorker' in navigator) {
   addEventListener('load', function () {

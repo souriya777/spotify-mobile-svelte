@@ -19,7 +19,6 @@ Stone soup
 
 - LIST MOST API CALLS
 
-- feat(playlist): identify 2 way of sort playlists: `recently-added` & `recently-added-at`
 - feat(playlist): can get all playlists sorted `last-played`
 - feat(playlist): add `Liked` to all playlist
 - feat(playlist): add `pinned-playlists` to all playlist

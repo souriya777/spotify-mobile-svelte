@@ -256,7 +256,6 @@ class SpotifyApi {
   async getPlaylistsSortedAddedAtFIXME(userId) {
     const playlists = await this.#getAllPlaylists(userId);
 
-    // FIXME add to service-worker ?
     const playlistExtendedPromises = playlists.map(async (list) => {
       const playlistExtended = { ...list };
       const total = playlistExtended?.tracks?.total;
@@ -276,12 +275,6 @@ class SpotifyApi {
     });
 
     const playlistsWithDate = await Promise.all(playlistExtendedPromises);
-
-    // FIXME
-    // console.log(
-    //   playlistsWithDate?.sort((a, b) => b.added_at - a.added_at),
-    //   '🟡🟡🟡',
-    // );
 
     return playlistsWithDate?.sort((a, b) => b.added_at - a.added_at);
   }
