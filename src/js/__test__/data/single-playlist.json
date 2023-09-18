@@ -1,0 +1,30 @@
+{
+  "id": "2bsNu8LBBJhmmdJ9zp7gkw",
+  "uri": "spotify:playlist:2bsNu8LBBJhmmdJ9zp7gkw",
+  "name": "karaoke 🎤",
+  "owner": {
+    "id": "laosoupi59",
+    "display_name": "Souriya Phongsavanh"
+  },
+  "images": [
+    {
+      "url": "https://mosaic.scdn.co/640/ab67616d0000b27367ed9c2113d97a041e1985a8ab67616d0000b273a9ac825cee5e3985ea9d449dab67616d0000b273aa008a14499c9ce1c0d8ab14ab67616d0000b273d337c45b8a70b2210aa591a7",
+      "height": 640,
+      "width": 640
+    },
+    {
+      "url": "https://mosaic.scdn.co/300/ab67616d0000b27367ed9c2113d97a041e1985a8ab67616d0000b273a9ac825cee5e3985ea9d449dab67616d0000b273aa008a14499c9ce1c0d8ab14ab67616d0000b273d337c45b8a70b2210aa591a7",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "url": "https://mosaic.scdn.co/60/ab67616d0000b27367ed9c2113d97a041e1985a8ab67616d0000b273a9ac825cee5e3985ea9d449dab67616d0000b273aa008a14499c9ce1c0d8ab14ab67616d0000b273d337c45b8a70b2210aa591a7",
+      "height": 60,
+      "width": 60
+    }
+  ],
+  "tracks": {
+    "href": "https://api.spotify.com/v1/playlists/2bsNu8LBBJhmmdJ9zp7gkw/tracks",
+    "total": 28
+  }
+}

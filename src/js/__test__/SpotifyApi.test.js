@@ -4,13 +4,13 @@ import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st imp
 
 import { accessToken } from '@/js/store';
 import SpotifyApi from '@/js/SpotifyApi';
+import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 
 import CURRENT_USER_JSON from './data/current-user.json';
 import PLAYBACK_STATE_JSON from './data/playback-state.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added.json';
 import MY_PLAYLISTS_SORTED_ALPHABETICALLY_JSON from './data/my-playlists-sorted-alphabetically.json';
-import MY_PLAYLISTS_SORTED_ADDED_AT_JSON from './data/my-playlists-sorted-added_at.json';
 import LIKED_SONGS_JSON from './data/liked-songs.json';
 import MY_ALBUMS_JSON from './data/my-albums.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
@@ -18,6 +18,7 @@ import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
 import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
 import PLAYER_STATE_JSON from './data/player-state.json';
+import SINGLE_PLAYLIST_JSON from './data/single-playlist.json';
 import PLAYER_STATE_API_JSON from './api/player-state-api.json';
 
 initSpotifyApi();
@@ -78,7 +79,7 @@ test(`/me/player/devices returns SpotifyDeviceList`, async () => {
 });
 
 test(`/users/laosoupi59/playlists returns SpotifyPlaylist[]`, async () => {
-  const actual = await SpotifyApi.getPlaylistsRecentlyAdded('laosoupi59');
+  const actual = await SpotifyApi.getPlaylistsSortedBySpotify('laosoupi59');
   const expected = [...MY_PLAYLISTS_RECENTLY_ADDED_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
@@ -89,10 +90,17 @@ test(`getPlaylistsSortedAlphabetically() returns SpotifyPlaylist[] sorted alphab
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`getPlaylistsSortedAddedAtFIXME() returns SpotifyPlaylist[] sorted by added_at`, async () => {
-  const actual = await SpotifyApi.getPlaylistsSortedAddedAtFIXME('laosoupi59');
-  const expected = [...MY_PLAYLISTS_SORTED_ADDED_AT_JSON];
-  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+test(`extendPlaylistWithAddeAt() return SpotifyPlaylist with 'added_at' field`, async () => {
+  /** @type {import('@/js/spotify').SpotifyPlaylist} */
+  const PLAYLIST = new SpotifyPlaylist({ ...SINGLE_PLAYLIST_JSON });
+  const expected = new SpotifyPlaylist({
+    ...SINGLE_PLAYLIST_JSON,
+    added_at: new Date('2023-09-12T13:18:10Z'),
+  });
+
+  const actual = await SpotifyApi.extendPlaylistWithAddeAt(PLAYLIST);
+
+  expect(actual).toStrictEqual(expected);
 });
 
 test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {

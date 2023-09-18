@@ -166,10 +166,7 @@ function getData(method, url, headers, data) {
   }
  */
 function getDataForPlaylistsTracks(endpoint) {
-  if (
-    endpoint ===
-    '/playlists/2bsNu8LBBJhmmdJ9zp7gkw/tracks?fields=items%28added_at%29&limit=1&offset=27'
-  ) {
+  if (endpoint === '/playlists/2bsNu8LBBJhmmdJ9zp7gkw/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -177,10 +174,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/41m5kThWZ8zR7E4c314sC6/tracks?fields=items%28added_at%29&limit=1&offset=52'
-  ) {
+  } else if (endpoint === '/playlists/41m5kThWZ8zR7E4c314sC6/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -188,10 +182,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0Hrd9TlXYwpVNNkDzVHObG/tracks?fields=items%28added_at%29&limit=1&offset=84'
-  ) {
+  } else if (endpoint === '/playlists/0Hrd9TlXYwpVNNkDzVHObG/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -199,10 +190,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/00iKDOSAmZYKwh5yE3zKTj/tracks?fields=items%28added_at%29&limit=1&offset=51'
-  ) {
+  } else if (endpoint === '/playlists/00iKDOSAmZYKwh5yE3zKTj/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -210,10 +198,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1EM1VkS2a3Qkn8/tracks?fields=items%28added_at%29&limit=1&offset=99'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1EM1VkS2a3Qkn8/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -221,10 +206,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1DZ06evO0JU6Vb/tracks?fields=items%28added_at%29&limit=1&offset=49'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1DZ06evO0JU6Vb/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -232,10 +214,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/7EL71mpMb5kXyLFMZ5st2E/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/7EL71mpMb5kXyLFMZ5st2E/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -243,10 +222,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5g1PFTTFrkWI86eUnO8xZs/tracks?fields=items%28added_at%29&limit=1&offset=124'
-  ) {
+  } else if (endpoint === '/playlists/5g1PFTTFrkWI86eUnO8xZs/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -254,10 +230,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5Fm2F7UrhUhFkgh1bBvfx4/tracks?fields=items%28added_at%29&limit=1&offset=29'
-  ) {
+  } else if (endpoint === '/playlists/5Fm2F7UrhUhFkgh1bBvfx4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -265,10 +238,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3cZWLPG5VpM23ZtPJ7CaUv/tracks?fields=items%28added_at%29&limit=1&offset=40'
-  ) {
+  } else if (endpoint === '/playlists/3cZWLPG5VpM23ZtPJ7CaUv/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -276,10 +246,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2vql2UF6S4bNBhbXKrSvIy/tracks?fields=items%28added_at%29&limit=1&offset=70'
-  ) {
+  } else if (endpoint === '/playlists/2vql2UF6S4bNBhbXKrSvIy/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -287,10 +254,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0UGTdbpB5MsrlMd8qAYnYn/tracks?fields=items%28added_at%29&limit=1&offset=50'
-  ) {
+  } else if (endpoint === '/playlists/0UGTdbpB5MsrlMd8qAYnYn/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -298,10 +262,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1zrHB5JFiSdGzgzqOblNbP/tracks?fields=items%28added_at%29&limit=1&offset=33'
-  ) {
+  } else if (endpoint === '/playlists/1zrHB5JFiSdGzgzqOblNbP/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -309,10 +270,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5CJP48wgHBCVRRIQ9VaB6L/tracks?fields=items%28added_at%29&limit=1&offset=13'
-  ) {
+  } else if (endpoint === '/playlists/5CJP48wgHBCVRRIQ9VaB6L/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -320,10 +278,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1ug1yUzv83HhdGTlFHsAxG/tracks?fields=items%28added_at%29&limit=1&offset=40'
-  ) {
+  } else if (endpoint === '/playlists/1ug1yUzv83HhdGTlFHsAxG/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -331,10 +286,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1EUMDoJuT8yJsl/tracks?fields=items%28added_at%29&limit=1&offset=99'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1EUMDoJuT8yJsl/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -342,10 +294,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5iImF3RSCDfPuM9jmSIqK4/tracks?fields=items%28added_at%29&limit=1&offset=62'
-  ) {
+  } else if (endpoint === '/playlists/5iImF3RSCDfPuM9jmSIqK4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -353,10 +302,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2xo6A1DffLHO0jp8zPX1DP/tracks?fields=items%28added_at%29&limit=1&offset=25'
-  ) {
+  } else if (endpoint === '/playlists/2xo6A1DffLHO0jp8zPX1DP/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -364,10 +310,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4fDIs5t5peUmAfp93f5voe/tracks?fields=items%28added_at%29&limit=1&offset=62'
-  ) {
+  } else if (endpoint === '/playlists/4fDIs5t5peUmAfp93f5voe/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -375,10 +318,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1DZ06evO3tTeRm/tracks?fields=items%28added_at%29&limit=1&offset=45'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1DZ06evO3tTeRm/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -386,10 +326,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0ImK5xvuMx7FSvZQfcd2rz/tracks?fields=items%28added_at%29&limit=1&offset=26'
-  ) {
+  } else if (endpoint === '/playlists/0ImK5xvuMx7FSvZQfcd2rz/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -397,10 +334,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/66HnNJZ9oHUMPurTJpfxiz/tracks?fields=items%28added_at%29&limit=1&offset=31'
-  ) {
+  } else if (endpoint === '/playlists/66HnNJZ9oHUMPurTJpfxiz/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -408,10 +342,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1U1jRgk7dVRU239ezrXuFC/tracks?fields=items%28added_at%29&limit=1&offset=28'
-  ) {
+  } else if (endpoint === '/playlists/1U1jRgk7dVRU239ezrXuFC/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -419,10 +350,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1uEQmJ14RmkkDfLTOuulif/tracks?fields=items%28added_at%29&limit=1&offset=9'
-  ) {
+  } else if (endpoint === '/playlists/1uEQmJ14RmkkDfLTOuulif/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -430,10 +358,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1vCRha4cvGomcmbqaANzmk/tracks?fields=items%28added_at%29&limit=1&offset=21'
-  ) {
+  } else if (endpoint === '/playlists/1vCRha4cvGomcmbqaANzmk/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -441,10 +366,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/6dtLf1ltF1OIqrMISSiZXE/tracks?fields=items%28added_at%29&limit=1&offset=62'
-  ) {
+  } else if (endpoint === '/playlists/6dtLf1ltF1OIqrMISSiZXE/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -452,10 +374,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3IYjftO5s1u3i0YUrnesPl/tracks?fields=items%28added_at%29&limit=1&offset=180'
-  ) {
+  } else if (endpoint === '/playlists/3IYjftO5s1u3i0YUrnesPl/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -463,10 +382,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2KwWMvYgpOjMFnKL8r2pnt/tracks?fields=items%28added_at%29&limit=1&offset=50'
-  ) {
+  } else if (endpoint === '/playlists/2KwWMvYgpOjMFnKL8r2pnt/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -474,10 +390,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5PYeEAjs6I41ysDMW7s1WY/tracks?fields=items%28added_at%29&limit=1&offset=53'
-  ) {
+  } else if (endpoint === '/playlists/5PYeEAjs6I41ysDMW7s1WY/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -485,10 +398,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0JcfgwxTvP4g5yO1qw0Jll/tracks?fields=items%28added_at%29&limit=1&offset=16'
-  ) {
+  } else if (endpoint === '/playlists/0JcfgwxTvP4g5yO1qw0Jll/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -496,10 +406,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/7nWLr7ueGPIjP6Guk9TIc8/tracks?fields=items%28added_at%29&limit=1&offset=328'
-  ) {
+  } else if (endpoint === '/playlists/7nWLr7ueGPIjP6Guk9TIc8/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -507,10 +414,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/79DDJRPWt9zXOQtPPD6vnW/tracks?fields=items%28added_at%29&limit=1&offset=0'
-  ) {
+  } else if (endpoint === '/playlists/79DDJRPWt9zXOQtPPD6vnW/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -518,10 +422,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1E9L28VVOh4qbF/tracks?fields=items%28added_at%29&limit=1&offset=99'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1E9L28VVOh4qbF/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -529,10 +430,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1CyM9iWmgi9Llc/tracks?fields=items%28added_at%29&limit=1&offset=100'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1CyM9iWmgi9Llc/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -540,10 +438,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1nkd07sta8ncmTLqn1kAxO/tracks?fields=items%28added_at%29&limit=1&offset=46'
-  ) {
+  } else if (endpoint === '/playlists/1nkd07sta8ncmTLqn1kAxO/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -551,10 +446,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4WY961DL0WyiHY69wXKIGA/tracks?fields=items%28added_at%29&limit=1&offset=25'
-  ) {
+  } else if (endpoint === '/playlists/4WY961DL0WyiHY69wXKIGA/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -562,10 +454,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1h1y7OSwEKZJvKjBpfLso4/tracks?fields=items%28added_at%29&limit=1&offset=3'
-  ) {
+  } else if (endpoint === '/playlists/1h1y7OSwEKZJvKjBpfLso4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -573,10 +462,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5Bi15UDSHMOrdO1YkffHPx/tracks?fields=items%28added_at%29&limit=1&offset=53'
-  ) {
+  } else if (endpoint === '/playlists/5Bi15UDSHMOrdO1YkffHPx/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -584,10 +470,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4TpJ16DLKK9u5fFB3JxLpf/tracks?fields=items%28added_at%29&limit=1&offset=6'
-  ) {
+  } else if (endpoint === '/playlists/4TpJ16DLKK9u5fFB3JxLpf/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -595,10 +478,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1NbjaASwCH7qwDnPhyZdkY/tracks?fields=items%28added_at%29&limit=1&offset=12'
-  ) {
+  } else if (endpoint === '/playlists/1NbjaASwCH7qwDnPhyZdkY/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -606,10 +486,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/7xNgqKLfWDyR1kN9IBrXOe/tracks?fields=items%28added_at%29&limit=1&offset=11'
-  ) {
+  } else if (endpoint === '/playlists/7xNgqKLfWDyR1kN9IBrXOe/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -617,10 +494,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/17eOVmN640LTnMK3fsGWVF/tracks?fields=items%28added_at%29&limit=1&offset=503'
-  ) {
+  } else if (endpoint === '/playlists/17eOVmN640LTnMK3fsGWVF/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -628,10 +502,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1EuU6b8McVCZHK/tracks?fields=items%28added_at%29&limit=1&offset=0'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1EuU6b8McVCZHK/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -639,10 +510,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1F0sijgNaJdgit/tracks?fields=items%28added_at%29&limit=1&offset=100'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1F0sijgNaJdgit/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -650,10 +518,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5REmUGaylWTCQ0bx16yqlz/tracks?fields=items%28added_at%29&limit=1&offset=39'
-  ) {
+  } else if (endpoint === '/playlists/5REmUGaylWTCQ0bx16yqlz/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -661,10 +526,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1CApX1MvV9N0jE/tracks?fields=items%28added_at%29&limit=1&offset=49'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1CApX1MvV9N0jE/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -672,10 +534,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/6tjDm3M7hUf7OesMWnfITA/tracks?fields=items%28added_at%29&limit=1&offset=6'
-  ) {
+  } else if (endpoint === '/playlists/6tjDm3M7hUf7OesMWnfITA/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -683,10 +542,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5Yd8FbYDVQAqUr1Xm7vZ07/tracks?fields=items%28added_at%29&limit=1&offset=19'
-  ) {
+  } else if (endpoint === '/playlists/5Yd8FbYDVQAqUr1Xm7vZ07/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -694,10 +550,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/6ejSj641Qt595xtoan9RZY/tracks?fields=items%28added_at%29&limit=1&offset=4'
-  ) {
+  } else if (endpoint === '/playlists/6ejSj641Qt595xtoan9RZY/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -705,10 +558,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/37i9dQZF1EtdhN0ZZbE5pG/tracks?fields=items%28added_at%29&limit=1&offset=99'
-  ) {
+  } else if (endpoint === '/playlists/37i9dQZF1EtdhN0ZZbE5pG/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -716,10 +566,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0Vm7IQgo6Czr4EwWqIYUDO/tracks?fields=items%28added_at%29&limit=1&offset=4'
-  ) {
+  } else if (endpoint === '/playlists/0Vm7IQgo6Czr4EwWqIYUDO/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -727,10 +574,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2qdpZHcUOAXgZsBtqBkPTP/tracks?fields=items%28added_at%29&limit=1&offset=9'
-  ) {
+  } else if (endpoint === '/playlists/2qdpZHcUOAXgZsBtqBkPTP/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -738,10 +582,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1xSEI4P2hBjotEiMDIhhFz/tracks?fields=items%28added_at%29&limit=1&offset=10'
-  ) {
+  } else if (endpoint === '/playlists/1xSEI4P2hBjotEiMDIhhFz/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -749,10 +590,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0MquL7mNYbhrjf1oEN88TG/tracks?fields=items%28added_at%29&limit=1&offset=35'
-  ) {
+  } else if (endpoint === '/playlists/0MquL7mNYbhrjf1oEN88TG/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -760,10 +598,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4UsR6Jy4s8g7o5TALkNjrf/tracks?fields=items%28added_at%29&limit=1&offset=54'
-  ) {
+  } else if (endpoint === '/playlists/4UsR6Jy4s8g7o5TALkNjrf/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -771,10 +606,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2UQxBcHNiRFoE29CybJH8d/tracks?fields=items%28added_at%29&limit=1&offset=0'
-  ) {
+  } else if (endpoint === '/playlists/2UQxBcHNiRFoE29CybJH8d/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -782,10 +614,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5I2HAPo6i6FE6jeO2UaXEh/tracks?fields=items%28added_at%29&limit=1&offset=16'
-  ) {
+  } else if (endpoint === '/playlists/5I2HAPo6i6FE6jeO2UaXEh/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -793,10 +622,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/6pVutXk3Vz8NrSy1tws1cJ/tracks?fields=items%28added_at%29&limit=1&offset=69'
-  ) {
+  } else if (endpoint === '/playlists/6pVutXk3Vz8NrSy1tws1cJ/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -804,10 +630,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/6C4REh7rpXh7pxvv4KLM1Z/tracks?fields=items%28added_at%29&limit=1&offset=106'
-  ) {
+  } else if (endpoint === '/playlists/6C4REh7rpXh7pxvv4KLM1Z/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -815,10 +638,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2LuJtAF7eKfnPJTqkw3lhf/tracks?fields=items%28added_at%29&limit=1&offset=35'
-  ) {
+  } else if (endpoint === '/playlists/2LuJtAF7eKfnPJTqkw3lhf/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -826,10 +646,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3Ul9vedpc0YOuAVWI1EhVe/tracks?fields=items%28added_at%29&limit=1&offset=18'
-  ) {
+  } else if (endpoint === '/playlists/3Ul9vedpc0YOuAVWI1EhVe/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -837,10 +654,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2KMfXxiIVVjy7o6A4OfvVg/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/2KMfXxiIVVjy7o6A4OfvVg/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -848,10 +662,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2X6YAw3jGF8ofecQRNhXxM/tracks?fields=items%28added_at%29&limit=1&offset=66'
-  ) {
+  } else if (endpoint === '/playlists/2X6YAw3jGF8ofecQRNhXxM/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -859,10 +670,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/10dH8NBptQgluEYLXllV4U/tracks?fields=items%28added_at%29&limit=1&offset=139'
-  ) {
+  } else if (endpoint === '/playlists/10dH8NBptQgluEYLXllV4U/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -870,10 +678,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0rBKERzkbvfRSCRGQBbmc4/tracks?fields=items%28added_at%29&limit=1&offset=35'
-  ) {
+  } else if (endpoint === '/playlists/0rBKERzkbvfRSCRGQBbmc4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -881,10 +686,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3MtMal6Vmq8n4sgrCabuBM/tracks?fields=items%28added_at%29&limit=1&offset=3'
-  ) {
+  } else if (endpoint === '/playlists/3MtMal6Vmq8n4sgrCabuBM/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -892,10 +694,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3hPO81Jx7vIsSAehg97syB/tracks?fields=items%28added_at%29&limit=1&offset=1'
-  ) {
+  } else if (endpoint === '/playlists/3hPO81Jx7vIsSAehg97syB/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -903,10 +702,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4gaFcGywUMezsqVLHvMVuc/tracks?fields=items%28added_at%29&limit=1&offset=14'
-  ) {
+  } else if (endpoint === '/playlists/4gaFcGywUMezsqVLHvMVuc/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -914,10 +710,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3Lwkhzai7meuoRsWHukcrU/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/3Lwkhzai7meuoRsWHukcrU/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -925,10 +718,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1XHG01LFGk7owtER5hMEor/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/1XHG01LFGk7owtER5hMEor/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -936,10 +726,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5bZdWn0MDlwoPdbkUmpcZW/tracks?fields=items%28added_at%29&limit=1&offset=37'
-  ) {
+  } else if (endpoint === '/playlists/5bZdWn0MDlwoPdbkUmpcZW/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -947,10 +734,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2ZOgVf5IiYW9akx0WQfhN4/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/2ZOgVf5IiYW9akx0WQfhN4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -958,10 +742,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4swY8gtDc1gr96RFgLAfFH/tracks?fields=items%28added_at%29&limit=1&offset=79'
-  ) {
+  } else if (endpoint === '/playlists/4swY8gtDc1gr96RFgLAfFH/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -969,10 +750,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/29wzVwvi9kjesa3Uj2hEGg/tracks?fields=items%28added_at%29&limit=1&offset=106'
-  ) {
+  } else if (endpoint === '/playlists/29wzVwvi9kjesa3Uj2hEGg/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -980,10 +758,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4SuuituKTHsNlwz1OeMFLg/tracks?fields=items%28added_at%29&limit=1&offset=9'
-  ) {
+  } else if (endpoint === '/playlists/4SuuituKTHsNlwz1OeMFLg/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -991,10 +766,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/50j6B1K0I04KKriPvv5CUw/tracks?fields=items%28added_at%29&limit=1&offset=18'
-  ) {
+  } else if (endpoint === '/playlists/50j6B1K0I04KKriPvv5CUw/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1002,10 +774,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/7Ep8Uc6ZjsroyPpoVHkNPZ/tracks?fields=items%28added_at%29&limit=1&offset=6'
-  ) {
+  } else if (endpoint === '/playlists/7Ep8Uc6ZjsroyPpoVHkNPZ/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1013,10 +782,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5tydXasvHCihwLcvsrRnw4/tracks?fields=items%28added_at%29&limit=1&offset=11'
-  ) {
+  } else if (endpoint === '/playlists/5tydXasvHCihwLcvsrRnw4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1024,10 +790,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3U3WxPNu0UMThg8W8Bfvy5/tracks?fields=items%28added_at%29&limit=1&offset=18'
-  ) {
+  } else if (endpoint === '/playlists/3U3WxPNu0UMThg8W8Bfvy5/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1035,10 +798,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4cqlUxYB80PiuAPUPpcDqK/tracks?fields=items%28added_at%29&limit=1&offset=40'
-  ) {
+  } else if (endpoint === '/playlists/4cqlUxYB80PiuAPUPpcDqK/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1046,10 +806,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0u9CkcZTosSaUD2bTSyJIE/tracks?fields=items%28added_at%29&limit=1&offset=12'
-  ) {
+  } else if (endpoint === '/playlists/0u9CkcZTosSaUD2bTSyJIE/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1057,10 +814,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3eWkUaK2dDzA4VHw6SKj1Z/tracks?fields=items%28added_at%29&limit=1&offset=29'
-  ) {
+  } else if (endpoint === '/playlists/3eWkUaK2dDzA4VHw6SKj1Z/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1068,10 +822,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4RF7mw2Acseouq7QOnaVi3/tracks?fields=items%28added_at%29&limit=1&offset=18'
-  ) {
+  } else if (endpoint === '/playlists/4RF7mw2Acseouq7QOnaVi3/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1079,10 +830,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3Z3btTHiNpXUkWBmIikkiK/tracks?fields=items%28added_at%29&limit=1&offset=49'
-  ) {
+  } else if (endpoint === '/playlists/3Z3btTHiNpXUkWBmIikkiK/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1090,10 +838,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4c1CPpMxx1CSvmE4zBYW29/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/4c1CPpMxx1CSvmE4zBYW29/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1101,10 +846,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/2g0bXJjmb6I578YhcdAxZ2/tracks?fields=items%28added_at%29&limit=1&offset=48'
-  ) {
+  } else if (endpoint === '/playlists/2g0bXJjmb6I578YhcdAxZ2/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1112,10 +854,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1g04RseplfrcqmVNRcnoQ4/tracks?fields=items%28added_at%29&limit=1&offset=43'
-  ) {
+  } else if (endpoint === '/playlists/1g04RseplfrcqmVNRcnoQ4/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1123,10 +862,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/7sg2Rh483hbI8Mis0cbz1V/tracks?fields=items%28added_at%29&limit=1&offset=6'
-  ) {
+  } else if (endpoint === '/playlists/7sg2Rh483hbI8Mis0cbz1V/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1134,10 +870,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/7hJHUr8O7M3bY4HKHEJXIt/tracks?fields=items%28added_at%29&limit=1&offset=47'
-  ) {
+  } else if (endpoint === '/playlists/7hJHUr8O7M3bY4HKHEJXIt/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1145,10 +878,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/6s00SlXFU9nvNiNwQ4cDWd/tracks?fields=items%28added_at%29&limit=1&offset=4'
-  ) {
+  } else if (endpoint === '/playlists/6s00SlXFU9nvNiNwQ4cDWd/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1156,10 +886,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/11pNI7wiaIddrUVwmIWWRy/tracks?fields=items%28added_at%29&limit=1&offset=26'
-  ) {
+  } else if (endpoint === '/playlists/11pNI7wiaIddrUVwmIWWRy/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1167,10 +894,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0KuLTdc5hWOuMmUXgZTxHk/tracks?fields=items%28added_at%29&limit=1&offset=33'
-  ) {
+  } else if (endpoint === '/playlists/0KuLTdc5hWOuMmUXgZTxHk/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1178,10 +902,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0ehrdIn2aBilLrd0QmCygW/tracks?fields=items%28added_at%29&limit=1&offset=8'
-  ) {
+  } else if (endpoint === '/playlists/0ehrdIn2aBilLrd0QmCygW/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1189,10 +910,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5qRtTHMNmwJzWRNlIk9xqe/tracks?fields=items%28added_at%29&limit=1&offset=18'
-  ) {
+  } else if (endpoint === '/playlists/5qRtTHMNmwJzWRNlIk9xqe/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1200,10 +918,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0OxE9Q5A3FhXOn51gMW4wp/tracks?fields=items%28added_at%29&limit=1&offset=43'
-  ) {
+  } else if (endpoint === '/playlists/0OxE9Q5A3FhXOn51gMW4wp/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1211,10 +926,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/3Bd1YD9MvXM7xW6PgeHKs6/tracks?fields=items%28added_at%29&limit=1&offset=12'
-  ) {
+  } else if (endpoint === '/playlists/3Bd1YD9MvXM7xW6PgeHKs6/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1222,10 +934,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5af9hlA2YoJEdOyNWZHO85/tracks?fields=items%28added_at%29&limit=1&offset=0'
-  ) {
+  } else if (endpoint === '/playlists/5af9hlA2YoJEdOyNWZHO85/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1233,10 +942,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1u4HagRrG0nktm4aBtdgnI/tracks?fields=items%28added_at%29&limit=1&offset=14'
-  ) {
+  } else if (endpoint === '/playlists/1u4HagRrG0nktm4aBtdgnI/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1244,10 +950,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/5rYCGSIcUQ8Ns99j2gw2Sr/tracks?fields=items%28added_at%29&limit=1&offset=31'
-  ) {
+  } else if (endpoint === '/playlists/5rYCGSIcUQ8Ns99j2gw2Sr/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1255,10 +958,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/0wq78NdSIJkaQ2pYtNjetE/tracks?fields=items%28added_at%29&limit=1&offset=196'
-  ) {
+  } else if (endpoint === '/playlists/0wq78NdSIJkaQ2pYtNjetE/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1266,10 +966,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/1pl5WGDoS49mVGAeKZt17s/tracks?fields=items%28added_at%29&limit=1&offset=90'
-  ) {
+  } else if (endpoint === '/playlists/1pl5WGDoS49mVGAeKZt17s/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {
@@ -1277,10 +974,7 @@ function getDataForPlaylistsTracks(endpoint) {
         },
       ],
     };
-  } else if (
-    endpoint ===
-    '/playlists/4cKmyLa36tSN334mDvyadA/tracks?fields=items%28added_at%29&limit=1&offset=4'
-  ) {
+  } else if (endpoint === '/playlists/4cKmyLa36tSN334mDvyadA/tracks?fields=items%28added_at%29') {
     return {
       items: [
         {

@@ -13,6 +13,9 @@ class SpotifyPlaylist {
     this.owner = new SpotifyUser(fromApi?.owner);
     this.images = fromApi?.images?.map((img) => new SpotifyImage(img));
     this.tracks = new SpotifyPlaylistTracks(fromApi);
+    if (fromApi?.added_at) {
+      this.added_at = new Date(fromApi.added_at);
+    }
   }
 }
 

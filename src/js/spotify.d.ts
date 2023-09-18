@@ -43,7 +43,7 @@ export type SpotifyPlaylistItems = {
 };
 
 export type SpotifyPlaylistItem = {
-  added_at: string;
+  added_at: date;
 };
 
 export type SpotifyQueue = {

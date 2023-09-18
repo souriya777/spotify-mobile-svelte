@@ -3,7 +3,7 @@
  */
 class SpotifyPlaylistItem {
   constructor(fromApi) {
-    this.added_at = fromApi?.added_at;
+    this.added_at = new Date(fromApi?.added_at);
   }
 }
 

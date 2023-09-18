@@ -40,6 +40,7 @@ import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActive
 import SpotifyAlbumCursor from '@/js/SpotifyAlbumCursor';
 import CursorFactory from '@/js/CursorFactory';
 import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
+import SpotifyPlaylist from './SpotifyPlaylist';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -236,7 +237,7 @@ class SpotifyApi {
    * @param {string} userId
    * @returns {Promise<import('@/js/spotify').SpotifyPlaylist[]>}
    */
-  async getPlaylistsRecentlyAdded(userId) {
+  async getPlaylistsSortedBySpotify(userId) {
     return await this.#getAllPlaylists(userId);
   }
 
@@ -256,27 +257,32 @@ class SpotifyApi {
   async getPlaylistsSortedAddedAtFIXME(userId) {
     const playlists = await this.#getAllPlaylists(userId);
 
-    const playlistExtendedPromises = playlists.map(async (list) => {
-      const playlistExtended = { ...list };
-      const total = playlistExtended?.tracks?.total;
-      const offset = total === 0 ? 0 : total - 1;
-
-      const data = await this.#get(
-        `/playlists/${playlistExtended.id}/tracks?fields=items%28added_at%29&limit=1&offset=${offset}`,
-      );
-      const lastItem = new SpotifyPlaylistItems(data)?.items;
-      const added_at = lastItem?.[0]?.['added_at'];
-
-      if (added_at) {
-        playlistExtended.added_at = new Date(added_at);
-      }
-
-      return playlistExtended;
+    const playlistExtendedPromises = playlists.map(async (playlist) => {
+      return this.extendPlaylistWithAddeAt(playlist);
     });
 
     const playlistsWithDate = await Promise.all(playlistExtendedPromises);
+    return playlistsWithDate?.sort((a, b) => (b.added_at > a.added_at ? 1 : -1));
+  }
 
-    return playlistsWithDate?.sort((a, b) => b.added_at - a.added_at);
+  /**
+   * @param {import('@/js/spotify').SpotifyPlaylist} playlist
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaylist>}
+   */
+  async extendPlaylistWithAddeAt(playlist) {
+    const result = new SpotifyPlaylist({ ...playlist });
+
+    const data = await this.#get(`/playlists/${playlist.id}/tracks?fields=items%28added_at%29`);
+
+    const items = new SpotifyPlaylistItems(data)?.items?.sort((a, b) => a.added_at - b.added_at);
+
+    const added_at = items?.[0]?.['added_at'];
+
+    if (added_at) {
+      result.added_at = new Date(added_at);
+    }
+
+    return result;
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */

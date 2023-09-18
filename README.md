@@ -19,18 +19,9 @@ Stone soup
 
 - LIST MOST API CALLS
 
-- feat(playlist): can get all playlists sorted `last-played`
 - feat(playlist): add `Liked` to all playlist
 - feat(playlist): add `pinned-playlists` to all playlist
 
-- feat(album): can get all albums sorted alphabetically
-- feat(album): can get all albums sorted `recently-added`
-- feat(album): can get all albums sorted `last-played`
-- feat(song): can sort song by `added_date`
-- feat(song): can sort song by `title`
-- feat(song): can sort song by `artist`
-- feat(song): can sort song by `album` ???
-- answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - feat(search): can search a song/artist/album/playlist
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
@@ -92,6 +83,7 @@ Stone soup
 
 ## demo
 
+- answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
 
@@ -155,6 +147,12 @@ after transfert-playback
 --> otherwise, we call api
 
 if `204` => `playback not available or active` (when no device playing something), we `transfert-playback` to us
+
+# spotify
+
+Has 2 APIs : one PUBLIC (`api.spotify.com/v1`) & one PRIVATE (`api-partner.spotify.com/pathfinder/v1/query`).
+
+Some opeartion, like `sorting playlist`, are not available in PUBLIC API... So we can't have exactly the same functionnalities or results as `native client spotify` or `web player spotify`
 
 # commit message
 

@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { userId } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
+  import Button from './Button.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -10,20 +11,29 @@
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
   let likedTracks = [];
 
+  let selected = 1;
+
   onMount(async () => {
     // get playlist
-    playlists = await SpotifyApi.getPlaylistsRecentlyAdded($userId);
+    sortBySpotify();
 
     // get album
     albums = await SpotifyApi.getMyAlbums();
   });
 
+  async function sortBySpotify() {
+    playlists = await SpotifyApi.getPlaylistsSortedBySpotify($userId);
+    selected = 1;
+  }
+
   async function sortAlphabetically() {
     playlists = await SpotifyApi.getPlaylistsSortedAlphabetically($userId);
+    selected = 2;
   }
 
   async function sortRecentlyAddedAt() {
     playlists = await SpotifyApi.getPlaylistsSortedAddedAtFIXME($userId);
+    selected = 3;
   }
 
   async function getLikedTracks() {
@@ -54,8 +64,13 @@
 <h2>Playlists</h2>
 
 <div>
-  <button on:click={sortAlphabetically}>🗂️abc</button>
-  <button on:click={sortRecentlyAddedAt}>🗂️recently-added-atFIXME</button>
+  <Button label="🗂️by-spotify" callback={sortBySpotify} selected={selected === 1} />
+  <Button label="🗂️abc" callback={sortAlphabetically} selected={selected === 2} />
+  <Button
+    label="🗂️recently-added-atFIXME"
+    callback={sortRecentlyAddedAt}
+    selected={selected === 3}
+  />
 </div>
 
 <ul>
