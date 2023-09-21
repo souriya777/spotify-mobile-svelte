@@ -19,10 +19,16 @@ Stone soup
 
 - LIST MOST API CALLS
 
+- refactor(view-result): ```
+<li>
+      <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
+      {album?.name}
+    </li>
+
+```
+
 - feat(playlist): add `Liked` to all playlist
 - feat(playlist): add `pinned-playlists` to all playlist
-
-- feat(search): can search a song/artist/album/playlist
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
 - feat(service-worker): invalidate when add like song ?
@@ -165,3 +171,4 @@ Some opeartion, like `sorting playlist`, are not available in PUBLIC API... So w
 - `style` : changement qui n'apporte aucune alteration fonctionnelle ou sémantique (indentation, mise en forme, ajout d'espace, renommante d'une variable...)
 - `docs` : rédaction ou mise à jour de documentation
 - `test` : ajout ou modification de tests
+```

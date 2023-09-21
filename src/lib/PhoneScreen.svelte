@@ -4,7 +4,8 @@
   import Debug from '@/lib/Debug.svelte';
   import { appReady } from '@/js/store';
   // import Player from '@/lib/Player.svelte';
-  import MyLib from '@/lib/MyLib.svelte';
+  // import MyLib from '@/lib/views/MyLibView.svelte';
+  import SearchView from '@/lib/views/SearchView.svelte';
   import Notification from '@/lib/Notification.svelte';
 </script>
 
@@ -20,7 +21,8 @@
 
     {#if $appReady}
       <!-- <Player /> -->
-      <MyLib />
+      <!-- <MyLib /> -->
+      <SearchView />
     {/if}
   </div>
 </div>

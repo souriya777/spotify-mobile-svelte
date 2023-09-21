@@ -149,3 +149,14 @@ export type SpotifyPlayerMetadataItem = {
   artists: SpotifyArtist[];
   images: SpotifyImage[];
 };
+
+export type SpotifySearch = {
+  albums: SpotifyAlbum[];
+  artists: SpotifySearchArtist[];
+  playlists: SpotifyPlaylist[];
+  tracks: SpotifyTrack[];
+};
+
+export interface SpotifySearchArtist extends SpotifyArtist {
+  images: SpotifyImage[];
+}

@@ -101,6 +101,6 @@
   }
 
   .isAnotherDeviceActive {
-    background-color: var(--color-active-player);
+    background-color: var(--color-active);
   }
 </style>

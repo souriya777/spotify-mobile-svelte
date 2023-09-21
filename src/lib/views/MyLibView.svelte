@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { userId } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
-  import Button from './Button.svelte';
+  import Button from '../Button.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];

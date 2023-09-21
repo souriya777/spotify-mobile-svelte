@@ -6,6 +6,7 @@ import { accessToken } from '@/js/store';
 import SpotifyApi from '@/js/SpotifyApi';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 
+import PLAYER_STATE_API_JSON from './api/player-state-api.json';
 import CURRENT_USER_JSON from './data/current-user.json';
 import PLAYBACK_STATE_JSON from './data/playback-state.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
@@ -19,7 +20,7 @@ import QUEUE_JSON from './data/queue.json';
 import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
 import PLAYER_STATE_JSON from './data/player-state.json';
 import SINGLE_PLAYLIST_JSON from './data/single-playlist.json';
-import PLAYER_STATE_API_JSON from './api/player-state-api.json';
+import SEARCH_SHERRY_JSON from './data/search-sherry.json';
 
 initSpotifyApi();
 
@@ -152,4 +153,10 @@ test(`transfertPlayback() not throwing exception`, async () => {
 
 test(`transfertPlayback() not throwing exception`, async () => {
   await SpotifyApi.transfertPlayback('my-device-id-123');
+});
+
+test(`search(query) returns SpotifySearch`, async () => {
+  const actual = await SpotifyApi.search('sherry');
+  const expected = { ...SEARCH_SHERRY_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });

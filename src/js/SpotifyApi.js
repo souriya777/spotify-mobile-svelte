@@ -40,7 +40,8 @@ import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActive
 import SpotifyAlbumCursor from '@/js/SpotifyAlbumCursor';
 import CursorFactory from '@/js/CursorFactory';
 import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
-import SpotifyPlaylist from './SpotifyPlaylist';
+import SpotifyPlaylist from '@/js/SpotifyPlaylist';
+import SpotifySearch from '@/js/SpotifySearch';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -357,6 +358,21 @@ class SpotifyApi {
     this.#put(`/me/player/volume?volume_percent=${newVolumePercent}`);
 
     volumePercent.set(newVolumePercent);
+  }
+
+  /**
+   * @param {string} query
+   * @returns {Promise<import('@/js/spotify').SpotifySearch>}
+   */
+  async search(query) {
+    const q = query;
+    const offset = 0;
+    const data = await this.#get(
+      `/search?q=${q}&type=album%2Cplaylist%2Ctrack%2Cartist&offset=${offset}`,
+    );
+    console.log(data, '🟢');
+    console.log(new SpotifySearch(data), '🟡');
+    return new SpotifySearch(data);
   }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
