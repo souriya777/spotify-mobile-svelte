@@ -370,8 +370,6 @@ class SpotifyApi {
     const data = await this.#get(
       `/search?q=${q}&type=album%2Cplaylist%2Ctrack%2Cartist&offset=${offset}`,
     );
-    console.log(data, '🟢');
-    console.log(new SpotifySearch(data), '🟡');
     return new SpotifySearch(data);
   }
 

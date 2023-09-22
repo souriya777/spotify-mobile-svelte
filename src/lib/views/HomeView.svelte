@@ -1,11 +1,3 @@
-<script>
-  import SpotifyMyAlbums from '@/lib/SpotifyMyAlbums.svelte';
-</script>
-
-<div>HOME</div>
-
-<SpotifyMyAlbums />
-
 <p>40 Most Beautiful Piano Classics</p>
 <div class="temp">
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusantium expedita quibusdam

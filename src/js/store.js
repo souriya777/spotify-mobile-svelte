@@ -33,9 +33,12 @@ const appReady = derived(
   ([$authorizationOk, $accessToken, $deviceId]) => $authorizationOk && $accessToken && $deviceId,
 );
 const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
+const searchQuery = writableLocalStorage('searchQuery', '');
+const currentPath = writableLocalStorage('currentPath', '/');
 
 // PLAYER
 const player = writable(null);
+const playerFull = writable(false);
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const playing = writable(false);
@@ -69,6 +72,7 @@ export {
   authorizationOk,
   deviceId,
   player,
+  playerFull,
   trackUri,
   trackName,
   albumName,
@@ -87,4 +91,6 @@ export {
   devices,
   appReady,
   serviceWorkerNotification,
+  searchQuery,
+  currentPath,
 };

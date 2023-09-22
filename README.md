@@ -19,6 +19,10 @@ Stone soup
 
 - LIST MOST API CALLS
 
+- feat(transition): test routing and transition...
+- fix(search): `fly%20up`...
+- feat(playlist): add `Liked` to all playlist
+- feat(playlist): add `pinned-playlists` to all playlist
 - refactor(view-result): ```
 <li>
       <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
@@ -27,8 +31,6 @@ Stone soup
 
 ```
 
-- feat(playlist): add `Liked` to all playlist
-- feat(playlist): add `pinned-playlists` to all playlist
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
 - feat(service-worker): invalidate when add like song ?

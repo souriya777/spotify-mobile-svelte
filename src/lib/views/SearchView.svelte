@@ -1,6 +1,8 @@
 <script>
+  import { onMount } from 'svelte';
   import { debounce } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
+  import { searchQuery } from '@/js/store';
 
   /** @type {import('@/js/spotify').SpotifySearch} */
   let searchResult = null;
@@ -23,19 +25,36 @@
   $: nextPlaylists = searchResult?.playlists?.slice(FIRST_RESULTS_LIMIT) ?? [];
   $: nextAlbums = searchResult?.albums?.slice(FIRST_RESULTS_LIMIT) ?? [];
 
-  const updateQuery = (e) =>
+  $: queryUrl = window.location.href.match(/(?<=search\/).*/i)?.[0] ?? '';
+
+  const updateQuery = (e) => {
+    const query = e?.target?.value;
+
+    if (!query) {
+      return;
+    }
+
+    search(query);
+  };
+
+  function search(query) {
+    window.history.pushState({}, 'new search', `/search/${query}`);
+    searchQuery.set(query);
+
     debounce(async () => {
-      const query = e?.target?.value;
-      if (query) {
-        console.log(query);
-        searchResult = await SpotifyApi.search(query);
-      }
+      searchResult = await SpotifyApi.search(query);
     }, 750);
+  }
+
+  onMount(() => {
+    search($searchQuery);
+  });
 </script>
 
 <div>
   <h1>search</h1>
-  <input type="text" on:input={updateQuery} />
+  <div>queryUrl:{queryUrl}</div>
+  <input type="text" on:input={updateQuery} bind:value={queryUrl} />
 
   <div>
     <h2>filters</h2>

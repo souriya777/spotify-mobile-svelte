@@ -2,11 +2,10 @@
   import PhoneStatus from '@/lib/PhoneStatus.svelte';
   import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
   import Debug from '@/lib/Debug.svelte';
-  import { appReady } from '@/js/store';
-  // import Player from '@/lib/Player.svelte';
-  // import MyLib from '@/lib/views/MyLibView.svelte';
-  import SearchView from '@/lib/views/SearchView.svelte';
+  import { appReady, playerFull } from '@/js/store';
   import Notification from '@/lib/Notification.svelte';
+  import Player from '@/lib/Player.svelte';
+  import Router from '@/lib/Router.svelte';
 </script>
 
 <div class="screen">
@@ -15,14 +14,19 @@
   </div>
 
   <div class="screen__content">
+    <SpotifyAuthentication />
     <Notification />
     <Debug />
-    <SpotifyAuthentication />
 
     {#if $appReady}
-      <!-- <Player /> -->
-      <!-- <MyLib /> -->
-      <SearchView />
+      <details open={$playerFull}>
+        <summary>
+          <button on:click={() => playerFull.update((state) => !state)}>player</button>
+        </summary>
+        <Player />
+      </details>
+
+      <Router />
     {/if}
   </div>
 </div>

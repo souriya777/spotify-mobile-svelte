@@ -12,22 +12,22 @@
     "env:cp": "bash .env-bash"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.4.5",
-    "eslint": "^8.47.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.6",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-svelte": "^2.33.0",
-    "happy-dom": "^10.11.1",
+    "eslint-plugin-svelte": "^2.33.2",
+    "happy-dom": "^12.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "prettier": "^3.0.2",
+    "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
-    "sass": "^1.66.1",
-    "svelte": "^4.2.0",
+    "sass": "^1.68.0",
+    "svelte": "^4.2.1",
     "vite": "^4.4.9",
-    "vitest": "^0.34.3"
+    "vitest": "^0.34.5"
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.5.1"
   },
   "lint-staged": {
     "*.js|svelte|css|scss|html": [
