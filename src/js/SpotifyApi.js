@@ -42,6 +42,7 @@ import CursorFactory from '@/js/CursorFactory';
 import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 import SpotifySearch from '@/js/SpotifySearch';
+import { isNotEmpty } from '@/js/souriya-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -365,6 +366,10 @@ class SpotifyApi {
    * @returns {Promise<import('@/js/spotify').SpotifySearch>}
    */
   async search(query) {
+    if (!isNotEmpty(query)) {
+      return;
+    }
+
     const q = query;
     const offset = 0;
     const data = await this.#get(
