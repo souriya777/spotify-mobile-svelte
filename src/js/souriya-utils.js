@@ -70,6 +70,10 @@ function appendScriptToBody(scriptUrl, async = true) {
   document.body.appendChild(script);
 }
 
+function isNotEmpty(str) {
+  return str !== null && str !== undefined && typeof str === 'string' && str.trim().length > 0;
+}
+
 export {
   NAME_REGEX,
   BIRTHDAY_REGEX,
@@ -81,4 +85,5 @@ export {
   observeElementScrolled,
   appendScriptToBody,
   hourMinute,
+  isNotEmpty,
 };
