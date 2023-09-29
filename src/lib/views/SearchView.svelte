@@ -26,6 +26,7 @@
   $: nextAlbums = searchResult?.albums?.slice(FIRST_RESULTS_LIMIT) ?? [];
 
   $: queryUrl = window.location.href.match(/(?<=search\/).*/i)?.[0] ?? '';
+  $: decodedQueryUrl = decodeURI(queryUrl);
 
   const updateQuery = (e) => {
     const query = e?.target?.value;
@@ -53,8 +54,8 @@
 
 <div>
   <h1>search</h1>
-  <div>queryUrl:{queryUrl}</div>
-  <input type="text" on:input={updateQuery} bind:value={queryUrl} />
+  <div>queryUrl:{decodedQueryUrl}</div>
+  <input type="text" on:input={updateQuery} bind:value={decodedQueryUrl} />
 
   <div>
     <h2>filters</h2>

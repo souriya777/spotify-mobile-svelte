@@ -20,7 +20,6 @@ Stone soup
 - LIST MOST API CALLS
 
 - feat(transition): test routing and transition...
-- fix(search): `fly%20up`...
 - feat(playlist): add `Liked` to all playlist
 - feat(playlist): add `pinned-playlists` to all playlist
 - refactor(view-result): ```
