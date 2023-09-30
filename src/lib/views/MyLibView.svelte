@@ -2,7 +2,8 @@
   import { onMount } from 'svelte';
   import { userId } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
-  import Button from '../Button.svelte';
+  import Button from '@/lib/Button.svelte';
+  import BetaLikedImg from '@/lib/img/BetaLikedImg.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -12,10 +13,13 @@
   let likedTracks = [];
 
   let selected = 1;
+  let totalLikedTracks;
 
   onMount(async () => {
     // get playlist
     sortBySpotify();
+
+    SpotifyApi.getLikedTracks().then((tracks) => (totalLikedTracks = tracks?.length));
 
     // get album
     albums = await SpotifyApi.getMyAlbums();
@@ -74,6 +78,11 @@
 </div>
 
 <ul>
+  <li>
+    <BetaLikedImg />
+    PINNED Liked songs {totalLikedTracks} titles
+  </li>
+
   {#each playlists as list}
     {@const image = list?.images?.at(-1)}
 

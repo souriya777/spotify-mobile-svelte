@@ -19,8 +19,6 @@ Stone soup
 
 - LIST MOST API CALLS
 
-- feat(transition): test routing and transition...
-- feat(playlist): add `Liked` to all playlist
 - feat(playlist): add `pinned-playlists` to all playlist
 - refactor(view-result): ```
 <li>
@@ -29,7 +27,6 @@ Stone soup
     </li>
 
 ```
-
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
 - feat(service-worker): invalidate when add like song ?
@@ -39,22 +36,26 @@ Stone soup
 - feat(browse): can see album detail
 - feat(browse): can see playlist detail
 - feat(song): can change order of a song in playlist
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
 - feat(spotify): `getPlaylists` deprecated ?
 
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+- feat(spotify):
+
+-- fade effect when switch
+  -- slide-left when in
+  -- slide-right when out
 - use use:onTap
 - position fixed : player & menu
 - feat(navigation): improve player & menu
@@ -86,6 +87,7 @@ Stone soup
 - feat(service-worker): strategy `what`, `when`
 - feat(realtime) : sync when ?
 - lazy load images
+- fix `BetaLikedImg`
 - lighthouse
 
 ## demo
@@ -173,3 +175,10 @@ Some opeartion, like `sorting playlist`, are not available in PUBLIC API... So w
 - `docs` : rédaction ou mise à jour de documentation
 - `test` : ajout ou modification de tests
 ```
+
+# tech
+
+- optimize with chrome
+  -- view transition API (chrome)
+  -- offline API ?
+- own simple router (`<svelte:component>`)
