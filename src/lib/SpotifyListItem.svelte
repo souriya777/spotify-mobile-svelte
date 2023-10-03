@@ -4,14 +4,16 @@
   export let imgWidth = 50;
   export let imgAlt;
   export let title;
-  export let author;
+  export let author = null;
 </script>
 
 <div class="preview-summary">
   <img src={imgUrl} alt={imgAlt} height={imgHeight} width={imgWidth} />
   <span class="text">
     {title}
-    <small>{author}</small>
+    {#if author}
+      <small>{author}</small>
+    {/if}
   </span>
 </div>
 
@@ -28,6 +30,6 @@
   img {
     display: inline-block;
     max-width: 50px;
-    height: auto;
+    max-height: 50px;
   }
 </style>

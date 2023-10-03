@@ -3,7 +3,10 @@
   import { debounce } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import { searchQuery } from '@/js/store';
-  import PreviewSummary from '@/lib/PreviewSummary.svelte';
+  import SpotifyListTrack from '@/lib/SpotifyListTrack.svelte';
+  import SpotifyListPlaylist from '@/lib/SpotifyListPlaylist.svelte';
+  import SpotifyListAlbum from '@/lib/SpotifyListAlbum.svelte';
+  import SpotifyListArtist from '@/lib/SpotifyListArtist.svelte';
 
   /** @type {import('@/js/spotify').SpotifySearch} */
   let searchResult = null;
@@ -119,164 +122,42 @@
 
   {#if displayTrackOn}
     <h3>1st tracks</h3>
-    <ul>
-      {#each firstTracks as track}
-        {@const album = track?.album}
-        {@const image = album?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={track?.name}
-            title={track?.name}
-            author="song"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListTrack items={firstTracks} />
   {/if}
 
   {#if displayArtistOn}
     <h3>1st artists</h3>
-    <ul>
-      {#each firstArtists as artist}
-        {@const image = artist?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={artist?.name}
-            title={artist?.name}
-            author="artist"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListArtist items={firstArtists} />
   {/if}
 
   {#if displayPlaylistOn}
     <h3>1st playlists</h3>
-    <ul>
-      {#each firstPlaylists as playlist}
-        {@const image = playlist?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={playlist?.name}
-            title={playlist?.name}
-            author="playlist"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListPlaylist items={firstPlaylists} />
   {/if}
 
   {#if displayAlbumOn}
     <h3>1st albums</h3>
-    <ul>
-      {#each firstAlbums as album}
-        {@const image = album?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={album?.name}
-            title={album?.name}
-            author="album"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListAlbum items={firstAlbums} />
   {/if}
 
   {#if displayTrackOn}
     <h3>next tracks</h3>
-    <ul>
-      {#each nextTracks as track}
-        {@const album = track?.album}
-        {@const image = album?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={track?.name}
-            title={track?.name}
-            author="song"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListTrack items={nextTracks} />
   {/if}
 
   {#if displayArtistOn}
     <h3>next artists</h3>
-    <ul>
-      {#each nextArtists as artist}
-        {@const image = artist?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={artist?.name}
-            title={artist?.name}
-            author="artist"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListArtist items={nextArtists} />
   {/if}
 
   {#if displayPlaylistOn}
     <h3>next playlists</h3>
-    <ul>
-      {#each nextPlaylists as playlist}
-        {@const image = playlist?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={playlist?.name}
-            title={playlist?.name}
-            author="playlist"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListPlaylist items={nextPlaylists} />
   {/if}
 
   {#if displayAlbumOn}
     <h3>next albums</h3>
-    <ul>
-      {#each nextAlbums as album}
-        {@const image = album?.images?.at(-1)}
-
-        <li>
-          <PreviewSummary
-            imgUrl={image?.url}
-            imgHeight={image?.height}
-            imgWidth={image?.width}
-            imgAlt={album?.name}
-            title={album?.name}
-            author="album"
-          />
-        </li>
-      {/each}
-    </ul>
+    <SpotifyListAlbum items={nextAlbums} />
   {/if}
 </div>
 
