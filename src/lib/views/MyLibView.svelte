@@ -72,7 +72,7 @@
 <ul>
   <li>
     <SpotifyListItem
-      imgUrl="https://misc.scdn.co/liked-songs/liked-songs-64.png"
+      imgUrl="/liked-songs-64.png"
       imgAlt="liked songs"
       title="Liked Songs"
       author={`${totalLikedTracks} titles`}

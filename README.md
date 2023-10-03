@@ -17,11 +17,8 @@ Stone soup
 
 ## mvp
 
-- LIST MOST API CALLS
+LIST MOST API CALLS
 
-- how puting `karaoke` at first ?
-- https://misc.scdn.co/liked-songs/liked-songs-64.png
-- fix(preview-summary): image are not all the same size (eg. 50x119)
 - feat(my-lib): add filter `playlists`, `albums`
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
@@ -88,6 +85,7 @@ Stone soup
 
 ## demo
 
+- how puting `karaoke` at first ?
 - answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
