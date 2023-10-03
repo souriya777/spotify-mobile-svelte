@@ -7,6 +7,16 @@
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
+        "artists": [
+          {
+            "name": "Franz Liszt",
+            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          },
+          {
+            "name": "Lang Lang",
+            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
@@ -49,6 +59,16 @@
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
+        "artists": [
+          {
+            "name": "Franz Liszt",
+            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          },
+          {
+            "name": "Lang Lang",
+            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
@@ -91,6 +111,16 @@
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
+        "artists": [
+          {
+            "name": "Franz Liszt",
+            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          },
+          {
+            "name": "Lang Lang",
+            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
@@ -133,6 +163,16 @@
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
+        "artists": [
+          {
+            "name": "Franz Liszt",
+            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          },
+          {
+            "name": "Lang Lang",
+            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
@@ -175,6 +215,16 @@
       "album": {
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
+        "artists": [
+          {
+            "name": "Franz Liszt",
+            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          },
+          {
+            "name": "Lang Lang",
+            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
@@ -217,6 +267,12 @@
       "album": {
         "uri": "spotify:album:3RNhp7YkJXZe3KJ3xlTHWb",
         "name": "Mistral gagnant",
+        "artists": [
+          {
+            "name": "Renaud",
+            "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b9cb0f33dc7ae3344f69282a",
@@ -252,6 +308,12 @@
       "album": {
         "uri": "spotify:album:3IKoAluhjCmtH178ee69Or",
         "name": "Ailleurs pour un ailleurs...",
+        "artists": [
+          {
+            "name": "Gérard Blanc",
+            "uri": "spotify:artist:7DXIujatSYhHHsoS8Hx8QI"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732501034fecb0b3af277d5f29",
@@ -287,6 +349,12 @@
       "album": {
         "uri": "spotify:album:5BXw5K0WzAncb6uMnCrnyW",
         "name": "Simplement",
+        "artists": [
+          {
+            "name": "Larusso",
+            "uri": "spotify:artist:07sMHU0vu01xrz1gnNrNry"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731b8db72ce142d1de0645e0b2",
@@ -322,6 +390,12 @@
       "album": {
         "uri": "spotify:album:4MZO9vKKh1XOxQ0TsQA5h6",
         "name": "Dis-lui",
+        "artists": [
+          {
+            "name": "Mike Brant",
+            "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dc8263393290e8803e210145",
@@ -357,6 +431,12 @@
       "album": {
         "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
         "name": "20eme anniversaire",
+        "artists": [
+          {
+            "name": "Mike Brant",
+            "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27367ed9c2113d97a041e1985a8",
@@ -392,6 +472,12 @@
       "album": {
         "uri": "spotify:album:2f1C7eXLkRfi1qftEZd2Nt",
         "name": "A Thousand Miles",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27391d21c2441897f996630d77e",
@@ -430,6 +516,12 @@
       "album": {
         "uri": "spotify:album:3xLQwjdgvbolBJmnPw4bH7",
         "name": "Tout oublier",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d2b132543a83d9b8e3232e59",
@@ -468,6 +560,12 @@
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
@@ -506,6 +604,12 @@
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
@@ -544,6 +648,12 @@
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
@@ -582,6 +692,12 @@
       "album": {
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
@@ -620,6 +736,12 @@
       "album": {
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
         "name": "Despacito",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273fe3a59387691ffc0527e46e4",
@@ -658,6 +780,12 @@
       "album": {
         "uri": "spotify:album:2Nzu9FszfqMFnq0I80hQq3",
         "name": "Souvenirs",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273286c7a21226f8efeed2a937b",
@@ -696,6 +824,12 @@
       "album": {
         "uri": "spotify:album:3ol1OlBfANygZVAzfXrf4t",
         "name": "Voyage voyage",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273851812580ebd12cc3291707a",
@@ -734,6 +868,12 @@
       "album": {
         "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",
         "name": "Je te laisserai des mots",
+        "artists": [
+          {
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27362cbca387081645514c28794",

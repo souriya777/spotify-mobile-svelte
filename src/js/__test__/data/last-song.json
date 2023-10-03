@@ -6,6 +6,16 @@
     "album": {
       "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
       "name": "Liszt - My Piano Hero",
+      "artists": [
+        {
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+        },
+        {
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",

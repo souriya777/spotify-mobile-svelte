@@ -62,14 +62,12 @@ test(`initAccessToken set access_token in store and change url to "/"`, async ()
 test(`/me returns SpotifyUser`, async () => {
   const actual = await SpotifyApi.me();
   const expected = { ...CURRENT_USER_JSON };
-
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
 test(`/me/player returns SpotifyPlaybackState`, async () => {
   const actual = await SpotifyApi.getPlaybackState();
   const expected = { ...PLAYBACK_STATE_JSON };
-
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 

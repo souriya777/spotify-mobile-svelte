@@ -3,6 +3,12 @@
     {
       "uri": "spotify:album:0FqBcVayol7wTMCAkzFcRN",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Pallaso",
+          "uri": "spotify:artist:6U4AfG84hnUE6pzjoS1cz5"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273939ced393a830fec905d2fb4",
@@ -24,6 +30,12 @@
     {
       "uri": "spotify:album:1zDZx8d8k4TsbKO1MR2TKk",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "We the Commas",
+          "uri": "spotify:artist:3oabe0TbaTk6yWddPOmgu1"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273717bd0d6897c804137f5722e",
@@ -45,6 +57,12 @@
     {
       "uri": "spotify:album:47uPjSO5bNHnD8nbPv9NM5",
       "name": "Sherry Baby",
+      "artists": [
+        {
+          "name": "Stayin' Alive Group",
+          "uri": "spotify:artist:7FlzgTmmg7QUdg4t03rs7L"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b27393d70bccfe7b915b2710164c",
@@ -66,6 +84,16 @@
     {
       "uri": "spotify:album:2NMSJzHJstXI2fDOgew9y7",
       "name": "ロードス島戦記　オリジナル・サウンドトラック",
+      "artists": [
+        {
+          "name": "Sherry",
+          "uri": "spotify:artist:5E0E6xz5kilwVZV1z1hVt5"
+        },
+        {
+          "name": "風のオーケストラ",
+          "uri": "spotify:artist:0T6DpeyMccTzeV3wyqJe17"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273390adf3eb55ba649bc87779c",
@@ -87,6 +115,12 @@
     {
       "uri": "spotify:album:1iNdy5mlsxdjbXgbMg1c8W",
       "name": "เธอไม่ได้สอนให้ฉันอยู่คนเดียว",
+      "artists": [
+        {
+          "name": "SHERRY",
+          "uri": "spotify:artist:3Uzr5SP3rk1GL9OdPYL0Rz"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2732a2bc4f03b6ce3af5cdb8974",
@@ -108,6 +142,12 @@
     {
       "uri": "spotify:album:0kShvXbnNGA7o4ux8d9rMo",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Multi-interprètes",
+          "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273bb2dd3da66c13cac021a5bb3",
@@ -129,6 +169,12 @@
     {
       "uri": "spotify:album:1JfxfAV7yRy49R8ec1gAme",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Henri Salvador",
+          "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2730d77b9d13a3ac78307a85a92",
@@ -150,6 +196,12 @@
     {
       "uri": "spotify:album:2PxaEhpoKp7qCbSUtVIRYw",
       "name": "Cherry Coco",
+      "artists": [
+        {
+          "name": "Oniisha",
+          "uri": "spotify:artist:5QjMLsuHSXIyF9GbWoVky1"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273563bcb87871fc56ffd68986e",
@@ -171,6 +223,12 @@
     {
       "uri": "spotify:album:4vDpfevGVUAKRrowAzVqxx",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Sherry?",
+          "uri": "spotify:artist:3E1183KUB3zNns8aU66tQT"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273174e06814a672fc18a87d8d2",
@@ -192,6 +250,12 @@
     {
       "uri": "spotify:album:5uk1t8nXjdZTL1gwSPZdO6",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Hiromi",
+          "uri": "spotify:artist:1VUXLwVBAqI3zqKGQ2Bx9h"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2734dc6eac84188ecae94154493",
@@ -213,6 +277,12 @@
     {
       "uri": "spotify:album:6AR71gOzOT0AwJIbPG7V7o",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Les Chats Sauvages",
+          "uri": "spotify:artist:60U5Nsvpj5mJics5PcIkmd"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2730f8acd5644d29ee649692635",
@@ -234,6 +304,12 @@
     {
       "uri": "spotify:album:38lNDVewnZj8bsCGIlchky",
       "name": "The Sherry Lee Show",
+      "artists": [
+        {
+          "name": "Jackie DeShannon",
+          "uri": "spotify:artist:0iVed2Qu7dmL0pIYCj1Xw8"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2734bcf5a226a01dbda716e3220",
@@ -255,6 +331,12 @@
     {
       "uri": "spotify:album:6ljCA01dvLkqbry8cCdvbD",
       "name": "Sherry",
+      "artists": [
+        {
+          "name": "Frankie Valli & The Four Seasons",
+          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273b025f04ab360692ab671d3a8",
@@ -276,6 +358,12 @@
     {
       "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
       "name": "Sherry and 11 Other Hits",
+      "artists": [
+        {
+          "name": "Frankie Valli & The Four Seasons",
+          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273dee7f5252c91824a57882177",
@@ -297,6 +385,12 @@
     {
       "uri": "spotify:album:3it7hqsNPi6YrZjpWAU5W2",
       "name": "Connections",
+      "artists": [
+        {
+          "name": "Sherry Finzer",
+          "uri": "spotify:artist:5udY4J3ruydRyg98yxTRHw"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273a4b0d6204e0a1f3a90af7887",
@@ -318,6 +412,12 @@
     {
       "uri": "spotify:album:3nHcATi2dBX2I0IWwvxWMj",
       "name": "Resilience",
+      "artists": [
+        {
+          "name": "Sherry Finzer",
+          "uri": "spotify:artist:5udY4J3ruydRyg98yxTRHw"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273dbeb016dc1e5e60145d34924",
@@ -339,6 +439,12 @@
     {
       "uri": "spotify:album:1g94L1WYjokPGJ9Kj5JGvO",
       "name": "Tecumsah Lane",
+      "artists": [
+        {
+          "name": "Sherry Sharp",
+          "uri": "spotify:artist:0CIQgNxgfEkY9Szpn5lAKO"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b27333865ea94bca44965cdbfc6d",
@@ -360,6 +466,12 @@
     {
       "uri": "spotify:album:6KLdyUiMVFKaYKoFYiGGBV",
       "name": "Mother's Day",
+      "artists": [
+        {
+          "name": "Sherry Novak",
+          "uri": "spotify:artist:47req48j8mLt69nZaBrial"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2732f13a1b3ec2a73f1735423ae",
@@ -381,6 +493,12 @@
     {
       "uri": "spotify:album:2msMQl2f7f8Qz1s4XmCMyU",
       "name": "Like A Cuddly Koala",
+      "artists": [
+        {
+          "name": "Sherry Grayson",
+          "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b273aca5cd1c8ce7e9cec70c56b4",
@@ -402,6 +520,12 @@
     {
       "uri": "spotify:album:3o23FSpxNHKSC4sfxhucJp",
       "name": "The Lonely Turtle",
+      "artists": [
+        {
+          "name": "Sherry Grayson",
+          "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b2731c0f569ebeafb3acff6b2387",
@@ -1322,6 +1446,12 @@
       "album": {
         "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
         "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
+        "artists": [
+          {
+            "name": "Jersey Boys",
+            "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a9ac825cee5e3985ea9d449d",
@@ -1354,6 +1484,12 @@
       "album": {
         "uri": "spotify:album:0NUEQILaBzavnzcMEs4buZ",
         "name": "The Very Best of Frankie Valli & The 4 Seasons",
+        "artists": [
+          {
+            "name": "Frankie Valli & The Four Seasons",
+            "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b96c21e15c091eb98a6c88a4",
@@ -1386,6 +1522,12 @@
       "album": {
         "uri": "spotify:album:5sCVURwZOOd13unG0uJmNX",
         "name": "Jersey Boys Original Broadway Cast Recording",
+        "artists": [
+          {
+            "name": "Jersey Boys",
+            "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273719da63af6072078bb73536d",
@@ -1418,6 +1560,12 @@
       "album": {
         "uri": "spotify:album:5f7Ux7Gh4kcYnD6Iv3y685",
         "name": "Lost Lullaby",
+        "artists": [
+          {
+            "name": "The Four Seasons",
+            "uri": "spotify:artist:4uHsvbEomrfo1KXllQ9K3s"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ace3b628902982268c436155",
@@ -1450,6 +1598,12 @@
       "album": {
         "uri": "spotify:album:1JDlLoZugxdneiaTnGyaKr",
         "name": "Let's Talk About Love",
+        "artists": [
+          {
+            "name": "Modern Talking",
+            "uri": "spotify:artist:79bxUQsBIXO8nVLB9fYKf7"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273aedd9728f5cc4b13ee49e061",
@@ -1482,6 +1636,12 @@
       "album": {
         "uri": "spotify:album:5C695UOQoQfAoPSnXT479i",
         "name": "Teardrops & Lost Lullabies",
+        "artists": [
+          {
+            "name": "Frankie Valli",
+            "uri": "spotify:artist:3CDKmzJu6uwEGnPLLZffpD"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2737cccd70f08d3071bd4e0537f",
@@ -1514,6 +1674,12 @@
       "album": {
         "uri": "spotify:album:6YNIEeDWqC09YIWzhoSVLg",
         "name": "The River",
+        "artists": [
+          {
+            "name": "Bruce Springsteen",
+            "uri": "spotify:artist:3eqjTLE0HfPfh78zjh6TqT"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2730e987064364e2b62ae1925b4",
@@ -1546,6 +1712,12 @@
       "album": {
         "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
         "name": "Sherry and 11 Other Hits",
+        "artists": [
+          {
+            "name": "Frankie Valli & The Four Seasons",
+            "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dee7f5252c91824a57882177",
@@ -1578,6 +1750,12 @@
       "album": {
         "uri": "spotify:album:5dR0fhE3oveLRSUMMQ3oRB",
         "name": "Marcy Playground",
+        "artists": [
+          {
+            "name": "Marcy Playground",
+            "uri": "spotify:artist:7AQzXO3NPNQsI7oNu5rC3r"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27337d1e5c1ca98ce1ecd754d04",
@@ -1610,6 +1788,12 @@
       "album": {
         "uri": "spotify:album:00V1MSXp0ral9K394aItww",
         "name": "Bruce Springsteen & The E Street Band - The Legendary 1979 No Nukes Concerts",
+        "artists": [
+          {
+            "name": "Bruce Springsteen",
+            "uri": "spotify:artist:3eqjTLE0HfPfh78zjh6TqT"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e9f5b49dc9a43a3c36068b0b",
@@ -1642,6 +1826,12 @@
       "album": {
         "uri": "spotify:album:6yDHXqAdyjYi4f1FBbl8dc",
         "name": "Feels Like Home, Vol. 1",
+        "artists": [
+          {
+            "name": "Israel & New Breed",
+            "uri": "spotify:artist:77HU1Zb1VDIFvWKteJii0E"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273081846ad9e99c9721e3e15b4",
@@ -1674,6 +1864,12 @@
       "album": {
         "uri": "spotify:album:6mYq35s2qwh2NyS8kMGi9n",
         "name": "Classic Oldie Hits",
+        "artists": [
+          {
+            "name": "Multi-interprètes",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d34c4c95e53866a0641fa966",
@@ -1706,6 +1902,12 @@
       "album": {
         "uri": "spotify:album:5DVNCzpvDrSEIFiU7hm8ey",
         "name": "The Runaways",
+        "artists": [
+          {
+            "name": "The Runaways",
+            "uri": "spotify:artist:5eTq3PxbOh5vgeRXKNqPyV"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a1c553575418ca43404cb48b",
@@ -1738,6 +1940,12 @@
       "album": {
         "uri": "spotify:album:0o7budYWrQllVgvRr5GGC0",
         "name": "Best of Monte Kristo (Le meilleur des années 80)",
+        "artists": [
+          {
+            "name": "Monte Kristo",
+            "uri": "spotify:artist:40PDu2X4PEAbzQGuRqGWsb"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27300383e88dac8b4ff82685858",
@@ -1770,6 +1978,12 @@
       "album": {
         "uri": "spotify:album:1lsLoE8KkPbRcX6Himtpno",
         "name": "Tahar Boumedienne Compilation 2023",
+        "artists": [
+          {
+            "name": "Multi-interprètes",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27399846998ebf3631d1c9b53c3",
@@ -1802,6 +2016,12 @@
       "album": {
         "uri": "spotify:album:0JjHp7nS2lKkwalcUyrWFn",
         "name": "My Truth",
+        "artists": [
+          {
+            "name": "Jonathan McReynolds",
+            "uri": "spotify:artist:5ItTHwcEtFh6DEOBheMub9"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273030c429538639bc5d0006247",
@@ -1834,6 +2054,12 @@
       "album": {
         "uri": "spotify:album:3gFcCl38Vch9JlHDP2WktC",
         "name": "Hallelujah Here Below",
+        "artists": [
+          {
+            "name": "Elevation Worship",
+            "uri": "spotify:artist:3YCKuqpv9nCsIhJ2v8SMix"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ce207f34412b5ac01061ea49",
@@ -1870,6 +2096,12 @@
       "album": {
         "uri": "spotify:album:2msMQl2f7f8Qz1s4XmCMyU",
         "name": "Like A Cuddly Koala",
+        "artists": [
+          {
+            "name": "Sherry Grayson",
+            "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273aca5cd1c8ce7e9cec70c56b4",
@@ -1902,6 +2134,12 @@
       "album": {
         "uri": "spotify:album:4SzEXwtTeJpoi6epKNHXmi",
         "name": "A State of Trance, Ibiza 2023 (Mixed by Armin van Buuren)",
+        "artists": [
+          {
+            "name": "Armin van Buuren",
+            "uri": "spotify:artist:0SfsnGyD8FpIN4U4WCkBZ5"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273970aafa8b6023774d26df5ba",
@@ -1938,6 +2176,12 @@
       "album": {
         "uri": "spotify:album:3o23FSpxNHKSC4sfxhucJp",
         "name": "The Lonely Turtle",
+        "artists": [
+          {
+            "name": "Sherry Grayson",
+            "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
+          }
+        ],
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731c0f569ebeafb3acff6b2387",

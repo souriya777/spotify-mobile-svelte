@@ -3,7 +3,7 @@
   import { userId } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import Button from '@/lib/Button.svelte';
-  import BetaLikedImg from '@/lib/img/BetaLikedImg.svelte';
+  import PreviewSummary from '@/lib/PreviewSummary.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -55,11 +55,18 @@
     {#each likedTracks as track, i}
       {@const album = track?.album}
       {@const image = album?.images?.at(-1)}
+      {@const artist = track?.artists?.map((t) => t?.name).join(', ')}
 
       <li>
-        <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
         {i + 1}
-        {track?.name} <small>{album?.name}</small>
+        <PreviewSummary
+          imgUrl={image?.url}
+          imgHeight={image?.height}
+          imgWidth={image?.width}
+          imgAlt={album?.name}
+          title={track?.name}
+          author={artist}
+        />
       </li>
     {/each}
   </ul>
@@ -79,16 +86,26 @@
 
 <ul>
   <li>
-    <BetaLikedImg />
-    PINNED Liked songs {totalLikedTracks} titles
+    <PreviewSummary
+      imgUrl="https://misc.scdn.co/liked-songs/liked-songs-64.png"
+      imgAlt="liked songs"
+      title="Liked Songs"
+      author={`${totalLikedTracks} titles`}
+    />
   </li>
 
   {#each playlists as list}
     {@const image = list?.images?.at(-1)}
 
     <li>
-      <img src={image?.url} alt={list?.name} height={image?.height} width={image?.width} />
-      {list?.name}
+      <PreviewSummary
+        imgUrl={image?.url}
+        imgHeight={image?.height}
+        imgWidth={image?.width}
+        imgAlt={list?.name}
+        title={list?.name}
+        author={list?.owner?.display_name}
+      />
     </li>
   {/each}
 </ul>
@@ -98,17 +115,23 @@
 <ul>
   {#each albums as album}
     {@const image = album?.images?.at(-1)}
+    {@const artist = album?.artists?.map((t) => t?.name).join(', ')}
+
     <li>
-      <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
-      {album?.name}
+      <PreviewSummary
+        imgUrl={image?.url}
+        imgHeight={image?.height}
+        imgWidth={image?.width}
+        imgAlt={album?.name}
+        title={album?.name}
+        author={artist}
+      />
     </li>
   {/each}
 </ul>
 
 <style>
-  img {
-    display: inline-block;
-    max-width: 50px;
-    height: auto;
+  li {
+    display: flex;
   }
 </style>

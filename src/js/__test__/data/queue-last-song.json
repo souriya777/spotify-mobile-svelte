@@ -5,6 +5,12 @@
   "album": {
     "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
     "name": "Reprises, Vol. 2",
+    "artists": [
+      {
+        "name": "Chloé Stafler",
+        "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+      }
+    ],
     "images": [
       {
         "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",

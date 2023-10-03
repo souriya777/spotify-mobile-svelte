@@ -19,24 +19,38 @@ Stone soup
 
 - LIST MOST API CALLS
 
-- feat(playlist): add `pinned-playlists` to all playlist
-- refactor(view-result): ```
-<li>
-      <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
-      {album?.name}
-    </li>
+- refactor(search-result): ```
+  <ul>
+        {#each firstTracks as track}
+          {@const album = track?.album}
+          {@const image = album?.images?.at(-1)}
 
-```
+          <li>
+            <PreviewSummary
+              imgUrl={image?.url}
+              imgHeight={image?.height}
+              imgWidth={image?.width}
+              imgAlt={track?.name}
+              title={track?.name}
+              author="song"
+            />
+          </li>
+        {/each}
+      </ul>
+
+````
+- https://misc.scdn.co/liked-songs/liked-songs-64.png
+- fix(preview-summary): image are not all the same size (eg. 50x119)
+- feat(my-lib): add filter `playlists`, `albums`
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
-- feat(service-worker): invalidate when add like song ?
 - feat(playlist): can create a playlist
 - feat(playlist): can rename it
 - feat(playlist): can remove it
 - feat(browse): can see album detail
 - feat(browse): can see playlist detail
 - feat(song): can change order of a song in playlist
-- feat(spotify): `getPlaylists` deprecated ?
+- feat(service-worker): invalidate when add like song ?
 
 - feat(spotify):
 - feat(spotify):
@@ -114,6 +128,8 @@ Stone soup
 
 ## bonus
 
+- fix in `SpotifyApi.test.js`
+```const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });```
 - feat(player): can manage other players
 - fix(spotify-connect): only a single instance in devices...
 - TODO do I use refresh_token ?
@@ -161,7 +177,9 @@ if `204` => `playback not available or active` (when no device playing something
 
 Has 2 APIs : one PUBLIC (`api.spotify.com/v1`) & one PRIVATE (`api-partner.spotify.com/pathfinder/v1/query`).
 
-Some opeartion, like `sorting playlist`, are not available in PUBLIC API... So we can't have exactly the same functionnalities or results as `native client spotify` or `web player spotify`
+Note for `private` API :
+- Some operation, like `sorting playlist`, are unavailable in PUBLIC API... So we can't have exactly the same functionnalities or results as `native client spotify` or `web player spotify`
+- "pinning" a playlist is unvailable too
 
 # commit message
 
@@ -174,7 +192,7 @@ Some opeartion, like `sorting playlist`, are not available in PUBLIC API... So w
 - `style` : changement qui n'apporte aucune alteration fonctionnelle ou sémantique (indentation, mise en forme, ajout d'espace, renommante d'une variable...)
 - `docs` : rédaction ou mise à jour de documentation
 - `test` : ajout ou modification de tests
-```
+````
 
 # tech
 

@@ -17,6 +17,12 @@
     "album": {
       "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
       "name": "20eme anniversaire",
+      "artists": [
+        {
+          "name": "Mike Brant",
+          "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
+        }
+      ],
       "images": [
         {
           "url": "https://i.scdn.co/image/ab67616d0000b27367ed9c2113d97a041e1985a8",

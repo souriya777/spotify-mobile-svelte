@@ -3,6 +3,7 @@
   import { debounce } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import { searchQuery } from '@/js/store';
+  import PreviewSummary from '@/lib/PreviewSummary.svelte';
 
   /** @type {import('@/js/spotify').SpotifySearch} */
   let searchResult = null;
@@ -124,9 +125,14 @@
         {@const image = album?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={track?.name} height={image?.height} width={image?.width} />
-          {track?.name}
-          <small>song</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={track?.name}
+            title={track?.name}
+            author="song"
+          />
         </li>
       {/each}
     </ul>
@@ -139,9 +145,14 @@
         {@const image = artist?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={artist?.name} height={image?.height} width={image?.width} />
-          {artist?.name}
-          <small>artist</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={artist?.name}
+            title={artist?.name}
+            author="artist"
+          />
         </li>
       {/each}
     </ul>
@@ -154,9 +165,14 @@
         {@const image = playlist?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={playlist?.name} height={image?.height} width={image?.width} />
-          {playlist?.name}
-          <small>playlist</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={playlist?.name}
+            title={playlist?.name}
+            author="playlist"
+          />
         </li>
       {/each}
     </ul>
@@ -169,9 +185,14 @@
         {@const image = album?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
-          {album?.name}
-          <small>album</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={album?.name}
+            title={album?.name}
+            author="album"
+          />
         </li>
       {/each}
     </ul>
@@ -185,9 +206,14 @@
         {@const image = album?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={track?.name} height={image?.height} width={image?.width} />
-          {track?.name}
-          <small>song</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={track?.name}
+            title={track?.name}
+            author="song"
+          />
         </li>
       {/each}
     </ul>
@@ -200,9 +226,14 @@
         {@const image = artist?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={artist?.name} height={image?.height} width={image?.width} />
-          {artist?.name}
-          <small>artist</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={artist?.name}
+            title={artist?.name}
+            author="artist"
+          />
         </li>
       {/each}
     </ul>
@@ -215,9 +246,14 @@
         {@const image = playlist?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={playlist?.name} height={image?.height} width={image?.width} />
-          {playlist?.name}
-          <small>playlist</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={playlist?.name}
+            title={playlist?.name}
+            author="playlist"
+          />
         </li>
       {/each}
     </ul>
@@ -230,9 +266,14 @@
         {@const image = album?.images?.at(-1)}
 
         <li>
-          <img src={image?.url} alt={album?.name} height={image?.height} width={image?.width} />
-          {album?.name}
-          <small>album</small>
+          <PreviewSummary
+            imgUrl={image?.url}
+            imgHeight={image?.height}
+            imgWidth={image?.width}
+            imgAlt={album?.name}
+            title={album?.name}
+            author="album"
+          />
         </li>
       {/each}
     </ul>
@@ -240,12 +281,6 @@
 </div>
 
 <style>
-  img {
-    display: inline-block;
-    max-width: 50px;
-    height: auto;
-  }
-
   button.active {
     background-color: var(--color-active);
   }
