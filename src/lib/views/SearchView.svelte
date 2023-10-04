@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { displayFilter } from '@/js/store';
   import { debounce } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import { searchQuery } from '@/js/store';
@@ -10,14 +11,8 @@
 
   /** @type {import('@/js/spotify').SpotifySearch} */
   let searchResult = null;
-  let displayTrackOn = true;
-  let displayArtistOn = true;
-  let displayPlaylistOn = true;
-  let displayAlbumOn = true;
 
   const FIRST_RESULTS_LIMIT = 3;
-
-  $: displayTopOn = displayTrackOn && displayArtistOn && displayPlaylistOn && displayAlbumOn;
 
   $: firstTracks = searchResult?.tracks?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
   $: firstArtists = searchResult?.artists?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
@@ -63,99 +58,75 @@
 
   <div>
     <h2>filters</h2>
-    <button
-      class:active={displayTopOn}
-      on:click={() => {
-        displayTrackOn = true;
-        displayArtistOn = true;
-        displayPlaylistOn = true;
-        displayAlbumOn = true;
-      }}>top</button
-    >
+
+    <button class:active={$displayFilter.topOn} on:click={displayFilter.filterNone}> top </button>
+
     {#if firstTracks.length > 0}
-      <button
-        class:active={!displayTopOn && displayTrackOn}
-        on:click={() => {
-          displayTrackOn = true;
-          displayArtistOn = false;
-          displayPlaylistOn = false;
-          displayAlbumOn = false;
-        }}>track</button
-      >
+      <button class:active={$displayFilter.trackActive} on:click={displayFilter.filterTrackOnly}>
+        track
+      </button>
     {/if}
+
     {#if firstArtists.length > 0}
-      <button
-        class:active={!displayTopOn && displayArtistOn}
-        on:click={() => {
-          displayTrackOn = false;
-          displayArtistOn = true;
-          displayPlaylistOn = false;
-          displayAlbumOn = false;
-        }}>artist</button
-      >
+      <button class:active={$displayFilter.artistActive} on:click={displayFilter.filterArtistOnly}>
+        artist
+      </button>
     {/if}
+
     {#if firstPlaylists.length > 0}
       <button
-        class:active={!displayTopOn && displayPlaylistOn}
-        on:click={() => {
-          displayTrackOn = false;
-          displayArtistOn = false;
-          displayPlaylistOn = true;
-          displayAlbumOn = false;
-        }}>playlist</button
+        class:active={$displayFilter.playlistActive}
+        on:click={displayFilter.filterPlaylistOnly}
       >
+        playlist
+      </button>
     {/if}
+
     {#if firstAlbums.length > 0}
-      <button
-        class:active={!displayTopOn && displayAlbumOn}
-        on:click={() => {
-          displayTrackOn = false;
-          displayArtistOn = false;
-          displayPlaylistOn = false;
-          displayAlbumOn = true;
-        }}>album</button
-      >
+      <button class:active={$displayFilter.albumActive} on:click={displayFilter.filterAlbumOnly}>
+        album
+      </button>
     {/if}
   </div>
 
   <h2>results</h2>
 
-  {#if displayTrackOn}
+  {#if $displayFilter.trackOn}
     <h3>1st tracks</h3>
     <SpotifyListTrack items={firstTracks} />
   {/if}
 
-  {#if displayArtistOn}
+  {#if $displayFilter.artistOn}
     <h3>1st artists</h3>
     <SpotifyListArtist items={firstArtists} />
   {/if}
 
-  {#if displayPlaylistOn}
+  {#if $displayFilter.playlistOn}
     <h3>1st playlists</h3>
     <SpotifyListPlaylist items={firstPlaylists} />
   {/if}
 
-  {#if displayAlbumOn}
+  {#if $displayFilter.albumOn}
     <h3>1st albums</h3>
     <SpotifyListAlbum items={firstAlbums} />
   {/if}
 
-  {#if displayTrackOn}
+  {#if $displayFilter.trackOn}
     <h3>next tracks</h3>
     <SpotifyListTrack items={nextTracks} />
   {/if}
 
-  {#if displayArtistOn}
+  {#if $displayFilter.artistOn}
     <h3>next artists</h3>
     <SpotifyListArtist items={nextArtists} />
   {/if}
 
-  {#if displayPlaylistOn}
+  {#if $displayFilter.playlistOn}
     <h3>next playlists</h3>
     <SpotifyListPlaylist items={nextPlaylists} />
   {/if}
 
-  {#if displayAlbumOn}
+  {#if $displayFilter.albumOn}
     <h3>next albums</h3>
     <SpotifyListAlbum items={nextAlbums} />
   {/if}

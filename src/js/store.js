@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import { writableLocalStorage } from '@/js/store-utils';
+import { createDisplayFilter, writableLocalStorage } from '@/js/store-utils';
 import SpotifyRepeatState from '@/js/SpotifyRepeatState';
 
 // ACCESS
@@ -65,6 +65,16 @@ const realTimeProgressMs = derived(
     };
   },
 );
+const displayTrackOn = writable(true);
+const displayArtistOn = writable(true);
+const displayPlaylistOn = writable(true);
+const displayAlbumOn = writable(true);
+const displayTopOn = derived(
+  [displayTrackOn, displayArtistOn, displayPlaylistOn, displayAlbumOn],
+  ([$displayTrackOn, $displayArtistOn, $displayPlaylistOn, $displayAlbumOn]) =>
+    $displayTrackOn && $displayArtistOn && $displayPlaylistOn && $displayAlbumOn,
+);
+const displayFilter = createDisplayFilter();
 
 export {
   accessToken,
@@ -93,4 +103,10 @@ export {
   serviceWorkerNotification,
   searchQuery,
   currentPath,
+  displayTrackOn,
+  displayArtistOn,
+  displayPlaylistOn,
+  displayAlbumOn,
+  displayTopOn,
+  displayFilter,
 };

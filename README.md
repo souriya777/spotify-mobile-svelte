@@ -19,7 +19,7 @@ Stone soup
 
 LIST MOST API CALLS
 
-- feat(my-lib): add filter `playlists`, `albums`
+- feat(my-lib): add filter on `track`, `albums`, `playlists`, `artist`
 - feat(playlist): can add song to playlist
 - feat(song): can liked a song
 - feat(playlist): can create a playlist
