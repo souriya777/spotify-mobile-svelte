@@ -8,6 +8,7 @@
   import SpotifyListPlaylist from '@/lib/SpotifyListPlaylist.svelte';
   import SpotifyListAlbum from '@/lib/SpotifyListAlbum.svelte';
   import SpotifyListArtist from '@/lib/SpotifyListArtist.svelte';
+  import ListFilter from '@/lib/ListFilter.svelte';
 
   /** @type {import('@/js/spotify').SpotifySearch} */
   let searchResult = null;
@@ -56,38 +57,12 @@
   <div>queryUrl:{decodedQueryUrl}</div>
   <input type="text" on:input={updateQuery} bind:value={decodedQueryUrl} />
 
-  <div>
-    <h2>filters</h2>
-
-    <button class:active={$displayFilter.topOn} on:click={displayFilter.filterNone}> top </button>
-
-    {#if firstTracks.length > 0}
-      <button class:active={$displayFilter.trackActive} on:click={displayFilter.filterTrackOnly}>
-        track
-      </button>
-    {/if}
-
-    {#if firstArtists.length > 0}
-      <button class:active={$displayFilter.artistActive} on:click={displayFilter.filterArtistOnly}>
-        artist
-      </button>
-    {/if}
-
-    {#if firstPlaylists.length > 0}
-      <button
-        class:active={$displayFilter.playlistActive}
-        on:click={displayFilter.filterPlaylistOnly}
-      >
-        playlist
-      </button>
-    {/if}
-
-    {#if firstAlbums.length > 0}
-      <button class:active={$displayFilter.albumActive} on:click={displayFilter.filterAlbumOnly}>
-        album
-      </button>
-    {/if}
-  </div>
+  <ListFilter
+    hasTracks={firstTracks.length > 0}
+    hasAlbums={firstAlbums.length > 0}
+    hasPlaylists={firstPlaylists.length > 0}
+    hasArtists={firstArtists.length > 0}
+  />
 
   <h2>results</h2>
 
@@ -131,9 +106,3 @@
     <SpotifyListAlbum items={nextAlbums} />
   {/if}
 </div>
-
-<style>
-  button.active {
-    background-color: var(--color-active);
-  }
-</style>

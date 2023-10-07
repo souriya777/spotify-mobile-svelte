@@ -1,5 +1,6 @@
 import SpotifySongCursor from '@/js/SpotifySongCursor';
 import SpotifyPlaylistCursor from '@/js/SpotifyPlaylistCursor';
+import SpotifyArtistCursor from '@/js/SpotifyArtistCursor';
 
 class CursorFactory {
   static createCursor(type, args) {
@@ -9,6 +10,10 @@ class CursorFactory {
 
     if (type === 'SpotifyPlaylistCursor') {
       return new SpotifyPlaylistCursor(args);
+    }
+
+    if (type === 'SpotifyArtistCursor') {
+      return new SpotifyArtistCursor(args);
     }
   }
 }

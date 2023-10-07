@@ -7,25 +7,29 @@
   import SpotifyListTrack from '@/lib/SpotifyListTrack.svelte';
   import SpotifyListPlaylist from '@/lib/SpotifyListPlaylist.svelte';
   import SpotifyListAlbum from '@/lib/SpotifyListAlbum.svelte';
+  import SpotifyListArtist from '@/lib/SpotifyListArtist.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
   /** @type {import('@/js/spotify').SpotifyAlbum[]} */
   let albums = [];
+  /** @type {import('@/js/spotify').SpotifySearchArtist[]} */
+  let artists = [];
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
   let likedTracks = [];
 
   let selected = 1;
   let totalLikedTracks;
 
-  onMount(async () => {
+  onMount(() => {
     // get playlist
     sortBySpotify();
 
     SpotifyApi.getLikedTracks().then((tracks) => (totalLikedTracks = tracks?.length));
 
-    // get album
-    albums = await SpotifyApi.getMyAlbums();
+    SpotifyApi.getMyAlbums().then((items) => (albums = items));
+
+    SpotifyApi.getMyFollowedArtists().then((items) => (artists = items));
   });
 
   async function sortBySpotify() {
@@ -85,6 +89,10 @@
 <h2>Albums</h2>
 
 <SpotifyListAlbum items={albums} />
+
+<h2>Artists</h2>
+
+<SpotifyListArtist items={artists} />
 
 <style>
   li {

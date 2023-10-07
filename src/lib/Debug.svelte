@@ -36,5 +36,6 @@
     >playlists ABC</button
   >
   <button on:click={() => SpotifyApi.getMyAlbums()}>my-albums</button>
+  <button on:click={() => SpotifyApi.getMyFollowedArtists()}>my-followed-artist</button>
   <button on:click={() => SpotifyApi.disconnect()}>disconnect</button>
 </details>

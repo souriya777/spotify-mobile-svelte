@@ -14,6 +14,7 @@ import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added
 import MY_PLAYLISTS_SORTED_ALPHABETICALLY_JSON from './data/my-playlists-sorted-alphabetically.json';
 import LIKED_SONGS_JSON from './data/liked-songs.json';
 import MY_ALBUMS_JSON from './data/my-albums.json';
+import MY_FOLLOWING_ARTITSTS_JSON from './data/my-following-artists.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
 import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
@@ -24,10 +25,10 @@ import SEARCH_SHERRY_JSON from './data/search-sherry.json';
 
 initSpotifyApi();
 
-test(`goToAuthorizeUrl() redirect to a generated a sportify-authorization-url"`, async () => {
+test(`goToAuthorizeUrl() redirect to a generated a spotify-authorization-url"`, async () => {
   SpotifyApi.goToAuthorizeUrl();
   expect(window.location.href).toEqual(
-    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
+    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state%20user-follow-read&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
   );
 });
 
@@ -111,6 +112,12 @@ test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {
 test(`/me/albums returns SpotifyAlbum[]`, async () => {
   const actual = await SpotifyApi.getMyAlbums();
   const expected = [...MY_ALBUMS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/me/following returns SpotifySearchArtist[]`, async () => {
+  const actual = await SpotifyApi.getMyFollowedArtists();
+  const expected = [...MY_FOLLOWING_ARTITSTS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 

@@ -300,6 +300,16 @@ class SpotifyApi {
     return new SpotifyAlbumCursor(data)?.items?.map((item) => item?.album);
   }
 
+  /** @return {Promise<import('@/js/spotify').SpotifySearchArtist[]>} */
+  async getMyFollowedArtists() {
+    /** @type {import('@/js/spotify').SpotifySearchArtist[]} */
+    const artists = await this.#iterateOverCursor(
+      `/me/following?type=artist&limit=50`,
+      'SpotifyArtistCursor',
+    );
+    return artists;
+  }
+
   /** @returns {Promise<import('@/js/spotify').SpotifySong[]>} */
   async getRecentlyPlayedSongs() {
     const data = await this.#get(`/me/player/recently-played`);
@@ -491,6 +501,16 @@ class SpotifyApi {
           throw new PlaybackNotAvailableOrActiveError(
             'Spotify returns 204 -> playback not available or active',
           );
+        }
+        /**
+          GET /me/following?type=artist behaves almost the same
+          way as SpotifySongCursor or SpotifyPlaylistCursor, except
+          that an "artists" properties wrapped {... items, next...}
+        */
+        // https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
+        else if (/\/me\/following\?type=artist/gi.test(endpoint)) {
+          console.log('testa', data?.artists);
+          return data?.artists;
         }
 
         return data;

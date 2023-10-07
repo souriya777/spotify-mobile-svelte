@@ -59,20 +59,6 @@ export type SpotifyImage = {
   width: number;
 };
 
-export type SpotifyAlbumCursor = {
-  href: string;
-  limit: number;
-  offset: number;
-  total: number;
-  next: string;
-  previous: string;
-  items: SpotifyAlbumItemCursor[];
-};
-
-export type SpotifyAlbumItemCursor = {
-  album: SpotifyAlbum;
-};
-
 export interface Cursor {
   href: string;
   limit: number;
@@ -86,9 +72,21 @@ export interface SpotifySongCursor extends Cursor {
   items: SpotifySong[];
 }
 
+export interface SpotifyAlbumCursor extends Cursor {
+  items: SpotifyAlbumItemCursor[];
+}
+
 export interface SpotifyPlaylistCursor extends Cursor {
   items: SpotifyPlaylist[];
 }
+
+export interface SpotifyArtistCursor extends Cursor {
+  items: SpotifySearchArtist[];
+}
+
+export type SpotifyAlbumItemCursor = {
+  album: SpotifyAlbum;
+};
 
 export type SpotifyDevice = {
   id: string;

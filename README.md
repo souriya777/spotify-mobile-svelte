@@ -21,29 +21,21 @@ LIST MOST API CALLS
 
 - feat(my-lib): add filter on `track`, `albums`, `playlists`, `artist`
 - feat(playlist): can add song to playlist
+- feat(playlist): can re-order song
 - feat(song): can liked a song
-- feat(playlist): can create a playlist
+- feat(browse): can see album detail
+- feat(playlist): can create it
 - feat(playlist): can rename it
 - feat(playlist): can remove it
-- feat(browse): can see album detail
-- feat(browse): can see playlist detail
-- feat(song): can change order of a song in playlist
-- feat(service-worker): invalidate when add like song ?
+- feat(radio): can go to radio
+- feat(login): can login via SSO
+- feat(logout): can logout
 
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
-- feat(spotify):
+- feat(
+
+- feat(cache): find a strategy
+- feat(cache): optimize it
+- feat(service-worker): invalidate when add like song ?
 
 -- fade effect when switch
 -- slide-left when in
@@ -73,6 +65,8 @@ LIST MOST API CALLS
 - space
 - color
 - px
+
+- feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
 
 ## perf
 
@@ -108,6 +102,7 @@ LIST MOST API CALLS
 
 ## bonus
 
+- playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
 - fix in `SpotifyApi.test.js`
   `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
 - feat(player): can manage other players

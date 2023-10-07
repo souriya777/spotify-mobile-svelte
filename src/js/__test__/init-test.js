@@ -5,6 +5,8 @@ import CURRENT_USER_API_JSON from './api/current-user-api.json';
 import PLAYBACK_STATE_API_JSON from './api/playback-state-api.json';
 import AVAILABLE_DEVICES_API_JSON from './api/available-devices-api.json';
 import MY_ALBUMS_API_JSON from './api/my-albums-api.json';
+import MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON from './api/my-following-artists-offset-0-api.json';
+import MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON from './api/my-following-artists-offset-50-api.json';
 import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
 import QUEUE_API_JSON from './api/queue-api.json';
 import MY_PLAYLISTS_OFFSET_0_API_JSON from './api/my-playlists-offset-0-api.json';
@@ -67,6 +69,10 @@ function getData(method, url, headers, data) {
       return { ...AVAILABLE_DEVICES_API_JSON };
     } else if (endpoint === '/me/albums') {
       return { ...MY_ALBUMS_API_JSON };
+    } else if (endpoint === '/me/following?type=artist&limit=50') {
+      return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON };
+    } else if (/\/me\/following\?type=artist.*&after=/g.test(endpoint)) {
+      return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON };
     } else if (endpoint === '/me/player/recently-played') {
       return { ...RECENTLY_PLAYED_API_JSON };
     } else if (endpoint === '/me/player/queue') {
