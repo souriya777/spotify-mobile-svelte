@@ -37,12 +37,12 @@ import SpotifyPlaybackStateAdapter from '@/js/SpotifyPlaybackStateAdapter';
 import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy } from '@/js/time-utils';
 import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
-import SpotifyAlbumCursor from '@/js/SpotifyAlbumCursor';
 import CursorFactory from '@/js/CursorFactory';
 import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 import SpotifySearch from '@/js/SpotifySearch';
 import { isNotEmpty } from '@/js/souriya-utils';
+import SpotifyAlbum from './SpotifyAlbum';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -296,8 +296,9 @@ class SpotifyApi {
 
   /** @return {Promise<import('@/js/spotify').SpotifyAlbum[]>} */
   async getMyAlbums() {
-    const data = await this.#get('/me/albums');
-    return new SpotifyAlbumCursor(data)?.items?.map((item) => item?.album);
+    /** @type {import('@/js/spotify').SpotifyAlbumItemCursor[]} */
+    const albums = await this.#iterateOverCursor(`/me/albums?limit=50`, 'SpotifyAlbumCursor');
+    return albums?.map((item) => new SpotifyAlbum(item?.album));
   }
 
   /** @return {Promise<import('@/js/spotify').SpotifySearchArtist[]>} */

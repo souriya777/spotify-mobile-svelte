@@ -1,16 +1,19 @@
 <script>
   import { displayFilter } from '@/js/store';
 
-  export let hasTracks;
-  export let hasArtists;
-  export let hasPlaylists;
-  export let hasAlbums;
+  export let displayTop = true;
+  export let hasTracks = false;
+  export let hasArtists = false;
+  export let hasPlaylists = false;
+  export let hasAlbums = false;
 </script>
 
 <div>
   <h2>filters</h2>
 
-  <button class:active={$displayFilter.topOn} on:click={displayFilter.filterNone}> top </button>
+  {#if displayTop}
+    <button class:active={$displayFilter.topOn} on:click={displayFilter.filterNone}> top </button>
+  {/if}
 
   {#if hasTracks}
     <button class:active={$displayFilter.trackActive} on:click={displayFilter.filterTrackOnly}>

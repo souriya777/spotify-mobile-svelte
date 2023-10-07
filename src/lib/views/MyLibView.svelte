@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { userId } from '@/js/store';
+  import { userId, displayFilter } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import Button from '@/lib/Button.svelte';
   import SpotifyListItem from '@/lib/SpotifyListItem.svelte';
@@ -8,6 +8,7 @@
   import SpotifyListPlaylist from '@/lib/SpotifyListPlaylist.svelte';
   import SpotifyListAlbum from '@/lib/SpotifyListAlbum.svelte';
   import SpotifyListArtist from '@/lib/SpotifyListArtist.svelte';
+  import ListFilter from '@/lib/ListFilter.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -54,45 +55,56 @@
 
 <h1>My Lib</h1>
 
-<h2>Playlists ABC</h2>
+<ListFilter
+  displayTop={false}
+  hasAlbums={albums.length > 0}
+  hasPlaylists={playlists.length > 0}
+  hasArtists={artists.length > 0}
+/>
 
-<detail>
-  <summary><button on:click={getLikedTracks}>LIKED❤️</button></summary>
-  <SpotifyListTrack items={likedTracks} />
-</detail>
+{#if $displayFilter.playlistOn}
+  <detail>
+    <summary><button on:click={getLikedTracks}>LIKED❤️</button></summary>
+    <SpotifyListTrack items={likedTracks} />
+  </detail>
 
-<h2>Playlists</h2>
+  <h2>Playlists</h2>
 
-<div>
-  <Button label="🗂️by-spotify" callback={sortBySpotify} selected={selected === 1} />
-  <Button label="🗂️abc" callback={sortAlphabetically} selected={selected === 2} />
-  <Button
-    label="🗂️recently-added-atFIXME"
-    callback={sortRecentlyAddedAt}
-    selected={selected === 3}
-  />
-</div>
-
-<ul>
-  <li>
-    <SpotifyListItem
-      imgUrl="/liked-songs-64.png"
-      imgAlt="liked songs"
-      title="Liked Songs"
-      author={`${totalLikedTracks} titles`}
+  <div>
+    <Button label="🗂️by-spotify" callback={sortBySpotify} selected={selected === 1} />
+    <Button label="🗂️abc" callback={sortAlphabetically} selected={selected === 2} />
+    <Button
+      label="🗂️recently-added-atFIXME"
+      callback={sortRecentlyAddedAt}
+      selected={selected === 3}
     />
-  </li>
+  </div>
 
-  <SpotifyListPlaylist items={playlists} />
-</ul>
+  <ul>
+    <li>
+      <SpotifyListItem
+        imgUrl="/liked-songs-64.png"
+        imgAlt="liked songs"
+        title="Liked Songs"
+        author={`${totalLikedTracks} titles`}
+      />
+    </li>
 
-<h2>Albums</h2>
+    <SpotifyListPlaylist items={playlists} />
+  </ul>
+{/if}
 
-<SpotifyListAlbum items={albums} />
+{#if $displayFilter.albumOn}
+  <h2>Albums</h2>
 
-<h2>Artists</h2>
+  <SpotifyListAlbum items={albums} />
+{/if}
 
-<SpotifyListArtist items={artists} />
+{#if $displayFilter.artistOn}
+  <h2>Artists</h2>
+
+  <SpotifyListArtist items={artists} />
+{/if}
 
 <style>
   li {
