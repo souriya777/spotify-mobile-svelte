@@ -1,0 +1,2290 @@
+[
+  {
+    "uri": "spotify:album:13xlpKbai3GGoMSr75lOeX",
+    "name": "Into The Wild (Music For The Motion Picture)",
+    "artists": [
+      {
+        "name": "Eddie Vedder",
+        "uri": "spotify:artist:0mXTJETA4XUa12MmmXxZJh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733ed52339ae78ac1b695e8d80",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023ed52339ae78ac1b695e8d80",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513ed52339ae78ac1b695e8d80",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-30T20:38:36.000Z"
+  },
+  {
+    "uri": "spotify:album:5w3m2Moqe9dcVHSzIUfmsE",
+    "name": "Dreamgirls (Music from the Motion Picture)",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2734ff6b691780844247bc981ea",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e024ff6b691780844247bc981ea",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048514ff6b691780844247bc981ea",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-19T00:08:37.000Z"
+  },
+  {
+    "uri": "spotify:album:1E7V8YSMBzpyuGVHrXT7ZW",
+    "name": "Tchaikovsky: Violin Concerto",
+    "artists": [
+      {
+        "name": "Pyotr Ilyich Tchaikovsky",
+        "uri": "spotify:artist:3MKCzCnpzw3TjUYs2v7vDA"
+      },
+      {
+        "name": "Janine Jansen",
+        "uri": "spotify:artist:00hfOKuZEhvKKNXmVdb1We"
+      },
+      {
+        "name": "Mahler Chamber Orchestra",
+        "uri": "spotify:artist:5g44FyRrB0AUEdQbqW4jAo"
+      },
+      {
+        "name": "Daniel Harding",
+        "uri": "spotify:artist:3sjupE75AphhTX12fgkQv6"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273b82f01d5e00e2581f3252b86",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02b82f01d5e00e2581f3252b86",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851b82f01d5e00e2581f3252b86",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-08T10:49:08.000Z"
+  },
+  {
+    "uri": "spotify:album:2fopqZRJz4oYR3ftxBAUWy",
+    "name": "Gran Turismo 5 (Original Game Soundtrack)",
+    "artists": [
+      {
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27318b9afc962978bce3c7b4e1d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0218b9afc962978bce3c7b4e1d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485118b9afc962978bce3c7b4e1d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-06T09:15:53.000Z"
+  },
+  {
+    "uri": "spotify:album:2UJcKiJxNryhL050F5Z1Fk",
+    "name": "Nevermind (Remastered)",
+    "artists": [
+      {
+        "name": "Nirvana",
+        "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273fbc71c99f9c1296c56dd51b6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02fbc71c99f9c1296c56dd51b6",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851fbc71c99f9c1296c56dd51b6",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-05T21:21:15.000Z"
+  },
+  {
+    "uri": "spotify:album:2TGMa7UcpLmLkPhn1p3Ff4",
+    "name": "Orelsan et Gringe sont les Casseurs Flowters",
+    "artists": [
+      {
+        "name": "Casseurs Flowters",
+        "uri": "spotify:artist:5sXx89ZqVFOUKTl5g2uiST"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2737e3da1103022c12cb530ca84",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e027e3da1103022c12cb530ca84",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048517e3da1103022c12cb530ca84",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T08:20:31.000Z"
+  },
+  {
+    "uri": "spotify:album:2hQ9QcZ4VkoeBdBo1JNG64",
+    "name": "Nonante-Cinq La Suite",
+    "artists": [
+      {
+        "name": "Angèle",
+        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27397011e40525bc67e15e6ba88",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0297011e40525bc67e15e6ba88",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485197011e40525bc67e15e6ba88",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T07:15:29.000Z"
+  },
+  {
+    "uri": "spotify:album:2UrPmvaX5X76LIzE6Cfiqu",
+    "name": "Brol La Suite",
+    "artists": [
+      {
+        "name": "Angèle",
+        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273df8a2ed8111de3161c4a4c30",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02df8a2ed8111de3161c4a4c30",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851df8a2ed8111de3161c4a4c30",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T07:14:55.000Z"
+  },
+  {
+    "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
+    "name": "Multitude",
+    "artists": [
+      {
+        "name": "Stromae",
+        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736af3a93773dcb59a67ab2953",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026af3a93773dcb59a67ab2953",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516af3a93773dcb59a67ab2953",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T07:13:38.000Z"
+  },
+  {
+    "uri": "spotify:album:5nyLaTsztHW8mI1KAWeGkS",
+    "name": "La fête est finie - EPILOGUE",
+    "artists": [
+      {
+        "name": "Orelsan",
+        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733331ab0675406c3c6d711c25",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023331ab0675406c3c6d711c25",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513331ab0675406c3c6d711c25",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T07:12:57.000Z"
+  },
+  {
+    "uri": "spotify:album:289Fqj7ymVK3DcbgXPKkBm",
+    "name": "Le Poisson Rouge",
+    "artists": [
+      {
+        "name": "Disiz",
+        "uri": "spotify:artist:7rz6ZZErn5YFDteXKhyf3g"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2731f8eb733baad61deb622a83f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e021f8eb733baad61deb622a83f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048511f8eb733baad61deb622a83f",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-09T08:14:04.000Z"
+  },
+  {
+    "uri": "spotify:album:0OJA0WEHoOoTF6D8pGRDlv",
+    "name": "Rodrigo y Gabriela (Deluxe Edition)",
+    "artists": [
+      {
+        "name": "Rodrigo y Gabriela",
+        "uri": "spotify:artist:7vX3cMVyW8gtDA4y855ynF"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e28048a6755f28c6343e3eed",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e28048a6755f28c6343e3eed",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e28048a6755f28c6343e3eed",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-05-12T07:20:38.000Z"
+  },
+  {
+    "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh",
+    "name": "Les tentations (Édition collector 1997-2017)",
+    "artists": [
+      {
+        "name": "Passi",
+        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e458b538238c7e4ecf548d61",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e458b538238c7e4ecf548d61",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e458b538238c7e4ecf548d61",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-05-06T14:28:11.000Z"
+  },
+  {
+    "uri": "spotify:album:0ALfQaGYSvcRNV5OLbixA3",
+    "name": "My Worlds (International Version)",
+    "artists": [
+      {
+        "name": "Justin Bieber",
+        "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735832ee286fa8a6964ceb960a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025832ee286fa8a6964ceb960a",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515832ee286fa8a6964ceb960a",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-01-18T19:18:37.000Z"
+  },
+  {
+    "uri": "spotify:album:6uyslsVGFsHKzdGUosFwBM",
+    "name": "racine carrée",
+    "artists": [
+      {
+        "name": "Stromae",
+        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ab580fab750cc9baf0d52b5c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ab580fab750cc9baf0d52b5c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ab580fab750cc9baf0d52b5c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-01-13T17:58:09.000Z"
+  },
+  {
+    "uri": "spotify:album:26bQ8ka40C7SjHhqyNrqoj",
+    "name": "40 Most Beautiful Piano Classics",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735f6972ebe670054306cbe7be",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025f6972ebe670054306cbe7be",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515f6972ebe670054306cbe7be",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-01-12T15:17:23.000Z"
+  },
+  {
+    "uri": "spotify:album:5WrJgstjRAPiS3x4GjEPQG",
+    "name": "Extraterrien",
+    "artists": [
+      {
+        "name": "Kamini",
+        "uri": "spotify:artist:0AFEmxYJqHfNUtADd6eWhc"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273c2e1e197b261ccc8de76a2fc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02c2e1e197b261ccc8de76a2fc",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851c2e1e197b261ccc8de76a2fc",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-11-06T20:05:45.000Z"
+  },
+  {
+    "uri": "spotify:album:03axqfxRqRe9p3LwiTh4GX",
+    "name": "Paganini: 24 Caprices",
+    "artists": [
+      {
+        "name": "Niccolò Paganini",
+        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
+      },
+      {
+        "name": "Leonidas Kavakos",
+        "uri": "spotify:artist:16XP6b4v1MdN8UYRBlgVKn"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2739e04cda776a6738b24543b8a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e029e04cda776a6738b24543b8a",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048519e04cda776a6738b24543b8a",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-10-21T10:06:13.000Z"
+  },
+  {
+    "uri": "spotify:album:1xGcZ2k4CX1haXxCMPm2Jl",
+    "name": "Paganini: 24 Capricci",
+    "artists": [
+      {
+        "name": "Niccolò Paganini",
+        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
+      },
+      {
+        "name": "Salvatore Accardo",
+        "uri": "spotify:artist:4J806QjdyKrK4guMFMRzKc"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735d9b839dfbd981a2f036ef55",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025d9b839dfbd981a2f036ef55",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515d9b839dfbd981a2f036ef55",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-10-19T12:54:14.000Z"
+  },
+  {
+    "uri": "spotify:album:3syYFlKHyCm7zb4otxwD95",
+    "name": "Bach: Goldberg Variations (Extended Edt.)",
+    "artists": [
+      {
+        "name": "Johann Sebastian Bach",
+        "uri": "spotify:artist:5aIqB5nVVvmFsvSdExz408"
+      },
+      {
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      },
+      {
+        "name": "Gottfried Heinrich Stölzel",
+        "uri": "spotify:artist:1Wx4iiPR6d1bFxxAujNLTL"
+      },
+      {
+        "name": "Johann Gottlieb Goldberg",
+        "uri": "spotify:artist:5E26lyQXoDmCaf1sRmpWwu"
+      },
+      {
+        "name": "Robert Schumann",
+        "uri": "spotify:artist:2UqjDAXnDxejEyE0CzfUrZ"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273826ef7be1aeffbec04a8d648",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02826ef7be1aeffbec04a8d648",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851826ef7be1aeffbec04a8d648",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-07-08T16:58:30.000Z"
+  },
+  {
+    "uri": "spotify:album:51bIaARfKerKLsB25ouVQ2",
+    "name": "On My Mind",
+    "artists": [
+      {
+        "name": "Chris Heria",
+        "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27352d646bbd325c14074037190",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0252d646bbd325c14074037190",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485152d646bbd325c14074037190",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-06-26T05:44:14.000Z"
+  },
+  {
+    "uri": "spotify:album:3hCYcpUfJHIFsv87liuqeJ",
+    "name": "Hold Me Close",
+    "artists": [
+      {
+        "name": "Chris Heria",
+        "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ac13ebd9f186b0fda11c5288",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ac13ebd9f186b0fda11c5288",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ac13ebd9f186b0fda11c5288",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-06-26T05:44:10.000Z"
+  },
+  {
+    "uri": "spotify:album:2o2GBOfy2GG9oKYZgfZkur",
+    "name": "Civilisation",
+    "artists": [
+      {
+        "name": "Orelsan",
+        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27358ba1ea637001f9a15e55a92",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0258ba1ea637001f9a15e55a92",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485158ba1ea637001f9a15e55a92",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-06-15T21:35:55.000Z"
+  },
+  {
+    "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
+    "name": "Liszt - My Piano Hero",
+    "artists": [
+      {
+        "name": "Franz Liszt",
+        "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+      },
+      {
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-04-21T08:19:12.000Z"
+  },
+  {
+    "uri": "spotify:album:7q2B4M5EiBkqrlsNW8lB7N",
+    "name": "2001",
+    "artists": [
+      {
+        "name": "Dr. Dre",
+        "uri": "spotify:artist:6DPYiyq5kWVQS4RGwxzPC7"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2739b19c107109de740bad72df5",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e029b19c107109de740bad72df5",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048519b19c107109de740bad72df5",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-04-13T11:47:11.000Z"
+  },
+  {
+    "uri": "spotify:album:2noRn2Aes5aoNVsU6iWThc",
+    "name": "Discovery",
+    "artists": [
+      {
+        "name": "Daft Punk",
+        "uri": "spotify:artist:4tZwfgrHOc3mvqYlEYSvVi"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273b33d46dfa2635a47eebf63b2",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02b33d46dfa2635a47eebf63b2",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851b33d46dfa2635a47eebf63b2",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-03-18T13:47:36.000Z"
+  },
+  {
+    "uri": "spotify:album:5TedEgCbtmvDnXzUtXEFJY",
+    "name": "Born to Do It",
+    "artists": [
+      {
+        "name": "Craig David",
+        "uri": "spotify:artist:2JyWXPbkqI5ZJa3gwqVa0c"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2737c2e92fb2302f8e8fcd9b389",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e027c2e92fb2302f8e8fcd9b389",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048517c2e92fb2302f8e8fcd9b389",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-03-17T21:41:39.000Z"
+  },
+  {
+    "uri": "spotify:album:1XoE7ZirQ3gjxq8HIzTJU9",
+    "name": "COWBOY BEBOP (Original Motion Picture Soundtrack)",
+    "artists": [
+      {
+        "name": "SEATBELTS",
+        "uri": "spotify:artist:3U3zr5PCRa9ty74uN46iBa"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e90a54d6e31d9ff3f1d566fa",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e90a54d6e31d9ff3f1d566fa",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e90a54d6e31d9ff3f1d566fa",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-01-30T00:55:27.000Z"
+  },
+  {
+    "uri": "spotify:album:2n5AOB0lGse7qp38HvVROB",
+    "name": "(500) Days of Summer (Music from the Motion Picture)",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2738c2d226f555a702986a85bc0",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e028c2d226f555a702986a85bc0",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048518c2d226f555a702986a85bc0",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-01-25T08:20:31.000Z"
+  },
+  {
+    "uri": "spotify:album:3i1Z5tXLX7VKGGTjiOrcJU",
+    "name": "Songs From a World Apart",
+    "artists": [
+      {
+        "name": "Lévon Minassian",
+        "uri": "spotify:artist:36fU1D7VBlwnCf293gMzhT"
+      },
+      {
+        "name": "Armand Amar",
+        "uri": "spotify:artist:2fJb06JRcuBWypwj46TQZj"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a7ed1458c34fdc6e07db303d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a7ed1458c34fdc6e07db303d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a7ed1458c34fdc6e07db303d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-12-02T08:50:10.000Z"
+  },
+  {
+    "uri": "spotify:album:1mARKMZVJY8ezLEs2K9j3d",
+    "name": "Drop",
+    "artists": [
+      {
+        "name": "StreamBeats by Harris Heller",
+        "uri": "spotify:artist:6GTRLqqiBPUqaOgyxOraHp"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273150a68fdb450c0119f2ad7b0",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02150a68fdb450c0119f2ad7b0",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851150a68fdb450c0119f2ad7b0",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-11-20T16:04:24.000Z"
+  },
+  {
+    "uri": "spotify:album:0mtLFaQ3hL371jsNraRo9g",
+    "name": "Dirty Dancing (Original Motion Picture Soundtrack)",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ac19c6552524d207aac1277b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ac19c6552524d207aac1277b",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ac19c6552524d207aac1277b",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-11-05T20:55:56.000Z"
+  },
+  {
+    "uri": "spotify:album:3UCtCwB9nl9meUYM52Z8t5",
+    "name": "NGRTD",
+    "artists": [
+      {
+        "name": "Youssoupha",
+        "uri": "spotify:artist:5DW7NxqQ2875JtjuV7KMn4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273bd4ecb0e97836235fefc497a",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02bd4ecb0e97836235fefc497a",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851bd4ecb0e97836235fefc497a",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-10-01T12:36:27.000Z"
+  },
+  {
+    "uri": "spotify:album:4LZfrG7nvMvXhz4AQDqAN3",
+    "name": "Less Is More (Deluxe)",
+    "artists": [
+      {
+        "name": "Lost Frequencies",
+        "uri": "spotify:artist:7f5Zgnp2spUuuzKplmRkt7"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273480ac70c796b5024ee2eee1f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02480ac70c796b5024ee2eee1f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851480ac70c796b5024ee2eee1f",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-09-14T08:35:39.000Z"
+  },
+  {
+    "uri": "spotify:album:2uEf3r9i2bnxwJQsxQ0xQ7",
+    "name": "Nevermind (Deluxe Edition)",
+    "artists": [
+      {
+        "name": "Nirvana",
+        "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27328a90d00a2819504364880e4",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0228a90d00a2819504364880e4",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485128a90d00a2819504364880e4",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-07-09T15:24:21.000Z"
+  },
+  {
+    "uri": "spotify:album:1ak1aKu5l4UwtM1zh7UiMC",
+    "name": "Mari Trini Con los Panchos",
+    "artists": [
+      {
+        "name": "Mari Trini",
+        "uri": "spotify:artist:0CVHw8AAgA5brxfblp1lsQ"
+      },
+      {
+        "name": "Los Panchos",
+        "uri": "spotify:artist:3Ker27Wbb9OcUHGs54JIAz"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735b55fdbdaecf60eab5398fa0",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025b55fdbdaecf60eab5398fa0",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515b55fdbdaecf60eab5398fa0",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-06-09T13:22:31.000Z"
+  },
+  {
+    "uri": "spotify:album:6x6I3lpDmXNGGrRdaC6ktL",
+    "name": "Les tentations",
+    "artists": [
+      {
+        "name": "Passi",
+        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27327a70ad0bcea12d93a43cc91",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0227a70ad0bcea12d93a43cc91",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485127a70ad0bcea12d93a43cc91",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-06-06T07:54:22.000Z"
+  },
+  {
+    "uri": "spotify:album:46paHZ8Md6AICwfjybLjOM",
+    "name": "Crash Landing on You (Original Television Soundtrack)",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733d2fd951c4cb4a33358f7159",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023d2fd951c4cb4a33358f7159",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513d2fd951c4cb4a33358f7159",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-01-25T08:04:26.000Z"
+  },
+  {
+    "uri": "spotify:album:0ylbO515jtrovpxr1drKdF",
+    "name": "Lang Lang: The Chopin Album",
+    "artists": [
+      {
+        "name": "Frédéric Chopin",
+        "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
+      },
+      {
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a5ce972031744697ffa86c6f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a5ce972031744697ffa86c6f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a5ce972031744697ffa86c6f",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-01-23T17:21:58.000Z"
+  },
+  {
+    "uri": "spotify:album:3AMXFnwHWXCvNr5NCCpLZI",
+    "name": "TRON: Legacy - The Complete Edition (Original Motion Picture Soundtrack)",
+    "artists": [
+      {
+        "name": "Daft Punk",
+        "uri": "spotify:artist:4tZwfgrHOc3mvqYlEYSvVi"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2738323143296ff7b2801e32789",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e028323143296ff7b2801e32789",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048518323143296ff7b2801e32789",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-01-19T07:46:51.000Z"
+  },
+  {
+    "uri": "spotify:album:0Ryad9M1b1MxSjgXdHCh1c",
+    "name": "Una Mattina",
+    "artists": [
+      {
+        "name": "Ludovico Einaudi",
+        "uri": "spotify:artist:2uFUBdaVGtyMqckSeCl0Qj"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273c0c021c0ac135d923b3a0ddc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02c0c021c0ac135d923b3a0ddc",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851c0c021c0ac135d923b3a0ddc",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-01-11T19:40:37.000Z"
+  },
+  {
+    "uri": "spotify:album:7LxBrkZXrZZTLHRiDEJfqx",
+    "name": "Workout Music",
+    "artists": [
+      {
+        "name": "Chris Heria",
+        "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e452d6f03675585a12a90456",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e452d6f03675585a12a90456",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e452d6f03675585a12a90456",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-11-28T21:52:00.000Z"
+  },
+  {
+    "uri": "spotify:album:5REnhhd1rjGtdvmSGKf89c",
+    "name": "Le fabuleux destin d'Amélie Poulain (Bande originale de film)",
+    "artists": [
+      {
+        "name": "Yann Tiersen",
+        "uri": "spotify:artist:00sazWvoTLOqg5MFwC68Um"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273569e86314606acd889922d39",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02569e86314606acd889922d39",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851569e86314606acd889922d39",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-09-23T09:30:59.000Z"
+  },
+  {
+    "uri": "spotify:album:2oHUGMpScQKwHtQw95dZLZ",
+    "name": "Happiness Therapy",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ba7a6a539504a387e6f651ab",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ba7a6a539504a387e6f651ab",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ba7a6a539504a387e6f651ab",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-08-07T10:22:42.000Z"
+  },
+  {
+    "uri": "spotify:album:3xybjP7r2VsWzwvDQipdM0",
+    "name": "Freudian",
+    "artists": [
+      {
+        "name": "Daniel Caesar",
+        "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733138f891f3075c9c5d944037",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023138f891f3075c9c5d944037",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513138f891f3075c9c5d944037",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-06-19T08:52:18.000Z"
+  },
+  {
+    "uri": "spotify:album:52A9oIcEgY9llf0hQ3d0Bb",
+    "name": "Paganini / Spohr: Violin Concertos incld. Listening Guide",
+    "artists": [
+      {
+        "name": "Hilary Hahn",
+        "uri": "spotify:artist:5JdT0LYJdlPbTC58p60WTX"
+      },
+      {
+        "name": "Swedish Radio Symphony Orchestra",
+        "uri": "spotify:artist:0K6ufQj8JzIZPPkvZrEwJS"
+      },
+      {
+        "name": "Eije Oue",
+        "uri": "spotify:artist:7l8HgcLsRg3x9IbeAQjaGz"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a027a41ea6f9c4aed6b0a04b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a027a41ea6f9c4aed6b0a04b",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a027a41ea6f9c4aed6b0a04b",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-05-18T18:18:39.000Z"
+  },
+  {
+    "uri": "spotify:album:55bxux5NGwsurOUlXfT2cv",
+    "name": "Pasaporte",
+    "artists": [
+      {
+        "name": "Alexander Abreu",
+        "uri": "spotify:artist:2YnskQkgb6kTSXh9YcNzgu"
+      },
+      {
+        "name": "Havana D’Primera",
+        "uri": "spotify:artist:05qiwKzU1RgkyqkEH1ZFlA"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27340da74331c45f848b2090f4d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0240da74331c45f848b2090f4d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485140da74331c45f848b2090f4d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-03-07T16:30:00.000Z"
+  },
+  {
+    "uri": "spotify:album:0bosuo6IFI5MPs29r4vVcV",
+    "name": "Huey Dunbar IV",
+    "artists": [
+      {
+        "name": "Huey Dunbar",
+        "uri": "spotify:artist:6fhCq41xOJnMGIvFd13Oft"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27353efd373b97f2ba0e03bb147",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0253efd373b97f2ba0e03bb147",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485153efd373b97f2ba0e03bb147",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-03-05T18:30:26.000Z"
+  },
+  {
+    "uri": "spotify:album:0qRYw8PUU2AE7MPTvC9AwF",
+    "name": "2001",
+    "artists": [
+      {
+        "name": "Dr. Dre",
+        "uri": "spotify:artist:6DPYiyq5kWVQS4RGwxzPC7"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a71c21048a9ec9271800be45",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a71c21048a9ec9271800be45",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a71c21048a9ec9271800be45",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-02-22T09:54:46.000Z"
+  },
+  {
+    "uri": "spotify:album:5nGcPv2kxjBJ3Mk0QPXZnm",
+    "name": "Herencia Africana",
+    "artists": [
+      {
+        "name": "Yuri Buenaventura",
+        "uri": "spotify:artist:7FIeKWN0FTtzvQ1i7Z1aTx"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273898ce0075282e4f3efaadef1",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02898ce0075282e4f3efaadef1",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851898ce0075282e4f3efaadef1",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-02-14T13:32:13.000Z"
+  },
+  {
+    "uri": "spotify:album:58kRTFztL9vdX3lnwugShN",
+    "name": "Lindsey Stirling",
+    "artists": [
+      {
+        "name": "Lindsey Stirling",
+        "uri": "spotify:artist:378dH6EszOLFShpRzAQkVM"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735dd445aedd1a14524aa9ef79",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025dd445aedd1a14524aa9ef79",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515dd445aedd1a14524aa9ef79",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-01-22T09:12:04.000Z"
+  },
+  {
+    "uri": "spotify:album:6KSvWFf4g4PrIldtchJsTC",
+    "name": "Brol",
+    "artists": [
+      {
+        "name": "Angèle",
+        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2732433cb43f0f2f0f23b7c8b82",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e022433cb43f0f2f0f23b7c8b82",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048512433cb43f0f2f0f23b7c8b82",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-01-04T10:15:33.000Z"
+  },
+  {
+    "uri": "spotify:album:3zXdL8n7OMWKY156NgUZ4m",
+    "name": "A Lo Cubano",
+    "artists": [
+      {
+        "name": "Orishas",
+        "uri": "spotify:artist:2gKYxTUOqw9aPt7ljMwSHT"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273227aaae82ae48821db8d7e34",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02227aaae82ae48821db8d7e34",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851227aaae82ae48821db8d7e34",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-10-15T17:17:29.000Z"
+  },
+  {
+    "uri": "spotify:album:6L5uROBQ5wy3MOPI334RHE",
+    "name": "Enter The Dru",
+    "artists": [
+      {
+        "name": "Dru Hill",
+        "uri": "spotify:artist:1255GTUKNCLCTvH9ctD4cT"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273677c540448268b663711ca81",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02677c540448268b663711ca81",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851677c540448268b663711ca81",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-10-14T16:06:51.000Z"
+  },
+  {
+    "uri": "spotify:album:796mwl4j1EFonUd7zdA6g5",
+    "name": "Four",
+    "artists": [
+      {
+        "name": "Nelson Freitas",
+        "uri": "spotify:artist:6yWyIM8jA96kl3jlCXpabB"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273c43372364469d51d0a921747",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02c43372364469d51d0a921747",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851c43372364469d51d0a921747",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-10-02T19:29:48.000Z"
+  },
+  {
+    "uri": "spotify:album:5VMa7BgPzwjGfEPiGaJSPv",
+    "name": "Parce qu'on vient de loin",
+    "artists": [
+      {
+        "name": "Corneille",
+        "uri": "spotify:artist:2GBDOaCl73BVUs2RerIme7"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2737c4a882c95861e214732f2f3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e027c4a882c95861e214732f2f3",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048517c4a882c95861e214732f2f3",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-09-15T10:36:01.000Z"
+  },
+  {
+    "uri": "spotify:album:3eG7SaLEdlmKLapewG6m4J",
+    "name": "Suprême NTM",
+    "artists": [
+      {
+        "name": "Suprême NTM",
+        "uri": "spotify:artist:4ko6Ysxtvx9EY9GEFslrIz"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273b0af6c9d26487cf55ba0efd6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02b0af6c9d26487cf55ba0efd6",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851b0af6c9d26487cf55ba0efd6",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-09-01T12:45:46.000Z"
+  },
+  {
+    "uri": "spotify:album:2XRuEEbhMF9Q4TcJBw4GqP",
+    "name": "Parasite",
+    "artists": [
+      {
+        "name": "jung jaeil",
+        "uri": "spotify:artist:34J5kKR5szbJ5fGK7f8HCU"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273854550981c004932423fe4f2",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02854550981c004932423fe4f2",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851854550981c004932423fe4f2",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-07-31T21:42:35.000Z"
+  },
+  {
+    "uri": "spotify:album:2pr82skmvIlEQ1BsFShcgN",
+    "name": "David Oistrakh - Concertos and Encores",
+    "artists": [
+      {
+        "name": "David Oistrakh",
+        "uri": "spotify:artist:7o2OjTu0Ls0xiWl3RzjdVp"
+      },
+      {
+        "name": "Vladimir Yampolsky",
+        "uri": "spotify:artist:7J7lgWyeaBpyuA6ZhCH3jL"
+      },
+      {
+        "name": "USSR State Symphony Orchestra",
+        "uri": "spotify:artist:1DMt4oqEDfdHBeoH3BD0bk"
+      },
+      {
+        "name": "Kirill Kondrashin",
+        "uri": "spotify:artist:1nBRaXFNbBFqcFNeB1AMg2"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2739e7c37e2fdc3fbd8da0fbead",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e029e7c37e2fdc3fbd8da0fbead",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048519e7c37e2fdc3fbd8da0fbead",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-07-30T07:18:24.000Z"
+  },
+  {
+    "uri": "spotify:album:2zGZLQiFl9UubtrVmtIkbi",
+    "name": "Another Level",
+    "artists": [
+      {
+        "name": "Blackstreet",
+        "uri": "spotify:artist:2P3cjUru4H3fhSXXNxE9kA"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27303ca37157b9ceefbe8fe225b",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0203ca37157b9ceefbe8fe225b",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485103ca37157b9ceefbe8fe225b",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-07-23T13:40:56.000Z"
+  },
+  {
+    "uri": "spotify:album:4sLtOBOzn4s3GDUv3c5oJD",
+    "name": "A Star Is Born Soundtrack",
+    "artists": [
+      {
+        "name": "Lady Gaga",
+        "uri": "spotify:artist:1HY2Jd0NmPuamShAr6KMms"
+      },
+      {
+        "name": "Bradley Cooper",
+        "uri": "spotify:artist:4VIvfOurcf0vuLRxLkGnIG"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e2d156fdc691f57900134342",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e2d156fdc691f57900134342",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e2d156fdc691f57900134342",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-05-27T09:30:11.000Z"
+  },
+  {
+    "uri": "spotify:album:0z5gpNFBHGUIN0N2uWeRDu",
+    "name": "R&B 2 Rue",
+    "artists": [
+      {
+        "name": "Matt",
+        "uri": "spotify:artist:7CkiWDWPQJZrJmgFW0Q9Yq"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735ca1e3a135a118ac9c3cff10",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025ca1e3a135a118ac9c3cff10",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515ca1e3a135a118ac9c3cff10",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-05-12T14:45:23.000Z"
+  },
+  {
+    "uri": "spotify:album:17UiqpQyl8T8vVxz2Towjy",
+    "name": "Perdu D'Avance",
+    "artists": [
+      {
+        "name": "Orelsan",
+        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2730b2e3999b189fa2a8a6a752f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e020b2e3999b189fa2a8a6a752f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048510b2e3999b189fa2a8a6a752f",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-04-29T07:20:21.000Z"
+  },
+  {
+    "uri": "spotify:album:1ibYM4abQtSVQFQWvDSo4J",
+    "name": "Daydream",
+    "artists": [
+      {
+        "name": "Mariah Carey",
+        "uri": "spotify:artist:4iHNK0tOyZPYnBU7nGAgpQ"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273749e9bfa78277f30ad2c9a9c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02749e9bfa78277f30ad2c9a9c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851749e9bfa78277f30ad2c9a9c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-04-10T18:27:43.000Z"
+  },
+  {
+    "uri": "spotify:album:70CWcZa5F1uq0xmkMBOtah",
+    "name": "Chopin: Etudes - Lang Lang",
+    "artists": [
+      {
+        "name": "Frédéric Chopin",
+        "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
+      },
+      {
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273bcb68837fd15ac0d546ef639",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02bcb68837fd15ac0d546ef639",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851bcb68837fd15ac0d546ef639",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-03-29T09:18:56.000Z"
+  },
+  {
+    "uri": "spotify:album:7EyPl6rQopcaTSJY5B711D",
+    "name": "Accardo Plays Paganini- Complete Recordings",
+    "artists": [
+      {
+        "name": "Niccolò Paganini",
+        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
+      },
+      {
+        "name": "Salvatore Accardo",
+        "uri": "spotify:artist:4J806QjdyKrK4guMFMRzKc"
+      },
+      {
+        "name": "London Philharmonic Orchestra",
+        "uri": "spotify:artist:3PfJE6ebCbCHeuqO4BfNeA"
+      },
+      {
+        "name": "Charles Dutoit",
+        "uri": "spotify:artist:0Ku5VBNL7cfGXRhp2BxXEQ"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273243ee52f10210069eed4c998",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02243ee52f10210069eed4c998",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851243ee52f10210069eed4c998",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-02-19T13:57:27.000Z"
+  },
+  {
+    "uri": "spotify:album:7lgL74zTYxeVUXV0h8c2U7",
+    "name": "L'Excuse",
+    "artists": [
+      {
+        "name": "Philemon",
+        "uri": "spotify:artist:65PTmgbjJOl2gE1AeaZOIB"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27315ba7c1ba49c16b6de08e1d4",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0215ba7c1ba49c16b6de08e1d4",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485115ba7c1ba49c16b6de08e1d4",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-02-07T12:36:18.000Z"
+  },
+  {
+    "uri": "spotify:album:5G5rgQHzdQnw32SI0WjIo5",
+    "name": "Get Rich Or Die Tryin'",
+    "artists": [
+      {
+        "name": "50 Cent",
+        "uri": "spotify:artist:3q7HBObVc0L8jNeTe5Gofh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d843fabb75fef14010e30cae",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d843fabb75fef14010e30cae",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d843fabb75fef14010e30cae",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-01-19T08:35:30.000Z"
+  },
+  {
+    "uri": "spotify:album:1Ba5s6JWCai3QpL17pOqwv",
+    "name": "Polaroid experience",
+    "artists": [
+      {
+        "name": "Youssoupha",
+        "uri": "spotify:artist:5DW7NxqQ2875JtjuV7KMn4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733263da2e31f0a644a5ce1589",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023263da2e31f0a644a5ce1589",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513263da2e31f0a644a5ce1589",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-11-16T11:16:24.000Z"
+  },
+  {
+    "uri": "spotify:album:7dooHm6waaNjfbhwL6g2Lb",
+    "name": "Liszt: Études D'execution Trascendante & Wagner: Tannhäuser, Ouverture",
+    "artists": [
+      {
+        "name": "Franz Liszt",
+        "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+      },
+      {
+        "name": "György Cziffra",
+        "uri": "spotify:artist:2bwEHQxmBXe3yeoIBNfgbW"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736cdd39108538a89628fdbaea",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026cdd39108538a89628fdbaea",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516cdd39108538a89628fdbaea",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-11-11T21:58:03.000Z"
+  },
+  {
+    "uri": "spotify:album:0e60AWHAGO3t7mNZPImsKA",
+    "name": "Colores (Bachata Is Taking Over!)",
+    "artists": [
+      {
+        "name": "Grupo Extra",
+        "uri": "spotify:artist:4L5SLCIDWPPNGzrLraYCOS"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273262b14c2ec6eb11849c7e926",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02262b14c2ec6eb11849c7e926",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851262b14c2ec6eb11849c7e926",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-11-06T09:23:36.000Z"
+  },
+  {
+    "uri": "spotify:album:5GfsaNstrK8rszTX5XYtXU",
+    "name": "Le chant des sirènes",
+    "artists": [
+      {
+        "name": "Orelsan",
+        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27342a91184c215f8a95b5f77ec",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0242a91184c215f8a95b5f77ec",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485142a91184c215f8a95b5f77ec",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-11-06T09:11:58.000Z"
+  },
+  {
+    "uri": "spotify:album:5c6qzKZJpCxUmYJeO7ND7F",
+    "name": "Heifetz: Tchaikovsky & Mendelssohn Concertos",
+    "artists": [
+      {
+        "name": "Jascha Heifetz",
+        "uri": "spotify:artist:7yaBUcdjmqPP2vIv6F5bFD"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2732245352cb80f40d21899ae77",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e022245352cb80f40d21899ae77",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048512245352cb80f40d21899ae77",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-07-08T09:16:54.000Z"
+  },
+  {
+    "uri": "spotify:album:4WW3ME0M2dUoAK5hmbXsN7",
+    "name": "racine carrée",
+    "artists": [
+      {
+        "name": "Stromae",
+        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2738a6bb98baff4c9b15f9972fc",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e028a6bb98baff4c9b15f9972fc",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048518a6bb98baff4c9b15f9972fc",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-04-12T20:39:40.000Z"
+  },
+  {
+    "uri": "spotify:album:76GfvhqqDDIq7CWPLGgQag",
+    "name": "Bach, J.S.: Sonatas & Partitas",
+    "artists": [
+      {
+        "name": "Johann Sebastian Bach",
+        "uri": "spotify:artist:5aIqB5nVVvmFsvSdExz408"
+      },
+      {
+        "name": "Henryk Szeryng",
+        "uri": "spotify:artist:1QoKB19XVwnNwlKDjyYYe8"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27306e38258b0c2b05e8aebc3c8",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0206e38258b0c2b05e8aebc3c8",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485106e38258b0c2b05e8aebc3c8",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2016-09-23T15:09:41.000Z"
+  },
+  {
+    "uri": "spotify:album:0iyWxTBrrClm4XW0pz5V7S",
+    "name": "Music For The Motion Picture Into The Wild",
+    "artists": [
+      {
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273b4088ba02569ad6c9d1ce1d3",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02b4088ba02569ad6c9d1ce1d3",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851b4088ba02569ad6c9d1ce1d3",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2016-07-26T16:11:42.000Z"
+  },
+  {
+    "uri": "spotify:album:3atPIVCVIIgak6KeB1ANnK",
+    "name": "L'école du micro d'argent",
+    "artists": [
+      {
+        "name": "IAM",
+        "uri": "spotify:artist:56Q6weEROZ1RsVrTak8Bm7"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27376438cc21de1d139cd68d528",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0276438cc21de1d139cd68d528",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485176438cc21de1d139cd68d528",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2016-03-11T15:21:19.000Z"
+  },
+  {
+    "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
+    "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
+    "artists": [
+      {
+        "name": "Jersey Boys",
+        "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a9ac825cee5e3985ea9d449d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a9ac825cee5e3985ea9d449d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a9ac825cee5e3985ea9d449d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2015-03-06T19:42:56.000Z"
+  }
+]

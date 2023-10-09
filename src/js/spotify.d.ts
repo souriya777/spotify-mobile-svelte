@@ -19,6 +19,10 @@ export type SpotifyAlbum = {
   artists?: SpotifyArtist[];
 };
 
+export interface SpotifySavedAlbum extends SpotifyAlbum {
+  added_at: date;
+}
+
 export type SpotifyArtist = {
   name: string;
   uri: string;

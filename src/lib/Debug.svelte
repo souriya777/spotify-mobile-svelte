@@ -35,7 +35,12 @@
   <button on:click={() => SpotifyApi.getPlaylistsSortedAlphabetically($userId)}
     >playlists ABC</button
   >
-  <button on:click={() => SpotifyApi.getMyAlbums()}>my-albums</button>
+  <button on:click={() => SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed()}
+    >saved-albums-recently-played</button
+  >
+  <button on:click={() => SpotifyApi.getMySavedAlbumsSortedRecentlyAdded()}
+    >saved-albums-recently-addded</button
+  >
   <button on:click={() => SpotifyApi.getMyFollowedArtists()}>my-followed-artist</button>
   <button on:click={() => SpotifyApi.disconnect()}>disconnect</button>
 </details>

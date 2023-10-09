@@ -42,7 +42,8 @@ import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 import SpotifySearch from '@/js/SpotifySearch';
 import { isNotEmpty } from '@/js/souriya-utils';
-import SpotifyAlbum from './SpotifyAlbum';
+import SpotifySavedAlbum from '@/js/SpotifySavedAlbum';
+import { sortByName, sortByAddedAt } from '@/js/spotify-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -249,7 +250,7 @@ class SpotifyApi {
    */
   async getPlaylistsSortedAlphabetically(userId) {
     const playlists = await this.#getAllPlaylists(userId);
-    return playlists?.sort((a, b) => a.name.localeCompare(b.name));
+    return playlists?.sort(sortByName);
   }
 
   /**
@@ -264,7 +265,7 @@ class SpotifyApi {
     });
 
     const playlistsWithDate = await Promise.all(playlistExtendedPromises);
-    return playlistsWithDate?.sort((a, b) => (b.added_at > a.added_at ? 1 : -1));
+    return playlistsWithDate?.sort(sortByAddedAt);
   }
 
   /**
@@ -276,7 +277,7 @@ class SpotifyApi {
 
     const data = await this.#get(`/playlists/${playlist.id}/tracks?fields=items%28added_at%29`);
 
-    const items = new SpotifyPlaylistItems(data)?.items?.sort((a, b) => a.added_at - b.added_at);
+    const items = new SpotifyPlaylistItems(data)?.items?.sort(sortByAddedAt);
 
     const added_at = items?.[0]?.['added_at'];
 
@@ -291,14 +292,21 @@ class SpotifyApi {
   async getLikedTracks() {
     /** @type {import('@/js/spotify').SpotifySong[]} */
     const tracks = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
-    return tracks?.sort((a, b) => b.added_at - a.added_at).map((song) => song?.track);
+    return tracks?.sort(sortByAddedAt).map((song) => song?.track);
   }
 
-  /** @return {Promise<import('@/js/spotify').SpotifyAlbum[]>} */
-  async getMyAlbums() {
+  /** @return {Promise<import('@/js/spotify').SpotifySavedAlbum[]>} */
+  async getMySavedAlbumsSortedRecentlyPlayed() {
     /** @type {import('@/js/spotify').SpotifyAlbumItemCursor[]} */
     const albums = await this.#iterateOverCursor(`/me/albums?limit=50`, 'SpotifyAlbumCursor');
-    return albums?.map((item) => new SpotifyAlbum(item?.album));
+    return albums?.map((item) => new SpotifySavedAlbum(item));
+  }
+
+  /** @return {Promise<import('@/js/spotify').SpotifySavedAlbum[]>} */
+  async getMySavedAlbumsSortedRecentlyAdded() {
+    /** @type {import('@/js/spotify').SpotifySavedAlbum[]} */
+    const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
+    return albums?.sort(sortByAddedAt);
   }
 
   /** @return {Promise<import('@/js/spotify').SpotifySearchArtist[]>} */
@@ -510,7 +518,6 @@ class SpotifyApi {
         */
         // https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
         else if (/\/me\/following\?type=artist/gi.test(endpoint)) {
-          console.log('testa', data?.artists);
           return data?.artists;
         }
 

@@ -19,33 +19,44 @@
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
   let likedTracks = [];
 
-  let selected = 1;
+  let selectedPlaylist = 1;
+  let selectedAlbum = 1;
   let totalLikedTracks;
 
   onMount(() => {
     // get playlist
-    sortBySpotify();
+    sortPlaylistBySpotify();
 
     SpotifyApi.getLikedTracks().then((tracks) => (totalLikedTracks = tracks?.length));
 
-    SpotifyApi.getMyAlbums().then((items) => (albums = items));
+    sortAlbumsRecentlyPlayed();
 
     SpotifyApi.getMyFollowedArtists().then((items) => (artists = items));
   });
 
-  async function sortBySpotify() {
+  async function sortPlaylistBySpotify() {
     playlists = await SpotifyApi.getPlaylistsSortedBySpotify($userId);
-    selected = 1;
+    selectedPlaylist = 1;
   }
 
-  async function sortAlphabetically() {
+  async function sortPlaylistAlphabetically() {
     playlists = await SpotifyApi.getPlaylistsSortedAlphabetically($userId);
-    selected = 2;
+    selectedPlaylist = 2;
   }
 
-  async function sortRecentlyAddedAt() {
+  async function sortPlaylistRecentlyAddedAt() {
     playlists = await SpotifyApi.getPlaylistsSortedAddedAtFIXME($userId);
-    selected = 3;
+    selectedPlaylist = 3;
+  }
+
+  async function sortAlbumsRecentlyPlayed() {
+    SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed().then((items) => (albums = items));
+    selectedAlbum = 1;
+  }
+
+  async function sortAlbumsRecentlyAdded() {
+    SpotifyApi.getMySavedAlbumsSortedRecentlyAdded().then((items) => (albums = items));
+    selectedAlbum = 2;
   }
 
   async function getLikedTracks() {
@@ -71,12 +82,16 @@
   <h2>Playlists</h2>
 
   <div>
-    <Button label="🗂️by-spotify" callback={sortBySpotify} selected={selected === 1} />
-    <Button label="🗂️abc" callback={sortAlphabetically} selected={selected === 2} />
+    <Button
+      label="🗂️by-spotify"
+      callback={sortPlaylistBySpotify}
+      selected={selectedPlaylist === 1}
+    />
+    <Button label="🗂️abc" callback={sortPlaylistAlphabetically} selected={selectedPlaylist === 2} />
     <Button
       label="🗂️recently-added-atFIXME"
-      callback={sortRecentlyAddedAt}
-      selected={selected === 3}
+      callback={sortPlaylistRecentlyAddedAt}
+      selected={selectedPlaylist === 3}
     />
   </div>
 
@@ -96,6 +111,18 @@
 
 {#if $displayFilter.albumOn}
   <h2>Albums</h2>
+
+  <Button
+    label="sort-albums-recently-played"
+    callback={sortAlbumsRecentlyPlayed}
+    selected={selectedAlbum === 1}
+  />
+
+  <Button
+    label="sort-albums-recently-added"
+    callback={sortAlbumsRecentlyAdded}
+    selected={selectedAlbum === 2}
+  />
 
   <SpotifyListAlbum items={albums} />
 {/if}

@@ -19,12 +19,11 @@ Stone soup
 
 LIST MOST API CALLS
 
-- feat(my-lib): can sort `albums`
 - feat(playlist): can add song to playlist
 - feat(playlist): can re-order song
-
 - feat(song): can liked a song
 - feat(browse): can see album detail
+
 - feat(playlist): can create it
 - feat(playlist): can rename it
 - feat(playlist): can remove it

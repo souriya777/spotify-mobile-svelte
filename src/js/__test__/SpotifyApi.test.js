@@ -13,7 +13,8 @@ import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added.json';
 import MY_PLAYLISTS_SORTED_ALPHABETICALLY_JSON from './data/my-playlists-sorted-alphabetically.json';
 import LIKED_SONGS_JSON from './data/liked-songs.json';
-import MY_ALBUMS_JSON from './data/my-albums.json';
+import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
+import ALBUMS_RECENTLY_ADDED_JSON from './data/albums-recently-added.json';
 import MY_FOLLOWING_ARTITSTS_JSON from './data/my-following-artists.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
 import LAST_SONG_JSON from './data/last-song.json';
@@ -109,9 +110,15 @@ test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/me/albums returns SpotifyAlbum[]`, async () => {
-  const actual = await SpotifyApi.getMyAlbums();
-  const expected = [...MY_ALBUMS_JSON];
+test(`getMySavedAlbumsSortedRecentlyPlayed returns SpotifyAlbum[] sorted by recently played`, async () => {
+  const actual = await SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed();
+  const expected = [...ALBUMS_RECENTLY_PLAYED_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getMySavedAlbumsSortedRecentlyAdded returns SpotifyAlbum[] sorted by recently added`, async () => {
+  const actual = await SpotifyApi.getMySavedAlbumsSortedRecentlyAdded();
+  const expected = [...ALBUMS_RECENTLY_ADDED_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
