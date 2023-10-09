@@ -19,11 +19,15 @@ Stone soup
 
 LIST MOST API CALLS
 
+💰💰💰 `nb commit feat() : 1/5`
+
 - feat(playlist): can add song to playlist
 - feat(playlist): can re-order song
 - feat(song): can liked a song
+
 - feat(browse): can see album detail
 
+- manage back in browser
 - feat(playlist): can create it
 - feat(playlist): can rename it
 - feat(playlist): can remove it
@@ -41,6 +45,7 @@ LIST MOST API CALLS
 -- slide-left when in
 -- slide-right when out
 
+- drag'n drop
 - use use:onTap
 - position fixed : player & menu
 - feat(navigation): improve player & menu
