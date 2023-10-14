@@ -82,11 +82,8 @@ class SpotifyApi {
     };
 
     try {
-      const resp = await AXIOS_INSTANCE({
-        method: 'POST',
-        url: 'https://accounts.spotify.com/api/token',
+      const resp = await AXIOS_INSTANCE.post('https://accounts.spotify.com/api/token', data, {
         headers,
-        data,
       });
 
       accessToken.set(resp?.data.access_token);
@@ -407,6 +404,16 @@ class SpotifyApi {
     return new SpotifySearch(data);
   }
 
+  /**
+   * @param {string} songUri
+   * @param {string} playlistId
+   */
+  async addSongToPlaylist(songUri, playlistId) {
+    this.#post(`/playlists/${playlistId}/tracks`, {
+      uris: [songUri],
+    });
+  }
+
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
   #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
@@ -501,72 +508,102 @@ class SpotifyApi {
 
   /**
    * @param {string} endpoint
-   * @param {object} options
-   * @returns { Promise<{object}> } data
+   * @returns {Promise<object>}
    */
-  #axios(endpoint, options) {
-    return AXIOS_INSTANCE(options)
-      .then((response) => {
-        const data = response?.data;
-        const status = response?.status;
-        LOGGER.log(options?.method, endpoint, data, status);
-
-        if (
-          endpoint === '/me/player' &&
-          SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status
-        ) {
-          LOGGER.error('Spotify returns 204 -> playback not available or active');
-          this.transfertPlayback(get(deviceId));
-          throw new PlaybackNotAvailableOrActiveError(
-            'Spotify returns 204 -> playback not available or active',
-          );
-        }
-        /**
-          GET /me/following?type=artist behaves almost the same
-          way as SpotifySongCursor or SpotifyPlaylistCursor, except
-          that an "artists" properties wrapped {... items, next...}
-        */
-        // https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
-        else if (/\/me\/following\?type=artist/gi.test(endpoint)) {
-          return data?.artists;
-        }
-
-        return data;
-      })
-      .catch((err) => {
-        let status = null;
-
-        if (axios.isAxiosError(err)) {
-          const errorJSON = err?.toJSON();
-          // @ts-ignore
-          status = errorJSON?.status;
-          LOGGER.error('🌱', errorJSON.toString(), status);
-        }
-
-        if (SpotifyStatus.UNAUTHORIZED === status) {
-          LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
-          this.forceAuthorization();
-        } else if (SpotifyStatus.BAD_REQUEST === status) {
-          LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
-        }
-
-        throw err;
-      });
-  }
-
   async #get(endpoint) {
-    return this.#axios(endpoint, {
-      method: 'GET',
-      url: this.#url(endpoint),
-    });
+    try {
+      const response = await AXIOS_INSTANCE.get(this.#url(endpoint));
+      return await this.#axiosResponse(response, 'GET', endpoint);
+    } catch (err) {
+      this.#axiosError(err);
+    }
   }
 
+  /**
+   * @param {string} endpoint
+   * @param {object} data
+   * @param {object} headers
+   */
+  async #post(endpoint, data, headers) {
+    try {
+      let response;
+
+      if (headers) {
+        response = await AXIOS_INSTANCE.post(this.#url(endpoint), data, headers);
+      } else {
+        response = await AXIOS_INSTANCE.post(this.#url(endpoint), data);
+      }
+
+      return await this.#axiosResponse(response, 'POST', endpoint);
+    } catch (err) {
+      this.#axiosError(err);
+    }
+  }
+
+  /**
+   * @param {string} endpoint
+   * @param {object} data
+   */
   async #put(endpoint, data) {
-    return this.#axios(endpoint, {
-      method: 'PUT',
-      data,
-      url: this.#url(endpoint),
-    });
+    try {
+      AXIOS_INSTANCE.put(this.#url(endpoint), data).then((response) =>
+        this.#axiosResponse(response, 'PUT', endpoint),
+      );
+    } catch (err) {
+      this.#axiosError(err);
+    }
+  }
+
+  /**
+   * @param {import('axios').AxiosResponse} response
+   * @param {string} method
+   * @param {string} endpoint
+   * @returns {Promise<import('axios').AxiosResponse>}
+   */
+  async #axiosResponse(response, method, endpoint) {
+    const data = response?.data;
+    const status = response?.status;
+    LOGGER.log(method, endpoint, data, status);
+
+    if (endpoint === '/me/player' && SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status) {
+      LOGGER.error('Spotify returns 204 -> playback not available or active');
+      this.transfertPlayback(get(deviceId));
+      throw new PlaybackNotAvailableOrActiveError(
+        'Spotify returns 204 -> playback not available or active',
+      );
+    }
+    /**
+      GET /me/following?type=artist behaves almost the same
+      way as SpotifySongCursor or SpotifyPlaylistCursor, except
+      that an "artists" properties wrapped {... items, next...}
+    */
+    // https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
+    else if (/\/me\/following\?type=artist/gi.test(endpoint)) {
+      return data?.artists;
+    }
+
+    return data;
+  }
+
+  /** @param {Error} err */
+  async #axiosError(err) {
+    let status = null;
+
+    if (axios.isAxiosError(err)) {
+      const errorJSON = err?.toJSON();
+      // @ts-ignore
+      status = errorJSON?.status;
+      LOGGER.error('🌱', errorJSON.toString(), status);
+    }
+
+    if (SpotifyStatus.UNAUTHORIZED === status) {
+      LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
+      this.forceAuthorization();
+    } else if (SpotifyStatus.BAD_REQUEST === status) {
+      LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
+    }
+
+    throw err;
   }
 }
 

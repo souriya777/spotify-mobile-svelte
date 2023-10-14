@@ -1,5 +1,6 @@
 {
   "currently_playing": {
+    "id": "42VUw4BNwMDV8UvmhmaDUP",
     "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
     "name": "La bohème",
     "duration_ms": 212124,
@@ -39,6 +40,7 @@
   },
   "queue": [
     {
+      "id": "6htdm2zhPzphFnHWQVQBJd",
       "uri": "spotify:track:6htdm2zhPzphFnHWQVQBJd",
       "name": "Le Coup de Soleil",
       "duration_ms": 225500,
@@ -77,6 +79,7 @@
       ]
     },
     {
+      "id": "45CCySE3zyd4CXMYQE7ICw",
       "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
       "name": "La vie en rose",
       "duration_ms": 175875,
@@ -115,6 +118,7 @@
       ]
     },
     {
+      "id": "6ioe6K8aDV0A65qz6Huzs2",
       "uri": "spotify:track:6ioe6K8aDV0A65qz6Huzs2",
       "name": "Bella Ciao",
       "duration_ms": 171340,
@@ -153,6 +157,7 @@
       ]
     },
     {
+      "id": "2HOkyI0Gtw7UPPgcCKPaGo",
       "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
       "name": "Despacito",
       "duration_ms": 220846,
@@ -191,6 +196,7 @@
       ]
     },
     {
+      "id": "3Arm3BlSs9GAAMHSWZCIdd",
       "uri": "spotify:track:3Arm3BlSs9GAAMHSWZCIdd",
       "name": "Tous les garçons et les filles",
       "duration_ms": 180875,
@@ -229,6 +235,7 @@
       ]
     },
     {
+      "id": "0HkKfLlhuQrtGXofsoF0qu",
       "uri": "spotify:track:0HkKfLlhuQrtGXofsoF0qu",
       "name": "Mistral Gagnant",
       "duration_ms": 194875,
@@ -267,6 +274,7 @@
       ]
     },
     {
+      "id": "1IMqGGJRazA5aYRT3Y02K9",
       "uri": "spotify:track:1IMqGGJRazA5aYRT3Y02K9",
       "name": "Sympathique",
       "duration_ms": 160488,
@@ -305,6 +313,7 @@
       ]
     },
     {
+      "id": "4PtAtIm8JeOdLG61Bwy96A",
       "uri": "spotify:track:4PtAtIm8JeOdLG61Bwy96A",
       "name": "Voyage voyage",
       "duration_ms": 211094,
@@ -343,6 +352,7 @@
       ]
     },
     {
+      "id": "1Qt7qKMFqnuHPDXHNcEHzB",
       "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
       "name": "Je te laisserai des mots",
       "duration_ms": 156144,
@@ -381,6 +391,7 @@
       ]
     },
     {
+      "id": "1Qt7qKMFqnuHPDXHNcEHzB",
       "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
       "name": "Je te laisserai des mots",
       "duration_ms": 156144,

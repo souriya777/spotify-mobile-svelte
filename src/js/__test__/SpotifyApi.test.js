@@ -2,6 +2,7 @@ import { expect, test, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
 
+import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import { accessToken } from '@/js/store';
 import SpotifyApi from '@/js/SpotifyApi';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
@@ -178,4 +179,20 @@ test(`search(query) returns SpotifySearch`, async () => {
   const actual = await SpotifyApi.search('sherry');
   const expected = { ...SEARCH_SHERRY_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+/////// 🔴🔴🔴 bellow : AXIOS_INSTANCE is unmocked 🔴🔴🔴 ///////
+vi.doUnmock('@/js/axios-utils');
+
+test(`can add a song to playlist`, async () => {
+  const songUri = 'spotify:track:0S4dVpqBLnBFj4wdB4UDMd';
+  const playlistId = '5iLCxA1kjRDD9xpLD9Ym2z';
+
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'post');
+
+  SpotifyApi.addSongToPlaylist(songUri, playlistId);
+
+  expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
+    uris: [songUri],
+  });
 });

@@ -21,10 +21,9 @@ LIST MOST API CALLS
 
 💰💰💰 `nb commit feat() : 1/5`
 
-- feat(playlist): can add song to playlist
+- feat(playlist): can add song to ANY playlist
 - feat(playlist): can re-order song
 - feat(song): can liked a song
-
 - feat(browse): can see album detail
 
 - manage back in browser

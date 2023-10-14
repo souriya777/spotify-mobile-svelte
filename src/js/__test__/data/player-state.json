@@ -167,19 +167,10 @@
   },
   "track_window": {
     "current_track": {
+      "id": "0M55V4n7l0ULeYP64IcjX7",
       "uri": "spotify:track:0M55V4n7l0ULeYP64IcjX7",
       "name": "Fly Up (Feat. Door) - Concert Version",
       "duration_ms": 228512,
-      "artists": [
-        {
-          "name": "Hwang Chang young",
-          "uri": "spotify:artist:77i53Qlp3vNOh4Rab2wr56"
-        },
-        {
-          "name": "Door",
-          "uri": "spotify:artist:739RUVFap7LGgh9UcIfLdc"
-        }
-      ],
       "album": {
         "uri": "spotify:album:1KHVPqrQsgT5xbNbRXNJjA",
         "name": "LOOKISM (Original Soundtrack from the Netflix Series)",
@@ -200,92 +191,27 @@
             "width": 640
           }
         ]
-      }
-    },
-    "next_tracks": [
-      {
-        "uri": "spotify:track:3QwBODjSEzelZyVjxPOHdq",
-        "name": "Otra vez (feat. J Balvin)",
-        "duration_ms": 209453,
-        "artists": [
-          {
-            "name": "Zion & Lennox",
-            "uri": "spotify:artist:21451j1KhjAiaYKflxBjr1"
-          },
-          {
-            "name": "J Balvin",
-            "uri": "spotify:artist:1vyhD5VmyZ7KMfW5gqLgo5"
-          }
-        ],
-        "album": {
-          "name": "Motivan2",
-          "uri": "spotify:album:22lEQJ7khtB2yvsq84FDQb",
-          "images": [
-            {
-              "url": "https://i.scdn.co/image/ab67616d00001e0282eabf564ddc57325a84dd50",
-              "height": 300,
-              "width": 300
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000485182eabf564ddc57325a84dd50",
-              "height": 64,
-              "width": 64
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000b27382eabf564ddc57325a84dd50",
-              "height": 640,
-              "width": 640
-            }
-          ]
-        }
       },
-      {
-        "uri": "spotify:track:0xNg9Qttr3ASjsqW1mEF4e",
-        "name": "Leva-Me a Viajar",
-        "duration_ms": 220530,
-        "artists": [
-          {
-            "name": "Sara Carreira",
-            "uri": "spotify:artist:4ZWBY6qCj0UzSZoEjdBnBH"
-          }
-        ],
-        "album": {
-          "name": "A Minha História",
-          "uri": "spotify:album:2MUXSrqINfFVshE8vDqVtR",
-          "images": [
-            {
-              "url": "https://i.scdn.co/image/ab67616d00001e0245be02f12696eb7a5ead8662",
-              "height": 300,
-              "width": 300
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000485145be02f12696eb7a5ead8662",
-              "height": 64,
-              "width": 64
-            },
-            {
-              "url": "https://i.scdn.co/image/ab67616d0000b27345be02f12696eb7a5ead8662",
-              "height": 640,
-              "width": 640
-            }
-          ]
+      "artists": [
+        {
+          "name": "Hwang Chang young",
+          "uri": "spotify:artist:77i53Qlp3vNOh4Rab2wr56"
+        },
+        {
+          "name": "Door",
+          "uri": "spotify:artist:739RUVFap7LGgh9UcIfLdc"
         }
-      }
-    ],
+      ]
+    },
     "previous_tracks": [
       {
+        "id": "1pRvlcrVxqdDAyYT1Ym3Wq",
         "uri": "spotify:track:1pRvlcrVxqdDAyYT1Ym3Wq",
         "name": "carmen",
         "duration_ms": 189026,
-        "artists": [
-          {
-            "name": "Stromae",
-            "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
-          }
-        ],
         "album": {
-          "name": "racine carrée",
           "uri": "spotify:album:6uyslsVGFsHKzdGUosFwBM",
+          "name": "racine carrée",
           "images": [
             {
               "url": "https://i.scdn.co/image/ab67616d00001e02ab580fab750cc9baf0d52b5c",
@@ -303,25 +229,22 @@
               "width": 640
             }
           ]
-        }
+        },
+        "artists": [
+          {
+            "name": "Stromae",
+            "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+          }
+        ]
       },
       {
+        "id": "3zmrVLcgSzkXHFoXJRCJGj",
         "uri": "spotify:track:3zmrVLcgSzkXHFoXJRCJGj",
         "name": "Frio Remix",
         "duration_ms": 255020,
-        "artists": [
-          {
-            "name": "Jensen",
-            "uri": "spotify:artist:24tjWCXUAwkLJ6bCvYXIde"
-          },
-          {
-            "name": "Pinto Picasso",
-            "uri": "spotify:artist:40DtWCtcmCd6GH8vKrDaJs"
-          }
-        ],
         "album": {
-          "name": "Frio Remix",
           "uri": "spotify:album:3DFuWZvlX3mATZWjzz9Y2y",
+          "name": "Frio Remix",
           "images": [
             {
               "url": "https://i.scdn.co/image/ab67616d00001e02ee36a7da02c7aa4b90b48422",
@@ -339,7 +262,89 @@
               "width": 640
             }
           ]
-        }
+        },
+        "artists": [
+          {
+            "name": "Jensen",
+            "uri": "spotify:artist:24tjWCXUAwkLJ6bCvYXIde"
+          },
+          {
+            "name": "Pinto Picasso",
+            "uri": "spotify:artist:40DtWCtcmCd6GH8vKrDaJs"
+          }
+        ]
+      }
+    ],
+    "next_tracks": [
+      {
+        "id": "3QwBODjSEzelZyVjxPOHdq",
+        "uri": "spotify:track:3QwBODjSEzelZyVjxPOHdq",
+        "name": "Otra vez (feat. J Balvin)",
+        "duration_ms": 209453,
+        "album": {
+          "uri": "spotify:album:22lEQJ7khtB2yvsq84FDQb",
+          "name": "Motivan2",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e0282eabf564ddc57325a84dd50",
+              "height": 300,
+              "width": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485182eabf564ddc57325a84dd50",
+              "height": 64,
+              "width": 64
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b27382eabf564ddc57325a84dd50",
+              "height": 640,
+              "width": 640
+            }
+          ]
+        },
+        "artists": [
+          {
+            "name": "Zion & Lennox",
+            "uri": "spotify:artist:21451j1KhjAiaYKflxBjr1"
+          },
+          {
+            "name": "J Balvin",
+            "uri": "spotify:artist:1vyhD5VmyZ7KMfW5gqLgo5"
+          }
+        ]
+      },
+      {
+        "id": "0xNg9Qttr3ASjsqW1mEF4e",
+        "uri": "spotify:track:0xNg9Qttr3ASjsqW1mEF4e",
+        "name": "Leva-Me a Viajar",
+        "duration_ms": 220530,
+        "album": {
+          "uri": "spotify:album:2MUXSrqINfFVshE8vDqVtR",
+          "name": "A Minha História",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e0245be02f12696eb7a5ead8662",
+              "height": 300,
+              "width": 300
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485145be02f12696eb7a5ead8662",
+              "height": 64,
+              "width": 64
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b27345be02f12696eb7a5ead8662",
+              "height": 640,
+              "width": 640
+            }
+          ]
+        },
+        "artists": [
+          {
+            "name": "Sara Carreira",
+            "uri": "spotify:artist:4ZWBY6qCj0UzSZoEjdBnBH"
+          }
+        ]
       }
     ]
   }

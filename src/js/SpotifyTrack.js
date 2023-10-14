@@ -6,6 +6,7 @@ import SpotifyArtist from '@/js/SpotifyArtist';
  */
 class SpotifyTrack {
   constructor(fromApi) {
+    this.id = fromApi?.id;
     this.uri = fromApi?.uri;
     this.name = fromApi?.name;
     this.duration_ms = fromApi?.duration_ms;

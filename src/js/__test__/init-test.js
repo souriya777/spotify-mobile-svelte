@@ -36,18 +36,22 @@ const REGEX_CLIENT_ID_OR_SECRET = /\w{10,}/i;
 
 Logger.TEST_MODE = true;
 
+function axiosFake(method, url, data, config) {
+  const DATA = getData(method, url, data, config);
+
+  return Promise.resolve({
+    data: DATA,
+    status: 200,
+  });
+}
+
 export function initSpotifyApi() {
   vi.mock('@/js/axios-utils', () => {
-    /** @param {import('./axios').AxiosOptions} options */
-    const AXIOS_INSTANCE = ({ method, url, headers, data }) => {
-      const DATA = getData(method, url, headers, data);
-
-      return Promise.resolve({
-        data: DATA,
-        status: 200,
-      });
+    const AXIOS_INSTANCE = {
+      get: (url) => axiosFake('GET', url),
+      post: (url, data, config) => axiosFake('POST', url, data, config),
+      put: (url, data) => axiosFake('PUT', url, data),
     };
-
     return {
       AXIOS_INSTANCE,
       setAxiosHeaderAuthorization: () => vi.fn(),
@@ -59,7 +63,7 @@ function getSpotifyEndpoint(url) {
   return url.match(/(?<=v1)(\S)*/)?.[0];
 }
 
-function getData(method, url, headers, data) {
+function getData(method, url, data, config) {
   const endpoint = getSpotifyEndpoint(url);
 
   if (method === 'GET') {
@@ -128,6 +132,8 @@ function getData(method, url, headers, data) {
     return getDataForPlaylistsTracks(endpoint);
   } else if (method === 'POST') {
     if (url === 'https://accounts.spotify.com/api/token') {
+      const { headers } = config;
+
       const PARAMS = data.split('&');
       const code = PARAMS[0].split('=')[1];
       const redirect_uri = PARAMS[1].split('=')[1];
