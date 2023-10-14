@@ -9,7 +9,7 @@ const authorizationOk = writableLocalStorage('authorizationOk', false);
 // USER
 const userId = writableLocalStorage('userId', '');
 
-// TRACK
+// SPOTIFY ITEMS
 const trackUri = writable('');
 const trackName = writable('');
 const albumUri = writable('');
@@ -20,6 +20,7 @@ const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
 );
+const selectedPlaylistId = writable('');
 
 // DEVICE
 const deviceId = writableLocalStorage('deviceId', '');
@@ -65,6 +66,8 @@ const realTimeProgressMs = derived(
     };
   },
 );
+
+// FILTER
 const displayTrackOn = writable(true);
 const displayArtistOn = writable(true);
 const displayPlaylistOn = writable(true);
@@ -90,6 +93,7 @@ export {
   imageUrl,
   artists,
   artistsDisplay,
+  selectedPlaylistId,
   shuffleState,
   repeatState,
   playing,
