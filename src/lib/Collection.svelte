@@ -1,9 +1,9 @@
-<ul class="spotify-list">
+<ul class="collection">
   <slot />
 </ul>
 
 <style>
-  :global(ul.spotify-list li) {
+  :global(ul.collection li) {
     border: 2px dashed hotpink;
   }
 </style>

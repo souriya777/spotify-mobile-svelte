@@ -1,17 +1,17 @@
 <script>
-  import SpotifyListItem from '@/lib/SpotifyListItem.svelte';
-  import SpotifyList from '@/lib/SpotifyList.svelte';
+  import Collection from '@/lib/Collection.svelte';
+  import CollectionItem from '@/lib/CollectionItem.svelte';
   /** @type {import('@/js/spotify').SpotifyAlbum[]} */
   export let items;
 </script>
 
-<SpotifyList>
+<Collection>
   {#each items as album}
     {@const image = album?.images?.at(-1)}
     {@const artist = album?.artists?.map((t) => t?.name).join(', ')}
 
     <li>
-      <SpotifyListItem
+      <CollectionItem
         imgUrl={image?.url}
         imgHeight={image?.height}
         imgWidth={image?.width}
@@ -21,4 +21,4 @@
       />
     </li>
   {/each}
-</SpotifyList>
+</Collection>

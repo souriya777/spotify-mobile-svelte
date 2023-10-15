@@ -19,21 +19,20 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰 `nb commit feat() : 2/5`
+💰💰💰 `nb commit feat() : 0/5`
 
 - feat(playlist): can re-order song
+  -- repair SpotifyApi.addSongToPlaylist
 - feat(song): can liked a song
 - feat(browse): can see album detail
-
-- manage back in browser
 - feat(playlist): can create it
 - feat(playlist): can rename it
+
+- manage back in browser
 - feat(playlist): can remove it
 - feat(radio): can go to radio
 - feat(login): can login via SSO
 - feat(logout): can logout
-
-- feat(
 
 - feat(cache): find a strategy
 - feat(cache): optimize it
@@ -43,6 +42,7 @@ LIST MOST API CALLS
 -- slide-left when in
 -- slide-right when out
 
+- can I have native vibration ? (eg. move song in queue)
 - drag'n drop
 - use use:onTap
 - position fixed : player & menu

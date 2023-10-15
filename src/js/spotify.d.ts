@@ -44,11 +44,11 @@ export type SpotifyPlaylistTracks = {
   total: number;
 };
 
-export type SpotifyPlaylistItems = {
-  items: SpotifyPlaylistItem[];
+export type SpotifyPlaylistExtended = {
+  items: SpotifyPlaylistExtendedItem[];
 };
 
-export type SpotifyPlaylistItem = {
+export type SpotifyPlaylistExtendedItem = {
   added_at: date;
 };
 

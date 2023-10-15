@@ -1,18 +1,18 @@
 <script>
-  import SpotifyListItem from '@/lib/SpotifyListItem.svelte';
-  import SpotifyList from '@/lib/SpotifyList.svelte';
+  import Collection from '@/lib/Collection.svelte';
+  import CollectionItem from '@/lib/CollectionItem.svelte';
   import NavLink from '@/lib/NavLink.svelte';
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   export let items;
 </script>
 
-<SpotifyList>
+<Collection>
   {#each items as list}
     {@const image = list?.images?.at(-1)}
 
     <li>
       <NavLink to={`/playlist/${list?.id}`}>
-        <SpotifyListItem
+        <CollectionItem
           imgUrl={image?.url}
           imgHeight={image?.height}
           imgWidth={image?.width}
@@ -23,4 +23,4 @@
       </NavLink>
     </li>
   {/each}
-</SpotifyList>
+</Collection>

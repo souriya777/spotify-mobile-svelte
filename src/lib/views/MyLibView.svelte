@@ -3,11 +3,11 @@
   import { userId, displayFilter } from '@/js/store';
   import SpotifyApi from '@/js/SpotifyApi';
   import Button from '@/lib/Button.svelte';
-  import SpotifyListItem from '@/lib/SpotifyListItem.svelte';
-  import SpotifyListTrack from '@/lib/SpotifyListTrack.svelte';
-  import SpotifyListPlaylist from '@/lib/SpotifyListPlaylist.svelte';
-  import SpotifyListAlbum from '@/lib/SpotifyListAlbum.svelte';
-  import SpotifyListArtist from '@/lib/SpotifyListArtist.svelte';
+  import CollectionTrack from '@/lib/CollectionTrack.svelte';
+  import CollectionPlaylist from '@/lib/CollectionPlaylist.svelte';
+  import CollectionAlbum from '@/lib/CollectionAlbum.svelte';
+  import CollectionArtist from '@/lib/CollectionArtist.svelte';
+  import CollectionItem from '@/lib/CollectionItem.svelte';
   import ListFilter from '@/lib/ListFilter.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
@@ -76,7 +76,7 @@
 {#if $displayFilter.playlistOn}
   <detail>
     <summary><button on:click={getLikedTracks}>LIKED❤️</button></summary>
-    <SpotifyListTrack items={likedTracks} />
+    <CollectionTrack items={likedTracks} />
   </detail>
 
   <h2>Playlists</h2>
@@ -97,7 +97,7 @@
 
   <ul>
     <li>
-      <SpotifyListItem
+      <CollectionItem
         imgUrl="/liked-songs-64.png"
         imgAlt="liked songs"
         title="Liked Songs"
@@ -105,7 +105,7 @@
       />
     </li>
 
-    <SpotifyListPlaylist items={playlists} />
+    <CollectionPlaylist items={playlists} />
   </ul>
 {/if}
 
@@ -124,13 +124,13 @@
     selected={selectedAlbum === 2}
   />
 
-  <SpotifyListAlbum items={albums} />
+  <CollectionAlbum items={albums} />
 {/if}
 
 {#if $displayFilter.artistOn}
   <h2>Artists</h2>
 
-  <SpotifyListArtist items={artists} />
+  <CollectionArtist items={artists} />
 {/if}
 
 <style>

@@ -38,7 +38,7 @@ import SpotifyTrackAdapter from '@/js/SpotifyTrackAdapter';
 import { areTimestampsSeparateBy } from '@/js/time-utils';
 import PlaybackNotAvailableOrActiveError from '@/js/PlaybackNotAvailableOrActiveError';
 import CursorFactory from '@/js/CursorFactory';
-import SpotifyPlaylistItems from '@/js/SpotifyPlaylistItems';
+import SpotifyPlaylistExtended from '@/js/SpotifyPlaylistExtended';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 import SpotifySearch from '@/js/SpotifySearch';
 import { isNotEmpty } from '@/js/souriya-utils';
@@ -274,7 +274,7 @@ class SpotifyApi {
 
     const data = await this.#get(`/playlists/${playlist.id}/tracks?fields=items%28added_at%29`);
 
-    const items = new SpotifyPlaylistItems(data)?.items?.sort(sortByAddedAt);
+    const items = new SpotifyPlaylistExtended(data)?.items?.sort(sortByAddedAt);
 
     const added_at = items?.[0]?.['added_at'];
 
@@ -295,11 +295,11 @@ class SpotifyApi {
   /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */
   async getPlaylistItems(playlistId) {
     /** @type {import('@/js/spotify').SpotifySong[]} */
-    const tracks = await this.#iterateOverCursor(
+    const songs = await this.#iterateOverCursor(
       `/playlists/${playlistId}/tracks?limit=50`,
       'SpotifySongCursor',
     );
-    return tracks?.sort(sortByAddedAtDecrescent).map((song) => song?.track);
+    return songs?.sort(sortByAddedAtDecrescent).map((song) => song?.track);
   }
 
   /** @return {Promise<import('@/js/spotify').SpotifySavedAlbum[]>} */
@@ -413,6 +413,9 @@ class SpotifyApi {
       uris: [songUri],
     });
   }
+
+  // FIXME
+  // async moveTrackInPlaylist(tracks) {}
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;

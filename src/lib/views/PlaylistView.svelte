@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import SpotifyApi from '@/js/SpotifyApi';
-  import SpotifyListTrack from '@/lib/SpotifyListTrack.svelte';
+  import CollectionTrack from '@/lib/CollectionTrack.svelte';
 
   export let id;
 
@@ -15,4 +15,4 @@
 
 Playlist {id}
 
-<SpotifyListTrack items={tracks} />
+<CollectionTrack items={tracks} />

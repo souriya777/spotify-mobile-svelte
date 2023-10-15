@@ -4,10 +4,10 @@
   import { debounce } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import { searchQuery } from '@/js/store';
-  import SpotifyListTrack from '@/lib/SpotifyListTrack.svelte';
+  import CollectionTrack from '@/lib/CollectionTrack.svelte';
   import SpotifySelectPlaylist from '@/lib/SpotifySelectPlaylist.svelte';
-  import SpotifyListAlbum from '@/lib/SpotifyListAlbum.svelte';
-  import SpotifyListArtist from '@/lib/SpotifyListArtist.svelte';
+  import CollectionAlbum from '@/lib/CollectionAlbum.svelte';
+  import CollectionArtist from '@/lib/CollectionArtist.svelte';
   import ListFilter from '@/lib/ListFilter.svelte';
 
   /** @type {import('@/js/spotify').SpotifySearch} */
@@ -79,12 +79,12 @@
 
   {#if $displayFilter.trackOn}
     <h3>1st tracks</h3>
-    <SpotifyListTrack items={firstTracks} />
+    <CollectionTrack items={firstTracks} />
   {/if}
 
   {#if $displayFilter.artistOn}
     <h3>1st artists</h3>
-    <SpotifyListArtist items={firstArtists} />
+    <CollectionArtist items={firstArtists} />
   {/if}
 
   {#if $displayFilter.playlistOn}
@@ -94,17 +94,17 @@
 
   {#if $displayFilter.albumOn}
     <h3>1st albums</h3>
-    <SpotifyListAlbum items={firstAlbums} />
+    <CollectionAlbum items={firstAlbums} />
   {/if}
 
   {#if $displayFilter.trackOn}
     <h3>next tracks</h3>
-    <SpotifyListTrack items={nextTracks} />
+    <CollectionTrack items={nextTracks} />
   {/if}
 
   {#if $displayFilter.artistOn}
     <h3>next artists</h3>
-    <SpotifyListArtist items={nextArtists} />
+    <CollectionArtist items={nextArtists} />
   {/if}
 
   {#if $displayFilter.playlistOn}
@@ -114,6 +114,6 @@
 
   {#if $displayFilter.albumOn}
     <h3>next albums</h3>
-    <SpotifyListAlbum items={nextAlbums} />
+    <CollectionAlbum items={nextAlbums} />
   {/if}
 </div>
