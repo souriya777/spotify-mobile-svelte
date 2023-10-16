@@ -74,6 +74,14 @@ function isNotEmpty(str) {
   return str !== null && str !== undefined && typeof str === 'string' && str.trim().length > 0;
 }
 
+function isArrayNotEmpty(arr) {
+  return arr?.length;
+}
+
+function isArrayEmpty(arr) {
+  return !isArrayNotEmpty(arr);
+}
+
 export {
   NAME_REGEX,
   BIRTHDAY_REGEX,
@@ -86,4 +94,5 @@ export {
   appendScriptToBody,
   hourMinute,
   isNotEmpty,
+  isArrayEmpty,
 };

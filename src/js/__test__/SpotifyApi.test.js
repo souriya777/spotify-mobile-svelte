@@ -25,6 +25,8 @@ import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
 import PLAYER_STATE_JSON from './data/player-state.json';
 import SINGLE_PLAYLIST_JSON from './data/single-playlist.json';
 import SEARCH_SHERRY_JSON from './data/search-sherry.json';
+import PLAYLIST_OLD_ORDER_JSON from './data/playlist-old-order.json';
+import PLAYLIST_NEW_ORDER_JSON from './data/playlist-new-order.json';
 
 initSpotifyApi();
 
@@ -194,5 +196,26 @@ test(`can add a song to playlist`, async () => {
 
   expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
     uris: [songUri],
+  });
+});
+
+test(`moveTrackInPlaylist move a track up and returns updated playlist`, async () => {
+  const playlistId = '3lZmcYRykUqUkjoH1tChCe';
+  const songIndex = 0;
+  const newPosition = 1;
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
+
+  const actual = await SpotifyApi.moveTrackInPlaylist(
+    playlistId,
+    [...PLAYLIST_OLD_ORDER_JSON],
+    songIndex,
+    newPosition,
+  );
+  const expected = [...PLAYLIST_NEW_ORDER_JSON];
+
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+  expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
+    range_start: songIndex,
+    insert_before: newPosition,
   });
 });

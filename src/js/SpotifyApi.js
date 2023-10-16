@@ -41,7 +41,7 @@ import CursorFactory from '@/js/CursorFactory';
 import SpotifyPlaylistExtended from '@/js/SpotifyPlaylistExtended';
 import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 import SpotifySearch from '@/js/SpotifySearch';
-import { isNotEmpty } from '@/js/souriya-utils';
+import { isArrayEmpty, isNotEmpty } from '@/js/souriya-utils';
 import SpotifySavedAlbum from '@/js/SpotifySavedAlbum';
 import { sortByName, sortByAddedAt, sortByAddedAtDecrescent } from '@/js/spotify-utils';
 
@@ -415,7 +415,36 @@ class SpotifyApi {
   }
 
   // FIXME
-  // async moveTrackInPlaylist(tracks) {}
+  /**
+   * @param {string} playlistId
+   * @param {import('@/js/spotify').SpotifyTrack[]} tracks
+   * @param {number} songIndex
+   * @param {number} newPosition
+   * @returns {Promise<import('@/js/spotify').SpotifyTrack[]>}
+   */
+  async moveTrackInPlaylist(playlistId, tracks, songIndex, newPosition) {
+    if (isArrayEmpty(tracks)) {
+      return [];
+    }
+
+    const cloneItems = [...tracks];
+
+    if (songIndex > 0 || songIndex < cloneItems.length - 1) {
+      const songToMove = cloneItems[songIndex];
+      // Remove the song from its current position
+      cloneItems.splice(songIndex, 1);
+      // Insert the song in the new position
+      cloneItems.splice(newPosition, 0, songToMove);
+
+      // call API
+      this.#put(`/playlists/${playlistId}/tracks`, {
+        range_start: songIndex,
+        insert_before: newPosition,
+      });
+    }
+
+    return [...cloneItems];
+  }
 
   #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;

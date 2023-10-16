@@ -2,37 +2,13 @@
   import Collection from '@/lib/Collection.svelte';
   import CollectionItem from '@/lib/CollectionItem.svelte';
   import SpotifyApi from '@/js/SpotifyApi';
-  import { selectedPlaylistId } from '@/js/store';
 
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
   export let items;
+  export let playlistId;
 
-  function moveUp(songIndex, newPosition) {
-    if (songIndex > 0) {
-      const cloneItems = [...items];
-
-      const songToMove = cloneItems[songIndex];
-      // Remove the song from its current position
-      cloneItems.splice(songIndex, 1);
-      // Insert the song in the new position
-      cloneItems.splice(newPosition, 0, songToMove);
-
-      items = [...cloneItems];
-    }
-  }
-
-  function moveDown(songIndex, newPosition) {
-    const cloneItems = [...items];
-
-    if (songIndex < cloneItems.length - 1) {
-      const songToMove = cloneItems[songIndex];
-      // Remove the song from its current position
-      cloneItems.splice(songIndex, 1);
-      // Insert the song in the new position
-      cloneItems.splice(newPosition, 0, songToMove);
-
-      items = [...cloneItems];
-    }
+  async function move(songIndex, newPosition) {
+    items = await SpotifyApi.moveTrackInPlaylist(playlistId, items, songIndex, newPosition);
   }
 </script>
 
@@ -45,13 +21,13 @@
     <li>
       <div>
         {#if i > 0}
-          <button on:click={() => moveUp(i, i - 1)}>⬆️</button>
+          <button on:click={() => move(i, i - 1)}>⬆️</button>
         {/if}
         {#if i < items.length - 1}
-          <button on:click={() => moveDown(i, i + 1)}>⬇️</button>
+          <button on:click={() => move(i, i + 1)}>⬇️</button>
         {/if}
       </div>
-      <button on:click={() => SpotifyApi.addSongToPlaylist(track.uri, $selectedPlaylistId)}>
+      <button on:click={() => SpotifyApi.addSongToPlaylist(track.uri, playlistId)}>
         <CollectionItem
           imgUrl={image?.url}
           imgHeight={image?.height}

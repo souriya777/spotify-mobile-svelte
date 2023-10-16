@@ -15,4 +15,4 @@
 
 Playlist {id}
 
-<CollectionTrack items={tracks} />
+<CollectionTrack playlistId={id} items={tracks} />
