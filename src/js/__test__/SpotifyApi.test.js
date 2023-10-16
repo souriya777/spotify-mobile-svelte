@@ -200,6 +200,28 @@ test(`can add a song to playlist`, async () => {
   });
 });
 
+test(`can add a song to multiple playlists`, async () => {
+  const songUri = 'spotify:track:0S4dVpqBLnBFj4wdB4UDMd';
+  const playlistIds = ['3lZmcYRykUqUkjoH1tChCe', '5iLCxA1kjRDD9xpLD9Ym2z'];
+
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'post');
+
+  SpotifyApi.addSongToMultiplePlaylists(songUri, playlistIds);
+
+  expect(spy).toHaveBeenCalledWith(
+    `https://api.spotify.com/v1/playlists/${playlistIds[0]}/tracks`,
+    {
+      uris: [songUri],
+    },
+  );
+  expect(spy).toHaveBeenCalledWith(
+    `https://api.spotify.com/v1/playlists/${playlistIds[1]}/tracks`,
+    {
+      uris: [songUri],
+    },
+  );
+});
+
 test(`moveTrackInPlaylist move a track up and returns updated playlist`, async () => {
   const playlistId = '3lZmcYRykUqUkjoH1tChCe';
   const songIndex = 0;
@@ -223,7 +245,6 @@ test(`moveTrackInPlaylist move a track up and returns updated playlist`, async (
 
 test(`can add track in liked playlist`, async () => {
   const trackId = '36ylDwMUz1EqrdbfBF8vC7';
-
   const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
 
   SpotifyApi.likeTrack(trackId);
@@ -235,7 +256,6 @@ test(`can add track in liked playlist`, async () => {
 
 test(`can remove track from liked playlist`, async () => {
   const trackId = '36ylDwMUz1EqrdbfBF8vC7';
-
   const spy = vi.spyOn(AXIOS_INSTANCE, 'delete');
 
   SpotifyApi.unlikeTrack(trackId);

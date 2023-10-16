@@ -19,9 +19,8 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰 `nb commit feat() : 3/5`
+💰💰💰 `nb commit feat() : 4/5`
 
-- feat(song): can add song in several playlist
 - feat(browse): can see album detail
 
 -- how knowing which track are contained in liked playlist ?

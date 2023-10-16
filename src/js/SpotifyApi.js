@@ -429,6 +429,14 @@ class SpotifyApi {
   }
 
   /**
+   * @param {string} songUri
+   * @param {string[]} playlistIds
+   */
+  async addSongToMultiplePlaylists(songUri, playlistIds = []) {
+    playlistIds.forEach((id) => this.addSongToPlaylist(songUri, id));
+  }
+
+  /**
    * @param {string} playlistId
    * @param {import('@/js/spotify').SpotifyTrack[]} tracks
    * @param {number} songIndex

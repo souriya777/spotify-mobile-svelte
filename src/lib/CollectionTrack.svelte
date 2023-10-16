@@ -22,6 +22,13 @@
       {track.uri}
       <button on:click={() => SpotifyApi.unlikeTrack(track.id)}>🤍</button>
       <button on:click={() => SpotifyApi.likeTrack(track.id)}>💚</button>
+      <button
+        on:click={() =>
+          SpotifyApi.addSongToMultiplePlaylists(track.uri, [
+            '3lZmcYRykUqUkjoH1tChCe',
+            '5iLCxA1kjRDD9xpLD9Ym2z',
+          ])}>add to 2 playlists</button
+      >
 
       <div>
         {#if i > 0}
