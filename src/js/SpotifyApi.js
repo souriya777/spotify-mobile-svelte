@@ -43,7 +43,7 @@ import SpotifyPlaylist from '@/js/SpotifyPlaylist';
 import SpotifySearch from '@/js/SpotifySearch';
 import { isArrayEmpty, isNotEmpty } from '@/js/souriya-utils';
 import SpotifySavedAlbum from '@/js/SpotifySavedAlbum';
-import { sortByName, sortByAddedAt, sortByAddedAtDecrescent } from '@/js/spotify-utils';
+import { sortByName, sortByAddedAt } from '@/js/spotify-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -299,7 +299,7 @@ class SpotifyApi {
       `/playlists/${playlistId}/tracks?limit=50`,
       'SpotifySongCursor',
     );
-    return songs?.sort(sortByAddedAtDecrescent).map((song) => song?.track);
+    return songs?.map((song) => song?.track);
   }
 
   /** @return {Promise<import('@/js/spotify').SpotifySavedAlbum[]>} */

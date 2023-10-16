@@ -21,8 +21,6 @@ LIST MOST API CALLS
 
 💰💰💰 `nb commit feat() : 1/5`
 
-- try fixing track order in playlist
--
 - feat(song): can liked a song
 - feat(browse): can see album detail
 - feat(playlist): can create it
