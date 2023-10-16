@@ -14,7 +14,7 @@ import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added.json';
 import MY_PLAYLISTS_SORTED_ALPHABETICALLY_JSON from './data/my-playlists-sorted-alphabetically.json';
 import LIKED_SONGS_JSON from './data/liked-songs.json';
-import PLAYLIST_KARAOKE_SORTED_BY_ADDED_AT_DECRESCENT_JSON from './data/playlist-karaoke-sorted-by-added_at-decrescent.json';
+import PLAYLIST_KARAOKE_TRACKS_JSON from './data/playlist-karaoke-tracks.json';
 import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
 import ALBUMS_RECENTLY_ADDED_JSON from './data/albums-recently-added.json';
 import MY_FOLLOWING_ARTITSTS_JSON from './data/my-following-artists.json';
@@ -33,7 +33,7 @@ initSpotifyApi();
 test(`goToAuthorizeUrl() redirect to a generated a spotify-authorization-url"`, async () => {
   SpotifyApi.goToAuthorizeUrl();
   expect(window.location.href).toEqual(
-    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state%20user-follow-read%20playlist-modify-public%20playlist-modify-private&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
+    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state%20user-follow-read%20playlist-modify-public%20playlist-modify-private%20user-library-modify&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
   );
 });
 
@@ -114,9 +114,10 @@ test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`getPlaylistItems() returns SpotifyTrack[] sorted by decrescent added_at`, async () => {
-  const actual = await SpotifyApi.getPlaylistItems('2bsNu8LBBJhmmdJ9zp7gkw');
-  const expected = [...PLAYLIST_KARAOKE_SORTED_BY_ADDED_AT_DECRESCENT_JSON];
+test(`getPlaylistTracks() returns SpotifyTrack[] sorted by decrescent added_at`, async () => {
+  const actual = await SpotifyApi.getPlaylistTracks('2bsNu8LBBJhmmdJ9zp7gkw');
+
+  const expected = [...PLAYLIST_KARAOKE_TRACKS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
@@ -217,5 +218,31 @@ test(`moveTrackInPlaylist move a track up and returns updated playlist`, async (
   expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
     range_start: songIndex,
     insert_before: newPosition,
+  });
+});
+
+test(`can add track in liked playlist`, async () => {
+  const trackId = '36ylDwMUz1EqrdbfBF8vC7';
+
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
+
+  SpotifyApi.likeTrack(trackId);
+
+  expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/me/tracks`, {
+    ids: [trackId],
+  });
+});
+
+test(`can remove track from liked playlist`, async () => {
+  const trackId = '36ylDwMUz1EqrdbfBF8vC7';
+
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'delete');
+
+  SpotifyApi.unlikeTrack(trackId);
+
+  expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/me/tracks`, {
+    data: {
+      ids: [trackId],
+    },
   });
 });

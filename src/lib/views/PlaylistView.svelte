@@ -9,7 +9,7 @@
   let tracks = [];
 
   onMount(() => {
-    SpotifyApi.getPlaylistItems(id).then((items) => (tracks = items));
+    SpotifyApi.getPlaylistTracks(id).then((items) => (tracks = items));
   });
 </script>
 

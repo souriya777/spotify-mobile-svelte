@@ -19,13 +19,15 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰 `nb commit feat() : 1/5`
+💰💰💰 `nb commit feat() : 3/5`
 
-- feat(song): can liked a song
+- feat(song): can add song in several playlist
 - feat(browse): can see album detail
+
+-- how knowing which track are contained in liked playlist ?
+
 - feat(playlist): can create it
 - feat(playlist): can rename it
-
 - fix SpotifyApi.addSongToPlaylist
 - remove selectedPlaylistId in store ?
 - manage back in browser

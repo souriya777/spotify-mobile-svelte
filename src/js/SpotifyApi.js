@@ -293,7 +293,7 @@ class SpotifyApi {
   }
 
   /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */
-  async getPlaylistItems(playlistId) {
+  async getPlaylistTracks(playlistId) {
     /** @type {import('@/js/spotify').SpotifySong[]} */
     const songs = await this.#iterateOverCursor(
       `/playlists/${playlistId}/tracks?limit=50`,
@@ -404,6 +404,20 @@ class SpotifyApi {
     return new SpotifySearch(data);
   }
 
+  /** @param {string} trackId */
+  async likeTrack(trackId) {
+    this.#put('/me/tracks', {
+      ids: [trackId],
+    });
+  }
+
+  /** @param {string} trackId */
+  async unlikeTrack(trackId) {
+    this.#delete('/me/tracks', {
+      ids: [trackId],
+    });
+  }
+
   /**
    * @param {string} songUri
    * @param {string} playlistId
@@ -414,7 +428,6 @@ class SpotifyApi {
     });
   }
 
-  // FIXME
   /**
    * @param {string} playlistId
    * @param {import('@/js/spotify').SpotifyTrack[]} tracks
@@ -580,6 +593,20 @@ class SpotifyApi {
     try {
       AXIOS_INSTANCE.put(this.#url(endpoint), data).then((response) =>
         this.#axiosResponse(response, 'PUT', endpoint),
+      );
+    } catch (err) {
+      this.#axiosError(err);
+    }
+  }
+
+  /**
+   * @param {string} endpoint
+   * @param {object} data
+   */
+  async #delete(endpoint, data) {
+    try {
+      AXIOS_INSTANCE.delete(this.#url(endpoint), { data }).then((response) =>
+        this.#axiosResponse(response, 'DELETE', endpoint),
       );
     } catch (err) {
       this.#axiosError(err);

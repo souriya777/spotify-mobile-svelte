@@ -9,7 +9,7 @@
     "test": "vitest -w",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
-    "env:cp": "bash .env-bash"
+    "cp:env": "bash .env-bash"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.6",

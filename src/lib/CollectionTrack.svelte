@@ -19,6 +19,10 @@
     {@const artist = track?.artists?.map((t) => t?.name).join(', ')}
 
     <li>
+      {track.uri}
+      <button on:click={() => SpotifyApi.unlikeTrack(track.id)}>🤍</button>
+      <button on:click={() => SpotifyApi.likeTrack(track.id)}>💚</button>
+
       <div>
         {#if i > 0}
           <button on:click={() => move(i, i - 1)}>⬆️</button>

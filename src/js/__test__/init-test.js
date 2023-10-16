@@ -51,6 +51,7 @@ export function initSpotifyApi() {
       get: (url) => axiosFake('GET', url),
       post: (url, data, config) => axiosFake('POST', url, data, config),
       put: (url, data) => axiosFake('PUT', url, data),
+      delete: (url, data) => axiosFake('DELETE', url, { data }),
     };
     return {
       AXIOS_INSTANCE,
