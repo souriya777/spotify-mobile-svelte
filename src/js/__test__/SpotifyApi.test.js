@@ -15,6 +15,7 @@ import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added
 import MY_PLAYLISTS_SORTED_ALPHABETICALLY_JSON from './data/my-playlists-sorted-alphabetically.json';
 import LIKED_SONGS_JSON from './data/liked-songs.json';
 import PLAYLIST_KARAOKE_TRACKS_JSON from './data/playlist-karaoke-tracks.json';
+import ALBUM_ORELSAN_TRACKS_JSON from './data/album-orelsan-tracks.json';
 import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
 import ALBUMS_RECENTLY_ADDED_JSON from './data/albums-recently-added.json';
 import MY_FOLLOWING_ARTITSTS_JSON from './data/my-following-artists.json';
@@ -116,8 +117,13 @@ test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {
 
 test(`getPlaylistTracks() returns SpotifyTrack[] sorted by decrescent added_at`, async () => {
   const actual = await SpotifyApi.getPlaylistTracks('2bsNu8LBBJhmmdJ9zp7gkw');
-
   const expected = [...PLAYLIST_KARAOKE_TRACKS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getAlbumTracks() returns SpotifyAlbumTrack[]`, async () => {
+  const actual = await SpotifyApi.getAlbumTracks('2o2GBOfy2GG9oKYZgfZkur');
+  const expected = [...ALBUM_ORELSAN_TRACKS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 

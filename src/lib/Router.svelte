@@ -6,6 +6,7 @@
   import MyLibView from '@/lib/views/MyLibView.svelte';
   import Logger from '@/js/Logger';
   import PlaylistView from '@/lib/views/PlaylistView.svelte';
+  import AlbumView from '@/lib/views/AlbumView.svelte';
 
   const LOGGER = Logger.getNewInstance('Router.svelte');
 
@@ -25,6 +26,10 @@
     const id = pathname?.match(/(?<=playlist\/).*/g)?.[0];
     props = { id };
     View = PlaylistView;
+  } else if (/album/gi.test(pathname)) {
+    const id = pathname?.match(/(?<=album\/).*/g)?.[0];
+    props = { id };
+    View = AlbumView;
   }
 </script>
 

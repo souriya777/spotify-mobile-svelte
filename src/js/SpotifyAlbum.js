@@ -6,6 +6,7 @@ import SpotifyImage from '@/js/SpotifyImage';
  */
 class SpotifyAlbum {
   constructor(fromApi) {
+    this.id = fromApi?.id;
     this.uri = fromApi?.uri;
     this.name = fromApi?.name;
     this.artists = fromApi?.artists?.map((item) => new SpotifyArtist(item));

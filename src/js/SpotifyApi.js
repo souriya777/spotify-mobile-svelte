@@ -292,7 +292,10 @@ class SpotifyApi {
     return tracks?.sort(sortByAddedAt).map((song) => song?.track);
   }
 
-  /** @returns {Promise<import('@/js/spotify').SpotifyTrack[]>} */
+  /**
+   * @param {string} playlistId
+   * @returns {Promise<import('@/js/spotify').SpotifyTrack[]>}
+   */
   async getPlaylistTracks(playlistId) {
     /** @type {import('@/js/spotify').SpotifySong[]} */
     const songs = await this.#iterateOverCursor(
@@ -300,6 +303,19 @@ class SpotifyApi {
       'SpotifySongCursor',
     );
     return songs?.map((song) => song?.track);
+  }
+
+  /**
+   * @param {string} albumId
+   * @returns {Promise<import('@/js/spotify').SpotifyAlbumTrack[]>}
+   */
+  async getAlbumTracks(albumId) {
+    /** @type {import('@/js/spotify').SpotifyAlbumTrack[]} */
+    const tracks = await this.#iterateOverCursor(
+      `/albums/${albumId}/tracks`,
+      'SpotifyAlbumTrackCursor',
+    );
+    return tracks;
   }
 
   /** @return {Promise<import('@/js/spotify').SpotifySavedAlbum[]>} */

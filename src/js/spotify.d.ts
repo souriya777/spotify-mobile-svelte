@@ -14,10 +14,21 @@ export type SpotifyTrack = {
 };
 
 export type SpotifyAlbum = {
+  id?: string;
   uri: string;
   name: string;
   images: SpotifyImage[];
   artists?: SpotifyArtist[];
+};
+
+export type SpotifyAlbumTrack = {
+  id: string;
+  uri: string;
+  name: string;
+  disc_number: number;
+  track_number: number;
+  duration_ms: number;
+  artists: SpotifyArtist[];
 };
 
 export interface SpotifySavedAlbum extends SpotifyAlbum {
@@ -79,6 +90,10 @@ export interface SpotifySongCursor extends Cursor {
 
 export interface SpotifyAlbumCursor extends Cursor {
   items: SpotifyAlbumItemCursor[];
+}
+
+export interface SpotifyAlbumTrackCursor extends Cursor {
+  items: SpotifyAlbumTrack[];
 }
 
 export interface SpotifyPlaylistCursor extends Cursor {

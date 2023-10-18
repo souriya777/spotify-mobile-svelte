@@ -19,25 +19,20 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰 `nb commit feat() : 4/5`
+💰💰💰💰💰 `nb commit feat() : 1/5`
 
-- feat(browse): can see album detail
-
--- how knowing which track are contained in liked playlist ?
-
+- feat(playlist): add drop-down menu to select playlistId
 - feat(playlist): can create it
 - feat(playlist): can rename it
-- fix SpotifyApi.addSongToPlaylist
 - remove selectedPlaylistId in store ?
+  -- fix SpotifyApi.addSongToPlaylist
+
+- feat(navigation): when in playlist detail or album detail, select `Your library` menu item
 - manage back in browser
 - feat(playlist): can remove it
 - feat(radio): can go to radio
 - feat(login): can login via SSO
 - feat(logout): can logout
-
-- feat(cache): find a strategy
-- feat(cache): optimize it
-- feat(service-worker): invalidate when add like song ?
 
 -- fade effect when switch
 -- slide-left when in
@@ -69,6 +64,11 @@ LIST MOST API CALLS
 - space
 - color
 - px
+
+- feat(cache): find a strategy
+  -- how knowing which track are contained in liked playlist ?
+- feat(cache): optimize it
+- feat(service-worker): invalidate when add like song ?
 
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
 

@@ -7,6 +7,7 @@ import AVAILABLE_DEVICES_API_JSON from './api/available-devices-api.json';
 import MY_ALBUMS_OFFSET_0_API_JSON from './api/my-albums-offset-0-api.json';
 import MY_ALBUMS_OFFSET_50_API_JSON from './api/my-albums-offset-50-api.json';
 import PLAYLIST_KARAOKE_SONGS_API_JSON from './api/playlist-karaoke-songs-api.json';
+import ALBUM_ORELSAN_TRACKS_API_JSON from './api/album-orelsan-tracks-api.json';
 import MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON from './api/my-following-artists-offset-0-api.json';
 import MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON from './api/my-following-artists-offset-50-api.json';
 import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
@@ -80,6 +81,8 @@ function getData(method, url, data, config) {
       return { ...MY_ALBUMS_OFFSET_50_API_JSON };
     } else if (endpoint === '/playlists/2bsNu8LBBJhmmdJ9zp7gkw/tracks?limit=50') {
       return { ...PLAYLIST_KARAOKE_SONGS_API_JSON };
+    } else if (endpoint === '/albums/2o2GBOfy2GG9oKYZgfZkur/tracks') {
+      return { ...ALBUM_ORELSAN_TRACKS_API_JSON };
     } else if (endpoint === '/me/following?type=artist&limit=50') {
       return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON };
     } else if (/\/me\/following\?type=artist.*&after=/g.test(endpoint)) {
