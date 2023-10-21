@@ -3,6 +3,7 @@ import { get } from 'svelte/store';
 import { AXIOS_INSTANCE } from '@/js/axios-utils';
 import Logger from '@/js/Logger';
 import { BROWSER_DEVICE } from '@/js/browser-utils';
+import { getUrlParam } from '@/js/souriya-utils';
 import {
   accessToken,
   userId,
@@ -66,7 +67,7 @@ class SpotifyApi {
   }
 
   async initAccessToken() {
-    const authorizationCode = new URL(window.location.href).searchParams.get('code');
+    const authorizationCode = getUrlParam('code');
 
     const data = new URLSearchParams({
       code: authorizationCode,
@@ -456,10 +457,10 @@ class SpotifyApi {
    * @param {string} playlistId
    * @param {import('@/js/spotify').SpotifyTrack[]} tracks
    * @param {number} songIndex
-   * @param {number} newPosition
+   * @param {number} newIndex
    * @returns {Promise<import('@/js/spotify').SpotifyTrack[]>}
    */
-  async moveTrackInPlaylist(playlistId, tracks, songIndex, newPosition) {
+  async moveTrackInPlaylist(playlistId, tracks, songIndex, newIndex) {
     if (isArrayEmpty(tracks)) {
       return [];
     }
@@ -471,12 +472,12 @@ class SpotifyApi {
       // Remove the song from its current position
       cloneItems.splice(songIndex, 1);
       // Insert the song in the new position
-      cloneItems.splice(newPosition, 0, songToMove);
+      cloneItems.splice(newIndex, 0, songToMove);
 
       // call API
       this.#put(`/playlists/${playlistId}/tracks`, {
         range_start: songIndex,
-        insert_before: newPosition,
+        insert_before: newIndex,
       });
     }
 

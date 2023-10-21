@@ -2,13 +2,16 @@
   import Collection from '@/lib/Collection.svelte';
   import CollectionItem from '@/lib/CollectionItem.svelte';
   import SpotifyApi from '@/js/SpotifyApi';
+  import AddToPlaylist from '@/lib/AddToPlaylist.svelte';
 
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
   export let items;
-  export let playlistId;
+  export let playlistId = null;
 
-  async function move(songIndex, newPosition) {
-    items = await SpotifyApi.moveTrackInPlaylist(playlistId, items, songIndex, newPosition);
+  async function move(currentIndex, newIndex) {
+    if (playlistId) {
+      items = await SpotifyApi.moveTrackInPlaylist(playlistId, items, currentIndex, newIndex);
+    }
   }
 </script>
 
@@ -30,24 +33,23 @@
           ])}>add to 2 playlists</button
       >
 
-      <div>
-        {#if i > 0}
+      {#if playlistId}
+        <div>
           <button on:click={() => move(i, i - 1)}>⬆️</button>
-        {/if}
-        {#if i < items.length - 1}
           <button on:click={() => move(i, i + 1)}>⬇️</button>
-        {/if}
-      </div>
-      <button on:click={() => SpotifyApi.addSongToPlaylist(track.uri, playlistId)}>
-        <CollectionItem
-          imgUrl={image?.url}
-          imgHeight={image?.height}
-          imgWidth={image?.width}
-          imgAlt={album?.name}
-          title={track?.name}
-          author={artist}
-        />
-      </button>
+        </div>
+      {/if}
+
+      <CollectionItem
+        imgUrl={image?.url}
+        imgHeight={image?.height}
+        imgWidth={image?.width}
+        imgAlt={album?.name}
+        title={track?.name}
+        author={artist}
+      />
+
+      <AddToPlaylist trackUri={track.uri} />
     </li>
   {/each}
 </Collection>

@@ -70,6 +70,10 @@ function appendScriptToBody(scriptUrl, async = true) {
   document.body.appendChild(script);
 }
 
+function getUrlParam(paramName) {
+  return new URL(window.location.href).searchParams.get(paramName);
+}
+
 function isNotEmpty(str) {
   return str !== null && str !== undefined && typeof str === 'string' && str.trim().length > 0;
 }
@@ -92,6 +96,7 @@ export {
   decodeHtml,
   observeElementScrolled,
   appendScriptToBody,
+  getUrlParam,
   hourMinute,
   isNotEmpty,
   isArrayEmpty,

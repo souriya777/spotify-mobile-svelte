@@ -19,17 +19,14 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰💰💰 `nb commit feat() : 1/5`
+💰💰💰💰💰 `nb commit feat() : 2/5`
 
-- feat(playlist): add drop-down menu to select playlistId
 - feat(playlist): can create it
 - feat(playlist): can rename it
-- remove selectedPlaylistId in store ?
-  -- fix SpotifyApi.addSongToPlaylist
+- feat(playlist): can remove it
 
 - feat(navigation): when in playlist detail or album detail, select `Your library` menu item
 - manage back in browser
-- feat(playlist): can remove it
 - feat(radio): can go to radio
 - feat(login): can login via SSO
 - feat(logout): can logout

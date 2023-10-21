@@ -2,6 +2,7 @@
   import Collection from '@/lib/Collection.svelte';
   import CollectionItem from '@/lib/CollectionItem.svelte';
   import SpotifyApi from '@/js/SpotifyApi';
+  import AddToPlaylist from '@/lib/AddToPlaylist.svelte';
 
   /** @type {import('@/js/spotify').SpotifyAlbumTrack[]} */
   export let items;
@@ -22,12 +23,9 @@
             '5iLCxA1kjRDD9xpLD9Ym2z',
           ])}>add to 2 playlists</button
       >
-      <button
-        on:click={() => SpotifyApi.addSongToPlaylist(track.uri, 'TODOwhen-selected-playlist')}
-      >
-        {i}.
-        <CollectionItem title={track?.name} author={artist} />
-      </button>
+      {i}.
+      <CollectionItem title={track?.name} author={artist} />
+      <AddToPlaylist trackUri={track.uri} />
     </li>
   {/each}
 </Collection>

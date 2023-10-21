@@ -8,6 +8,8 @@
 </script>
 
 <div class="preview-summary">
+  <slot name="move" />
+
   {#if imgUrl}
     <img src={imgUrl} alt={imgAlt} height={imgHeight} width={imgWidth} />
   {/if}
