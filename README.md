@@ -19,13 +19,11 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰💰💰 `nb commit feat() : 2/5`
+💰💰💰💰💰 `nb commit feat() : 3/5`
 
-- feat(playlist): can remove it
-- feat(radio): can go to radio
 - feat(login): can login via SSO
-
 - feat(navigation): when in playlist detail or album detail, select `Your library` menu item
+
 - manage back in browser
 - feat(logout): can logout
 
@@ -103,6 +101,7 @@ LIST MOST API CALLS
 
 ## bonus
 
+- can't delete playlist...
 - playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
 - fix in `SpotifyApi.test.js`
   `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`

@@ -421,6 +421,17 @@ class SpotifyApi {
   }
 
   /**
+   * FIXME 405 Method Not Allowed
+   * Spotify API does not private endpoint to
+   * remove playlist
+   * @param {string} playlistId
+   * @deprecated
+   */
+  async deletePlaylist(playlistId) {
+    this.#delete(`/playlists/${playlistId}`);
+  }
+
+  /**
    * @param {string} query
    * @returns {Promise<import('@/js/spotify').SpotifySearch>}
    */
