@@ -9,6 +9,7 @@
   import CollectionArtist from '@/lib/CollectionArtist.svelte';
   import CollectionItem from '@/lib/CollectionItem.svelte';
   import ListFilter from '@/lib/ListFilter.svelte';
+  import CreatePlaylist from '@/lib/CreatePlaylist.svelte';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -104,6 +105,8 @@
         author={`${totalLikedTracks} titles`}
       />
     </li>
+
+    <CreatePlaylist />
 
     <CollectionPlaylist items={playlists} />
   </ul>

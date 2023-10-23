@@ -413,6 +413,14 @@ class SpotifyApi {
   }
 
   /**
+   * @param {string} userId
+   * @param {string} name
+   */
+  async createPlaylist(userId, name) {
+    this.#post(`/users/${userId}/playlists`, { name });
+  }
+
+  /**
    * @param {string} query
    * @returns {Promise<import('@/js/spotify').SpotifySearch>}
    */

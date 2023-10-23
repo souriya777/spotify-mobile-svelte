@@ -284,3 +284,15 @@ test(`can rename playlist`, async () => {
     name: newName,
   });
 });
+
+test(`can create playlist`, async () => {
+  const userId = 'benjamin59';
+  const name = 'my playlist name';
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'post');
+
+  SpotifyApi.createPlaylist(userId, name);
+
+  expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+    name,
+  });
+});
