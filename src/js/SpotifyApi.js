@@ -405,6 +405,14 @@ class SpotifyApi {
   }
 
   /**
+   * @param {string} playlistId
+   * @param {string} newName
+   */
+  async updatePlaylistName(playlistId, newName) {
+    this.#put(`/playlists/${playlistId}`, { name: newName });
+  }
+
+  /**
    * @param {string} query
    * @returns {Promise<import('@/js/spotify').SpotifySearch>}
    */

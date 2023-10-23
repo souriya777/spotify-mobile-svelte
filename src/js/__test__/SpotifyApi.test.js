@@ -272,3 +272,15 @@ test(`can remove track from liked playlist`, async () => {
     },
   });
 });
+
+test(`can rename playlist`, async () => {
+  const playlistId = '4RF7mw2Acseouq7QOnaVi3';
+  const newName = 'my new playlist name';
+  const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
+
+  SpotifyApi.updatePlaylistName(playlistId, newName);
+
+  expect(spy).toHaveBeenCalledWith(`https://api.spotify.com/v1/playlists/${playlistId}`, {
+    name: newName,
+  });
+});

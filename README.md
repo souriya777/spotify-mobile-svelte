@@ -19,16 +19,15 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰💰💰 `nb commit feat() : 2/5`
+💰💰💰💰💰 `nb commit feat() : 1/5`
 
 - feat(playlist): can create it
-- feat(playlist): can rename it
 - feat(playlist): can remove it
+- feat(radio): can go to radio
+- feat(login): can login via SSO
 
 - feat(navigation): when in playlist detail or album detail, select `Your library` menu item
 - manage back in browser
-- feat(radio): can go to radio
-- feat(login): can login via SSO
 - feat(logout): can logout
 
 -- fade effect when switch
@@ -64,6 +63,7 @@ LIST MOST API CALLS
 
 - feat(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
+  -- invalid cache, when rename playlist
 - feat(cache): optimize it
 - feat(service-worker): invalidate when add like song ?
 
