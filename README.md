@@ -19,31 +19,24 @@ Stone soup
 
 LIST MOST API CALLS
 
-💰💰💰💰💰 `nb commit feat() : 3/5`
+💰💰💰💰💰 `nb commit feat() : 0/5`
 
-- feat(login): can login via SSO
-- feat(navigation): when in playlist detail or album detail, select `Your library` menu item
+- feat(ui): create a `StackUIManager` to manage view changes
+- feat(layout): one stack views by `route`
+- resolve child, grand-child etc...
+- feat(ux): can I have native vibration ? (eg. move song in queue)
+- feat(ui): drag'n drop
 
-- manage back in browser
-- feat(logout): can logout
-
--- fade effect when switch
--- slide-left when in
--- slide-right when out
-
-- can I have native vibration ? (eg. move song in queue)
-- drag'n drop
-- use use:onTap
+- feat(ui): use use:onTap
 - position fixed : player & menu
 - feat(navigation): improve player & menu
 - +end content height === player + nav
-- StackUIManager FIXME
-  FEAT(LAYOUT): IMPLEMENT STACK VIEWS
-- feat(layout): one stack views by `route`
-- resolve child, grand-child etc...
 - feat(button): onTap ?
   TRANSITION
 - utiliser le view transition API à la "svelte menu"
+- feat(effects): fade effect when switch
+- feat(effects): slide-left when in
+- feat(effects): slide-right when out
 - implement <ProgressBar>
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(ui): add waiting visual indication when fetching is too long
@@ -101,6 +94,8 @@ LIST MOST API CALLS
 
 ## bonus
 
+- feat(logout): can logout
+- feat(browser): manage back search (no dependent of char by char input)
 - can't delete playlist...
 - playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
 - fix in `SpotifyApi.test.js`

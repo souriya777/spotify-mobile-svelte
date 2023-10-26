@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { displayFilter } from '@/js/store';
-  import { debounce } from '@/js/souriya-utils';
+  import { debounce, isEmpty } from '@/js/souriya-utils';
   import SpotifyApi from '@/js/SpotifyApi';
   import { searchQuery } from '@/js/store';
   import CollectionTrack from '@/lib/CollectionTrack.svelte';
@@ -41,7 +41,13 @@
   };
 
   function search(query) {
-    window.history.pushState({}, 'new search', `/search/${query}`);
+    if (isEmpty(query)) {
+      return;
+    }
+
+    const path = `/search/${query}`;
+    window.history.pushState({}, path, path);
+
     searchQuery.set(query);
 
     debounce(async () => {
