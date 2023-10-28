@@ -1,10 +1,6 @@
 <script>
   import PhoneStatus from '@/lib/PhoneStatus.svelte';
   import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
-  import Debug from '@/lib/Debug.svelte';
-  import { appReady, playerFull } from '@/js/store';
-  import Notification from '@/lib/Notification.svelte';
-  import Player from '@/lib/Player.svelte';
   import Router from '@/lib/Router.svelte';
 </script>
 
@@ -13,21 +9,9 @@
     <PhoneStatus />
   </div>
 
-  <div class="screen__content">
+  <div class="screen__view">
     <SpotifyAuthentication />
-    <Notification />
-    <Debug />
-
-    {#if $appReady}
-      <details open={$playerFull}>
-        <summary>
-          <button on:click={() => playerFull.update((state) => !state)}>player</button>
-        </summary>
-        <Player />
-      </details>
-
-      <Router />
-    {/if}
+    <Router />
   </div>
 </div>
 
@@ -50,19 +34,21 @@
     margin-inline: auto;
     display: grid;
     grid-template-rows: var(--height-screen-top) auto;
-    /* display: grid;
-    grid-template-rows: var(--height-screen-top) auto 32px var(--height-screen-nav); */
-    /* TODO uncomment */
-    /* overflow: hidden; */
+    overflow-y: scroll;
     background-color: var(--color-bg-spotify);
     color: var(--color-text-white);
   }
 
-  .screen__content {
-    background-color: slategray;
+  .screen__top {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-index-phone-status);
+  }
+
+  .screen__view {
     position: relative;
-    overflow-y: scroll;
-    /* TODO uncomment */
-    /* overflow-x: hidden; */
+    margin-block-start: var(--FIXME-margin-block-start-content);
+    border: 1px dashed hotpink;
   }
 </style>

@@ -21,9 +21,15 @@ LIST MOST API CALLS
 
 💰💰💰💰💰 `nb commit feat() : 0/5`
 
-- feat(ui): create a `StackUIManager` to manage view changes
+-feat(stack-ui): add slide in
+-🔴 feat(stack-ui): add slide out when clicking `back` button
+-🔴 feat(stack-ui): resolve child, grand-child etc...
+-🔴 feat(stack-ui): store navigation in an object
+-🔴 feat(stack-ui): change background-color depending on view
+-🔴 feat(stack-ui): "switch view" when click tab, create view when "detail"
+-🔴 remove `StackUIManagerOLD`
+
 - feat(layout): one stack views by `route`
-- resolve child, grand-child etc...
 - feat(ux): can I have native vibration ? (eg. move song in queue)
 - feat(ui): drag'n drop
 

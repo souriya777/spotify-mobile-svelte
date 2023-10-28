@@ -1,4 +1,6 @@
 <script>
+  import { appReady, playerFull, currentPath } from '@/js/store';
+  import { getUrlPath } from '@/js/souriya-utils';
   import Nav from '@/lib/Nav.svelte';
   import HomeView from '@/lib/views/HomeView.svelte';
   import SearchView from '@/lib/views/SearchView.svelte';
@@ -6,8 +8,10 @@
   import Logger from '@/js/Logger';
   import PlaylistView from '@/lib/views/PlaylistView.svelte';
   import AlbumView from '@/lib/views/AlbumView.svelte';
-  import { getUrlPath } from '@/js/souriya-utils';
-  import { currentPath } from '@/js/store';
+  import Debug from '@/lib/Debug.svelte';
+  import Notification from '@/lib/Notification.svelte';
+  import Player from '@/lib/Player.svelte';
+  import StackUiManager from '@/lib/StackUIManager.svelte';
 
   const LOGGER = Logger.getNewInstance('Router.svelte');
 
@@ -49,11 +53,23 @@
   }
 </script>
 
-<Nav />
-<svelte:component this={View} {...props} />
-
-<svelte:window on:popstate={handlePopstate} />
-
 <svelte:head>
   <title>{title}</title>
 </svelte:head>
+
+<svelte:window on:popstate={handlePopstate} />
+
+<StackUiManager {View} {props}>
+  <Notification />
+  <Debug />
+
+  {#if $appReady}
+    <details open={$playerFull}>
+      <summary
+        ><button on:click={() => playerFull.update((state) => !state)}>player</button></summary
+      ><Player />
+    </details>
+  {/if}
+
+  <Nav />
+</StackUiManager>
