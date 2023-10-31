@@ -1,4 +1,5 @@
 <script>
+  import PhoneStatus from '@/lib/PhoneStatus.svelte';
   import PhoneScreen from '@/lib/PhoneScreen.svelte';
 </script>
 
@@ -7,6 +8,10 @@
   <div class="button-left-2" />
   <div class="button-left-3" />
   <div class="button-right" />
+
+  <div class="phone__island">
+    <PhoneStatus />
+  </div>
 
   <PhoneScreen />
 </div>
@@ -24,6 +29,13 @@
     position: relative;
     border: var(--border-width-shell) solid var(--color-shell);
     border-radius: var(--border-radius-shell);
+  }
+
+  .phone__island {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-index-phone-status);
   }
 
   .button-left-1,

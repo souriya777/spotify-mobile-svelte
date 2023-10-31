@@ -12,6 +12,7 @@
   import Notification from '@/lib/Notification.svelte';
   import Player from '@/lib/Player.svelte';
   import StackUiManager from '@/lib/StackUIManager.svelte';
+  import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
 
   const LOGGER = Logger.getNewInstance('Router.svelte');
 
@@ -58,6 +59,7 @@
 </svelte:head>
 
 <svelte:window on:popstate={handlePopstate} />
+<SpotifyAuthentication />
 
 <StackUiManager {View} {props}>
   <Notification />
@@ -65,9 +67,10 @@
 
   {#if $appReady}
     <details open={$playerFull}>
-      <summary
-        ><button on:click={() => playerFull.update((state) => !state)}>player</button></summary
-      ><Player />
+      <summary>
+        <button on:click={() => playerFull.update((state) => !state)}>player</button>
+      </summary>
+      <Player />
     </details>
   {/if}
 

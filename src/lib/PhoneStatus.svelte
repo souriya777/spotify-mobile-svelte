@@ -56,7 +56,6 @@
 
 <style>
   .phone-status {
-    background-color: dodgerblue;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -64,9 +63,10 @@
     margin-inline: auto;
     padding-block-start: 6px;
     padding-block-end: 12px;
-    border-radius: var(--border-radius-iphone);
-    font-size: var(--font-size-iphone-top);
+    color: var(--color-text-white);
+    font-size: var(--font-size-iphone14);
     font-weight: var(--FIXME-font-weight-bold);
+    border: 2px dashed hotpink;
   }
 
   .infos {

@@ -1,4 +1,6 @@
 <script>
+  // import Panel from '@/lib/Panel.svelte';
+
   export let View;
   export let props;
 
@@ -6,21 +8,27 @@
   $: console.log(STACK_VIEWS, STACK_VIEWS?.length, '🔴');
 </script>
 
-<div class="to-be-stacked">
-  StackUIManager
-  <slot />
+{#each STACK_VIEWS as theView, i}
+  {@const active = i + 1 === STACK_VIEWS.length}
 
-  {#each STACK_VIEWS as view, i}
-    <div class:active={i + 1 === STACK_VIEWS.length}>
-      testasou{i}
-      <svelte:component this={view} {...props} />
-    </div>
-  {/each}
-</div>
+  <!-- <Panel {active}> -->
+  <div class="to-be-stacked" class:active>
+    StackUIManager testasou{i}
+    <slot />
+
+    <svelte:component this={theView} {...props} />
+  </div>
+  <!-- </Panel> -->
+{/each}
 
 <style>
+  .to-be-stacked {
+    height: 100%;
+    /* padding-block-start: var(--height-screen-island); */
+  }
+
   .active {
     /* transform: translateX(50%); */
-    background-color: yellow;
+    border: 8px dashed yellow;
   }
 </style>

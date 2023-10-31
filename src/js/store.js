@@ -35,6 +35,7 @@ const appReady = derived(
 const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
 const searchQuery = writableLocalStorage('searchQuery', '');
 const currentPath = writableLocalStorage('currentPath', '/');
+const scrollTop = writable(0);
 
 // PLAYER
 const player = writable(null);
@@ -105,6 +106,7 @@ export {
   serviceWorkerNotification,
   searchQuery,
   currentPath,
+  scrollTop,
   displayTrackOn,
   displayArtistOn,
   displayPlaylistOn,
