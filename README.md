@@ -21,7 +21,6 @@ LIST MOST API CALLS
 
 💰💰💰💰💰 `nb commit feat() : 0/5`
 
-- feat(ui): make parallax effect generic
 - feat(playlist): get generated image from API
 - feat(stack-ui): change background-color depending on view
   -feat(stack-ui): add slide in
