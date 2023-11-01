@@ -53,6 +53,10 @@ class SpotifyApi {
   TRANSFERT_PLAYBACK_TIMEOUT_MS = Number(`${import.meta.env.VITE_TRANSFERT_PLAYBACK_TIMEOUT_MS}`);
   PREVIOUS_SONG_DELAY_MS = Number(`${import.meta.env.VITE_PREVIOUS_SONG_DELAY_MS}`);
 
+  constructor() {
+    LOGGER.log('🔴🔴🔴🔴🔴🔴');
+  }
+
   goToAuthorizeUrl() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
       this.#CLIENT_ID
@@ -291,6 +295,15 @@ class SpotifyApi {
     /** @type {import('@/js/spotify').SpotifySong[]} */
     const tracks = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
     return tracks?.sort(sortByAddedAt).map((song) => song?.track);
+  }
+
+  /**
+   * @param {string} playlistId
+   * @returns {Promise<import('@/js/spotify').SpotifyPlaylist>}
+   */
+  async getPlaylistDetails(playlistId) {
+    const result = await this.#get(`/playlists/${playlistId}`);
+    return new SpotifyPlaylist(result);
   }
 
   /**

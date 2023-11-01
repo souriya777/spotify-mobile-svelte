@@ -17,15 +17,11 @@ Stone soup
 
 ## mvp
 
-LIST MOST API CALLS
-
-💰💰💰💰💰 `nb commit feat() : 1/5`
-
-- -- do the same with "picture" (vs. "thumbnail")
-  -- feat(playlist): what is the image if les than 4 tracks ?
+- refactor(string-utils & souriya-utils)
 - feat(stack-ui): change background-color depending on view
-- feat(perf): optimize playlist generated image size: `640`, `300`, `60` => the `300` is "ideal"... how to find it ?
-  -feat(stack-ui): add slide in
+  -- works :) => make it independent
+- update "store-utils.writableLocalStorage" => chrome extension zenblock
+- feat(stack-ui): add slide in
   -🔴 feat(stack-ui): add slide out when clicking `back` button
   -🔴 feat(stack-ui): resolve child, grand-child etc...
   -🔴 feat(stack-ui): store navigation in an object
@@ -49,7 +45,6 @@ LIST MOST API CALLS
 - implement <ProgressBar>
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(ui): add waiting visual indication when fetching is too long
-- feat(mylib): design
 - feat(mylib): can select other song
 - feat(search): design
 - feat(queue): design
@@ -183,3 +178,11 @@ Note for `private` API :
   -- offline API ?
 - own simple router (`<svelte:component>`)
 ```
+
+# external lib
+
+https://jariz.github.io/vibrant.js/
+
+# RUN
+
+`pnpm dev`

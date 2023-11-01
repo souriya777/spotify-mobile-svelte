@@ -8,13 +8,16 @@
 
   /** @type {import('@/js/spotify').SpotifyTrack[]} */
   let tracks = [];
+  /** @type {import('@/js/spotify').SpotifyPlaylist} */
+  let playlist;
 
   onMount(() => {
     SpotifyApi.getPlaylistTracks(id).then((items) => (tracks = items));
+    SpotifyApi.getPlaylistDetails(id).then((item) => (playlist = item));
   });
 </script>
 
 Playlist {id}
 
-<PlaylistTopImage />
+<PlaylistTopImage images={playlist?.images} alt={playlist?.name} />
 <CollectionTrack playlistId={id} items={tracks} />

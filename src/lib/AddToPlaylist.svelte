@@ -15,7 +15,6 @@
   let selected;
 
   function addTrackToPlaylist() {
-    console.log(selected, trackUri, '✅');
     if (selected) {
       SpotifyApi.addSongToPlaylist(trackUri, selected);
     }

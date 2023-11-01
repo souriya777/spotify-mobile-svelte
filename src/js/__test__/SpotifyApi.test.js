@@ -14,6 +14,7 @@ import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added.json';
 import MY_PLAYLISTS_SORTED_ALPHABETICALLY_JSON from './data/my-playlists-sorted-alphabetically.json';
 import LIKED_SONGS_JSON from './data/liked-songs.json';
+import PLAYLIST_KARAOKE_DETAIL_JSON from './data/playlist-karaoke-detail.json';
 import PLAYLIST_KARAOKE_TRACKS_JSON from './data/playlist-karaoke-tracks.json';
 import ALBUM_ORELSAN_TRACKS_JSON from './data/album-orelsan-tracks.json';
 import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
@@ -112,6 +113,12 @@ test(`extendPlaylistWithAddeAt() return SpotifyPlaylist with 'added_at' field`, 
 test(`getLikedTracks() returns SpotifyTrack[] sorted by added_at`, async () => {
   const actual = await SpotifyApi.getLikedTracks();
   const expected = [...LIKED_SONGS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getPlaylistDetails() returns SpotifyPlaylist`, async () => {
+  const actual = await SpotifyApi.getPlaylistDetails('2bsNu8LBBJhmmdJ9zp7gkw');
+  const expected = { ...PLAYLIST_KARAOKE_DETAIL_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 

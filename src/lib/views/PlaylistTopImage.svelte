@@ -1,8 +1,14 @@
 <script>
   import { scrollTop } from '@/js/store';
+  import ImageSolver from '@/lib/ImageSolver.svelte';
+
+  /** @type {import('@/js/spotify').SpotifyImage[]}*/
+  export let images;
+  export let alt;
+
+  let img;
 
   const Y_OFFSET = 161;
-  let img;
 
   $: if (img) {
     const scale = 1 - ($scrollTop / Y_OFFSET) * 0.33;
@@ -13,18 +19,21 @@
 </script>
 
 <div class="top-image">
-  <img src="/karaoke.jpeg" alt="karaoke" bind:this={img} />
+  <div class="img" bind:this={img}>
+    <ImageSolver {images} {alt} isDetailImg={true} />
+  </div>
 </div>
 
 <style>
   .top-image {
     position: relative;
-    max-width: 150px;
+    display: flex;
+    justify-content: center;
     margin-inline: auto;
     padding-block: 20px;
   }
 
-  .top-image img {
+  .top-image .img {
     position: absolute;
   }
 </style>
