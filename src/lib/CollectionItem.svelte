@@ -2,15 +2,16 @@
   import CollectionImageSolver from '@/lib/CollectionImageSolver.svelte';
 
   /** @type {import('@/js/spotify').SpotifyImage[]} */
-  export let images;
+  export let images = [];
   export let title;
   export let author = null;
+  export let isArtist = false;
 </script>
 
 <div class="preview-summary">
   <slot name="move" />
 
-  <CollectionImageSolver {images} />
+  <CollectionImageSolver {images} alt={title} {isArtist} />
 
   <span class="text">
     {title}

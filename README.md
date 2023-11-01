@@ -21,10 +21,7 @@ LIST MOST API CALLS
 
 💰💰💰💰💰 `nb commit feat() : 1/5`
 
-- feat(playlist): if playlist contains nothing get the default image
-  -- do the same with "picture" (vs. "thumbnail")
-  -- feat(): tune image for album... and ... ?
-  -- feat(playlist): what is the image position if I upload myself an image ?
+- -- do the same with "picture" (vs. "thumbnail")
   -- feat(playlist): what is the image if les than 4 tracks ?
 - feat(stack-ui): change background-color depending on view
 - feat(perf): optimize playlist generated image size: `640`, `300`, `60` => the `300` is "ideal"... how to find it ?

@@ -10,6 +10,7 @@
   import CollectionItem from '@/lib/CollectionItem.svelte';
   import ListFilter from '@/lib/ListFilter.svelte';
   import CreatePlaylist from '@/lib/CreatePlaylist.svelte';
+  import SpotifyImageLiked from '@/js/SpotifyImageLiked';
 
   /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -99,8 +100,7 @@
   <ul>
     <li>
       <CollectionItem
-        imgUrl="/liked-songs-64.png"
-        imgAlt="liked songs"
+        images={[SpotifyImageLiked]}
         title="Liked Songs"
         author={`${totalLikedTracks} titles`}
       />
@@ -112,7 +112,7 @@
   </ul>
 {/if}
 
-<!-- {#if $displayFilter.albumOn}
+{#if $displayFilter.albumOn}
   <h2>Albums</h2>
 
   <Button
@@ -134,7 +134,7 @@
   <h2>Artists</h2>
 
   <CollectionArtist items={artists} />
-{/if} -->
+{/if}
 
 <style>
   li {

@@ -18,7 +18,6 @@
 <Collection>
   {#each items as track, i}
     {@const album = track?.album}
-    {@const image = album?.images?.at(-1)}
     {@const artist = track?.artists?.map((t) => t?.name).join(', ')}
 
     <li>
@@ -40,14 +39,7 @@
         </div>
       {/if}
 
-      <CollectionItem
-        imgUrl={image?.url}
-        imgHeight={image?.height}
-        imgWidth={image?.width}
-        imgAlt={album?.name}
-        title={track?.name}
-        author={artist}
-      />
+      <CollectionItem images={album?.images} title={track?.name} author={artist} />
 
       <AddToPlaylist trackUri={track.uri} />
     </li>

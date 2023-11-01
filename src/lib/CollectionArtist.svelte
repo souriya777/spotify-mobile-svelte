@@ -7,16 +7,8 @@
 
 <Collection>
   {#each items as artist}
-    {@const image = artist?.images?.at(-1)}
-
     <li class="spotify-list-artist-item">
-      <CollectionItem
-        imgUrl={image?.url}
-        imgHeight={image?.height}
-        imgWidth={image?.width}
-        imgAlt={artist?.name}
-        title={artist?.name}
-      />
+      <CollectionItem images={artist?.images} title={artist?.name} isArtist={true} />
     </li>
   {/each}
 </Collection>

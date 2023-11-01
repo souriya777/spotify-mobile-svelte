@@ -1,8 +1,11 @@
 <script>
   import NoteSvg from '@/lib/svg/NoteSvg.svelte';
+  import DefaultArtistSvg from '@/lib/svg/DefaultArtistSvg.svelte';
 
   /** @type {import('@/js/spotify').SpotifyImage[]} */
   export let images;
+  export let alt;
+  export let isArtist = false;
 
   /** @type {import('@/js/spotify').SpotifyImage} */
   let image = null;
@@ -20,16 +23,21 @@
 </script>
 
 {#if image}
-  <img src={image.url} alt={'FIXME'} height={image.height} width={image.width} />
+  <img src={image.url} {alt} height={image.height} width={image.width} />
+{:else if isArtist}
+  <div class="empty-img-artist" aria-label={alt}>
+    <DefaultArtistSvg />
+  </div>
 {:else}
-  <div class="empty-img">
+  <div class="empty-img" aria-label={alt}>
     <NoteSvg />
   </div>
 {/if}
 
 <style>
   img,
-  .empty-img {
+  .empty-img,
+  .empty-img-artist {
     width: var(--size-image-preview-collection);
     height: var(--size-image-preview-collection);
     border-radius: 4px;
@@ -45,5 +53,12 @@
     place-items: center;
     background-color: var(--color-bg-spotify-preview-img);
     color: var(--color-preview-image-note);
+  }
+
+  .empty-img-artist {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--color-bg-spotify-preview-img);
   }
 </style>
