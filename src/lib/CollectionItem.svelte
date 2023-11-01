@@ -1,8 +1,8 @@
 <script>
-  export let imgUrl = null;
-  export let imgHeight = 50;
-  export let imgWidth = 50;
-  export let imgAlt = '';
+  import CollectionImageSolver from '@/lib/CollectionImageSolver.svelte';
+
+  /** @type {import('@/js/spotify').SpotifyImage[]} */
+  export let images;
   export let title;
   export let author = null;
 </script>
@@ -10,9 +10,8 @@
 <div class="preview-summary">
   <slot name="move" />
 
-  {#if imgUrl}
-    <img src={imgUrl} alt={imgAlt} height={imgHeight} width={imgWidth} />
-  {/if}
+  <CollectionImageSolver {images} />
+
   <span class="text">
     {title}
     {#if author}
@@ -29,11 +28,5 @@
   .text {
     display: flex;
     flex-direction: column;
-  }
-
-  img {
-    display: inline-block;
-    max-width: 50px;
-    max-height: 50px;
   }
 </style>

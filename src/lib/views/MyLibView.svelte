@@ -112,7 +112,7 @@
   </ul>
 {/if}
 
-{#if $displayFilter.albumOn}
+<!-- {#if $displayFilter.albumOn}
   <h2>Albums</h2>
 
   <Button
@@ -134,7 +134,7 @@
   <h2>Artists</h2>
 
   <CollectionArtist items={artists} />
-{/if}
+{/if} -->
 
 <style>
   li {
