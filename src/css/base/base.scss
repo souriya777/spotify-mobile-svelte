@@ -1,27 +1,24 @@
 :root {
-  --color-bg-dark: #000;
-  --color-bg-spotify: #121212;
-  --color-bg-spotify-preview-img: #282828;
-  --color-text-white: #fff;
-  --color-text-grey: #a7a7a7;
-  --color-spotify: #1db954;
-  --color-active: #1ed760;
-  --color-shell: #5e5566; // deeppurple
-  --color-preview-image-note: #b3b3b3;
-  --border-width-shell: 4px;
-  --border-width-screen: 8px;
-  --FIXME-font-weight-bold: bold;
-  --font-size-iphone14: 11px;
-  --height-screen-island: 43px;
-  --size-image-preview-collection: 50px;
-  --size-image-detail-collection: 150px;
-  --z-index-phone-status: 1;
+  --color-primary: #121212;
+  --color-primary-highlight: #242424;
+  --color-secondary: #fff;
+  --color-tertiary: #b3b3b3;
+  --color-accent: #1ed760;
+  --color-on-primary: var(--color-secondary);
+  --color-on-accent: #000;
+  --color-on-primary-highlight: var(--color-secondary);
+
+  --height-iphone-12-mini: 160mm;
+  --width-iphone-12-mini: 77.2mm;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
 }
 
 body {
   font-family: 'circularsp-book';
-  // FIXME
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -47,4 +44,18 @@ ul {
   list-style: none;
   margin-block: 0;
   padding-inline-start: 0;
+}
+
+button.icon-text {
+  border: none;
+  background: transparent;
+
+  &.primary {
+    color: var(--color-secondary);
+  }
+
+  &.secondary {
+    color: var(--color-secondary);
+    color: var(--color-tertiary);
+  }
 }

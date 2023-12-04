@@ -8,6 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@js': path.resolve(__dirname, './src/js'),
+      '@lib': path.resolve(__dirname, './src/lib'),
     },
   },
   test: {

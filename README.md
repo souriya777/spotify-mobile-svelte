@@ -17,6 +17,14 @@ Stone soup
 
 ## mvp
 
+REFACTORING
+
+- separate logic code, from "view" code
+  -- remove `PhoneSAVE.svelte`
+  -- remove `baseSAVE.scss`
+  -- remove `NavSAVE.svelte`
+- new functionnality : sleep, queue, repeat queue
+
 - refactor(string-utils & souriya-utils)
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
