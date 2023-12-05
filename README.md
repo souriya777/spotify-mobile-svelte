@@ -19,9 +19,10 @@ Stone soup
 ## mvp
 
 refactor(ui):
-refactor(ui): nav-transparency
+refactor(ui):
+
 refactor(ui): side-menu
-refactor(ui): fonts
+refactor(ui): player
 
 - separate logic code, from "view" code
   -- remove `PhoneSAVE.svelte`
@@ -76,6 +77,8 @@ refactor(ui): fonts
 - feat(service-worker): invalidate when add like song ?
 
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
+
+- <main> `overflow: hidden;` ?
 
 ## perf
 
