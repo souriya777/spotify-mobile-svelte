@@ -9,6 +9,7 @@ Demo: https://spotify-mobile-svelte.vercel.app/
 KISS
 DRY
 ACID
+Single Source of Truth
 ETC (Easier To Change) : decoupling, single responsability principle
 No broken windows
 Stone soup
@@ -17,12 +18,16 @@ Stone soup
 
 ## mvp
 
-REFACTORING
+refactor(ui):
+refactor(ui): nav-transparency
+refactor(ui): side-menu
+refactor(ui): fonts
 
 - separate logic code, from "view" code
   -- remove `PhoneSAVE.svelte`
   -- remove `baseSAVE.scss`
   -- remove `NavSAVE.svelte`
+  -- remove `ButtonSAVE.svelte`
 - new functionnality : sleep, queue, repeat queue
 
 - refactor(string-utils & souriya-utils)

@@ -1,13 +1,54 @@
 <script>
-  export let label;
+  import Svg from '@lib/svg/Svg.svelte';
+
   export let callback;
-  export let selected = false;
+  export let type = '';
+  export let svg = null;
+  export let filled = false;
+  export let hasAccent = true;
+
+  let accent = false;
+
+  function handleClick() {
+    callback();
+
+    if (hasAccent) {
+      accent = !accent;
+    }
+  }
 </script>
 
-<button class:selected on:click={callback}>{label}</button>
+<button type="button" class={type} class:accent class:filled on:click={handleClick}>
+  {#if svg}
+    <span class="icon">
+      <Svg name={svg} />
+    </span>
+  {/if}
+
+  <span class="text">
+    <slot />
+  </span>
+</button>
 
 <style>
-  .selected {
-    border: 4px dashed hotpink;
+  button {
+    border: none;
+    background: transparent;
+  }
+
+  .accent {
+    color: var(--color-accent);
+  }
+
+  .filled {
+    border-radius: 1.8rem;
+    padding: 0.2rem 1.8rem;
+    background-color: var(--color-primary-highlight);
+    color: var(--color-on-primary-highlight);
+  }
+
+  .filled.accent {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
   }
 </style>

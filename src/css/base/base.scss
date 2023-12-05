@@ -1,6 +1,6 @@
 :root {
   --color-primary: #121212;
-  --color-primary-highlight: #242424;
+  --color-primary-highlight: #282828;
   --color-secondary: #fff;
   --color-tertiary: #b3b3b3;
   --color-accent: #1ed760;
@@ -10,6 +10,8 @@
 
   --height-iphone-12-mini: 160mm;
   --width-iphone-12-mini: 77.2mm;
+
+  --size-icon: 24;
 }
 
 html {
@@ -46,16 +48,20 @@ ul {
   padding-inline-start: 0;
 }
 
-button.icon-text {
+button {
   border: none;
   background: transparent;
+}
 
-  &.primary {
-    color: var(--color-secondary);
-  }
+button.accent {
+  color: var(--color-accent);
+}
 
-  &.secondary {
-    color: var(--color-secondary);
-    color: var(--color-tertiary);
-  }
+.primary {
+  color: var(--color-secondary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+  color: var(--color-tertiary);
 }
