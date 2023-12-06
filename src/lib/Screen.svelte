@@ -1,96 +1,159 @@
 <script>
-  import Header from '@lib/Header.svelte';
-  import Nav from '@lib/Nav.svelte';
-  import Button from '@lib/Button.svelte';
+  const TOTAL_SLIDES = 4;
+  const TOUCH_ZONE_WIDTH = 70;
+
+  /** @type {HTMLElement} */
+  let SCREEN;
+  /** @type {HTMLElement} */
+  let SLIDER;
+
+  let touchPosition = 0;
+  let initialTouchPosition = 0;
+  let translateX = 0;
+  $: virtualTranslateX = translateX + difference;
+  $: SCREEN_WIDTH = SCREEN ? SCREEN.clientWidth : 0;
+  $: difference = touchPosition - initialTouchPosition;
+  $: offset = SCREEN_WIDTH / 3;
+  $: isTouchedOnEdge =
+    initialTouchPosition <= TOUCH_ZONE_WIDTH ||
+    initialTouchPosition >= SCREEN_WIDTH - TOUCH_ZONE_WIDTH;
+  $: canSwipe = Math.abs(difference) >= offset;
+  $: canGoPrev = virtualTranslateX <= 0;
+  $: canGoNext = Math.abs(virtualTranslateX - SCREEN_WIDTH) < SCREEN_WIDTH * TOTAL_SLIDES;
+
+  function start(e) {
+    [...e.changedTouches].forEach((touch) => {
+      initialTouchPosition = touch.pageX;
+      touchPosition = initialTouchPosition;
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dot.style.top = `${touch.pageY}px`;
+      dot.style.left = `${initialTouchPosition}px`;
+      dot.id = touch.identifier.toString();
+      SCREEN.append(dot);
+    });
+  }
+
+  function move(e) {
+    [...e.changedTouches].forEach((touch) => {
+      touchPosition = touch.pageX;
+      const dot = document.getElementById(touch.identifier.toString());
+      dot.style.top = `${touch.pageY}px`;
+      dot.style.left = `${touchPosition}px`;
+
+      if (isTouchedOnEdge && canGoPrev && canGoNext) {
+        SLIDER.style.transform = `translateX(${virtualTranslateX}px)`;
+      }
+    });
+  }
+
+  function end(e) {
+    [...e.changedTouches].forEach((touch) => {
+      const dot = document.getElementById(touch.identifier.toString());
+      dot.remove();
+
+      slide();
+    });
+  }
+
+  function slide() {
+    if (!isTouchedOnEdge) {
+      return;
+    }
+
+    if (Math.abs(difference) > offset) {
+      if (difference > 0 && canGoPrev) {
+        translateX += SCREEN_WIDTH;
+      } else if (difference < 0 && canGoNext) {
+        translateX -= SCREEN_WIDTH;
+      }
+    }
+
+    SLIDER.style.transition = 'transform 0.25s cubic-bezier(0.4, 0, 0.23, 1)';
+    SLIDER.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function removeTransition() {
+    SLIDER.style.transition = '';
+  }
 </script>
 
-<div class="screen">
-  <div class="screen__side-menu">
-    SIDE MENU Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae in soluta
-    necessitatibus quisquam vel provident sit modi officia, enim sint, reiciendis ab quo. Dolorem
-    mollitia, culpa debitis quaerat neque repellat.
+<div
+  bind:this={SCREEN}
+  class="screen"
+  on:touchstart={start}
+  on:touchend={end}
+  on:touchmove={move}
+  on:transitionend={removeTransition}
+>
+  <div class="indicator" class:red={canGoPrev || canGoNext} class:green={canSwipe}>
+    <div>SCREEN_WIDTH:{SCREEN_WIDTH}</div>
+    <div>initialTouchPosition:{initialTouchPosition}</div>
+    <div>touchPosition:{touchPosition}</div>
+    <div>difference:{difference}</div>
+    <div>translateX:{translateX}</div>
+    <div>virtualTranslateX:{virtualTranslateX}</div>
+    <div>total:{SCREEN_WIDTH * TOTAL_SLIDES}</div>
+    <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
   </div>
 
-  <div class="screen_content">
-    <Header />
-
-    normal
-    <div class="text-accent">accent</div>
-    <div class="accent-area">accent-area</div>
-    <div class="highlight-area">highlight-area</div>
-
-    <Button type="primary" svg="favorite" callback={() => console.log('TODO')}>primary</Button>
-    <Button type="secondary" svg="favorite" callback={() => console.log('TODO 2')}>secondary</Button
-    >
-    <Button type="secondary" svg="favorite" callback={() => console.log('TODO 3')} />
-    <Button type="primary" hasAccent={false} callback={() => console.log('TODO 4')}
-      >no-accent</Button
-    >
-    <Button filled={true} callback={() => console.log('TODO 5')}>filled</Button>
-
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ducimus vel dolores incidunt
-    est beatae possimus aut totam error soluta voluptatem, eius corporis similique quae ex
-    distinctio voluptates. Quasi, consequuntur. Lorem ipsum dolor sit, amet consectetur adipisicing
-    elit. Libero ducimus vel dolores incidunt est beatae possimus aut totam error soluta voluptatem,
-    eius corporis similique quae ex distinctio voluptates. Quasi, consequuntur. Lorem ipsum dolor
-    sit, amet consectetur adipisicing elit. Libero ducimus vel dolores incidunt est beatae possimus
-    aut totam error soluta voluptatem, eius corporis similique quae ex distinctio voluptates. Quasi,
-    consequuntur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ducimus vel
-    dolores incidunt est beatae possimus aut totam error soluta voluptatem, eius corporis similique
-    quae ex distinctio voluptates. Quasi, consequuntur. Lorem ipsum dolor sit, amet consectetur
-    adipisicing elit. Libero ducimus vel dolores incidunt est beatae possimus aut totam error soluta
-    voluptatem, eius corporis similique quae ex distinctio voluptates. Quasi, consequuntur. Lorem
-    ipsum dolor sit, amet consectetur adipisicing elit. Libero ducimus vel dolores incidunt est
-    beatae possimus aut totam error soluta voluptatem, eius corporis similique quae ex distinctio
-    voluptates. Quasi, consequuntur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-    Libero ducimus vel dolores incidunt est beatae possimus aut totam error soluta voluptatem, eius
-    corporis similique quae ex distinctio voluptates. Quasi, consequuntur.
-  </div>
-
-  <div class="screen__nav">
-    <Nav />
+  <div bind:this={SLIDER} class="slider">
+    <div class="un">side-menu</div>
+    <div class="deux">welcome</div>
+    <div class="trois">playlist</div>
+    <div class="quatre">album</div>
   </div>
 </div>
 
 <style>
   .screen {
     position: relative;
-    box-sizing: content-box;
-    display: grid;
-    grid-template-columns: var(--width-side-menu) var(--width-content);
-    height: var(--height-iphone-12-mini);
-    width: var(--width-iphone-12-mini);
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-    overflow-y: scroll;
-  }
-
-  .screen_content {
-    background-color: hotpink;
-    color: white;
     height: 100%;
-    overflow-y: scroll;
+    border: 2px dashed hotpink;
   }
 
-  .screen__nav {
+  .indicator {
+    margin-block-end: 10px;
+  }
+
+  :global(.dot) {
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 20, 146, 0.3);
   }
 
-  .text-accent {
-    color: var(--color-accent);
+  .slider {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
   }
 
-  .accent-area {
-    background-color: var(--color-accent);
-    color: var(--color-on-accent);
-    padding: 1rem;
+  .un {
+    background-color: rgba(0, 100, 0, 0.5);
   }
 
-  .highlight-area {
-    background-color: var(--color-primary-highlight);
-    color: var(--color-on-primary-highlight);
-    padding: 1rem;
+  .deux {
+    background-color: rgba(0, 0, 139, 0.5);
+  }
+
+  .trois {
+    background-color: rgba(139, 0, 0, 0.5);
+  }
+
+  .quatre {
+    background-color: rgba(148, 0, 211, 0.5);
+  }
+
+  .red {
+    background-color: red;
+    color: white;
+  }
+  .green {
+    background-color: rgb(25, 141, 25);
+    color: white;
   }
 </style>

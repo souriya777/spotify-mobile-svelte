@@ -8,12 +8,16 @@
   --color-on-accent: #000;
   --color-on-primary-highlight: var(--color-secondary);
 
+  // FIXME
   --height-iphone-12-mini: 160mm;
   --width-iphone-12-mini: 77.2mm;
+  // --height-iphone-5se: 320px;
+  // --width-iphone-5se: 568px;
   --width-side-menu: 88%;
-  --width-content: 100%;
 
   --size-icon: 24;
+
+  --z-index-nearest: 1;
 }
 
 html {
@@ -30,10 +34,20 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+// prevent scroll
+html.no--scroll {
+  height: 100%;
+  overflow: hidden;
+
+  body {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
 main {
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 button {

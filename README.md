@@ -18,11 +18,14 @@ Stone soup
 
 ## mvp
 
-refactor(ui):
-refactor(ui):
-
-refactor(ui): side-menu
-refactor(ui): player
+refactor(side-menu): externalize in Component
+refactor(side-menu): make the "double translate speed" effect
+remove `ScreenSAVE.svelte`
+refactor(stack-ui): make stack effect
+refactor(ui): side-menu 90%
+refactor(ui): 100dvh/lvh + noScroll ?
+refactor(ui): player above menu
+refactor(ui): player 100% height
 
 - separate logic code, from "view" code
   -- remove `PhoneSAVE.svelte`
