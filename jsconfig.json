@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "paths": {
-      "@": ["./src"],
-      "@/*": ["./src/*"],
       "@css": ["./src/css"],
       "@css/*": ["./src/css/*"],
       "@js": ["./src/js"],

@@ -81,3 +81,19 @@ button.accent {
   color: var(--color-secondary);
   color: var(--color-tertiary);
 }
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.accent-area {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  padding: 1rem;
+}
+
+.highlight-area {
+  background-color: var(--color-primary-highlight);
+  color: var(--color-on-primary-highlight);
+  padding: 1rem;
+}

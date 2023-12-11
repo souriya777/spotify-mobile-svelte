@@ -3,5 +3,6 @@
 </script>
 
 <div {id} class="view">
+  <slot name="header" />
   <slot />
 </div>

@@ -18,9 +18,8 @@ Stone soup
 
 ## mvp
 
-refactor(stack-ui):
+refactor(ui): remove `ScreenSAVE.svelte`
 refactor(side-menu): make the "double translate speed" effect
-remove `ScreenSAVE.svelte`
 refactor(stack-ui): make stack effect
 refactor(ui): side-menu 90%
 refactor(ui): 100dvh/lvh + noScroll ?
