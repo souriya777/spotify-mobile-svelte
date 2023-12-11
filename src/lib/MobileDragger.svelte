@@ -1,6 +1,7 @@
 <script>
   export let totalSlides = 0;
 
+  const DEBUG = false;
   const TOUCH_AREA_WIDTH = 70;
 
   /** @type {HTMLElement} */
@@ -24,38 +25,22 @@
   $: canGoNext = Math.abs(virtualTranslateX - SLIDE_WIDTH) < TOTAL_WIDTH;
 
   function start(e) {
-    [...e.changedTouches].forEach((touch) => {
-      initialTouchPosition = touch.pageX;
-      touchPosition = initialTouchPosition;
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      dot.style.top = `${touch.pageY}px`;
-      dot.style.left = `${initialTouchPosition}px`;
-      dot.id = touch.identifier.toString();
-      DRAGGER.append(dot);
-    });
+    const touch = [...e.changedTouches].at(0);
+    initialTouchPosition = touch.pageX;
+    touchPosition = initialTouchPosition;
   }
 
   function move(e) {
-    [...e.changedTouches].forEach((touch) => {
-      touchPosition = touch.pageX;
-      const dot = document.getElementById(touch.identifier.toString());
-      dot.style.top = `${touch.pageY}px`;
-      dot.style.left = `${touchPosition}px`;
+    const touch = [...e.changedTouches].at(0);
+    touchPosition = touch.pageX;
 
-      if (isTouchedOnEdge && canGoPrev && canGoNext) {
-        SLIDER.style.transform = `translateX(${virtualTranslateX}px)`;
-      }
-    });
+    if (isTouchedOnEdge && canGoPrev && canGoNext) {
+      SLIDER.style.transform = `translateX(${virtualTranslateX}px)`;
+    }
   }
 
-  function end(e) {
-    [...e.changedTouches].forEach((touch) => {
-      const dot = document.getElementById(touch.identifier.toString());
-      dot.remove();
-
-      slide();
-    });
+  function end() {
+    slide();
   }
 
   function slide() {
@@ -89,16 +74,18 @@
   on:transitionend={removeTransition}
   style="--total-slides:{totalSlides}"
 >
-  <div class="indicator" class:red={canGoPrev || canGoNext} class:green={canSwipe}>
-    <div>SLIDE_WIDTH:{SLIDE_WIDTH}</div>
-    <div>initialTouchPosition:{initialTouchPosition}</div>
-    <div>touchPosition:{touchPosition}</div>
-    <div>difference:{difference}</div>
-    <div>translateX:{translateX}</div>
-    <div>virtualTranslateX:{virtualTranslateX}</div>
-    <div>total:{TOTAL_WIDTH}</div>
-    <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
-  </div>
+  {#if DEBUG}
+    <div class="indicator" class:debug-red={canGoPrev || canGoNext} class:debug-green={canSwipe}>
+      <div>SLIDE_WIDTH:{SLIDE_WIDTH}</div>
+      <div>initialTouchPosition:{initialTouchPosition}</div>
+      <div>touchPosition:{touchPosition}</div>
+      <div>difference:{difference}</div>
+      <div>translateX:{translateX}</div>
+      <div>virtualTranslateX:{virtualTranslateX}</div>
+      <div>total:{TOTAL_WIDTH}</div>
+      <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
+    </div>
+  {/if}
 
   <div bind:this={SLIDER} class="slider">
     <slot name="views" />
@@ -111,19 +98,6 @@
     height: 100%;
   }
 
-  .indicator {
-    margin-block-end: 10px;
-  }
-
-  :global(.dot) {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 20, 146, 0.3);
-  }
-
   .slider {
     position: relative;
     display: grid;
@@ -131,12 +105,12 @@
     height: 100%;
   }
 
-  .red {
+  .debug-red {
     background-color: red;
     color: white;
   }
 
-  .green {
+  .debug-green {
     background-color: rgb(25, 141, 25);
     color: white;
   }
