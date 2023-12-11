@@ -18,9 +18,8 @@ Stone soup
 
 ## mvp
 
-refactor(ui): remove `ScreenSAVE.svelte`
-refactor(side-menu): make the "double translate speed" effect
-refactor(stack-ui): make stack effect
+refactor(ui): can scroll view
+test on safari
 refactor(ui): side-menu 90%
 refactor(ui): 100dvh/lvh + noScroll ?
 refactor(ui): player above menu

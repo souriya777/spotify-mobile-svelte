@@ -1,0 +1,16 @@
+{
+  "name": "spotify-mobile-svelte",
+  "short_name": "spotify-mobile-svelte",
+  "description": "A clone of Spotify mobile app, in svelte 🚀",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1ed760",
+  "theme_color": "#121212",
+  "icons": [
+    {
+      "src": "favicon32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

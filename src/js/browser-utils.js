@@ -12,4 +12,20 @@ function isBrowserSupportTouchEvents() {
   );
 }
 
-export { BROWSER_DEVICE, isBrowserSupportTouchEvents };
+function getTranslateXY(element) {
+  if (!element) {
+    return {
+      translateX: 0,
+      translateY: 0,
+    };
+  }
+
+  const style = window.getComputedStyle(element);
+  const matrix = new DOMMatrixReadOnly(style.transform);
+  return {
+    translateX: matrix.m41,
+    translateY: matrix.m42,
+  };
+}
+
+export { BROWSER_DEVICE, isBrowserSupportTouchEvents, getTranslateXY };

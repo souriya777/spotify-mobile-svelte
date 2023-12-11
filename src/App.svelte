@@ -1,12 +1,6 @@
 <script>
   import '@css/main.scss';
-  import { onMount } from 'svelte';
-  import Screen from '@/lib/Screen.svelte';
-  import { noScroll } from '@js/souriya-utils';
-
-  onMount(() => {
-    noScroll();
-  });
+  import Screen from '@lib/Screen.svelte';
 </script>
 
 <main>
