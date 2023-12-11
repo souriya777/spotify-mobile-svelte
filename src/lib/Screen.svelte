@@ -1,5 +1,5 @@
 <script>
-  import Dragger from '@lib/Dragger.svelte';
+  import MobileDragger from '@/lib/MobileDragger.svelte';
 
   /** @type {HTMLElement} */
   let SCREEN;
@@ -8,7 +8,7 @@
 </script>
 
 <div bind:this={SCREEN} class="screen">
-  <Dragger totalSlides={6}>
+  <MobileDragger totalSlides={6}>
     <svelte:fragment slot="views">
       <div class="un" style="background-color: rgba(0, 100, 0, 0.5)">side-menu</div>
       <div class="deux" style="background-color: rgba(0, 0, 139, 0.5);">welcome</div>
@@ -17,7 +17,7 @@
       <div class="cinq">cinq</div>
       <div class="six">six</div>
     </svelte:fragment>
-  </Dragger>
+  </MobileDragger>
 </div>
 
 <style>

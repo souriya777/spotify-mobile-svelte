@@ -45,6 +45,8 @@ refactor(ui): player 100% height
   -🔴 feat(stack-ui): "switch view" when click tab, create view when "detail"
   -🔴 remove `StackUIManagerOLD`
 
+  - remove dot on dragger
+
 - feat(layout): one stack views by `route`
 - feat(ux): can I have native vibration ? (eg. move song in queue)
 - feat(ui): drag'n drop

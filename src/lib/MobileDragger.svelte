@@ -1,25 +1,27 @@
 <script>
   export let totalSlides = 0;
 
-  const TOUCH_ZONE_WIDTH = 70;
+  const TOUCH_AREA_WIDTH = 70;
+
   /** @type {HTMLElement} */
   let DRAGGER;
   /** @type {HTMLElement} */
   let SLIDER;
 
-  let touchPosition = 0;
   let initialTouchPosition = 0;
+  let touchPosition = 0;
   let translateX = 0;
-  $: virtualTranslateX = translateX + difference;
-  $: SCREEN_WIDTH = DRAGGER ? DRAGGER.clientWidth : 0;
+  $: SLIDE_WIDTH = DRAGGER ? DRAGGER.clientWidth : 0;
+  $: TOTAL_WIDTH = SLIDE_WIDTH * totalSlides;
+  $: MINIMUM_SWIPE = SLIDE_WIDTH / 3;
   $: difference = touchPosition - initialTouchPosition;
-  $: offset = SCREEN_WIDTH / 3;
+  $: virtualTranslateX = translateX + difference;
   $: isTouchedOnEdge =
-    initialTouchPosition <= TOUCH_ZONE_WIDTH ||
-    initialTouchPosition >= SCREEN_WIDTH - TOUCH_ZONE_WIDTH;
-  $: canSwipe = Math.abs(difference) >= offset;
+    initialTouchPosition <= TOUCH_AREA_WIDTH ||
+    initialTouchPosition + TOUCH_AREA_WIDTH >= SLIDE_WIDTH;
+  $: canSwipe = Math.abs(difference) >= MINIMUM_SWIPE;
   $: canGoPrev = virtualTranslateX <= 0;
-  $: canGoNext = Math.abs(virtualTranslateX - SCREEN_WIDTH) < SCREEN_WIDTH * totalSlides;
+  $: canGoNext = Math.abs(virtualTranslateX - SLIDE_WIDTH) < TOTAL_WIDTH;
 
   function start(e) {
     [...e.changedTouches].forEach((touch) => {
@@ -61,11 +63,11 @@
       return;
     }
 
-    if (Math.abs(difference) > offset) {
+    if (Math.abs(difference) > MINIMUM_SWIPE) {
       if (difference > 0 && canGoPrev) {
-        translateX += SCREEN_WIDTH;
+        translateX += SLIDE_WIDTH;
       } else if (difference < 0 && canGoNext) {
-        translateX -= SCREEN_WIDTH;
+        translateX -= SLIDE_WIDTH;
       }
     }
 
@@ -80,7 +82,7 @@
 
 <div
   bind:this={DRAGGER}
-  class="dragger"
+  class="mobile-dragger"
   on:touchstart={start}
   on:touchend={end}
   on:touchmove={move}
@@ -88,13 +90,13 @@
   style="--total-slides:{totalSlides}"
 >
   <div class="indicator" class:red={canGoPrev || canGoNext} class:green={canSwipe}>
-    <div>SCREEN_WIDTH:{SCREEN_WIDTH}</div>
+    <div>SLIDE_WIDTH:{SLIDE_WIDTH}</div>
     <div>initialTouchPosition:{initialTouchPosition}</div>
     <div>touchPosition:{touchPosition}</div>
     <div>difference:{difference}</div>
     <div>translateX:{translateX}</div>
     <div>virtualTranslateX:{virtualTranslateX}</div>
-    <div>total:{SCREEN_WIDTH * totalSlides}</div>
+    <div>total:{TOTAL_WIDTH}</div>
     <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
   </div>
 
@@ -104,7 +106,7 @@
 </div>
 
 <style>
-  .dragger {
+  .mobile-dragger {
     position: relative;
     height: 100%;
   }
