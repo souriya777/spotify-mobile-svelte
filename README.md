@@ -18,7 +18,7 @@ Stone soup
 
 ## mvp
 
-refactor(side-menu): externalize in Component
+refactor(stack-ui):
 refactor(side-menu): make the "double translate speed" effect
 remove `ScreenSAVE.svelte`
 refactor(stack-ui): make stack effect

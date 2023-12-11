@@ -1,7 +1,7 @@
 <script>
-  const TOTAL_SLIDES = 4;
-  const TOUCH_ZONE_WIDTH = 70;
+  export let totalSlides = 0;
 
+  const TOUCH_ZONE_WIDTH = 70;
   /** @type {HTMLElement} */
   let DRAGGER;
   /** @type {HTMLElement} */
@@ -19,7 +19,7 @@
     initialTouchPosition >= SCREEN_WIDTH - TOUCH_ZONE_WIDTH;
   $: canSwipe = Math.abs(difference) >= offset;
   $: canGoPrev = virtualTranslateX <= 0;
-  $: canGoNext = Math.abs(virtualTranslateX - SCREEN_WIDTH) < SCREEN_WIDTH * TOTAL_SLIDES;
+  $: canGoNext = Math.abs(virtualTranslateX - SCREEN_WIDTH) < SCREEN_WIDTH * totalSlides;
 
   function start(e) {
     [...e.changedTouches].forEach((touch) => {
@@ -85,6 +85,7 @@
   on:touchend={end}
   on:touchmove={move}
   on:transitionend={removeTransition}
+  style="--total-slides:{totalSlides}"
 >
   <div class="indicator" class:red={canGoPrev || canGoNext} class:green={canSwipe}>
     <div>SCREEN_WIDTH:{SCREEN_WIDTH}</div>
@@ -93,15 +94,12 @@
     <div>difference:{difference}</div>
     <div>translateX:{translateX}</div>
     <div>virtualTranslateX:{virtualTranslateX}</div>
-    <div>total:{SCREEN_WIDTH * TOTAL_SLIDES}</div>
+    <div>total:{SCREEN_WIDTH * totalSlides}</div>
     <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
   </div>
 
   <div bind:this={SLIDER} class="slider">
-    <div class="un">side-menu</div>
-    <div class="deux">welcome</div>
-    <div class="trois">playlist</div>
-    <div class="quatre">album</div>
+    <slot name="views" />
   </div>
 </div>
 
@@ -127,30 +125,15 @@
   .slider {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 100%);
+    grid-template-columns: repeat(var(--total-slides), 100%);
     height: 100%;
-  }
-
-  .un {
-    background-color: rgba(0, 100, 0, 0.5);
-  }
-
-  .deux {
-    background-color: rgba(0, 0, 139, 0.5);
-  }
-
-  .trois {
-    background-color: rgba(139, 0, 0, 0.5);
-  }
-
-  .quatre {
-    background-color: rgba(148, 0, 211, 0.5);
   }
 
   .red {
     background-color: red;
     color: white;
   }
+
   .green {
     background-color: rgb(25, 141, 25);
     color: white;
