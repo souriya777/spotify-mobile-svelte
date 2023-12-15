@@ -112,8 +112,7 @@
   .screen__content {
     background-color: deeppink;
     height: 100%;
-    /* FIXME */
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   .screen__nav {
