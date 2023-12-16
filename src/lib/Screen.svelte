@@ -111,7 +111,6 @@
   }
 
   .screen__content {
-    background-color: deeppink;
     height: 100%;
     overflow: hidden;
   }

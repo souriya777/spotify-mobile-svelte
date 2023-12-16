@@ -12,9 +12,9 @@
   let timestamp = getTimestamp();
   let currentSlidePosition = 0;
   let initialX = 0;
-  let initialY = 0;
+  // let initialY = 0;
   let x = 0;
-  let y = 0;
+  // let y = 0;
   let prevSlideTranslateX = 0;
   let nextSlideTranslateX = 0;
   /** @type {HTMLElement[]} */
@@ -27,11 +27,11 @@
   $: prevSlide = SLIDER ? CHILDREN[currentSlidePosition - 1] : null;
   $: nextSlide = SLIDER ? CHILDREN[currentSlidePosition + 1] : null;
   $: deltaX = x - initialX;
-  $: deltaY = y - initialY;
+  // $: deltaY = y - initialY;
   $: isPrev = deltaX > 0;
   $: isNext = !isPrev;
   $: isTouchedOnEdge = initialX <= TOUCH_AREA_WIDTH || initialX + TOUCH_AREA_WIDTH >= SLIDE_WIDTH;
-  $: isHorizontal = Math.abs(deltaX) > Math.abs(deltaY);
+  // $: isHorizontal = Math.abs(deltaX) > Math.abs(deltaY);
   $: canSwipe = Math.abs(deltaX) >= MINIMUM_SWIPE_X;
   $: canGoPrev = currentSlidePosition > 0;
   $: canGoNext = currentSlidePosition + 1 < TOTAL_SLIDES;
@@ -60,18 +60,21 @@
   function start(e) {
     const touch = [...e.changedTouches].at(0);
     initialX = touch.pageX;
+    // initialY = touch.pageY;
     x = initialX;
+    // y = initialY;
     prevSlideTranslateX = getTranslateXY(prevSlide).translateX;
     nextSlideTranslateX = getTranslateXY(nextSlide).translateX;
   }
 
   function move(e) {
+    const touch = [...e.changedTouches].at(0);
+    x = touch.pageX;
+    // y = touch.pageY;
+
     if (!isTouchedOnEdge) {
       return;
     }
-
-    const touch = [...e.changedTouches].at(0);
-    x = touch.pageX;
 
     if (isPrev && canGoPrev) {
       currentSlide.style.transform = `translateX(${deltaX}px)`;
@@ -139,21 +142,22 @@
 
 {#if _DEBUG}
   <div class="indicator" class:debug-red={canGoPrev || canGoNext} class:debug-green={canSwipe}>
-    <div>SLIDE_WIDTH:{SLIDE_WIDTH}</div>
+    <!-- <div>SLIDE_WIDTH:{SLIDE_WIDTH}</div> -->
     <div>initialX:{initialX}</div>
-    <div>initialY:{initialY}</div>
+    <!-- <div>initialY:{initialY}</div> -->
     <div>x:{x}</div>
-    <div>y:{y}</div>
+    <!-- <div>y:{y}</div> -->
     <div>deltaX:{deltaX}</div>
-    <div>deltaY:{deltaY}</div>
+    <!-- <div>deltaY:{deltaY}</div> -->
     <div>nextSlideTranslateX:{nextSlideTranslateX}</div>
-    <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
+    <!-- <div>isHorizontal:{isHorizontal}</div> -->
+    <!-- <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
     <div>canSwipe:{canSwipe}</div>
     <div>isPrev:{isPrev}</div>
     <div>isNext:{isNext}</div>
     <div>canGoPrev:{canGoPrev}</div>
     <div>canGoNext:{canGoNext}</div>
-    <div>currentSlidePosition:{currentSlidePosition}</div>
+    <div>currentSlidePosition:{currentSlidePosition}</div> -->
   </div>
 {/if}
 
@@ -285,6 +289,8 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .deux {

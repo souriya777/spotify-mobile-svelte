@@ -18,8 +18,7 @@ Stone soup
 
 ## mvp
 
-refactor(ui): can scroll view
-test on safari
+🔴test on safari
 feat(router): pwa and routing... how ?
 refactor(ui): side-menu 90%
 refactor(ui): player above menu
