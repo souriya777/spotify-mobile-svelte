@@ -1,4 +1,5 @@
 <script>
+  import { currentPath } from '@js/store';
   import Ui from '@lib/Ui.svelte';
   import Showcase from '@lib/Showcase.svelte';
   import Header from '@lib/Header.svelte';
@@ -13,6 +14,7 @@
 
 <div bind:this={SCREEN} class="screen">
   <div class="screen__content">
+    currentPath:{$currentPath}
     <Ui>
       <svelte:fragment slot="views">
         <View id="side-menu">
@@ -99,7 +101,6 @@
 
 <style>
   .screen {
-    border: 2px dashed hotpink;
     height: 100dvh;
     position: fixed;
     width: 100%;

@@ -41,8 +41,8 @@
 <style>
   nav {
     width: 100%;
-    padding-block: 1.2rem 1.8rem;
-    background-image: linear-gradient(to top, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0.85));
+    padding-block: 1.6rem 3.2rem;
+    background-image: linear-gradient(to top, rgba(18, 18, 18, 1) 68%, rgba(18, 18, 18, 0.92));
   }
 
   ul {

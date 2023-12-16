@@ -20,8 +20,8 @@ Stone soup
 
 refactor(ui): can scroll view
 test on safari
+feat(router): pwa and routing... how ?
 refactor(ui): side-menu 90%
-refactor(ui): 100dvh/lvh + noScroll ?
 refactor(ui): player above menu
 refactor(ui): player 100% height
 
@@ -94,6 +94,11 @@ refactor(ui): player 100% height
 
 ## demo
 
+- FIXME
+  --height-iphone-12-mini: 160mm;
+  --width-iphone-12-mini: 77.2mm;
+  // --height-iphone-5se: 320px;
+  // --width-iphone-5se: 568px;
 - how puting `karaoke` at first ?
 - answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - feat(service-worker): automate `swVersion` when building app ?
