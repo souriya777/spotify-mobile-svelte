@@ -10,46 +10,36 @@ KISS
 DRY
 ACID
 Single Source of Truth
-ETC (Easier To Change) : decoupling, single responsability principle
-No broken windows
-Stone soup
 
 # TODO
 
 ## mvp
 
-🔴feat(pwa): improve standalone
-refactor(ui): side-menu 90%
-refactor(ui): player above menu
-refactor(ui): player 100% height
+- feat(stack-ui)can pass args to View
+- feat(stack-ui): add slide out when clicking `back` button
+- feat(stack-ui): resolve child, grand-child etc...
+- remove `StackUIManagerOLD`
 
-- separate logic code, from "view" code
+- feat(ui): one stack views by `route` ?
+- feat(ci): debug mode
+- refactor(code): separate logic code, from "view" code
   -- remove `PhoneSAVE.svelte`
   -- remove `baseSAVE.scss`
   -- remove `NavSAVE.svelte`
   -- remove `ButtonSAVE.svelte`
-- new functionnality : sleep, queue, repeat queue
-
-- refactor(string-utils & souriya-utils)
+- update "store-utils.writableLocalStorage" => chrome extension zenblock
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
-- update "store-utils.writableLocalStorage" => chrome extension zenblock
-- feat(stack-ui): add slide in
-  -🔴 feat(stack-ui): add slide out when clicking `back` button
-  -🔴 feat(stack-ui): resolve child, grand-child etc...
-  -🔴 feat(stack-ui): store navigation in an object
-  -🔴 feat(stack-ui): "switch view" when click tab, create view when "detail"
-  -🔴 remove `StackUIManagerOLD`
-
-  - remove dot on dragger
-
-- feat(layout): one stack views by `route`
+- refactor(string-utils & souriya-utils)
+- feat(ui): side-menu 90%
+- feat(ui): player above menu
+- feat(ui): player 100% height
+- feat(player) : shuffle on several playlist
+- feat(ui): like "car mode" ?
 - feat(ux): can I have native vibration ? (eg. move song in queue)
 - feat(ui): drag'n drop
-
 - feat(ui): use use:onTap
 - position fixed : player & menu
-- feat(navigation): improve player & menu
 - +end content height === player + nav
 - feat(button): onTap ?
   TRANSITION
@@ -69,7 +59,6 @@ refactor(ui): player 100% height
 - space
 - color
 - px
-
 - feat(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
   -- invalid cache, when rename playlist
@@ -78,30 +67,11 @@ refactor(ui): player 100% height
 - feat(service-worker): invalidate when add like song ?
 
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
-
 - <main> `overflow: hidden;` ?
-
-## perf
-
-- manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
-- feat(service-worker): strategy `what`, `when`
-- feat(realtime) : sync when ?
-- lazy load images
-- fix `BetaLikedImg`
-- lighthouse
-
-## demo
-
-- FIXME
-  --height-iphone-12-mini: 160mm;
-  --width-iphone-12-mini: 77.2mm;
-  // --height-iphone-5se: 320px;
-  // --width-iphone-5se: 568px;
+- feat(pwa): improve "add to homescreen" installation message
 - how puting `karaoke` at first ?
-- answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
-
 - found in code where can I use `isEmpty` from `string-utils`
 - move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - reflect a "car" presentation (audible-like)
@@ -113,13 +83,6 @@ refactor(ui): player 100% height
 - how to test on mobile/desktop ?
 - feat(>iphone): make responsive for desktop ?
 - feat(app): add a direct shortcut
-
-- present it to `Svelte Society`
-- make article
-- live coding
-
-## bonus
-
 - feat(logout): can logout
 - feat(browser): manage back search (no dependent of char by char input)
 - can't delete playlist...
@@ -137,6 +100,7 @@ refactor(ui): player 100% height
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
 - make vibration
+- FIXME https://jariz.github.io/vibrant.js/
 - fix(js): `removeEventListener` on store localStorage => works ???
 - 🟢//learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
@@ -144,6 +108,22 @@ refactor(ui): player 100% height
 - // TODO refactor in smaller function or custom stores ?
 - spotify bug "recently-added" order
 - implement accessibility (eg. `aria-hidden`)
+
+## perf++
+
+- manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
+- feat(service-worker): strategy `what`, `when`
+- feat(realtime) : sync when ?
+- lazy load images
+- fix `BetaLikedImg`
+- lighthouse
+
+## expert-like
+
+- answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
+- present it to `Svelte Society`
+- make article
+- live coding
 
 # spotify flow
 
@@ -200,10 +180,6 @@ Note for `private` API :
   -- offline API ?
 - own simple router (`<svelte:component>`)
 ```
-
-# external lib
-
-https://jariz.github.io/vibrant.js/
 
 # RUN
 
