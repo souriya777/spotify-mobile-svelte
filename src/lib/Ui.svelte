@@ -68,13 +68,13 @@
   }
 
   function move(e) {
-    const touch = [...e.changedTouches].at(0);
-    x = touch.pageX;
-    // y = touch.pageY;
-
     if (!isTouchedOnEdge) {
       return;
     }
+
+    const touch = [...e.changedTouches].at(0);
+    x = touch.pageX;
+    // y = touch.pageY;
 
     if (isPrev && canGoPrev) {
       currentSlide.style.transform = `translateX(${deltaX}px)`;
@@ -282,7 +282,7 @@
   ul {
     position: relative;
     height: 100%;
-    background-color: deeppink;
+    width: 100%;
   }
 
   li {

@@ -18,8 +18,7 @@ Stone soup
 
 ## mvp
 
-🔴test on safari
-feat(router): pwa and routing... how ?
+🔴feat(pwa): improve standalone
 refactor(ui): side-menu 90%
 refactor(ui): player above menu
 refactor(ui): player 100% height

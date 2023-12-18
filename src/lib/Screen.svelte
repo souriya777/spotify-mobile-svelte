@@ -5,11 +5,19 @@
   import Header from '@lib/Header.svelte';
   import Nav from '@lib/Nav.svelte';
   import View from '@lib/views/View.svelte';
+  import { onMount } from 'svelte';
 
   /** @type {HTMLElement} */
   let SCREEN;
 
   // let VIEWS = ['side-menu', 'welcome', 'playlist', 'album'];
+
+  onMount(() => {
+    if (window.navigator.standalone === false) {
+      // Inform the user they can add your app to the home screen
+      alert("To add this web app to your home screen, tap 'Share' and then 'Add to Home Screen'.");
+    }
+  });
 </script>
 
 <div bind:this={SCREEN} class="screen">
@@ -112,6 +120,7 @@
 
   .screen__content {
     height: 100%;
+    width: 100%;
     overflow: hidden;
   }
 
