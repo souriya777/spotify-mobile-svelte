@@ -6,15 +6,20 @@
   import SideMenuView from '@lib/views/SideMenuView.svelte';
   import TroisView from '@lib/views/TroisView.svelte';
   import QuatreView from '@lib/views/QuatreView.svelte';
+  import DumbView from '@lib/views/DumbView.svelte';
   import Button from '@lib/Button.svelte';
   import { getTimestamp } from '@js/date-utils';
 
   /** @type {HTMLElement} */
   let SCREEN;
 
+  /** @type {import('@js/internal').Component[]} */
   let VIEWS = [
     { id: 'view-side-menu', component: SideMenuView },
-    { id: 'view-home', component: HomeView },
+    {
+      id: 'view-home',
+      component: HomeView,
+    },
     { id: 'view-trois', component: TroisView },
     { id: 'view-quatre', component: QuatreView },
   ];
@@ -24,7 +29,10 @@
       ...VIEWS,
       {
         id: 'view-' + getTimestamp(),
-        component: HomeView,
+        component: DumbView,
+        props: {
+          title: 'Souriya 😎😎😎',
+        },
       },
     ];
   }

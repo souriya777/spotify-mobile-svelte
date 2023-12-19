@@ -15,9 +15,8 @@ Single Source of Truth
 
 ## mvp
 
-- feat(stack-ui)can pass args to View
-- feat(stack-ui): add slide out when clicking `back` button
 - feat(stack-ui): resolve child, grand-child etc...
+- resolve id view
 - remove `StackUIManagerOLD`
 
 - feat(ui): one stack views by `route` ?

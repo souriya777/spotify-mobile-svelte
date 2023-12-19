@@ -1,12 +1,12 @@
 <script>
-  import HomeView from '@/lib/views/HomeView.svelte';
-  import SearchView from '@/lib/views/SearchView.svelte';
-  import LibView from '@/lib/views/LibViewGrandChild.svelte';
-  import SettingsSvg from '@/lib/svg/SettingsSvg.svelte';
-  import Panel from '@/lib/Panel.svelte';
-  import Player from '@/lib/Player.svelte';
+  import HomeView from '@lib/views/HomeView.svelte';
+  import SearchView from '@lib/views/SearchView.svelte';
+  import LibView from '@lib/views/LibViewGrandChild.svelte';
+  import SettingsSvg from '@lib/svg/SettingsSvg.svelte';
+  import Panel from '@lib/Panel.svelte';
+  import Player from '@lib/Player.svelte';
   import { onMount, setContext } from 'svelte';
-  import Logger from '@/js/Logger';
+  import Logger from '@js/Logger';
 
   const LOGGER = Logger.getNewInstance('StackUIManager.js');
 

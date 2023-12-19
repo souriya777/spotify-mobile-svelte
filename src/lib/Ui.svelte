@@ -54,8 +54,10 @@
       }
 
       const SLIDE = CHILDREN_BIND[view.id];
-      // @ts-ignore
-      SLIDE.style.transform = `translateX(${translateX}px)`;
+      if (SLIDE) {
+        // @ts-ignore
+        SLIDE.style.transform = `translateX(${translateX}px)`;
+      }
     });
   }
 
@@ -171,9 +173,9 @@
     on:touchmove={move}
     on:transitionend={removeTransition}
   >
-    {#each views as { id, component }}
+    {#each views as { id, component, props }}
       <li {id} bind:this={CHILDREN_BIND[id]}>
-        <svelte:component this={component} />
+        <svelte:component this={component} {...props} />
       </li>
     {/each}
   </ul>
