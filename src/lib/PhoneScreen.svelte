@@ -1,6 +1,6 @@
 <script>
-  import Router from '@/lib/Router.svelte';
-  import { scrollTop } from '@/js/store';
+  import Router from '@lib/Router.svelte';
+  import { scrollTop } from '@js/store';
 
   function handleScroll(e) {
     scrollTop.update(() => e.target.scrollTop);

@@ -1,10 +1,6 @@
 <script>
   import View from '@lib/views/View.svelte';
   import Header from '@lib/Header.svelte';
-
-  export let id;
-
-  console.log(id);
 </script>
 
 <View>

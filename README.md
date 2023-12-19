@@ -15,14 +15,7 @@ Single Source of Truth
 
 ## mvp
 
-- feat(ui): one stack views by `route` ? use Router.svelte ?
 - feat(ci): debug mode
-- refactor(code): separate logic code, from "view" code
-  -- remove `PhoneSAVE.svelte`
-  -- remove `baseSAVE.scss`
-  -- remove `NavSAVE.svelte`
-  -- remove `ButtonSAVE.svelte`
-  -- remove `Panel.svelte`
 - use Logger
 
 ```
@@ -88,6 +81,7 @@ const LOGGER = Logger.getNewInstance('StackUIManager.js');
 - feat(>iphone): make responsive for desktop ?
 - feat(app): add a direct shortcut
 - feat(logout): can logout
+- feat(ui): one stack views by `route` ? use Router.svelte ?
 - feat(browser): manage back search (no dependent of char by char input)
 - can't delete playlist...
 - playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
@@ -103,6 +97,7 @@ const LOGGER = Logger.getNewInstance('StackUIManager.js');
 - feat(loading) : add spotify logo (ball)
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
+- feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
 - make vibration
 - FIXME https://jariz.github.io/vibrant.js/
 - fix(js): `removeEventListener` on store localStorage => works ???

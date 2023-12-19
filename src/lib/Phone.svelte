@@ -1,6 +1,6 @@
 <script>
-  import PhoneStatus from '@/lib/PhoneStatus.svelte';
-  import PhoneScreen from '@/lib/PhoneScreen.svelte';
+  import PhoneStatus from '@lib/PhoneStatus.svelte';
+  import PhoneScreen from '@lib/PhoneScreen.svelte';
 </script>
 
 <div class="phone">
