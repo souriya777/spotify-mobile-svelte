@@ -1,18 +1,17 @@
 <script>
-  import { appReady, playerFull, currentPath } from '@/js/store';
-  import { getUrlPath } from '@/js/souriya-utils';
-  import Nav from '@/lib/Nav.svelte';
-  import HomeView from '@/lib/views/HomeView.svelte';
-  import SearchView from '@/lib/views/SearchView.svelte';
-  import MyLibView from '@/lib/views/MyLibView.svelte';
-  import Logger from '@/js/Logger';
-  import PlaylistView from '@/lib/views/PlaylistView.svelte';
-  import AlbumView from '@/lib/views/AlbumView.svelte';
-  import Debug from '@/lib/Debug.svelte';
-  import Notification from '@/lib/Notification.svelte';
-  import Player from '@/lib/Player.svelte';
-  import StackUiManager from '@/lib/StackUIManager.svelte';
-  import SpotifyAuthentication from '@/lib/SpotifyAuthentication.svelte';
+  import { appReady, playerFull, currentPath } from '@js/store';
+  import { getUrlPath } from '@js/souriya-utils';
+  import Nav from '@lib/Nav.svelte';
+  import HomeView from '@lib/views/HomeView.svelte';
+  import SearchView from '@lib/views/SearchView.svelte';
+  import MyLibView from '@lib/views/MyLibView.svelte';
+  import Logger from '@js/Logger';
+  import PlaylistView from '@lib/views/PlaylistView.svelte';
+  import AlbumView from '@lib/views/AlbumView.svelte';
+  import Debug from '@lib/Debug.svelte';
+  import Notification from '@lib/Notification.svelte';
+  import Player from '@lib/Player.svelte';
+  import SpotifyAuthentication from '@lib/SpotifyAuthentication.svelte';
 
   const LOGGER = Logger.getNewInstance('Router.svelte');
 
@@ -61,7 +60,7 @@
 <svelte:window on:popstate={handlePopstate} />
 <SpotifyAuthentication />
 
-<StackUiManager {View} {props}>
+<div class="OLDStackUiManager">
   <Notification />
   <Debug />
 
@@ -75,4 +74,4 @@
   {/if}
 
   <Nav />
-</StackUiManager>
+</div>

@@ -15,9 +15,7 @@ Single Source of Truth
 
 ## mvp
 
-- feat(stack-ui): resolve child, grand-child etc...
 - resolve id view
-- remove `StackUIManagerOLD`
 
 - feat(ui): one stack views by `route` ?
 - feat(ci): debug mode
@@ -26,6 +24,15 @@ Single Source of Truth
   -- remove `baseSAVE.scss`
   -- remove `NavSAVE.svelte`
   -- remove `ButtonSAVE.svelte`
+  -- remove `Panel.svelte`
+- use Logger
+
+```
+import Logger from '@js/Logger';
+const LOGGER = Logger.getNewInstance('StackUIManager.js');
+```
+
+- move `src/lib/views/PlaylistTopImage.svelte`
 - update "store-utils.writableLocalStorage" => chrome extension zenblock
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent

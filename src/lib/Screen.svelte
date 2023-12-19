@@ -4,8 +4,6 @@
   import HomeView from '@lib/views/HomeView.svelte';
   import Nav from '@lib/Nav.svelte';
   import SideMenuView from '@lib/views/SideMenuView.svelte';
-  import TroisView from '@lib/views/TroisView.svelte';
-  import QuatreView from '@lib/views/QuatreView.svelte';
   import DumbView from '@lib/views/DumbView.svelte';
   import Button from '@lib/Button.svelte';
   import { getTimestamp } from '@js/date-utils';
@@ -20,8 +18,6 @@
       id: 'view-home',
       component: HomeView,
     },
-    { id: 'view-trois', component: TroisView },
-    { id: 'view-quatre', component: QuatreView },
   ];
 
   function createView() {
@@ -31,7 +27,7 @@
         id: 'view-' + getTimestamp(),
         component: DumbView,
         props: {
-          title: 'Souriya 😎😎😎',
+          title: 'Souriya 😎😎😎' + new Date().getTime(),
         },
       },
     ];
