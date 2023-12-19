@@ -15,27 +15,20 @@ Single Source of Truth
 
 ## mvp
 
-- move `src/lib/views/PlaylistTopImage.svelte`
-- update "store-utils.writableLocalStorage" => chrome extension zenblock
-- feat(stack-ui): change background-color depending on view
-  -- works :) => make it independent
-- refactor(string-utils & souriya-utils)
 - feat(ui): side-menu 90%
 - feat(ui): player above menu
 - feat(ui): player 100% height
+- feat(stack-ui): change background-color depending on view
+  -- works :) => make it independent
+- refactor(string-utils & souriya-utils)
 - feat(player) : shuffle on several playlist
 - feat(ui): like "car mode" ?
-- feat(ux): can I have native vibration ? (eg. move song in queue)
 - feat(ui): drag'n drop
+- feat(button): onTap ?
 - feat(ui): use use:onTap
 - position fixed : player & menu
 - +end content height === player + nav
-- feat(button): onTap ?
-  TRANSITION
 - utiliser le view transition API à la "svelte menu"
-- feat(effects): fade effect when switch
-- feat(effects): slide-left when in
-- feat(effects): slide-right when out
 - implement <ProgressBar>
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(ui): add waiting visual indication when fetching is too long
@@ -54,9 +47,7 @@ Single Source of Truth
   -- invalid cache, when create playlist
 - feat(cache): optimize it
 - feat(service-worker): invalidate when add like song ?
-
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
-- <main> `overflow: hidden;` ?
 - feat(pwa): improve "add to homescreen" installation message
 - how puting `karaoke` at first ?
 - feat(service-worker): automate `swVersion` when building app ?
@@ -65,12 +56,9 @@ Single Source of Truth
 - move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - reflect a "car" presentation (audible-like)
 - test `synchronize`... hard...
-- TODO test ?
 - TODO feat(store): refactor store in multiple files
 - ERRORS feat(spotify-api): implement quota-limit with code `429`
 - TODO/FIXME uncomment
-- how to test on mobile/desktop ?
-- feat(>iphone): make responsive for desktop ?
 - feat(app): add a direct shortcut
 - feat(logout): can logout
 - feat(ui): one stack views by `route` ? use Router.svelte ?
@@ -81,7 +69,6 @@ Single Source of Truth
   `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
 - feat(player): can manage other players
 - fix(spotify-connect): only a single instance in devices...
-- TODO do I use refresh_token ?
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist
 - feat(player): load song in advance ?
@@ -90,6 +77,7 @@ Single Source of Truth
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
 - feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
+- feat(ux): can I have native vibration ? (eg. move song in queue)
 - make vibration
 - FIXME https://jariz.github.io/vibrant.js/
 - fix(js): `removeEventListener` on store localStorage => works ???

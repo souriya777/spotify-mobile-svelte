@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import { setAxiosHeaderAuthorization } from '@/js/axios-utils';
+import { setAxiosHeaderAuthorization } from '@js/axios-utils';
 
 function writableLocalStorage(key, initialValue) {
   let value = writable(localStorage.getItem(key) || initialValue);

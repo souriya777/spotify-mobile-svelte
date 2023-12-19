@@ -1,14 +1,14 @@
 <script>
   import { onMount } from 'svelte';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import CollectionTrack from '@/lib/CollectionTrack.svelte';
-  import PlaylistTopImage from './PlaylistTopImage.svelte';
+  import SpotifyApi from '@js/SpotifyApi';
+  import CollectionTrack from '@lib/CollectionTrack.svelte';
+  import PlaylistTopImage from '@lib/PlaylistTopImage.svelte';
 
   export let id;
 
-  /** @type {import('@/js/spotify').SpotifyTrack[]} */
+  /** @type {import('@js/spotify').SpotifyTrack[]} */
   let tracks = [];
-  /** @type {import('@/js/spotify').SpotifyPlaylist} */
+  /** @type {import('@js/spotify').SpotifyPlaylist} */
   let playlist;
 
   onMount(() => {

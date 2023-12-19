@@ -15,8 +15,8 @@
 
   const LOGGER = Logger.getNewInstance('Router.svelte');
 
-  let View;
-  let props = {};
+  // let View;
+  // let props = {};
   let title = 'home';
 
   $: path = $currentPath;
@@ -29,23 +29,23 @@
   }
 
   function load(ComponentView, path) {
-    View = ComponentView;
+    // View = ComponentView;
     title = '/' === path ? '/home' : path;
   }
 
   function go(path) {
     if (/search/gi.test(path)) {
-      View = SearchView;
+      // View = SearchView;
       load(SearchView, '/search');
     } else if (/my-lib/gi.test(path)) {
       load(MyLibView, '/my-lib');
     } else if (/playlist/gi.test(path)) {
       const id = path?.match(/(?<=playlist\/).*/g)?.[0];
-      props = { id };
+      // props = { id };
       load(PlaylistView, `/playlist/${id}`);
     } else if (/album/gi.test(path)) {
       const id = path?.match(/(?<=album\/).*/g)?.[0];
-      props = { id };
+      // props = { id };
       load(AlbumView, `/album/${id}`);
     } else {
       load(HomeView, '/');

@@ -1,8 +1,8 @@
 <script>
-  import { scrollTop } from '@/js/store';
-  import ImageSolver from '@/lib/ImageSolver.svelte';
+  import { scrollTop } from '@js/store';
+  import ImageSolver from '@lib/ImageSolver.svelte';
 
-  /** @type {import('@/js/spotify').SpotifyImage[]}*/
+  /** @type {import('@js/spotify').SpotifyImage[]}*/
   export let images;
   export let alt;
 
