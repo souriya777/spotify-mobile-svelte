@@ -1,11 +1,13 @@
 <script>
   import { getTranslateXY } from '@js/browser-utils';
   import { getTimestamp } from '@js/date-utils';
+  import Logger from '@js/Logger';
 
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
 
   const _DEBUG = false;
+  const LOGGER = Logger.getNewInstance('Ui.js');
   const TOUCH_AREA_WIDTH = 70;
   const SLIDE_STYLE = 'transform 0.25s cubic-bezier(0.4, 0, 0.23, 1)';
 
@@ -161,7 +163,7 @@
 
 <svelte:window
   on:resize={() => {
-    console.log('trigger resize');
+    LOGGER.log('trigger resize');
     timestamp = getTimestamp();
   }}
 />

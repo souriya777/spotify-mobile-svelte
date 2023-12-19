@@ -15,14 +15,6 @@ Single Source of Truth
 
 ## mvp
 
-- feat(ci): debug mode
-- use Logger
-
-```
-import Logger from '@js/Logger';
-const LOGGER = Logger.getNewInstance('StackUIManager.js');
-```
-
 - move `src/lib/views/PlaylistTopImage.svelte`
 - update "store-utils.writableLocalStorage" => chrome extension zenblock
 - feat(stack-ui): change background-color depending on view

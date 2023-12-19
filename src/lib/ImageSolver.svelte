@@ -1,7 +1,10 @@
 <script>
-  import NoteSvg from '@/lib/svg/NoteSvg.svelte';
-  import DefaultArtistSvg from '@/lib/svg/DefaultArtistSvg.svelte';
+  import NoteSvg from '@lib/svg/NoteSvg.svelte';
+  import DefaultArtistSvg from '@lib/svg/DefaultArtistSvg.svelte';
   import ColorThief from 'colorthief';
+  import Logger from '@js/Logger';
+
+  const LOGGER = Logger.getNewInstance('ImageSolver.js');
 
   /** @type {import('@/js/spotify').SpotifyImage[]} */
   export let images;
@@ -28,17 +31,17 @@
       const totoImg = bindImg;
       // const colorThief = new ColorThief();
 
-      // console.log('-->', totoImg);
+      // LOGGER.log('-->', totoImg);
 
       if (totoImg?.complete) {
-        // console.log('complete', totoImg, '🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢');
+        // LOGGER.log('complete', totoImg, '🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢');
         // const color = colorThief.getColor(totoImg);
-        // console.log(color, '🟢🟢🟢');
+        // LOGGER.log(color, '🟢🟢🟢');
       } else {
-        // console.log('INcomplete', '🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙');
+        // LOGGER.log('INcomplete', '🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙');
         // totoImg.addEventListener('load', function () {
         //   //   colorThief.getColor(totoImg);
-        //   console.log('LOAD', '🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙');
+        //   LOGGER.log('LOAD', '🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙🌙');
         // });
       }
     }
@@ -47,10 +50,10 @@
   let dominantColor;
 
   function getDominantColor() {
-    console.log('🔥🔥🔥', this, bindImg);
+    LOGGER.log('🔥🔥🔥', this, bindImg);
     const colorThief = new ColorThief();
     const color = colorThief.getColor(bindImg);
-    console.log(color, '🟢🟢🟢');
+    LOGGER.log(color, '🟢🟢🟢');
     dominantColor = `background-color: rgb(${color?.[0]},${color?.[1]},${color?.[2]});`;
   }
 </script>
