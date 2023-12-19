@@ -15,7 +15,7 @@
   let SLIDER;
   let CHILDREN_BIND = {};
   let timestamp = getTimestamp();
-  let currentSlidePosition = 0;
+  let currentSlidePosition = 1; // not 0 because of "SIDE MENU"
   let initialX = 0;
   let x = 0;
   let prevSlideTranslateX = 0;
@@ -23,9 +23,11 @@
   $: SLIDE_WIDTH = SLIDER ? SLIDER.clientWidth : 0;
   $: TOTAL_SLIDES = VIEWS.length;
   $: MINIMUM_SWIPE_X = SLIDE_WIDTH / 3;
-  $: currentView = VIEWS[currentSlidePosition] ? VIEWS[currentSlidePosition] : null;
-  $: prevView = VIEWS[currentSlidePosition - 1] ? VIEWS[currentSlidePosition - 1] : null;
-  $: nextView = VIEWS[currentSlidePosition + 1] ? VIEWS[currentSlidePosition + 1] : null;
+  // FIXME
+  // $: SIDE_MENU_WIDTH = SLIDE_WIDTH - 20;
+  $: currentView = VIEWS[currentSlidePosition];
+  $: prevView = VIEWS[currentSlidePosition - 1];
+  $: nextView = VIEWS[currentSlidePosition + 1];
   $: currentSlide = currentView ? CHILDREN_BIND[currentView.id] : null;
   $: prevSlide = prevView ? CHILDREN_BIND[prevView.id] : null;
   $: nextSlide = nextView ? CHILDREN_BIND[nextView.id] : null;
@@ -33,19 +35,21 @@
   $: isPrev = deltaX > 0;
   $: isNext = !isPrev;
   $: isTouchedOnEdge = initialX <= TOUCH_AREA_WIDTH || initialX + TOUCH_AREA_WIDTH >= SLIDE_WIDTH;
+  $: isViewsObjectSyncWithDomRepresentationHack =
+    VIEWS.length === Object.keys(CHILDREN_BIND).length;
+  $: isSideMenuSlide = currentSlidePosition === 0;
+  $: isAfterSideMenuSlide = currentSlidePosition === 1;
   $: canSwipe = Math.abs(deltaX) >= MINIMUM_SWIPE_X;
   $: canGoPrev = currentSlidePosition > 0;
   $: canGoNext = currentSlidePosition + 1 < TOTAL_SLIDES;
-  $: isViewsObjectSyncWithDomRepresentationHack =
-    VIEWS.length === Object.keys(CHILDREN_BIND).length;
 
   $: if (SLIDER && VIEWS && SLIDE_WIDTH > 0) {
     if (isViewsObjectSyncWithDomRepresentationHack) {
-      initSlider();
+      translateSlide();
     }
   }
 
-  function initSlider() {
+  function translateSlide() {
     VIEWS.forEach(({ id }, i) => {
       let translateX;
       if (i < currentSlidePosition) {
@@ -82,10 +86,20 @@
 
     if (isPrev && canGoPrev) {
       currentSlide.style.transform = `translateX(${deltaX}px)`;
-      prevSlide.style.transform = `translateX(${(prevSlideTranslateX + deltaX) / 10}px)`;
+
+      let prevTranslateX = prevSlideTranslateX + deltaX;
+      if (!isAfterSideMenuSlide) {
+        prevTranslateX /= 10;
+      }
+      prevSlide.style.transform = `translateX(${prevTranslateX}px)`;
     } else if (isNext && canGoNext && nextSlide) {
       nextSlide.style.transform = `translateX(${nextSlideTranslateX + deltaX}px)`;
-      currentSlide.style.transform = `translateX(${deltaX / 4}px)`;
+
+      let nextTranslateX = deltaX;
+      if (!isSideMenuSlide) {
+        nextTranslateX /= 4;
+      }
+      currentSlide.style.transform = `translateX(${nextTranslateX}px)`;
     }
   }
 
@@ -168,6 +182,7 @@
   }}
 />
 
+isSideMenuSlide:{isSideMenuSlide}
 {#key timestamp}
   <ul
     bind:this={SLIDER}
@@ -176,8 +191,8 @@
     on:touchmove={move}
     on:transitionend={removeTransition}
   >
-    {#each VIEWS as { id, component, props }}
-      <li {id} bind:this={CHILDREN_BIND[id]}>
+    {#each VIEWS as { id, component, props }, i}
+      <li {id} class:side-menu={i === 0} bind:this={CHILDREN_BIND[id]}>
         <svelte:component this={component} {...props} />
       </li>
     {/each}
@@ -197,6 +212,11 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  .side-menu {
+    background-color: deeppink;
+    width: 90%;
   }
 
   .debug-red {

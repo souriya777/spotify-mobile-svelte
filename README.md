@@ -15,7 +15,7 @@ Single Source of Truth
 
 ## mvp
 
-- feat(ui): side-menu 90%
+- feat(ui): side-menu full height
 - feat(ui): player above menu
 - feat(ui): player 100% height
 - feat(stack-ui): change background-color depending on view
