@@ -1,9 +1,11 @@
 import { SvelteComponent } from 'svelte';
 
-export type Component = {
+export type View = {
   id: string;
   component: typeof MyComponent;
-  props?: object;
+  props?: {
+    [key: string]: any;
+  };
 };
 
 interface MyComponent extends SvelteComponent {}

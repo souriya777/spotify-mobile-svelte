@@ -11,9 +11,12 @@
   /** @type {HTMLElement} */
   let SCREEN;
 
-  /** @type {import('@js/internal').Component[]} */
+  /** @type {import('@js/internal').View[]} */
   let VIEWS = [
-    { id: 'view-side-menu', component: SideMenuView },
+    {
+      id: 'view-side-menu',
+      component: SideMenuView,
+    },
     {
       id: 'view-home',
       component: HomeView,
@@ -21,10 +24,12 @@
   ];
 
   function createView() {
+    const id = 'view-' + getTimestamp();
+
     VIEWS = [
       ...VIEWS,
       {
-        id: 'view-' + getTimestamp(),
+        id,
         component: DumbView,
         props: {
           title: 'Souriya 😎😎😎' + new Date().getTime(),
@@ -38,7 +43,7 @@
   <div class="screen__content">
     currentPath:{$currentPath}
     <Button filled={true} callback={createView}>+view</Button>
-    <Ui views={VIEWS}></Ui>
+    <Ui {VIEWS}></Ui>
   </div>
 
   <div class="screen__nav">

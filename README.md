@@ -15,9 +15,7 @@ Single Source of Truth
 
 ## mvp
 
-- resolve id view
-
-- feat(ui): one stack views by `route` ?
+- feat(ui): one stack views by `route` ? use Router.svelte ?
 - feat(ci): debug mode
 - refactor(code): separate logic code, from "view" code
   -- remove `PhoneSAVE.svelte`

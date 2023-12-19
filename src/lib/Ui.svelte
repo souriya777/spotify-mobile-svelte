@@ -2,7 +2,8 @@
   import { getTranslateXY } from '@js/browser-utils';
   import { getTimestamp } from '@js/date-utils';
 
-  export let views = [];
+  /** @type {import('@js/internal').View[]} */
+  export let VIEWS = [];
 
   const _DEBUG = false;
   const TOUCH_AREA_WIDTH = 70;
@@ -18,11 +19,11 @@
   let prevSlideTranslateX = 0;
   let nextSlideTranslateX = 0;
   $: SLIDE_WIDTH = SLIDER ? SLIDER.clientWidth : 0;
-  $: TOTAL_SLIDES = views.length;
+  $: TOTAL_SLIDES = VIEWS.length;
   $: MINIMUM_SWIPE_X = SLIDE_WIDTH / 3;
-  $: currentView = views[currentSlidePosition];
-  $: prevView = views[currentSlidePosition - 1];
-  $: nextView = views[currentSlidePosition + 1];
+  $: currentView = VIEWS[currentSlidePosition] ? VIEWS[currentSlidePosition] : null;
+  $: prevView = VIEWS[currentSlidePosition - 1] ? VIEWS[currentSlidePosition - 1] : null;
+  $: nextView = VIEWS[currentSlidePosition + 1] ? VIEWS[currentSlidePosition + 1] : null;
   $: currentSlide = currentView ? CHILDREN_BIND[currentView.id] : null;
   $: prevSlide = prevView ? CHILDREN_BIND[prevView.id] : null;
   $: nextSlide = nextView ? CHILDREN_BIND[nextView.id] : null;
@@ -34,16 +35,16 @@
   $: canGoPrev = currentSlidePosition > 0;
   $: canGoNext = currentSlidePosition + 1 < TOTAL_SLIDES;
   $: isViewsObjectSyncWithDomRepresentationHack =
-    views.length === Object.keys(CHILDREN_BIND).length;
+    VIEWS.length === Object.keys(CHILDREN_BIND).length;
 
-  $: if (SLIDER && views && SLIDE_WIDTH > 0) {
+  $: if (SLIDER && VIEWS && SLIDE_WIDTH > 0) {
     if (isViewsObjectSyncWithDomRepresentationHack) {
       initSlider();
     }
   }
 
   function initSlider() {
-    views.forEach((view, i) => {
+    VIEWS.forEach(({ id }, i) => {
       let translateX;
       if (i < currentSlidePosition) {
         translateX = -SLIDE_WIDTH;
@@ -53,7 +54,7 @@
         translateX = 0;
       }
 
-      const SLIDE = CHILDREN_BIND[view.id];
+      const SLIDE = CHILDREN_BIND[id];
       if (SLIDE) {
         // @ts-ignore
         SLIDE.style.transform = `translateX(${translateX}px)`;
@@ -173,7 +174,7 @@
     on:touchmove={move}
     on:transitionend={removeTransition}
   >
-    {#each views as { id, component, props }}
+    {#each VIEWS as { id, component, props }}
       <li {id} bind:this={CHILDREN_BIND[id]}>
         <svelte:component this={component} {...props} />
       </li>
