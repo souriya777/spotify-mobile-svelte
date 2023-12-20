@@ -2,8 +2,6 @@
   import { getTranslateXY } from '@js/browser-utils';
   import { getTimestamp } from '@js/date-utils';
   import Logger from '@js/Logger';
-  import Nav from '@lib/Nav.svelte';
-  import Player from '@lib/Player.svelte';
 
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
@@ -230,8 +228,7 @@
   </ul>
 {/key}
 <div class="fixed" bind:this={FIXED}>
-  <Player />
-  <Nav />
+  <slot name="fixed" />
 </div>
 
 <style>

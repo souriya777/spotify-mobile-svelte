@@ -6,6 +6,7 @@
   import DumbView from '@lib/views/DumbView.svelte';
   import Button from '@lib/Button.svelte';
   import { getTimestamp } from '@js/date-utils';
+  import UiForeground from '@lib/UiForeground.svelte';
 
   /** @type {HTMLElement} */
   let SCREEN;
@@ -46,11 +47,13 @@
 </script>
 
 <div bind:this={SCREEN} class="screen">
-  <div class="screen__content">
-    currentPath:{$currentPath}
-    <Button filled={true} callback={createView}>+view</Button>
-    <Ui {VIEWS}></Ui>
-  </div>
+  <!-- currentPath:{$currentPath}
+  <Button filled={true} callback={createView}>+view</Button> -->
+  <Ui {VIEWS}>
+    <svelte:fragment slot="fixed">
+      <UiForeground />
+    </svelte:fragment>
+  </Ui>
 </div>
 
 <style>
@@ -62,11 +65,5 @@
     overflow-x: hidden;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
-  }
-
-  .screen__content {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
   }
 </style>

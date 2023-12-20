@@ -13,7 +13,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(ui): player 100% height
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
 - refactor(string-utils & souriya-utils)

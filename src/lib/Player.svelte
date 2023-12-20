@@ -23,10 +23,14 @@
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
   $: progress_m_ss = millisToMinuteSecond($realTimeProgressMs);
   $: duration_m_ss = millisToMinuteSecond($durationMs);
+
+  function expandPlayer() {
+    console.log('TODO');
+  }
 </script>
 
-<div class="player">
-  <!-- <div class="bar">
+<div class="player" role="button" tabindex="0" on:click={expandPlayer} on:keyup={expandPlayer}>
+  <div class="bar">
     <button>back</button>
     <p>Liked Songs</p>
   </div>
@@ -43,7 +47,7 @@
       <div class="begin">{progress_m_ss}</div>
       <div class="end">{duration_m_ss}</div>
     </div>
-  </div> -->
+  </div>
   <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
   <button on:click={() => SpotifyApi.previous()}>⏮️</button>
   {#if $playing}

@@ -1,6 +1,6 @@
 import { writable, derived } from 'svelte/store';
-import { createDisplayFilter, writableLocalStorage } from '@/js/store-utils';
-import SpotifyRepeatState from '@/js/SpotifyRepeatState';
+import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
+import SpotifyRepeatState from '@js/SpotifyRepeatState';
 
 // ACCESS
 const accessToken = writableLocalStorage('accessToken', '');
@@ -15,7 +15,7 @@ const trackName = writable('');
 const albumUri = writable('');
 const albumName = writable('');
 const imageUrl = writable('');
-/** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyArtist[]>} */
+/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyArtist[]>} */
 const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
@@ -23,7 +23,7 @@ const artistsDisplay = derived(artists, ($artists) =>
 
 // DEVICE
 const deviceId = writableLocalStorage('deviceId', '');
-/** @type {import('svelte/store').Writable<import('@/js/spotify').SpotifyDevice[]>} */
+/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyDevice[]>} */
 const devices = writable([]);
 
 // MISCELLANEOUS
