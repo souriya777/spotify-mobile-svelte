@@ -2,7 +2,6 @@
   import { currentPath } from '@js/store';
   import Ui from '@lib/Ui.svelte';
   import HomeView from '@lib/views/HomeView.svelte';
-  import Nav from '@lib/Nav.svelte';
   import SideMenuView from '@lib/views/SideMenuView.svelte';
   import DumbView from '@lib/views/DumbView.svelte';
   import Button from '@lib/Button.svelte';
@@ -20,6 +19,13 @@
     {
       id: 'view-home',
       component: HomeView,
+    },
+    {
+      id: 'view-dumb',
+      component: DumbView,
+      props: {
+        title: 'DUMB' + new Date().getTime(),
+      },
     },
   ];
 
@@ -45,10 +51,6 @@
     <Button filled={true} callback={createView}>+view</Button>
     <Ui {VIEWS}></Ui>
   </div>
-
-  <div class="screen__nav">
-    <Nav />
-  </div>
 </div>
 
 <style>
@@ -66,11 +68,5 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-  }
-
-  .screen__nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
   }
 </style>

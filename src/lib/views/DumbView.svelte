@@ -4,7 +4,7 @@
   export let title;
 </script>
 
-<View id="dumb-view">
+<View>
   DUMB
   <h1>
     {title}

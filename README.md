@@ -11,19 +11,14 @@ DRY
 ACID
 Single Source of Truth
 
-# TODO
+# TODO MVP
 
-## mvp
-
-- feat(ui): side-menu full height
-- feat(ui): player above menu
 - feat(ui): player 100% height
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
 - refactor(string-utils & souriya-utils)
 - feat(player) : shuffle on several playlist
 - feat(ui): like "car mode" ?
-- feat(ui): drag'n drop
 - feat(button): onTap ?
 - feat(ui): use use:onTap
 - position fixed : player & menu
@@ -48,7 +43,9 @@ Single Source of Truth
 - feat(cache): optimize it
 - feat(service-worker): invalidate when add like song ?
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
+- feat(ui): drag'n drop
 - feat(pwa): improve "add to homescreen" installation message
+- lazy-load view in order to optimize processing ?
 - how puting `karaoke` at first ?
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
@@ -88,7 +85,7 @@ Single Source of Truth
 - spotify bug "recently-added" order
 - implement accessibility (eg. `aria-hidden`)
 
-## perf++
+# TODO perf++
 
 - manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - feat(service-worker): strategy `what`, `when`
@@ -97,7 +94,7 @@ Single Source of Truth
 - fix `BetaLikedImg`
 - lighthouse
 
-## expert-like
+# TODO expert-like
 
 - answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - present it to `Svelte Society`

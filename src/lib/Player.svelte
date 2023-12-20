@@ -12,12 +12,12 @@
     playing,
     realTimeProgressMs,
     durationMs,
-  } from '@/js/store';
-  import { millisToMinuteSecond } from '@/js/time-utils';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import SpotifyRepeatState from '@/js/SpotifyRepeatState';
-  import ProgressBar from '@/lib/ProgressBar.svelte';
-  import Volume from '@/lib/Volume.svelte';
+  } from '@js/store';
+  import { millisToMinuteSecond } from '@js/time-utils';
+  import SpotifyApi from '@js/SpotifyApi';
+  import SpotifyRepeatState from '@js/SpotifyRepeatState';
+  import ProgressBar from '@lib/ProgressBar.svelte';
+  import Volume from '@lib/Volume.svelte';
 
   $: activeDevice = $devices?.find((device) => device.is_active === true);
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
@@ -26,7 +26,7 @@
 </script>
 
 <div class="player">
-  <div class="bar">
+  <!-- <div class="bar">
     <button>back</button>
     <p>Liked Songs</p>
   </div>
@@ -43,7 +43,7 @@
       <div class="begin">{progress_m_ss}</div>
       <div class="end">{duration_m_ss}</div>
     </div>
-  </div>
+  </div> -->
   <button on:click={() => SpotifyApi.shuffle()}>🔀{$shuffleState ? '🟢' : '🔴'}</button>
   <button on:click={() => SpotifyApi.previous()}>⏮️</button>
   {#if $playing}

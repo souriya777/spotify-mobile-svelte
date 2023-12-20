@@ -2,6 +2,8 @@
   import { getTranslateXY } from '@js/browser-utils';
   import { getTimestamp } from '@js/date-utils';
   import Logger from '@js/Logger';
+  import Nav from '@lib/Nav.svelte';
+  import Player from '@lib/Player.svelte';
 
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
@@ -13,7 +15,9 @@
 
   /** @type {HTMLElement} */
   let SLIDER;
-  let CHILDREN_BIND = {};
+  /** @type {HTMLElement} */
+  let FIXED;
+  let SLIDES_BIND = {};
   let timestamp = getTimestamp();
   let currentSlidePosition = 1; // not 0 because of "SIDE MENU"
   let initialX = 0;
@@ -23,47 +27,40 @@
   $: SLIDE_WIDTH = SLIDER ? SLIDER.clientWidth : 0;
   $: TOTAL_SLIDES = VIEWS.length;
   $: MINIMUM_SWIPE_X = SLIDE_WIDTH / 3;
-  // FIXME
-  // $: SIDE_MENU_WIDTH = SLIDE_WIDTH - 20;
-  $: currentView = VIEWS[currentSlidePosition];
-  $: prevView = VIEWS[currentSlidePosition - 1];
-  $: nextView = VIEWS[currentSlidePosition + 1];
-  $: currentSlide = currentView ? CHILDREN_BIND[currentView.id] : null;
-  $: prevSlide = prevView ? CHILDREN_BIND[prevView.id] : null;
-  $: nextSlide = nextView ? CHILDREN_BIND[nextView.id] : null;
+  $: CURRENT_ID = VIEWS[currentSlidePosition]?.id;
+  $: PREV_ID = VIEWS[currentSlidePosition - 1]?.id;
+  $: NEXT_ID = VIEWS[currentSlidePosition + 1]?.id;
+  $: CURRENT_SLIDE = SLIDES_BIND[CURRENT_ID];
+  $: PREV_SLIDE = SLIDES_BIND[PREV_ID];
+  $: NEXT_SLIDE = SLIDES_BIND[NEXT_ID];
   $: deltaX = x - initialX;
-  $: isPrev = deltaX > 0;
-  $: isNext = !isPrev;
+  $: isPrevSwipe = deltaX > 0;
+  $: isNextSwipe = !isPrevSwipe;
   $: isTouchedOnEdge = initialX <= TOUCH_AREA_WIDTH || initialX + TOUCH_AREA_WIDTH >= SLIDE_WIDTH;
-  $: isViewsObjectSyncWithDomRepresentationHack =
-    VIEWS.length === Object.keys(CHILDREN_BIND).length;
+  $: isViewsSyncWithDOM = VIEWS.length === Object.keys(SLIDES_BIND).length;
   $: isSideMenuSlide = currentSlidePosition === 0;
-  $: isAfterSideMenuSlide = currentSlidePosition === 1;
+  $: isHomeSlide = currentSlidePosition === 1;
   $: canSwipe = Math.abs(deltaX) >= MINIMUM_SWIPE_X;
   $: canGoPrev = currentSlidePosition > 0;
   $: canGoNext = currentSlidePosition + 1 < TOTAL_SLIDES;
 
-  $: if (SLIDER && VIEWS && SLIDE_WIDTH > 0) {
-    if (isViewsObjectSyncWithDomRepresentationHack) {
-      translateSlide();
-    }
+  $: if (SLIDER && SLIDE_WIDTH > 0 && isViewsSyncWithDOM) {
+    translateSlide();
   }
 
   function translateSlide() {
     VIEWS.forEach(({ id }, i) => {
-      let translateX;
-      if (i < currentSlidePosition) {
-        translateX = -SLIDE_WIDTH;
-      } else if (i > currentSlidePosition) {
-        translateX = SLIDE_WIDTH;
-      } else {
-        translateX = 0;
+      const SLIDE = SLIDES_BIND[id];
+      if (!SLIDE) {
+        return;
       }
 
-      const SLIDE = CHILDREN_BIND[id];
-      if (SLIDE) {
-        // @ts-ignore
-        SLIDE.style.transform = `translateX(${translateX}px)`;
+      if (i < currentSlidePosition) {
+        translate(SLIDE, -SLIDE_WIDTH);
+      } else if (i > currentSlidePosition) {
+        translate(SLIDE, SLIDE_WIDTH);
+      } else {
+        translate(SLIDE, 0);
       }
     });
   }
@@ -72,8 +69,8 @@
     const touch = [...e.changedTouches].at(0);
     initialX = touch.pageX;
     x = initialX;
-    prevSlideTranslateX = getTranslateXY(prevSlide).translateX;
-    nextSlideTranslateX = getTranslateXY(nextSlide).translateX;
+    prevSlideTranslateX = getTranslateXY(PREV_SLIDE).translateX;
+    nextSlideTranslateX = getTranslateXY(NEXT_SLIDE).translateX;
   }
 
   function move(e) {
@@ -84,22 +81,28 @@
     const touch = [...e.changedTouches].at(0);
     x = touch.pageX;
 
-    if (isPrev && canGoPrev) {
-      currentSlide.style.transform = `translateX(${deltaX}px)`;
+    if (isPrevSwipe && canGoPrev) {
+      let translateX = prevSlideTranslateX + deltaX;
 
-      let prevTranslateX = prevSlideTranslateX + deltaX;
-      if (!isAfterSideMenuSlide) {
-        prevTranslateX /= 10;
-      }
-      prevSlide.style.transform = `translateX(${prevTranslateX}px)`;
-    } else if (isNext && canGoNext && nextSlide) {
-      nextSlide.style.transform = `translateX(${nextSlideTranslateX + deltaX}px)`;
+      translate(CURRENT_SLIDE, deltaX);
 
-      let nextTranslateX = deltaX;
-      if (!isSideMenuSlide) {
-        nextTranslateX /= 4;
+      if (isHomeSlide) {
+        translate(PREV_SLIDE, translateX);
+        translate(FIXED, deltaX);
+      } else {
+        translate(PREV_SLIDE, translateX / 10);
       }
-      currentSlide.style.transform = `translateX(${nextTranslateX}px)`;
+    } else if (isNextSwipe && canGoNext && NEXT_SLIDE) {
+      let translateX = nextSlideTranslateX + deltaX;
+
+      translate(NEXT_SLIDE, translateX);
+
+      if (isSideMenuSlide) {
+        translate(FIXED, translateX);
+        translate(CURRENT_SLIDE, deltaX);
+      } else {
+        translate(CURRENT_SLIDE, deltaX / 4);
+      }
     }
   }
 
@@ -108,7 +111,7 @@
       return;
     }
 
-    if (isPrev) {
+    if (isPrevSwipe) {
       slidePrev();
     } else {
       slideNext();
@@ -116,44 +119,73 @@
   }
 
   function slidePrev() {
-    currentSlide.style.transition = SLIDE_STYLE;
+    CURRENT_SLIDE.style.transition = SLIDE_STYLE;
+    PREV_SLIDE.style.transition = SLIDE_STYLE;
+    FIXED.style.transition = SLIDE_STYLE;
 
     if (canSwipe && canGoPrev) {
-      currentSlide.style.transform = `translateX(${SLIDE_WIDTH}px)`;
-      prevSlide.style.transition = SLIDE_STYLE;
-      prevSlide.style.transform = `translateX(${0}px)`;
+      translate(CURRENT_SLIDE, SLIDE_WIDTH);
+      translate(PREV_SLIDE, 0);
+
+      if (isHomeSlide) {
+        translate(FIXED, SLIDE_WIDTH);
+      }
 
       currentSlidePosition--;
-    } else if (prevSlide) {
-      currentSlide.style.transform = `translateX(${0}px)`;
+    } else if (PREV_SLIDE) {
+      translate(CURRENT_SLIDE, 0);
+      translate(PREV_SLIDE, -SLIDE_WIDTH);
+
+      if (isHomeSlide) {
+        translate(FIXED, 0);
+      }
     }
   }
 
   function slideNext() {
+    CURRENT_SLIDE.style.transition = SLIDE_STYLE;
+    NEXT_SLIDE.style.transition = SLIDE_STYLE;
+
     if (canSwipe && canGoNext) {
-      nextSlide.style.transition = SLIDE_STYLE;
-      nextSlide.style.transform = `translateX(${0}px)`;
-      currentSlide.style.transition = SLIDE_STYLE;
-      currentSlide.style.transform = `translateX(${-SLIDE_WIDTH}px)`;
+      translate(CURRENT_SLIDE, -SLIDE_WIDTH);
+      translate(NEXT_SLIDE, 0);
+
+      if (isSideMenuSlide) {
+        FIXED.style.transition = SLIDE_STYLE;
+        translate(FIXED, 0);
+      }
 
       currentSlidePosition++;
-    } else if (nextSlide) {
-      nextSlide.style.transition = SLIDE_STYLE;
-      nextSlide.style.transform = `translateX(${SLIDE_WIDTH}px)`;
+    } else if (NEXT_SLIDE) {
+      translate(CURRENT_SLIDE, 0);
+      translate(NEXT_SLIDE, SLIDE_WIDTH);
+
+      if (isSideMenuSlide) {
+        FIXED.style.transition = SLIDE_STYLE;
+        translate(FIXED, SLIDE_WIDTH);
+      }
     }
   }
 
+  function translate(HTML_ELEMENT, width) {
+    HTML_ELEMENT.style.transform = `translateX(${width}px)`;
+  }
+
   function removeTransition() {
-    if (currentSlide) {
-      currentSlide.style.transition = '';
+    if (CURRENT_SLIDE) {
+      CURRENT_SLIDE.style.transition = '';
     }
 
-    if (prevSlide) {
-      prevSlide.style.transition = '';
+    if (PREV_SLIDE) {
+      PREV_SLIDE.style.transition = '';
     }
 
-    if (nextSlide) {
-      nextSlide.style.transition = '';
+    if (NEXT_SLIDE) {
+      NEXT_SLIDE.style.transition = '';
+    }
+
+    if (FIXED) {
+      FIXED.style.transition = '';
     }
   }
 </script>
@@ -167,8 +199,8 @@
     <div>nextSlideTranslateX:{nextSlideTranslateX}</div>
     <!-- <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
     <div>canSwipe:{canSwipe}</div>
-    <div>isPrev:{isPrev}</div>
-    <div>isNext:{isNext}</div>
+    <div>isPrevSwipe:{isPrevSwipe}</div>
+    <div>isNextSwipe:{isNextSwipe}</div>
     <div>canGoPrev:{canGoPrev}</div>
     <div>canGoNext:{canGoNext}</div>
     <div>currentSlidePosition:{currentSlidePosition}</div> -->
@@ -182,7 +214,6 @@
   }}
 />
 
-isSideMenuSlide:{isSideMenuSlide}
 {#key timestamp}
   <ul
     bind:this={SLIDER}
@@ -192,12 +223,16 @@ isSideMenuSlide:{isSideMenuSlide}
     on:transitionend={removeTransition}
   >
     {#each VIEWS as { id, component, props }, i}
-      <li {id} class:side-menu={i === 0} bind:this={CHILDREN_BIND[id]}>
+      <li {id} class:side-menu={i === 0} bind:this={SLIDES_BIND[id]}>
         <svelte:component this={component} {...props} />
       </li>
     {/each}
   </ul>
 {/key}
+<div class="fixed" bind:this={FIXED}>
+  <Player />
+  <Nav />
+</div>
 
 <style>
   ul {
@@ -212,10 +247,20 @@ isSideMenuSlide:{isSideMenuSlide}
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: var(--color-primary);
+  }
+
+  .fixed {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background-color: blanchedalmond;
+    color: black;
+    width: 100%;
   }
 
   .side-menu {
-    background-color: deeppink;
+    background-color: hotpink;
     width: 90%;
   }
 
