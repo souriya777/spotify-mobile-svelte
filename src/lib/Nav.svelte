@@ -1,5 +1,6 @@
 <script>
-  import { getUrlPath, isNotEmpty } from '@js/souriya-utils';
+  import { getUrlPath } from '@js/souriya-utils';
+  import { isNotEmpty } from '@js/string-utils';
   import { searchQuery, currentPath } from '@js/store';
   import NavLink from '@lib/NavLink.svelte';
   import Svg from '@lib/svg/Svg.svelte';

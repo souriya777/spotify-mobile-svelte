@@ -47,8 +47,8 @@
 </script>
 
 <div bind:this={SCREEN} class="screen">
-  <!-- currentPath:{$currentPath}
-  <Button filled={true} callback={createView}>+view</Button> -->
+  currentPath:{$currentPath}
+  <Button filled={true} callback={createView}>+view</Button>
   <Ui {VIEWS}>
     <svelte:fragment slot="fixed">
       <UiForeground />

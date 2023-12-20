@@ -78,14 +78,6 @@ function getUrlPath(url) {
   return /http[s]?:\/\/[a-z0-9:\-.]*(\/.*)/gi.exec(url)?.[1];
 }
 
-function isEmpty(str) {
-  return !isNotEmpty(str);
-}
-
-function isNotEmpty(str) {
-  return str !== null && str !== undefined && typeof str === 'string' && str.trim().length > 0;
-}
-
 function isArrayNotEmpty(arr) {
   return arr?.length;
 }
@@ -107,7 +99,5 @@ export {
   getUrlParam,
   getUrlPath,
   hourMinute,
-  isEmpty,
-  isNotEmpty,
   isArrayEmpty,
 };

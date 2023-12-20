@@ -1,5 +1,9 @@
 function isEmpty(str) {
-  return str === '';
+  return !isNotEmpty(str);
 }
 
-export { isEmpty };
+function isNotEmpty(str) {
+  return str !== null && str !== undefined && typeof str === 'string' && str.trim().length > 0;
+}
+
+export { isEmpty, isNotEmpty };

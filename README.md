@@ -15,7 +15,6 @@ Single Source of Truth
 
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
-- refactor(string-utils & souriya-utils)
 - feat(player) : shuffle on several playlist
 - feat(ui): like "car mode" ?
 - feat(button): onTap ?
@@ -34,7 +33,6 @@ Single Source of Truth
 - feat(detail): design
 - space
 - color
-- px
 - feat(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
   -- invalid cache, when rename playlist
