@@ -3,6 +3,7 @@
 A clone of Spotify mobile app, in svelte 🚀
 
 Demo: https://spotify-mobile-svelte.vercel.app/
+Beta: https://spotify-mobile-svelte-test.vercel.app/
 
 # philosophie ⚜️
 
