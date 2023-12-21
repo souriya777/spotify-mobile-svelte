@@ -17,6 +17,7 @@ Stone soup
 
 ## mvp
 
+- configure a PREPROD env in VERCEL
 - refactor(string-utils & souriya-utils)
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
