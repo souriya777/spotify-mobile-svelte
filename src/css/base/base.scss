@@ -38,10 +38,6 @@ html.no--scroll {
   }
 }
 
-button {
-  cursor: pointer;
-}
-
 svg {
   display: flex;
 }
@@ -50,15 +46,6 @@ ul {
   list-style: none;
   margin-block: 0;
   padding-inline-start: 0;
-}
-
-button {
-  border: none;
-  background: transparent;
-}
-
-button.accent {
-  color: var(--color-accent);
 }
 
 .primary {

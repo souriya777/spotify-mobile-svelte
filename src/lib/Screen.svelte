@@ -1,11 +1,11 @@
 <script>
   import { currentPath } from '@js/store';
+  import { getTimestamp } from '@js/date-utils';
   import Ui from '@lib/Ui.svelte';
   import HomeView from '@lib/views/HomeView.svelte';
   import SideMenuView from '@lib/views/SideMenuView.svelte';
   import DumbView from '@lib/views/DumbView.svelte';
   import Button from '@lib/Button.svelte';
-  import { getTimestamp } from '@js/date-utils';
   import UiForeground from '@lib/UiForeground.svelte';
 
   /** @type {HTMLElement} */
@@ -20,13 +20,9 @@
     {
       id: 'view-home',
       component: HomeView,
-    },
-    {
-      id: 'view-dumb',
-      component: DumbView,
-      props: {
-        title: 'DUMB' + new Date().getTime(),
-      },
+      //   props: {
+      //     title: 'DUMB' + new Date().getTime(),
+      //   },
     },
   ];
 
@@ -44,12 +40,17 @@
       },
     ];
   }
+
+  function removeView() {
+    VIEWS = [...VIEWS.slice(0, -1)];
+  }
 </script>
 
 <div bind:this={SCREEN} class="screen">
   currentPath:{$currentPath}
   <Button filled={true} callback={createView}>+view</Button>
-  <Ui {VIEWS}>
+  <Button filled={true} callback={removeView}>-view</Button>
+  <Ui {VIEWS} on:removeSlide={removeView}>
     <svelte:fragment slot="fixed">
       <UiForeground />
     </svelte:fragment>

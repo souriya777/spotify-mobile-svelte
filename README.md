@@ -14,6 +14,8 @@ Single Source of Truth
 
 # TODO MVP
 
+-- bug DOMbind --amend
+
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
 - feat(player) : shuffle on several playlist

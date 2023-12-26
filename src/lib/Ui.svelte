@@ -1,4 +1,5 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   import { getTranslateXY } from '@js/browser-utils';
   import { getTimestamp } from '@js/date-utils';
   import Logger from '@js/Logger';
@@ -6,10 +7,12 @@
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
 
-  const _DEBUG = false;
+  const _DEBUG = true;
   const LOGGER = Logger.getNewInstance('Ui.js');
+  const dispatch = createEventDispatcher();
   const TOUCH_AREA_WIDTH = 70;
   const SLIDE_STYLE = 'transform 0.25s cubic-bezier(0.4, 0, 0.23, 1)';
+  const HOME_SLIDE_POSITION = 1;
 
   /** @type {HTMLElement} */
   let SLIDER;
@@ -17,11 +20,12 @@
   let FIXED;
   let SLIDES_BIND = {};
   let timestamp = getTimestamp();
-  let currentSlidePosition = 1; // not 0 because of "SIDE MENU"
+  let currentSlidePosition = HOME_SLIDE_POSITION; // not 0 because of "SIDE MENU"
   let initialX = 0;
   let x = 0;
   let prevSlideTranslateX = 0;
   let nextSlideTranslateX = 0;
+  let canRemoveLast = false;
   $: SLIDE_WIDTH = SLIDER ? SLIDER.clientWidth : 0;
   $: TOTAL_SLIDES = VIEWS.length;
   $: MINIMUM_SWIPE_X = SLIDE_WIDTH / 3;
@@ -37,10 +41,14 @@
   $: isTouchedOnEdge = initialX <= TOUCH_AREA_WIDTH || initialX + TOUCH_AREA_WIDTH >= SLIDE_WIDTH;
   $: isViewsSyncWithDOM = VIEWS.length === Object.keys(SLIDES_BIND).length;
   $: isSideMenuSlide = currentSlidePosition === 0;
-  $: isHomeSlide = currentSlidePosition === 1;
+  $: isHomeSlide = currentSlidePosition === HOME_SLIDE_POSITION;
   $: canSwipe = Math.abs(deltaX) >= MINIMUM_SWIPE_X;
   $: canGoPrev = currentSlidePosition > 0;
   $: canGoNext = currentSlidePosition + 1 < TOTAL_SLIDES;
+
+  $: if (VIEWS && !isViewsSyncWithDOM) {
+    checkNullDomBinding();
+  }
 
   $: if (SLIDER && SLIDE_WIDTH > 0 && isViewsSyncWithDOM) {
     translateSlide();
@@ -120,6 +128,7 @@
     CURRENT_SLIDE.style.transition = SLIDE_STYLE;
     PREV_SLIDE.style.transition = SLIDE_STYLE;
     FIXED.style.transition = SLIDE_STYLE;
+    canRemoveLast = false;
 
     if (canSwipe && canGoPrev) {
       translate(CURRENT_SLIDE, SLIDE_WIDTH);
@@ -129,6 +138,7 @@
         translate(FIXED, SLIDE_WIDTH);
       }
 
+      canRemoveLast = true;
       currentSlidePosition--;
     } else if (PREV_SLIDE) {
       translate(CURRENT_SLIDE, 0);
@@ -142,9 +152,10 @@
 
   function slideNext() {
     CURRENT_SLIDE.style.transition = SLIDE_STYLE;
-    NEXT_SLIDE.style.transition = SLIDE_STYLE;
 
     if (canSwipe && canGoNext) {
+      NEXT_SLIDE.style.transition = SLIDE_STYLE;
+
       translate(CURRENT_SLIDE, -SLIDE_WIDTH);
       translate(NEXT_SLIDE, 0);
 
@@ -155,6 +166,7 @@
 
       currentSlidePosition++;
     } else if (NEXT_SLIDE) {
+      NEXT_SLIDE.style.transition = SLIDE_STYLE;
       translate(CURRENT_SLIDE, 0);
       translate(NEXT_SLIDE, SLIDE_WIDTH);
 
@@ -185,23 +197,40 @@
     if (FIXED) {
       FIXED.style.transition = '';
     }
+
+    removeSlide();
+  }
+
+  function removeSlide() {
+    if (canRemoveLast && isPrevSwipe && currentSlidePosition >= HOME_SLIDE_POSITION) {
+      dispatch('removeSlide');
+      canRemoveLast = false;
+    }
+  }
+
+  function checkNullDomBinding() {
+    Object.entries(SLIDES_BIND).forEach(([key, value]) => {
+      if (!value) {
+        delete SLIDES_BIND[key];
+      }
+    });
   }
 </script>
 
 {#if _DEBUG}
   <div class="indicator" class:debug-red={canGoPrev || canGoNext} class:debug-green={canSwipe}>
     <!-- <div>SLIDE_WIDTH:{SLIDE_WIDTH}</div> -->
-    <div>initialX:{initialX}</div>
+    <!-- <div>initialX:{initialX}</div>
     <div>x:{x}</div>
     <div>deltaX:{deltaX}</div>
-    <div>nextSlideTranslateX:{nextSlideTranslateX}</div>
-    <!-- <div>isTouchedOnEdge:{isTouchedOnEdge}</div>
+    <div>nextSlideTranslateX:{nextSlideTranslateX}</div> -->
+    <!--<div>isTouchedOnEdge:{isTouchedOnEdge}</div>
     <div>canSwipe:{canSwipe}</div>
     <div>isPrevSwipe:{isPrevSwipe}</div>
     <div>isNextSwipe:{isNextSwipe}</div>
     <div>canGoPrev:{canGoPrev}</div>
-    <div>canGoNext:{canGoNext}</div>
-    <div>currentSlidePosition:{currentSlidePosition}</div> -->
+    <div>canGoNext:{canGoNext}</div>-->
+    <div>currentSlidePosition:{currentSlidePosition}</div>
   </div>
 {/if}
 
@@ -251,13 +280,12 @@
     position: fixed;
     bottom: 0;
     z-index: 1;
-    background-color: blanchedalmond;
-    color: black;
+    background-color: var(--color-primary-highlight);
     width: 100%;
   }
 
   .side-menu {
-    background-color: hotpink;
+    background-color: var(--color-primary-highlight);
     width: 90%;
   }
 
