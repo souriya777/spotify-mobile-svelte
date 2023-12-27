@@ -14,11 +14,8 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(player): can sync
-- feat(player): can see basic state
-- feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
-- fix(ui): when drag is held, can scroll horizontally & vertically...
 - feat(router): router or not router ?
+- feat(progress-bar): make spotify-like component
 
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
@@ -78,6 +75,7 @@ Single Source of Truth
 - make scroll lib by date ?
 - feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
 - feat(ux): can I have native vibration ? (eg. move song in queue)
+- feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - make vibration
 - FIXME https://jariz.github.io/vibrant.js/
 - fix(js): `removeEventListener` on store localStorage => works ???

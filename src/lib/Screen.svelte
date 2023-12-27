@@ -47,10 +47,12 @@
 </script>
 
 <div bind:this={SCREEN} class="screen">
-  currentPath:{$currentPath}
-  <Button filled={true} callback={createView}>+view</Button>
-  <Button filled={true} callback={removeView}>-view</Button>
   <Ui {VIEWS} on:removeSlide={removeView}>
+    <!-- <div>
+      currentPath:{$currentPath}
+      <Button filled={true} callback={createView}>+view</Button>
+      <Button filled={true} callback={removeView}>-view</Button>
+    </div> -->
     <svelte:fragment slot="fixed">
       <UiForeground />
     </svelte:fragment>

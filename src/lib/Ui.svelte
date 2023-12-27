@@ -7,7 +7,7 @@
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
 
-  const _DEBUG = true;
+  const _DEBUG = false;
   const LOGGER = Logger.getNewInstance('Ui.js');
   const dispatch = createEventDispatcher();
   const TOUCH_AREA_WIDTH = 70;
@@ -25,6 +25,7 @@
   let x = 0;
   let prevSlideTranslateX = 0;
   let nextSlideTranslateX = 0;
+  let isScrolled = false;
   let canRemoveLast = false;
   $: SLIDE_WIDTH = SLIDER ? SLIDER.clientWidth : 0;
   $: TOTAL_SLIDES = VIEWS.length;
@@ -54,23 +55,6 @@
     translateSlide();
   }
 
-  function translateSlide() {
-    VIEWS.forEach(({ id }, i) => {
-      const SLIDE = SLIDES_BIND[id];
-      if (!SLIDE) {
-        return;
-      }
-
-      if (i < currentSlidePosition) {
-        translate(SLIDE, -SLIDE_WIDTH);
-      } else if (i > currentSlidePosition) {
-        translate(SLIDE, SLIDE_WIDTH);
-      } else {
-        translate(SLIDE, 0);
-      }
-    });
-  }
-
   function start(e) {
     const touch = [...e.changedTouches].at(0);
     initialX = touch.pageX;
@@ -86,6 +70,7 @@
 
     const touch = [...e.changedTouches].at(0);
     x = touch.pageX;
+    isScrolled = true;
 
     if (isPrevSwipe && canGoPrev) {
       let translateX = prevSlideTranslateX + deltaX;
@@ -113,6 +98,8 @@
   }
 
   function end() {
+    isScrolled = false;
+
     if (!isTouchedOnEdge) {
       return;
     }
@@ -179,6 +166,23 @@
 
   function translate(HTML_ELEMENT, width) {
     HTML_ELEMENT.style.transform = `translateX(${width}px)`;
+  }
+
+  function translateSlide() {
+    VIEWS.forEach(({ id }, i) => {
+      const SLIDE = SLIDES_BIND[id];
+      if (!SLIDE) {
+        return;
+      }
+
+      if (i < currentSlidePosition) {
+        translate(SLIDE, -SLIDE_WIDTH);
+      } else if (i > currentSlidePosition) {
+        translate(SLIDE, SLIDE_WIDTH);
+      } else {
+        translate(SLIDE, 0);
+      }
+    });
   }
 
   function removeTransition() {
@@ -250,7 +254,7 @@
     on:transitionend={removeTransition}
   >
     {#each VIEWS as { id, component, props }, i}
-      <li {id} class:side-menu={i === 0} bind:this={SLIDES_BIND[id]}>
+      <li {id} class:side-menu={i === 0} bind:this={SLIDES_BIND[id]} class:isScrolled>
         <svelte:component this={component} {...props} />
       </li>
     {/each}
@@ -274,6 +278,10 @@
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: var(--color-primary);
+  }
+
+  .isScrolled {
+    overflow: hidden;
   }
 
   .fixed {
