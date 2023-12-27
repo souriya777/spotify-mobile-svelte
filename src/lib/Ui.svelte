@@ -3,6 +3,7 @@
   import { getTranslateXY } from '@js/browser-utils';
   import { getTimestamp } from '@js/date-utils';
   import Logger from '@js/Logger';
+  import { getView } from '@js/view-utils';
 
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
@@ -253,9 +254,9 @@
     on:touchmove={move}
     on:transitionend={removeTransition}
   >
-    {#each VIEWS as { id, component, props }, i}
+    {#each VIEWS as { id, viewName, props }, i}
       <li {id} class:side-menu={i === 0} bind:this={SLIDES_BIND[id]} class:isScrolled>
-        <svelte:component this={component} {...props} />
+        <svelte:component this={getView(viewName)} {...props} />
       </li>
     {/each}
   </ul>

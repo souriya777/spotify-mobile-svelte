@@ -14,6 +14,7 @@ Single Source of Truth
 
 # TODO MVP
 
+- feat(views): can positionnate to last view
 - feat(router): router or not router ?
 - feat(progress-bar): make spotify-like component
 

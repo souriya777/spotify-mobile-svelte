@@ -2,7 +2,7 @@
   import { accessToken, userId, deviceId, player, trackName } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
 
-  let _OPEN = true;
+  let _OPEN = false;
 </script>
 
 <details open={_OPEN}>

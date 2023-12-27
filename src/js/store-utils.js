@@ -1,29 +1,71 @@
-import { writable, derived } from 'svelte/store';
-import { setAxiosHeaderAuthorization } from '@js/axios-utils';
+import { writable, derived, get } from 'svelte/store';
+import LocalStorage from '@js/LocalStorage';
+
+let STORAGE_LISTENER_ADDED = false;
+
+function setLocalStorage(key, value) {
+  const stored = typeof value === 'object' ? JSON.stringify(value) : value;
+  LocalStorage.set(key, stored);
+}
+
+function parseLocalStorage(value) {
+  let result = null;
+
+  try {
+    result = JSON.parse(value);
+  } catch (error) {
+    result = value;
+  }
+
+  return result;
+}
 
 function writableLocalStorage(key, initialValue) {
-  let value = writable(localStorage.getItem(key) || initialValue);
+  let storageValue = parseLocalStorage(LocalStorage.get(key));
 
-  const write = (key, initialValue) => {
-    const lastValue = localStorage.getItem(key) || initialValue;
-    value = writable(lastValue);
+  const initial = storageValue ? storageValue : initialValue;
+  const writableValue = writable(initial);
+
+  // SYNC store =to=> Storage
+  if (!storageValue && initialValue) {
+    setLocalStorage(key, initialValue);
+  }
+
+  // SYNC Storage =to=> store
+  const updateFromLocalStorage = (e) => {
+    if (e.key === key) {
+      const newValue = parseLocalStorage(e.newValue);
+      set(newValue);
+    }
   };
 
-  value.subscribe((val) => {
-    if ([null, undefined].includes(val)) {
-      localStorage.removeItem(key);
-      document.removeEventListener('storage', write);
-    } else {
-      localStorage.setItem(key, val);
-      document.addEventListener('storage', write);
+  // LISTEN for changes in Storage
+  if (!STORAGE_LISTENER_ADDED) {
+    window.addEventListener('storage', updateFromLocalStorage);
+    STORAGE_LISTENER_ADDED = true;
+  }
 
-      if ('accessToken' === key) {
-        setAxiosHeaderAuthorization(val);
-      }
-    }
-  });
+  const { subscribe, update, set } = writableValue;
 
-  return value;
+  return {
+    subscribe,
+    set: (value) => {
+      set(value);
+      setLocalStorage(key, value);
+    },
+    update: (updater) => {
+      const value = updater(get(writableValue));
+      update(updater);
+      setLocalStorage(key, value);
+    },
+    clear: () => {
+      set(initialValue);
+      setLocalStorage(key, initialValue);
+    },
+    destroy: () => {
+      window.removeEventListener('storage', updateFromLocalStorage);
+    },
+  };
 }
 
 function createDisplayFilter() {

@@ -49,14 +49,14 @@ function axiosFake(method, url, data, config) {
 
 export function initSpotifyApi() {
   vi.mock('@/js/axios-utils', () => {
-    const AXIOS_INSTANCE = {
+    const _AXIOS_INSTANCE = {
       get: (url) => axiosFake('GET', url),
       post: (url, data, config) => axiosFake('POST', url, data, config),
       put: (url, data) => axiosFake('PUT', url, data),
       delete: (url, data) => axiosFake('DELETE', url, { data }),
     };
     return {
-      AXIOS_INSTANCE,
+      AXIOS_INSTANCE: () => _AXIOS_INSTANCE,
       setAxiosHeaderAuthorization: () => vi.fn(),
     };
   });

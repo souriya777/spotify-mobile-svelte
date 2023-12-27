@@ -54,10 +54,6 @@ class SpotifyApi {
   TRANSFERT_PLAYBACK_TIMEOUT_MS = Number(`${import.meta.env.VITE_TRANSFERT_PLAYBACK_TIMEOUT_MS}`);
   PREVIOUS_SONG_DELAY_MS = Number(`${import.meta.env.VITE_PREVIOUS_SONG_DELAY_MS}`);
 
-  constructor() {
-    LOGGER.log('🔴🔴🔴🔴🔴🔴');
-  }
-
   goToAuthorizeUrl() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
       this.#CLIENT_ID
@@ -88,7 +84,7 @@ class SpotifyApi {
     };
 
     try {
-      const resp = await AXIOS_INSTANCE.post('https://accounts.spotify.com/api/token', data, {
+      const resp = await AXIOS_INSTANCE().post('https://accounts.spotify.com/api/token', data, {
         headers,
       });
 
@@ -623,10 +619,11 @@ class SpotifyApi {
    */
   async #get(endpoint) {
     try {
-      const response = await AXIOS_INSTANCE.get(this.#url(endpoint));
+      const response = await AXIOS_INSTANCE().get(this.#url(endpoint));
       return await this.#axiosResponse(response, 'GET', endpoint);
     } catch (err) {
-      this.#axiosError(err);
+      console.log(get(accessToken), AXIOS_INSTANCE().defaults.headers.common.Authorization, err);
+      // this.#axiosError(err);
     }
   }
 
@@ -640,9 +637,9 @@ class SpotifyApi {
       let response;
 
       if (headers) {
-        response = await AXIOS_INSTANCE.post(this.#url(endpoint), data, headers);
+        response = await AXIOS_INSTANCE().post(this.#url(endpoint), data, headers);
       } else {
-        response = await AXIOS_INSTANCE.post(this.#url(endpoint), data);
+        response = await AXIOS_INSTANCE().post(this.#url(endpoint), data);
       }
 
       return await this.#axiosResponse(response, 'POST', endpoint);
@@ -657,9 +654,9 @@ class SpotifyApi {
    */
   async #put(endpoint, data) {
     try {
-      AXIOS_INSTANCE.put(this.#url(endpoint), data).then((response) =>
-        this.#axiosResponse(response, 'PUT', endpoint),
-      );
+      AXIOS_INSTANCE()
+        .put(this.#url(endpoint), data)
+        .then((response) => this.#axiosResponse(response, 'PUT', endpoint));
     } catch (err) {
       this.#axiosError(err);
     }
@@ -671,9 +668,9 @@ class SpotifyApi {
    */
   async #delete(endpoint, data) {
     try {
-      AXIOS_INSTANCE.delete(this.#url(endpoint), { data }).then((response) =>
-        this.#axiosResponse(response, 'DELETE', endpoint),
-      );
+      AXIOS_INSTANCE()
+        .delete(this.#url(endpoint), { data })
+        .then((response) => this.#axiosResponse(response, 'DELETE', endpoint));
     } catch (err) {
       this.#axiosError(err);
     }

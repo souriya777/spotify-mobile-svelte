@@ -2,10 +2,10 @@ import { expect, test, vi } from 'vitest';
 import { get } from 'svelte/store';
 import { initSpotifyApi } from './init-test'; // 🔴 it has to be among 1st import
 
-import { AXIOS_INSTANCE } from '@/js/axios-utils';
-import { accessToken } from '@/js/store';
-import SpotifyApi from '@/js/SpotifyApi';
-import SpotifyPlaylist from '@/js/SpotifyPlaylist';
+import { AXIOS_INSTANCE } from '@js/axios-utils';
+import { accessToken } from '@js/store';
+import SpotifyApi from '@js/SpotifyApi';
+import SpotifyPlaylist from '@js/SpotifyPlaylist';
 
 import PLAYER_STATE_API_JSON from './api/player-state-api.json';
 import CURRENT_USER_JSON from './data/current-user.json';
@@ -98,7 +98,7 @@ test(`getPlaylistsSortedAlphabetically() returns SpotifyPlaylist[] sorted alphab
 });
 
 test(`extendPlaylistWithAddeAt() return SpotifyPlaylist with 'added_at' field`, async () => {
-  /** @type {import('@/js/spotify').SpotifyPlaylist} */
+  /** @type {import('@js/spotify').SpotifyPlaylist} */
   const PLAYLIST = new SpotifyPlaylist({ ...SINGLE_PLAYLIST_JSON });
   const expected = new SpotifyPlaylist({
     ...SINGLE_PLAYLIST_JSON,
@@ -198,13 +198,13 @@ test(`search(query) returns SpotifySearch`, async () => {
 });
 
 /////// 🔴🔴🔴 bellow : AXIOS_INSTANCE is unmocked 🔴🔴🔴 ///////
-vi.doUnmock('@/js/axios-utils');
+vi.doUnmock('@js/axios-utils');
 
 test(`can add a song to playlist`, async () => {
   const songUri = 'spotify:track:0S4dVpqBLnBFj4wdB4UDMd';
   const playlistId = '5iLCxA1kjRDD9xpLD9Ym2z';
 
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'post');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'post');
 
   SpotifyApi.addSongToPlaylist(songUri, playlistId);
 
@@ -217,7 +217,7 @@ test(`can add a song to multiple playlists`, async () => {
   const songUri = 'spotify:track:0S4dVpqBLnBFj4wdB4UDMd';
   const playlistIds = ['3lZmcYRykUqUkjoH1tChCe', '5iLCxA1kjRDD9xpLD9Ym2z'];
 
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'post');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'post');
 
   SpotifyApi.addSongToMultiplePlaylists(songUri, playlistIds);
 
@@ -239,7 +239,7 @@ test(`moveTrackInPlaylist move a track up and returns updated playlist`, async (
   const playlistId = '3lZmcYRykUqUkjoH1tChCe';
   const songIndex = 0;
   const newPosition = 1;
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'put');
 
   const actual = await SpotifyApi.moveTrackInPlaylist(
     playlistId,
@@ -258,7 +258,7 @@ test(`moveTrackInPlaylist move a track up and returns updated playlist`, async (
 
 test(`can add track in liked playlist`, async () => {
   const trackId = '36ylDwMUz1EqrdbfBF8vC7';
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'put');
 
   SpotifyApi.likeTrack(trackId);
 
@@ -269,7 +269,7 @@ test(`can add track in liked playlist`, async () => {
 
 test(`can remove track from liked playlist`, async () => {
   const trackId = '36ylDwMUz1EqrdbfBF8vC7';
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'delete');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'delete');
 
   SpotifyApi.unlikeTrack(trackId);
 
@@ -283,7 +283,7 @@ test(`can remove track from liked playlist`, async () => {
 test(`can rename playlist`, async () => {
   const playlistId = '4RF7mw2Acseouq7QOnaVi3';
   const newName = 'my new playlist name';
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'put');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'put');
 
   SpotifyApi.updatePlaylistName(playlistId, newName);
 
@@ -295,7 +295,7 @@ test(`can rename playlist`, async () => {
 test(`can create playlist`, async () => {
   const userId = 'benjamin59';
   const name = 'my playlist name';
-  const spy = vi.spyOn(AXIOS_INSTANCE, 'post');
+  const spy = vi.spyOn(AXIOS_INSTANCE(), 'post');
 
   SpotifyApi.createPlaylist(userId, name);
 

@@ -8,6 +8,9 @@
   <svelte:fragment slot="header">
     <Header />
   </svelte:fragment>
+
+  <button>go album</button>
+
   <Debug />
 
   <h1>La jeunesse</h1>
