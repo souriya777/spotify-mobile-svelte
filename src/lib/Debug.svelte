@@ -1,11 +1,11 @@
 <script>
-  import { accessToken, userId, deviceId, player, trackName } from '@/js/store';
-  import SpotifyApi from '@/js/SpotifyApi';
+  import { accessToken, userId, deviceId, player, trackName } from '@js/store';
+  import SpotifyApi from '@js/SpotifyApi';
 
-  let open = false;
+  let _OPEN = true;
 </script>
 
-<details {open}>
+<details open={_OPEN}>
   <summary>Debug</summary>
   <ul>
     <li>😎:{$userId}</li>

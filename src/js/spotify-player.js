@@ -1,7 +1,7 @@
-import { deviceId, player, volumePercent } from '@/js/store';
-import { appendScriptToBody } from '@/js/souriya-utils';
-import SpotifyApi from '@/js/SpotifyApi';
-import Logger from '@/js/Logger';
+import { deviceId, player, volumePercent } from '@js/store';
+import { appendScriptToBody } from '@js/souriya-utils';
+import SpotifyApi from '@js/SpotifyApi';
+import Logger from '@js/Logger';
 
 const LOGGER = Logger.getNewInstance('spotify-player.js');
 

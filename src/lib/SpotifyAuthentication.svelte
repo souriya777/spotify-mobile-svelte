@@ -1,8 +1,8 @@
 <script>
-  import { authorizationOk, accessToken } from '@/js/store';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import Logger from '@/js/Logger';
-  import { createPlayer } from '@/js/spotify-player';
+  import { authorizationOk, accessToken } from '@js/store';
+  import SpotifyApi from '@js/SpotifyApi';
+  import Logger from '@js/Logger';
+  import { createPlayer } from '@js/spotify-player';
 
   const LOGGER = Logger.getNewInstance('SpotifyAuthorization.svelte');
 

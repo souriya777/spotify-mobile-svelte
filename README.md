@@ -14,7 +14,11 @@ Single Source of Truth
 
 # TODO MVP
 
--- bug DOMbind --amend
+- feat(player): can sync
+- feat(player): can see basic state
+- feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
+- fix(ui): when drag is held, can scroll horizontally & vertically...
+- feat(router): router or not router ?
 
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
@@ -50,7 +54,6 @@ Single Source of Truth
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
 - found in code where can I use `isEmpty` from `string-utils`
-- move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - reflect a "car" presentation (audible-like)
 - test `synchronize`... hard...
 - TODO feat(store): refactor store in multiple files
