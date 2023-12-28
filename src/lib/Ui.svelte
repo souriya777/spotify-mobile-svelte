@@ -1,39 +1,51 @@
 <script>
   import { createEventDispatcher } from 'svelte';
   import { getTranslateXY } from '@js/browser-utils';
-  import { getTimestamp } from '@js/date-utils';
   import Logger from '@js/Logger';
-  import { getView } from '@js/view-utils';
+  import { HOME_SLIDE_POSITION, canRemoveView, getView } from '@js/view-utils';
+  import { currentSlidePosition, uiTimestamp } from '@js/store';
+  import { getTimestamp } from '@js/date-utils';
 
   /** @type {import('@js/internal').View[]} */
   export let VIEWS = [];
+  export const slidePrevForMe = () => {
+    if (!canRemoveView($currentSlidePosition)) {
+      return;
+    }
+
+    slidePrev(true);
+
+    setTimeout(() => {
+      removeSlide(true);
+    }, SLIDE_TIMEOUT_MS);
+  };
 
   const _DEBUG = false;
   const LOGGER = Logger.getNewInstance('Ui.js');
   const dispatch = createEventDispatcher();
   const TOUCH_AREA_WIDTH = 70;
+  const SLIDE_TIMEOUT_MS = 300;
   const SLIDE_STYLE = 'transform 0.25s cubic-bezier(0.4, 0, 0.23, 1)';
-  const HOME_SLIDE_POSITION = 1;
 
   /** @type {HTMLElement} */
   let SLIDER;
   /** @type {HTMLElement} */
   let FIXED;
   let SLIDES_BIND = {};
-  let timestamp = getTimestamp();
-  let currentSlidePosition = HOME_SLIDE_POSITION; // not 0 because of "SIDE MENU"
   let initialX = 0;
   let x = 0;
   let prevSlideTranslateX = 0;
   let nextSlideTranslateX = 0;
   let isScrolled = false;
   let canRemoveLast = false;
+  let sliderAlreadyInitialized = false;
+  let timestamp = getTimestamp();
   $: SLIDE_WIDTH = SLIDER ? SLIDER.clientWidth : 0;
   $: TOTAL_SLIDES = VIEWS.length;
   $: MINIMUM_SWIPE_X = SLIDE_WIDTH / 3;
-  $: CURRENT_ID = VIEWS[currentSlidePosition]?.id;
-  $: PREV_ID = VIEWS[currentSlidePosition - 1]?.id;
-  $: NEXT_ID = VIEWS[currentSlidePosition + 1]?.id;
+  $: CURRENT_ID = VIEWS[$currentSlidePosition]?.id;
+  $: PREV_ID = VIEWS[$currentSlidePosition - 1]?.id;
+  $: NEXT_ID = VIEWS[$currentSlidePosition + 1]?.id;
   $: CURRENT_SLIDE = SLIDES_BIND[CURRENT_ID];
   $: PREV_SLIDE = SLIDES_BIND[PREV_ID];
   $: NEXT_SLIDE = SLIDES_BIND[NEXT_ID];
@@ -42,18 +54,35 @@
   $: isNextSwipe = !isPrevSwipe;
   $: isTouchedOnEdge = initialX <= TOUCH_AREA_WIDTH || initialX + TOUCH_AREA_WIDTH >= SLIDE_WIDTH;
   $: isViewsSyncWithDOM = VIEWS.length === Object.keys(SLIDES_BIND).length;
-  $: isSideMenuSlide = currentSlidePosition === 0;
-  $: isHomeSlide = currentSlidePosition === HOME_SLIDE_POSITION;
+  $: isSideMenuSlide = $currentSlidePosition === 0;
+  $: isHomeSlide = $currentSlidePosition === HOME_SLIDE_POSITION;
   $: canSwipe = Math.abs(deltaX) >= MINIMUM_SWIPE_X;
-  $: canGoPrev = currentSlidePosition > 0;
-  $: canGoNext = currentSlidePosition + 1 < TOTAL_SLIDES;
+  $: canGoPrev = $currentSlidePosition > 0;
+  $: canGoNext = $currentSlidePosition + 1 < TOTAL_SLIDES;
 
-  $: if (VIEWS && !isViewsSyncWithDOM) {
-    checkNullDomBinding();
+  $: if (!isViewsSyncWithDOM) {
+    cleanNullDomBinding();
   }
 
   $: if (SLIDER && SLIDE_WIDTH > 0 && isViewsSyncWithDOM) {
+    if (!sliderAlreadyInitialized) {
+      translateSlide();
+    }
+    sliderAlreadyInitialized = true;
+  }
+
+  $: if ($uiTimestamp && SLIDES_BIND) {
+    //   // 🚨🚨🚨 DON'T REMOVE THIS COMMENT: we make a SVELTE DEPENDENCE with isViewsSyncWithDOM, whatever value it is (true or false)
+    LOGGER.log('isViewsSyncWithDOM', isViewsSyncWithDOM);
+
+    if (!isViewsSyncWithDOM) {
+      cleanNullDomBinding();
+    }
+
     translateSlide();
+    setTimeout(() => {
+      slideNext(true);
+    }, SLIDE_TIMEOUT_MS);
   }
 
   function start(e) {
@@ -112,13 +141,13 @@
     }
   }
 
-  function slidePrev() {
+  function slidePrev(forceSwipe = false) {
     CURRENT_SLIDE.style.transition = SLIDE_STYLE;
     PREV_SLIDE.style.transition = SLIDE_STYLE;
     FIXED.style.transition = SLIDE_STYLE;
     canRemoveLast = false;
 
-    if (canSwipe && canGoPrev) {
+    if ((canSwipe || forceSwipe) && canGoPrev) {
       translate(CURRENT_SLIDE, SLIDE_WIDTH);
       translate(PREV_SLIDE, 0);
 
@@ -127,7 +156,7 @@
       }
 
       canRemoveLast = true;
-      currentSlidePosition--;
+      $currentSlidePosition--;
     } else if (PREV_SLIDE) {
       translate(CURRENT_SLIDE, 0);
       translate(PREV_SLIDE, -SLIDE_WIDTH);
@@ -138,10 +167,10 @@
     }
   }
 
-  function slideNext() {
+  function slideNext(forceSwipe = false) {
     CURRENT_SLIDE.style.transition = SLIDE_STYLE;
 
-    if (canSwipe && canGoNext) {
+    if ((canSwipe || forceSwipe) && canGoNext) {
       NEXT_SLIDE.style.transition = SLIDE_STYLE;
 
       translate(CURRENT_SLIDE, -SLIDE_WIDTH);
@@ -152,7 +181,7 @@
         translate(FIXED, 0);
       }
 
-      currentSlidePosition++;
+      $currentSlidePosition++;
     } else if (NEXT_SLIDE) {
       NEXT_SLIDE.style.transition = SLIDE_STYLE;
       translate(CURRENT_SLIDE, 0);
@@ -176,9 +205,9 @@
         return;
       }
 
-      if (i < currentSlidePosition) {
+      if (i < $currentSlidePosition) {
         translate(SLIDE, -SLIDE_WIDTH);
-      } else if (i > currentSlidePosition) {
+      } else if (i > $currentSlidePosition) {
         translate(SLIDE, SLIDE_WIDTH);
       } else {
         translate(SLIDE, 0);
@@ -206,14 +235,18 @@
     removeSlide();
   }
 
-  function removeSlide() {
-    if (canRemoveLast && isPrevSwipe && currentSlidePosition >= HOME_SLIDE_POSITION) {
+  function removeSlide(force = false) {
+    if (canRemoveLast && (isPrevSwipe || force) && $currentSlidePosition >= HOME_SLIDE_POSITION) {
       dispatch('removeSlide');
       canRemoveLast = false;
     }
   }
 
-  function checkNullDomBinding() {
+  function cleanNullDomBinding() {
+    if (!SLIDES_BIND) {
+      return;
+    }
+
     Object.entries(SLIDES_BIND).forEach(([key, value]) => {
       if (!value) {
         delete SLIDES_BIND[key];
@@ -235,14 +268,17 @@
     <div>isNextSwipe:{isNextSwipe}</div>
     <div>canGoPrev:{canGoPrev}</div>
     <div>canGoNext:{canGoNext}</div>-->
-    <div>currentSlidePosition:{currentSlidePosition}</div>
+    <div>SLIDES_BIND:{JSON.stringify(Object.keys(SLIDES_BIND))}</div>
+    <!-- <div>canRemoveLast:{canRemoveLast}</div> -->
+    <div>isViewsSyncWithDOM:{isViewsSyncWithDOM}</div>
+    <div>$currentSlidePosition:{$currentSlidePosition}</div>
   </div>
 {/if}
 
 <svelte:window
   on:resize={() => {
-    LOGGER.log('trigger resize');
     timestamp = getTimestamp();
+    LOGGER.log('trigger resize', timestamp);
   }}
 />
 

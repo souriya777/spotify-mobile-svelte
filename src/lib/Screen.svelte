@@ -1,30 +1,34 @@
 <script>
-  import { currentPath, VIEWS } from '@js/store';
+  import { currentPath, uiTimestamp, VIEWS } from '@js/store';
   import Ui from '@lib/Ui.svelte';
   import Button from '@lib/Button.svelte';
   import UiForeground from '@lib/UiForeground.svelte';
   import { createView } from '@js/view-utils';
+  import { getTimestamp } from '@js/date-utils';
 
   /** @type {HTMLElement} */
   let SCREEN;
+  let slidePrevForMe;
 
-  function updateViews() {
+  function addView() {
     const view = createView();
     $VIEWS = [...$VIEWS, { ...view }];
+    $uiTimestamp = getTimestamp();
   }
 
   function removeView() {
     $VIEWS = [...$VIEWS.slice(0, -1)];
+    $uiTimestamp = getTimestamp();
   }
 </script>
 
 <div bind:this={SCREEN} class="screen">
   <div>
     currentPath:{$currentPath}
-    <Button filled={true} callback={updateViews}>+view</Button>
-    <Button filled={true} callback={removeView}>-view</Button>
+    <Button filled={true} callback={addView}>+view</Button>
+    <Button filled={true} callback={() => slidePrevForMe()}>-view</Button>
   </div>
-  <Ui VIEWS={$VIEWS} on:removeSlide={removeView}>
+  <Ui VIEWS={$VIEWS} on:removeSlide={removeView} bind:slidePrevForMe>
     <svelte:fragment slot="fixed">
       <UiForeground />
     </svelte:fragment>

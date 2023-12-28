@@ -3,6 +3,8 @@ import HomeView from '@lib/views/HomeView.svelte';
 import SideMenuView from '@lib/views/SideMenuView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
+const HOME_SLIDE_POSITION = 1; // not 0 because of "SIDE MENU"
+
 /** @type {import('@js/internal').View[]} */
 const DEFAULT_VIEWS = [
   {
@@ -29,6 +31,10 @@ function getView(viewName) {
   return View;
 }
 
+function canRemoveView(currentSlidePosition) {
+  return currentSlidePosition > HOME_SLIDE_POSITION;
+}
+
 /**
  * @returns {import('@js/internal').View}
  */
@@ -44,4 +50,4 @@ function createView() {
   };
 }
 
-export { DEFAULT_VIEWS, getView, createView };
+export { DEFAULT_VIEWS, HOME_SLIDE_POSITION, getView, createView, canRemoveView };

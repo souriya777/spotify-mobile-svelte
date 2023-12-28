@@ -23,17 +23,17 @@ if ('serviceWorker' in navigator) {
         serviceWorkerNotification.set(true);
 
         // // Display a notification to the user
-        // const refreshButton = document.createElement('button');
-        // refreshButton.textContent = 'Refresh to update';
-        // refreshButton.addEventListener('click', () => {
-        //   // Activate the waiting service worker to take control
-        //   registration.waiting.postMessage({ action: 'skipWaiting' });
-        // });
+        const refreshButton = document.createElement('button');
+        refreshButton.textContent = 'Refresh to update';
+        refreshButton.addEventListener('click', () => {
+          // Activate the waiting service worker to take control
+          registration.waiting.postMessage({ action: 'skipWaiting' });
+        });
 
-        // const notification = document.createElement('div');
-        // notification.textContent = 'A new version of the app is available.';
-        // notification.appendChild(refreshButton);
-        // document.body.appendChild(notification);
+        const notification = document.createElement('div');
+        notification.textContent = 'A new version of the app is available.';
+        notification.appendChild(refreshButton);
+        document.body.appendChild(notification);
       }
     }
   });

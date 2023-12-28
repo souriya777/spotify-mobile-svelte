@@ -14,8 +14,10 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(views): can positionnate to last view
+- feat(refresh): how refreshing app ?
+- fix(scroll): bug when slide
 - feat(router): router or not router ?
+- feat(router): each route has its own stack
 - feat(progress-bar): make spotify-like component
 
 - feat(stack-ui): change background-color depending on view
