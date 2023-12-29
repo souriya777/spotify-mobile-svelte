@@ -1,48 +1,69 @@
 <script>
-  import { currentPath, uiTimestamp, VIEWS } from '@js/store';
-  import Ui from '@lib/Ui.svelte';
-  import Button from '@lib/Button.svelte';
-  import UiForeground from '@lib/UiForeground.svelte';
+  import { currentPath, VIEWS } from '@js/store';
   import { createView } from '@js/view-utils';
-  import { getTimestamp } from '@js/date-utils';
+  import Button from '@lib/Button.svelte';
+  import Ui from '@lib/Ui.svelte';
+  import PlayerNav from '@lib/PlayerNav.svelte';
 
-  /** @type {HTMLElement} */
-  let SCREEN;
-  let slidePrevForMe;
+  let slidePrevAndRemoveForMe;
+  let addAndSlideNextForMe;
+  let goPrevForMe;
+  let goNextForMe;
 
   function addView() {
     const view = createView();
     $VIEWS = [...$VIEWS, { ...view }];
-    $uiTimestamp = getTimestamp();
+    addAndSlideNextForMe();
   }
 
   function removeView() {
     $VIEWS = [...$VIEWS.slice(0, -1)];
-    $uiTimestamp = getTimestamp();
+  }
+
+  function prevView() {
+    slidePrevAndRemoveForMe();
+  }
+
+  function goPrev() {
+    goPrevForMe();
+  }
+
+  function goNext() {
+    goNextForMe();
   }
 </script>
 
-<div bind:this={SCREEN} class="screen">
+<div class="screen">
+  <!-- TO DEBUG SLIDE VIEWS -->
   <div>
     currentPath:{$currentPath}
+    <Button filled={true} callback={goPrev}>go-</Button>
+    <Button filled={true} callback={goNext}>go+</Button>
     <Button filled={true} callback={addView}>+view</Button>
-    <Button filled={true} callback={() => slidePrevForMe()}>-view</Button>
+    <Button filled={true} callback={prevView}>-view</Button>
   </div>
-  <Ui VIEWS={$VIEWS} on:removeSlide={removeView} bind:slidePrevForMe>
+  <Ui
+    bind:goPrevForMe
+    bind:goNextForMe
+    bind:addAndSlideNextForMe
+    bind:slidePrevAndRemoveForMe
+    on:removeSlide={removeView}
+  >
     <svelte:fragment slot="fixed">
-      <UiForeground />
+      <PlayerNav />
     </svelte:fragment>
   </Ui>
 </div>
 
 <style>
   .screen {
-    height: 100dvh;
     position: fixed;
+    height: 100dvh;
     width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
+    border: 1px dashed deeppink;
   }
 </style>

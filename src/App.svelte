@@ -1,9 +1,9 @@
 <script>
   import '@css/main.scss';
   import { onMount } from 'svelte';
-  import Screen from '@lib/Screen.svelte';
-  import SpotifyAuthentication from '@lib/SpotifyAuthentication.svelte';
+  // import SpotifyAuthentication from '@lib/SpotifyAuthentication.svelte';
   import RegisterServiceWorker from '@lib/RegisterServiceWorker.svelte';
+  import Screen from '@lib/Screen.svelte';
 
   onMount(() => {
     // @ts-ignore
@@ -17,5 +17,5 @@
 <main>
   <RegisterServiceWorker />
   <Screen />
-  <SpotifyAuthentication />
+  <!-- <SpotifyAuthentication /> -->
 </main>

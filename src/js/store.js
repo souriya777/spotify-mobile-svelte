@@ -1,7 +1,7 @@
 import { writable, derived } from 'svelte/store';
 import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
-import { DEFAULT_VIEWS, HOME_SLIDE_POSITION } from '@js/view-utils';
+import { DEFAULT_VIEWS } from '@js/view-utils';
 
 // ACCESS
 const accessToken = writableLocalStorage('accessToken', '');
@@ -71,7 +71,6 @@ const realTimeProgressMs = derived(
 // UI
 /** @type {import('svelte/store').Writable<import('@js/internal').View[]>} */
 const VIEWS = writableLocalStorage('VIEWS', [...DEFAULT_VIEWS]);
-const currentSlidePosition = writableLocalStorage('currentSlidePosition', HOME_SLIDE_POSITION);
 const uiTimestamp = writable(-1);
 
 // FILTER
@@ -115,7 +114,6 @@ export {
   currentPath,
   scrollTop,
   VIEWS,
-  currentSlidePosition,
   uiTimestamp,
   displayTrackOn,
   displayArtistOn,

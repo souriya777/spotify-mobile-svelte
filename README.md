@@ -14,10 +14,13 @@ Single Source of Truth
 
 # TODO MVP
 
-- fix(scroll): bug when slide
+- feat(ui): disable pinch-to-zoom
+- feat(ui): Make interactive elements not selectable
+- feat(ui): add splash screens
 - feat(router): router or not router ?
 - feat(router): each route has its own stack
 - feat(progress-bar): make spotify-like component
+- feat(side-menu): darker prev-view
 
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
@@ -163,3 +166,8 @@ Note for `private` API :
 # RUN
 
 `pnpm dev`
+
+# HELP
+
+webapp more like native
+https://medium.com/swlh/how-you-can-develop-progressive-web-apps-that-feel-native-5110fbbcbf4b

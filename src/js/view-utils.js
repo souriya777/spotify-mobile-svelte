@@ -3,16 +3,16 @@ import HomeView from '@lib/views/HomeView.svelte';
 import SideMenuView from '@lib/views/SideMenuView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
-const HOME_SLIDE_POSITION = 1; // not 0 because of "SIDE MENU"
+const VIEW_ID_PREFIX = 'view-';
 
 /** @type {import('@js/internal').View[]} */
 const DEFAULT_VIEWS = [
   {
-    id: 'view-side-menu',
+    id: `${VIEW_ID_PREFIX}side-menu`,
     viewName: 'SideMenuView',
   },
   {
-    id: 'view-home',
+    id: `${VIEW_ID_PREFIX}home`,
     viewName: 'HomeView',
   },
 ];
@@ -31,23 +31,37 @@ function getView(viewName) {
   return View;
 }
 
-function canRemoveView(currentSlidePosition) {
-  return currentSlidePosition > HOME_SLIDE_POSITION;
+function canRemoveView(viewPosition) {
+  return viewPosition > 1;
 }
 
 /**
  * @returns {import('@js/internal').View}
  */
 function createView() {
-  const id = 'view-' + getTimestamp();
+  const id = VIEW_ID_PREFIX + getTimestamp();
 
   return {
     id,
     viewName: 'DumbView',
     props: {
-      title: 'Souriya 😎😎😎' + new Date().getTime(),
+      title: '😎' + new Date().getTime(),
     },
   };
 }
 
-export { DEFAULT_VIEWS, HOME_SLIDE_POSITION, getView, createView, canRemoveView };
+/**
+ * @param {number} position
+ */
+function isSideMenuView(position) {
+  return position === 0;
+}
+
+/**
+ * @param {number} position
+ */
+function isHomeView(position) {
+  return position === 1;
+}
+
+export { DEFAULT_VIEWS, getView, createView, canRemoveView, isSideMenuView, isHomeView };

@@ -13,7 +13,7 @@
   }
 </script>
 
-<div class="ui-foreground" class:ui-foreground--full={$playerFull}>
+<div class="player-nav" class:player-nav--full={$playerFull}>
   <div
     class="ui__player"
     class:ui__player--full={$playerFull}
@@ -35,16 +35,16 @@
 
 <style>
   :root {
-    --height-ui-foreground: 17rem;
+    --height-player-nav: 17rem;
     --transition-full: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
   }
 
-  .ui-foreground {
-    height: var(--height-ui-foreground);
+  .player-nav {
+    height: var(--height-player-nav);
     transition: height var(--transition-full);
   }
 
-  .ui-foreground--full {
+  .player-nav--full {
     height: 100dvh;
     transition: height var(--transition-full);
   }
