@@ -1,6 +1,6 @@
 <script>
-  import SpotifyApi from '@/js/SpotifyApi';
-  import { userId } from '@/js/store';
+  import SpotifyApi from '@js/SpotifyApi';
+  import { userId } from '@js/store';
 
   let name;
 

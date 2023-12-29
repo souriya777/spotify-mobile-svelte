@@ -1,5 +1,5 @@
 /**
- * @type {import('@/js/spotify').SpotifyDevice}
+ * @type {import('@js/spotify').SpotifyDevice}
  */
 class SpotifyDevice {
   constructor(fromApi) {

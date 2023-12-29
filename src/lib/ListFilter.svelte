@@ -1,5 +1,5 @@
 <script>
-  import { displayFilter } from '@/js/store';
+  import { displayFilter } from '@js/store';
 
   export let displayTop = true;
   export let hasTracks = false;

@@ -1,11 +1,11 @@
-import SpotifyTrack from '@/js/SpotifyTrack';
-import SpotifyPlaybackState from '@/js/SpotifyPlaybackState';
+import SpotifyTrack from '@js/SpotifyTrack';
+import SpotifyPlaybackState from '@js/SpotifyPlaybackState';
 import SpotifyRepeatMode from './SpotifyRepeatMode';
 
 class SpotifyPlaybackStateAdapter {
   /**
-   * @param {import('@/js/spotify').SpotifyPlayerState} playerState
-   * @returns {import('@/js/spotify').SpotifyPlaybackState}
+   * @param {import('@js/spotify').SpotifyPlayerState} playerState
+   * @returns {import('@js/spotify').SpotifyPlaybackState}
    */
   static adapt(playerState) {
     const adaptee = {};

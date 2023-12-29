@@ -1,6 +1,6 @@
 <script>
-  import SpotifyApi from '@/js/SpotifyApi';
-  import { volumePercent } from '@/js/store';
+  import SpotifyApi from '@js/SpotifyApi';
+  import { volumePercent } from '@js/store';
 
   $: safePercent = Number($volumePercent);
 </script>

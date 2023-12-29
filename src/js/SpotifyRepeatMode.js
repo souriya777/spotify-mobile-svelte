@@ -1,4 +1,4 @@
-import SpotifyRepeatState from '@/js/SpotifyRepeatState';
+import SpotifyRepeatState from '@js/SpotifyRepeatState';
 
 class SpotifyRepeatMode {
   /**

@@ -1,5 +1,5 @@
 /**
- * @type {import('@/js/spotify').SpotifyContext}
+ * @type {import('@js/spotify').SpotifyContext}
  */
 class SpotifyContext {
   constructor(fromApi) {

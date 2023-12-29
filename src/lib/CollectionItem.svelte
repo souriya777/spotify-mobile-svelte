@@ -1,7 +1,7 @@
 <script>
-  import ImageSolver from '@/lib/ImageSolver.svelte';
+  import ImageSolver from '@lib/ImageSolver.svelte';
 
-  /** @type {import('@/js/spotify').SpotifyImage[]} */
+  /** @type {import('@js/spotify').SpotifyImage[]} */
   export let images = [];
   export let title;
   export let author = null;

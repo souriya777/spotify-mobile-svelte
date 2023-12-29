@@ -1,8 +1,8 @@
-import SpotifyTrack from '@/js/SpotifyTrack';
-import SpotifyContext from '@/js/SpotifyContext';
+import SpotifyTrack from '@js/SpotifyTrack';
+import SpotifyContext from '@js/SpotifyContext';
 
 /**
- * @type {import('@/js/spotify').SpotifySong}
+ * @type {import('@js/spotify').SpotifySong}
  */
 class SpotifySong {
   constructor(fromApi) {

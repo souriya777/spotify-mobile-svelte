@@ -1,7 +1,7 @@
 <script>
-  import SpotifyApi from '@/js/SpotifyApi';
-  import { percentToMillis, progressPercentInteger } from '@/js/time-utils';
-  import { progressMs, realTimeProgressMs, playing, durationMs } from '@/js/store';
+  import SpotifyApi from '@js/SpotifyApi';
+  import { percentToMillis, progressPercentInteger } from '@js/time-utils';
+  import { progressMs, realTimeProgressMs, playing, durationMs } from '@js/store';
 
   $: percent = progressPercentInteger($realTimeProgressMs, $durationMs);
 

@@ -6,13 +6,13 @@
 
   const LOGGER = Logger.getNewInstance('ImageSolver.js');
 
-  /** @type {import('@/js/spotify').SpotifyImage[]} */
+  /** @type {import('@js/spotify').SpotifyImage[]} */
   export let images;
   export let alt;
   export let isArtist = false;
   export let isDetailImg = false;
 
-  /** @type {import('@/js/spotify').SpotifyImage} */
+  /** @type {import('@js/spotify').SpotifyImage} */
   let calculatedImg = null;
   let bindImg;
 

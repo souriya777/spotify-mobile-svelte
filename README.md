@@ -14,7 +14,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(refresh): how refreshing app ?
 - fix(scroll): bug when slide
 - feat(router): router or not router ?
 - feat(router): each route has its own stack

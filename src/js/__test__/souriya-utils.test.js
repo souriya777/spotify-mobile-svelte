@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import { isNotEmpty } from '@/js/souriya-utils';
+import { isNotEmpty } from '@js/souriya-utils';
 
 test(`isNotEmpty(...) return false for empty values; true otherwise`, async () => {
   expect(isNotEmpty()).toBeFalsy();

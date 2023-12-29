@@ -1,15 +1,15 @@
 <script>
   import { onMount } from 'svelte';
-  import { displayFilter } from '@/js/store';
-  import { debounce, isEmpty } from '@/js/souriya-utils';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import { searchQuery } from '@/js/store';
-  import CollectionTrack from '@/lib/CollectionTrack.svelte';
-  import CollectionAlbum from '@/lib/CollectionAlbum.svelte';
-  import CollectionArtist from '@/lib/CollectionArtist.svelte';
-  import ListFilter from '@/lib/ListFilter.svelte';
+  import { displayFilter } from '@js/store';
+  import { debounce, isEmpty } from '@js/souriya-utils';
+  import SpotifyApi from '@js/SpotifyApi';
+  import { searchQuery } from '@js/store';
+  import CollectionTrack from '@lib/CollectionTrack.svelte';
+  import CollectionAlbum from '@lib/CollectionAlbum.svelte';
+  import CollectionArtist from '@lib/CollectionArtist.svelte';
+  import ListFilter from '@lib/ListFilter.svelte';
 
-  /** @type {import('@/js/spotify').SpotifySearch} */
+  /** @type {import('@js/spotify').SpotifySearch} */
   let searchResult = null;
 
   const FIRST_RESULTS_LIMIT = 3;

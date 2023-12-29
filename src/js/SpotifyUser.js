@@ -1,7 +1,7 @@
-import SpotifyImage from '@/js/SpotifyImage';
+import SpotifyImage from '@js/SpotifyImage';
 
 /**
- * @type {import('@/js/spotify').SpotifyUser}
+ * @type {import('@js/spotify').SpotifyUser}
  */
 class SpotifyUser {
   constructor(fromApi) {

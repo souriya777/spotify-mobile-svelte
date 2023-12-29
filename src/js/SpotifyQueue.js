@@ -1,7 +1,7 @@
-import SpotifyTrack from '@/js/SpotifyTrack';
+import SpotifyTrack from '@js/SpotifyTrack';
 
 /**
- * @type {import('@/js/spotify').SpotifyQueue}
+ * @type {import('@js/spotify').SpotifyQueue}
  */
 class SpotifyQueue {
   constructor(fromApi) {

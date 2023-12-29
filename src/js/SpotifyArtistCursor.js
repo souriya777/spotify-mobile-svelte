@@ -1,7 +1,7 @@
-import Cursor from '@/js/Cursor';
+import Cursor from '@js/Cursor';
 
 /**
- * @type {import('@/js/spotify').SpotifyArtistCursor}
+ * @type {import('@js/spotify').SpotifyArtistCursor}
  */
 class SpotifyArtistCursor extends Cursor {
   constructor(fromApi) {

@@ -1,10 +1,10 @@
 <script>
-  import Collection from '@/lib/Collection.svelte';
-  import CollectionItem from '@/lib/CollectionItem.svelte';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import AddToPlaylist from '@/lib/AddToPlaylist.svelte';
+  import Collection from '@lib/Collection.svelte';
+  import CollectionItem from '@lib/CollectionItem.svelte';
+  import SpotifyApi from '@js/SpotifyApi';
+  import AddToPlaylist from '@lib/AddToPlaylist.svelte';
 
-  /** @type {import('@/js/spotify').SpotifyAlbumTrack[]} */
+  /** @type {import('@js/spotify').SpotifyAlbumTrack[]} */
   export let items;
 </script>
 

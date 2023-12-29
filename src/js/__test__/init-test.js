@@ -1,5 +1,5 @@
 import { vi } from 'vitest';
-import Logger from '@/js/Logger';
+import Logger from '@js/Logger';
 
 import CURRENT_USER_API_JSON from './api/current-user-api.json';
 import PLAYBACK_STATE_API_JSON from './api/playback-state-api.json';
@@ -48,7 +48,7 @@ function axiosFake(method, url, data, config) {
 }
 
 export function initSpotifyApi() {
-  vi.mock('@/js/axios-utils', () => {
+  vi.mock('@js/axios-utils', () => {
     const _AXIOS_INSTANCE = {
       get: (url) => axiosFake('GET', url),
       post: (url, data, config) => axiosFake('POST', url, data, config),

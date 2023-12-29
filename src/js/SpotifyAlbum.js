@@ -1,8 +1,8 @@
-import SpotifyArtist from '@/js/SpotifyArtist';
-import SpotifyImage from '@/js/SpotifyImage';
+import SpotifyArtist from '@js/SpotifyArtist';
+import SpotifyImage from '@js/SpotifyImage';
 
 /**
- * @type {import('@/js/spotify').SpotifyAlbum}
+ * @type {import('@js/spotify').SpotifyAlbum}
  */
 class SpotifyAlbum {
   constructor(fromApi) {

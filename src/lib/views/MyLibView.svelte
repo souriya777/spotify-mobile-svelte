@@ -1,24 +1,24 @@
 <script>
   import { onMount } from 'svelte';
-  import { userId, displayFilter } from '@/js/store';
-  import SpotifyApi from '@/js/SpotifyApi';
-  import Button from '@/lib/Button.svelte';
-  import CollectionTrack from '@/lib/CollectionTrack.svelte';
-  import CollectionPlaylist from '@/lib/CollectionPlaylist.svelte';
-  import CollectionAlbum from '@/lib/CollectionAlbum.svelte';
-  import CollectionArtist from '@/lib/CollectionArtist.svelte';
-  import CollectionItem from '@/lib/CollectionItem.svelte';
-  import ListFilter from '@/lib/ListFilter.svelte';
-  import CreatePlaylist from '@/lib/CreatePlaylist.svelte';
-  import SpotifyImageLiked from '@/js/SpotifyImageLiked';
+  import { userId, displayFilter } from '@js/store';
+  import SpotifyApi from '@js/SpotifyApi';
+  import Button from '@lib/Button.svelte';
+  import CollectionTrack from '@lib/CollectionTrack.svelte';
+  import CollectionPlaylist from '@lib/CollectionPlaylist.svelte';
+  import CollectionAlbum from '@lib/CollectionAlbum.svelte';
+  import CollectionArtist from '@lib/CollectionArtist.svelte';
+  import CollectionItem from '@lib/CollectionItem.svelte';
+  import ListFilter from '@lib/ListFilter.svelte';
+  import CreatePlaylist from '@lib/CreatePlaylist.svelte';
+  import SpotifyImageLiked from '@js/SpotifyImageLiked';
 
-  /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
+  /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
-  /** @type {import('@/js/spotify').SpotifyAlbum[]} */
+  /** @type {import('@js/spotify').SpotifyAlbum[]} */
   let albums = [];
-  /** @type {import('@/js/spotify').SpotifySearchArtist[]} */
+  /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   let artists = [];
-  /** @type {import('@/js/spotify').SpotifyTrack[]} */
+  /** @type {import('@js/spotify').SpotifyTrack[]} */
   let likedTracks = [];
 
   let selectedPlaylist = 1;

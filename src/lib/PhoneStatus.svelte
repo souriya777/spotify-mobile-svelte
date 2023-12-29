@@ -1,9 +1,9 @@
 <script>
   import { onMount } from 'svelte';
-  import { hourMinute } from '@/js/souriya-utils';
-  import IosAirplaneSvg from '@/lib/svg/IosAirplaneSvg.svelte';
-  import IosSignalSvg from '@/lib/svg/IosSignalSvg.svelte';
-  import IosBatterySvg from '@/lib/svg/IosBatterySvg.svelte';
+  import { hourMinute } from '@js/souriya-utils';
+  import IosAirplaneSvg from '@lib/svg/IosAirplaneSvg.svelte';
+  import IosSignalSvg from '@lib/svg/IosSignalSvg.svelte';
+  import IosBatterySvg from '@lib/svg/IosBatterySvg.svelte';
 
   let now = Date.now();
   let batteryLevel = 100;

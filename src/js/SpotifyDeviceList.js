@@ -1,7 +1,7 @@
-import SpotifyDevice from '@/js/SpotifyDevice';
+import SpotifyDevice from '@js/SpotifyDevice';
 
 /**
- * @type {import('@/js/spotify').SpotifyDeviceList}
+ * @type {import('@js/spotify').SpotifyDeviceList}
  */
 class SpotifyDeviceList {
   constructor(fromApi) {

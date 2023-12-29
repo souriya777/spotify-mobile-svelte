@@ -1,7 +1,7 @@
-import SpotifyAlbum from '@/js/SpotifyAlbum';
+import SpotifyAlbum from '@js/SpotifyAlbum';
 
 /**
- * @type {import('@/js/spotify').SpotifySavedAlbum}
+ * @type {import('@js/spotify').SpotifySavedAlbum}
  */
 class SpotifySavedAlbum extends SpotifyAlbum {
   constructor(fromApi) {

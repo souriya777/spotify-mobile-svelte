@@ -1,5 +1,5 @@
 <script>
-  import { serviceWorkerNotification } from '@/js/store';
+  import { serviceWorkerNotification } from '@js/store';
 
   async function updateServiceWorker() {
     if ('serviceWorker' in navigator) {

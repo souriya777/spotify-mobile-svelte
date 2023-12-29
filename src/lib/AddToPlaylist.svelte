@@ -1,11 +1,11 @@
 <script>
   import { onMount } from 'svelte';
-  import { userId } from '@/js/store';
-  import SpotifyApi from '@/js/SpotifyApi';
+  import { userId } from '@js/store';
+  import SpotifyApi from '@js/SpotifyApi';
 
   export let trackUri;
 
-  /** @type {import('@/js/spotify').SpotifyPlaylist[]} */
+  /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
 
   onMount(() => {

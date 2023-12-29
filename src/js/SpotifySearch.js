@@ -1,10 +1,10 @@
-import SpotifyAlbum from '@/js/SpotifyAlbum';
-import SpotifySearchArtist from '@/js/SpotifySearchArtist';
-import SpotifyPlaylist from '@/js/SpotifyPlaylist';
-import SpotifyTrack from '@/js/SpotifyTrack';
+import SpotifyAlbum from '@js/SpotifyAlbum';
+import SpotifySearchArtist from '@js/SpotifySearchArtist';
+import SpotifyPlaylist from '@js/SpotifyPlaylist';
+import SpotifyTrack from '@js/SpotifyTrack';
 
 /**
- * @type {import('@/js/spotify').SpotifySearch}
+ * @type {import('@js/spotify').SpotifySearch}
  */
 class SpotifySearch {
   constructor(fromApi) {

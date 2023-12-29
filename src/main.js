@@ -1,6 +1,4 @@
-import App from '@/App.svelte';
-
-import '@/register-service-worker';
+import App from './App.svelte';
 
 const app = new App({
   target: document.getElementById('app'),

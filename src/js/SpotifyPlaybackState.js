@@ -1,8 +1,8 @@
-import SpotifyTrack from '@/js/SpotifyTrack';
-import SpotifyDevice from '@/js/SpotifyDevice';
+import SpotifyTrack from '@js/SpotifyTrack';
+import SpotifyDevice from '@js/SpotifyDevice';
 
 /**
- * @type {import('@/js/spotify').SpotifyPlaybackState}
+ * @type {import('@js/spotify').SpotifyPlaybackState}
  */
 class SpotifyPlaybackState {
   constructor(fromApi) {

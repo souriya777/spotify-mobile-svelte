@@ -1,7 +1,7 @@
-import SpotifyPlaylistExtendedItem from '@/js/SpotifyPlaylistExtendedItem';
+import SpotifyPlaylistExtendedItem from '@js/SpotifyPlaylistExtendedItem';
 
 /**
- * @type {import('@/js/spotify').SpotifyPlaylistExtended}
+ * @type {import('@js/spotify').SpotifyPlaylistExtended}
  */
 class SpotifyPlaylistExtended {
   constructor(fromApi) {

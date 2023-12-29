@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import Screen from '@lib/Screen.svelte';
   import SpotifyAuthentication from '@lib/SpotifyAuthentication.svelte';
+  import RegisterServiceWorker from '@lib/RegisterServiceWorker.svelte';
 
   onMount(() => {
     // @ts-ignore
@@ -14,6 +15,7 @@
 </script>
 
 <main>
+  <RegisterServiceWorker />
   <Screen />
   <SpotifyAuthentication />
 </main>

@@ -1,7 +1,7 @@
 <script>
-  import Collection from '@/lib/Collection.svelte';
-  import CollectionItem from '@/lib/CollectionItem.svelte';
-  /** @type {import('@/js/spotify').SpotifySearchArtist[]} */
+  import Collection from '@lib/Collection.svelte';
+  import CollectionItem from '@lib/CollectionItem.svelte';
+  /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   export let items;
 </script>
 

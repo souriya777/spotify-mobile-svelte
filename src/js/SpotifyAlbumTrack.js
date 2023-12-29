@@ -1,7 +1,7 @@
-import SpotifyArtist from '@/js/SpotifyArtist';
+import SpotifyArtist from '@js/SpotifyArtist';
 
 /**
- * @type {import('@/js/spotify').SpotifyAlbumTrackCursor}
+ * @type {import('@js/spotify').SpotifyAlbumTrackCursor}
  */
 class SpotifyAlbumTrack {
   constructor(fromApi) {

@@ -1,5 +1,5 @@
 <script>
-  import SpotifyApi from '@/js/SpotifyApi';
+  import SpotifyApi from '@js/SpotifyApi';
 
   export let playlistId;
   export let playlistName;

@@ -1,5 +1,5 @@
 /**
- * @type {import('@/js/spotify').Cursor}
+ * @type {import('@js/spotify').Cursor}
  */
 class Cursor {
   constructor(fromApi) {

@@ -6,7 +6,7 @@
    * @param {string} playlistId
    */
 
-  import SpotifyApi from '@/js/SpotifyApi';
+  import SpotifyApi from '@js/SpotifyApi';
 
   export let playlistId;
 

@@ -4,7 +4,7 @@ import {
   progressPercentInteger,
   percentToMillis,
   areTimestampsSeparateBy,
-} from '@/js/time-utils';
+} from '@js/time-utils';
 
 test(`60000ms returns 1:00`, async () => {
   expect(millisToMinuteSecond(60000)).toBe('1:00');
