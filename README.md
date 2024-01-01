@@ -14,7 +14,7 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(ui): disable pinch-to-zoom
+- fix(brightness-home): bigger than iphone SE home screen dark...
 - feat(ui): Make interactive elements not selectable
 - feat(ui): add splash screens
 - feat(router): router or not router ?

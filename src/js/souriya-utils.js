@@ -46,6 +46,20 @@ function observeElementScrolled(elementToObserve, elementToAddClass, theClass, t
   OBSERVER.observe(elementToObserve);
 }
 
+function preventZoomPitch() {
+  document.addEventListener('gesturestart', (e) => {
+    e.preventDefault();
+  });
+
+  document.addEventListener('gesturechange', (e) => {
+    e.preventDefault();
+  });
+
+  document.addEventListener('gestureend', (e) => {
+    e.preventDefault();
+  });
+}
+
 function decodeHtml(html) {
   let txt = document.createElement('textarea');
   txt.innerHTML = html;
@@ -93,6 +107,7 @@ export {
   throttle,
   scroll,
   noScroll,
+  preventZoomPitch,
   decodeHtml,
   observeElementScrolled,
   appendScriptToBody,

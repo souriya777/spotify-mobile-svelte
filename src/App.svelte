@@ -1,9 +1,10 @@
 <script>
   import '@css/main.scss';
   import { onMount } from 'svelte';
-  // import SpotifyAuthentication from '@lib/SpotifyAuthentication.svelte';
+  import SpotifyAuthentication from '@lib/SpotifyAuthentication.svelte';
   import RegisterServiceWorker from '@lib/RegisterServiceWorker.svelte';
   import Screen from '@lib/Screen.svelte';
+  import { preventZoomPitch } from '@js/souriya-utils';
 
   onMount(() => {
     // @ts-ignore
@@ -11,11 +12,13 @@
       // TODO improve UX
       alert("To add this web app to your home screen, tap 'Share' and then 'Add to Home Screen'.");
     }
+
+    preventZoomPitch();
   });
 </script>
 
 <main>
   <RegisterServiceWorker />
   <Screen />
-  <!-- <SpotifyAuthentication /> -->
+  <SpotifyAuthentication />
 </main>
