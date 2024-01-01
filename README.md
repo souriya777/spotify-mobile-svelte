@@ -14,13 +14,11 @@ Single Source of Truth
 
 # TODO MVP
 
-- fix(brightness-home): bigger than iphone SE home screen dark...
-- feat(ui): Make interactive elements not selectable
-- feat(ui): add splash screens
 - feat(router): router or not router ?
 - feat(router): each route has its own stack
 - feat(progress-bar): make spotify-like component
 - feat(side-menu): darker prev-view
+- test(ui): iphone 14 pro or ++
 
 - feat(stack-ui): change background-color depending on view
   -- works :) => make it independent
@@ -60,6 +58,7 @@ Single Source of Truth
 - test `synchronize`... hard...
 - TODO feat(store): refactor store in multiple files
 - ERRORS feat(spotify-api): implement quota-limit with code `429`
+- feat(ui): add splash screens
 - TODO/FIXME uncomment
 - feat(app): add a direct shortcut
 - feat(logout): can logout

@@ -35,6 +35,8 @@
   let isRemovingView = false;
   let isSliding = false;
   let homeBrightness = MAX_HOME_BRIGHTNESS_PERCENT;
+  let brightnessObserver;
+  let resizeTimestamp;
 
   $: VIEW_WIDTH = VIEWS_HTML ? VIEWS_HTML.clientWidth : 0;
   $: CURRENT_ID = $VIEWS[viewPosition]?.id;
@@ -73,7 +75,7 @@
       return;
     }
 
-    const OBSERVER = new IntersectionObserver(
+    brightnessObserver = new IntersectionObserver(
       (entries) => {
         const { width, left } = entries[0].boundingClientRect;
         const widthRatio = Math.floor((Math.abs(left) / width) * 100);
@@ -88,10 +90,10 @@
       { threshold: Array.from({ length: 100 }, (_, i) => i * 0.01) },
     );
 
-    OBSERVER.observe(node);
+    brightnessObserver.observe(node);
 
     return {
-      destroy: () => OBSERVER.disconnect(),
+      destroy: () => brightnessObserver.disconnect(),
     };
   }
 
@@ -319,6 +321,10 @@
 
     $uiTimestamp = getTimestamp();
   }
+
+  function handleResize() {
+    resizeTimestamp = getTimestamp();
+  }
 </script>
 
 <!-- TO DEBUG -->
@@ -327,25 +333,29 @@
   viewPosition:{viewPosition}
 </code>
 
+<svelte:window on:resize={handleResize} />
+
 <div
   class="ui"
   style={`--side-menu-smaller-width: ${SIDE_MENU_SMALLER_WIDTH}px; --home-brightness: ${homeBrightnessStyle}`}
 >
-  <ul
-    bind:this={VIEWS_HTML}
-    on:touchstart={start}
-    on:touchend={end}
-    on:touchmove={move}
-    on:transitionend={removeTransition}
-  >
-    {#key $uiTimestamp}
-      {#each $VIEWS as { id, viewName, props }, i (id)}
-        <li class:isSliding bind:this={VIEWS_BIND[id]} use:observeViewBrightness={i}>
-          <svelte:component this={getView(viewName)} {...props} />
-        </li>
-      {/each}
-    {/key}
-  </ul>
+  {#key resizeTimestamp}
+    <ul
+      bind:this={VIEWS_HTML}
+      on:touchstart={start}
+      on:touchend={end}
+      on:touchmove={move}
+      on:transitionend={removeTransition}
+    >
+      {#key $uiTimestamp}
+        {#each $VIEWS as { id, viewName, props }, i (id)}
+          <li class:isSliding bind:this={VIEWS_BIND[id]} use:observeViewBrightness={i}>
+            <svelte:component this={getView(viewName)} {...props} />
+          </li>
+        {/each}
+      {/key}
+    </ul>
+  {/key}
   <div class="fixed" bind:this={FIXED_HTML}>
     <slot name="fixed" />
   </div>
