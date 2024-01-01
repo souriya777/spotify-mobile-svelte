@@ -4,6 +4,7 @@
   import { searchQuery, currentPath } from '@js/store';
   import NavLink from '@lib/NavLink.svelte';
   import Svg from '@lib/svg/Svg.svelte';
+  import { isHomePath, isMyLibPath, isSearchPath } from '@js/path-utils';
 
   $: searchUrl = isNotEmpty($searchQuery) ? `/search/${$searchQuery}` : '/search';
 
@@ -19,19 +20,19 @@
 <nav>
   <ul>
     <li>
-      <NavLink label="Home" to="/" isActive={/^\/$/gi.test(path)}>
+      <NavLink label="Home" to="/" isActive={isHomePath(path)}>
         <Svg name="home" />
         <Svg name="home-selected" slot="selected-icon" />
       </NavLink>
     </li>
     <li>
-      <NavLink label="Search" to={searchUrl} isActive={/search/gi.test(path)}>
+      <NavLink label="Search" to={searchUrl} isActive={isSearchPath(path)}>
         <Svg name="search" />
         <Svg name="search-selected" slot="selected-icon" />
       </NavLink>
     </li>
     <li>
-      <NavLink label="Your Library" to="/my-lib" isActive={/my-lib/gi.test(path)}>
+      <NavLink label="Your Library" to="/my-lib" isActive={isMyLibPath(path)}>
         <Svg name="library" />
         <Svg name="library-selected" slot="selected-icon" />
       </NavLink>
@@ -43,7 +44,12 @@
   nav {
     width: 100%;
     padding-block: 1.6rem 3.2rem;
-    background-image: linear-gradient(to top, rgba(18, 18, 18, 1) 68%, rgba(18, 18, 18, 0.92));
+    background-image: linear-gradient(
+      to top,
+      rgba(18, 18, 18, 1) 45%,
+      rgba(18, 18, 18, 0.94) 80%,
+      rgba(18, 18, 18, 0.9)
+    );
   }
 
   ul {

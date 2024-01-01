@@ -1,7 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import { displayFilter } from '@js/store';
-  import { debounce, isEmpty } from '@js/souriya-utils';
+  import { debounce } from '@js/souriya-utils';
+  import { isEmpty } from '@js/string-utils';
   import SpotifyApi from '@js/SpotifyApi';
   import { searchQuery } from '@js/store';
   import CollectionTrack from '@lib/CollectionTrack.svelte';

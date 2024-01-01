@@ -19,6 +19,6 @@
 
 <main>
   <RegisterServiceWorker />
-  <Screen />
   <SpotifyAuthentication />
+  <Screen />
 </main>

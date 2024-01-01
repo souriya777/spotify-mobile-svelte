@@ -14,22 +14,21 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(router): router or not router ?
-- feat(router): each route has its own stack
-- feat(progress-bar): make spotify-like component
-- feat(side-menu): darker prev-view
-- test(ui): iphone 14 pro or ++
-
+- feat(mini-player): can see basic state
+- feat(mini-player): can pause
+- feat(mini-player): can reflect player by ICON
+- feat(mini): make spotify-like <ProgressBar> component
+- feat(player), can see basic state
+  -- reflect a "car" presentation (audible-like)
+  -- which ui ? car-mode or mobile mode ?
 - feat(stack-ui): change background-color depending on view
+  -- feat(img): <ImageSolver> -> `getDominantColor`
   -- works :) => make it independent
 - feat(player) : shuffle on several playlist
 - feat(ui): like "car mode" ?
 - feat(button): onTap ?
 - feat(ui): use use:onTap
-- position fixed : player & menu
-- +end content height === player + nav
 - utiliser le view transition API à la "svelte menu"
-- implement <ProgressBar>
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(ui): add waiting visual indication when fetching is too long
 - feat(mylib): can select other song
@@ -39,7 +38,7 @@ Single Source of Truth
   -- extract track_window next_tracks ?
 - feat(detail): design
 - space
-- color
+- test(ui): iphone 14 pro or ++
 - feat(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
   -- invalid cache, when rename playlist
@@ -54,7 +53,6 @@ Single Source of Truth
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
 - found in code where can I use `isEmpty` from `string-utils`
-- reflect a "car" presentation (audible-like)
 - test `synchronize`... hard...
 - TODO feat(store): refactor store in multiple files
 - ERRORS feat(spotify-api): implement quota-limit with code `429`

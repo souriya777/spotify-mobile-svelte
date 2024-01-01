@@ -1,9 +1,10 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { canRemoveView, getView, isHomeView, isSideMenuView } from '@js/view-utils';
-  import { uiTimestamp, VIEWS } from '@js/store';
+  import { canRemoveView, loadView, isHomeView, isSideMenuView } from '@js/view-utils';
   import { getTimestamp } from '@js/date-utils';
   import { getTranslateXY } from '@js/browser-utils';
+  import PlayerNav from '@lib/PlayerNav.svelte';
+  import { VIEWS, uiTimestamp } from '@js/store';
 
   export const slidePrevAndRemoveForMe = () => (isRemovingView = true);
   export const addAndSlideNextForMe = () => (isAddingView = true);
@@ -327,13 +328,14 @@
   }
 </script>
 
+<svelte:window on:resize={handleResize} />
+
 <!-- TO DEBUG -->
 <code>
   isViewsSyncWithDOM:{isViewsSyncWithDOM}-{$VIEWS.length}-{Object.keys(VIEWS_BIND).length}
   viewPosition:{viewPosition}
+  bind:{Object.keys(VIEWS_BIND)}
 </code>
-
-<svelte:window on:resize={handleResize} />
 
 <div
   class="ui"
@@ -350,14 +352,14 @@
       {#key $uiTimestamp}
         {#each $VIEWS as { id, viewName, props }, i (id)}
           <li class:isSliding bind:this={VIEWS_BIND[id]} use:observeViewBrightness={i}>
-            <svelte:component this={getView(viewName)} {...props} />
+            <svelte:component this={loadView(viewName)} {...props} />
           </li>
         {/each}
       {/key}
     </ul>
   {/key}
   <div class="fixed" bind:this={FIXED_HTML}>
-    <slot name="fixed" />
+    <PlayerNav />
   </div>
 </div>
 
