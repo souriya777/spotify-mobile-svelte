@@ -1,12 +1,11 @@
 <script>
   import {
     appReady,
-    currentPath,
+    viewName,
     addView as addViewStore,
     removeView as removeViewStore,
   } from '@js/store';
   import { createView } from '@js/view-utils';
-  import { isHomePath, isSearchPath } from '@js/path-utils';
   import Button from '@lib/Button.svelte';
   import Ui from '@lib/Ui.svelte';
 
@@ -41,7 +40,7 @@
 <div class="ui-proxy">
   <!-- TO DEBUG SLIDE VIEWS -->
   <div>
-    currentPath:{$currentPath}
+    viewName:{$viewName}
     appReady:{$appReady}
     <Button filled={true} callback={goPrev}>go-</Button>
     <Button filled={true} callback={goNext}>go+</Button>
@@ -49,7 +48,7 @@
     <Button filled={true} callback={prevView}>-view</Button>
   </div>
 
-  {#if isHomePath($currentPath)}
+  {#if 'home' === $viewName}
     <Ui
       bind:goPrevForMe
       bind:goNextForMe
@@ -57,7 +56,7 @@
       bind:slidePrevAndRemoveForMe
       on:removeSlide={removeView}
     ></Ui>
-  {:else if isSearchPath($currentPath)}
+  {:else if 'search' === $viewName}
     <Ui
       bind:goPrevForMe
       bind:goNextForMe

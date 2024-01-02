@@ -14,6 +14,7 @@ Single Source of Truth
 
 # TODO MVP
 
+- feat(side-menu): back on "simple click"
 - feat(mini-player): can see basic state
 - feat(mini-player): can pause
 - feat(mini-player): can reflect player by ICON

@@ -1,17 +1,16 @@
 <script>
-  import { currentPath } from '@js/store';
+  import { viewName as viewNameStore } from '@js/store';
 
   export let label;
-  export let to = '/';
+  export let viewName;
   export let isActive = false;
 
   function goto() {
-    currentPath.set(to);
-    window.history.pushState({}, to, to);
+    $viewNameStore = viewName;
   }
 </script>
 
-<a href={to} on:click|preventDefault={goto}>
+<a href="/" on:click|preventDefault={goto}>
   <div class="nav-item font-small" class:active={isActive}>
     {#if isActive}
       <slot name="selected-icon" />
