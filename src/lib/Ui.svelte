@@ -51,7 +51,9 @@
   $: PREV_VIEW_OFFSET = `${-PREV_VIEW_OFFSET_PERCENT}%`;
   $: deltaX = x - initialX;
   $: homeBrightnessStyle = `${homeBrightness}%`;
-  $: isTouchedOnEdge = initialX <= TOUCH_AREA_WIDTH || initialX + TOUCH_AREA_WIDTH >= VIEW_WIDTH;
+  $: isTouchedOnLeftEdge = () => initialX <= TOUCH_AREA_WIDTH;
+  $: isTouchedOnRightEdge = () => initialX + TOUCH_AREA_WIDTH >= VIEW_WIDTH;
+  $: isTouchedOnEdge = () => isTouchedOnLeftEdge() || isTouchedOnRightEdge();
   $: isPrevSwipe = deltaX > 0;
   $: isNextSwipe = !isPrevSwipe;
   $: isViewsSyncWithDOM = $VIEWS.length === Object.keys(VIEWS_BIND).length;
@@ -101,13 +103,13 @@
   function start(e) {
     const touch = [...e.changedTouches].at(0);
     initialX = touch.pageX;
-    x = initialX;
+    x = touch.pageX;
     prevX = getTranslateXY(PREV_VIEW).translateX;
     nextX = getTranslateXY(NEXT_VIEW).translateX;
   }
 
   function move(e) {
-    if (!isTouchedOnEdge) {
+    if (!isTouchedOnEdge()) {
       return;
     }
 
@@ -151,9 +153,14 @@
   }
 
   function end() {
+    if (isSideMenuView(viewPosition) && isTouchedOnRightEdge() && !isSliding) {
+      slideNext(true);
+      return;
+    }
+
     isSliding = false;
 
-    if (!isTouchedOnEdge) {
+    if (!isTouchedOnEdge()) {
       return;
     }
 
