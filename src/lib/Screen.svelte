@@ -15,6 +15,5 @@
     overflow-x: hidden;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
-    border: 1px dashed deeppink;
   }
 </style>

@@ -6,8 +6,7 @@
   export let svg = null;
   export let filled = false;
   export let hasAccent = true;
-
-  let accent = false;
+  export let accent = false;
 
   function handleClick() {
     callback();

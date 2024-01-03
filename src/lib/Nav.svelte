@@ -30,7 +30,8 @@
 <style>
   nav {
     width: 100%;
-    padding-block: 1.6rem 3.2rem;
+    padding-block-start: 1.6rem;
+    height: var(--height-nav);
     background-image: linear-gradient(
       to top,
       rgba(18, 18, 18, 1) 45%,

@@ -23,13 +23,9 @@
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
   $: progress_m_ss = millisToMinuteSecond($realTimeProgressMs);
   $: duration_m_ss = millisToMinuteSecond($durationMs);
-
-  function expandPlayer() {
-    console.log('TODO');
-  }
 </script>
 
-<div class="player" role="button" tabindex="0" on:click={expandPlayer} on:keyup={expandPlayer}>
+<div class="player">
   <div class="bar">
     <button>back</button>
     <p>Liked Songs</p>
@@ -87,7 +83,9 @@
 
 <style>
   .player {
-    background-color: deeppink;
+    border: 1px dashed aquamarine;
+    /* background-color: var(--color-primary-highlight); */
+    height: 100dvh;
   }
 
   .bar {

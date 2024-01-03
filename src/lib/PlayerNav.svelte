@@ -15,8 +15,7 @@
 
 <div class="player-nav" class:player-nav--full={$playerFull}>
   <div
-    class="ui__player"
-    class:ui__player--full={$playerFull}
+    class="player-nav__player"
     role="button"
     tabindex="0"
     on:click={expandPlayer}
@@ -28,19 +27,18 @@
       <PlayerMini />
     {/if}
   </div>
-  <div class="ui__nav" class:ui__nav--full={$playerFull}>
+  <div class="player-nav__nav" class:player-nav__nav--full={$playerFull}>
     <Nav />
   </div>
 </div>
 
 <style>
   :root {
-    --height-player-nav: 17rem;
     --transition-full: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
   }
 
   .player-nav {
-    height: var(--height-player-nav);
+    height: calc(var(--height-nav) + var(--height-player-mini));
     transition: height var(--transition-full);
   }
 
@@ -49,7 +47,8 @@
     transition: height var(--transition-full);
   }
 
-  .ui__nav {
+  .player-nav__nav {
+    /* border: 1px dashed yellow; */
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -57,7 +56,7 @@
     transition: transform var(--transition-full);
   }
 
-  .ui__nav--full {
+  .player-nav__nav--full {
     transform: translateY(100%);
     transition: transform var(--transition-full);
   }

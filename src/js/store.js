@@ -26,6 +26,9 @@ const artistsDisplay = derived(artists, ($artists) =>
 const deviceId = writableLocalStorage('deviceId', '');
 /** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyDevice[]>} */
 const devices = writable([]);
+const activeDevice = derived(devices, ($devices) => {
+  return $devices.find((device) => device.is_active === true);
+});
 
 // MISCELLANEOUS
 const apiTimestamp = writable(null);
@@ -143,6 +146,7 @@ export {
   durationMs,
   apiTimestamp,
   devices,
+  activeDevice,
   appReady,
   serviceWorkerNotification,
   searchQuery,

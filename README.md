@@ -15,8 +15,13 @@ Single Source of Truth
 # TODO MVP
 
 - feat(mini-player): can see basic state
-- feat(mini-player): can pause
-- feat(mini-player): can reflect player by ICON
+  -- feat(mini-player): can pause
+  -- shadow text
+  -- text scrolling
+  -- progress-bar
+  -- tune ui
+  -- default ui when NOT SYNC
+  -- loading icon on PLAY ?
 - feat(mini): make spotify-like <ProgressBar> component
 - feat(player), can see basic state
   -- reflect a "car" presentation (audible-like)
@@ -24,6 +29,9 @@ Single Source of Truth
 - feat(stack-ui): change background-color depending on view
   -- feat(img): <ImageSolver> -> `getDominantColor`
   -- works :) => make it independent
+
+  ***
+
 - feat(player) : shuffle on several playlist
 - feat(ui): like "car mode" ?
 - feat(button): onTap ?

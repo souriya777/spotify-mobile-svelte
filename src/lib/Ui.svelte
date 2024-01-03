@@ -407,7 +407,6 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: var(--color-primary-highlight);
     z-index: var(--z-index-nearest);
   }
 
