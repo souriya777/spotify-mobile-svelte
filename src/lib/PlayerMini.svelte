@@ -8,13 +8,16 @@
 
   const OFFSET = 1;
   const INTERVAL_MS = 60;
-  const TIMEMOUT_BEFORE_1ST_SCROLL = 1000;
+  const TIMEMOUT_BEFORE_SCROLL = 2000;
   /** @type {HTMLElement} */
   let titleHtml;
   let hasReachTitleBeginning = true;
   let hasReachTitleEnd = false;
   let intervalTitle;
-  let isFirstTitleScroll = true;
+
+  let styleBlurStart = `--color-blur-start: rgba(40, 40, 40, 0.9)`;
+  let styleBlurEnd = `--color-blur-end: rgba(40, 40, 40, 0.1)`;
+  $: style = `${styleBlurStart}; ${styleBlurEnd}`;
 
   function observeTitleBeginning(node) {
     const observeFn = (entries) => {
@@ -22,16 +25,10 @@
         return;
       }
 
-      if (isFirstTitleScroll) {
-        isFirstTitleScroll = false;
-        setTimeout(() => {
-          observeTitleBeginning(node);
-        }, TIMEMOUT_BEFORE_1ST_SCROLL);
-        return;
-      }
-
-      hasReachTitleBeginning = entries[0].isIntersecting ? true : false;
-      scrollTitle(OFFSET);
+      setTimeout(() => {
+        hasReachTitleBeginning = entries[0].isIntersecting ? true : false;
+        scrollTitle(OFFSET);
+      }, TIMEMOUT_BEFORE_SCROLL);
     };
     observeTitle(node, observeFn);
   }
@@ -42,8 +39,10 @@
         return;
       }
 
-      hasReachTitleEnd = entries[0].isIntersecting ? true : false;
-      scrollTitle(-OFFSET);
+      setTimeout(() => {
+        hasReachTitleEnd = entries[0].isIntersecting ? true : false;
+        scrollTitle(-OFFSET);
+      }, TIMEMOUT_BEFORE_SCROLL);
     };
     observeTitle(node, observeFn);
   }
@@ -66,8 +65,8 @@
   }
 </script>
 
-<div class="player-mini">
-  <div class="img">
+<div class="player-mini" {style}>
+  <div class="img blur blur--right">
     <Img src={$imageUrl} alt={$albumName} />
   </div>
   <div class="info">
@@ -75,7 +74,7 @@
       {#if $trackName && $artistsDisplay}
         <span class="title__begin" use:observeTitleBeginning></span>
         <span class="song">{$trackName}</span>
-        <span>&nbsp;&bull;&nbsp;</span>
+        <span>&bull;</span>
         <span class="artist">{$artistsDisplay}</span>
         <span class="title__end" use:observeTitleEnd></span>
       {/if}
@@ -91,7 +90,7 @@
       {/if}
     </p>
   </div>
-  <div class="device-icon">
+  <div class="device-icon blur blur--left">
     {#if $activeDevice?.type}
       <Button
         type="primary"
@@ -118,6 +117,7 @@
   :root {
     --space-inline: 0.6rem;
     --y-offset: 0.6rem;
+    --width-blur: 1rem;
   }
 
   .player-mini {
@@ -134,23 +134,25 @@
   }
 
   .img {
+    position: relative;
+    display: flex;
     padding-inline-start: var(--space-inline);
-    box-shadow:
-      rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px,
-      rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px,
-      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .device-icon {
+    position: relative;
+    display: flex;
   }
 
   .info {
-    background-color: deeppink;
     position: relative;
     height: 100%;
     overflow: hidden;
   }
 
   .title {
+    padding-inline-start: var(--space-inline);
+    padding-block-start: 0.6rem;
     white-space: nowrap;
     transform: translateX(var(--translate-title));
     overflow-x: scroll;
@@ -192,6 +194,33 @@
   .device-icon,
   .action {
     height: 100%;
+  }
+
+  .blur::after,
+  .blur::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: var(--width-blur);
+    z-index: var(--z-index-nearest);
+  }
+
+  .blur--right::after {
+    right: calc(-1 * var(--width-blur));
+    background-image: linear-gradient(
+      to right,
+      rgba(40, 40, 40, 0.9) 45%,
+      rgba(40, 40, 40, 0.1) 90%
+    );
+  }
+
+  .blur--left::before {
+    left: calc(-1 * var(--width-blur));
+    background-image: linear-gradient(
+      to left,
+      rgba(40, 40, 40, 0.9) 45%,
+      rgba(40, 40, 40, 0.1) 90%
+    );
   }
 
   .player-mini__progressbar {

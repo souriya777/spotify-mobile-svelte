@@ -14,7 +14,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(mini-player): shadow over text
 - feat(mini-player): feat(mini-player): can pause
 - feat(mini-player): progress-bar
 - feat(mini-player): tune ui
