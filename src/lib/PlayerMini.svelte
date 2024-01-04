@@ -85,7 +85,11 @@
     on:click={expandPlayer}
     on:keyup={expandPlayer}
   >
-    <Img src={$imageUrl} alt={$albumName} />
+    {#if $imageUrl}
+      <Img src={$imageUrl} alt={$albumName} />
+    {:else}
+      <Svg name="default-image" />
+    {/if}
   </div>
   <div class="info" role="button" tabindex="0" on:click={expandPlayer} on:keyup={expandPlayer}>
     <div class="title" bind:this={titleHtml}>
@@ -117,6 +121,8 @@
         svg={$activeDevice?.type}
         callback={() => console.log('TODO')}
       ></Button>
+    {:else}
+      <Button type="primary" svg="device-unknown" callback={() => console.log('TODO')}></Button>
     {/if}
   </div>
   <div class="action">
@@ -136,6 +142,7 @@
     --space-inline: 0.6rem;
     --y-offset: 0.6rem;
     --width-blur: 1rem;
+    --padding-inline-title: 0.4rem;
   }
 
   .player-mini {
@@ -185,7 +192,7 @@
 
   .device-name {
     position: absolute;
-    left: var(--space-inline);
+    left: calc(var(--space-inline) + var(--padding-inline-title));
     bottom: var(--y-offset);
     display: flex;
     align-items: center;
@@ -245,5 +252,13 @@
     grid-column: 1 / span 4;
     width: calc(100% - 1.6rem);
     margin-inline: auto;
+  }
+
+  .song {
+    padding-inline-start: var(--padding-inline-title);
+  }
+
+  .artist {
+    padding-inline-end: calc(var(--padding-inline-title) + 0.4rem);
   }
 </style>

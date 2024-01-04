@@ -15,9 +15,6 @@ Single Source of Truth
 # TODO MVP
 
 - feat(mini-player): progress-bar
-- feat(mini-player): tune ui
-- feat(mini-player): default ui when NOT SYNC
-- feat(mini-player): loading icon on PLAY ?
 - feat(stack-ui): change background-color depending on view
   -- feat(img): <ImageSolver> -> `getDominantColor`
   -- works :) => make it independent
