@@ -14,7 +14,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(mini-player): progress-bar
 - feat(stack-ui): change background-color depending on view
   -- feat(img): <ImageSolver> -> `getDominantColor`
   -- works :) => make it independent

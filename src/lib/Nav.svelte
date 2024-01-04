@@ -35,8 +35,8 @@
     background-image: linear-gradient(
       to top,
       rgba(18, 18, 18, 1) 45%,
-      rgba(18, 18, 18, 0.94) 80%,
-      rgba(18, 18, 18, 0.9)
+      rgba(18, 18, 18, 0.98) 80%,
+      rgba(18, 18, 18, 0.99)
     );
   }
 

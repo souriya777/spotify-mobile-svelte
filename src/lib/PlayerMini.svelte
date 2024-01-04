@@ -140,14 +140,14 @@
 <style>
   :root {
     --space-inline: 0.6rem;
-    --y-offset: 0.6rem;
+    --y-offset: 1.2rem;
     --width-blur: 1rem;
     --padding-inline-title: 0.4rem;
   }
 
   .player-mini {
     display: grid;
-    grid-template-columns: 4rem 1fr 4rem 4rem;
+    grid-template-columns: 4.6rem 1fr 4rem 4rem;
     grid-template-rows: 1fr 0.2rem;
     align-items: center;
     height: var(--height-player-mini);
@@ -177,7 +177,7 @@
 
   .title {
     padding-inline-start: var(--space-inline);
-    padding-block-start: 0.6rem;
+    padding-block-start: var(--y-offset);
     white-space: nowrap;
     transform: translateX(var(--translate-title));
     overflow-x: scroll;
