@@ -14,7 +14,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(mini-player): feat(mini-player): can pause
 - feat(mini-player): progress-bar
 - feat(mini-player): tune ui
 - feat(mini-player): default ui when NOT SYNC

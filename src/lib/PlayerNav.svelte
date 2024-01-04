@@ -3,24 +3,10 @@
   import Player from '@lib/Player.svelte';
   import PlayerMini from '@lib/PlayerMini.svelte';
   import { playerFull } from '@js/store';
-
-  function expandPlayer() {
-    // TODO
-    // if (!$playerFull) {
-    //   $playerFull = true;
-    // }
-    $playerFull = !$playerFull;
-  }
 </script>
 
 <div class="player-nav" class:player-nav--full={$playerFull}>
-  <div
-    class="player-nav__player"
-    role="button"
-    tabindex="0"
-    on:click={expandPlayer}
-    on:keyup={expandPlayer}
-  >
+  <div class="player-nav__player">
     {#if $playerFull}
       <Player />
     {:else}

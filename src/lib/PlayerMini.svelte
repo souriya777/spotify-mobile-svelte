@@ -1,6 +1,14 @@
 <script>
   import SpotifyApi from '@js/SpotifyApi';
-  import { imageUrl, trackName, artistsDisplay, albumName, playing, activeDevice } from '@js/store';
+  import {
+    imageUrl,
+    trackName,
+    artistsDisplay,
+    albumName,
+    playing,
+    activeDevice,
+    playerFull,
+  } from '@js/store';
   import Img from '@lib/Img.svelte';
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
@@ -63,13 +71,23 @@
       }
     }, INTERVAL_MS);
   }
+
+  function expandPlayer() {
+    $playerFull = true;
+  }
 </script>
 
 <div class="player-mini" {style}>
-  <div class="img blur blur--right">
+  <div
+    class="img blur blur--right"
+    role="button"
+    tabindex="0"
+    on:click={expandPlayer}
+    on:keyup={expandPlayer}
+  >
     <Img src={$imageUrl} alt={$albumName} />
   </div>
-  <div class="info">
+  <div class="info" role="button" tabindex="0" on:click={expandPlayer} on:keyup={expandPlayer}>
     <div class="title" bind:this={titleHtml}>
       {#if $trackName && $artistsDisplay}
         <span class="title__begin" use:observeTitleBeginning></span>

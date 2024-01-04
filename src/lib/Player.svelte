@@ -10,6 +10,7 @@
     shuffleState,
     repeatState,
     playing,
+    playerFull,
     realTimeProgressMs,
     durationMs,
   } from '@js/store';
@@ -23,10 +24,14 @@
   $: isAnotherDeviceActive = $deviceId !== activeDevice?.id;
   $: progress_m_ss = millisToMinuteSecond($realTimeProgressMs);
   $: duration_m_ss = millisToMinuteSecond($durationMs);
+
+  function minimizePlayer() {
+    $playerFull = false;
+  }
 </script>
 
 <div class="player">
-  <div class="bar">
+  <div class="bar" role="button" tabindex="0" on:click={minimizePlayer} on:keyup={minimizePlayer}>
     <button>back</button>
     <p>Liked Songs</p>
   </div>
@@ -91,6 +96,7 @@
   .bar {
     display: flex;
     justify-content: space-between;
+    background-color: deeppink;
   }
 
   .progress {
