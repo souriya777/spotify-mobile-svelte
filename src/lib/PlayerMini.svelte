@@ -5,6 +5,65 @@
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
   import ProgressBarMini from '@lib/ProgressBarMini.svelte';
+
+  const OFFSET = 1;
+  const INTERVAL_MS = 60;
+  const TIMEMOUT_BEFORE_1ST_SCROLL = 1000;
+  /** @type {HTMLElement} */
+  let titleHtml;
+  let hasReachTitleBeginning = true;
+  let hasReachTitleEnd = false;
+  let intervalTitle;
+  let isFirstTitleScroll = true;
+
+  function observeTitleBeginning(node) {
+    const observeFn = (entries) => {
+      if (hasReachTitleEnd) {
+        return;
+      }
+
+      if (isFirstTitleScroll) {
+        isFirstTitleScroll = false;
+        setTimeout(() => {
+          observeTitleBeginning(node);
+        }, TIMEMOUT_BEFORE_1ST_SCROLL);
+        return;
+      }
+
+      hasReachTitleBeginning = entries[0].isIntersecting ? true : false;
+      scrollTitle(OFFSET);
+    };
+    observeTitle(node, observeFn);
+  }
+
+  function observeTitleEnd(node) {
+    const observeFn = (entries) => {
+      if (hasReachTitleBeginning) {
+        return;
+      }
+
+      hasReachTitleEnd = entries[0].isIntersecting ? true : false;
+      scrollTitle(-OFFSET);
+    };
+    observeTitle(node, observeFn);
+  }
+
+  function observeTitle(node, observeFn) {
+    const observer = new IntersectionObserver(observeFn, { threshold: 0 });
+    observer.observe(node);
+    return {
+      destroy: () => observer.disconnect(),
+    };
+  }
+
+  function scrollTitle(offset) {
+    clearInterval(intervalTitle);
+    intervalTitle = setInterval(() => {
+      if (titleHtml) {
+        titleHtml.scrollLeft += offset;
+      }
+    }, INTERVAL_MS);
+  }
 </script>
 
 <div class="player-mini">
@@ -12,11 +71,15 @@
     <Img src={$imageUrl} alt={$albumName} />
   </div>
   <div class="info">
-    <p class="title">
+    <div class="title" bind:this={titleHtml}>
       {#if $trackName && $artistsDisplay}
-        {$trackName}&nbsp;&bull;&nbsp;<span class="artist">{$artistsDisplay}</span>
+        <span class="title__begin" use:observeTitleBeginning></span>
+        <span class="song">{$trackName}</span>
+        <span>&nbsp;&bull;&nbsp;</span>
+        <span class="artist">{$artistsDisplay}</span>
+        <span class="title__end" use:observeTitleEnd></span>
       {/if}
-    </p>
+    </div>
     <p class="device-name">
       {#if $activeDevice?.name}
         <span class="device-name__listen">
@@ -72,32 +135,32 @@
 
   .img {
     padding-inline-start: var(--space-inline);
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
   .info {
+    background-color: deeppink;
     position: relative;
     height: 100%;
-  }
-
-  .info,
-  .device-icon,
-  .action {
-    display: flex;
-  }
-
-  .img,
-  .device-icon,
-  .action {
-    background-color: inherit;
-    z-index: 1;
+    overflow: hidden;
   }
 
   .title {
-    position: absolute;
-    left: var(--space-inline);
-    top: var(--y-offset);
     white-space: nowrap;
-    overflow: hidden;
+    transform: translateX(var(--translate-title));
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .title::-webkit-scrollbar {
+    display: none;
   }
 
   .device-name {
@@ -112,21 +175,23 @@
     margin-inline-end: 0.3rem;
   }
 
-  .img {
-    box-shadow:
-      rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px,
-      rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px,
-      rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-
   .artist {
     color: var(--color-tertiary);
   }
 
   .device-name {
     color: var(--color-accent);
+  }
+
+  .info,
+  .device-icon,
+  .action {
+    display: flex;
+  }
+
+  .device-icon,
+  .action {
+    height: 100%;
   }
 
   .player-mini__progressbar {
