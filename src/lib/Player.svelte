@@ -89,18 +89,13 @@
 <style>
   .player {
     border: 1px dashed aquamarine;
-    /* background-color: var(--color-primary-highlight); */
+    background-color: var(--playing-rgb);
     height: 100dvh;
   }
 
   .bar {
     display: flex;
     justify-content: space-between;
-    background-color: deeppink;
-  }
-
-  .progress {
-    background-color: orange;
   }
 
   .time {

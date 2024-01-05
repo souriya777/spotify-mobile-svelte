@@ -2,9 +2,6 @@
   import NoteSvg from '@lib/svg/NoteSvg.svelte';
   import DefaultArtistSvg from '@lib/svg/DefaultArtistSvg.svelte';
   import ColorThief from 'colorthief';
-  import Logger from '@js/Logger';
-
-  const LOGGER = Logger.getNewInstance('ImageSolver.js');
 
   /** @type {import('@js/spotify').SpotifyImage[]} */
   export let images;
@@ -50,10 +47,8 @@
   let dominantColor;
 
   function getDominantColor() {
-    LOGGER.log('🔥🔥🔥', this, bindImg);
     const colorThief = new ColorThief();
     const color = colorThief.getColor(bindImg);
-    LOGGER.log(color, '🟢🟢🟢');
     dominantColor = `background-color: rgb(${color?.[0]},${color?.[1]},${color?.[2]});`;
   }
 </script>
@@ -61,7 +56,6 @@
 {#if calculatedImg && !isDetailImg}
   <img src={calculatedImg.url} {alt} height={calculatedImg.height} width={calculatedImg.width} />
 {:else if calculatedImg && isDetailImg}
-  <!-- FIXME img dominant color -->
   <div class="testo" style={dominantColor}>❤️</div>
   <img
     class="isDetailImg"

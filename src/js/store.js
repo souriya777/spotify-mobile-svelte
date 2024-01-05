@@ -2,6 +2,7 @@ import { writable, derived, get } from 'svelte/store';
 import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
 import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
+import { DEFAULT_PLAYING_RGB } from '@js/palette-utils';
 
 // ACCESS
 const accessToken = writableLocalStorage('accessToken', '');
@@ -90,6 +91,7 @@ const VIEWS = derived(
     }
   },
 );
+// TODO move
 /** @param {import('@js/internal').View} view */
 function addView(view) {
   if ('home' === get(viewName)) {
@@ -100,6 +102,7 @@ function addView(view) {
     VIEWS_MY_LIB.update((views) => [...views, { ...view }]);
   }
 }
+// TODO move
 function removeView() {
   if ('home' === get(viewName)) {
     VIEWS_HOME.update((views) => [...views.slice(0, -1)]);
@@ -110,6 +113,7 @@ function removeView() {
   }
 }
 const uiTimestamp = writable(-1);
+const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 
 // FILTER
 const displayTrackOn = writable(true);
@@ -155,6 +159,7 @@ export {
   VIEWS,
   addView,
   removeView,
+  playingRgb,
   uiTimestamp,
   displayTrackOn,
   displayArtistOn,

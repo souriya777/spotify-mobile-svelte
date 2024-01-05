@@ -14,9 +14,7 @@ Single Source of Truth
 
 # TODO MVP
 
-- feat(stack-ui): change background-color depending on view
-  -- feat(img): <ImageSolver> -> `getDominantColor`
-  -- works :) => make it independent
+- the progresser bar is not smooth
 - feat(player), can see basic state
   -- reflect a "car" presentation (audible-like)
   -- which ui ? car-mode or mobile mode ?
@@ -26,6 +24,7 @@ Single Source of Truth
 - feat(player) : shuffle on several playlist
 - feat(ui): like "car mode" ?
 - feat(button): onTap ?
+  -- fix(img): <ImageSolver> -> `getDominantColor`
 - feat(ui): use use:onTap
 - utiliser le view transition API à la "svelte menu"
 - feat(player): can seek position by drag'n'drop progress bar

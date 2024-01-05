@@ -8,11 +8,13 @@
     playing,
     activeDevice,
     playerFull,
+    playingRgb,
   } from '@js/store';
   import Img from '@lib/Img.svelte';
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
   import ProgressBarMini from '@lib/ProgressBarMini.svelte';
+  import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
 
   const OFFSET = 1;
   const INTERVAL_MS = 60;
@@ -23,8 +25,8 @@
   let hasReachTitleEnd = false;
   let intervalTitle;
 
-  let styleBlurStart = `--color-blur-start: rgba(40, 40, 40, 0.9)`;
-  let styleBlurEnd = `--color-blur-end: rgba(40, 40, 40, 0.1)`;
+  $: styleBlurStart = `--color-blur-start: rgba(${$playingRgb.join(',')}, 0.9)`;
+  $: styleBlurEnd = `--color-blur-end: rgba(${$playingRgb.join(',')}, 0.1)`;
   $: style = `${styleBlurStart}; ${styleBlurEnd}`;
 
   function observeTitleBeginning(node) {
@@ -76,6 +78,8 @@
     $playerFull = true;
   }
 </script>
+
+<ImgUrlColorSolver imageUrl={$imageUrl} />
 
 <div class="player-mini" {style}>
   <div
@@ -153,9 +157,10 @@
     height: var(--height-player-mini);
     margin-inline: var(--space-inline);
     border-radius: 0.8rem;
-    background-color: var(--color-primary-highlight);
+    background-color: var(--playing-rgb);
     font-size: var(--font-s);
     overflow: hidden;
+    transition: background-color 0.2s ease-in-out;
   }
 
   .img {
@@ -234,8 +239,8 @@
     right: calc(-1 * var(--width-blur));
     background-image: linear-gradient(
       to right,
-      rgba(40, 40, 40, 0.9) 45%,
-      rgba(40, 40, 40, 0.1) 90%
+      var(--color-blur-start) 45%,
+      var(--color-blur-end) 90%
     );
   }
 
@@ -243,8 +248,8 @@
     left: calc(-1 * var(--width-blur));
     background-image: linear-gradient(
       to left,
-      rgba(40, 40, 40, 0.9) 45%,
-      rgba(40, 40, 40, 0.1) 90%
+      var(--color-blur-start) 45%,
+      var(--color-blur-end) 90%
     );
   }
 
