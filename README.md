@@ -14,7 +14,8 @@ Single Source of Truth
 
 # TODO MVP
 
-- the progresser bar is not smooth
+- -- fix shadow
+- does vite add `-webkit-transform: scaleX(1);` in `progress-start` animation ?
 - feat(player), can see basic state
   -- reflect a "car" presentation (audible-like)
   -- which ui ? car-mode or mobile mode ?

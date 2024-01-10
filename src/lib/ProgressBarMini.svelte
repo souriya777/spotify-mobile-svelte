@@ -1,13 +1,22 @@
 <script>
-  import { progressPercentInteger } from '@js/time-utils';
-  import { realTimeProgressMs, durationMs } from '@js/store';
+  import { durationMs, progressMs, playing } from '@js/store';
 
-  $: progressPercent = progressPercentInteger($realTimeProgressMs, $durationMs);
-  $: progressStyle = `--progress-percent: ${progressPercent}%`;
+  let lastProgress = $progressMs;
+  let reloadTimestamp;
+
+  $: animationState = $playing ? 'running' : 'paused';
+  $: style = `animation: ${$durationMs}ms linear -${$progressMs}ms 1 normal none ${animationState} progress-start`;
+
+  $: if (lastProgress !== $progressMs) {
+    lastProgress = $progressMs;
+    reloadTimestamp = new Date().getTime();
+  }
 </script>
 
 <div class="progressbar-mini">
-  <div class="progress" style={progressStyle}></div>
+  {#key reloadTimestamp}
+    <div class="progress" {style}></div>
+  {/key}
 </div>
 
 <style>
@@ -20,6 +29,18 @@
   .progress {
     background-color: var(--color-secondary);
     height: 100%;
-    width: var(--progress-percent);
+    transform: scale(0);
+    transform-origin: left;
+    width: 100%;
+  }
+
+  @keyframes progress-start {
+    0% {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
   }
 </style>

@@ -76,3 +76,13 @@ ul {
   color: var(--color-on-primary-highlight);
   padding: 1rem;
 }
+
+@keyframes progress-start {
+  0% {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
