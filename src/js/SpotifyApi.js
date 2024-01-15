@@ -213,6 +213,7 @@ class SpotifyApi {
   seekPosition(positionMs) {
     const position = Math.trunc(positionMs);
     this.#put(`/me/player/seek?position_ms=${position}`);
+    progressMs.set(positionMs);
   }
 
   shuffle() {

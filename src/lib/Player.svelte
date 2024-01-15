@@ -39,10 +39,8 @@
   <div class="title">{$trackName}{$trackUri}</div>
   <div class="artist">{$artistsDisplay}</div>
   <button>+❤️</button>
-  <div class="progress">
-    <div>
-      <ProgressBar />
-    </div>
+  <div class="progress" style="padding-inline: 20px;">
+    <ProgressBar />
     <div><Volume /></div>
     <div class="time">
       <div class="begin">{progress_m_ss}</div>

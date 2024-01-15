@@ -14,19 +14,16 @@ Single Source of Truth
 
 # TODO MVP
 
-- -- fix shadow
-- does vite add `-webkit-transform: scaleX(1);` in `progress-start` animation ?
-- feat(player), can see basic state
-  -- reflect a "car" presentation (audible-like)
-  -- which ui ? car-mode or mobile mode ?
+-- rewrite ":root" mechanism
+-- fix title scrolling
 
-  ***
+- refactor time-utils (integer or not)
+
+- style(player): tune ui
 
 - feat(player) : shuffle on several playlist
-- feat(ui): like "car mode" ?
-- feat(button): onTap ?
-  -- fix(img): <ImageSolver> -> `getDominantColor`
-- feat(ui): use use:onTap
+- fix(img): <ImageSolver> -> `getDominantColor`
+- feat(button): use use:onTap
 - utiliser le view transition API à la "svelte menu"
 - feat(player): can seek position by drag'n'drop progress bar
 - feat(ui): add waiting visual indication when fetching is too long
@@ -37,7 +34,6 @@ Single Source of Truth
   -- extract track_window next_tracks ?
 - feat(detail): design
 - space
-- test(ui): iphone 14 pro or ++
 - feat(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
   -- invalid cache, when rename playlist
@@ -86,6 +82,7 @@ Single Source of Truth
 - // TODO refactor in smaller function or custom stores ?
 - spotify bug "recently-added" order
 - implement accessibility (eg. `aria-hidden`)
+- (player): add lyrics functionnality ?
 
 # TODO perf++
 

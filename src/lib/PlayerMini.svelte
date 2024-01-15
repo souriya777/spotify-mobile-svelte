@@ -13,7 +13,7 @@
   import Img from '@lib/Img.svelte';
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
-  import ProgressBarMini from '@lib/ProgressBarMini.svelte';
+  import ProgressBar from '@lib/ProgressBar.svelte';
   import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
 
   const OFFSET = 1;
@@ -137,7 +137,7 @@
     {/if}
   </div>
   <div class="player-mini__progressbar">
-    <ProgressBarMini />
+    <ProgressBar isMini={true} />
   </div>
 </div>
 
@@ -147,6 +147,7 @@
     --y-offset: 1.2rem;
     --width-blur: 1rem;
     --padding-inline-title: 0.4rem;
+    --transition-background: 0.2s ease-in-out;
   }
 
   .player-mini {
@@ -160,7 +161,7 @@
     background-color: var(--playing-rgb);
     font-size: var(--font-s);
     overflow: hidden;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color var(--transition-background);
   }
 
   .img {
@@ -242,6 +243,7 @@
       var(--color-blur-start) 45%,
       var(--color-blur-end) 90%
     );
+    transition: background-image var(--transition-background);
   }
 
   .blur--left::before {
@@ -251,6 +253,7 @@
       var(--color-blur-start) 45%,
       var(--color-blur-end) 90%
     );
+    transition: background-image var(--transition-background);
   }
 
   .player-mini__progressbar {

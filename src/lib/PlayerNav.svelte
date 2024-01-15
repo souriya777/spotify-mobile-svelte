@@ -7,13 +7,12 @@
 
 <div class="player-nav" class:player-nav--full={$playerFull}>
   <div class="player-nav__player">
-    {#if $playerFull}
-      <Player />
-    {:else}
-      <PlayerMini />
-    {/if}
+    <Player />
   </div>
   <div class="player-nav__nav" class:player-nav__nav--full={$playerFull}>
+    <div class="player-nav__mini">
+      <PlayerMini />
+    </div>
     <Nav />
   </div>
 </div>
@@ -24,7 +23,7 @@
   }
 
   .player-nav {
-    height: calc(var(--height-nav) + var(--height-player-mini));
+    height: var(--height-nav);
     transition: height var(--transition-full);
   }
 
@@ -34,7 +33,6 @@
   }
 
   .player-nav__nav {
-    /* border: 1px dashed yellow; */
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -45,5 +43,14 @@
   .player-nav__nav--full {
     transform: translateY(100%);
     transition: transform var(--transition-full);
+  }
+
+  .player-nav__mini {
+    opacity: 1;
+    transition: opacity var(--transition-full);
+  }
+
+  .player-nav__nav--full .player-nav__mini {
+    opacity: 0;
   }
 </style>
