@@ -14,9 +14,7 @@ Single Source of Truth
 
 # TODO MVP
 
--- rewrite ":root" mechanism
--- fix title scrolling
-
+- fix title scrolling
 - refactor time-utils (integer or not)
 
 - style(player): tune ui

@@ -3,7 +3,15 @@
   import PhoneScreen from '@lib/PhoneScreen.svelte';
 </script>
 
-<div class="phone">
+<div
+  class="phone"
+  style="
+  --border-radius-shell: 48px;
+  --border-radius-screen: 42px;
+  --inline-position-button: -7px;
+  --height-screen-top: 43px;
+  --height-screen-nav: 52px;"
+>
   <div class="button-left-1" />
   <div class="button-left-2" />
   <div class="button-left-3" />
@@ -17,14 +25,6 @@
 </div>
 
 <style>
-  :root {
-    --border-radius-shell: 48px;
-    --border-radius-screen: 42px;
-    --inline-position-button: -7px;
-    --height-screen-top: 43px;
-    --height-screen-nav: 52px;
-  }
-
   .phone {
     position: relative;
     border: var(--border-width-shell) solid var(--color-shell);

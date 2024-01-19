@@ -371,10 +371,6 @@
 </div>
 
 <style>
-  :root {
-    --home-brightness: 20%;
-  }
-
   .ui {
     height: 100%;
   }

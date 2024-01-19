@@ -7,20 +7,21 @@
   }
 </script>
 
-<div class="phone-screen" on:scroll={handleScroll}>
+<div
+  class="phone-screen"
+  on:scroll={handleScroll}
+  style="
+  --border-radius-shell: 48px;
+  --border-radius-screen: 42px;
+  --inline-position-button: -7px;
+  --height-screen-nav: 52px;"
+>
   <div class="content">
     <Router />
   </div>
 </div>
 
 <style>
-  :root {
-    --border-radius-shell: 48px;
-    --border-radius-screen: 42px;
-    --inline-position-button: -7px;
-    --height-screen-nav: 52px;
-  }
-
   .phone-screen {
     box-sizing: content-box;
     position: relative;

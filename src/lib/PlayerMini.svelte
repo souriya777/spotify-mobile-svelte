@@ -25,9 +25,15 @@
   let hasReachTitleEnd = false;
   let intervalTitle;
 
-  $: styleBlurStart = `--color-blur-start: rgba(${$playingRgb.join(',')}, 0.9)`;
-  $: styleBlurEnd = `--color-blur-end: rgba(${$playingRgb.join(',')}, 0.1)`;
-  $: style = `${styleBlurStart}; ${styleBlurEnd}`;
+  $: style = `
+    --space-inline: 0.6rem;
+    --y-offset: 1.2rem;
+    --width-blur: 1rem;
+    --padding-inline-title: 0.4rem;
+    --transition-background: 0.2s ease-in-out;
+    --color-blur-start: rgba(${$playingRgb.join(',')}, 0.9);
+    --color-blur-end: rgba(${$playingRgb.join(',')}, 0.1);
+    `;
 
   function observeTitleBeginning(node) {
     const observeFn = (entries) => {
@@ -142,14 +148,6 @@
 </div>
 
 <style>
-  :root {
-    --space-inline: 0.6rem;
-    --y-offset: 1.2rem;
-    --width-blur: 1rem;
-    --padding-inline-title: 0.4rem;
-    --transition-background: 0.2s ease-in-out;
-  }
-
   .player-mini {
     display: grid;
     grid-template-columns: 4.6rem 1fr 4rem 4rem;

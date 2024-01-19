@@ -3,9 +3,11 @@
   import Player from '@lib/Player.svelte';
   import PlayerMini from '@lib/PlayerMini.svelte';
   import { playerFull } from '@js/store';
+
+  $: style = `--transition-full: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);`;
 </script>
 
-<div class="player-nav" class:player-nav--full={$playerFull}>
+<div class="player-nav" class:player-nav--full={$playerFull} {style}>
   <div class="player-nav__player">
     <Player />
   </div>
@@ -18,10 +20,6 @@
 </div>
 
 <style>
-  :root {
-    --transition-full: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
-  }
-
   .player-nav {
     height: var(--height-nav);
     transition: height var(--transition-full);

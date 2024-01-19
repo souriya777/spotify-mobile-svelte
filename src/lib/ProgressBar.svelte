@@ -28,6 +28,7 @@
   $: animationName = isMini ? 'progress-mini-start' : 'progress-normal-start';
   $: animationState = $playing ? 'running' : 'paused';
   $: animationStyle = getAnimation($progressMs);
+  $: style = `--progressbar-border-radius: 0.2rem;`;
 
   $: if (lastProgressMs !== $progressMs) {
     lastProgressMs = $progressMs;
@@ -102,6 +103,7 @@
   class="progressbar"
   class:progressbarNormal={!isMini}
   class:progressbarMini={isMini}
+  {style}
   on:click={clickProgressBar}
   on:keyup={clickProgressBar}
   bind:this={progressBarHtml}
@@ -123,9 +125,6 @@
 </div>
 
 <style>
-  :root {
-    --progressbar-border-radius: 0.2rem;
-  }
   .progressbar {
     background-color: hsla(0, 0%, 100%, 0.3);
     border-radius: var(--progressbar-border-radius);
