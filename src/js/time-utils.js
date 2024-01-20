@@ -22,8 +22,6 @@ function progressPercent(progressMs, durationMs) {
   return (progressMs / durationMs) * 100;
 }
 
-// FIXME TEST
-
 /**
  * @param {number} progressMs
  * @param {number} durationMs

@@ -2,7 +2,9 @@
   import UiProxy from '@lib/UiProxy.svelte';
   import { playingRgb } from '@js/store';
 
-  $: style = `--playing-rgb: rgb(${$playingRgb.join(',')})`;
+  $: style = `
+    --playing-rgb: rgb(${$playingRgb.join(',')});
+  `;
 </script>
 
 <div class="screen" {style}>

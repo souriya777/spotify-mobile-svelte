@@ -15,8 +15,6 @@ Single Source of Truth
 # TODO MVP
 
 - fix title scrolling
-- refactor time-utils (integer or not)
-
 - style(player): tune ui
 
 - feat(player) : shuffle on several playlist
@@ -81,9 +79,6 @@ Single Source of Truth
 - spotify bug "recently-added" order
 - implement accessibility (eg. `aria-hidden`)
 - (player): add lyrics functionnality ?
-
-# TODO perf++
-
 - manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - feat(service-worker): strategy `what`, `when`
 - feat(realtime) : sync when ?
@@ -91,7 +86,7 @@ Single Source of Truth
 - fix `BetaLikedImg`
 - lighthouse
 
-# TODO expert-like
+# BONUS TODO expert-like
 
 - answer https://stackoverflow.com/questions/70540783/spotify-playlist-items-sorting-mechanism-in-web-api
 - present it to `Svelte Society`

@@ -19,20 +19,22 @@
   const OFFSET = 1;
   const INTERVAL_MS = 60;
   const TIMEMOUT_BEFORE_SCROLL = 2000;
+  const BACKGROUND_TRANSITION_MS = 200;
   /** @type {HTMLElement} */
   let titleHtml;
   let hasReachTitleBeginning = true;
   let hasReachTitleEnd = false;
   let intervalTitle;
+  let blurActive = false;
+  let blurStyle = '';
 
   $: style = `
     --space-inline: 0.6rem;
     --y-offset: 1.2rem;
     --width-blur: 1rem;
     --padding-inline-title: 0.4rem;
-    --transition-background: 0.2s ease-in-out;
-    --color-blur-start: rgba(${$playingRgb.join(',')}, 0.9);
-    --color-blur-end: rgba(${$playingRgb.join(',')}, 0.1);
+    --transition-background: ${BACKGROUND_TRANSITION_MS}ms ease-in-out;
+    ${blurStyle};
     `;
 
   function observeTitleBeginning(node) {
@@ -83,11 +85,70 @@
   function expandPlayer() {
     $playerFull = true;
   }
+
+  /** @type {HTMLElement} */
+  let playerMiniHtml;
+  let oldPlayingRgb;
+  let canBlur = true;
+
+  $: if (oldPlayingRgb !== $playingRgb) {
+    console.log($playingRgb);
+    oldPlayingRgb = $playingRgb;
+    canBlur = true;
+  }
+
+  function handleTransitionStart() {
+    if (!canBlur) {
+      return;
+    }
+
+    if (blurActive) {
+      blurActive = false;
+    }
+  }
+
+  function handleTransitionEnd() {
+    if (!canBlur) {
+      return;
+    }
+
+    if (!blurActive) {
+      blurActive = true;
+
+      differTransitionOnBlur();
+    }
+    canBlur = false;
+  }
+
+  /**
+   * 🙏 we can't make transition on background gradient...
+   */
+  function differTransitionOnBlur() {
+    blurStyle = `
+        --color-blur-start: transparent;
+        --color-blur-end: transparent;
+        `;
+
+    setTimeout(() => {
+      blurStyle = `
+        --color-blur-start: rgba(${$playingRgb.join(',')}, 0.9);
+        --color-blur-end: rgba(${$playingRgb.join(',')}, 0.1);
+        `;
+    }, BACKGROUND_TRANSITION_MS);
+  }
 </script>
 
 <ImgUrlColorSolver imageUrl={$imageUrl} />
 
-<div class="player-mini" {style}>
+<div
+  class="player-mini"
+  class:blur--active={blurActive}
+  class:blur--inactive={!blurActive}
+  {style}
+  bind:this={playerMiniHtml}
+  on:transitionend={handleTransitionEnd}
+  on:transitionstart={handleTransitionStart}
+>
   <div
     class="img blur blur--right"
     role="button"
@@ -234,24 +295,22 @@
     z-index: var(--z-index-nearest);
   }
 
-  .blur--right::after {
+  .blur--active .blur--right::after {
     right: calc(-1 * var(--width-blur));
     background-image: linear-gradient(
       to right,
       var(--color-blur-start) 45%,
       var(--color-blur-end) 90%
     );
-    transition: background-image var(--transition-background);
   }
 
-  .blur--left::before {
+  .blur--active .blur--left::before {
     left: calc(-1 * var(--width-blur));
     background-image: linear-gradient(
       to left,
       var(--color-blur-start) 45%,
       var(--color-blur-end) 90%
     );
-    transition: background-image var(--transition-background);
   }
 
   .player-mini__progressbar {
