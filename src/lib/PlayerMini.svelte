@@ -29,7 +29,7 @@
   let blurStyle = '';
 
   $: style = `
-    --space-inline: 0.6rem;
+    --space-inline: 0.4rem;
     --y-offset: 1.2rem;
     --width-blur: 1rem;
     --padding-inline-title: 0.4rem;
@@ -37,12 +37,11 @@
     ${blurStyle};
     `;
 
-  function observeTitleBeginning(node) {
+  function observeTitleBegin(node) {
     const observeFn = (entries) => {
       if (hasReachTitleEnd) {
         return;
       }
-
       setTimeout(() => {
         hasReachTitleBeginning = entries[0].isIntersecting ? true : false;
         scrollTitle(OFFSET);
@@ -56,7 +55,6 @@
       if (hasReachTitleBeginning) {
         return;
       }
-
       setTimeout(() => {
         hasReachTitleEnd = entries[0].isIntersecting ? true : false;
         scrollTitle(-OFFSET);
@@ -92,9 +90,11 @@
   let canBlur = true;
 
   $: if (oldPlayingRgb !== $playingRgb) {
-    console.log($playingRgb);
     oldPlayingRgb = $playingRgb;
     canBlur = true;
+    if (titleHtml) {
+      titleHtml.scrollLeft = 0;
+    }
   }
 
   function handleTransitionStart() {
@@ -165,15 +165,16 @@
   <div class="info" role="button" tabindex="0" on:click={expandPlayer} on:keyup={expandPlayer}>
     <div class="title" bind:this={titleHtml}>
       {#if $trackName && $artistsDisplay}
-        <span class="title__begin" use:observeTitleBeginning></span>
+        <span class="title__begin" use:observeTitleBegin>&nbsp;</span>
         <span class="song">{$trackName}</span>
         <span>&bull;</span>
         <span class="artist">{$artistsDisplay}</span>
-        <span class="title__end" use:observeTitleEnd></span>
+        <span class="title__end" use:observeTitleEnd>&nbsp;</span>
       {/if}
     </div>
     <p class="device-name">
       {#if $activeDevice?.name}
+        &nbsp;
         <span class="device-name__listen">
           <Svg name="device-listened" size={10} />
         </span>

@@ -14,7 +14,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- fix title scrolling
 - style(player): tune ui
 
 - feat(player) : shuffle on several playlist
