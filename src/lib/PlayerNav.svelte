@@ -36,6 +36,7 @@
     bottom: 0;
     transform: translateY(0);
     transition: transform var(--transition-full);
+    z-index: var(--z-index-nearest);
   }
 
   .player-nav__nav--full {

@@ -63,6 +63,7 @@
     {alt}
     height={calculatedImg.height}
     width={calculatedImg.width}
+    style="display: none;"
     crossorigin="anonymous"
     bind:this={bindImg}
     on:load={getDominantColor}

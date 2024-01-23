@@ -113,8 +113,8 @@
     alt="not displayed"
     width="100"
     height="100"
-    crossorigin="anonymous"
     style="display: none;"
+    crossorigin="anonymous"
     bind:this={imgHtml}
     on:load={getDominantColor}
   />

@@ -36,6 +36,12 @@
   }
 
   function clickProgressBar(e) {
+    if (!isMini) {
+      updateProgressBar(e);
+    }
+  }
+
+  function updateProgressBar(e) {
     const barX = e.clientX - progressBarLeft;
     updateProgress(barX);
     synchronizeVisualProgress();

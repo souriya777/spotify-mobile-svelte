@@ -15,9 +15,14 @@ Single Source of Truth
 # TODO MVP
 
 - style(player): tune ui
+- remove old solver
+- fix(img): <ImageSolver> -> `getDominantColor`
+- scroll snap on image go next
+- which api call to know if a song is in favourite ?
+- option menu three-dots ?
+  -- PanelFromBottom.svelteSAVE
 
 - feat(player) : shuffle on several playlist
-- fix(img): <ImageSolver> -> `getDominantColor`
 - feat(button): use use:onTap
 - utiliser le view transition API à la "svelte menu"
 - feat(player): can seek position by drag'n'drop progress bar
@@ -28,13 +33,6 @@ Single Source of Truth
   -- feat(player): what is default queue ?
   -- extract track_window next_tracks ?
 - feat(detail): design
-- space
-- feat(cache): find a strategy
-  -- how knowing which track are contained in liked playlist ?
-  -- invalid cache, when rename playlist
-  -- invalid cache, when create playlist
-- feat(cache): optimize it
-- feat(service-worker): invalidate when add like song ?
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
 - feat(ui): drag'n drop
 - feat(pwa): improve "add to homescreen" installation message
@@ -76,6 +74,7 @@ Single Source of Truth
 - use svelte `animation` ?
 - // TODO refactor in smaller function or custom stores ?
 - spotify bug "recently-added" order
+- dark mode / light mode ?
 - implement accessibility (eg. `aria-hidden`)
 - (player): add lyrics functionnality ?
 - manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
@@ -84,6 +83,13 @@ Single Source of Truth
 - lazy load images
 - fix `BetaLikedImg`
 - lighthouse
+- perf(player): stop observing scrolling-title when not visible ?
+- perf(cache): find a strategy
+  -- how knowing which track are contained in liked playlist ?
+  -- invalid cache, when rename playlist
+  -- invalid cache, when create playlist
+- perf(cache): optimize it
+- perf(service-worker): invalidate when add like song ?
 
 # BONUS TODO expert-like
 

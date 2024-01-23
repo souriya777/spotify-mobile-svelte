@@ -2,83 +2,31 @@
   import SpotifyApi from '@js/SpotifyApi';
   import {
     imageUrl,
-    trackName,
-    artistsDisplay,
     albumName,
     playing,
     activeDevice,
     playerFull,
     playingRgb,
+    trackName,
+    artistsDisplay,
   } from '@js/store';
   import Img from '@lib/Img.svelte';
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
   import ProgressBar from '@lib/ProgressBar.svelte';
   import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
+  import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
+  import ScrollingTitle from '@lib/ScrollingTitle.svelte';
 
-  const OFFSET = 1;
-  const INTERVAL_MS = 60;
-  const TIMEMOUT_BEFORE_SCROLL = 2000;
   const BACKGROUND_TRANSITION_MS = 200;
+
   /** @type {HTMLElement} */
   let titleHtml;
-  let hasReachTitleBeginning = true;
-  let hasReachTitleEnd = false;
-  let intervalTitle;
-  let blurActive = false;
-  let blurStyle = '';
 
   $: style = `
-    --space-inline: 0.4rem;
-    --y-offset: 1.2rem;
-    --width-blur: 1rem;
     --padding-inline-title: 0.4rem;
     --transition-background: ${BACKGROUND_TRANSITION_MS}ms ease-in-out;
-    ${blurStyle};
     `;
-
-  function observeTitleBegin(node) {
-    const observeFn = (entries) => {
-      if (hasReachTitleEnd) {
-        return;
-      }
-      setTimeout(() => {
-        hasReachTitleBeginning = entries[0].isIntersecting ? true : false;
-        scrollTitle(OFFSET);
-      }, TIMEMOUT_BEFORE_SCROLL);
-    };
-    observeTitle(node, observeFn);
-  }
-
-  function observeTitleEnd(node) {
-    const observeFn = (entries) => {
-      if (hasReachTitleBeginning) {
-        return;
-      }
-      setTimeout(() => {
-        hasReachTitleEnd = entries[0].isIntersecting ? true : false;
-        scrollTitle(-OFFSET);
-      }, TIMEMOUT_BEFORE_SCROLL);
-    };
-    observeTitle(node, observeFn);
-  }
-
-  function observeTitle(node, observeFn) {
-    const observer = new IntersectionObserver(observeFn, { threshold: 0 });
-    observer.observe(node);
-    return {
-      destroy: () => observer.disconnect(),
-    };
-  }
-
-  function scrollTitle(offset) {
-    clearInterval(intervalTitle);
-    intervalTitle = setInterval(() => {
-      if (titleHtml) {
-        titleHtml.scrollLeft += offset;
-      }
-    }, INTERVAL_MS);
-  }
 
   function expandPlayer() {
     $playerFull = true;
@@ -87,104 +35,46 @@
   /** @type {HTMLElement} */
   let playerMiniHtml;
   let oldPlayingRgb;
-  let canBlur = true;
 
   $: if (oldPlayingRgb !== $playingRgb) {
     oldPlayingRgb = $playingRgb;
-    canBlur = true;
     if (titleHtml) {
       titleHtml.scrollLeft = 0;
     }
   }
-
-  function handleTransitionStart() {
-    if (!canBlur) {
-      return;
-    }
-
-    if (blurActive) {
-      blurActive = false;
-    }
-  }
-
-  function handleTransitionEnd() {
-    if (!canBlur) {
-      return;
-    }
-
-    if (!blurActive) {
-      blurActive = true;
-
-      differTransitionOnBlur();
-    }
-    canBlur = false;
-  }
-
-  /**
-   * 🙏 we can't make transition on background gradient...
-   */
-  function differTransitionOnBlur() {
-    blurStyle = `
-        --color-blur-start: transparent;
-        --color-blur-end: transparent;
-        `;
-
-    setTimeout(() => {
-      blurStyle = `
-        --color-blur-start: rgba(${$playingRgb.join(',')}, 0.9);
-        --color-blur-end: rgba(${$playingRgb.join(',')}, 0.1);
-        `;
-    }, BACKGROUND_TRANSITION_MS);
-  }
 </script>
 
 <ImgUrlColorSolver imageUrl={$imageUrl} />
-
 <div
   class="player-mini"
-  class:blur--active={blurActive}
-  class:blur--inactive={!blurActive}
   {style}
+  role="button"
+  tabindex="0"
+  on:click={expandPlayer}
+  on:keyup={expandPlayer}
   bind:this={playerMiniHtml}
-  on:transitionend={handleTransitionEnd}
-  on:transitionstart={handleTransitionStart}
 >
-  <div
-    class="img blur blur--right"
-    role="button"
-    tabindex="0"
-    on:click={expandPlayer}
-    on:keyup={expandPlayer}
-  >
+  <div class="img">
     {#if $imageUrl}
       <Img src={$imageUrl} alt={$albumName} />
     {:else}
       <Svg name="default-image" />
     {/if}
   </div>
-  <div class="info" role="button" tabindex="0" on:click={expandPlayer} on:keyup={expandPlayer}>
-    <div class="title" bind:this={titleHtml}>
-      {#if $trackName && $artistsDisplay}
-        <span class="title__begin" use:observeTitleBegin>&nbsp;</span>
-        <span class="song">{$trackName}</span>
-        <span>&bull;</span>
-        <span class="artist">{$artistsDisplay}</span>
-        <span class="title__end" use:observeTitleEnd>&nbsp;</span>
-      {/if}
-    </div>
-    <p class="device-name">
-      {#if $activeDevice?.name}
-        &nbsp;
-        <span class="device-name__listen">
-          <Svg name="device-listened" size={10} />
-        </span>
-        {$activeDevice.name}
-      {:else}
-        &nbsp;
-      {/if}
-    </p>
-  </div>
-  <div class="device-icon blur blur--left">
+
+  <ScrollingTitle>
+    <span class="song">{$trackName}</span>
+    <span>&nbsp;&bull;&nbsp;</span>
+    <span class="artist">{$artistsDisplay}</span>
+
+    <svelte:fragment slot="bottom">
+      <p class="device-name">
+        <ActiveDeviceName />
+      </p>
+    </svelte:fragment>
+  </ScrollingTitle>
+
+  <div class="device-icon">
     {#if $activeDevice?.type}
       <Button
         type="primary"
@@ -197,6 +87,7 @@
       <Button type="primary" svg="device-unknown" callback={() => console.log('TODO')}></Button>
     {/if}
   </div>
+
   <div class="action">
     {#if $playing}
       <Button type="primary" svg="pause" callback={() => SpotifyApi.pause()}></Button>
@@ -216,7 +107,7 @@
     grid-template-rows: 1fr 0.2rem;
     align-items: center;
     height: var(--height-player-mini);
-    margin-inline: var(--space-inline);
+    margin-inline: var(--padding-space-player);
     border-radius: 0.8rem;
     background-color: var(--playing-rgb);
     font-size: var(--font-s);
@@ -227,7 +118,7 @@
   .img {
     position: relative;
     display: flex;
-    padding-inline-start: var(--space-inline);
+    padding-inline-start: var(--padding-space-player);
   }
 
   .device-icon {
@@ -235,48 +126,6 @@
     display: flex;
   }
 
-  .info {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .title {
-    padding-inline-start: var(--space-inline);
-    padding-block-start: var(--y-offset);
-    white-space: nowrap;
-    transform: translateX(var(--translate-title));
-    overflow-x: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .title::-webkit-scrollbar {
-    display: none;
-  }
-
-  .device-name {
-    position: absolute;
-    left: calc(var(--space-inline) + var(--padding-inline-title));
-    bottom: var(--y-offset);
-    display: flex;
-    align-items: center;
-  }
-
-  .device-name__listen {
-    margin-inline-end: 0.3rem;
-  }
-
-  .artist {
-    color: var(--color-tertiary);
-  }
-
-  .device-name {
-    color: var(--color-accent);
-  }
-
-  .info,
   .device-icon,
   .action {
     display: flex;
@@ -285,33 +134,6 @@
   .device-icon,
   .action {
     height: 100%;
-  }
-
-  .blur::after,
-  .blur::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: var(--width-blur);
-    z-index: var(--z-index-nearest);
-  }
-
-  .blur--active .blur--right::after {
-    right: calc(-1 * var(--width-blur));
-    background-image: linear-gradient(
-      to right,
-      var(--color-blur-start) 45%,
-      var(--color-blur-end) 90%
-    );
-  }
-
-  .blur--active .blur--left::before {
-    left: calc(-1 * var(--width-blur));
-    background-image: linear-gradient(
-      to left,
-      var(--color-blur-start) 45%,
-      var(--color-blur-end) 90%
-    );
   }
 
   .player-mini__progressbar {
@@ -320,11 +142,8 @@
     margin-inline: auto;
   }
 
-  .song {
-    padding-inline-start: var(--padding-inline-title);
-  }
-
   .artist {
     padding-inline-end: calc(var(--padding-inline-title) + 0.4rem);
+    color: var(--color-tertiary);
   }
 </style>

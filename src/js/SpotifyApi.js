@@ -146,6 +146,7 @@ class SpotifyApi {
       const spotifyPlayerState = this.extractPlayerStateFrom(playerState);
 
       playbackState = SpotifyPlaybackStateAdapter.adapt(spotifyPlayerState);
+
       track = SpotifyTrackAdapter.adapt(spotifyPlayerState);
     } else {
       try {
@@ -583,7 +584,7 @@ class SpotifyApi {
     durationMs.set(track?.duration_ms);
     albumName.set(track?.album?.name);
     artists.set(track?.artists);
-    imageUrl.set(track?.album?.images?.[0]?.url);
+    imageUrl.set(track?.album?.images?.at(0).url);
   }
 
   async #iterateOverCursor(endpoint, cursorType) {

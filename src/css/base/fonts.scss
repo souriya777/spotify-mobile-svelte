@@ -6,3 +6,22 @@
   font-display: swap;
   src: url('/circularsp-book.woff2') format('woff2');
 }
+
+/* circularsp-title-bold */
+@font-face {
+  font-family: 'circularsp-title-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/circularsp-title-bold.woff2') format('woff2');
+}
+
+.player-title {
+  font-family: 'circularsp-title-bold';
+  font-size: 2.4rem;
+  line-height: normal;
+}
+
+.player-small {
+  font-size: 1.2rem;
+}

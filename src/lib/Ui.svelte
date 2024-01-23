@@ -4,7 +4,7 @@
   import { getTimestamp } from '@js/date-utils';
   import { getTranslateXY } from '@js/browser-utils';
   import PlayerNav from '@lib/PlayerNav.svelte';
-  import { VIEWS, uiTimestamp } from '@js/store';
+  import { VIEWS, uiTimestamp, resizeTimestamp } from '@js/store';
 
   export const slidePrevAndRemoveForMe = () => (isRemovingView = true);
   export const addAndSlideNextForMe = () => (isAddingView = true);
@@ -37,7 +37,6 @@
   let isSliding = false;
   let homeBrightness = MAX_HOME_BRIGHTNESS_PERCENT;
   let brightnessObserver;
-  let resizeTimestamp;
 
   $: VIEW_WIDTH = VIEWS_HTML ? VIEWS_HTML.clientWidth : 0;
   $: CURRENT_ID = $VIEWS[viewPosition]?.id;
@@ -331,7 +330,7 @@
   }
 
   function handleResize() {
-    resizeTimestamp = getTimestamp();
+    $resizeTimestamp = getTimestamp();
   }
 </script>
 
@@ -348,7 +347,7 @@
   class="ui"
   style={`--side-menu-smaller-width: ${SIDE_MENU_SMALLER_WIDTH}px; --home-brightness: ${homeBrightnessStyle}`}
 >
-  {#key resizeTimestamp}
+  {#key $resizeTimestamp}
     <ul
       bind:this={VIEWS_HTML}
       on:touchstart={start}
