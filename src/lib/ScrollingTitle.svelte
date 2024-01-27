@@ -67,10 +67,10 @@
   }
 
   function observeTitle(node, callback) {
-    const observeFn = (entries) => {
-      setTimeout(() => callback(entries), TIMEMOUT_BEFORE_SCROLL);
-    };
-    return observeScroll(node, observeFn);
+    // const observeFn = (entries) => {
+    //   setTimeout(() => callback(entries), TIMEMOUT_BEFORE_SCROLL);
+    // };
+    // return observeScroll(node, observeFn);
   }
 
   function scrollTitle(offset) {

@@ -14,26 +14,24 @@ Single Source of Truth
 
 # TODO MVP
 
+- feat(api): auto-load prev/next song
 - scroll snap on image go next
+
 - which api call to know if a song is in favourite ?
+
 - option menu three-dots ?
   -- PanelFromBottom.svelteSAVE
 
 - feat(player) : shuffle on several playlist
 - feat(button): use use:onTap
 - utiliser le view transition API à la "svelte menu"
-- feat(player): can seek position by drag'n'drop progress bar
 - feat(ui): add waiting visual indication when fetching is too long
 - feat(mylib): can select other song
 - feat(search): design
 - feat(queue): design
   -- feat(player): what is default queue ?
   -- extract track_window next_tracks ?
-- feat(detail): design
-- feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
-- feat(ui): drag'n drop
-- feat(pwa): improve "add to homescreen" installation message
-- lazy-load view in order to optimize processing ?
+- perf(lazy-load): view in order to optimize processing ?
 - how puting `karaoke` at first ?
 - feat(service-worker): automate `swVersion` when building app ?
 - force refresh by reload '/'
@@ -54,35 +52,40 @@ Single Source of Truth
   `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
 - feat(player): can manage other players
 - fix(spotify-connect): only a single instance in devices...
-- 🚀 EXTRA : tag liked songs
-- 🚀 EXTRA : shuffle from all playlist
 - feat(player): load song in advance ?
 - feat(loading) : add spotify logo (ball)
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
 - feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
-- feat(ux): can I have native vibration ? (eg. move song in queue)
-- make vibration
 - feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
-- fix(js): `removeEventListener` on store localStorage => works ???
 - 🟢//learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
-- use svelte `animation` ?
 - spotify bug "recently-added" order
 - implement accessibility (eg. `aria-hidden`)
-- manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
-- feat(service-worker): strategy `what`, `when`
-- feat(realtime) : sync when ?
-- lazy load images
+- perf(img): lazy load images
 - fix `BetaLikedImg`
-- lighthouse
-- perf(player): stop observing scrolling-title when not visible ?
+- 🚀 EXTRA : tag liked songs
+- 🚀 EXTRA : shuffle from all playlist
+
+- perf: manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
+- perf(realtime) : sync when ?
+- feat(service-worker): strategy `what`, `when`
 - perf(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
   -- invalid cache, when rename playlist
   -- invalid cache, when create playlist
 - perf(cache): optimize it
 - perf(service-worker): invalidate when add like song ?
+
+# NOT MVP
+
+- feat(ux): can I have native vibration ? (eg. move song in queue)
+- fix(js): `removeEventListener` on store localStorage => works ???
+- use svelte `animation` ?
+- lighthouse
+- perf(player): stop observing scrolling-title when not visible ?
+- feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
+- feat(pwa): improve "add to homescreen" installation message
 
 # BONUS TODO expert-like
 
