@@ -14,9 +14,6 @@ Single Source of Truth
 
 # TODO MVP
 
-- style(player): tune ui
-- remove old solver
-- fix(img): <ImageSolver> -> `getDominantColor`
 - scroll snap on image go next
 - which api call to know if a song is in favourite ?
 - option menu three-dots ?
@@ -42,9 +39,10 @@ Single Source of Truth
 - force refresh by reload '/'
 - found in code where can I use `isEmpty` from `string-utils`
 - test `synchronize`... hard...
-- TODO feat(store): refactor store in multiple files
 - ERRORS feat(spotify-api): implement quota-limit with code `429`
 - feat(ui): add splash screens
+- remove old solver
+- fix(img): <ImageSolver> -> `getDominantColor`
 - TODO/FIXME uncomment
 - feat(app): add a direct shortcut
 - feat(logout): can logout
@@ -59,24 +57,19 @@ Single Source of Truth
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist
 - feat(player): load song in advance ?
-- test-unit on CI
 - feat(loading) : add spotify logo (ball)
 - pause écouteurs bluetooth ?
 - make scroll lib by date ?
 - feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
 - feat(ux): can I have native vibration ? (eg. move song in queue)
-- feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - make vibration
-- FIXME https://jariz.github.io/vibrant.js/
+- feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - fix(js): `removeEventListener` on store localStorage => works ???
 - 🟢//learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
 - use svelte `animation` ?
-- // TODO refactor in smaller function or custom stores ?
 - spotify bug "recently-added" order
-- dark mode / light mode ?
 - implement accessibility (eg. `aria-hidden`)
-- (player): add lyrics functionnality ?
 - manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - feat(service-worker): strategy `what`, `when`
 - feat(realtime) : sync when ?
