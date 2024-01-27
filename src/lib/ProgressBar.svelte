@@ -158,7 +158,7 @@
     height: 1.2rem;
     width: 1.2rem;
     border-radius: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate3d(-50%, -25%, 0);
     background-color: var(--color-secondary);
   }
 

@@ -248,7 +248,7 @@
    */
   function translate(HTML_ELEMENT, width) {
     const translateX = typeof width === 'number' ? `${width}px` : width;
-    HTML_ELEMENT.style.transform = `translateX(${translateX})`;
+    HTML_ELEMENT.style.transform = `translate3d(${translateX}, 0, 0)`;
   }
 
   function translateSlide() {

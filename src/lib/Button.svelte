@@ -98,7 +98,7 @@
     left: 50%;
     height: 0.4rem;
     width: 0.4rem;
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     border-radius: 50%;
     background-color: currentcolor;
   }

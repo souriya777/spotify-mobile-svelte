@@ -34,7 +34,7 @@
   .phone__island {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     z-index: var(--z-index-phone-status);
   }
 

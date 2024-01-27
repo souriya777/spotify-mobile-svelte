@@ -3,7 +3,6 @@
   import Player from '@lib/Player.svelte';
   import PlayerMini from '@lib/PlayerMini.svelte';
   import { playerFull } from '@js/store';
-
   $: style = `--transition-full: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);`;
 </script>
 
@@ -34,13 +33,13 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     transition: transform var(--transition-full);
     z-index: var(--z-index-nearest);
   }
 
   .player-nav__nav--full {
-    transform: translateY(100%);
+    transform: translate3d(0, 100%, 0);
     transition: transform var(--transition-full);
   }
 

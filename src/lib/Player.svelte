@@ -18,7 +18,7 @@
   import ProgressBar from '@lib/ProgressBar.svelte';
   import Button from '@lib/Button.svelte';
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
-  import ScrollingTitle from '@lib/ScrollingTitle.svelte';
+  import ScrollingText from '@lib/ScrollingText.svelte';
 
   const MIN_PLAYER_HEIGHT_FOR_IMG = 608;
 
@@ -56,18 +56,20 @@
       />
     </div>
     <div class="img">
-      <img src={$imageUrl} alt={$albumName} class:img--small={isPlayerTooSmall} />
+      <!-- FIXME -->
+      <!-- <img src={$imageUrl} alt={$albumName} class:img--small={isPlayerTooSmall} /> -->
     </div>
 
     <div class="song">
       <div class="song__text">
-        <ScrollingTitle isBig={true}>
-          <div class="title player-title">{$trackName}</div>
-        </ScrollingTitle>
-        <ScrollingTitle isBig={true}>
+        <ScrollingText>
+          <div class="track player-title">{$trackName}</div>
+        </ScrollingText>
+        <ScrollingText>
           <div class="artist">{$artistsDisplay}</div>
-        </ScrollingTitle>
+        </ScrollingText>
       </div>
+
       <div class="song__actions">
         {#if FIXME_favorite}
           <Button
@@ -147,6 +149,9 @@
     padding-block: var(--padding-block-player);
     padding-inline: var(--padding-inline-player);
     background-color: var(--playing-rgb);
+
+    width: 100vw;
+    border: 1px dashed white;
   }
 
   .img {
@@ -181,12 +186,14 @@
   }
 
   .song {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 4.8rem;
   }
 
   .song__text {
+    margin-inline-start: calc(-1 * var(--width-scrolling-text-blur));
     flex-grow: 1;
+    overflow: hidden;
   }
 
   .actions {

@@ -16,7 +16,7 @@
   import ProgressBar from '@lib/ProgressBar.svelte';
   import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
-  import ScrollingTitle from '@lib/ScrollingTitle.svelte';
+  import ScrollingText from '@lib/ScrollingText.svelte';
 
   const BACKGROUND_TRANSITION_MS = 200;
 
@@ -45,6 +45,7 @@
 </script>
 
 <ImgUrlColorSolver imageUrl={$imageUrl} />
+
 <div
   class="player-mini"
   {style}
@@ -62,7 +63,7 @@
     {/if}
   </div>
 
-  <ScrollingTitle>
+  <ScrollingText>
     <span class="song">{$trackName}</span>
     <span>&nbsp;&bull;&nbsp;</span>
     <span class="artist">{$artistsDisplay}</span>
@@ -72,7 +73,7 @@
         <ActiveDeviceName />
       </p>
     </svelte:fragment>
-  </ScrollingTitle>
+  </ScrollingText>
 
   <div class="device-icon">
     {#if $activeDevice?.type}

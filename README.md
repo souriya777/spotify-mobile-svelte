@@ -12,7 +12,11 @@ DRY
 ACID
 Single Source of Truth
 
-# TODO MVP
+# MVP TODO
+
+-- padding bottom standard iphone
+
+- optimize image loading
 
 - feat(api): auto-load prev/next song
 - scroll snap on image go next
@@ -77,7 +81,7 @@ Single Source of Truth
 - perf(cache): optimize it
 - perf(service-worker): invalidate when add like song ?
 
-# NOT MVP
+# ALPHA
 
 - feat(ux): can I have native vibration ? (eg. move song in queue)
 - fix(js): `removeEventListener` on store localStorage => works ???
@@ -86,6 +90,10 @@ Single Source of Truth
 - perf(player): stop observing scrolling-title when not visible ?
 - feat(whaou): use transition https://www.youtube.com/watch?v=q_2irZO4SS8
 - feat(pwa): improve "add to homescreen" installation message
+
+# BETA
+
+- ???
 
 # BONUS TODO expert-like
 
