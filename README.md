@@ -14,9 +14,10 @@ Single Source of Truth
 
 # MVP TODO
 
--- padding bottom standard iphone
+-- set padding bottom standard iphone
 
 - optimize image loading
+- feat(player-full): implement swipe bottom to reduce
 
 - feat(api): auto-load prev/next song
 - scroll snap on image go next
@@ -71,6 +72,8 @@ Single Source of Truth
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist
 
+- perf(clean): clean all listeners
+- perf(clean): clean all observers
 - perf: manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - perf(realtime) : sync when ?
 - feat(service-worker): strategy `what`, `when`
@@ -166,3 +169,6 @@ Note for `private` API :
 
 webapp more like native
 https://medium.com/swlh/how-you-can-develop-progressive-web-apps-that-feel-native-5110fbbcbf4b
+
+keep screen active (unlocked) on chrome
+https://chromestatus.com/feature/4636879949398016

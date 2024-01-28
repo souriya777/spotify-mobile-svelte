@@ -7,22 +7,19 @@
 <nav>
   <ul>
     <li>
-      <NavLink label="Home" viewName="home" isActive={'home' === $viewName}>
-        <Svg name="home" />
-        <Svg name="home-selected" slot="selected-icon" />
-      </NavLink>
+      <NavLink label="Home" viewName="home" isActive={'home' === $viewName}
+        ><Svg name="home" /><Svg name="home-selected" slot="selected-icon" /></NavLink
+      >
     </li>
     <li>
-      <NavLink label="Search" viewName="search" isActive={'search' === $viewName}>
-        <Svg name="search" />
-        <Svg name="search-selected" slot="selected-icon" />
-      </NavLink>
+      <NavLink label="Search" viewName="search" isActive={'search' === $viewName}
+        ><Svg name="search" /><Svg name="search-selected" slot="selected-icon" /></NavLink
+      >
     </li>
     <li>
-      <NavLink label="Your Library" viewName="mylib" isActive={'mylib' === $viewName}>
-        <Svg name="library" />
-        <Svg name="library-selected" slot="selected-icon" />
-      </NavLink>
+      <NavLink label="Your Library" viewName="mylib" isActive={'mylib' === $viewName}
+        ><Svg name="library" /><Svg name="library-selected" slot="selected-icon" /></NavLink
+      >
     </li>
   </ul>
 </nav>
@@ -30,7 +27,7 @@
 <style>
   nav {
     width: 100%;
-    padding-block-start: 1.6rem;
+    padding-block: 1.6rem var(--padding-bottom-phone);
     height: var(--height-nav);
     background-image: linear-gradient(
       to top,

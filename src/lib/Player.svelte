@@ -20,6 +20,8 @@
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
   import ScrollingText from '@lib/ScrollingText.svelte';
 
+  const SVG_SIZE_PRIMARY = 28;
+  const SVG_SIZE_SECONDARY = 36;
   const MIN_PLAYER_HEIGHT_FOR_IMG = 608;
 
   /** @type {HTMLElement} */
@@ -42,22 +44,21 @@
       <Button
         type="primary"
         svg="arrow-down"
-        flexJustifySvg="flex-start"
+        svgFlexJustify="flex-start"
         hasAccent={false}
         callback={minimizePlayer}
       />
-      <p>Liked Songs</p>
+      <p class="player-small">Liked Songs</p>
       <Button
         type="primary"
         svg="three-dots"
-        flexJustifySvg="flex-end"
+        svgFlexJustify="flex-end"
         hasAccent={false}
         callback={() => console.log('TODO panel')}
       />
     </div>
     <div class="img">
-      <!-- FIXME -->
-      <!-- <img src={$imageUrl} alt={$albumName} class:img--small={isPlayerTooSmall} /> -->
+      <img src={$imageUrl} alt={$albumName} class:img--small={isPlayerTooSmall} />
     </div>
 
     <div class="song">
@@ -74,13 +75,19 @@
         {#if FIXME_favorite}
           <Button
             type="secondary"
+            svgSize={SVG_SIZE_PRIMARY}
             svg="heart-full"
             hasAccent={true}
             accent={true}
             callback={() => (FIXME_favorite = false)}
           />
         {:else}
-          <Button type="secondary" svg="heart" callback={() => (FIXME_favorite = true)} />
+          <Button
+            type="secondary"
+            svgSize={SVG_SIZE_PRIMARY}
+            svg="heart"
+            callback={() => (FIXME_favorite = true)}
+          />
         {/if}
       </div>
     </div>
@@ -97,6 +104,7 @@
       <Button
         type="primary"
         svg="shuffle"
+        svgFlexJustify="flex-start"
         accent={$shuffleState}
         bottomDot={$shuffleState}
         callback={() => SpotifyApi.shuffle()}
@@ -104,23 +112,51 @@
       <Button
         type={$shuffleState ? 'secondary' : 'primary'}
         svg="backward"
+        svgSize={SVG_SIZE_SECONDARY}
+        svgFlexJustify="flex-start"
         hasAccent={false}
         canCallback={!$shuffleState}
         callback={() => SpotifyApi.previous()}
       />
+
       {#if $playing}
-        <Button type="primary" svg="pause" bubble={true} callback={() => SpotifyApi.pause()} />
+        <Button
+          type="primary"
+          svgSize={SVG_SIZE_PRIMARY}
+          svg="pause"
+          bubble={true}
+          callback={() => SpotifyApi.pause()}
+        />
       {:else}
-        <Button type="primary" svg="play" bubble={true} callback={() => SpotifyApi.play()} />
+        <Button
+          type="primary"
+          svgSize={SVG_SIZE_PRIMARY}
+          svg="play"
+          bubble={true}
+          callback={() => SpotifyApi.play()}
+        />
       {/if}
-      <Button type="primary" svg="forward" hasAccent={false} callback={() => SpotifyApi.next()} />
+      <Button
+        type="primary"
+        svg="forward"
+        svgSize={SVG_SIZE_SECONDARY}
+        svgFlexJustify="flex-end"
+        hasAccent={false}
+        callback={() => SpotifyApi.next()}
+      />
 
       {#if $repeatState === SpotifyRepeatState.OFF}
-        <Button type="primary" svg="repeat" callback={() => SpotifyApi.repeat()} />
+        <Button
+          type="primary"
+          svg="repeat"
+          svgFlexJustify="flex-end"
+          callback={() => SpotifyApi.repeat()}
+        />
       {:else if $repeatState === SpotifyRepeatState.CONTEXT}
         <Button
           type="primary"
           svg="repeat"
+          svgFlexJustify="flex-end"
           accent={true}
           bottomDot={true}
           callback={() => SpotifyApi.repeat()}
@@ -129,6 +165,7 @@
         <Button
           type="primary"
           svg="repeat-one"
+          svgFlexJustify="flex-end"
           accent={true}
           bottomDot={true}
           callback={() => SpotifyApi.repeat()}
@@ -143,15 +180,14 @@
 <style>
   .player {
     display: grid;
-    grid-template-rows: 40px 1fr 72px 60px 84px 20px;
+    /* FIXME */
+    grid-template-rows: 40px 1fr 72px 50px 84px calc(20px + var(--padding-bottom-phone));
+    grid-template-rows: 40px 6fr 72px 50px 88px 1fr;
     align-items: start;
     height: 100dvh;
     padding-block: var(--padding-block-player);
     padding-inline: var(--padding-inline-player);
     background-color: var(--playing-rgb);
-
-    width: 100vw;
-    border: 1px dashed white;
   }
 
   .img {

@@ -5,14 +5,15 @@
   export let canCallback = true;
   export let type = '';
   export let svg = null;
-  export let flexJustifySvg = 'center';
+  export let svgSize = 24;
+  export let svgFlexJustify = 'center';
   export let filled = false;
   export let hasAccent = true;
   export let accent = false;
   export let bubble = false;
   export let bottomDot = false;
 
-  $: style = `--align-svg: ${flexJustifySvg}`;
+  $: style = `--align-svg: ${svgFlexJustify}`;
 
   function handleClick() {
     if (!canCallback) {
@@ -39,7 +40,7 @@
 >
   {#if svg}
     <span class="icon">
-      <Svg name={svg} />
+      <Svg name={svg} size={svgSize} />
     </span>
   {/if}
 
@@ -82,8 +83,8 @@
   .bubble {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    height: 5.6rem;
-    width: 5.6rem;
+    height: var(--size-bubble-button);
+    width: var(--size-bubble-button);
     border-radius: 50%;
   }
 
