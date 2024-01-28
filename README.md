@@ -14,7 +14,7 @@ Single Source of Truth
 
 # MVP TODO
 
--- set padding bottom standard iphone
+- keep screen unlock
 
 - optimize image loading
 - feat(player-full): implement swipe bottom to reduce

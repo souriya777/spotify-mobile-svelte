@@ -7,19 +7,19 @@
 <nav>
   <ul>
     <li>
-      <NavLink label="Home" viewName="home" isActive={'home' === $viewName}
-        ><Svg name="home" /><Svg name="home-selected" slot="selected-icon" /></NavLink
-      >
+      <NavLink label="Home" viewName="home" isActive={'home' === $viewName}>
+        <Svg name="home" /><Svg name="home-selected" slot="selected-icon" />
+      </NavLink>
     </li>
     <li>
-      <NavLink label="Search" viewName="search" isActive={'search' === $viewName}
-        ><Svg name="search" /><Svg name="search-selected" slot="selected-icon" /></NavLink
-      >
+      <NavLink label="Search" viewName="search" isActive={'search' === $viewName}>
+        <Svg name="search" /><Svg name="search-selected" slot="selected-icon" />
+      </NavLink>
     </li>
     <li>
-      <NavLink label="Your Library" viewName="mylib" isActive={'mylib' === $viewName}
-        ><Svg name="library" /><Svg name="library-selected" slot="selected-icon" /></NavLink
-      >
+      <NavLink label="Your Library" viewName="mylib" isActive={'mylib' === $viewName}>
+        <Svg name="library" /><Svg name="library-selected" slot="selected-icon" />
+      </NavLink>
     </li>
   </ul>
 </nav>
