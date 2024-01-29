@@ -1,5 +1,5 @@
 <script>
-  import { accessToken, userId, deviceId, player, trackName } from '@js/store';
+  import { accessToken, userId, deviceId, player, trackName, isScreenLocked } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
 
   let _OPEN = true;
@@ -8,6 +8,7 @@
 <details open={_OPEN}>
   <summary>Debug</summary>
   <ul>
+    <li>🔐:{$isScreenLocked}</li>
     <li>😎:{$userId}</li>
     <li>🪙:{$accessToken?.substr(0, 8)}</li>
     <li>📱deviceId:{$deviceId?.substr(0, 8)}</li>

@@ -86,8 +86,8 @@
           widthRatio >= 92
             ? MAX_HOME_BRIGHTNESS_PERCENT
             : widthRatio <= MIN_HOME_BRIGHTNESS_PERCENT
-            ? MIN_HOME_BRIGHTNESS_PERCENT
-            : widthRatio;
+              ? MIN_HOME_BRIGHTNESS_PERCENT
+              : widthRatio;
       },
       { threshold: Array.from({ length: 100 }, (_, i) => i * 0.01) },
     );

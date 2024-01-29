@@ -50,8 +50,8 @@
     contrastColor1 && contrastColor2
       ? getPlayerBackgroundRgb(contrastColor1, contrastColor2)
       : contrastColor1 && !contrastColor2
-      ? contrastColor1
-      : [...DEFAULT_PLAYING_RGB];
+        ? contrastColor1
+        : [...DEFAULT_PLAYING_RGB];
   $: blendContrastDarkerColor = lightenDarkenColor(blendContrastColor, DARKER_FACTOR);
   $: highestColor = highestContrast(dominantColor, blendContrastColor, blendContrastDarkerColor);
   $: if (highestColor) {

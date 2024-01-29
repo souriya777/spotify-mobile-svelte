@@ -1,0 +1,105 @@
+<script>
+  import { onDestroy, onMount } from 'svelte';
+  import { isScreenLocked } from '@js/store';
+  import NoSleep from 'nosleep.js';
+
+  const REFRESH_MS = 5000;
+  const TYPE = 'screen';
+  let button;
+  let lock = null;
+  let debug = 'no lock';
+  let nosleep = new NoSleep();
+  let intervalId;
+  $: console.log(debug);
+  $: log = `${lock != null ? '🟢' : '🔴'}${debug}`;
+
+  function releaseLock() {
+    if (lock) {
+      lock.release();
+      debug = `released 🙏`;
+    }
+  }
+
+  async function requestLockScreen() {
+    requestLock();
+  }
+
+  async function requestLock() {
+    if (lock) {
+      lock.release();
+      debug = `released`;
+    }
+
+    debug = '🟡refresh';
+
+    setTimeout(async () => {
+      try {
+        lock = await navigator.wakeLock.request('screen');
+        debug = `acquired`;
+
+        lock.addEventListener('release', () => {
+          debug = `auto-released ${lock.released} `;
+          lock = null;
+        });
+      } catch (e) {
+        debug = `${e.name}: ${e.message}; Caught ${e.name} acquiring ${TYPE} lock: ${e.message}`;
+      }
+    }, REFRESH_MS);
+  }
+
+  function sleep() {
+    nosleep.disable();
+    $isScreenLocked = false;
+  }
+
+  function awake() {
+    nosleep.enable();
+    $isScreenLocked = true;
+  }
+
+  async function handleVisibilityChange() {
+    if (lock !== null && document.visibilityState === 'visible') {
+      debug = `🟢 NEW ${TYPE} lock acquired.`;
+      await requestLockScreen();
+    }
+  }
+
+  onMount(() => {
+    intervalId = setInterval(() => {
+      requestLock();
+    }, REFRESH_MS);
+  });
+
+  onDestroy(() => {
+    clearInterval(intervalId);
+  });
+</script>
+
+<svelte:window on:visibilitychange={handleVisibilityChange} />
+
+<div>
+  {log}
+  {#if lock != null}
+    <button bind:this={button} on:click={releaseLock}>🪟</button>
+  {:else}
+    <button bind:this={button} on:click={requestLockScreen}>🔒</button>
+  {/if}
+  {lock}
+
+  <div>
+    {#if $isScreenLocked}
+      <button on:click={sleep}>😴</button>
+    {:else}
+      <button on:click={awake}>🥱</button>
+    {/if}
+    {$isScreenLocked}
+  </div>
+</div>
+
+<style>
+  div {
+    background-color: black;
+    color: deeppink;
+    font-size: 10px;
+  }
+</style>

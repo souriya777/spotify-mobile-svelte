@@ -23,6 +23,7 @@ import {
   deviceId,
   volumePercent,
   realTimeProgressMs,
+  isScreenLocked,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
 import SpotifySongCursor from '@js/SpotifySongCursor';
@@ -187,11 +188,13 @@ class SpotifyApi {
 
   async play() {
     get(player).resume();
+    isScreenLocked.set(true);
     LOGGER.log('play');
   }
 
   pause() {
     get(player).pause();
+    isScreenLocked.set(false);
     LOGGER.log('pause');
   }
 
@@ -229,8 +232,8 @@ class SpotifyApi {
       currentRepeatState === SpotifyRepeatState.OFF
         ? SpotifyRepeatState.CONTEXT
         : currentRepeatState === SpotifyRepeatState.CONTEXT
-        ? SpotifyRepeatState.TRACK
-        : SpotifyRepeatState.OFF;
+          ? SpotifyRepeatState.TRACK
+          : SpotifyRepeatState.OFF;
 
     this.#put(`/me/player/repeat?state=${newRepeatState}`);
 

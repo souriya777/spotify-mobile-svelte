@@ -1,12 +1,11 @@
 <script>
-  import UiProxy from '@lib/UiProxy.svelte';
   import { playingRgb, playerFull } from '@js/store';
+  import UiProxy from '@lib/UiProxy.svelte';
 
   $: rgb = `rgb(${$playingRgb.join(',')})`;
   $: style = `--playing-rgb: ${rgb};`;
 </script>
 
-<!-- TODO MOVE -->
 <svelte:head>
   <meta name="theme-color" content={$playerFull ? rgb : 'var(--color-primary)'} />
 </svelte:head>

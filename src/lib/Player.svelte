@@ -19,6 +19,7 @@
   import Button from '@lib/Button.svelte';
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
   import ScrollingText from '@lib/ScrollingText.svelte';
+  import LockScreen from '@lib/LockScreen.svelte';
 
   const SVG_SIZE_PRIMARY = 28;
   const SVG_SIZE_SECONDARY = 36;
@@ -173,16 +174,17 @@
       {/if}
     </div>
 
-    <ActiveDeviceName bigIcon={true} />
+    <div>
+      <ActiveDeviceName bigIcon={true} />
+      <LockScreen />
+    </div>
   </div>
 {/key}
 
 <style>
   .player {
     display: grid;
-    /* FIXME */
-    grid-template-rows: 40px 1fr 72px 50px 84px calc(20px + var(--padding-bottom-phone));
-    grid-template-rows: 40px 6fr 72px 50px 88px 1fr;
+    grid-template-rows: 4rem 6fr 7.2rem 5rem 8.8rem 1fr;
     align-items: start;
     height: 100dvh;
     padding-block: var(--padding-block-player);

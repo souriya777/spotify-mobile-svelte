@@ -6,7 +6,7 @@
       "@js": ["./src/js"],
       "@js/*": ["./src/js/*"],
       "@lib": ["./src/lib"],
-      "@lib/*": ["./src/lib/*"]
+      "@lib/*": ["./src/lib/*"],
     },
     "moduleResolution": "bundler",
     "target": "ESNext",
@@ -30,11 +30,11 @@
      * Typecheck JS in `.svelte` and `.js` files by default.
      * Disable this if you'd like to use dynamic types.
      */
-    "checkJs": true
+    "checkJs": true,
   },
   /**
    * Use global.d.ts instead of compilerOptions.types
    * to avoid limiting type declarations.
    */
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "public/service-worker.js"]
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "public/service-worker.js"],
 }

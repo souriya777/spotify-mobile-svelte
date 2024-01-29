@@ -14,7 +14,11 @@ Single Source of Truth
 
 # MVP TODO
 
-- keep screen unlock
+- keep screen unlock => not work in standalone mode
+
+  --font-s
+
+  - fix blur title end (slightly "eaten")
 
 - optimize image loading
 - feat(player-full): implement swipe bottom to reduce
