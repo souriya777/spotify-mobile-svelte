@@ -31,6 +31,7 @@ Single Source of Truth
 - option menu three-dots ?
   -- PanelFromBottom.svelteSAVE
 
+- disconnect other player to make it more robust
 - feat(player) : shuffle on several playlist
 - feat(button): use use:onTap
 - utiliser le view transition API à la "svelte menu"
