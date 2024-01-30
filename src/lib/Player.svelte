@@ -11,7 +11,6 @@
     realTimeProgressMs,
     durationMs,
     resizeTimestamp,
-    uiFakeTouch,
   } from '@js/store';
   import { millisToMinuteSecond } from '@js/time-utils';
   import SpotifyApi from '@js/SpotifyApi';
@@ -20,7 +19,6 @@
   import Button from '@lib/Button.svelte';
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
   import ScrollingText from '@lib/ScrollingText.svelte';
-  import NoSleepScreenHack from '@lib/NoSleepScreenHack.svelte';
 
   const SVG_SIZE_PRIMARY = 28;
   const SVG_SIZE_SECONDARY = 36;
@@ -177,10 +175,6 @@
 
     <div>
       <ActiveDeviceName bigIcon={true} />
-      <div class="no-sleep-screen-hack">
-        <NoSleepScreenHack />
-      </div>
-      uiFakeTouch:{$uiFakeTouch}
     </div>
   </div>
 {/key}

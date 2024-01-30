@@ -1,5 +1,5 @@
 <script>
-  import { activeDevice, uiFakeTouch } from '@js/store';
+  import { activeDevice } from '@js/store';
   import DeviceIcon from './DeviceIcon.svelte';
 
   export let bigIcon = false;
@@ -11,7 +11,7 @@
     <span class="active-device-name__listen">
       <DeviceIcon big={bigIcon} />
     </span>
-    {$activeDevice.name} ({$uiFakeTouch})
+    {$activeDevice.name}
   {:else}
     &nbsp;
   {/if}

@@ -121,9 +121,6 @@ function removeView() {
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
-// FIXME
-const isScreenLocked = writable(false);
-const uiFakeTouch = writable(false);
 
 // FILTER
 const displayTrackOn = writable(true);
@@ -170,8 +167,6 @@ export {
   addView,
   removeView,
   playingRgb,
-  isScreenLocked,
-  uiFakeTouch,
   uiTimestamp,
   resizeTimestamp,
   displayTrackOn,
