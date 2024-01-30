@@ -16,12 +16,20 @@
   src: url('/circularsp-title-bold.woff2') format('woff2');
 }
 
-.player-title {
+.font-player-title {
   font-family: 'circularsp-title-bold';
   font-size: 2.4rem;
   line-height: normal;
 }
 
-.player-small {
+.font-player-small {
   font-size: 1.2rem;
+}
+
+.font-player-mini {
+  font-size: 1.3rem;
+}
+
+.font-player-mini__device {
+  font-size: 1.1rem;
 }

@@ -1,6 +1,7 @@
 <script>
-  import { playingRgb, playerFull } from '@js/store';
+  import { playingRgb, playerFull, imageBigUrl } from '@js/store';
   import UiProxy from '@lib/UiProxy.svelte';
+  import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
 
   $: rgb = `rgb(${$playingRgb.join(',')})`;
   $: style = `--playing-rgb: ${rgb};`;
@@ -11,6 +12,7 @@
 </svelte:head>
 
 <div class="screen" {style}>
+  <ImgUrlColorSolver imageUrl={$imageBigUrl} />
   <UiProxy></UiProxy>
 </div>
 

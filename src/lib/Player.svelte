@@ -2,7 +2,7 @@
   import {
     trackName,
     albumName,
-    imageUrl,
+    imageCoverUrl,
     artistsDisplay,
     shuffleState,
     repeatState,
@@ -48,7 +48,7 @@
         hasAccent={false}
         callback={minimizePlayer}
       />
-      <p class="player-small">Liked Songs</p>
+      <p class="font-player-small">Liked Songs</p>
       <Button
         type="primary"
         svg="three-dots"
@@ -58,13 +58,13 @@
       />
     </div>
     <div class="img">
-      <img src={$imageUrl} alt={$albumName} class:img--small={isPlayerTooSmall} />
+      <img src={$imageCoverUrl} alt={$albumName} class:img--small={isPlayerTooSmall} />
     </div>
 
     <div class="song">
       <div class="song__text">
         <ScrollingText>
-          <div class="track player-title">{$trackName}</div>
+          <div class="track font-player-title">{$trackName}</div>
         </ScrollingText>
         <ScrollingText>
           <div class="artist">{$artistsDisplay}</div>
@@ -94,7 +94,7 @@
 
     <div class="progress">
       <ProgressBar />
-      <div class="time player-small">
+      <div class="time font-player-small">
         <div class="begin">{progress_m_ss}</div>
         <div class="end">{duration_m_ss}</div>
       </div>
@@ -192,13 +192,12 @@
 
   .img {
     align-self: center;
-    /* max-width: 36rem; */
   }
 
   img {
     margin-inline: auto;
-    border-radius: 1rem;
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    border-radius: var(--border-radius-cover-img);
+    filter: var(--shadow-player);
   }
 
   .img--small {

@@ -5,13 +5,15 @@
   export let bigIcon = false;
 </script>
 
-<div class="active-device-name" class:player-small={bigIcon}>
+<div class="active-device-name" class:font-player-small={bigIcon}>
   {#if $activeDevice?.name}
     &nbsp;
     <span class="active-device-name__listen">
       <DeviceIcon big={bigIcon} />
     </span>
-    {$activeDevice.name}
+    <span class="text">
+      {$activeDevice.name}
+    </span>
   {:else}
     &nbsp;
   {/if}

@@ -1,7 +1,7 @@
 <script>
   import SpotifyApi from '@js/SpotifyApi';
   import {
-    imageUrl,
+    imageMiniUrl,
     albumName,
     playing,
     activeDevice,
@@ -14,7 +14,6 @@
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
   import ProgressBar from '@lib/ProgressBar.svelte';
-  import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
   import ScrollingText from '@lib/ScrollingText.svelte';
 
@@ -44,10 +43,8 @@
   }
 </script>
 
-<ImgUrlColorSolver imageUrl={$imageUrl} />
-
 <div
-  class="player-mini"
+  class="player-mini font-player-mini"
   {style}
   role="button"
   tabindex="0"
@@ -56,26 +53,26 @@
   bind:this={playerMiniHtml}
 >
   <div class="img">
-    {#if $imageUrl}
-      <Img src={$imageUrl} alt={$albumName} />
+    {#if $imageMiniUrl}
+      <Img src={$imageMiniUrl} alt={$albumName} />
     {:else}
       <Svg name="default-image" />
     {/if}
   </div>
 
-  <ScrollingText>
+  <ScrollingText customStyle={`margin-block-start: -0.2rem`}>
     <span class="song">{$trackName}</span>
-    <span>&nbsp;&bull;&nbsp;</span>
+    <span class="bull">&nbsp;&bull;&nbsp;</span>
     <span class="artist">{$artistsDisplay}</span>
 
     <svelte:fragment slot="bottom">
-      <p class="device-name">
+      <p class="device-name font-player-mini__device">
         <ActiveDeviceName />
       </p>
     </svelte:fragment>
   </ScrollingText>
 
-  <div class="device-icon">
+  <div class="device">
     {#if $activeDevice?.type}
       <Button
         type="primary"
@@ -102,44 +99,62 @@
 </div>
 
 <style>
+  :root {
+    --player-mini-img-size: 4rem;
+    --player-mini-img-padding-block-start: 0.4rem;
+  }
+
   .player-mini {
     display: grid;
-    grid-template-columns: 4.6rem 1fr 4rem 4rem;
-    grid-template-rows: 1fr 0.2rem;
+    grid-template-columns: var(--player-mini-img-size) 1fr 4rem 4rem;
+    grid-template-rows: 1fr var(--height-progressbar-mini);
     align-items: center;
     height: var(--height-player-mini);
     margin-inline: var(--padding-space-player);
+    padding-inline: 0.8rem;
+    padding-block-start: 0.6rem;
     border-radius: 0.8rem;
     background-color: var(--playing-rgb);
-    font-size: var(--font-s);
     overflow: hidden;
     transition: background-color var(--transition-background);
   }
 
   .img {
-    position: relative;
     display: flex;
-    padding-inline-start: var(--padding-space-player);
+    justify-content: center;
+    align-items: center;
   }
 
-  .device-icon {
-    position: relative;
-    display: flex;
+  .img {
+    padding-block-end: var(--player-mini-img-padding-block-start);
+    height: calc(var(--player-mini-img-size) + var(--player-mini-img-padding-block-start));
+    width: auto;
+    filter: var(--shadow-player);
   }
 
-  .device-icon,
+  .device {
+    position: relative;
+    display: flex;
+    margin-block-start: -0.4rem;
+  }
+
+  .action {
+    margin-block-start: -0.2rem;
+  }
+
+  .device,
   .action {
     display: flex;
   }
 
-  .device-icon,
+  .device,
   .action {
     height: 100%;
   }
 
   .player-mini__progressbar {
     grid-column: 1 / span 4;
-    width: calc(100% - 1.6rem);
+    width: calc(100% - 0.1rem);
     margin-inline: auto;
   }
 

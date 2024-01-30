@@ -20,7 +20,7 @@
 
 <style>
   .player-nav {
-    height: var(--height-nav);
+    height: 0;
     transition: height var(--transition-full);
   }
 

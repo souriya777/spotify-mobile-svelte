@@ -144,7 +144,7 @@
   }
 
   .progressbarMini .progress {
-    height: 0.2rem;
+    height: var(--height-progressbar-mini);
     transform-origin: left;
     transform: scale(0);
   }

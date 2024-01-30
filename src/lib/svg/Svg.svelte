@@ -66,9 +66,8 @@
   </svg>
 {:else if 'pause' === name.toLocaleLowerCase()}
   <svg {...SVG_PROPERTIES} viewBox="0 0 24 24">
-    <path
-      d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"
-    ></path>
+    <rect x="5" y="3" width="4" height="18" rx="1.2" fill="currentColor" />
+    <rect x="15" y="3" width="4" height="18" rx="1.2" fill="currentColor" />
   </svg>
 {:else if 'computer' === name.toLocaleLowerCase()}
   <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">

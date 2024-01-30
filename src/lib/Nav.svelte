@@ -30,10 +30,10 @@
     padding-block: 1.6rem var(--padding-bottom-phone);
     height: var(--height-nav);
     background-image: linear-gradient(
-      to top,
-      rgba(18, 18, 18, 1) 45%,
-      rgba(18, 18, 18, 0.98) 80%,
-      rgba(18, 18, 18, 0.99)
+      to bottom,
+      rgba(18, 18, 18, 0.98) 20%,
+      rgba(18, 18, 18, 0.99) 40%,
+      rgba(18, 18, 18, 1)
     );
   }
 

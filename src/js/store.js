@@ -16,7 +16,9 @@ const trackUri = writable('');
 const trackName = writable('');
 const albumUri = writable('');
 const albumName = writable('');
-const imageUrl = writable('');
+const imageMiniUrl = writable('');
+const imageCoverUrl = writable('');
+const imageBigUrl = writable('');
 /** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyArtist[]>} */
 const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
@@ -145,7 +147,9 @@ export {
   trackName,
   albumName,
   albumUri,
-  imageUrl,
+  imageMiniUrl,
+  imageCoverUrl,
+  imageBigUrl,
   artists,
   artistsDisplay,
   shuffleState,

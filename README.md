@@ -14,24 +14,16 @@ Single Source of Truth
 
 # MVP TODO
 
-- keep screen unlock => not work in standalone mode
-
-  --font-s
-
-  - fix blur title end (slightly "eaten")
-
-- optimize image loading
 - feat(player-full): implement swipe bottom to reduce
-
 - feat(api): auto-load prev/next song
 - scroll snap on image go next
-
-- which api call to know if a song is in favourite ?
-
 - option menu three-dots ?
   -- PanelFromBottom.svelteSAVE
 
+- can switch device `ChangeDevice.svelte`
 - disconnect other player to make it more robust
+- which api call to know if a song is in favourite ?
+
 - feat(player) : shuffle on several playlist
 - feat(button): use use:onTap
 - utiliser le view transition API à la "svelte menu"
@@ -73,6 +65,7 @@ Single Source of Truth
 - spotify bug "recently-added" order
 - implement accessibility (eg. `aria-hidden`)
 - perf(img): lazy load images
+- perf(img): in service-worker ?
 - fix `BetaLikedImg`
 - 🚀 EXTRA : tag liked songs
 - 🚀 EXTRA : shuffle from all playlist
@@ -177,3 +170,5 @@ https://medium.com/swlh/how-you-can-develop-progressive-web-apps-that-feel-nativ
 
 keep screen active (unlocked) on chrome
 https://chromestatus.com/feature/4636879949398016
+
+no-sleep-screen: no hack works with svelte PWA in standalone mode, on iOS

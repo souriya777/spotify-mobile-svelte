@@ -1,6 +1,8 @@
 <script>
   import { trackName, artistsDisplay, playingRgb, trackUri } from '@js/store';
 
+  export let customStyle = '';
+
   const SPEED_RATIO = 17;
   const SPEED_RATIO_SMALL = 10;
   const BACKGROUND_TRANSITION_MS = 200;
@@ -9,8 +11,9 @@
   let textHtml;
   let blurColor = '';
   let oldPlayingRgb;
-  let canScroll = false;
+  $: canScroll = false;
 
+  $: canAnimate = translateWidth > 0;
   $: canScrollReverse = !canScroll;
   $: visibleWidth = textHtml?.clientWidth ?? 0;
   $: totalWidth = textHtml?.scrollWidth ?? 0;
@@ -22,6 +25,7 @@
     ${blurColor};
     --translate-width: -${translateWidth}px;
     --animation-duration: ${animationDuration}s;
+    ${customStyle};
   `;
 
   $: if (oldPlayingRgb !== $playingRgb) {
@@ -70,9 +74,10 @@
   <div class="scrolling-text" {style} use:observeText>
     <div
       class="text"
+      class:canAnimate
+      class:canScroll={canAnimate && canScroll}
+      class:canScrollReverse={canAnimate && canScrollReverse}
       bind:this={textHtml}
-      class:canScroll
-      class:canScrollReverse
       on:animationend={animationend}
     >
       {#if $trackName && $artistsDisplay}
@@ -122,11 +127,17 @@
 
   .text {
     display: flex;
-    padding-inline-start: calc(var(--padding-space-player) + var(--width-scrolling-text-blur));
+    padding-inline-start: calc(var(--width-scrolling-text-blur));
     white-space: nowrap;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
 
+  .bottom {
+    padding-inline-start: calc(var(--width-scrolling-text-blur) - 0.3rem);
+  }
+
+  .canAnimate {
     animation-duration: var(--animation-duration);
     animation-delay: 2s;
     animation-fill-mode: forwards;
@@ -140,10 +151,6 @@
   .canScrollReverse {
     animation-name: scrollTextReverse;
     animation-fill-mode: backwards;
-  }
-
-  .bottom {
-    padding-inline-start: var(--width-scrolling-text-blur);
   }
 
   @keyframes scrollText {

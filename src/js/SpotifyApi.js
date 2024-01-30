@@ -11,7 +11,9 @@ import {
   trackUri,
   trackName,
   albumName,
-  imageUrl,
+  imageMiniUrl,
+  imageCoverUrl,
+  imageBigUrl,
   artists,
   shuffleState,
   repeatState,
@@ -23,7 +25,6 @@ import {
   deviceId,
   volumePercent,
   realTimeProgressMs,
-  isScreenLocked,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
 import SpotifySongCursor from '@js/SpotifySongCursor';
@@ -188,13 +189,11 @@ class SpotifyApi {
 
   async play() {
     get(player).resume();
-    isScreenLocked.set(true);
     LOGGER.log('play');
   }
 
   pause() {
     get(player).pause();
-    isScreenLocked.set(false);
     LOGGER.log('pause');
   }
 
@@ -587,7 +586,12 @@ class SpotifyApi {
     durationMs.set(track?.duration_ms);
     albumName.set(track?.album?.name);
     artists.set(track?.artists);
-    imageUrl.set(track?.album?.images?.at(0).url);
+    const imagesSortBySizeAsc = track?.album?.images?.sort((a, b) => a.width - b.width);
+    if (imagesSortBySizeAsc) {
+      imageMiniUrl.set(imagesSortBySizeAsc.at(0).url);
+      imageCoverUrl.set(imagesSortBySizeAsc.at(1).url);
+      imageBigUrl.set(imagesSortBySizeAsc.at(2).url);
+    }
   }
 
   async #iterateOverCursor(endpoint, cursorType) {
