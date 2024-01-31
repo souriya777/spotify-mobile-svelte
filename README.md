@@ -14,79 +14,84 @@ Single Source of Truth
 
 # MVP TODO
 
-- 🔴feat(bottom-panel): design it
-  -- add player-full inside
-  -- swipe player-full bottom to reduce
-- feat(bottom-panel): add blur option
-- option menu three-dots ?
-
-- feat(api): auto-load prev/next song
-- scroll snap on image go next
-
-- can switch device `ChangeDevice.svelte`
-- disconnect other player to make it more robust
-- which api call to know if a song is in favourite ?
-
-- feat(player) : shuffle on several playlist
-- feat(button): use use:onTap
-- utiliser le view transition API à la "svelte menu"
-- feat(ui): add waiting visual indication when fetching is too long
-- feat(mylib): can select other song
-- feat(search): design
-- feat(queue): design
-  -- feat(player): what is default queue ?
-  -- extract track_window next_tracks ?
-- perf(lazy-load): view in order to optimize processing ?
-- how puting `karaoke` at first ?
-- feat(service-worker): automate `swVersion` when building app ?
-- force refresh by reload '/'
-- found in code where can I use `isEmpty` from `string-utils`
-- test `synchronize`... hard...
-- ERRORS feat(spotify-api): implement quota-limit with code `429`
-- feat(ui): add splash screens
-- remove old solver
-- fix(img): <ImageSolver> -> `getDominantColor`
-- TODO/FIXME uncomment
+- feat(playlist): adopt old code to new
+- feat(playlist): how puting `karaoke` at first ?
+- fix(playlist): spotify bug "recently-added" order
+- feat(playlist): can delete playlist
+- feat(playlist): make scroll lib by date ?
+- feat(playlist): can add to queue
+- feat(playlist): can favorite song
+- feat(album): can see my albums list
+- feat(album): can view album details
+- feat(album): can play a song
+- feat(album): can add to queue
+- feat(album): can remove album from my favorite
+- feat(album): can favorite song
+- feat(liked-song): which api call to know if a song is in favourite ?
+- feat(liked-song): can unlike song
+- feat(device): can switch device `ChangeDevice.svelte`
+- feat(device): disconnect other player to make it more robust
+- feat(device): can manage other players
+- feat(search): tune it
+- feat(search): manage back search in browser (no dependent of char by char input)
+- feat(search): can favourite playlist
+- feat(search): can favourite album
+- feat(search): can favourite song
+- feat(queue): design it
+  - feat(queue): what is default queue ?
+  - feat(queue): can remove song
+  - feat(queue): can clear queue
+  - feat(queue): extract track_window next_tracks ?
+  - feat(queue): can auto-load queue
+- feat(playlist/album): scroll snap on image go next song
+- feat(menu): design it
+- feat(menu): useview transition API as "svelte.dev menu"
+- feat(router): one stack views by `route` ? use Router.svelte ?
 - feat(app): add a direct shortcut
 - feat(logout): can logout
-- feat(ui): one stack views by `route` ? use Router.svelte ?
-- feat(browser): manage back search (no dependent of char by char input)
-- can't delete playlist...
-- playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
-- fix in `SpotifyApi.test.js`
-  `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
-- feat(player): can manage other players
+- feat(player): pause écouteurs bluetooth ?
 - fix(spotify-connect): only a single instance in devices...
 - feat(player): load song in advance ?
-- feat(loading) : add spotify logo (ball)
-- pause écouteurs bluetooth ?
-- make scroll lib by date ?
-- feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
 - feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
-- 🟢//learn.svelte.dev/tutorial/updating-arrays-and-objects
-  "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
-- spotify bug "recently-added" order
-- implement accessibility (eg. `aria-hidden`)
-- perf(img): lazy load images
-- perf(img): in service-worker ?
-- fix `BetaLikedImg`
-- 🚀 EXTRA : tag liked songs
-- 🚀 EXTRA : shuffle from all playlist
+- feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
 
+- //learn.svelte.dev/tutorial/updating-arrays-and-objects
+  "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
+- fix(test): playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
+- fix(eslint): resolve problems shown in vscode
+- fix in `SpotifyApi.test.js`
+  `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
+- fix `BetaLikedImg`
+- fix(img): <ImageSolver> -> `getDominantColor`
+- TODO/FIXME uncomment
+- ux(loading) : add spotify logo (ball)
+- ui(accessibility): implement accessibility (eg. `aria-hidden`) ?
+- refactor(solver): remove old solver
+- refactor(button): use use:onTap
+- refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
+- perf(api): ERRORS feat(spotify-api): implement quota-limit with code `429`
+- perf(song): auto-load prev/next song
 - perf(clean): clean all listeners
 - perf(clean): clean all observers
+- perf(img): lazy load images
+- perf(img): in service-worker ?
+- perf(lazy-load): view in order to optimize processing ?
 - perf: manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - perf(realtime) : sync when ?
-- feat(service-worker): strategy `what`, `when`
+- perf(service-worker): strategy `what`, `when`
 - perf(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?
   -- invalid cache, when rename playlist
   -- invalid cache, when create playlist
 - perf(cache): optimize it
 - perf(service-worker): invalidate when add like song ?
+- ci(service-worker): automate `swVersion` when building app ?
 
 # ALPHA
 
+- 🚀 EXTRA : tag liked songs
+- 🚀 EXTRA : shuffle from all playlist
+- feat(options): design it
 - feat(ux): can I have native vibration ? (eg. move song in queue)
 - fix(js): `removeEventListener` on store localStorage => works ???
 - use svelte `animation` ?
@@ -97,7 +102,8 @@ Single Source of Truth
 
 # BETA
 
-- ???
+- deploy on PROD too
+- player-mini: when swipe up, swipe player-full ?
 
 # BONUS TODO expert-like
 

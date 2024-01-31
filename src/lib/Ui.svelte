@@ -40,7 +40,7 @@
   let homeBrightness = MAX_HOME_BRIGHTNESS_PERCENT;
   let brightnessObserver;
 
-  $: VIEW_WIDTH = VIEWS_HTML ? VIEWS_HTML.clientWidth : 0;
+  $: VIEW_WIDTH = VIEWS_HTML?.clientWidth ?? 0;
   $: CURRENT_ID = $VIEWS[viewPosition]?.id;
   $: PREV_ID = $VIEWS[viewPosition - 1]?.id;
   $: NEXT_ID = $VIEWS[viewPosition + 1]?.id;
@@ -330,13 +330,7 @@
 
     $uiTimestamp = getTimestamp();
   }
-
-  function handleResize() {
-    $resizeTimestamp = getTimestamp();
-  }
 </script>
-
-<svelte:window on:resize={handleResize} />
 
 <!-- TO DEBUG -->
 <code>

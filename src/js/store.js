@@ -123,6 +123,7 @@ function removeView() {
 }
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
+const screenHeight = writable(0);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 
 // FILTER
@@ -175,6 +176,7 @@ export {
   playingRgb,
   uiTimestamp,
   resizeTimestamp,
+  screenHeight,
   displayTrackOn,
   displayArtistOn,
   displayPlaylistOn,

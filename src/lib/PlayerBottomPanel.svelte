@@ -1,5 +1,5 @@
 <script>
-  import { playerFull } from '@js/store';
+  import { playerFull, optionsFull } from '@js/store';
   import Player from '@lib/Player.svelte';
   import BottomPanel from '@lib/BottomPanel.svelte';
 
@@ -13,6 +13,11 @@
   }
 </script>
 
-<BottomPanel bind:openBottomPanelForMe bind:closeBottomPanelForMe>
+<BottomPanel
+  blur={$optionsFull}
+  callbackAfterClose={() => ($playerFull = false)}
+  bind:openBottomPanelForMe
+  bind:closeBottomPanelForMe
+>
   <Player />
 </BottomPanel>

@@ -13,6 +13,11 @@
   }
 </script>
 
-<BottomPanel bind:openBottomPanelForMe bind:closeBottomPanelForMe>
+<BottomPanel
+  bounce={true}
+  callbackAfterClose={() => ($optionsFull = false)}
+  bind:openBottomPanelForMe
+  bind:closeBottomPanelForMe
+>
   <Options />
 </BottomPanel>

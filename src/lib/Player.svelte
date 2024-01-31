@@ -1,8 +1,6 @@
 <script>
   import {
     trackName,
-    albumName,
-    imageCoverUrl,
     artistsDisplay,
     shuffleState,
     repeatState,
@@ -20,17 +18,15 @@
   import Button from '@lib/Button.svelte';
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
   import ScrollingText from '@lib/ScrollingText.svelte';
+  import ImgCover from '@lib/ImgCover.svelte';
 
   const SVG_SIZE_PRIMARY = 28;
   const SVG_SIZE_SECONDARY = 36;
-  const MIN_PLAYER_HEIGHT_FOR_IMG = 608;
 
   /** @type {HTMLElement} */
   let playerHtml;
   let FIXME_favorite = false;
 
-  $: playerHeight = playerHtml ? playerHtml.clientHeight : 0;
-  $: isPlayerTooSmall = playerHtml && playerHeight <= MIN_PLAYER_HEIGHT_FOR_IMG;
   $: progress_m_ss = millisToMinuteSecond($realTimeProgressMs);
   $: duration_m_ss = `-${millisToMinuteSecond($durationMs - $realTimeProgressMs)}`;
 
@@ -58,9 +54,8 @@
         callback={() => ($optionsFull = true)}
       />
     </div>
-    <div class="img">
-      <img src={$imageCoverUrl} alt={$albumName} class:img--small={isPlayerTooSmall} />
-    </div>
+
+    <ImgCover />
 
     <div class="song">
       <div class="song__text">
@@ -189,21 +184,6 @@
     padding-block: var(--padding-block-player);
     padding-inline: var(--padding-inline-player);
     background-color: var(--playing-rgb);
-  }
-
-  .img {
-    align-self: center;
-  }
-
-  img {
-    margin-inline: auto;
-    border-radius: var(--border-radius-cover-img);
-    filter: var(--shadow-player);
-  }
-
-  .img--small {
-    max-width: 80%;
-    transition: max-width ease 250ms;
   }
 
   .bar {
