@@ -23,7 +23,8 @@
 </div>
 
 <style>
-  .isAnotherDeviceActive {
+  /* FIXME */
+  /* .isAnotherDeviceActive {
     background-color: var(--color-active);
-  }
+  } */
 </style>

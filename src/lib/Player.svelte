@@ -8,6 +8,7 @@
     repeatState,
     playing,
     playerFull,
+    optionsFull,
     realTimeProgressMs,
     durationMs,
     resizeTimestamp,
@@ -54,7 +55,7 @@
         svg="three-dots"
         svgFlexJustify="flex-end"
         hasAccent={false}
-        callback={() => console.log('TODO panel')}
+        callback={() => ($optionsFull = true)}
       />
     </div>
     <div class="img">

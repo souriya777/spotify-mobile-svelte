@@ -12,7 +12,7 @@
   --size-bubble-button: 6.4rem;
   --height-nav: 9.2rem;
   --height-player-mini: 5.8rem;
-  --height-progressbar-mini: .2rem;
+  --height-progressbar-mini: 0.2rem;
   --width-scrolling-text-blur: 1rem;
 
   --padding-bottom-phone: 4.4rem;
@@ -21,11 +21,12 @@
   --padding-space-player: 0.6rem;
 
   --border-radius-cover-img: 1rem;
-  --border-radius-mini-img: .4rem
+  --border-radius-mini-img: 0.4rem --shadow-player: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3))
+    drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  --transition-bottom-panel: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
 
-  --shadow-player: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));;
-
-  --z-index-nearest: 1;
+  --z-index-near: 1;
+  --z-index-nearest: 2;
 }
 
 html {

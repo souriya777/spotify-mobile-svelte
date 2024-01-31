@@ -104,7 +104,7 @@
     content: '';
     height: 100%;
     width: var(--width-scrolling-text-blur);
-    z-index: var(--z-index-nearest);
+    z-index: var(--z-index-near);
   }
 
   .scrolling-text::before {

@@ -14,11 +14,14 @@ Single Source of Truth
 
 # MVP TODO
 
-- feat(player-full): implement swipe bottom to reduce
+- 🔴feat(bottom-panel): design it
+  -- add player-full inside
+  -- swipe player-full bottom to reduce
+- feat(bottom-panel): add blur option
+- option menu three-dots ?
+
 - feat(api): auto-load prev/next song
 - scroll snap on image go next
-- option menu three-dots ?
-  -- PanelFromBottom.svelteSAVE
 
 - can switch device `ChangeDevice.svelte`
 - disconnect other player to make it more robust

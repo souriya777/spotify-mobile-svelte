@@ -46,6 +46,7 @@ const scrollTop = writable(0);
 // PLAYER
 const player = writable(null);
 const playerFull = writable(false);
+const optionsFull = writable(false);
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const playing = writable(false);
@@ -143,6 +144,7 @@ export {
   deviceId,
   player,
   playerFull,
+  optionsFull,
   trackUri,
   trackName,
   albumName,

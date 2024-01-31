@@ -1,10 +1,12 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { VIEWS, uiTimestamp, resizeTimestamp } from '@js/store';
   import { canRemoveView, loadView, isHomeView, isSideMenuView } from '@js/view-utils';
   import { getTimestamp } from '@js/date-utils';
   import { getTranslateXY } from '@js/browser-utils';
-  import PlayerNav from '@lib/PlayerNav.svelte';
-  import { VIEWS, uiTimestamp, resizeTimestamp } from '@js/store';
+  import PlayerMiniNav from '@lib/PlayerMiniNav.svelte';
+  import PlayerBottomPanel from '@lib/PlayerBottomPanel.svelte';
+  import OptionsBottomPanel from '@lib/OptionsBottomPanel.svelte';
 
   export const slidePrevAndRemoveForMe = () => (isRemovingView = true);
   export const addAndSlideNextForMe = () => (isAddingView = true);
@@ -364,8 +366,17 @@
       {/key}
     </ul>
   {/key}
+
   <div class="fixed" bind:this={FIXED_HTML}>
-    <PlayerNav />
+    <PlayerMiniNav />
+  </div>
+
+  <div class="fixed">
+    <PlayerBottomPanel />
+  </div>
+
+  <div class="fixed">
+    <OptionsBottomPanel />
   </div>
 </div>
 
@@ -402,7 +413,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: var(--z-index-nearest);
+    z-index: var(--z-index-near);
   }
 
   .isSliding {
