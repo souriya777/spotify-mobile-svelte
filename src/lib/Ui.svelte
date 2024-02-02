@@ -333,11 +333,11 @@
 </script>
 
 <!-- TO DEBUG -->
-<code>
+<!-- <code>
   isViewsSyncWithDOM:{isViewsSyncWithDOM}-{$VIEWS.length}-{Object.keys(VIEWS_BIND).length}
   viewPosition:{viewPosition}
   bind:{Object.keys(VIEWS_BIND)}
-</code>
+</code> -->
 
 <div
   class="ui"

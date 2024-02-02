@@ -10,7 +10,7 @@
   $: if (SCREEN_HTML?.clientHeight) {
     $screenHeight = SCREEN_HTML.clientHeight;
   }
-  $: rgb = `rgb(${$playingRgb.join(',')})`;
+  $: rgb = $playerFull ? `rgb(${$playingRgb.join(',')})` : 'var(--color-primary)';
   $: style = `--playing-rgb: ${rgb};`;
 
   function handleResize() {
@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-  <meta name="theme-color" content={$playerFull ? rgb : 'var(--color-primary)'} />
+  <meta name="theme-color" content={rgb} />
 </svelte:head>
 
 <svelte:window on:resize={handleResize} />

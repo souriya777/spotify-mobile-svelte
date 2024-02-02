@@ -10,6 +10,8 @@ const authorizationOk = writableLocalStorage('authorizationOk', false);
 
 // USER
 const userId = writableLocalStorage('userId', '');
+const userDisplayName = writableLocalStorage('userDisplayName', '');
+const userPictureUrl = writableLocalStorage('userPictureUrl', '');
 
 // SPOTIFY ITEMS
 const trackUri = writable('');
@@ -141,6 +143,8 @@ const displayFilter = createDisplayFilter();
 export {
   accessToken,
   userId,
+  userDisplayName,
+  userPictureUrl,
   authorizationOk,
   deviceId,
   player,

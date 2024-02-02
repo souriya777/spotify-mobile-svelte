@@ -14,6 +14,9 @@ Single Source of Truth
 
 # MVP TODO
 
+-- feat(profile): add profile user image
+-- add background-transparent on Iphone Island when OPTIONS
+
 - feat(playlist): adopt old code to new
 - feat(playlist): how puting `karaoke` at first ?
 - fix(playlist): spotify bug "recently-added" order
@@ -69,6 +72,8 @@ Single Source of Truth
 - refactor(solver): remove old solver
 - refactor(button): use use:onTap
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
+- perf(user-profile): picture in cache ?
+- perf(user-profile): user info in cache ?
 - perf(api): ERRORS feat(spotify-api): implement quota-limit with code `429`
 - perf(song): auto-load prev/next song
 - perf(clean): clean all listeners

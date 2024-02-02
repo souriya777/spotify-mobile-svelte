@@ -25,6 +25,8 @@ import {
   deviceId,
   volumePercent,
   realTimeProgressMs,
+  userPictureUrl,
+  userDisplayName,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
 import SpotifySongCursor from '@js/SpotifySongCursor';
@@ -109,6 +111,11 @@ class SpotifyApi {
     const data = await this.#get('/me');
     const user = new SpotifyUser(data);
     userId.set(user?.id);
+    userDisplayName.set(user?.display_name);
+    const url = user?.images?.sort((a, b) => a.width - b.width)?.at(0)?.url;
+    if (url) {
+      userPictureUrl.set(url);
+    }
     return user;
   }
 
