@@ -3,6 +3,7 @@ import SideMenuView from '@lib/views/SideMenuView.svelte';
 import HomeView from '@lib/views/HomeView.svelte';
 import SearchView from '@lib/views/SearchView.svelte';
 import MyLibView from '@lib/views/MyLibView.svelte';
+import PlaylistView from '@lib/views/PlaylistView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
 const VIEW_ID_PREFIX = 'view-';
@@ -49,6 +50,8 @@ function loadView(viewName) {
     View = SearchView;
   } else if ('MyLibView' === viewName) {
     View = MyLibView;
+  } else if ('PlaylistView' === viewName) {
+    View = PlaylistView;
   } else if ('DumbView' === viewName) {
     View = DumbView;
   }
@@ -76,6 +79,19 @@ function createView() {
 }
 
 /**
+ * @returns {import('@js/internal').View}
+ */
+function createPlaylistView(id) {
+  return {
+    id: VIEW_ID_PREFIX + getTimestamp(),
+    viewName: 'PlaylistView',
+    props: {
+      id,
+    },
+  };
+}
+
+/**
  * @param {number} position
  */
 function isSideMenuView(position) {
@@ -95,6 +111,7 @@ export {
   MY_LIB_DEFAULT_VIEWS,
   loadView,
   createView,
+  createPlaylistView,
   canRemoveView,
   isSideMenuView,
   isHomeView,

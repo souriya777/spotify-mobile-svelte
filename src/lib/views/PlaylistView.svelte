@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import View from '@lib/views/View.svelte';
   import SpotifyApi from '@js/SpotifyApi';
   import CollectionTrack from '@lib/CollectionTrack.svelte';
   import PlaylistTopImage from '@lib/PlaylistTopImage.svelte';
@@ -17,7 +18,9 @@
   });
 </script>
 
-Playlist {id}
+<View>
+  Playlist {id}
 
-<PlaylistTopImage images={playlist?.images} alt={playlist?.name} />
-<CollectionTrack playlistId={id} items={tracks} />
+  <PlaylistTopImage images={playlist?.images} alt={playlist?.name} />
+  <CollectionTrack playlistId={id} items={tracks} />
+</View>

@@ -127,6 +127,7 @@ const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
+const addAndSlideNextForMe = writable();
 
 // FILTER
 const displayTrackOn = writable(true);
@@ -178,6 +179,7 @@ export {
   addView,
   removeView,
   playingRgb,
+  addAndSlideNextForMe,
   uiTimestamp,
   resizeTimestamp,
   screenHeight,

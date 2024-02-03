@@ -16,15 +16,24 @@ Single Source of Truth
 
 🌱 OBJECTIF **POUVOIR NAVIGUER DANS MES PLAYLISTS & ALBUMS**
 
-- feat(playlist): adopt old code to new
-  -- feat(playlist): design header
+- feat(playlist/playlist-detail): adopt old code to new
+  -- feat(playlist-detail): can see playlist detail
+  -- feat(playlist-detail): design it
+  -- feat(playlist-detail): dynamize it
+  -- feat(playlist-detail): can play a song
+  -- remove `ImageSolver` ?
+  -- remove `CollectionPlaylist` ?
+  -- remove `CollectionItem` ?
+  -- remove `Collection` ?
   -- feat(playlist): dynamize filter
-  -- feat(playlist): add dynamic playlist
   -- feat(playlist): design content
   -- feat(playlist): dynamize sorts
 - feat(playlist): how puting `karaoke` at first ?
+  -- add `pinned` indicator ?
 - fix(playlist): spotify bug "recently-added" order
 - feat(playlist): can delete playlist
+- feat(playlist): can rename playlist
+  -- see <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
 - feat(playlist): make scroll lib by date ?
 - feat(playlist): can add to queue
 - feat(playlist): can favorite song
@@ -37,6 +46,8 @@ Single Source of Truth
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
 
+- feat(scroll): make beautiful scroll indicator
+- feat(nav): even if I click twice on nav-item, it bounce
 - feat(device): can switch device `ChangeDevice.svelte`
 - feat(device): disconnect other player to make it more robust
 - feat(device): can manage other players

@@ -5,6 +5,7 @@
     // appReady,
     // addView as addViewStore,
     removeView as removeViewStore,
+    addAndSlideNextForMe as addAndSlideNextForMeStore,
   } from '@js/store';
   import Ui from '@lib/Ui.svelte';
   // TO DEBUG
@@ -15,6 +16,11 @@
   let addAndSlideNextForMe;
   let goPrevForMe;
   let goNextForMe;
+
+  $: if (addAndSlideNextForMe) {
+    console.log('🔴🔴🔴🔴🔴addAndSlideNextForMe', addAndSlideNextForMe);
+    $addAndSlideNextForMeStore = addAndSlideNextForMe;
+  }
 
   function removeView() {
     removeViewStore();

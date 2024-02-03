@@ -13,6 +13,7 @@
   --size-bubble-button: 6.4rem;
   --height-nav: 9.2rem;
   --height-player-mini: 5.8rem;
+  --height-nav-and-player-mini: calc(var(--height-nav) + var(--height-player-mini));
   --height-progressbar-mini: 0.2rem;
   --width-scrolling-text-blur: 1rem;
 

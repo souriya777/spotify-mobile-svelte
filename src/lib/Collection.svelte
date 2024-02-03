@@ -4,6 +4,6 @@
 
 <style>
   :global(ul.collection li) {
-    border: 2px dashed hotpink;
+    /* border: 1px dashed hotpink; */
   }
 </style>

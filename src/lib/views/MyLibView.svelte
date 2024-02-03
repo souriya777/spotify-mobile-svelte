@@ -9,8 +9,6 @@
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
 
-  let selectedPlaylist = 1;
-
   onMount(() => {
     // get playlist
     sortPlaylistBySpotify();
@@ -18,7 +16,6 @@
 
   async function sortPlaylistBySpotify() {
     playlists = await SpotifyApi.getPlaylistsSortedBySpotify($userId);
-    selectedPlaylist = 1;
   }
 </script>
 
@@ -42,10 +39,18 @@
     <div class="filter-bar">filter bar reprendre l'ancienne</div>
   </svelte:fragment>
 
-  <div>
+  <div class="sort-display">
     <div>TODO sort</div>
     <div>TODO list / grid</div>
   </div>
 
   <CollectionPlaylist items={playlists} />
 </View>
+
+<style>
+  .sort-display {
+    display: flex;
+    justify-content: space-between;
+    background-color: chocolate;
+  }
+</style>

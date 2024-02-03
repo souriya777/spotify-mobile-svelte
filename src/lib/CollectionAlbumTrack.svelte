@@ -1,6 +1,6 @@
 <script>
   import Collection from '@lib/Collection.svelte';
-  import CollectionItem from '@lib/CollectionItem.svelte';
+  import CollectionItem from '@lib/CollectionPlaylistItem.svelte';
   import SpotifyApi from '@js/SpotifyApi';
   import AddToPlaylist from '@lib/AddToPlaylist.svelte';
 

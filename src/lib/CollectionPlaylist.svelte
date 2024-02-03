@@ -1,24 +1,22 @@
 <script>
-  import Collection from '@lib/Collection.svelte';
-  import CollectionItem from '@lib/CollectionItem.svelte';
-  import NavLink from '@lib/NavLink.svelte';
-  import RenamePlaylist from '@lib/RenamePlaylist.svelte';
+  import CollectionPlaylistItem from '@lib/CollectionPlaylistItem.svelte';
 
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   export let items;
+
+  // TODO <NavLink to={`/playlist/${list?.id}`}>
 </script>
 
-<Collection>
-  {#each items as list}
+<ul class="collection">
+  {#each items as item (item?.id)}
     <li>
-      <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
-      <NavLink to={`/playlist/${list?.id}`}>
-        <CollectionItem
-          images={list?.images}
-          title={list?.name}
-          author={list?.owner?.display_name}
-        />
-      </NavLink>
+      <CollectionPlaylistItem {item} />
     </li>
   {/each}
-</Collection>
+</ul>
+
+<style>
+  .collection {
+    padding-block-end: var(--height-nav-and-player-mini);
+  }
+</style>
