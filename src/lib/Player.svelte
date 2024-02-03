@@ -60,7 +60,7 @@
     <div class="song">
       <div class="song__text">
         <ScrollingText>
-          <div class="track font-player-title">{$trackName}</div>
+          <div class="track font-title">{$trackName}</div>
         </ScrollingText>
         <ScrollingText>
           <div class="artist">{$artistsDisplay}</div>

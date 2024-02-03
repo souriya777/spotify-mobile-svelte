@@ -14,10 +14,14 @@ Single Source of Truth
 
 # MVP TODO
 
--- feat(profile): add profile user image
--- add background-transparent on Iphone Island when OPTIONS
+🌱 OBJECTIF **POUVOIR NAVIGUER DANS MES PLAYLISTS & ALBUMS**
 
 - feat(playlist): adopt old code to new
+  -- feat(playlist): design header
+  -- feat(playlist): dynamize filter
+  -- feat(playlist): add dynamic playlist
+  -- feat(playlist): design content
+  -- feat(playlist): dynamize sorts
 - feat(playlist): how puting `karaoke` at first ?
 - fix(playlist): spotify bug "recently-added" order
 - feat(playlist): can delete playlist
@@ -32,6 +36,7 @@ Single Source of Truth
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
+
 - feat(device): can switch device `ChangeDevice.svelte`
 - feat(device): disconnect other player to make it more robust
 - feat(device): can manage other players

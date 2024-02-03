@@ -6,22 +6,47 @@
 </script>
 
 <header {style}>
-  <!-- <div class="img">
-    <img src={$userPictureUrl} alt={$userDisplayName} />
-  </div> -->
-  <div class="img" style={`background-image: url(${$userPictureUrl})`}></div>
-  <div class="title">{title}</div>
+  <div class="top">
+    <div class="left">
+      <div class="img" style={`background-image: url(${$userPictureUrl})`}></div>
+      <div class="title font-title">{title}</div>
+    </div>
+
+    <slot name="right" />
+  </div>
+
+  <div class="bottom">
+    <slot name="bottom" />
+  </div>
 </header>
 
 <style>
   header {
     display: flex;
-    margin: 3rem;
+    flex-direction: column;
+    padding-block: 4rem 2rem;
+    padding-inline: var(--padding-inline-library);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bottom {
+    margin-block-start: 1rem;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
   }
 
   .img {
-    height: 34px;
-    width: 34px;
+    height: 3.4rem;
+    width: 3.4rem;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
@@ -29,6 +54,6 @@
   }
 
   .title {
-    background-color: aqua;
+    margin-inline-start: 0.8rem;
   }
 </style>

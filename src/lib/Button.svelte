@@ -6,6 +6,7 @@
   export let type = '';
   export let svg = null;
   export let svgSize = 24;
+  export let svgViewbox = '0 0 24 24';
   export let svgFlexJustify = 'center';
   export let filled = false;
   export let hasAccent = true;
@@ -40,7 +41,7 @@
 >
   {#if svg}
     <span class="icon">
-      <Svg name={svg} size={svgSize} />
+      <Svg name={svg} size={svgSize} viewBox={svgViewbox} />
     </span>
   {/if}
 

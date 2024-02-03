@@ -1,35 +1,51 @@
 <script>
+  import { onMount } from 'svelte';
+  import { userId } from '@js/store';
+  import SpotifyApi from '@js/SpotifyApi';
   import View from '@lib/views/View.svelte';
-  import ViewHeader from './ViewHeader.svelte';
+  import Button from '@lib/Button.svelte';
+  import CollectionPlaylist from '@lib/CollectionPlaylist.svelte';
 
-  console.log('my lib');
+  /** @type {import('@js/spotify').SpotifyPlaylist[]} */
+  let playlists = [];
+
+  let selectedPlaylist = 1;
+
+  onMount(() => {
+    // get playlist
+    sortPlaylistBySpotify();
+  });
+
+  async function sortPlaylistBySpotify() {
+    playlists = await SpotifyApi.getPlaylistsSortedBySpotify($userId);
+    selectedPlaylist = 1;
+  }
 </script>
 
-<View>
-  <svelte:fragment slot="header">
-    <div class="view-bar">
-      <ViewHeader title="Your library" />
-      <div>icon search</div>
-      <div>icon plus</div>
-
-      <div class="filter-bar">reprendre l'ancienne</div>
-
-      TODO shadow bottom
+<View title="Your library">
+  <svelte:fragment slot="header__right">
+    <div>
+      <Button type="secondary" svg="search" callback={() => console.log('TODO')} />
+    </div>
+    <div>
+      <Button
+        type="secondary"
+        svg="plus"
+        svgSize={36}
+        svgViewbox="-4 -4 24 24"
+        callback={() => console.log('TODO')}
+      />
     </div>
   </svelte:fragment>
 
+  <svelte:fragment slot="header__bottom">
+    <div class="filter-bar">filter bar reprendre l'ancienne</div>
+  </svelte:fragment>
+
   <div>
-    <div>sort</div>
-    <div>list / grid</div>
+    <div>TODO sort</div>
+    <div>TODO list / grid</div>
   </div>
 
-  <ul>
-    <li>playlist item</li>
-  </ul>
+  <CollectionPlaylist items={playlists} />
 </View>
-
-<style>
-  li {
-    display: flex;
-  }
-</style>

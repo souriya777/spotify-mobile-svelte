@@ -18,12 +18,14 @@
 
   --padding-bottom-phone: 4.4rem;
   --padding-block-player: 1rem;
+  --padding-block-library: 1rem;
   --padding-inline-player: 2.4rem;
+  --padding-inline-library: 1.2rem;
   --padding-space-player: 0.6rem;
 
   --border-radius-cover-img: 1rem;
-  --border-radius-mini-img: 0.4rem --shadow-player: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3))
-    drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  --border-radius-mini-img: 0.4rem;
+  --shadow-player: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
   --transition-bottom-panel: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
 
   --z-index-near: 1;
