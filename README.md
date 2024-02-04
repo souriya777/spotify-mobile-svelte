@@ -14,7 +14,7 @@ Single Source of Truth
 
 # MVP TODO
 
-🌱 OBJECTIF **POUVOIR NAVIGUER DANS MES PLAYLISTS & ALBUMS**
+🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
   -- feat(playlist-detail): can see playlist detail
