@@ -108,8 +108,7 @@ class SpotifyApi {
 
   /** @returns {Promise<SpotifyUser>} */
   async me() {
-    const data = await this.#get('/me');
-    const user = new SpotifyUser(data);
+    const user = await this.getUser();
     userId.set(user?.id);
     userDisplayName.set(user?.display_name);
     const url = user?.images?.sort((a, b) => a.width - b.width)?.at(0)?.url;
@@ -117,6 +116,16 @@ class SpotifyApi {
       userPictureUrl.set(url);
     }
     return user;
+  }
+
+  /**
+   * @param {string} spotifyUserId
+   * @returns {Promise<SpotifyUser>}
+   */
+  async getUser(spotifyUserId = null) {
+    const id = !spotifyUserId ? '/me' : `/users/${spotifyUserId}`;
+    const data = await this.#get(id);
+    return new SpotifyUser(data);
   }
 
   /** @param {null | import('@js/spotify').SpotifyPlayerState} playerState */

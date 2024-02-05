@@ -1,9 +1,9 @@
 <script>
-  import View from '@lib/views/View.svelte';
+  import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Debug from '@lib/Debug.svelte';
 </script>
 
-<View>
+<ViewRoot>
   <svelte:fragment slot="header">Good Morning</svelte:fragment>
 
   <button>go album</button>
@@ -81,4 +81,4 @@
     psychopathic hospital, où on lui interdit de mentionner l'hypnose, puis médecin assistant au
     State Hospital for Mental Diseases à Howard (Rhode Island).
   </p>
-</View>
+</ViewRoot>

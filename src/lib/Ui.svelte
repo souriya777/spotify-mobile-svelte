@@ -255,6 +255,7 @@
 
   function translateSlide() {
     $VIEWS.forEach(({ id }, i) => {
+      /** @type {HTMLElement} */
       const SLIDE = VIEWS_BIND[id];
       if (!SLIDE) {
         return;
@@ -353,7 +354,12 @@
     >
       {#key $uiTimestamp}
         {#each $VIEWS as { id, viewName, props }, i (id)}
-          <li class:isSliding bind:this={VIEWS_BIND[id]} use:observeViewBrightness={i}>
+          <li
+            class:isSliding
+            class:hiddenSlide={i < $VIEWS.length - 1}
+            bind:this={VIEWS_BIND[id]}
+            use:observeViewBrightness={i}
+          >
             <svelte:component this={loadView(viewName)} {...props} />
           </li>
         {/each}
@@ -401,6 +407,10 @@
   ul > :nth-child(2),
   .fixed {
     filter: brightness(var(--home-brightness));
+  }
+
+  .hiddenSlide {
+    overflow: hidden;
   }
 
   .fixed {

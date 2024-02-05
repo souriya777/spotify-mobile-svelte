@@ -10,6 +10,7 @@ class SpotifyPlaylist {
     this.id = fromApi?.id;
     this.uri = fromApi?.uri;
     this.name = fromApi?.name;
+    this.description = fromApi?.description;
     this.owner = new SpotifyUser(fromApi?.owner);
     this.images = fromApi?.images?.map((img) => new SpotifyImage(img));
     this.tracks = new SpotifyPlaylistTracks(fromApi);

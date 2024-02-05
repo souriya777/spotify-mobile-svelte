@@ -8,7 +8,8 @@ import SpotifyApi from '@js/SpotifyApi';
 import SpotifyPlaylist from '@js/SpotifyPlaylist';
 
 import PLAYER_STATE_API_JSON from './api/player-state-api.json';
-import CURRENT_USER_JSON from './data/current-user.json';
+import USER_ME_JSON from './data/user-me.json';
+import USER_ANDREA_BOTEZ_JSON from './data/user-andrea-botez.json';
 import PLAYBACK_STATE_JSON from './data/playback-state.json';
 import AVAILABLE_DEVICES_JSON from './data/available-devices.json';
 import MY_PLAYLISTS_RECENTLY_ADDED_JSON from './data/my-playlists-recently-added.json';
@@ -69,7 +70,13 @@ test(`initAccessToken set access_token in store and change url to "/"`, async ()
 
 test(`/me returns SpotifyUser`, async () => {
   const actual = await SpotifyApi.me();
-  const expected = { ...CURRENT_USER_JSON };
+  const expected = { ...USER_ME_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/andrea-botez returns SpotifyUser`, async () => {
+  const actual = await SpotifyApi.getUser('andrea-botez');
+  const expected = { ...USER_ANDREA_BOTEZ_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
@@ -197,7 +204,7 @@ test(`search(query) returns SpotifySearch`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-/////// 🔴🔴🔴 bellow : AXIOS_INSTANCE is unmocked 🔴🔴🔴 ///////
+///// 🔴🔴🔴 bellow : AXIOS_INSTANCE is unmocked 🔴🔴🔴 ///////
 vi.doUnmock('@js/axios-utils');
 
 test(`can add a song to playlist`, async () => {

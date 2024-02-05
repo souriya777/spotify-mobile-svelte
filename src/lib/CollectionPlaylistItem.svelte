@@ -7,7 +7,6 @@
   export let item;
 
   function goPlaylist() {
-    console.log('goPlaylist', item?.id, $addAndSlideNextForMe);
     const view = createPlaylistView(item.id);
     addView(view);
     $addAndSlideNextForMe();

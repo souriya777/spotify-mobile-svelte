@@ -11,10 +11,13 @@
 
   --size-button: 4.8rem;
   --size-bubble-button: 6.4rem;
+  --size-bubble-button-mini: 4.8rem;
+  --size-detail-cover: 16rem;
   --height-nav: 9.2rem;
   --height-player-mini: 5.8rem;
   --height-nav-and-player-mini: calc(var(--height-nav) + var(--height-player-mini));
   --height-progressbar-mini: 0.2rem;
+  --height-detail-header: 6rem;
   --width-scrolling-text-blur: 1rem;
 
   --padding-bottom-phone: 4.4rem;
@@ -26,8 +29,10 @@
 
   --border-radius-cover-img: 1rem;
   --border-radius-mini-img: 0.4rem;
-  --shadow-player: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  --shadow-cover: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+
   --transition-bottom-panel: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
+  --transition-background: 200ms ease-in-out;
 
   --z-index-near: 1;
   --z-index-nearest: 2;

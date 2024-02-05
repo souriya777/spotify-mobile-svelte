@@ -11,7 +11,9 @@
   export let filled = false;
   export let hasAccent = true;
   export let accent = false;
+  export let reverseAccent = false;
   export let bubble = false;
+  export let bubbleMini = false;
   export let bottomDot = false;
 
   $: style = `--align-svg: ${svgFlexJustify}`;
@@ -33,9 +35,12 @@
   type="button"
   class={type}
   class:accent
+  class:reverseAccent
   class:filled
   class:bubble
+  class:bubbleMini
   class:bottomDot
+  class:bottomDot--left={svgFlexJustify === 'flex-start'}
   {style}
   on:click|stopPropagation={handleClick}
 >
@@ -65,20 +70,11 @@
     justify-content: var(--align-svg);
   }
 
-  .accent {
-    color: var(--color-accent);
-  }
-
   .filled {
     border-radius: 1.8rem;
     padding: 0.2rem 1.8rem;
     background-color: var(--color-primary-highlight);
     color: var(--color-on-primary-highlight);
-  }
-
-  .filled.accent {
-    background-color: var(--color-accent);
-    color: var(--color-on-accent);
   }
 
   .bubble {
@@ -89,14 +85,37 @@
     border-radius: 50%;
   }
 
-  .bottomDot {
+  .bubbleMini {
+    height: var(--size-bubble-button-mini);
+    width: var(--size-bubble-button-mini);
+  }
+
+  .accent {
+    color: var(--color-accent);
+  }
+
+  .filled.accent {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  .reverseAccent {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  .bottomDot .icon {
     position: relative;
   }
 
-  .bottomDot::after {
+  .bottomDot--left .icon {
+    float: left;
+  }
+
+  .bottomDot .icon::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     left: 50%;
     height: 0.4rem;
     width: 0.4rem;

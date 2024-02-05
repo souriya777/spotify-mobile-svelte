@@ -1,5 +1,6 @@
 <script>
   import { userPictureUrl } from '@js/store';
+  import User from '@lib/User.svelte';
   export let title = '';
 
   $: style = `--picture-url: ${$userPictureUrl};`;
@@ -8,7 +9,7 @@
 <header {style}>
   <div class="top">
     <div class="left">
-      <div class="img" style={`background-image: url(${$userPictureUrl})`}></div>
+      <User userPictureUrl={$userPictureUrl} />
       <div class="title font-title">{title}</div>
     </div>
 
@@ -42,15 +43,6 @@
   .left {
     display: flex;
     align-items: center;
-  }
-
-  .img {
-    height: 3.4rem;
-    width: 3.4rem;
-    border-radius: 50%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .title {

@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { userId } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
-  import View from '@lib/views/View.svelte';
+  import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Button from '@lib/Button.svelte';
   import CollectionPlaylist from '@lib/CollectionPlaylist.svelte';
 
@@ -19,7 +19,7 @@
   }
 </script>
 
-<View title="Your library">
+<ViewRoot title="Your library">
   <svelte:fragment slot="header__right">
     <div>
       <Button type="secondary" svg="search" callback={() => console.log('TODO')} />
@@ -45,7 +45,7 @@
   </div>
 
   <CollectionPlaylist items={playlists} />
-</View>
+</ViewRoot>
 
 <style>
   .sort-display {

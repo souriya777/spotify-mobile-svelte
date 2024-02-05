@@ -1,5 +1,13 @@
 <script>
-  import { playingRgb, playerFull, imageBigUrl, resizeTimestamp, screenHeight } from '@js/store';
+  import {
+    scrollTop,
+    playingRgb,
+    navigatingRgb,
+    playerFull,
+    imageBigUrl,
+    resizeTimestamp,
+    screenHeight,
+  } from '@js/store';
   import UiProxy from '@lib/UiProxy.svelte';
   import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
   import { getTimestamp } from '@js/date-utils';
@@ -11,7 +19,14 @@
     $screenHeight = SCREEN_HTML.clientHeight;
   }
   $: rgb = `rgb(${$playingRgb.join(',')})`;
-  $: style = `--playing-rgb: ${rgb};`;
+  $: style = `
+    --playing-rgb: ${rgb};
+    --navigating-rgb: rgb(${$navigatingRgb?.join(',')})
+  `;
+
+  function handleScroll(e) {
+    scrollTop.update(() => e.target.scrollTop);
+  }
 
   function handleResize() {
     $resizeTimestamp = getTimestamp();
@@ -25,7 +40,7 @@
 <svelte:window on:resize={handleResize} />
 
 {#key $resizeTimestamp}
-  <div class="screen" {style} bind:this={SCREEN_HTML}>
+  <div class="screen" {style} bind:this={SCREEN_HTML} on:scroll={handleScroll}>
     <ImgUrlColorSolver imageUrl={$imageBigUrl} />
     <UiProxy></UiProxy>
   </div>

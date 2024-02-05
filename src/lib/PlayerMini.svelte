@@ -17,15 +17,10 @@
   import ActiveDeviceName from '@lib/ActiveDeviceName.svelte';
   import ScrollingText from '@lib/ScrollingText.svelte';
 
-  const BACKGROUND_TRANSITION_MS = 200;
-
   /** @type {HTMLElement} */
   let titleHtml;
 
-  $: style = `
-    --padding-inline-title: 0.4rem;
-    --transition-background: ${BACKGROUND_TRANSITION_MS}ms ease-in-out;
-    `;
+  $: style = `--padding-inline-title: 0.4rem;`;
 
   function expandPlayer() {
     $playerFull = true;
@@ -129,7 +124,7 @@
     padding-block-end: var(--player-mini-img-padding-block-start);
     height: calc(var(--player-mini-img-size) + var(--player-mini-img-padding-block-start));
     width: auto;
-    filter: var(--shadow-player);
+    filter: var(--shadow-cover);
   }
 
   .device {

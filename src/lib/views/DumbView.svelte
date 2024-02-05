@@ -1,12 +1,12 @@
 <script>
-  import View from '@lib/views/View.svelte';
+  import ViewRoot from '@lib/views/ViewRoot.svelte';
 
   export let title;
 </script>
 
-<View>
+<ViewRoot>
   DUMB
   <h1>
     {title}
   </h1>
-</View>
+</ViewRoot>

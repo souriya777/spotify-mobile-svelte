@@ -17,15 +17,16 @@ Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
-  -- feat(nav): when clicked twice on nav item, go to root of VIEWS
-  -- feat(playlist-detail): can see playlist detail
-  -- feat(playlist-detail): design it
   -- feat(playlist-detail): dynamize it
+  -- mv `PlaylistView` -> `CollectionDetailView`
+  -- change background meta color based on "navigating rgb"
+  -- feat(playlist-detail): can play the playlist via green button
   -- feat(playlist-detail): can play a song
-  -- remove `ImageSolver` ?
   -- remove `CollectionPlaylist` ?
   -- remove `CollectionItem` ?
   -- remove `Collection` ?
+  -- how implementing "NoteSvg" as default ?
+  -- remove `ImageSolver` ?
   -- feat(playlist): dynamize filter
   -- feat(playlist): design content
   -- feat(playlist): dynamize sorts
@@ -126,6 +127,7 @@ Single Source of Truth
 
 - deploy on PROD too
 - player-mini: when swipe up, swipe player-full ?
+- playlist-duration : we have to sum up all track's duration...
 
 # BONUS TODO expert-like
 

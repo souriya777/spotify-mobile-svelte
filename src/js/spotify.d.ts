@@ -44,6 +44,7 @@ export type SpotifyPlaylist = {
   id: string;
   uri: string;
   name: string;
+  description: string;
   owner: SpotifyUser;
   images: SpotifyImage[];
   tracks: SpotifyPlaylistTracks;

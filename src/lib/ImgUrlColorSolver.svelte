@@ -7,7 +7,7 @@
     lightenDarkenColor,
     DEFAULT_PLAYING_RGB,
   } from '@js/palette-utils';
-  import { playingRgb } from '@js/store';
+  import { navigatingRgb, playingRgb } from '@js/store';
   import ColorThief from 'colorthief';
 
   /**
@@ -21,6 +21,7 @@
 
   export let imageUrl;
   export let textColor = [255, 255, 255];
+  export let isPlayingRgb = true;
 
   const DARKER_FACTOR = -20;
 
@@ -56,7 +57,11 @@
   $: highestColor = highestContrast(dominantColor, blendContrastColor, blendContrastDarkerColor);
   $: if (highestColor) {
     // UPDATE STORE
-    $playingRgb = [...highestColor];
+    if (isPlayingRgb) {
+      $playingRgb = [...highestColor];
+    } else {
+      $navigatingRgb = [...highestColor];
+    }
   }
 
   // TO DEBUG

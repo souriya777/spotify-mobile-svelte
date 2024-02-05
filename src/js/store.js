@@ -138,6 +138,7 @@ const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
+const navigatingRgb = writable();
 const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
 
@@ -192,6 +193,7 @@ export {
   removeView,
   goRootView,
   playingRgb,
+  navigatingRgb,
   addAndSlideNextForMe,
   slidePrevAndRemoveForMe,
   uiTimestamp,

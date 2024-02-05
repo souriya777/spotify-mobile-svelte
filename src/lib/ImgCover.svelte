@@ -17,7 +17,7 @@
   img {
     margin-inline: auto;
     border-radius: var(--border-radius-cover-img);
-    filter: var(--shadow-player);
+    filter: var(--shadow-cover);
   }
 
   .img--small {

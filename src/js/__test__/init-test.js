@@ -1,7 +1,8 @@
 import { vi } from 'vitest';
 import Logger from '@js/Logger';
 
-import CURRENT_USER_API_JSON from './api/current-user-api.json';
+import USER_ME_API_JSON from './api/user-me-api.json';
+import USER_ANDREA_BOTEZ_API_JSON from './api/user-andrea-botez-api.json';
 import PLAYBACK_STATE_API_JSON from './api/playback-state-api.json';
 import AVAILABLE_DEVICES_API_JSON from './api/available-devices-api.json';
 import MY_ALBUMS_OFFSET_0_API_JSON from './api/my-albums-offset-0-api.json';
@@ -71,7 +72,9 @@ function getData(method, url, data, config) {
 
   if (method === 'GET') {
     if (endpoint === '/me') {
-      return { ...CURRENT_USER_API_JSON };
+      return { ...USER_ME_API_JSON };
+    } else if (endpoint === '/users/andrea-botez') {
+      return { ...USER_ANDREA_BOTEZ_API_JSON };
     } else if (endpoint === '/me/player') {
       return { ...PLAYBACK_STATE_API_JSON };
     } else if (endpoint === '/me/player/devices') {
