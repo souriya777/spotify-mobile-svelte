@@ -1,7 +1,12 @@
 import { writable, derived, get } from 'svelte/store';
 import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
-import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
+import {
+  HOME_DEFAULT_VIEWS,
+  MY_LIB_DEFAULT_VIEWS,
+  ROOT_VIEW_INDEX,
+  SEARCH_DEFAULT_VIEWS,
+} from '@js/view-utils';
 import { DEFAULT_PLAYING_RGB } from '@js/palette-utils';
 
 // ACCESS
@@ -102,32 +107,39 @@ const VIEWS = derived(
     }
   },
 );
+
+function currentView() {
+  if ('home' === get(viewName)) {
+    return VIEWS_HOME;
+  } else if ('search' === get(viewName)) {
+    return VIEWS_SEARCH;
+  } else {
+    return VIEWS_MY_LIB;
+  }
+}
+
 // TODO move
 /** @param {import('@js/internal').View} view */
 function addView(view) {
-  if ('home' === get(viewName)) {
-    VIEWS_HOME.update((views) => [...views, { ...view }]);
-  } else if ('search' === get(viewName)) {
-    VIEWS_SEARCH.update((views) => [...views, { ...view }]);
-  } else {
-    VIEWS_MY_LIB.update((views) => [...views, { ...view }]);
-  }
+  currentView().update((views) => [...views, { ...view }]);
 }
 // TODO move
 function removeView() {
-  if ('home' === get(viewName)) {
-    VIEWS_HOME.update((views) => [...views.slice(0, -1)]);
-  } else if ('search' === get(viewName)) {
-    VIEWS_SEARCH.update((views) => [...views.slice(0, -1)]);
-  } else {
-    VIEWS_MY_LIB.update((views) => [...views.slice(0, -1)]);
+  currentView().update((views) => [...views.slice(0, -1)]);
+}
+
+function goRootView() {
+  if (get(currentView()).length > ROOT_VIEW_INDEX) {
+    get(slidePrevAndRemoveForMe)();
   }
 }
+
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 const addAndSlideNextForMe = writable();
+const slidePrevAndRemoveForMe = writable();
 
 // FILTER
 const displayTrackOn = writable(true);
@@ -178,8 +190,10 @@ export {
   VIEWS,
   addView,
   removeView,
+  goRootView,
   playingRgb,
   addAndSlideNextForMe,
+  slidePrevAndRemoveForMe,
   uiTimestamp,
   resizeTimestamp,
   screenHeight,

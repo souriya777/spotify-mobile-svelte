@@ -6,6 +6,7 @@ import MyLibView from '@lib/views/MyLibView.svelte';
 import PlaylistView from '@lib/views/PlaylistView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
+const ROOT_VIEW_INDEX = 2; // side menu + root view
 const VIEW_ID_PREFIX = 'view-';
 const SIDE_MENU_VIEW = {
   id: `${VIEW_ID_PREFIX}side-menu`,
@@ -34,7 +35,7 @@ const SEARCH_DEFAULT_VIEWS = [
 const MY_LIB_DEFAULT_VIEWS = [
   SIDE_MENU_VIEW,
   {
-    id: `${VIEW_ID_PREFIX}search`,
+    id: `${VIEW_ID_PREFIX}mylib`,
     viewName: 'MyLibView',
   },
 ];
@@ -106,6 +107,7 @@ function isHomeView(position) {
 }
 
 export {
+  ROOT_VIEW_INDEX,
   HOME_DEFAULT_VIEWS,
   SEARCH_DEFAULT_VIEWS,
   MY_LIB_DEFAULT_VIEWS,

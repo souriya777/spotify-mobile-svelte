@@ -40,8 +40,6 @@
   let homeBrightness = MAX_HOME_BRIGHTNESS_PERCENT;
   let brightnessObserver;
 
-  $: console.log('🟡🟡🟡🟡🟡', $VIEWS);
-
   $: VIEW_WIDTH = VIEWS_HTML?.clientWidth ?? 0;
   $: CURRENT_ID = $VIEWS[viewPosition]?.id;
   $: PREV_ID = $VIEWS[viewPosition - 1]?.id;

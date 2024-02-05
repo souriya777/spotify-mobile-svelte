@@ -2,15 +2,16 @@
   import {
     viewName,
     // TO DEBUG
-    // appReady,
-    // addView as addViewStore,
+    appReady,
+    addView as addViewStore,
     removeView as removeViewStore,
     addAndSlideNextForMe as addAndSlideNextForMeStore,
+    slidePrevAndRemoveForMe as slidePrevAndRemoveForMeStore,
   } from '@js/store';
   import Ui from '@lib/Ui.svelte';
   // TO DEBUG
-  // import { createView } from '@js/view-utils';
-  // import Button from '@lib/Button.svelte';
+  import { createView } from '@js/view-utils';
+  import Button from '@lib/Button.svelte';
 
   let slidePrevAndRemoveForMe;
   let addAndSlideNextForMe;
@@ -18,8 +19,11 @@
   let goNextForMe;
 
   $: if (addAndSlideNextForMe) {
-    console.log('🔴🔴🔴🔴🔴addAndSlideNextForMe', addAndSlideNextForMe);
     $addAndSlideNextForMeStore = addAndSlideNextForMe;
+  }
+
+  $: if (slidePrevAndRemoveForMe) {
+    $slidePrevAndRemoveForMeStore = slidePrevAndRemoveForMe;
   }
 
   function removeView() {
@@ -28,35 +32,35 @@
 
   // TO DEBUG
 
-  // function addView() {
-  //   const view = createView();
-  //   addViewStore(view);
-  //   addAndSlideNextForMe();
-  // }
+  function addView() {
+    const view = createView();
+    addViewStore(view);
+    addAndSlideNextForMe();
+  }
 
-  // function prevView() {
-  //   slidePrevAndRemoveForMe();
-  // }
+  function prevView() {
+    slidePrevAndRemoveForMe();
+  }
 
-  // function goPrev() {
-  //   goPrevForMe();
-  // }
+  function goPrev() {
+    goPrevForMe();
+  }
 
-  // function goNext() {
-  //   goNextForMe();
-  // }
+  function goNext() {
+    goNextForMe();
+  }
 </script>
 
 <div class="ui-proxy">
   <!-- TO DEBUG SLIDE VIEWS -->
-  <!-- <div>
+  <div>
     viewName:{$viewName}
     appReady:{$appReady}
     <Button filled={true} callback={goPrev}>go-</Button>
     <Button filled={true} callback={goNext}>go+</Button>
     <Button filled={true} callback={addView}>+view</Button>
     <Button filled={true} callback={prevView}>-view</Button>
-  </div> -->
+  </div>
 
   {#if 'home' === $viewName}
     <Ui

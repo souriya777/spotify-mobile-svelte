@@ -17,6 +17,7 @@ Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
+  -- feat(nav): when clicked twice on nav item, go to root of VIEWS
   -- feat(playlist-detail): can see playlist detail
   -- feat(playlist-detail): design it
   -- feat(playlist-detail): dynamize it
