@@ -8,7 +8,7 @@
   import CollectionTrack from '@lib/PlaylistTracks.svelte';
   import CollectionAlbum from '@lib/CollectionAlbum.svelte';
   import CollectionArtist from '@lib/CollectionArtist.svelte';
-  import ListFilter from '@lib/ListFilter.svelte';
+  // import ListFilter from '@lib/ListFilter.svelte';
 
   /** @type {import('@js/spotify').SpotifySearch} */
   let searchResult = null;
@@ -64,12 +64,13 @@
   <h2>tap Ur query</h2>
   <input type="text" on:input={updateQuery} bind:value={decodedQueryUrl} />
 
-  <ListFilter
+  <!-- FIXME -->
+  <!-- <ListFilter
     hasTracks={firstTracks.length > 0}
     hasAlbums={firstAlbums.length > 0}
     hasPlaylists={firstPlaylists.length > 0}
     hasArtists={firstArtists.length > 0}
-  />
+  /> -->
 
   <h2>results</h2>
 

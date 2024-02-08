@@ -117,6 +117,12 @@
       d="M2.793 8.043a1 1 0 0 1 1.414 0L12 15.836l7.793-7.793a1 1 0 1 1 1.414 1.414L12 18.664 2.793 9.457a1 1 0 0 1 0-1.414z"
     ></path>
   </svg>
+{:else if 'cross' === name.toLocaleLowerCase()}
+  <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">
+    <path
+      d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z"
+    ></path>
+  </svg>
 {:else if 'three-dots' === name.toLocaleLowerCase()}
   <svg {...SVG_PROPERTIES} {viewBox}>
     <path

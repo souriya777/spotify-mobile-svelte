@@ -9,7 +9,6 @@
     type="primary"
     svg="pause"
     reverseAccent={true}
-    bubble={true}
     bubbleMini={true}
     callback={() => SpotifyApi.pause()}
   ></Button>
@@ -18,7 +17,6 @@
     type="primary"
     svg="play"
     reverseAccent={true}
-    bubble={true}
     bubbleMini={true}
     callback={() => SpotifyApi.play()}
   ></Button>

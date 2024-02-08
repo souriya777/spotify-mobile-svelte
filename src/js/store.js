@@ -144,15 +144,15 @@ const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
 
 // FILTER
-const displayTrackOn = writable(true);
-const displayArtistOn = writable(true);
-const displayPlaylistOn = writable(true);
-const displayAlbumOn = writable(true);
-const displayTopOn = derived(
-  [displayTrackOn, displayArtistOn, displayPlaylistOn, displayAlbumOn],
-  ([$displayTrackOn, $displayArtistOn, $displayPlaylistOn, $displayAlbumOn]) =>
-    $displayTrackOn && $displayArtistOn && $displayPlaylistOn && $displayAlbumOn,
-);
+// const displayTrackOn = writable(true);
+// const displayArtistOn = writable(true);
+// const displayPlaylistOn = writable(true);
+// const displayAlbumOn = writable(true);
+// const displayTopOn = derived(
+//   [displayTrackOn, displayArtistOn, displayPlaylistOn, displayAlbumOn],
+//   ([$displayTrackOn, $displayArtistOn, $displayPlaylistOn, $displayAlbumOn]) =>
+//     $displayTrackOn && $displayArtistOn && $displayPlaylistOn && $displayAlbumOn,
+// );
 const displayFilter = createDisplayFilter();
 
 export {
@@ -201,10 +201,10 @@ export {
   uiTimestamp,
   resizeTimestamp,
   screenHeight,
-  displayTrackOn,
-  displayArtistOn,
-  displayPlaylistOn,
-  displayAlbumOn,
-  displayTopOn,
+  // displayTrackOn,
+  // displayArtistOn,
+  // displayPlaylistOn,
+  // displayAlbumOn,
+  // displayTopOn,
   displayFilter,
 };

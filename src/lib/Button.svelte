@@ -12,11 +12,19 @@
   export let hasAccent = true;
   export let accent = false;
   export let reverseAccent = false;
-  export let bubble = false;
   export let bubbleMini = false;
+  export let bubbleNano = false;
+  export let bubble = false || bubbleMini || bubbleNano;
   export let bottomDot = false;
 
-  $: style = `--align-svg: ${svgFlexJustify}`;
+  $: style = `
+    --align-svg: ${svgFlexJustify};
+    --size-button: 4.8rem;
+    --size-button-filled: 3.1rem;
+    --size-button-bubble: 6.4rem;
+    --size-button-bubble-mini: 4.8rem;
+    --size-button-bubble-nano: 3.2rem;
+  `;
 
   function handleClick() {
     if (!canCallback) {
@@ -39,8 +47,10 @@
   class:filled
   class:bubble
   class:bubbleMini
+  class:bubbleNano
   class:bottomDot
   class:bottomDot--left={svgFlexJustify === 'flex-start'}
+  class:font-button-filled={filled}
   {style}
   on:click|stopPropagation={handleClick}
 >
@@ -71,23 +81,35 @@
   }
 
   .filled {
+    height: var(--size-button-filled);
+    width: unset;
+    padding-inline: 1.7rem;
     border-radius: 1.8rem;
-    padding: 0.2rem 1.8rem;
     background-color: var(--color-primary-highlight);
     color: var(--color-on-primary-highlight);
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
   }
 
   .bubble {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    height: var(--size-bubble-button);
-    width: var(--size-bubble-button);
+    height: var(--size-button-bubble);
+    width: var(--size-button-bubble);
     border-radius: 50%;
   }
 
   .bubbleMini {
-    height: var(--size-bubble-button-mini);
-    width: var(--size-bubble-button-mini);
+    height: var(--size-button-bubble-mini);
+    width: var(--size-button-bubble-mini);
+  }
+
+  .bubbleNano {
+    height: var(--size-button-bubble-nano);
+    width: var(--size-button-bubble-nano);
+    background-color: var(--color-primary-highlight);
+    color: var(--color-on-primary-highlight);
   }
 
   .accent {

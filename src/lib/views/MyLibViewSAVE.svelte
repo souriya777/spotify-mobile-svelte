@@ -1,4 +1,6 @@
 <script>
+  // @ts-nocheck
+
   import { onMount } from 'svelte';
   import { userId, displayFilter } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
@@ -8,7 +10,7 @@
   import CollectionAlbum from '@lib/CollectionAlbum.svelte';
   import CollectionArtist from '@lib/CollectionArtist.svelte';
   import CollectionItem from '@lib/CollectionItem.svelte';
-  import ListFilter from '@lib/ListFilter.svelte';
+  // import ListFilter from '@lib/ListFilter.svelte';
   import CreatePlaylist from '@lib/CreatePlaylist.svelte';
   import SpotifyImageLiked from '@js/SpotifyImageLiked';
 
@@ -67,13 +69,13 @@
 </script>
 
 <h1>My Lib</h1>
-
+<!-- 
 <ListFilter
   displayTop={false}
   hasAlbums={albums.length > 0}
   hasPlaylists={playlists.length > 0}
   hasArtists={artists.length > 0}
-/>
+/> -->
 
 {#if $displayFilter.playlistOn}
   <detail>

@@ -4,8 +4,8 @@
   import DetailCover from '@lib/DetailCover.svelte';
 
   export let title = '';
-  /** @type {import('@js/spotify').SpotifyImage}*/
-  export let cover;
+  /** @type {import('@js/spotify').SpotifyImage} */
+  export let cover = null;
   export let header = true;
   export let detailHeader = false;
 

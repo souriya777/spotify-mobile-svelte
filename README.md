@@ -8,16 +8,14 @@ Beta: https://spotify-mobile-svelte-test.vercel.app/
 # philosophie ⚜️
 
 KISS
-DRY
-ACID
-Single Source of Truth
+DRY -> Single Source of Truth
 
 # MVP TODO
 
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
-  -- feat(playlist): dynamize filter
+  ---- when side-menu => disable clicked on `PlaylistView`
   -- feat(playlist): dynamize sorts
   -- feat(playlist-detail): make it beautiful
   -- mv `PlaylistView` -> `CollectionDetailView`
@@ -27,6 +25,7 @@ Single Source of Truth
   -- remove `CollectionItem` ?
   -- remove `Collection` ?
   -- remove `Collection*`
+  -- remove `ListFilterSAVE`
   -- how implementing "NoteSvg" as default ?
   -- remove `ImageSolver` ?
 - feat(playlist): how puting `karaoke` at first ?

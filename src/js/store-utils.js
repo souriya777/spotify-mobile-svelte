@@ -88,8 +88,13 @@ function createDisplayFilter() {
     [topOn, playlistOn],
     ([$topOn, $playlistOn]) => !$topOn && $playlistOn,
   );
-
   const artistActive = derived([topOn, artistOn], ([$topOn, $artistOn]) => !$topOn && $artistOn);
+
+  const atLeastOneActive = derived(
+    [trackActive, albumActive, playlistActive, artistActive],
+    ([$trackActive, $albumActive, $playlistActive, $artistActive]) =>
+      $trackActive || $albumActive || $playlistActive || $artistActive,
+  );
 
   const store = derived(
     [
@@ -102,6 +107,7 @@ function createDisplayFilter() {
       albumActive,
       playlistActive,
       artistActive,
+      atLeastOneActive,
     ],
     ([
       $topOn,
@@ -113,6 +119,7 @@ function createDisplayFilter() {
       $albumActive,
       $playlistActive,
       $artistActive,
+      $atLeastOneActive,
     ]) => ({
       topOn: $topOn,
       trackOn: $trackOn,
@@ -123,6 +130,7 @@ function createDisplayFilter() {
       albumActive: $albumActive,
       playlistActive: $playlistActive,
       artistActive: $artistActive,
+      atLeastOneActive: $atLeastOneActive,
     }),
   );
 

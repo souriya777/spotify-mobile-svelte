@@ -73,7 +73,7 @@
 {#key $playingRgb || $playerStateTrackUri}
   <div class="scrolling-text" {style} use:observeText>
     <div
-      class="text"
+      class="text no-scrollbar"
       class:canAnimate
       class:canScroll={canAnimate && canScroll}
       class:canScrollReverse={canAnimate && canScrollReverse}
@@ -129,8 +129,6 @@
     display: flex;
     padding-inline-start: calc(var(--width-scrolling-text-blur));
     white-space: nowrap;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
   }
 
   .bottom {
