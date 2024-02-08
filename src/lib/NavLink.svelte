@@ -1,5 +1,5 @@
 <script>
-  import { viewName as viewNameStore, goRootView } from '@js/store';
+  import { viewName as viewNameStore } from '@js/store';
 
   export let label;
   export let viewName;
@@ -16,7 +16,7 @@
     bounce = true;
     isAnimationPlayed = false;
     $viewNameStore = viewName;
-    goRootView();
+    // goRootView();
   }
 
   function animationend() {

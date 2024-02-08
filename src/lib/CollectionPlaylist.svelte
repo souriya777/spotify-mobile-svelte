@@ -9,9 +9,7 @@
 
 <ul class="collection">
   {#each items as item (item?.id)}
-    <li>
-      <CollectionPlaylistItem {item} />
-    </li>
+    <li><CollectionPlaylistItem {item} /></li>
   {/each}
 </ul>
 

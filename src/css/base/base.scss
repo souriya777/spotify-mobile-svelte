@@ -102,3 +102,7 @@ ul {
   /* Firefox */
   scrollbar-width: none;
 }
+
+.prevent-click {
+  pointer-events: none;
+}

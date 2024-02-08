@@ -1,4 +1,7 @@
 <script>
+  // @ts-nocheck
+  // FIXME
+
   import { onMount } from 'svelte';
   import { displayFilter } from '@js/store';
   import { debounce } from '@js/souriya-utils';
@@ -17,7 +20,7 @@
 
   $: firstTracks = searchResult?.tracks?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
   $: firstArtists = searchResult?.artists?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
-  $: firstPlaylists = searchResult?.playlists?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
+  // $: firstPlaylists = searchResult?.playlists?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
   $: firstAlbums = searchResult?.albums?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
 
   $: nextTracks = searchResult?.tracks?.slice(FIRST_RESULTS_LIMIT) ?? [];

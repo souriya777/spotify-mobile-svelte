@@ -1,12 +1,7 @@
 import { writable, derived, get } from 'svelte/store';
 import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
-import {
-  HOME_DEFAULT_VIEWS,
-  MY_LIB_DEFAULT_VIEWS,
-  ROOT_VIEW_INDEX,
-  SEARCH_DEFAULT_VIEWS,
-} from '@js/view-utils';
+import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
 import { DEFAULT_PLAYING_RGB } from '@js/palette-utils';
 
 // ACCESS
@@ -129,30 +124,23 @@ function removeView() {
   currentView().update((views) => [...views.slice(0, -1)]);
 }
 
-function goRootView() {
-  if (get(currentView()).length > ROOT_VIEW_INDEX) {
-    get(slidePrevAndRemoveForMe)?.();
-  }
-}
+// DEPRECATED
+// function goRootView() {
+//   if (get(currentView()).length > ROOT_VIEW_INDEX) {
+//     get(slidePrevAndRemoveForMe)?.();
+//   }
+// }
 
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
+const isSideMenuVisible = writable(false);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 const navigatingRgb = writable();
 const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
 
 // FILTER
-// const displayTrackOn = writable(true);
-// const displayArtistOn = writable(true);
-// const displayPlaylistOn = writable(true);
-// const displayAlbumOn = writable(true);
-// const displayTopOn = derived(
-//   [displayTrackOn, displayArtistOn, displayPlaylistOn, displayAlbumOn],
-//   ([$displayTrackOn, $displayArtistOn, $displayPlaylistOn, $displayAlbumOn]) =>
-//     $displayTrackOn && $displayArtistOn && $displayPlaylistOn && $displayAlbumOn,
-// );
 const displayFilter = createDisplayFilter();
 
 export {
@@ -193,7 +181,6 @@ export {
   VIEWS,
   addView,
   removeView,
-  goRootView,
   playingRgb,
   navigatingRgb,
   addAndSlideNextForMe,
@@ -201,10 +188,6 @@ export {
   uiTimestamp,
   resizeTimestamp,
   screenHeight,
-  // displayTrackOn,
-  // displayArtistOn,
-  // displayPlaylistOn,
-  // displayAlbumOn,
-  // displayTopOn,
+  isSideMenuVisible,
   displayFilter,
 };

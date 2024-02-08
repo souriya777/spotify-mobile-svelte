@@ -15,7 +15,6 @@ DRY -> Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
-  ---- when side-menu => disable clicked on `PlaylistView`
   -- feat(playlist): dynamize sorts
   -- feat(playlist-detail): make it beautiful
   -- mv `PlaylistView` -> `CollectionDetailView`

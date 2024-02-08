@@ -1,7 +1,13 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { VIEWS, uiTimestamp, resizeTimestamp } from '@js/store';
-  import { canRemoveView, loadView, isHomeView, isSideMenuView } from '@js/view-utils';
+  import { VIEWS, uiTimestamp, resizeTimestamp, isSideMenuVisible } from '@js/store';
+  import {
+    canRemoveView,
+    loadView,
+    isHomeView,
+    isSideMenuView,
+    ROOT_VIEW_INDEX,
+  } from '@js/view-utils';
   import { getTimestamp } from '@js/date-utils';
   import { getTranslateXY } from '@js/browser-utils';
   import PlayerMiniNav from '@lib/PlayerMiniNav.svelte';
@@ -360,18 +366,20 @@
             bind:this={VIEWS_BIND[id]}
             use:observeViewBrightness={i}
           >
-            <svelte:component this={loadView(viewName)} {...props} />
+            <div class:prevent-click={$isSideMenuVisible && i === ROOT_VIEW_INDEX}>
+              <svelte:component this={loadView(viewName)} {...props} />
+            </div>
           </li>
         {/each}
       {/key}
     </ul>
   {/key}
 
-  <div class="fixed" bind:this={FIXED_HTML}>
+  <div class="fixed" class:prevent-click={$isSideMenuVisible} bind:this={FIXED_HTML}>
     <PlayerMiniNav />
   </div>
 
-  <div class="fixed">
+  <div class="fixed" class:prevent-click={$isSideMenuVisible}>
     <PlayerBottomPanel />
   </div>
 
