@@ -8,7 +8,7 @@ import {
   accessToken,
   userId,
   player,
-  trackUri,
+  playerStateTrackUri,
   trackName,
   albumName,
   imageMiniUrl,
@@ -27,6 +27,7 @@ import {
   realTimeProgressMs,
   userPictureUrl,
   userDisplayName,
+  trackUri,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
 import SpotifySongCursor from '@js/SpotifySongCursor';
@@ -206,6 +207,29 @@ class SpotifyApi {
   async play() {
     get(player).resume();
     LOGGER.log('play');
+  }
+
+  /** @param {string} uri */
+  async playTrack(uri) {
+    this.#put(`/me/player/play`, { uris: [uri] });
+    trackUri.set(uri);
+    LOGGER.log('playTrack', uri);
+  }
+
+  /**
+   * @param {string} contextUri
+   * @param {number} indexPosition
+   */
+  async playTrackWithContext(contextUri, indexPosition) {
+    this.#put(`/me/player/play`, {
+      context_uri: contextUri,
+      offset: {
+        position: indexPosition,
+      },
+    });
+    // FIXME
+    // trackUri.set(uri);
+    LOGGER.log('playTrackWithContext', contextUri, indexPosition);
   }
 
   pause() {
@@ -597,7 +621,7 @@ class SpotifyApi {
 
   /** @param {import('@js/spotify').SpotifyTrack} track */
   #writeStoreTrackInfos(track) {
-    trackUri.set(track?.uri);
+    playerStateTrackUri.set(track?.uri);
     trackName.set(track?.name);
     durationMs.set(track?.duration_ms);
     albumName.set(track?.album?.name);
@@ -681,8 +705,10 @@ class SpotifyApi {
     try {
       AXIOS_INSTANCE()
         .put(this.#url(endpoint), data)
-        .then((response) => this.#axiosResponse(response, 'PUT', endpoint));
+        .then((response) => this.#axiosResponse(response, 'PUT', endpoint))
+        .catch((err) => console.log('🔵', err));
     } catch (err) {
+      console.log('🟡', err);
       this.#axiosError(err);
     }
   }
@@ -712,12 +738,15 @@ class SpotifyApi {
     const status = response?.status;
     LOGGER.log(method, endpoint, data, status);
 
-    if (endpoint === '/me/player' && SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status) {
-      LOGGER.error('Spotify returns 204 -> playback not available or active');
+    if (
+      endpoint === '/me/player' &&
+      method === 'GET' &&
+      SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status
+    ) {
+      const err = `Spotify returns 204 -> playback not available or active (${get(deviceId)}`;
+      LOGGER.error(err);
       this.transfertPlayback(get(deviceId));
-      throw new PlaybackNotAvailableOrActiveError(
-        'Spotify returns 204 -> playback not available or active',
-      );
+      throw new PlaybackNotAvailableOrActiveError(err);
     }
     /**
       GET /me/following?type=artist behaves almost the same

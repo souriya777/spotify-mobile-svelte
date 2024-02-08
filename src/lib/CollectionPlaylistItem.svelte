@@ -9,7 +9,10 @@
   function goPlaylist() {
     const view = createPlaylistView(item.id);
     addView(view);
-    $addAndSlideNextForMe();
+    // FIXME
+    if ($addAndSlideNextForMe) {
+      $addAndSlideNextForMe();
+    }
   }
 </script>
 

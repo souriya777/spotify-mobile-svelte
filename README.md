@@ -17,19 +17,18 @@ Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
-  -- feat(playlist-detail): dynamize it
+  -- feat(playlist): dynamize filter
+  -- feat(playlist): dynamize sorts
+  -- feat(playlist-detail): make it beautiful
   -- mv `PlaylistView` -> `CollectionDetailView`
   -- change background meta color based on "navigating rgb"
   -- feat(playlist-detail): can play the playlist via green button
-  -- feat(playlist-detail): can play a song
   -- remove `CollectionPlaylist` ?
   -- remove `CollectionItem` ?
   -- remove `Collection` ?
+  -- remove `Collection*`
   -- how implementing "NoteSvg" as default ?
   -- remove `ImageSolver` ?
-  -- feat(playlist): dynamize filter
-  -- feat(playlist): design content
-  -- feat(playlist): dynamize sorts
 - feat(playlist): how puting `karaoke` at first ?
   -- add `pinned` indicator ?
 - fix(playlist): spotify bug "recently-added" order
@@ -39,6 +38,23 @@ Single Source of Truth
 - feat(playlist): make scroll lib by date ?
 - feat(playlist): can add to queue
 - feat(playlist): can favorite song
+- feat(queue): design it
+
+  - feat(queue): what is default queue ?
+  - feat(queue): can remove song
+  - feat(queue): can clear queue
+  - feat(queue): extract track_window next_tracks ?
+  - feat(queue): can auto-load queue
+
+- when drag progress, why /me/player/devices is called ????
+
+```
+// FIXME
+    if (addAndSlideNextForMe) {
+      $addAndSlideNextForMe();
+    }
+```
+
 - feat(album): can see my albums list
 - feat(album): can view album details
 - feat(album): can play a song
@@ -47,6 +63,8 @@ Single Source of Truth
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
+
+- feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
 
 - feat(scroll): make beautiful scroll indicator
 - feat(nav): even if I click twice on nav-item, it bounce
@@ -58,12 +76,6 @@ Single Source of Truth
 - feat(search): can favourite playlist
 - feat(search): can favourite album
 - feat(search): can favourite song
-- feat(queue): design it
-  - feat(queue): what is default queue ?
-  - feat(queue): can remove song
-  - feat(queue): can clear queue
-  - feat(queue): extract track_window next_tracks ?
-  - feat(queue): can auto-load queue
 - feat(playlist/album): scroll snap on image go next song
 - feat(menu): design it
 - feat(menu): useview transition API as "svelte.dev menu"
@@ -87,6 +99,7 @@ Single Source of Truth
 - TODO/FIXME uncomment
 - ux(loading) : add spotify logo (ball)
 - ui(accessibility): implement accessibility (eg. `aria-hidden`) ?
+- refactor(aria): remove all `role="button"` ?
 - refactor(solver): remove old solver
 - refactor(button): use use:onTap
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
@@ -101,6 +114,7 @@ Single Source of Truth
 - perf(lazy-load): view in order to optimize processing ?
 - perf: manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - perf(realtime) : sync when ?
+  -- when play track in a playlist, I have to sync to have animated-equalizer appears... ($playerStateTrackUri === uri)
 - perf(service-worker): strategy `what`, `when`
 - perf(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?

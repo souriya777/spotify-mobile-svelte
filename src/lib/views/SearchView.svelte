@@ -5,7 +5,7 @@
   import { isEmpty } from '@js/string-utils';
   import SpotifyApi from '@js/SpotifyApi';
   import { searchQuery } from '@js/store';
-  import CollectionTrack from '@lib/CollectionTrack.svelte';
+  import CollectionTrack from '@lib/PlaylistTracks.svelte';
   import CollectionAlbum from '@lib/CollectionAlbum.svelte';
   import CollectionArtist from '@lib/CollectionArtist.svelte';
   import ListFilter from '@lib/ListFilter.svelte';

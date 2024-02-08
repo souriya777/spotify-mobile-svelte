@@ -1,8 +1,8 @@
 <script>
   import { onMount } from 'svelte';
-  import ViewDetail from '@lib/views/ViewDetail.svelte';
   import SpotifyApi from '@js/SpotifyApi';
-  import CollectionTrack from '@lib/CollectionTrack.svelte';
+  import ViewDetail from '@lib/views/ViewDetail.svelte';
+  import PlaylistTracks from '@lib/PlaylistTracks.svelte';
   import User from '@lib/User.svelte';
 
   export let id;
@@ -47,5 +47,5 @@
     />
   </svelte:fragment>
 
-  <CollectionTrack playlistId={id} items={tracks} />
+  <PlaylistTracks playlistUri={playlist?.uri} {tracks} />
 </ViewDetail>

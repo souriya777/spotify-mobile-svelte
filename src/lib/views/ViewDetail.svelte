@@ -1,12 +1,13 @@
 <script>
   import { afterUpdate } from 'svelte';
   import SpotifyApi from '@js/SpotifyApi';
-  import { navigatingRgb, scrollTop, playing, shuffleState } from '@js/store';
+  import { navigatingRgb, scrollTop, shuffleState, slidePrevAndRemoveForMe } from '@js/store';
   import { lightenDarkenColor } from '@js/palette-utils';
   import DetailCover from '@lib/DetailCover.svelte';
   import DetailTitle from '@lib/DetailTitle.svelte';
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
+  import DetailPlayPause from '@lib/DetailPlayPause.svelte';
 
   export let title = '';
   /** @type {import('@js/spotify').SpotifyImage}*/
@@ -20,36 +21,66 @@
   let DESC_HTML;
   /** @type {HTMLElement} */
   let IMG_HTML;
+  /** @type {HTMLElement} */
+  let GRADIENT_HTML;
+  /** @type {HTMLElement} */
+  let PLAY_PAUSE_BUTTON_HTML;
   let DESC_HEIGHT = 0;
+  let GRADIENT_HEIGHT = 0;
+  let PLAY_PAUSE_BUTTON_HEIGHT = 0;
   let FIXME_favorite = false;
+  let fakePlayPauseStyle = '';
 
   $: IMG_HEIGHT = IMG_HTML?.clientHeight ?? 0;
   $: DARKER_COLOR = $navigatingRgb ? lightenDarkenColor($navigatingRgb, -40) : [18, 18, 18];
   $: canDarkenHeaderBackground = $scrollTop >= NB_PX_BEFORE_CHANGE_HEADER_BACKGROUND;
   $: descReachedHeader = IMG_HEIGHT != 0 && $scrollTop >= IMG_HEIGHT;
-  $: headerStyle = canDarkenHeaderBackground ? `background: ${DARKER_COLOR}` : '';
+  $: headerStyle = canDarkenHeaderBackground ? `background: rgb(${DARKER_COLOR})` : '';
   $: style = `
     --color-base: rgb(${$navigatingRgb?.join(',')});
     --color-darker: rgb(${DARKER_COLOR?.join(',')});
     --height-desc: -${DESC_HEIGHT}px;
   `;
+  $: HALF_PLAY_PAUSE_BUTTON_HEIGHT = PLAY_PAUSE_BUTTON_HEIGHT / 2;
+  $: initialTranslateYPlayPause = GRADIENT_HEIGHT - PLAY_PAUSE_BUTTON_HEIGHT;
+  $: canDisplayFakePlayPauseButton = $scrollTop >= initialTranslateYPlayPause;
+
+  $: if (canDisplayFakePlayPauseButton) {
+    const translateY = Math.min(
+      $scrollTop - initialTranslateYPlayPause,
+      HALF_PLAY_PAUSE_BUTTON_HEIGHT,
+    );
+    fakePlayPauseStyle = `transform: translate3d(0, -${translateY}px, 0)`;
+  }
 
   afterUpdate(() => {
     if (DESC_HTML) {
       DESC_HEIGHT = DESC_HTML.clientHeight || 0;
+    }
+    if (GRADIENT_HTML) {
+      GRADIENT_HEIGHT = GRADIENT_HTML.clientHeight || 0;
+    }
+    if (PLAY_PAUSE_BUTTON_HTML) {
+      PLAY_PAUSE_BUTTON_HEIGHT = PLAY_PAUSE_BUTTON_HTML.clientHeight || 0;
     }
   });
 </script>
 
 <div class="view" {style}>
   <div class="header" style={headerStyle} bind:this={HEADER_HTML}>
-    <div class="back">
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="back" on:click={() => $slidePrevAndRemoveForMe?.()}>
       <Svg name="back" size={16} />
     </div>
     <DetailTitle {title} canAnimate={descReachedHeader} coverHeight={IMG_HEIGHT} />
   </div>
 
-  <div class="gradient">
+  <div class="fake-play-pause" class:canDisplayFakePlayPauseButton style={fakePlayPauseStyle}>
+    <DetailPlayPause />
+  </div>
+
+  <div class="gradient" bind:this={GRADIENT_HTML}>
     <div class="img" bind:this={IMG_HTML}>
       <DetailCover image={cover} alt={title} canAnimate={!descReachedHeader} />
     </div>
@@ -90,25 +121,13 @@
             callback={() => SpotifyApi.shuffle()}
           />
 
-          {#if $playing}
-            <Button
-              type="primary"
-              svg="pause"
-              reverseAccent={true}
-              bubble={true}
-              bubbleMini={true}
-              callback={() => SpotifyApi.pause()}
-            ></Button>
-          {:else}
-            <Button
-              type="primary"
-              svg="play"
-              reverseAccent={true}
-              bubble={true}
-              bubbleMini={true}
-              callback={() => SpotifyApi.play()}
-            ></Button>
-          {/if}
+          <div
+            class="play-pause-button"
+            class:canDisplayFakePlayPauseButton
+            bind:this={PLAY_PAUSE_BUTTON_HTML}
+          >
+            <DetailPlayPause />
+          </div>
         </div>
       </div>
     </div>
@@ -187,5 +206,22 @@
     display: flex;
     justify-content: space-between;
     margin-block: 0.8rem 1.8rem;
+  }
+
+  .play-pause-button {
+    display: inline-block;
+  }
+
+  .fake-play-pause {
+    position: sticky;
+    top: var(--height-detail-header);
+    right: var(--padding-inline-library);
+    display: none;
+    float: right;
+    z-index: var(--z-index-nearest);
+  }
+
+  .canDisplayFakePlayPauseButton.fake-play-pause {
+    display: block;
   }
 </style>

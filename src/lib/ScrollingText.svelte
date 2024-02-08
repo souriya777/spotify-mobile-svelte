@@ -1,5 +1,5 @@
 <script>
-  import { trackName, artistsDisplay, playingRgb, trackUri } from '@js/store';
+  import { trackName, artistsDisplay, playingRgb, playerStateTrackUri } from '@js/store';
 
   export let customStyle = '';
 
@@ -70,7 +70,7 @@
   }
 </script>
 
-{#key $playingRgb || $trackUri}
+{#key $playingRgb || $playerStateTrackUri}
   <div class="scrolling-text" {style} use:observeText>
     <div
       class="text"

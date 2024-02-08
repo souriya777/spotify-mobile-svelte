@@ -19,6 +19,7 @@ const userDisplayName = writableLocalStorage('userDisplayName', '');
 const userPictureUrl = writableLocalStorage('userPictureUrl', '');
 
 // SPOTIFY ITEMS
+const playerStateTrackUri = writable('');
 const trackUri = writable('');
 const trackName = writable('');
 const albumUri = writable('');
@@ -130,7 +131,7 @@ function removeView() {
 
 function goRootView() {
   if (get(currentView()).length > ROOT_VIEW_INDEX) {
-    get(slidePrevAndRemoveForMe)();
+    get(slidePrevAndRemoveForMe)?.();
   }
 }
 
@@ -164,6 +165,7 @@ export {
   player,
   playerFull,
   optionsFull,
+  playerStateTrackUri,
   trackUri,
   trackName,
   albumName,
