@@ -1,6 +1,6 @@
 <script>
-  import Collection from '@lib/Collection.svelte';
-  import CollectionItem from '@lib/CollectionPlaylistItem.svelte';
+  import List from '@lib/List.svelte';
+  import CollectionItem from '@lib/ListItem.svelte';
   import NavLink from '@lib/NavLink.svelte';
   import RenamePlaylist from '@lib/RenamePlaylist.svelte';
 
@@ -8,7 +8,7 @@
   export let items;
 </script>
 
-<Collection>
+<List>
   {#each items as list}
     <li>
       <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
@@ -21,4 +21,4 @@
       </NavLink>
     </li>
   {/each}
-</Collection>
+</List>

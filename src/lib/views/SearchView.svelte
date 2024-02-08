@@ -9,7 +9,7 @@
   import SpotifyApi from '@js/SpotifyApi';
   import { searchQuery } from '@js/store';
   import CollectionTrack from '@lib/PlaylistTracks.svelte';
-  import CollectionAlbum from '@lib/CollectionAlbum.svelte';
+  import CollectionAlbum from '@lib/ListAlbum.svelte';
   import CollectionArtist from '@lib/CollectionArtist.svelte';
   // import ListFilter from '@lib/ListFilter.svelte';
 

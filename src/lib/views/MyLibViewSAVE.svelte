@@ -6,8 +6,8 @@
   import SpotifyApi from '@js/SpotifyApi';
   import Button from '@lib/Button.svelte';
   import CollectionTrack from '@lib/CollectionTrack.svelte';
-  import CollectionPlaylist from '@lib/CollectionPlaylist.svelte';
-  import CollectionAlbum from '@lib/CollectionAlbum.svelte';
+  import CollectionPlaylist from '@lib/ListPlaylist.svelte';
+  import CollectionAlbum from '@lib/ListAlbum.svelte';
   import CollectionArtist from '@lib/CollectionArtist.svelte';
   import CollectionItem from '@lib/CollectionItem.svelte';
   // import ListFilter from '@lib/ListFilter.svelte';

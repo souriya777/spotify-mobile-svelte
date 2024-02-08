@@ -6,14 +6,14 @@
     slidePrevAndRemoveForMe,
     addAndSlideNextForMe,
   } from '@js/store';
-  import { createView } from '@js/view-utils';
+  import { createDumbView } from '@js/view-utils';
   import Button from '@lib/Button.svelte';
 
   export let goPrevForMe;
   export let goNextForMe;
 
   function addView() {
-    const view = createView();
+    const view = createDumbView();
     addViewStore(view);
     $addAndSlideNextForMe();
   }

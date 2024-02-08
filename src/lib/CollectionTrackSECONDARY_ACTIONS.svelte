@@ -1,6 +1,6 @@
 <script>
-  import Collection from '@lib/Collection.svelte';
-  import CollectionItem from '@lib/CollectionPlaylistItem.svelte';
+  import List from '@lib/List.svelte';
+  import CollectionItem from '@lib/ListItem.svelte';
   import SpotifyApi from '@js/SpotifyApi';
   import AddToPlaylist from '@lib/AddToPlaylist.svelte';
 
@@ -15,7 +15,7 @@
   }
 </script>
 
-<Collection>
+<List>
   {#each items as track, i}
     {@const album = track?.album}
     {@const artist = track?.artists?.map((t) => t?.name).join(', ')}
@@ -44,4 +44,4 @@
       <AddToPlaylist trackUri={track.uri} />
     </li>
   {/each}
-</Collection>
+</List>

@@ -15,14 +15,11 @@ DRY -> Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
+  -- feat(my-lib): can display `artist` list
   -- feat(playlist): dynamize sorts
-  -- feat(playlist-detail): make it beautiful
   -- mv `PlaylistView` -> `CollectionDetailView`
   -- change background meta color based on "navigating rgb"
   -- feat(playlist-detail): can play the playlist via green button
-  -- remove `CollectionPlaylist` ?
-  -- remove `CollectionItem` ?
-  -- remove `Collection` ?
   -- remove `Collection*`
   -- remove `ListFilterSAVE`
   -- how implementing "NoteSvg" as default ?

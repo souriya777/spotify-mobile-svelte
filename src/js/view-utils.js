@@ -4,6 +4,7 @@ import HomeView from '@lib/views/HomeView.svelte';
 import SearchView from '@lib/views/SearchView.svelte';
 import MyLibView from '@lib/views/MyLibView.svelte';
 import PlaylistView from '@lib/views/PlaylistView.svelte';
+import AlbumView from '@lib/views/AlbumView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
 const ROOT_VIEW_INDEX = 1;
@@ -55,6 +56,8 @@ function loadView(viewName) {
     View = MyLibView;
   } else if ('PlaylistView' === viewName) {
     View = PlaylistView;
+  } else if ('AlbumView' === viewName) {
+    View = AlbumView;
   } else if ('DumbView' === viewName) {
     View = DumbView;
   }
@@ -62,36 +65,50 @@ function loadView(viewName) {
   return View;
 }
 
-function canRemoveView(viewPosition) {
-  return viewPosition > 1;
+/**
+ * @param {string} viewName
+ * @param {object} props
+ * @returns
+ */
+function createView(viewName, props) {
+  const id = VIEW_ID_PREFIX + getTimestamp();
+
+  return {
+    id,
+    viewName,
+    props,
+  };
 }
 
 /**
  * @returns {import('@js/internal').View}
  */
-function createView() {
-  const id = VIEW_ID_PREFIX + getTimestamp();
-
-  return {
-    id,
-    viewName: 'DumbView',
-    props: {
-      title: '😎' + new Date().getTime(),
-    },
-  };
+function createDumbView() {
+  return createView('DumbView', {
+    title: '😎' + new Date().getTime(),
+  });
 }
 
 /**
  * @returns {import('@js/internal').View}
  */
 function createPlaylistView(id) {
-  return {
-    id: VIEW_ID_PREFIX + getTimestamp(),
-    viewName: 'PlaylistView',
-    props: {
-      id,
-    },
-  };
+  return createView('PlaylistView', {
+    id,
+  });
+}
+
+/**
+ * @returns {import('@js/internal').View}
+ */
+function createAlbumView(id) {
+  return createView('AlbumView', {
+    id,
+  });
+}
+
+function canRemoveView(viewPosition) {
+  return viewPosition > 1;
 }
 
 /**
@@ -115,7 +132,9 @@ export {
   MY_LIB_DEFAULT_VIEWS,
   loadView,
   createView,
+  createDumbView,
   createPlaylistView,
+  createAlbumView,
   canRemoveView,
   isSideMenuView,
   isHomeView,

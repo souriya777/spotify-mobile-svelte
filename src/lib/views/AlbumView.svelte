@@ -13,5 +13,5 @@
   });
 </script>
 
-Album {id}
+SOURIYA
 <CollectionAlbumTrack items={tracks} />

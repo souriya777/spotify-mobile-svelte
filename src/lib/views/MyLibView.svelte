@@ -1,10 +1,11 @@
 <script>
   import { onMount } from 'svelte';
-  import { userId } from '@js/store';
+  import { userId, displayFilter } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Button from '@lib/Button.svelte';
-  import CollectionPlaylist from '@lib/CollectionPlaylist.svelte';
+  import ListPlaylist from '@lib/ListPlaylist.svelte';
+  import ListAlbum from '@lib/ListAlbum.svelte';
   import ListFilter from '@lib/ListFilter.svelte';
 
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
@@ -21,12 +22,12 @@
   // let totalLikedTracks;
 
   onMount(() => {
-    // get playlist
+    // PLAYLISTS
     sortPlaylistBySpotify();
-
     // SpotifyApi.getLikedTracks().then((tracks) => (totalLikedTracks = tracks?.length));
 
-    // sortAlbumsRecentlyPlayed();
+    // ALBUM
+    sortAlbumsRecentlyPlayed();
 
     // SpotifyApi.getMyFollowedArtists().then((items) => (artists = items));
   });
@@ -46,10 +47,10 @@
   //   selectedPlaylist = 3;
   // }
 
-  // async function sortAlbumsRecentlyPlayed() {
-  //   SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed().then((items) => (albums = items));
-  //   selectedAlbum = 1;
-  // }
+  async function sortAlbumsRecentlyPlayed() {
+    SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed().then((items) => (albums = items));
+    // selectedAlbum = 1;
+  }
 
   // async function sortAlbumsRecentlyAdded() {
   //   SpotifyApi.getMySavedAlbumsSortedRecentlyAdded().then((items) => (albums = items));
@@ -92,7 +93,15 @@
     <div>TODO list / grid</div>
   </div>
 
-  <CollectionPlaylist items={playlists} />
+  {#if $displayFilter.playlistActive}
+    <ListPlaylist items={playlists} />
+  {:else if $displayFilter.albumActive}
+    <ListAlbum items={albums} />
+  {:else if $displayFilter.artistActive}
+    TODO artist
+  {:else}
+    TODO ALL
+  {/if}
 </ViewRoot>
 
 <style>
