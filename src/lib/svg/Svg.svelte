@@ -171,4 +171,16 @@
       d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
     ></path>
   </svg>
+{:else if 'list-mode' === name.toLocaleLowerCase()}
+  <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">
+    <path
+      d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+    ></path>
+  </svg>
+{:else if 'grid-mode' === name.toLocaleLowerCase()}
+  <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">
+    <path
+      d="M1 1h6v6H1V1zm1.5 1.5v3h3v-3h-3zM1 9h6v6H1V9zm1.5 1.5v3h3v-3h-3zM9 1h6v6H9V1zm1.5 1.5v3h3v-3h-3zM9 9h6v6H9V9zm1.5 1.5v3h3v-3h-3z"
+    ></path>
+  </svg>
 {/if}

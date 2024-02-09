@@ -1,5 +1,5 @@
 <script>
-  import ImageSolver from '@lib/ImageSolver.svelte';
+  import ImageSolverSAVE from '@lib/ImageSolverSAVE.svelte';
 
   /** @type {import('@js/spotify').SpotifyImage[]} */
   export let images = [];
@@ -11,7 +11,7 @@
 <div class="preview-summary">
   <slot name="move" />
 
-  <ImageSolver {images} alt={title} {isArtist} />
+  <ImageSolverSAVE {images} alt={title} {isArtist} />
 
   <span class="text">
     {title}

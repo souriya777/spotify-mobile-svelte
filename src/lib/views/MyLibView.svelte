@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { userId, displayFilter } from '@js/store';
+  import { userId, displayFilter, gridMode } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Button from '@lib/Button.svelte';
@@ -8,6 +8,9 @@
   import ListAlbum from '@lib/ListAlbum.svelte';
   import ListFilter from '@lib/ListFilter.svelte';
   import ListArtist from '@lib/ListArtist.svelte';
+  import Svg from '@lib/svg/Svg.svelte';
+
+  const DISPLAY_MODE_ICON_SIZE = 14;
 
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -22,6 +25,7 @@
   onMount(() => {
     // PLAYLISTS
     sortPlaylistBySpotify();
+    // sortPlaylistRecentlyAddedAt()
 
     // ALBUMS
     sortAlbumsRecentlyPlayed();
@@ -83,8 +87,16 @@
   </svelte:fragment>
 
   <div class="sort-display">
-    <div>TODO sort</div>
-    <div>TODO list / grid</div>
+    <div class="sort">TODO sort</div>
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div on:click={() => ($gridMode = !$gridMode)}>
+      {#if $gridMode}
+        <Svg name="list-mode" size={DISPLAY_MODE_ICON_SIZE} />
+      {:else}
+        <Svg name="grid-mode" size={DISPLAY_MODE_ICON_SIZE} />
+      {/if}
+    </div>
   </div>
 
   {#if $displayFilter.playlistActive}
@@ -102,6 +114,10 @@
   .sort-display {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .sort {
     background-color: chocolate;
   }
 </style>

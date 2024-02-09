@@ -24,8 +24,8 @@
   --padding-inline-library: 1.2rem;
   --padding-space-player: 0.6rem;
 
-  --border-radius-cover-img: 1rem;
-  --border-radius-mini-img: 0.4rem;
+  --border-radius-image-cover: 1rem;
+  --border-radius-image-mini: 0.4rem;
   --shadow-cover: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 
   --transition-bottom-panel: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
@@ -105,4 +105,18 @@ ul {
 
 .prevent-click {
   pointer-events: none;
+}
+
+.one-row {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.two-rows {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }

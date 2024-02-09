@@ -16,7 +16,7 @@
 
   img {
     margin-inline: auto;
-    border-radius: var(--border-radius-cover-img);
+    border-radius: var(--border-radius-image-cover);
     filter: var(--shadow-cover);
   }
 

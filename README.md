@@ -14,17 +14,19 @@ DRY -> Single Source of Truth
 
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
+-- imageMiniUrl, imageCoverUrl
+
 - feat(playlist/playlist-detail): adopt old code to new
-  -- feat(playlist): display `Liked` playlist
-  -- feat(playlist): how puting `karaoke` at first ?
-  --- add `pinned` indicator ?
-  -- feat(playlist): dynamize sorts
-  -- mv `PlaylistView` -> `CollectionDetailView`
-  -- change background meta color based on "navigating rgb"
-  -- feat(playlist-detail): can play the playlist via green button
-  -- remove `Collection*`
-  -- how implementing "NoteSvg" as default ?
-  -- remove `ImageSolver` ?
+  - feat(my-lib): implement all items view
+    -- add playlist / album / artist PREFIX
+  - feat(playlist): display `Liked` playlist
+    -- feat(playlist): dynamize sorts
+    -- mv `PlaylistView` -> `CollectionDetailView`
+    -- change background meta color based on "navigating rgb"
+    -- feat(playlist-detail): can play the playlist via green button
+    -- remove `Collection*`
+    -- how implementing "NoteSvg" as default ?
+    -- remove `ImageSolverSAVE` ?
 - fix(playlist): spotify bug "recently-added" order
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
@@ -47,6 +49,8 @@ DRY -> Single Source of Truth
 - feat(queue): extract track_window next_tracks ?
 - feat(queue): can auto-load queue
 
+- feat(list-playlist): make api call for playlist cover
+  -- replace grid-mode image with playlist cover
 - feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
 - when drag progress, why /me/player/devices is called ????
 - feat(scroll): make beautiful scroll indicator
@@ -74,12 +78,10 @@ DRY -> Single Source of Truth
 
 - //learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
-- fix(test): playwrite to ket "pinned" or "sort" functionnality (mathieu) ? https://playwright.dev/docs/running-tests
 - fix(eslint): resolve problems shown in vscode
 - fix in `SpotifyApi.test.js`
   `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
 - fix `BetaLikedImg`
-- fix(img): <ImageSolver> -> `getDominantColor`
 - TODO/FIXME uncomment
 - ux(loading) : add spotify logo (ball)
 - ui(accessibility): implement accessibility (eg. `aria-hidden`) ?
@@ -162,9 +164,9 @@ if `204` => `playback not available or active` (when no device playing something
 
 # spotify
 
-Has 2 APIs : one PUBLIC (`api.spotify.com/v1`) & one PRIVATE (`api-partner.spotify.com/pathfinder/v1/query`).
+Has 2 APIs : one PUBLIC (`api.spotify.com/v1`) & one PRIVATE (`api-partner.spotify.com/pathfinder/v1/query` & `https://open.spotify.com/get_access_token` => CORS issue).
 
-Note for `private` API :
+Note for `private` API:
 
 - Some operation, like `sorting playlist`, are unavailable in PUBLIC API... So we can't have exactly the same functionnalities or results as `native client spotify` or `web player spotify`
 - "pinning" a playlist is unvailable too

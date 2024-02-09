@@ -1,6 +1,6 @@
 <script>
   import { addView, addAndSlideNextForMe } from '@js/store';
-  import ImageMini from '@lib/ImageMini.svelte';
+  import ImgMini from '@lib/ImgMini.svelte';
 
   export let title;
   export let owner = '';
@@ -10,6 +10,10 @@
   export let createViewFn;
   export let isListArtist = false;
   export let isLikeItem = false;
+
+  $: if (title === 'Korean Ballad (발라드)/Sad Songs') {
+    console.log('🔵', title, images?.sort((a, b) => a.width - b.width)?.at(0));
+  }
 
   function goDetail() {
     const view = createViewFn();
@@ -25,20 +29,20 @@
     <img src="/liked-songs-64.png" alt="liked songs" />
   {:else}
     <div class="img" class:isListArtist>
-      <ImageMini {images} alt={imageAlt} bubble={isListArtist} />
+      <ImgMini {images} alt={imageAlt} bubble={isListArtist} />
     </div>
   {/if}
 
   <div class="text">
-    <div class="name font-list__title">{title}</div>
-    <div class="owner font-list__owner">{owner}</div>
+    <div class="name one-row font-list__title">{title}</div>
+    <div class="owner one-row font-list__owner">{owner}</div>
   </div>
 </li>
 
 <style>
   .list-item {
     display: flex;
-    padding-block: 1rem;
+    padding-block-end: var(--padding-inline-library);
   }
 
   .text {

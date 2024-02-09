@@ -49,7 +49,7 @@
 >
   <div class="img">
     {#if $imageMiniUrl}
-      <Img src={$imageMiniUrl} alt={$albumName} />
+      <Img src={$imageMiniUrl} alt={$albumName} radius={true} />
     {:else}
       <Svg name="default-image" />
     {/if}

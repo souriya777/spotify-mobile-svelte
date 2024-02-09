@@ -90,7 +90,7 @@
         <slot name="desc__title" />
       </div>
 
-      <div class="desc__detail font-collection-detail">
+      <div class="desc__detail two-rows font-collection-detail">
         <slot name="desc__detail" />
       </div>
 
@@ -189,13 +189,6 @@
     position: relative;
     padding-inline: var(--padding-inline-library);
     z-index: var(--z-index-near);
-  }
-
-  .desc__detail {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
   }
 
   .desc__owner {

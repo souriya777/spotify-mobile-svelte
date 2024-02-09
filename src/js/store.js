@@ -135,6 +135,7 @@ function removeView() {
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
+const gridMode = writable(false);
 const isSideMenuVisible = writable(false);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 const navigatingRgb = writable();
@@ -190,6 +191,7 @@ export {
   uiTimestamp,
   resizeTimestamp,
   screenHeight,
+  gridMode,
   isSideMenuVisible,
   displayFilter,
 };

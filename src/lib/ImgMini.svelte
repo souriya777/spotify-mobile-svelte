@@ -1,4 +1,5 @@
 <script>
+  import { sortImagesBySizeAsc } from '@js/spotify-utils';
   import NoteSvg from '@lib/svg/NoteSvg.svelte';
 
   /** @type {import('@js/spotify').SpotifyImage[]} */
@@ -6,11 +7,11 @@
   export let alt;
   export let bubble = false;
 
-  $: image = images?.sort((a, b) => b.width - a.width)?.at(0);
+  $: image = sortImagesBySizeAsc(images)?.at(0);
 </script>
 
 {#if images.length > 0}
-  <img src={image?.url} {alt} height={image?.height} width={image?.width} class:bubble />
+  <img src={image?.url} {alt} class:bubble />
 {:else}
   <div class="empty-img" aria-label={alt}>
     <NoteSvg />
@@ -18,10 +19,14 @@
 {/if}
 
 <style>
+  img {
+    max-width: unset;
+  }
+
   img,
   .empty-img {
-    height: 6.2rem;
-    width: 6.2rem;
+    height: 6.4rem;
+    width: 6.4rem;
   }
 
   .empty-img {

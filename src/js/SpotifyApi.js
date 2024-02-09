@@ -13,7 +13,6 @@ import {
   albumName,
   imageMiniUrl,
   imageCoverUrl,
-  imageBigUrl,
   artists,
   shuffleState,
   repeatState,
@@ -50,7 +49,7 @@ import SpotifySearch from '@js/SpotifySearch';
 import { isArrayEmpty } from '@js/souriya-utils';
 import { isNotEmpty } from '@js/string-utils';
 import SpotifySavedAlbum from '@js/SpotifySavedAlbum';
-import { sortByName, sortByAddedAt } from '@js/spotify-utils';
+import { sortListByName, sortListByAddedAt, sortImagesBySizeAsc } from '@js/spotify-utils';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -112,7 +111,7 @@ class SpotifyApi {
     const user = await this.getUser();
     userId.set(user?.id);
     userDisplayName.set(user?.display_name);
-    const url = user?.images?.sort((a, b) => a.width - b.width)?.at(0)?.url;
+    const url = sortImagesBySizeAsc(user?.images)?.at(0)?.url;
     if (url) {
       userPictureUrl.set(url);
     }
@@ -293,7 +292,7 @@ class SpotifyApi {
    */
   async getPlaylistsSortedAlphabetically(userId) {
     const playlists = await this.#getAllPlaylists(userId);
-    return playlists?.sort(sortByName);
+    return playlists?.sort(sortListByName);
   }
 
   /**
@@ -308,7 +307,7 @@ class SpotifyApi {
     });
 
     const playlistsWithDate = await Promise.all(playlistExtendedPromises);
-    return playlistsWithDate?.sort(sortByAddedAt);
+    return playlistsWithDate?.sort(sortListByAddedAt);
   }
 
   /**
@@ -320,7 +319,7 @@ class SpotifyApi {
 
     const data = await this.#get(`/playlists/${playlist.id}/tracks?fields=items%28added_at%29`);
 
-    const items = new SpotifyPlaylistExtended(data)?.items?.sort(sortByAddedAt);
+    const items = new SpotifyPlaylistExtended(data)?.items?.sort(sortListByAddedAt);
 
     const added_at = items?.[0]?.['added_at'];
 
@@ -335,7 +334,7 @@ class SpotifyApi {
   async getLikedTracks() {
     /** @type {import('@js/spotify').SpotifySong[]} */
     const tracks = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
-    return tracks?.sort(sortByAddedAt).map((song) => song?.track);
+    return tracks?.sort(sortListByAddedAt).map((song) => song?.track);
   }
 
   /**
@@ -384,7 +383,7 @@ class SpotifyApi {
   async getMySavedAlbumsSortedRecentlyAdded() {
     /** @type {import('@js/spotify').SpotifySavedAlbum[]} */
     const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
-    return albums?.sort(sortByAddedAt);
+    return albums?.sort(sortListByAddedAt);
   }
 
   /** @return {Promise<import('@js/spotify').SpotifySearchArtist[]>} */
@@ -626,11 +625,10 @@ class SpotifyApi {
     durationMs.set(track?.duration_ms);
     albumName.set(track?.album?.name);
     artists.set(track?.artists);
-    const imagesSortBySizeAsc = track?.album?.images?.sort((a, b) => a.width - b.width);
-    if (imagesSortBySizeAsc) {
-      imageMiniUrl.set(imagesSortBySizeAsc.at(0).url);
-      imageCoverUrl.set(imagesSortBySizeAsc.at(1).url);
-      imageBigUrl.set(imagesSortBySizeAsc.at(2).url);
+    const sorted = sortImagesBySizeAsc(track?.album?.images);
+    if (sorted) {
+      imageMiniUrl.set(sorted.at(0).url);
+      imageCoverUrl.set(sorted.at(1).url);
     }
   }
 

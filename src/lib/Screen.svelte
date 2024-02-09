@@ -4,7 +4,7 @@
     playingRgb,
     navigatingRgb,
     playerFull,
-    imageBigUrl,
+    imageCoverUrl,
     resizeTimestamp,
     screenHeight,
   } from '@js/store';
@@ -41,7 +41,7 @@
 
 {#key $resizeTimestamp}
   <div class="screen" {style} bind:this={SCREEN_HTML} on:scroll={handleScroll}>
-    <ImgUrlColorSolver imageUrl={$imageBigUrl} />
+    <ImgUrlColorSolver imageUrl={$imageCoverUrl} />
     <UiProxy></UiProxy>
   </div>
 {/key}

@@ -1,7 +1,7 @@
 <script>
   import { trackUri, playing } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
-  import ImageMini from '@lib/ImageMini.svelte';
+  import ImgMini from '@lib/ImgMini.svelte';
   import AnimatedEqualizer from '@lib/AnimatedEqualizer.svelte';
 
   // TODO fix space
@@ -24,7 +24,7 @@
 
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <li on:click={() => play(i)} on:keyup={() => play(i)}>
-      <ImageMini images={album?.images} alt={track?.name} />
+      <ImgMini images={album?.images} alt={track?.name} />
 
       <div class="text">
         <div class="song">
