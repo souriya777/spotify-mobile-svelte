@@ -15,17 +15,13 @@
   let albums = [];
   /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   let artists = [];
-  // /** @type {import('@js/spotify').SpotifyTrack[]} */
-  // let likedTracks = [];
 
   // let selectedPlaylist = 1;
   // let selectedAlbum = 1;
-  // let totalLikedTracks;
 
   onMount(() => {
     // PLAYLISTS
     sortPlaylistBySpotify();
-    // SpotifyApi.getLikedTracks().then((tracks) => (totalLikedTracks = tracks?.length));
 
     // ALBUMS
     sortAlbumsRecentlyPlayed();
@@ -57,10 +53,6 @@
   // async function sortAlbumsRecentlyAdded() {
   //   SpotifyApi.getMySavedAlbumsSortedRecentlyAdded().then((items) => (albums = items));
   //   selectedAlbum = 2;
-  // }
-
-  // async function getLikedTracks() {
-  //   likedTracks = await SpotifyApi.getLikedTracks();
   // }
 </script>
 

@@ -27,6 +27,7 @@ const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
 );
+const likedTracks = writable([]);
 
 // DEVICE
 const deviceId = writableLocalStorage('deviceId', '');
@@ -163,6 +164,7 @@ export {
   imageBigUrl,
   artists,
   artistsDisplay,
+  likedTracks,
   shuffleState,
   repeatState,
   playing,

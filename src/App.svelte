@@ -5,6 +5,7 @@
   import RegisterServiceWorker from '@lib/RegisterServiceWorker.svelte';
   import Screen from '@lib/Screen.svelte';
   import { preventZoomPitch } from '@js/souriya-utils';
+  import { loadVitalData } from '@js/sync-utils';
 
   onMount(() => {
     // @ts-ignore
@@ -14,6 +15,7 @@
     }
 
     preventZoomPitch();
+    loadVitalData();
   });
 </script>
 

@@ -5,10 +5,11 @@
   export let title;
   export let owner = '';
   /** @type {import('@js/spotify').SpotifyImage[]} */
-  export let images;
-  export let imageAlt;
+  export let images = [];
+  export let imageAlt = '';
   export let createViewFn;
   export let isListArtist = false;
+  export let isLikeItem = false;
 
   function goDetail() {
     const view = createViewFn();
@@ -20,9 +21,13 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li class="list-item" on:click={goDetail}>
-  <div class="img" class:isListArtist>
-    <ImageMini {images} alt={imageAlt} bubble={isListArtist} />
-  </div>
+  {#if isLikeItem}
+    <img src="/liked-songs-64.png" alt="liked songs" />
+  {:else}
+    <div class="img" class:isListArtist>
+      <ImageMini {images} alt={imageAlt} bubble={isListArtist} />
+    </div>
+  {/if}
 
   <div class="text">
     <div class="name font-list__title">{title}</div>

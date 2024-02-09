@@ -15,16 +15,16 @@ DRY -> Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
+  -- feat(playlist): display `Liked` playlist
+  -- feat(playlist): how puting `karaoke` at first ?
+  --- add `pinned` indicator ?
   -- feat(playlist): dynamize sorts
   -- mv `PlaylistView` -> `CollectionDetailView`
   -- change background meta color based on "navigating rgb"
   -- feat(playlist-detail): can play the playlist via green button
   -- remove `Collection*`
-  -- remove `ListFilterSAVE`
   -- how implementing "NoteSvg" as default ?
   -- remove `ImageSolver` ?
-- feat(playlist): how puting `karaoke` at first ?
-  -- add `pinned` indicator ?
 - fix(playlist): spotify bug "recently-added" order
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
@@ -32,23 +32,6 @@ DRY -> Single Source of Truth
 - feat(playlist): make scroll lib by date ?
 - feat(playlist): can add to queue
 - feat(playlist): can favorite song
-- feat(queue): design it
-
-  - feat(queue): what is default queue ?
-  - feat(queue): can remove song
-  - feat(queue): can clear queue
-  - feat(queue): extract track_window next_tracks ?
-  - feat(queue): can auto-load queue
-
-- when drag progress, why /me/player/devices is called ????
-
-```
-// FIXME
-    if (addAndSlideNextForMe) {
-      $addAndSlideNextForMe();
-    }
-```
-
 - feat(album): can see my albums list
 - feat(album): can view album details
 - feat(album): can play a song
@@ -57,14 +40,21 @@ DRY -> Single Source of Truth
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
+- feat(queue): design it
+- feat(queue): what is default queue ?
+- feat(queue): can remove song
+- feat(queue): can clear queue
+- feat(queue): extract track_window next_tracks ?
+- feat(queue): can auto-load queue
 
 - feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
-
+- when drag progress, why /me/player/devices is called ????
 - feat(scroll): make beautiful scroll indicator
 - feat(nav): even if I click twice on nav-item, it bounce
 - feat(device): can switch device `ChangeDevice.svelte`
 - feat(device): disconnect other player to make it more robust
 - feat(device): can manage other players
+- fix(search): remove `ListFilterSAVE`
 - feat(search): tune it
 - feat(search): manage back search in browser (no dependent of char by char input)
 - feat(search): can favourite playlist
@@ -97,6 +87,7 @@ DRY -> Single Source of Truth
 - refactor(solver): remove old solver
 - refactor(button): use use:onTap
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
+- perf(list): move liked track loading elsewhere ? (`MyLibView`)
 - perf(user-profile): picture in cache ?
 - perf(user-profile): user info in cache ?
 - perf(api): ERRORS feat(spotify-api): implement quota-limit with code `429`
