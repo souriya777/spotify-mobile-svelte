@@ -1,0 +1,218 @@
+[
+  {
+    "id": "0pA5okg4BBqoW6X731rdDn",
+    "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn",
+    "name": "DARK TECHNO MIX | Andrea Botez",
+    "description": "here is the tracklist from my dark techno set on YT, enjoy :) PS track 18 was from soundcloud so couldn&#x27;t list but it&#x27;s Oliver Helden&#x27;s Billie Eilish mashup!",
+    "owner": {
+      "id": "andrea-botez",
+      "display_name": "Andrea Botez"
+    },
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67706c0000da84a9597e7f735eb327d5f16138",
+        "height": null,
+        "width": null
+      }
+    ],
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/0pA5okg4BBqoW6X731rdDn/tracks?offset=0&limit=100&locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+      "total": 21
+    }
+  },
+  {
+    "id": "5D7QfnijsdNFc3KvKcQQFt",
+    "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
+    "name": "L'engreneur",
+    "artists": [
+      {
+        "id": "41o2A93SPxIUxsy5HQjvul",
+        "name": "Passi",
+        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27358c6170dd6620f205d7ac206",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0258c6170dd6620f205d7ac206",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485158c6170dd6620f205d7ac206",
+        "height": 64,
+        "width": 64
+      }
+    ]
+  },
+  {
+    "id": "6EwTLRHMROD853Kv1lAMex",
+    "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
+    "name": "Invaincu",
+    "artists": [
+      {
+        "id": "5j4HeCoUlzhfWtjAfM1acR",
+        "name": "Stromae",
+        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736af3a93773dcb59a67ab2953",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026af3a93773dcb59a67ab2953",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516af3a93773dcb59a67ab2953",
+        "height": 64,
+        "width": 64
+      }
+    ]
+  },
+  {
+    "id": "2YP02JRa1JLejrg3XTssJS",
+    "name": "The Five Satins",
+    "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2739e8ad4f8a33d8a0968769165",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e029e8ad4f8a33d8a0968769165",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048519e8ad4f8a33d8a0968769165",
+        "height": 64,
+        "width": 64
+      }
+    ]
+  },
+  {
+    "id": "0PUi9O36OMwere5DTyayAq",
+    "name": "Chloé Stafler",
+    "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebad95a6b32e6a85cef02a075f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ad95a6b32e6a85cef02a075f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ad95a6b32e6a85cef02a075f",
+        "height": 160,
+        "width": 160
+      }
+    ]
+  },
+  {
+    "id": "4ACplpEqD6JIVgKrafauzs",
+    "name": "The Everly Brothers",
+    "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebea4e50a3c95e9024bb990fb9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ea4e50a3c95e9024bb990fb9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ea4e50a3c95e9024bb990fb9",
+        "height": 160,
+        "width": 160
+      }
+    ]
+  },
+  {
+    "id": "6EMFcjkD4LHxfwqfJlPjsb",
+    "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
+    "name": "Dreamy Eyes",
+    "artists": [
+      {
+        "id": "36msvw9B10rxW90NSQ2794",
+        "name": "Johnny Tillotson",
+        "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27385ed238114401e0711858519",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0285ed238114401e0711858519",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485185ed238114401e0711858519",
+        "height": 64,
+        "width": 64
+      }
+    ]
+  },
+  {
+    "id": "3Z3btTHiNpXUkWBmIikkiK",
+    "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK",
+    "name": "my doo-wop v(^i^)",
+    "description": "",
+    "owner": {
+      "id": "laosoupi59",
+      "display_name": "Souriya Phongsavanh"
+    },
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67706c0000da84e898f379bea492c931634920",
+        "height": null,
+        "width": null
+      }
+    ],
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/3Z3btTHiNpXUkWBmIikkiK/tracks?offset=0&limit=100&locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+      "total": 48
+    }
+  },
+  {
+    "id": "37i9dQZF1Fa1IIVtEpGUcU",
+    "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU",
+    "name": "Votre Top Titres 2023",
+    "description": "La Rétrospective Spotify revient sur les titres que vous avez aimés cette année.",
+    "owner": {
+      "id": "spotify",
+      "display_name": "Spotify"
+    },
+    "images": [
+      {
+        "url": "https://wrapped-images.spotifycdn.com/image/yts-2023/default/your-top-songs-2023_DEFAULT_fr.jpg",
+        "height": null,
+        "width": null
+      }
+    ],
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1Fa1IIVtEpGUcU/tracks?offset=0&limit=100&locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+      "total": 100
+    }
+  }
+]

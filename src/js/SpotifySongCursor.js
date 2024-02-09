@@ -7,7 +7,7 @@ import SpotifySong from '@js/SpotifySong';
 class SpotifySongCursor extends Cursor {
   constructor(fromApi) {
     super(fromApi);
-    this.items = fromApi?.items.map((item) => new SpotifySong(item));
+    this.items = fromApi?.items?.map((item) => new SpotifySong(item));
   }
 }
 

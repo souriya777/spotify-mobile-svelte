@@ -50,6 +50,8 @@ import { isArrayEmpty } from '@js/souriya-utils';
 import { isNotEmpty } from '@js/string-utils';
 import SpotifySavedAlbum from '@js/SpotifySavedAlbum';
 import { sortListByName, sortListByAddedAt, sortImagesBySizeAsc } from '@js/spotify-utils';
+import SpotifyAlbum from '@js/SpotifyAlbum';
+import SpotifySearchArtist from '@js/SpotifySearchArtist';
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -396,10 +398,107 @@ class SpotifyApi {
     return artists;
   }
 
+  /**
+   * @param {string[]} artistsIds
+   * @returns {Promise<import('@js/spotify').SpotifySearchArtist[]>}
+   */
+  async getSeveralArtists(artistsIds) {
+    if (!artistsIds || artistsIds.length === 0) {
+      return;
+    }
+
+    /** @type {import('@js/spotify').SpotifySearch} */
+    const search = await this.#get(`/artists?ids=${artistsIds.join(',')}`);
+
+    const artists = search?.artists?.map((artist) => new SpotifySearchArtist(artist));
+    return artists;
+  }
+
   /** @returns {Promise<import('@js/spotify').SpotifySong[]>} */
   async getRecentlyPlayedSongs() {
-    const data = await this.#get(`/me/player/recently-played`);
+    const data = await this.#get(`/me/player/recently-played?limit=50`);
     return new SpotifySongCursor(data)?.items;
+  }
+
+  /** @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>}*/
+  async myLibRecentlyPlayed() {
+    const SONGS = await this.getRecentlyPlayedSongs();
+
+    const PROMISES = [];
+    const MY_LIB_MINIMAL = [];
+    const ALREADY_FETCHED_ALBUMS = new Map();
+    const playlistIds = new Map();
+    const albumsIds = new Map();
+    const artistsIds = new Map();
+
+    const extractItemsToFetchFromSongs = ({ track, context }) => {
+      const type = context?.type;
+      const id = context?.uri?.split(':')?.at(-1);
+      const albumId = track?.album?.id;
+
+      if ((!type || type === 'album') && !albumsIds.has(albumId)) {
+        albumsIds.set(albumId, true);
+        MY_LIB_MINIMAL.push({
+          type: 'album',
+          id: albumId,
+        });
+        ALREADY_FETCHED_ALBUMS.set(
+          albumId,
+          new SpotifyAlbum({
+            id: albumId,
+            uri: track?.album?.uri,
+            name: track?.name,
+            artists: track?.album?.artists,
+            images: track?.album?.images,
+          }),
+        );
+      } else if (type === 'playlist' && !playlistIds.has(id)) {
+        playlistIds.set(id, true);
+        MY_LIB_MINIMAL.push({
+          type,
+          id,
+        });
+      } else if (type === 'artist' && !artistsIds.has(id)) {
+        artistsIds.set(id, true);
+        MY_LIB_MINIMAL.push({
+          type,
+          id,
+        });
+      }
+    };
+
+    SONGS?.forEach(extractItemsToFetchFromSongs);
+
+    // put all PLAYLISTS PROMISES
+    Array.from(playlistIds.keys())?.map((id) => PROMISES.push(this.getPlaylistDetails(id)));
+
+    // put all ARTISTS PROMISES
+    PROMISES.push(this.getSeveralArtists(Array.from(artistsIds.keys())));
+
+    try {
+      const fetchedPlaylistOrArtist = await Promise.all(PROMISES);
+
+      const MY_LIB_FULL = await Promise.all(
+        MY_LIB_MINIMAL?.map((item) => {
+          const type = item?.type;
+          const id = item?.id;
+
+          if ('album' === type) {
+            return ALREADY_FETCHED_ALBUMS.get(id);
+          } else if ('playlist' === type) {
+            return fetchedPlaylistOrArtist.find((item) => item.id === id);
+          } else if ('artist' === type) {
+            // fetched artists are in the end because we put ARTISTS PROMISES at the end
+            const fetchedArtist = fetchedPlaylistOrArtist.at(-1);
+            return fetchedArtist?.find((item) => item.id === id);
+          }
+        }),
+      );
+
+      return MY_LIB_FULL;
+    } catch (err) {
+      LOGGER.error(err);
+    }
   }
 
   /**

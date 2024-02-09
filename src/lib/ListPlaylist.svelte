@@ -1,37 +1,16 @@
 <script>
-  import { likedTracks } from '@js/store';
-  import { createView } from '@js/view-utils';
   import List from '@lib/List.svelte';
-  import ListItem from '@lib/ListItem.svelte';
+  import ListItemPlaylist from '@lib/ListItemPlaylist.svelte';
+  import ListItemPlaylistLiked from '@lib/ListItemPlaylistLiked.svelte';
 
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   export let items;
-
-  $: totalLiked = $likedTracks?.length;
-  $: likedTitle = totalLiked >= 1 ? `${totalLiked} songs` : `${totalLiked} song`;
 </script>
 
 <List>
-  <ListItem
-    isLikeItem={true}
-    title={'Liked Songs'}
-    owner={likedTitle}
-    createViewFn={() =>
-      createView('PlaylistView', {
-        id: 'liked',
-      })}
-  />
+  <ListItemPlaylistLiked />
 
   {#each items as item (item?.id)}
-    <ListItem
-      title={item?.name}
-      owner={item?.owner?.display_name}
-      images={item?.images}
-      imageAlt={item?.name}
-      createViewFn={() =>
-        createView('PlaylistView', {
-          id: item?.id,
-        })}
-    />
+    <ListItemPlaylist {item} />
   {/each}
 </List>

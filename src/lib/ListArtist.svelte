@@ -1,7 +1,6 @@
 <script>
-  import { createView } from '@js/view-utils';
   import List from '@lib/List.svelte';
-  import ListItem from '@lib/ListItem.svelte';
+  import ListItemArtist from '@lib/ListItemArtist.svelte';
 
   /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   export let items;
@@ -9,15 +8,6 @@
 
 <List>
   {#each items as item (item?.id)}
-    <ListItem
-      isListArtist={true}
-      title={item?.name}
-      images={item?.images}
-      imageAlt={item?.name}
-      createViewFn={() =>
-        createView('ArtistView', {
-          id: item?.id,
-        })}
-    />
+    <ListItemArtist {item} />
   {/each}
 </List>

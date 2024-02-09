@@ -11,22 +11,32 @@
 </script>
 
 {#if images.length > 0}
-  <img src={image?.url} {alt} class:bubble />
+  <div class="img-container" class:bubble aria-label={alt}>
+    <div class="img" style={`background-image: url('${image?.url}')`}></div>
+  </div>
 {:else}
-  <div class="empty-img" aria-label={alt}>
-    <NoteSvg />
+  <div class="empty-img" class:bubble aria-label={alt}>
+    {#if $$slots['empty-img']}
+      <slot name="empty-img" />
+    {:else}
+      <NoteSvg />
+    {/if}
   </div>
 {/if}
 
 <style>
-  img {
-    max-width: unset;
+  .img-container,
+  .empty-img {
+    width: 6.4rem;
+    height: 6.4rem;
+    overflow: hidden;
   }
 
-  img,
-  .empty-img {
-    height: 6.4rem;
-    width: 6.4rem;
+  .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
   }
 
   .empty-img {

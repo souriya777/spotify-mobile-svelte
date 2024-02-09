@@ -21,7 +21,9 @@ import ALBUM_ORELSAN_TRACKS_JSON from './data/album-orelsan-tracks.json';
 import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
 import ALBUMS_RECENTLY_ADDED_JSON from './data/albums-recently-added.json';
 import MY_FOLLOWING_ARTISTS_JSON from './data/my-following-artists.json';
+import SEVERAL_ARTISTS_JSON from './data/several-artists.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
+import MY_LIB_RECENTLY_PLAYED_JSON from './data/my-lib-recently-played.json';
 import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
 import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
@@ -159,9 +161,25 @@ test(`/me/following returns SpotifySearchArtist[]`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
+test(`/artists?ids=2YP02JRa1JLejrg3XTssJS,0PUi9O36OMwere5DTyayAq,4ACplpEqD6JIVgKrafauzs returns SpotifySearchArtist[]`, async () => {
+  const actual = await SpotifyApi.getSeveralArtists([
+    '2YP02JRa1JLejrg3XTssJS',
+    '0PUi9O36OMwere5DTyayAq',
+    '4ACplpEqD6JIVgKrafauzs',
+  ]);
+  const expected = [...SEVERAL_ARTISTS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
 test(`/me/player/recently-played returns SpotifySong[]`, async () => {
   const actual = await SpotifyApi.getRecentlyPlayedSongs();
   const expected = [...RECENTLY_PLAYED_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`myLibRecentlyPlayed() returns array of: SpotifyPlaylist, SpotifyAlbum, SpotifyArtist`, async () => {
+  const actual = await SpotifyApi.myLibRecentlyPlayed();
+  const expected = [...MY_LIB_RECENTLY_PLAYED_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 

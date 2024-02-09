@@ -1,39 +1,39 @@
 [
   {
     "track": {
-      "id": "2u9VGZmVz7Rm01SfDgzcfA",
-      "uri": "spotify:track:2u9VGZmVz7Rm01SfDgzcfA",
-      "name": "Liebestraum No. 3 in A-Flat Major, S. 541 / 3",
-      "duration_ms": 293146,
+      "id": "3DP5jn2plhKVa6Xgwpux1S",
+      "uri": "spotify:track:3DP5jn2plhKVa6Xgwpux1S",
+      "name": "Dark Places",
+      "duration_ms": 378000,
       "album": {
-        "id": "39Hh5k01di42nUCLn8Wxqu",
-        "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
-        "name": "Liszt - My Piano Hero",
+        "id": "1qJHc9bytwRnbvN2tctlDL",
+        "uri": "spotify:album:1qJHc9bytwRnbvN2tctlDL",
+        "name": "Dark Places",
         "artists": [
           {
-            "id": "1385hLNbrnbCJGokfH2ac2",
-            "name": "Franz Liszt",
-            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+            "id": "2jvTYwyzxK1FVYGEoKfZLQ",
+            "name": "Cosmic Boys",
+            "uri": "spotify:artist:2jvTYwyzxK1FVYGEoKfZLQ"
           },
           {
-            "id": "1YZhNFBxkEB5UKTgMDvot4",
-            "name": "Lang Lang",
-            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+            "id": "0hReHYoLJG38QBwYIZ8zKs",
+            "name": "AKKI (DE)",
+            "uri": "spotify:artist:0hReHYoLJG38QBwYIZ8zKs"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000b2732aaf5e829f61dffa2dbd563c",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d00001e022aaf5e829f61dffa2dbd563c",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d000048512aaf5e829f61dffa2dbd563c",
             "height": 64,
             "width": 64
           }
@@ -41,57 +41,509 @@
       },
       "artists": [
         {
-          "id": "1385hLNbrnbCJGokfH2ac2",
-          "name": "Franz Liszt",
-          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          "id": "2jvTYwyzxK1FVYGEoKfZLQ",
+          "name": "Cosmic Boys",
+          "uri": "spotify:artist:2jvTYwyzxK1FVYGEoKfZLQ"
         },
         {
-          "id": "1YZhNFBxkEB5UKTgMDvot4",
-          "name": "Lang Lang",
-          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          "id": "0hReHYoLJG38QBwYIZ8zKs",
+          "name": "AKKI (DE)",
+          "uri": "spotify:artist:0hReHYoLJG38QBwYIZ8zKs"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "5yOFawwclyaGDi450YcPfP",
+      "uri": "spotify:track:5yOFawwclyaGDi450YcPfP",
+      "name": "Resistance",
+      "duration_ms": 207441,
+      "album": {
+        "id": "2dWojT5wPowGSARgpHAENj",
+        "uri": "spotify:album:2dWojT5wPowGSARgpHAENj",
+        "name": "We Control",
+        "artists": [
+          {
+            "id": "4h8IEOdrg60WM5XGyNOCVU",
+            "name": "Lilly Palmer",
+            "uri": "spotify:artist:4h8IEOdrg60WM5XGyNOCVU"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2732a672c035b7751b2e8b074fa",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e022a672c035b7751b2e8b074fa",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048512a672c035b7751b2e8b074fa",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4h8IEOdrg60WM5XGyNOCVU",
+          "name": "Lilly Palmer",
+          "uri": "spotify:artist:4h8IEOdrg60WM5XGyNOCVU"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "6XmGXRgcSdCGG2u5gSmAJ9",
+      "uri": "spotify:track:6XmGXRgcSdCGG2u5gSmAJ9",
+      "name": "Overdrive - Edit",
+      "duration_ms": 254836,
+      "album": {
+        "id": "6L9vJcQPmdPQC7KYAgpk3k",
+        "uri": "spotify:album:6L9vJcQPmdPQC7KYAgpk3k",
+        "name": "Overdrive EP",
+        "artists": [
+          {
+            "id": "1lJhME1ZpzsEa5M0wW6Mso",
+            "name": "Charlotte de Witte",
+            "uri": "spotify:artist:1lJhME1ZpzsEa5M0wW6Mso"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2735190125bf407c3d989f97e0f",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e025190125bf407c3d989f97e0f",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048515190125bf407c3d989f97e0f",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1lJhME1ZpzsEa5M0wW6Mso",
+          "name": "Charlotte de Witte",
+          "uri": "spotify:artist:1lJhME1ZpzsEa5M0wW6Mso"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "3AKAjGhRwvRp8JoJBpNloP",
+      "uri": "spotify:track:3AKAjGhRwvRp8JoJBpNloP",
+      "name": "Stratosphere - Ronnie Spiteri Remix",
+      "duration_ms": 478715,
+      "album": {
+        "id": "2B6iCfl7t7bv8ZGc3f7KPZ",
+        "uri": "spotify:album:2B6iCfl7t7bv8ZGc3f7KPZ",
+        "name": "Stratosphere - The Remixes",
+        "artists": [
+          {
+            "id": "0Z2EpubIhxnq4B6PV0I8n3",
+            "name": "Christian Smith",
+            "uri": "spotify:artist:0Z2EpubIhxnq4B6PV0I8n3"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2730e014b3a04bfcdfd1e409108",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e020e014b3a04bfcdfd1e409108",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048510e014b3a04bfcdfd1e409108",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0Z2EpubIhxnq4B6PV0I8n3",
+          "name": "Christian Smith",
+          "uri": "spotify:artist:0Z2EpubIhxnq4B6PV0I8n3"
+        },
+        {
+          "id": "7tH1Y2LeCe2LUxvru8y7Df",
+          "name": "Ronnie Spiteri",
+          "uri": "spotify:artist:7tH1Y2LeCe2LUxvru8y7Df"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "7twthmMegoAskip42GJocW",
+      "uri": "spotify:track:7twthmMegoAskip42GJocW",
+      "name": "Stay With Me",
+      "duration_ms": 441905,
+      "album": {
+        "id": "1fTPCs8ZaLC8KBq1iiWWLM",
+        "uri": "spotify:album:1fTPCs8ZaLC8KBq1iiWWLM",
+        "name": "Stay With Me",
+        "artists": [
+          {
+            "id": "37U9sPqTZMd7AKJCWgcvkt",
+            "name": "Pryda",
+            "uri": "spotify:artist:37U9sPqTZMd7AKJCWgcvkt"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273ec7d732b8f578909394f0662",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02ec7d732b8f578909394f0662",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851ec7d732b8f578909394f0662",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "37U9sPqTZMd7AKJCWgcvkt",
+          "name": "Pryda",
+          "uri": "spotify:artist:37U9sPqTZMd7AKJCWgcvkt"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "0Z3Gina2XKfyjv46VJEInp",
+      "uri": "spotify:track:0Z3Gina2XKfyjv46VJEInp",
+      "name": "Adrenaline Machine",
+      "duration_ms": 352617,
+      "album": {
+        "id": "3dVJGlYK0tr62K6MKnKPys",
+        "uri": "spotify:album:3dVJGlYK0tr62K6MKnKPys",
+        "name": "Kontakt 05: Adrenaline Machine",
+        "artists": [
+          {
+            "id": "3SEw2qamdOWyVZtzKxWTTg",
+            "name": "The YellowHeads",
+            "uri": "spotify:artist:3SEw2qamdOWyVZtzKxWTTg"
+          },
+          {
+            "id": "3pY489HHP3Em5RAy63Vmf9",
+            "name": "Rebel Boy",
+            "uri": "spotify:artist:3pY489HHP3Em5RAy63Vmf9"
+          },
+          {
+            "id": "1Hu2YwTv9wmxC8sppVVUA4",
+            "name": "Sam WOLFE",
+            "uri": "spotify:artist:1Hu2YwTv9wmxC8sppVVUA4"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e6cecd45b7968b3866edf2b4",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e6cecd45b7968b3866edf2b4",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e6cecd45b7968b3866edf2b4",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3SEw2qamdOWyVZtzKxWTTg",
+          "name": "The YellowHeads",
+          "uri": "spotify:artist:3SEw2qamdOWyVZtzKxWTTg"
+        },
+        {
+          "id": "3pY489HHP3Em5RAy63Vmf9",
+          "name": "Rebel Boy",
+          "uri": "spotify:artist:3pY489HHP3Em5RAy63Vmf9"
+        },
+        {
+          "id": "1Hu2YwTv9wmxC8sppVVUA4",
+          "name": "Sam WOLFE",
+          "uri": "spotify:artist:1Hu2YwTv9wmxC8sppVVUA4"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "2EHdG8AvxtuZGLk74YQUXt",
+      "uri": "spotify:track:2EHdG8AvxtuZGLk74YQUXt",
+      "name": "Gravity",
+      "duration_ms": 365568,
+      "album": {
+        "id": "0C24gM4unxLDwJNa0ax8LP",
+        "uri": "spotify:album:0C24gM4unxLDwJNa0ax8LP",
+        "name": "Gravity",
+        "artists": [
+          {
+            "id": "6TVdVlY6irsNPkMHT2HkfD",
+            "name": "Space 92",
+            "uri": "spotify:artist:6TVdVlY6irsNPkMHT2HkfD"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e2605abf74f372799fff0df6",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e2605abf74f372799fff0df6",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e2605abf74f372799fff0df6",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6TVdVlY6irsNPkMHT2HkfD",
+          "name": "Space 92",
+          "uri": "spotify:artist:6TVdVlY6irsNPkMHT2HkfD"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "5LMEeLesno77ZNzBn1ARyH",
+      "uri": "spotify:track:5LMEeLesno77ZNzBn1ARyH",
+      "name": "Deep Space",
+      "duration_ms": 337386,
+      "album": {
+        "id": "6hHi4OlpNnto3GNoLQyUG9",
+        "uri": "spotify:album:6hHi4OlpNnto3GNoLQyUG9",
+        "name": "Close Your Eyes EP",
+        "artists": [
+          {
+            "id": "4eFbq5PZgW7YbtA65PP4wS",
+            "name": "Alignment",
+            "uri": "spotify:artist:4eFbq5PZgW7YbtA65PP4wS"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e73e7cbd506ceaa7ef0ac169",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e73e7cbd506ceaa7ef0ac169",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e73e7cbd506ceaa7ef0ac169",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4eFbq5PZgW7YbtA65PP4wS",
+          "name": "Alignment",
+          "uri": "spotify:artist:4eFbq5PZgW7YbtA65PP4wS"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "2rgtmHB1O8GHaLFQZTF2tR",
+      "uri": "spotify:track:2rgtmHB1O8GHaLFQZTF2tR",
+      "name": "2084",
+      "duration_ms": 366235,
+      "album": {
+        "id": "68yEeHuIGikcVlyBo5UHvI",
+        "uri": "spotify:album:68yEeHuIGikcVlyBo5UHvI",
+        "name": "2084",
+        "artists": [
+          {
+            "id": "7orlzf5LTqSnCzURkZFebN",
+            "name": "KAS:ST",
+            "uri": "spotify:artist:7orlzf5LTqSnCzURkZFebN"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27398dd5ca4764a76a4570696ea",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0298dd5ca4764a76a4570696ea",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485198dd5ca4764a76a4570696ea",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "7orlzf5LTqSnCzURkZFebN",
+          "name": "KAS:ST",
+          "uri": "spotify:artist:7orlzf5LTqSnCzURkZFebN"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "4LzoH2X9b7yfvqwUIeiU0U",
+      "uri": "spotify:track:4LzoH2X9b7yfvqwUIeiU0U",
+      "name": "L'engreneur",
+      "duration_ms": 229974,
+      "album": {
+        "id": "5D7QfnijsdNFc3KvKcQQFt",
+        "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
+        "name": "Les tentations",
+        "artists": [
+          {
+            "id": "41o2A93SPxIUxsy5HQjvul",
+            "name": "Passi",
+            "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27358c6170dd6620f205d7ac206",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0258c6170dd6620f205d7ac206",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485158c6170dd6620f205d7ac206",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "41o2A93SPxIUxsy5HQjvul",
+          "name": "Passi",
+          "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
         }
       ]
     },
     "context": {
       "type": "album",
-      "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu"
+      "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh"
     }
   },
   {
     "track": {
-      "id": "0HlYo1qgQYTAaPar58UjmW",
-      "uri": "spotify:track:0HlYo1qgQYTAaPar58UjmW",
-      "name": "Grand Galop chromatique in E-Flat Major, S. 219",
-      "duration_ms": 238413,
+      "id": "5UzeEdYpIwLOtUnnrPk7qD",
+      "uri": "spotify:track:5UzeEdYpIwLOtUnnrPk7qD",
+      "name": "79 à 97",
+      "duration_ms": 281603,
       "album": {
-        "id": "39Hh5k01di42nUCLn8Wxqu",
-        "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
-        "name": "Liszt - My Piano Hero",
+        "id": "5D7QfnijsdNFc3KvKcQQFt",
+        "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
+        "name": "Les tentations",
         "artists": [
           {
-            "id": "1385hLNbrnbCJGokfH2ac2",
-            "name": "Franz Liszt",
-            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-          },
-          {
-            "id": "1YZhNFBxkEB5UKTgMDvot4",
-            "name": "Lang Lang",
-            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+            "id": "41o2A93SPxIUxsy5HQjvul",
+            "name": "Passi",
+            "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000b27358c6170dd6620f205d7ac206",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d00001e0258c6170dd6620f205d7ac206",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000485158c6170dd6620f205d7ac206",
             "height": 64,
             "width": 64
           }
@@ -99,57 +551,57 @@
       },
       "artists": [
         {
-          "id": "1385hLNbrnbCJGokfH2ac2",
-          "name": "Franz Liszt",
-          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          "id": "41o2A93SPxIUxsy5HQjvul",
+          "name": "Passi",
+          "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
         },
         {
-          "id": "1YZhNFBxkEB5UKTgMDvot4",
-          "name": "Lang Lang",
-          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          "id": "6SCjpEEpJyt9t0XSn8iH1f",
+          "name": "JMI SISSOKO",
+          "uri": "spotify:artist:6SCjpEEpJyt9t0XSn8iH1f"
+        },
+        {
+          "id": "09xdUjwuCCTnmDSyORXD1Z",
+          "name": "Jacky Brown",
+          "uri": "spotify:artist:09xdUjwuCCTnmDSyORXD1Z"
         }
       ]
     },
     "context": {
       "type": "album",
-      "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu"
+      "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh"
     }
   },
   {
     "track": {
-      "id": "0Jp7n6FKqGVxtXPMVYtMQr",
-      "uri": "spotify:track:0Jp7n6FKqGVxtXPMVYtMQr",
-      "name": "Consolation No. 3 in D-Flat Major, S. 172",
-      "duration_ms": 259573,
+      "id": "4OYsjZoXGRlhpxAX36AkCF",
+      "uri": "spotify:track:4OYsjZoXGRlhpxAX36AkCF",
+      "name": "Intro",
+      "duration_ms": 43951,
       "album": {
-        "id": "39Hh5k01di42nUCLn8Wxqu",
-        "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
-        "name": "Liszt - My Piano Hero",
+        "id": "5D7QfnijsdNFc3KvKcQQFt",
+        "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
+        "name": "Les tentations",
         "artists": [
           {
-            "id": "1385hLNbrnbCJGokfH2ac2",
-            "name": "Franz Liszt",
-            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-          },
-          {
-            "id": "1YZhNFBxkEB5UKTgMDvot4",
-            "name": "Lang Lang",
-            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+            "id": "41o2A93SPxIUxsy5HQjvul",
+            "name": "Passi",
+            "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000b27358c6170dd6620f205d7ac206",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d00001e0258c6170dd6620f205d7ac206",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000485158c6170dd6620f205d7ac206",
             "height": 64,
             "width": 64
           }
@@ -157,57 +609,47 @@
       },
       "artists": [
         {
-          "id": "1385hLNbrnbCJGokfH2ac2",
-          "name": "Franz Liszt",
-          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-        },
-        {
-          "id": "1YZhNFBxkEB5UKTgMDvot4",
-          "name": "Lang Lang",
-          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          "id": "41o2A93SPxIUxsy5HQjvul",
+          "name": "Passi",
+          "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
         }
       ]
     },
     "context": {
       "type": "album",
-      "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu"
+      "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh"
     }
   },
   {
     "track": {
-      "id": "2Hnurh1BcigGbCGFOb4Uid",
-      "uri": "spotify:track:2Hnurh1BcigGbCGFOb4Uid",
-      "name": "La campanella in G-Sharp Minor (From \"Grandes études de Paganini\", S. 141 / 3)",
-      "duration_ms": 287986,
+      "id": "0Z3Vt4qyrNukxFRhQvhrWG",
+      "uri": "spotify:track:0Z3Vt4qyrNukxFRhQvhrWG",
+      "name": "Invaincu",
+      "duration_ms": 125706,
       "album": {
-        "id": "39Hh5k01di42nUCLn8Wxqu",
-        "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
-        "name": "Liszt - My Piano Hero",
+        "id": "6EwTLRHMROD853Kv1lAMex",
+        "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
+        "name": "Multitude",
         "artists": [
           {
-            "id": "1385hLNbrnbCJGokfH2ac2",
-            "name": "Franz Liszt",
-            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-          },
-          {
-            "id": "1YZhNFBxkEB5UKTgMDvot4",
-            "name": "Lang Lang",
-            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+            "id": "5j4HeCoUlzhfWtjAfM1acR",
+            "name": "Stromae",
+            "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000b2736af3a93773dcb59a67ab2953",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d00001e026af3a93773dcb59a67ab2953",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d000048516af3a93773dcb59a67ab2953",
             "height": 64,
             "width": 64
           }
@@ -215,57 +657,47 @@
       },
       "artists": [
         {
-          "id": "1385hLNbrnbCJGokfH2ac2",
-          "name": "Franz Liszt",
-          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-        },
-        {
-          "id": "1YZhNFBxkEB5UKTgMDvot4",
-          "name": "Lang Lang",
-          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          "id": "5j4HeCoUlzhfWtjAfM1acR",
+          "name": "Stromae",
+          "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
         }
       ]
     },
     "context": {
       "type": "album",
-      "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu"
+      "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex"
     }
   },
   {
     "track": {
-      "id": "4wKGetA5crT9tZhjqTLTka",
-      "uri": "spotify:track:4wKGetA5crT9tZhjqTLTka",
-      "name": "Romance \"O pourquoi donc\" in E Minor, S. 169",
-      "duration_ms": 185493,
+      "id": "6xfcGSs4rj9hq6WiYNyyPv",
+      "uri": "spotify:track:6xfcGSs4rj9hq6WiYNyyPv",
+      "name": "A Million to One",
+      "duration_ms": 148143,
       "album": {
-        "id": "39Hh5k01di42nUCLn8Wxqu",
-        "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
-        "name": "Liszt - My Piano Hero",
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
         "artists": [
           {
-            "id": "1385hLNbrnbCJGokfH2ac2",
-            "name": "Franz Liszt",
-            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-          },
-          {
-            "id": "1YZhNFBxkEB5UKTgMDvot4",
-            "name": "Lang Lang",
-            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
             "height": 64,
             "width": 64
           }
@@ -273,325 +705,47 @@
       },
       "artists": [
         {
-          "id": "1385hLNbrnbCJGokfH2ac2",
-          "name": "Franz Liszt",
-          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-        },
-        {
-          "id": "1YZhNFBxkEB5UKTgMDvot4",
-          "name": "Lang Lang",
-          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
-        }
-      ]
-    },
-    "context": {
-      "type": "album",
-      "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu"
-    }
-  },
-  {
-    "track": {
-      "id": "1MOSRjdAbUhvLNnHCdUEL5",
-      "uri": "spotify:track:1MOSRjdAbUhvLNnHCdUEL5",
-      "name": "Mistral gagnant",
-      "duration_ms": 165933,
-      "album": {
-        "id": "3RNhp7YkJXZe3KJ3xlTHWb",
-        "uri": "spotify:album:3RNhp7YkJXZe3KJ3xlTHWb",
-        "name": "Mistral gagnant",
-        "artists": [
-          {
-            "id": "15uNxh8omvRvH71kcdIe2r",
-            "name": "Renaud",
-            "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273b9cb0f33dc7ae3344f69282a",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02b9cb0f33dc7ae3344f69282a",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851b9cb0f33dc7ae3344f69282a",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "15uNxh8omvRvH71kcdIe2r",
-          "name": "Renaud",
-          "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
-        }
-      ]
-    },
-    "context": {}
-  },
-  {
-    "track": {
-      "id": "1ue54Yyh1O9kMbxEGmuyXo",
-      "uri": "spotify:track:1ue54Yyh1O9kMbxEGmuyXo",
-      "name": "Une autre histoire",
-      "duration_ms": 271728,
-      "album": {
-        "id": "3IKoAluhjCmtH178ee69Or",
-        "uri": "spotify:album:3IKoAluhjCmtH178ee69Or",
-        "name": "Ailleurs pour un ailleurs...",
-        "artists": [
-          {
-            "id": "7DXIujatSYhHHsoS8Hx8QI",
-            "name": "Gérard Blanc",
-            "uri": "spotify:artist:7DXIujatSYhHHsoS8Hx8QI"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b2732501034fecb0b3af277d5f29",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e022501034fecb0b3af277d5f29",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d000048512501034fecb0b3af277d5f29",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "7DXIujatSYhHHsoS8Hx8QI",
-          "name": "Gérard Blanc",
-          "uri": "spotify:artist:7DXIujatSYhHHsoS8Hx8QI"
-        }
-      ]
-    },
-    "context": {}
-  },
-  {
-    "track": {
-      "id": "616O2jmafiModH0RgonGqf",
-      "uri": "spotify:track:616O2jmafiModH0RgonGqf",
-      "name": "Tu m'oublieras",
-      "duration_ms": 219760,
-      "album": {
-        "id": "5BXw5K0WzAncb6uMnCrnyW",
-        "uri": "spotify:album:5BXw5K0WzAncb6uMnCrnyW",
-        "name": "Simplement",
-        "artists": [
-          {
-            "id": "07sMHU0vu01xrz1gnNrNry",
-            "name": "Larusso",
-            "uri": "spotify:artist:07sMHU0vu01xrz1gnNrNry"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b2731b8db72ce142d1de0645e0b2",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e021b8db72ce142d1de0645e0b2",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d000048511b8db72ce142d1de0645e0b2",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "07sMHU0vu01xrz1gnNrNry",
-          "name": "Larusso",
-          "uri": "spotify:artist:07sMHU0vu01xrz1gnNrNry"
-        }
-      ]
-    },
-    "context": {}
-  },
-  {
-    "track": {
-      "id": "0aJtKOPiQiMROH8hNhhRoJ",
-      "uri": "spotify:track:0aJtKOPiQiMROH8hNhhRoJ",
-      "name": "C'est comme ça que je t'aime",
-      "duration_ms": 199979,
-      "album": {
-        "id": "4MZO9vKKh1XOxQ0TsQA5h6",
-        "uri": "spotify:album:4MZO9vKKh1XOxQ0TsQA5h6",
-        "name": "Dis-lui",
-        "artists": [
-          {
-            "id": "1u9tovPnCMYuZiV3EMZqDV",
-            "name": "Mike Brant",
-            "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dc8263393290e8803e210145",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dc8263393290e8803e210145",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851dc8263393290e8803e210145",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "1u9tovPnCMYuZiV3EMZqDV",
-          "name": "Mike Brant",
-          "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
-        }
-      ]
-    },
-    "context": {}
-  },
-  {
-    "track": {
-      "id": "3xPNasHy69FFGxyxYApJPS",
-      "uri": "spotify:track:3xPNasHy69FFGxyxYApJPS",
-      "name": "Laisse moi t'aimer",
-      "duration_ms": 203093,
-      "album": {
-        "id": "45feqbqIXi45boCrjlo0cV",
-        "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
-        "name": "20eme anniversaire",
-        "artists": [
-          {
-            "id": "1u9tovPnCMYuZiV3EMZqDV",
-            "name": "Mike Brant",
-            "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b27367ed9c2113d97a041e1985a8",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e0267ed9c2113d97a041e1985a8",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000485167ed9c2113d97a041e1985a8",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "1u9tovPnCMYuZiV3EMZqDV",
-          "name": "Mike Brant",
-          "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
-        }
-      ]
-    },
-    "context": {}
-  },
-  {
-    "track": {
-      "id": "6ktEMYUXbgl0LB36hVmFKL",
-      "uri": "spotify:track:6ktEMYUXbgl0LB36hVmFKL",
-      "name": "A Thousand Miles",
-      "duration_ms": 203571,
-      "album": {
-        "id": "2f1C7eXLkRfi1qftEZd2Nt",
-        "uri": "spotify:album:2f1C7eXLkRfi1qftEZd2Nt",
-        "name": "A Thousand Miles",
-        "artists": [
-          {
-            "id": "0PUi9O36OMwere5DTyayAq",
-            "name": "Chloé Stafler",
-            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b27391d21c2441897f996630d77e",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e0291d21c2441897f996630d77e",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000485191d21c2441897f996630d77e",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "0PUi9O36OMwere5DTyayAq",
-          "name": "Chloé Stafler",
-          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
         }
       ]
     },
     "context": {
       "type": "artist",
-      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
     }
   },
   {
     "track": {
-      "id": "5IrPn0YoTqtBF54egBinvS",
-      "uri": "spotify:track:5IrPn0YoTqtBF54egBinvS",
-      "name": "Tout oublier",
-      "duration_ms": 192071,
+      "id": "1VG7rQNuuJfhinoAwtD0gy",
+      "uri": "spotify:track:1VG7rQNuuJfhinoAwtD0gy",
+      "name": "Shadows",
+      "duration_ms": 151898,
       "album": {
-        "id": "3xLQwjdgvbolBJmnPw4bH7",
-        "uri": "spotify:album:3xLQwjdgvbolBJmnPw4bH7",
-        "name": "Tout oublier",
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
         "artists": [
           {
-            "id": "0PUi9O36OMwere5DTyayAq",
-            "name": "Chloé Stafler",
-            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273d2b132543a83d9b8e3232e59",
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02d2b132543a83d9b8e3232e59",
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851d2b132543a83d9b8e3232e59",
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
             "height": 64,
             "width": 64
           }
@@ -599,47 +753,47 @@
       },
       "artists": [
         {
-          "id": "0PUi9O36OMwere5DTyayAq",
-          "name": "Chloé Stafler",
-          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
         }
       ]
     },
     "context": {
       "type": "artist",
-      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
     }
   },
   {
     "track": {
-      "id": "3iAaNU2tT2WwxVeYPyO905",
-      "uri": "spotify:track:3iAaNU2tT2WwxVeYPyO905",
-      "name": "Dis, quand reviendras-tu?",
-      "duration_ms": 288874,
+      "id": "08KiBWh7EreFKWKSv8SIrh",
+      "uri": "spotify:track:08KiBWh7EreFKWKSv8SIrh",
+      "name": "To the Aisle",
+      "duration_ms": 164511,
       "album": {
-        "id": "2ZXfseyFf7ybI97jaxciPn",
-        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
-        "name": "Reprises, Vol. 2",
+        "id": "7eugEzpVGg4umQRaFD4ocg",
+        "uri": "spotify:album:7eugEzpVGg4umQRaFD4ocg",
+        "name": "50 Best Hits",
         "artists": [
           {
-            "id": "0PUi9O36OMwere5DTyayAq",
-            "name": "Chloé Stafler",
-            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d0000b273c227480e4e36f56cc062cb47",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d00001e02c227480e4e36f56cc062cb47",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d00004851c227480e4e36f56cc062cb47",
             "height": 64,
             "width": 64
           }
@@ -647,47 +801,47 @@
       },
       "artists": [
         {
-          "id": "0PUi9O36OMwere5DTyayAq",
-          "name": "Chloé Stafler",
-          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
         }
       ]
     },
     "context": {
       "type": "artist",
-      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
     }
   },
   {
     "track": {
-      "id": "45CCySE3zyd4CXMYQE7ICw",
-      "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
-      "name": "La vie en rose",
-      "duration_ms": 175875,
+      "id": "2pu3ssjsLWY2u01TvGre3X",
+      "uri": "spotify:track:2pu3ssjsLWY2u01TvGre3X",
+      "name": "Wonderful Girl",
+      "duration_ms": 135722,
       "album": {
-        "id": "2ZXfseyFf7ybI97jaxciPn",
-        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
-        "name": "Reprises, Vol. 2",
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
         "artists": [
           {
-            "id": "0PUi9O36OMwere5DTyayAq",
-            "name": "Chloé Stafler",
-            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
             "height": 64,
             "width": 64
           }
@@ -695,47 +849,47 @@
       },
       "artists": [
         {
-          "id": "0PUi9O36OMwere5DTyayAq",
-          "name": "Chloé Stafler",
-          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
         }
       ]
     },
     "context": {
       "type": "artist",
-      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
     }
   },
   {
     "track": {
-      "id": "42VUw4BNwMDV8UvmhmaDUP",
-      "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
-      "name": "La bohème",
-      "duration_ms": 212124,
+      "id": "0Xyxv8OAOeoyBwTgfmukSG",
+      "uri": "spotify:track:0Xyxv8OAOeoyBwTgfmukSG",
+      "name": "Night to Remember (Fred Parris & the Satins)",
+      "duration_ms": 132706,
       "album": {
-        "id": "2ZXfseyFf7ybI97jaxciPn",
-        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
-        "name": "Reprises, Vol. 2",
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
         "artists": [
           {
-            "id": "0PUi9O36OMwere5DTyayAq",
-            "name": "Chloé Stafler",
-            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
             "height": 64,
             "width": 64
           }
@@ -743,15 +897,159 @@
       },
       "artists": [
         {
-          "id": "0PUi9O36OMwere5DTyayAq",
-          "name": "Chloé Stafler",
-          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
         }
       ]
     },
     "context": {
       "type": "artist",
-      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+    }
+  },
+  {
+    "track": {
+      "id": "6esJ2MdvYrP8zEE9B2SImB",
+      "uri": "spotify:track:6esJ2MdvYrP8zEE9B2SImB",
+      "name": "I'll Be Seeing You",
+      "duration_ms": 161202,
+      "album": {
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
+        "artists": [
+          {
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+    }
+  },
+  {
+    "track": {
+      "id": "59hP33GBpniXSPryhOqiDK",
+      "uri": "spotify:track:59hP33GBpniXSPryhOqiDK",
+      "name": "To the Aisle",
+      "duration_ms": 165040,
+      "album": {
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
+        "artists": [
+          {
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+    }
+  },
+  {
+    "track": {
+      "id": "3Dd3FK9DSaoMoUKA5ZPVgw",
+      "uri": "spotify:track:3Dd3FK9DSaoMoUKA5ZPVgw",
+      "name": "In the Still of the Night",
+      "duration_ms": 182520,
+      "album": {
+        "id": "6cCH55Vq1UpCfHOFaVKegT",
+        "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
+        "name": "Presenting The 5 Satins",
+        "artists": [
+          {
+            "id": "2YP02JRa1JLejrg3XTssJS",
+            "name": "The Five Satins",
+            "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a5b7b2ebb2912237feb3662",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e023a5b7b2ebb2912237feb3662",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048513a5b7b2ebb2912237feb3662",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2YP02JRa1JLejrg3XTssJS",
+          "name": "The Five Satins",
+          "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
     }
   },
   {
@@ -784,6 +1082,102 @@
           },
           {
             "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0PUi9O36OMwere5DTyayAq",
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+    }
+  },
+  {
+    "track": {
+      "id": "3Arm3BlSs9GAAMHSWZCIdd",
+      "uri": "spotify:track:3Arm3BlSs9GAAMHSWZCIdd",
+      "name": "Tous les garçons et les filles",
+      "duration_ms": 180875,
+      "album": {
+        "id": "7sKaU8XdMB2DqUtkd6Li67",
+        "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
+        "name": "Reprises",
+        "artists": [
+          {
+            "id": "0PUi9O36OMwere5DTyayAq",
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e258ced2f5e48a23a120f58",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e021e258ced2f5e48a23a120f58",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e258ced2f5e48a23a120f58",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0PUi9O36OMwere5DTyayAq",
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+    }
+  },
+  {
+    "track": {
+      "id": "0HkKfLlhuQrtGXofsoF0qu",
+      "uri": "spotify:track:0HkKfLlhuQrtGXofsoF0qu",
+      "name": "Mistral Gagnant",
+      "duration_ms": 194875,
+      "album": {
+        "id": "7sKaU8XdMB2DqUtkd6Li67",
+        "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
+        "name": "Reprises",
+        "artists": [
+          {
+            "id": "0PUi9O36OMwere5DTyayAq",
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e258ced2f5e48a23a120f58",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e021e258ced2f5e48a23a120f58",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e258ced2f5e48a23a120f58",
             "height": 64,
             "width": 64
           }
@@ -852,14 +1246,14 @@
   },
   {
     "track": {
-      "id": "0zybgnHwo9jZ0xx2lNjXQE",
-      "uri": "spotify:track:0zybgnHwo9jZ0xx2lNjXQE",
-      "name": "Souvenirs",
-      "duration_ms": 178811,
+      "id": "45CCySE3zyd4CXMYQE7ICw",
+      "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
+      "name": "La vie en rose",
+      "duration_ms": 175875,
       "album": {
-        "id": "2Nzu9FszfqMFnq0I80hQq3",
-        "uri": "spotify:album:2Nzu9FszfqMFnq0I80hQq3",
-        "name": "Souvenirs",
+        "id": "2ZXfseyFf7ybI97jaxciPn",
+        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
+        "name": "Reprises, Vol. 2",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -869,17 +1263,17 @@
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273286c7a21226f8efeed2a937b",
+            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02286c7a21226f8efeed2a937b",
+            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851286c7a21226f8efeed2a937b",
+            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
             "height": 64,
             "width": 64
           }
@@ -900,14 +1294,14 @@
   },
   {
     "track": {
-      "id": "4PtAtIm8JeOdLG61Bwy96A",
-      "uri": "spotify:track:4PtAtIm8JeOdLG61Bwy96A",
-      "name": "Voyage voyage",
-      "duration_ms": 211094,
+      "id": "6ioe6K8aDV0A65qz6Huzs2",
+      "uri": "spotify:track:6ioe6K8aDV0A65qz6Huzs2",
+      "name": "Bella Ciao",
+      "duration_ms": 171340,
       "album": {
-        "id": "3ol1OlBfANygZVAzfXrf4t",
-        "uri": "spotify:album:3ol1OlBfANygZVAzfXrf4t",
-        "name": "Voyage voyage",
+        "id": "1k8zteiBvZDtW1BlnXPVZ8",
+        "uri": "spotify:album:1k8zteiBvZDtW1BlnXPVZ8",
+        "name": "Bella Ciao",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -917,17 +1311,17 @@
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273851812580ebd12cc3291707a",
+            "url": "https://i.scdn.co/image/ab67616d0000b273cc565bc8762a333bd4abc2aa",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02851812580ebd12cc3291707a",
+            "url": "https://i.scdn.co/image/ab67616d00001e02cc565bc8762a333bd4abc2aa",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851851812580ebd12cc3291707a",
+            "url": "https://i.scdn.co/image/ab67616d00004851cc565bc8762a333bd4abc2aa",
             "height": 64,
             "width": 64
           }
@@ -948,14 +1342,14 @@
   },
   {
     "track": {
-      "id": "1Qt7qKMFqnuHPDXHNcEHzB",
-      "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
-      "name": "Je te laisserai des mots",
-      "duration_ms": 156144,
+      "id": "6htdm2zhPzphFnHWQVQBJd",
+      "uri": "spotify:track:6htdm2zhPzphFnHWQVQBJd",
+      "name": "Le Coup de Soleil",
+      "duration_ms": 225500,
       "album": {
-        "id": "2T65seryc9hVIYicQVF1Ph",
-        "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",
-        "name": "Je te laisserai des mots",
+        "id": "7sKaU8XdMB2DqUtkd6Li67",
+        "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
+        "name": "Reprises",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -965,17 +1359,17 @@
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b27362cbca387081645514c28794",
+            "url": "https://i.scdn.co/image/ab67616d0000b2731e258ced2f5e48a23a120f58",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e0262cbca387081645514c28794",
+            "url": "https://i.scdn.co/image/ab67616d00001e021e258ced2f5e48a23a120f58",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d0000485162cbca387081645514c28794",
+            "url": "https://i.scdn.co/image/ab67616d000048511e258ced2f5e48a23a120f58",
             "height": 64,
             "width": 64
           }
@@ -992,6 +1386,1087 @@
     "context": {
       "type": "artist",
       "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+    }
+  },
+  {
+    "track": {
+      "id": "42VUw4BNwMDV8UvmhmaDUP",
+      "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
+      "name": "La bohème",
+      "duration_ms": 212124,
+      "album": {
+        "id": "2ZXfseyFf7ybI97jaxciPn",
+        "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
+        "name": "Reprises, Vol. 2",
+        "artists": [
+          {
+            "id": "0PUi9O36OMwere5DTyayAq",
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27329b311df8244f0990a940e75",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0229b311df8244f0990a940e75",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485129b311df8244f0990a940e75",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0PUi9O36OMwere5DTyayAq",
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+    }
+  },
+  {
+    "track": {
+      "id": "0FCLfIht3t2vmX1IgpRi8M",
+      "uri": "spotify:track:0FCLfIht3t2vmX1IgpRi8M",
+      "name": "Crying In the Rain (Single Version)",
+      "duration_ms": 121453,
+      "album": {
+        "id": "7Dzfcj8tp9CUmkD6kXAqcb",
+        "uri": "spotify:album:7Dzfcj8tp9CUmkD6kXAqcb",
+        "name": "All I Have to Do Is Dream",
+        "artists": [
+          {
+            "id": "4ACplpEqD6JIVgKrafauzs",
+            "name": "The Everly Brothers",
+            "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2734934c9839ae3bb7494821f75",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e024934c9839ae3bb7494821f75",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048514934c9839ae3bb7494821f75",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4ACplpEqD6JIVgKrafauzs",
+          "name": "The Everly Brothers",
+          "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+    }
+  },
+  {
+    "track": {
+      "id": "2ilqH4qO5BpS3B9keqFqDR",
+      "uri": "spotify:track:2ilqH4qO5BpS3B9keqFqDR",
+      "name": "Bye Bye Love - Original Recording Remastered",
+      "duration_ms": 138600,
+      "album": {
+        "id": "5cFL3OKYGj71I8i2uQ7YGp",
+        "uri": "spotify:album:5cFL3OKYGj71I8i2uQ7YGp",
+        "name": "\"They're Off and Rolling\" Says Archie",
+        "artists": [
+          {
+            "id": "4ACplpEqD6JIVgKrafauzs",
+            "name": "The Everly Brothers",
+            "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273f967f99b5c57b746756c489e",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02f967f99b5c57b746756c489e",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851f967f99b5c57b746756c489e",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4ACplpEqD6JIVgKrafauzs",
+          "name": "The Everly Brothers",
+          "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+    }
+  },
+  {
+    "track": {
+      "id": "1ETm7A2bU98kIKqFEq1RMB",
+      "uri": "spotify:track:1ETm7A2bU98kIKqFEq1RMB",
+      "name": "Wake Up Little Susie - Original Hit Recording Remastered (Not the Warner Re-record)",
+      "duration_ms": 121013,
+      "album": {
+        "id": "78RuPW4tEcalOQQEW85Sxz",
+        "uri": "spotify:album:78RuPW4tEcalOQQEW85Sxz",
+        "name": "The Everly Brothers' Best",
+        "artists": [
+          {
+            "id": "4ACplpEqD6JIVgKrafauzs",
+            "name": "The Everly Brothers",
+            "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e45f3eda7b0dc71e9fb50871",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e45f3eda7b0dc71e9fb50871",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e45f3eda7b0dc71e9fb50871",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4ACplpEqD6JIVgKrafauzs",
+          "name": "The Everly Brothers",
+          "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+    }
+  },
+  {
+    "track": {
+      "id": "5TMTNjJYJSURXA0ktKevlI",
+      "uri": "spotify:track:5TMTNjJYJSURXA0ktKevlI",
+      "name": "All I have to Do Is Dream - Original Hit Recording Remastered (Not the Warner Re-record)",
+      "duration_ms": 140840,
+      "album": {
+        "id": "78RuPW4tEcalOQQEW85Sxz",
+        "uri": "spotify:album:78RuPW4tEcalOQQEW85Sxz",
+        "name": "The Everly Brothers' Best",
+        "artists": [
+          {
+            "id": "4ACplpEqD6JIVgKrafauzs",
+            "name": "The Everly Brothers",
+            "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e45f3eda7b0dc71e9fb50871",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e45f3eda7b0dc71e9fb50871",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e45f3eda7b0dc71e9fb50871",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4ACplpEqD6JIVgKrafauzs",
+          "name": "The Everly Brothers",
+          "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+        }
+      ]
+    },
+    "context": {
+      "type": "artist",
+      "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+    }
+  },
+  {
+    "track": {
+      "id": "5iJJRTXLMhWRdpzBYiXYFR",
+      "uri": "spotify:track:5iJJRTXLMhWRdpzBYiXYFR",
+      "name": "Dreamy Eyes",
+      "duration_ms": 144093,
+      "album": {
+        "id": "6EMFcjkD4LHxfwqfJlPjsb",
+        "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
+        "name": "Johnny Tillotson's Best",
+        "artists": [
+          {
+            "id": "36msvw9B10rxW90NSQ2794",
+            "name": "Johnny Tillotson",
+            "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27385ed238114401e0711858519",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0285ed238114401e0711858519",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485185ed238114401e0711858519",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "36msvw9B10rxW90NSQ2794",
+          "name": "Johnny Tillotson",
+          "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
+        }
+      ]
+    },
+    "context": {
+      "type": "album",
+      "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb"
+    }
+  },
+  {
+    "track": {
+      "id": "1ASWAH866Xn0gWeX3zC2SW",
+      "uri": "spotify:track:1ASWAH866Xn0gWeX3zC2SW",
+      "name": "Poetry In Motion",
+      "duration_ms": 154466,
+      "album": {
+        "id": "6EMFcjkD4LHxfwqfJlPjsb",
+        "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
+        "name": "Johnny Tillotson's Best",
+        "artists": [
+          {
+            "id": "36msvw9B10rxW90NSQ2794",
+            "name": "Johnny Tillotson",
+            "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27385ed238114401e0711858519",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0285ed238114401e0711858519",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485185ed238114401e0711858519",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "36msvw9B10rxW90NSQ2794",
+          "name": "Johnny Tillotson",
+          "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
+        }
+      ]
+    },
+    "context": {
+      "type": "album",
+      "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb"
+    }
+  },
+  {
+    "track": {
+      "id": "2rgtmHB1O8GHaLFQZTF2tR",
+      "uri": "spotify:track:2rgtmHB1O8GHaLFQZTF2tR",
+      "name": "2084",
+      "duration_ms": 366235,
+      "album": {
+        "id": "68yEeHuIGikcVlyBo5UHvI",
+        "uri": "spotify:album:68yEeHuIGikcVlyBo5UHvI",
+        "name": "2084",
+        "artists": [
+          {
+            "id": "7orlzf5LTqSnCzURkZFebN",
+            "name": "KAS:ST",
+            "uri": "spotify:artist:7orlzf5LTqSnCzURkZFebN"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27398dd5ca4764a76a4570696ea",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0298dd5ca4764a76a4570696ea",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485198dd5ca4764a76a4570696ea",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "7orlzf5LTqSnCzURkZFebN",
+          "name": "KAS:ST",
+          "uri": "spotify:artist:7orlzf5LTqSnCzURkZFebN"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:0pA5okg4BBqoW6X731rdDn"
+    }
+  },
+  {
+    "track": {
+      "id": "6Hy22YDN9HJMRlJP1LwnJy",
+      "uri": "spotify:track:6Hy22YDN9HJMRlJP1LwnJy",
+      "name": "Duke of Earl",
+      "duration_ms": 147841,
+      "album": {
+        "id": "2VmU63FIBsGgQYItCvsYkl",
+        "uri": "spotify:album:2VmU63FIBsGgQYItCvsYkl",
+        "name": "The Duke Of Earl",
+        "artists": [
+          {
+            "id": "52uMkSFt2RVO6XxTEt5VeW",
+            "name": "Gene Chandler",
+            "uri": "spotify:artist:52uMkSFt2RVO6XxTEt5VeW"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273a88710bbb2474d9b044947e2",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02a88710bbb2474d9b044947e2",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a88710bbb2474d9b044947e2",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "52uMkSFt2RVO6XxTEt5VeW",
+          "name": "Gene Chandler",
+          "uri": "spotify:artist:52uMkSFt2RVO6XxTEt5VeW"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "2AeGmIxYLKhTB123MPRDgo",
+      "uri": "spotify:track:2AeGmIxYLKhTB123MPRDgo",
+      "name": "Love Potion Number 9",
+      "duration_ms": 112280,
+      "album": {
+        "id": "29RWikz0slFF5Izww4G6rb",
+        "uri": "spotify:album:29RWikz0slFF5Izww4G6rb",
+        "name": "Les idoles américaines du rhythm and blues : The Clovers, Vol. 1",
+        "artists": [
+          {
+            "id": "0ckkj0a9CvIJr4h84B0OlN",
+            "name": "The Clovers",
+            "uri": "spotify:artist:0ckkj0a9CvIJr4h84B0OlN"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273a9c6366962d5d5ad28aef55c",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02a9c6366962d5d5ad28aef55c",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a9c6366962d5d5ad28aef55c",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0ckkj0a9CvIJr4h84B0OlN",
+          "name": "The Clovers",
+          "uri": "spotify:artist:0ckkj0a9CvIJr4h84B0OlN"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "5R2DZitRTDYtrkCoJiddct",
+      "uri": "spotify:track:5R2DZitRTDYtrkCoJiddct",
+      "name": "Stay",
+      "duration_ms": 94906,
+      "album": {
+        "id": "0mtLFaQ3hL371jsNraRo9g",
+        "uri": "spotify:album:0mtLFaQ3hL371jsNraRo9g",
+        "name": "Dirty Dancing (Original Motion Picture Soundtrack)",
+        "artists": [
+          {
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Multi-interprètes",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273ac19c6552524d207aac1277b",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02ac19c6552524d207aac1277b",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851ac19c6552524d207aac1277b",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1CgE69lpZKGAcA5kIIK82D",
+          "name": "Maurice Williams",
+          "uri": "spotify:artist:1CgE69lpZKGAcA5kIIK82D"
+        },
+        {
+          "id": "1HCE0pbqGLSvWaz5q4TeDd",
+          "name": "The Zodiacs",
+          "uri": "spotify:artist:1HCE0pbqGLSvWaz5q4TeDd"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "65jrjEhWfAvysKfnojk1i0",
+      "uri": "spotify:track:65jrjEhWfAvysKfnojk1i0",
+      "name": "Under the Boardwalk",
+      "duration_ms": 161960,
+      "album": {
+        "id": "7AgI5vniflcbh86Znea7yM",
+        "uri": "spotify:album:7AgI5vniflcbh86Znea7yM",
+        "name": "Under the Boardwalk",
+        "artists": [
+          {
+            "id": "1FqqOl9itIUpXr4jZPIVoT",
+            "name": "The Drifters",
+            "uri": "spotify:artist:1FqqOl9itIUpXr4jZPIVoT"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27393e3fc20b2818c4ab7d5dc29",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0293e3fc20b2818c4ab7d5dc29",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485193e3fc20b2818c4ab7d5dc29",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1FqqOl9itIUpXr4jZPIVoT",
+          "name": "The Drifters",
+          "uri": "spotify:artist:1FqqOl9itIUpXr4jZPIVoT"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "1xHr747j0k3TlsFnmqTOpr",
+      "uri": "spotify:track:1xHr747j0k3TlsFnmqTOpr",
+      "name": "I Do",
+      "duration_ms": 250933,
+      "album": {
+        "id": "0g3mvAod8Y0xt4d4tJOWJa",
+        "uri": "spotify:album:0g3mvAod8Y0xt4d4tJOWJa",
+        "name": "Nathan Michael Shawn Wanya",
+        "artists": [
+          {
+            "id": "6O74knDqdv3XaWtkII7Xjp",
+            "name": "Boyz II Men",
+            "uri": "spotify:artist:6O74knDqdv3XaWtkII7Xjp"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2731363fe56117cc5f9411c9770",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e021363fe56117cc5f9411c9770",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511363fe56117cc5f9411c9770",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6O74knDqdv3XaWtkII7Xjp",
+          "name": "Boyz II Men",
+          "uri": "spotify:artist:6O74knDqdv3XaWtkII7Xjp"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "2tbSiDmrerPi24rEIBwtkh",
+      "uri": "spotify:track:2tbSiDmrerPi24rEIBwtkh",
+      "name": "In The Still Of The Nite (I'll Remember)",
+      "duration_ms": 169840,
+      "album": {
+        "id": "3jknvlUSe6D9Oyn2E3JBLO",
+        "uri": "spotify:album:3jknvlUSe6D9Oyn2E3JBLO",
+        "name": "Cooleyhighharmony (Bonus Tracks Version)",
+        "artists": [
+          {
+            "id": "6O74knDqdv3XaWtkII7Xjp",
+            "name": "Boyz II Men",
+            "uri": "spotify:artist:6O74knDqdv3XaWtkII7Xjp"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27373d0d8625dcf1e48043cfbf9",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0273d0d8625dcf1e48043cfbf9",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485173d0d8625dcf1e48043cfbf9",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6O74knDqdv3XaWtkII7Xjp",
+          "name": "Boyz II Men",
+          "uri": "spotify:artist:6O74knDqdv3XaWtkII7Xjp"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "2FBtq2g0gIqcJVTdnngIzq",
+      "uri": "spotify:track:2FBtq2g0gIqcJVTdnngIzq",
+      "name": "A Casual Look",
+      "duration_ms": 147563,
+      "album": {
+        "id": "2S8NKCht9cDIZGhcfQsW68",
+        "uri": "spotify:album:2S8NKCht9cDIZGhcfQsW68",
+        "name": "A Casual Look",
+        "artists": [
+          {
+            "id": "1n0PTPiHxmlkU7ND1HVFZQ",
+            "name": "The Six Teens",
+            "uri": "spotify:artist:1n0PTPiHxmlkU7ND1HVFZQ"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27383a9852e9996ec7738acfc77",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0283a9852e9996ec7738acfc77",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485183a9852e9996ec7738acfc77",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1n0PTPiHxmlkU7ND1HVFZQ",
+          "name": "The Six Teens",
+          "uri": "spotify:artist:1n0PTPiHxmlkU7ND1HVFZQ"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "0RVeh06Wo4Wtolrhk3LSna",
+      "uri": "spotify:track:0RVeh06Wo4Wtolrhk3LSna",
+      "name": "Sincerely",
+      "duration_ms": 189933,
+      "album": {
+        "id": "1mP0kFIDxcbuXnPhTPCo7v",
+        "uri": "spotify:album:1mP0kFIDxcbuXnPhTPCo7v",
+        "name": "Presenting The Moonglows",
+        "artists": [
+          {
+            "id": "1sZwQg2rvSlGhkG218SouM",
+            "name": "The Moonglows",
+            "uri": "spotify:artist:1sZwQg2rvSlGhkG218SouM"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273c1e2b6d5e0d74dc0c432f0d4",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02c1e2b6d5e0d74dc0c432f0d4",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851c1e2b6d5e0d74dc0c432f0d4",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1sZwQg2rvSlGhkG218SouM",
+          "name": "The Moonglows",
+          "uri": "spotify:artist:1sZwQg2rvSlGhkG218SouM"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:3Z3btTHiNpXUkWBmIikkiK"
+    }
+  },
+  {
+    "track": {
+      "id": "0Jp7n6FKqGVxtXPMVYtMQr",
+      "uri": "spotify:track:0Jp7n6FKqGVxtXPMVYtMQr",
+      "name": "Consolation No. 3 in D-Flat Major, S. 172",
+      "duration_ms": 259573,
+      "album": {
+        "id": "39Hh5k01di42nUCLn8Wxqu",
+        "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
+        "name": "Liszt - My Piano Hero",
+        "artists": [
+          {
+            "id": "1385hLNbrnbCJGokfH2ac2",
+            "name": "Franz Liszt",
+            "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+          },
+          {
+            "id": "1YZhNFBxkEB5UKTgMDvot4",
+            "name": "Lang Lang",
+            "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1385hLNbrnbCJGokfH2ac2",
+          "name": "Franz Liszt",
+          "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+        },
+        {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
+          "name": "Lang Lang",
+          "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU"
+    }
+  },
+  {
+    "track": {
+      "id": "64gCM9yZv2jpNflclKUnXu",
+      "uri": "spotify:track:64gCM9yZv2jpNflclKUnXu",
+      "name": "La tribu de Dana",
+      "duration_ms": 287240,
+      "album": {
+        "id": "1i7e6Cu4N6zhbhvJ4lNw6G",
+        "uri": "spotify:album:1i7e6Cu4N6zhbhvJ4lNw6G",
+        "name": "Panique Celtique",
+        "artists": [
+          {
+            "id": "6k68jYvlUy3CXOwhG1NDBL",
+            "name": "Manau",
+            "uri": "spotify:artist:6k68jYvlUy3CXOwhG1NDBL"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273548e29326422f7ab62fc4fe5",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02548e29326422f7ab62fc4fe5",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851548e29326422f7ab62fc4fe5",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6k68jYvlUy3CXOwhG1NDBL",
+          "name": "Manau",
+          "uri": "spotify:artist:6k68jYvlUy3CXOwhG1NDBL"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU"
+    }
+  },
+  {
+    "track": {
+      "id": "3tt9i3Hhzq84dPS8H7iSiJ",
+      "uri": "spotify:track:3tt9i3Hhzq84dPS8H7iSiJ",
+      "name": "La Bachata",
+      "duration_ms": 162637,
+      "album": {
+        "id": "7ubO2LZJZFpyhiWMZkRwcH",
+        "uri": "spotify:album:7ubO2LZJZFpyhiWMZkRwcH",
+        "name": "2000",
+        "artists": [
+          {
+            "id": "0tmwSHipWxN12fsoLcFU3B",
+            "name": "Manuel Turizo",
+            "uri": "spotify:artist:0tmwSHipWxN12fsoLcFU3B"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2734dd99565ae6453deab7c26e1",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e024dd99565ae6453deab7c26e1",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048514dd99565ae6453deab7c26e1",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0tmwSHipWxN12fsoLcFU3B",
+          "name": "Manuel Turizo",
+          "uri": "spotify:artist:0tmwSHipWxN12fsoLcFU3B"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU"
+    }
+  },
+  {
+    "track": {
+      "id": "4ePsPRmL0aXbgCY2BwOBGZ",
+      "uri": "spotify:track:4ePsPRmL0aXbgCY2BwOBGZ",
+      "name": "Les démons de minuit (Version single)",
+      "duration_ms": 236570,
+      "album": {
+        "id": "3tiEnone5M9hFCnmk9j6xj",
+        "uri": "spotify:album:3tiEnone5M9hFCnmk9j6xj",
+        "name": "Les démons de minuit - EP",
+        "artists": [
+          {
+            "id": "6BGRCwCR7pQWXqWNhBE2vf",
+            "name": "Images",
+            "uri": "spotify:artist:6BGRCwCR7pQWXqWNhBE2vf"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273cd41406ae91323f53ac032ff",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02cd41406ae91323f53ac032ff",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851cd41406ae91323f53ac032ff",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6BGRCwCR7pQWXqWNhBE2vf",
+          "name": "Images",
+          "uri": "spotify:artist:6BGRCwCR7pQWXqWNhBE2vf"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU"
+    }
+  },
+  {
+    "track": {
+      "id": "0u2P5u6lvoDfwTYjAADbn4",
+      "uri": "spotify:track:0u2P5u6lvoDfwTYjAADbn4",
+      "name": "lovely (with Khalid)",
+      "duration_ms": 200185,
+      "album": {
+        "id": "2sBB17RXTamvj7Ncps15AK",
+        "uri": "spotify:album:2sBB17RXTamvj7Ncps15AK",
+        "name": "lovely (with Khalid)",
+        "artists": [
+          {
+            "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+            "name": "Billie Eilish",
+            "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+          },
+          {
+            "id": "6LuN9FCkKOj5PcnpouEgny",
+            "name": "Khalid",
+            "uri": "spotify:artist:6LuN9FCkKOj5PcnpouEgny"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2738a3f0a3ca7929dea23cd274c",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e028a3f0a3ca7929dea23cd274c",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048518a3f0a3ca7929dea23cd274c",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+          "name": "Billie Eilish",
+          "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+        },
+        {
+          "id": "6LuN9FCkKOj5PcnpouEgny",
+          "name": "Khalid",
+          "uri": "spotify:artist:6LuN9FCkKOj5PcnpouEgny"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU"
+    }
+  },
+  {
+    "track": {
+      "id": "2HOkyI0Gtw7UPPgcCKPaGo",
+      "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
+      "name": "Despacito",
+      "duration_ms": 220846,
+      "album": {
+        "id": "0DunPxU8C8FXeHpEKBIzts",
+        "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
+        "name": "Despacito",
+        "artists": [
+          {
+            "id": "0PUi9O36OMwere5DTyayAq",
+            "name": "Chloé Stafler",
+            "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273fe3a59387691ffc0527e46e4",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02fe3a59387691ffc0527e46e4",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851fe3a59387691ffc0527e46e4",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0PUi9O36OMwere5DTyayAq",
+          "name": "Chloé Stafler",
+          "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+        }
+      ]
+    },
+    "context": {
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1Fa1IIVtEpGUcU"
     }
   }
 ]

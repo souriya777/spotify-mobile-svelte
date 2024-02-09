@@ -14,40 +14,42 @@ DRY -> Single Source of Truth
 
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
--- imageMiniUrl, imageCoverUrl
-
 - feat(playlist/playlist-detail): adopt old code to new
   - feat(my-lib): implement all items view
-    -- add playlist / album / artist PREFIX
-  - feat(playlist): display `Liked` playlist
-    -- feat(playlist): dynamize sorts
-    -- mv `PlaylistView` -> `CollectionDetailView`
-    -- change background meta color based on "navigating rgb"
-    -- feat(playlist-detail): can play the playlist via green button
-    -- remove `Collection*`
-    -- how implementing "NoteSvg" as default ?
-    -- remove `ImageSolverSAVE` ?
+    -- when filter, add "fade" effect on list
+    - feat(grid-mode): tune grid with COVER IMAGE
+      -- change background meta color based on "navigating rgb"
+      -- TODO detailImage => <NoteSvg size={64} />
+      -- feat(playlist-detail): can play the playlist via green button
+      -- remove `Collection*`
+      -- remove `ImageSolverSAVE` ?
+      -- feat(playlist): dynamize sorts
 - fix(playlist): spotify bug "recently-added" order
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
   -- see <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
 - feat(playlist): make scroll lib by date ?
 - feat(playlist): can add to queue
-- feat(playlist): can favorite song
 - feat(album): can see my albums list
 - feat(album): can view album details
 - feat(album): can play a song
 - feat(album): can add to queue
+
+- 🥳🥳🥳🥳🥳 check : `refactor` in main ????
+
+- feat(playlist): can favorite song
 - feat(album): can remove album from my favorite
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
+
 - feat(queue): design it
 - feat(queue): what is default queue ?
 - feat(queue): can remove song
 - feat(queue): can clear queue
 - feat(queue): extract track_window next_tracks ?
 - feat(queue): can auto-load queue
+- feat(queue): swiper shortcut "add to queue" ???
 
 - feat(list-playlist): make api call for playlist cover
   -- replace grid-mode image with playlist cover

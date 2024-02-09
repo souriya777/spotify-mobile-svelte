@@ -1,0 +1,68 @@
+[
+  {
+    "id": "2YP02JRa1JLejrg3XTssJS",
+    "name": "The Five Satins",
+    "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2739e8ad4f8a33d8a0968769165",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e029e8ad4f8a33d8a0968769165",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048519e8ad4f8a33d8a0968769165",
+        "height": 64,
+        "width": 64
+      }
+    ]
+  },
+  {
+    "id": "0PUi9O36OMwere5DTyayAq",
+    "name": "Chloé Stafler",
+    "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebad95a6b32e6a85cef02a075f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ad95a6b32e6a85cef02a075f",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ad95a6b32e6a85cef02a075f",
+        "height": 160,
+        "width": 160
+      }
+    ]
+  },
+  {
+    "id": "4ACplpEqD6JIVgKrafauzs",
+    "name": "The Everly Brothers",
+    "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab6761610000e5ebea4e50a3c95e9024bb990fb9",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616100005174ea4e50a3c95e9024bb990fb9",
+        "height": 320,
+        "width": 320
+      },
+      {
+        "url": "https://i.scdn.co/image/ab6761610000f178ea4e50a3c95e9024bb990fb9",
+        "height": 160,
+        "width": 160
+      }
+    ]
+  }
+]

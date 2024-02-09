@@ -11,21 +11,20 @@
   import CollectionTrack from '@lib/PlaylistTracks.svelte';
   import CollectionAlbum from '@lib/ListAlbum.svelte';
   import ListArtist from '@lib/ListArtist.svelte';
+  import { SPOTIFY_FIRST_RESULTS_LIMIT } from '@js/spotify-utils';
   // import ListFilter from '@lib/ListFilter.svelte';
 
   /** @type {import('@js/spotify').SpotifySearch} */
   let searchResult = null;
 
-  const FIRST_RESULTS_LIMIT = 3;
+  $: firstTracks = searchResult?.tracks?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstArtists = searchResult?.artists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  // $: firstPlaylists = searchResult?.playlists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstAlbums = searchResult?.albums?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
 
-  $: firstTracks = searchResult?.tracks?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
-  $: firstArtists = searchResult?.artists?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
-  // $: firstPlaylists = searchResult?.playlists?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
-  $: firstAlbums = searchResult?.albums?.slice(0, FIRST_RESULTS_LIMIT) ?? [];
-
-  $: nextTracks = searchResult?.tracks?.slice(FIRST_RESULTS_LIMIT) ?? [];
-  $: nextArtists = searchResult?.artists?.slice(FIRST_RESULTS_LIMIT) ?? [];
-  $: nextAlbums = searchResult?.albums?.slice(FIRST_RESULTS_LIMIT) ?? [];
+  $: nextTracks = searchResult?.tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: nextArtists = searchResult?.artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: nextAlbums = searchResult?.albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
 
   $: queryUrl = window.location.href.match(/(?<=search\/).*/i)?.[0] ?? '';
   $: decodedQueryUrl = decodeURI(queryUrl);

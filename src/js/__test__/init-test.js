@@ -8,10 +8,14 @@ import AVAILABLE_DEVICES_API_JSON from './api/available-devices-api.json';
 import MY_ALBUMS_OFFSET_0_API_JSON from './api/my-albums-offset-0-api.json';
 import MY_ALBUMS_OFFSET_50_API_JSON from './api/my-albums-offset-50-api.json';
 import PLAYLIST_KARAOKE_DETAIL_API_JSON from './api/playlist-karaoke-detail-api.json';
+import PLAYLIST_ANDREA_BOTEZ_DETAIL_API_JSON from './api/playlist-andrea-botez-detail-api.json';
+import PLAYLIST_DOO_WOP_DETAIL_API_JSON from './api/playlist-doo-wop-detail-api.json';
+import PLAYLIST_RETRO_SPOTIFY_DETAIL_API_JSON from './api/playlist-retro-spotify-detail-api.json';
 import PLAYLIST_KARAOKE_SONGS_API_JSON from './api/playlist-karaoke-songs-api.json';
 import ALBUM_ORELSAN_TRACKS_API_JSON from './api/album-orelsan-tracks-api.json';
 import MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON from './api/my-following-artists-offset-0-api.json';
 import MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON from './api/my-following-artists-offset-50-api.json';
+import SEVERAL_ARTISTS_API_JSON from './api/several-artists-api.json';
 import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
 import QUEUE_API_JSON from './api/queue-api.json';
 import MY_PLAYLISTS_OFFSET_0_API_JSON from './api/my-playlists-offset-0-api.json';
@@ -85,6 +89,12 @@ function getData(method, url, data, config) {
       return { ...MY_ALBUMS_OFFSET_50_API_JSON };
     } else if (endpoint === '/playlists/2bsNu8LBBJhmmdJ9zp7gkw') {
       return { ...PLAYLIST_KARAOKE_DETAIL_API_JSON };
+    } else if (endpoint === '/playlists/0pA5okg4BBqoW6X731rdDn') {
+      return { ...PLAYLIST_ANDREA_BOTEZ_DETAIL_API_JSON };
+    } else if (endpoint === '/playlists/3Z3btTHiNpXUkWBmIikkiK') {
+      return { ...PLAYLIST_DOO_WOP_DETAIL_API_JSON };
+    } else if (endpoint === '/playlists/37i9dQZF1Fa1IIVtEpGUcU') {
+      return { ...PLAYLIST_RETRO_SPOTIFY_DETAIL_API_JSON };
     } else if (endpoint === '/playlists/2bsNu8LBBJhmmdJ9zp7gkw/tracks?limit=50') {
       return { ...PLAYLIST_KARAOKE_SONGS_API_JSON };
     } else if (endpoint === '/albums/2o2GBOfy2GG9oKYZgfZkur/tracks') {
@@ -93,7 +103,12 @@ function getData(method, url, data, config) {
       return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON };
     } else if (/\/me\/following\?type=artist.*&after=/g.test(endpoint)) {
       return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON };
-    } else if (endpoint === '/me/player/recently-played') {
+    } else if (
+      endpoint ===
+      '/artists?ids=2YP02JRa1JLejrg3XTssJS,0PUi9O36OMwere5DTyayAq,4ACplpEqD6JIVgKrafauzs'
+    ) {
+      return { ...SEVERAL_ARTISTS_API_JSON };
+    } else if (endpoint === '/me/player/recently-played?limit=50') {
       return { ...RECENTLY_PLAYED_API_JSON };
     } else if (endpoint === '/me/player/queue') {
       return { ...QUEUE_API_JSON };

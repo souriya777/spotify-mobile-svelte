@@ -9,9 +9,13 @@
   import ListFilter from '@lib/ListFilter.svelte';
   import ListArtist from '@lib/ListArtist.svelte';
   import Svg from '@lib/svg/Svg.svelte';
+  import ListMyLib from '@lib/ListMyLib.svelte';
+  import { SPOTIFY_FIRST_RESULTS_LIMIT } from '@js/spotify-utils';
 
   const DISPLAY_MODE_ICON_SIZE = 14;
 
+  /** @type {(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifyArtist)[]} */
+  let recentlyPlayed = [];
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
   /** @type {import('@js/spotify').SpotifyAlbum[]} */
@@ -19,10 +23,37 @@
   /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   let artists = [];
 
+  $: recentlyPlayedUris = new Set(recentlyPlayed.map((item) => item?.uri));
+  $: removeDuplicate = (item) => !recentlyPlayedUris.has(item?.uri);
+
+  $: playlistsWithoutDuplicates = playlists?.filter(removeDuplicate);
+  $: albumsWithoutDuplicates = albums?.filter(removeDuplicate);
+  $: artistsWithoutDuplicates = artists?.filter(removeDuplicate);
+
+  $: firstPlaylists = playlistsWithoutDuplicates?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstAlbums = albumsWithoutDuplicates?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstArtists = artistsWithoutDuplicates?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: nextPlaylists = playlistsWithoutDuplicates?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: nextAlbums = albumsWithoutDuplicates?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: nextArtists = artistsWithoutDuplicates?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+
+  $: MY_LIB = [
+    ...recentlyPlayed,
+    ...firstPlaylists,
+    ...firstAlbums,
+    ...firstArtists,
+    ...nextPlaylists,
+    ...nextAlbums,
+    ...nextArtists,
+  ];
+
   // let selectedPlaylist = 1;
   // let selectedAlbum = 1;
 
   onMount(() => {
+    // ALL
+    SpotifyApi.myLibRecentlyPlayed().then((items) => (recentlyPlayed = items));
+
     // PLAYLISTS
     sortPlaylistBySpotify();
     // sortPlaylistRecentlyAddedAt()
@@ -106,7 +137,7 @@
   {:else if $displayFilter.artistActive}
     <ListArtist items={artists} />
   {:else}
-    TODO ALL
+    <ListMyLib items={MY_LIB} />
   {/if}
 </ViewRoot>
 

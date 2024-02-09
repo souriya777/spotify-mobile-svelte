@@ -17,13 +17,23 @@
   export let bubble = false || bubbleMini || bubbleNano;
   export let bottomDot = false;
 
+  const BOTTOM_DOT_HALF_SIZE_PX = 4;
+  let bottomDotStyle = '';
+
+  $: if (bottomDot) {
+    let bottomDotPosition = (svgSize - BOTTOM_DOT_HALF_SIZE_PX) / 2;
+    if ('flex-end' === svgFlexJustify) {
+      bottomDotPosition *= -1;
+    }
+    bottomDotStyle = `
+    --middle-x-svg: ${bottomDotPosition}px;
+    --bottomDotSize: ${BOTTOM_DOT_HALF_SIZE_PX}px;
+    `;
+  }
+
   $: style = `
     --align-svg: ${svgFlexJustify};
-    --size-button: 4.8rem;
-    --size-button-filled: 3.1rem;
-    --size-button-bubble: 6.4rem;
-    --size-button-bubble-mini: 4.8rem;
-    --size-button-bubble-nano: 3.2rem;
+    ${bottomDotStyle}
   `;
 
   function handleClick() {
@@ -48,8 +58,6 @@
   class:bubble
   class:bubbleMini
   class:bubbleNano
-  class:bottomDot
-  class:bottomDot--left={svgFlexJustify === 'flex-start'}
   class:font-button-filled={filled}
   {style}
   on:click|stopPropagation={handleClick}
@@ -57,6 +65,10 @@
   {#if svg}
     <span class="icon">
       <Svg name={svg} size={svgSize} viewBox={svgViewbox} />
+
+      {#if bottomDot}
+        <div class="bottomDot"></div>
+      {/if}
     </span>
   {/if}
 
@@ -76,6 +88,7 @@
   }
 
   .icon {
+    position: relative;
     display: flex;
     justify-content: var(--align-svg);
   }
@@ -126,23 +139,13 @@
     color: var(--color-on-accent);
   }
 
-  .bottomDot .icon {
-    position: relative;
-  }
-
-  .bottomDot--left .icon {
-    float: left;
-  }
-
-  .bottomDot .icon::after {
-    content: '';
+  .bottomDot {
     position: absolute;
-    bottom: -8px;
-    left: 50%;
-    height: 0.4rem;
-    width: 0.4rem;
-    transform: translate3d(-50%, 0, 0);
+    bottom: -0.8rem;
+    height: var(--bottomDotSize);
+    width: var(--bottomDotSize);
     border-radius: 50%;
     background-color: currentcolor;
+    transform: translateX(var(--middle-x-svg));
   }
 </style>

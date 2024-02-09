@@ -1,0 +1,110 @@
+{
+  "artists": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2YP02JRa1JLejrg3XTssJS"
+      },
+      "followers": {
+        "href": null,
+        "total": 66845
+      },
+      "genres": ["doo-wop", "rock-and-roll"],
+      "href": "https://api.spotify.com/v1/artists/2YP02JRa1JLejrg3XTssJS?locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+      "id": "2YP02JRa1JLejrg3XTssJS",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739e8ad4f8a33d8a0968769165",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029e8ad4f8a33d8a0968769165",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519e8ad4f8a33d8a0968769165",
+          "height": 64,
+          "width": 64
+        }
+      ],
+      "name": "The Five Satins",
+      "popularity": 41,
+      "type": "artist",
+      "uri": "spotify:artist:2YP02JRa1JLejrg3XTssJS"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0PUi9O36OMwere5DTyayAq"
+      },
+      "followers": {
+        "href": null,
+        "total": 20942
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/0PUi9O36OMwere5DTyayAq?locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+      "id": "0PUi9O36OMwere5DTyayAq",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebad95a6b32e6a85cef02a075f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174ad95a6b32e6a85cef02a075f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178ad95a6b32e6a85cef02a075f",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "name": "Chloé Stafler",
+      "popularity": 31,
+      "type": "artist",
+      "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4ACplpEqD6JIVgKrafauzs"
+      },
+      "followers": {
+        "href": null,
+        "total": 910821
+      },
+      "genres": [
+        "adult standards",
+        "folk rock",
+        "mellow gold",
+        "rock-and-roll",
+        "rockabilly",
+        "sunshine pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4ACplpEqD6JIVgKrafauzs?locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+      "id": "4ACplpEqD6JIVgKrafauzs",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebea4e50a3c95e9024bb990fb9",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174ea4e50a3c95e9024bb990fb9",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178ea4e50a3c95e9024bb990fb9",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "name": "The Everly Brothers",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:4ACplpEqD6JIVgKrafauzs"
+    }
+  ]
+}
