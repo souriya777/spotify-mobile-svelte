@@ -7,6 +7,7 @@
   import ListPlaylist from '@lib/ListPlaylist.svelte';
   import ListAlbum from '@lib/ListAlbum.svelte';
   import ListFilter from '@lib/ListFilter.svelte';
+  import ListArtist from '@lib/ListArtist.svelte';
 
   /** @type {import('@js/spotify').SpotifyPlaylist[]} */
   let playlists = [];
@@ -26,10 +27,11 @@
     sortPlaylistBySpotify();
     // SpotifyApi.getLikedTracks().then((tracks) => (totalLikedTracks = tracks?.length));
 
-    // ALBUM
+    // ALBUMS
     sortAlbumsRecentlyPlayed();
 
-    // SpotifyApi.getMyFollowedArtists().then((items) => (artists = items));
+    // ARTISTS
+    SpotifyApi.getMyFollowedArtists().then((items) => (artists = items));
   });
 
   async function sortPlaylistBySpotify() {
@@ -98,7 +100,7 @@
   {:else if $displayFilter.albumActive}
     <ListAlbum items={albums} />
   {:else if $displayFilter.artistActive}
-    TODO artist
+    <ListArtist items={artists} />
   {:else}
     TODO ALL
   {/if}

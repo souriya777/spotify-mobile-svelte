@@ -11,6 +11,7 @@
   onMount(() => {
     SpotifyApi.getAlbumTracks(id).then((items) => (tracks = items));
   });
+  // TODO factorize with PlaylistView
 </script>
 
 SOURIYA

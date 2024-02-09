@@ -10,7 +10,7 @@
   import { searchQuery } from '@js/store';
   import CollectionTrack from '@lib/PlaylistTracks.svelte';
   import CollectionAlbum from '@lib/ListAlbum.svelte';
-  import CollectionArtist from '@lib/CollectionArtist.svelte';
+  import ListArtist from '@lib/ListArtist.svelte';
   // import ListFilter from '@lib/ListFilter.svelte';
 
   /** @type {import('@js/spotify').SpotifySearch} */
@@ -84,7 +84,7 @@
 
   {#if $displayFilter.artistOn}
     <h3>1st artists</h3>
-    <CollectionArtist items={firstArtists} />
+    <ListArtist items={firstArtists} />
   {/if}
 
   {#if $displayFilter.playlistOn}
@@ -103,7 +103,7 @@
 
   {#if $displayFilter.artistOn}
     <h3>next artists</h3>
-    <CollectionArtist items={nextArtists} />
+    <ListArtist items={nextArtists} />
   {/if}
 
   {#if $displayFilter.playlistOn}

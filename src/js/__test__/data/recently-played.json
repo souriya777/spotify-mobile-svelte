@@ -11,10 +11,12 @@
         "name": "Liszt - My Piano Hero",
         "artists": [
           {
+            "id": "1385hLNbrnbCJGokfH2ac2",
             "name": "Franz Liszt",
             "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
           },
           {
+            "id": "1YZhNFBxkEB5UKTgMDvot4",
             "name": "Lang Lang",
             "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
           }
@@ -39,10 +41,12 @@
       },
       "artists": [
         {
+          "id": "1385hLNbrnbCJGokfH2ac2",
           "name": "Franz Liszt",
           "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
           "name": "Lang Lang",
           "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
@@ -65,10 +69,12 @@
         "name": "Liszt - My Piano Hero",
         "artists": [
           {
+            "id": "1385hLNbrnbCJGokfH2ac2",
             "name": "Franz Liszt",
             "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
           },
           {
+            "id": "1YZhNFBxkEB5UKTgMDvot4",
             "name": "Lang Lang",
             "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
           }
@@ -93,10 +99,12 @@
       },
       "artists": [
         {
+          "id": "1385hLNbrnbCJGokfH2ac2",
           "name": "Franz Liszt",
           "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
           "name": "Lang Lang",
           "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
@@ -119,10 +127,12 @@
         "name": "Liszt - My Piano Hero",
         "artists": [
           {
+            "id": "1385hLNbrnbCJGokfH2ac2",
             "name": "Franz Liszt",
             "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
           },
           {
+            "id": "1YZhNFBxkEB5UKTgMDvot4",
             "name": "Lang Lang",
             "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
           }
@@ -147,10 +157,12 @@
       },
       "artists": [
         {
+          "id": "1385hLNbrnbCJGokfH2ac2",
           "name": "Franz Liszt",
           "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
           "name": "Lang Lang",
           "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
@@ -173,10 +185,12 @@
         "name": "Liszt - My Piano Hero",
         "artists": [
           {
+            "id": "1385hLNbrnbCJGokfH2ac2",
             "name": "Franz Liszt",
             "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
           },
           {
+            "id": "1YZhNFBxkEB5UKTgMDvot4",
             "name": "Lang Lang",
             "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
           }
@@ -201,10 +215,12 @@
       },
       "artists": [
         {
+          "id": "1385hLNbrnbCJGokfH2ac2",
           "name": "Franz Liszt",
           "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
           "name": "Lang Lang",
           "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
@@ -227,10 +243,12 @@
         "name": "Liszt - My Piano Hero",
         "artists": [
           {
+            "id": "1385hLNbrnbCJGokfH2ac2",
             "name": "Franz Liszt",
             "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
           },
           {
+            "id": "1YZhNFBxkEB5UKTgMDvot4",
             "name": "Lang Lang",
             "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
           }
@@ -255,10 +273,12 @@
       },
       "artists": [
         {
+          "id": "1385hLNbrnbCJGokfH2ac2",
           "name": "Franz Liszt",
           "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
           "name": "Lang Lang",
           "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
@@ -281,6 +301,7 @@
         "name": "Mistral gagnant",
         "artists": [
           {
+            "id": "15uNxh8omvRvH71kcdIe2r",
             "name": "Renaud",
             "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
           }
@@ -305,6 +326,7 @@
       },
       "artists": [
         {
+          "id": "15uNxh8omvRvH71kcdIe2r",
           "name": "Renaud",
           "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
         }
@@ -324,6 +346,7 @@
         "name": "Ailleurs pour un ailleurs...",
         "artists": [
           {
+            "id": "7DXIujatSYhHHsoS8Hx8QI",
             "name": "Gérard Blanc",
             "uri": "spotify:artist:7DXIujatSYhHHsoS8Hx8QI"
           }
@@ -348,6 +371,7 @@
       },
       "artists": [
         {
+          "id": "7DXIujatSYhHHsoS8Hx8QI",
           "name": "Gérard Blanc",
           "uri": "spotify:artist:7DXIujatSYhHHsoS8Hx8QI"
         }
@@ -367,6 +391,7 @@
         "name": "Simplement",
         "artists": [
           {
+            "id": "07sMHU0vu01xrz1gnNrNry",
             "name": "Larusso",
             "uri": "spotify:artist:07sMHU0vu01xrz1gnNrNry"
           }
@@ -391,6 +416,7 @@
       },
       "artists": [
         {
+          "id": "07sMHU0vu01xrz1gnNrNry",
           "name": "Larusso",
           "uri": "spotify:artist:07sMHU0vu01xrz1gnNrNry"
         }
@@ -410,6 +436,7 @@
         "name": "Dis-lui",
         "artists": [
           {
+            "id": "1u9tovPnCMYuZiV3EMZqDV",
             "name": "Mike Brant",
             "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
           }
@@ -434,6 +461,7 @@
       },
       "artists": [
         {
+          "id": "1u9tovPnCMYuZiV3EMZqDV",
           "name": "Mike Brant",
           "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
         }
@@ -453,6 +481,7 @@
         "name": "20eme anniversaire",
         "artists": [
           {
+            "id": "1u9tovPnCMYuZiV3EMZqDV",
             "name": "Mike Brant",
             "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
           }
@@ -477,6 +506,7 @@
       },
       "artists": [
         {
+          "id": "1u9tovPnCMYuZiV3EMZqDV",
           "name": "Mike Brant",
           "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
         }
@@ -496,6 +526,7 @@
         "name": "A Thousand Miles",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -520,6 +551,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -542,6 +574,7 @@
         "name": "Tout oublier",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -566,6 +599,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -588,6 +622,7 @@
         "name": "Reprises, Vol. 2",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -612,6 +647,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -634,6 +670,7 @@
         "name": "Reprises, Vol. 2",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -658,6 +695,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -680,6 +718,7 @@
         "name": "Reprises, Vol. 2",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -704,6 +743,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -726,6 +766,7 @@
         "name": "Reprises, Vol. 2",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -750,6 +791,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -772,6 +814,7 @@
         "name": "Despacito",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -796,6 +839,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -818,6 +862,7 @@
         "name": "Souvenirs",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -842,6 +887,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -864,6 +910,7 @@
         "name": "Voyage voyage",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -888,6 +935,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }
@@ -910,6 +958,7 @@
         "name": "Je te laisserai des mots",
         "artists": [
           {
+            "id": "0PUi9O36OMwere5DTyayAq",
             "name": "Chloé Stafler",
             "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
           }
@@ -934,6 +983,7 @@
       },
       "artists": [
         {
+          "id": "0PUi9O36OMwere5DTyayAq",
           "name": "Chloé Stafler",
           "uri": "spotify:artist:0PUi9O36OMwere5DTyayAq"
         }

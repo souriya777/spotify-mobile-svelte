@@ -5,10 +5,12 @@
     "name": "Bach, J.S.: Sonatas & Partitas",
     "artists": [
       {
+        "id": "5aIqB5nVVvmFsvSdExz408",
         "name": "Johann Sebastian Bach",
         "uri": "spotify:artist:5aIqB5nVVvmFsvSdExz408"
       },
       {
+        "id": "1QoKB19XVwnNwlKDjyYYe8",
         "name": "Henryk Szeryng",
         "uri": "spotify:artist:1QoKB19XVwnNwlKDjyYYe8"
       }
@@ -38,6 +40,7 @@
     "name": "Multitude",
     "artists": [
       {
+        "id": "5j4HeCoUlzhfWtjAfM1acR",
         "name": "Stromae",
         "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
       }
@@ -67,6 +70,7 @@
     "name": "racine carrée",
     "artists": [
       {
+        "id": "5j4HeCoUlzhfWtjAfM1acR",
         "name": "Stromae",
         "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
       }
@@ -96,6 +100,7 @@
     "name": "(500) Days of Summer (Music from the Motion Picture)",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -125,10 +130,12 @@
     "name": "Liszt: Études D'execution Trascendante & Wagner: Tannhäuser, Ouverture",
     "artists": [
       {
+        "id": "1385hLNbrnbCJGokfH2ac2",
         "name": "Franz Liszt",
         "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
       },
       {
+        "id": "2bwEHQxmBXe3yeoIBNfgbW",
         "name": "György Cziffra",
         "uri": "spotify:artist:2bwEHQxmBXe3yeoIBNfgbW"
       }
@@ -158,10 +165,12 @@
     "name": "Chopin: Etudes - Lang Lang",
     "artists": [
       {
+        "id": "7y97mc3bZRFXzT2szRM4L4",
         "name": "Frédéric Chopin",
         "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
       },
       {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
         "name": "Lang Lang",
         "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
       }
@@ -191,10 +200,12 @@
     "name": "Liszt - My Piano Hero",
     "artists": [
       {
+        "id": "1385hLNbrnbCJGokfH2ac2",
         "name": "Franz Liszt",
         "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
       },
       {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
         "name": "Lang Lang",
         "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
       }
@@ -224,6 +235,7 @@
     "name": "Get Rich Or Die Tryin'",
     "artists": [
       {
+        "id": "3q7HBObVc0L8jNeTe5Gofh",
         "name": "50 Cent",
         "uri": "spotify:artist:3q7HBObVc0L8jNeTe5Gofh"
       }
@@ -253,10 +265,12 @@
     "name": "Lang Lang: The Chopin Album",
     "artists": [
       {
+        "id": "7y97mc3bZRFXzT2szRM4L4",
         "name": "Frédéric Chopin",
         "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
       },
       {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
         "name": "Lang Lang",
         "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
       }
@@ -286,6 +300,7 @@
     "name": "Heifetz: Tchaikovsky & Mendelssohn Concertos",
     "artists": [
       {
+        "id": "7yaBUcdjmqPP2vIv6F5bFD",
         "name": "Jascha Heifetz",
         "uri": "spotify:artist:7yaBUcdjmqPP2vIv6F5bFD"
       }
@@ -315,6 +330,7 @@
     "name": "Into The Wild (Music For The Motion Picture)",
     "artists": [
       {
+        "id": "0mXTJETA4XUa12MmmXxZJh",
         "name": "Eddie Vedder",
         "uri": "spotify:artist:0mXTJETA4XUa12MmmXxZJh"
       }
@@ -344,6 +360,7 @@
     "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
     "artists": [
       {
+        "id": "28W9apMi2vgk9O9LnkijIC",
         "name": "Jersey Boys",
         "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
       }
@@ -373,6 +390,7 @@
     "name": "Daydream",
     "artists": [
       {
+        "id": "4iHNK0tOyZPYnBU7nGAgpQ",
         "name": "Mariah Carey",
         "uri": "spotify:artist:4iHNK0tOyZPYnBU7nGAgpQ"
       }
@@ -402,6 +420,7 @@
     "name": "Dreamgirls (Music from the Motion Picture)",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -431,18 +450,22 @@
     "name": "Accardo Plays Paganini- Complete Recordings",
     "artists": [
       {
+        "id": "39FC9x5PaTNYHp5hwlaY4q",
         "name": "Niccolò Paganini",
         "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
       },
       {
+        "id": "4J806QjdyKrK4guMFMRzKc",
         "name": "Salvatore Accardo",
         "uri": "spotify:artist:4J806QjdyKrK4guMFMRzKc"
       },
       {
+        "id": "3PfJE6ebCbCHeuqO4BfNeA",
         "name": "London Philharmonic Orchestra",
         "uri": "spotify:artist:3PfJE6ebCbCHeuqO4BfNeA"
       },
       {
+        "id": "0Ku5VBNL7cfGXRhp2BxXEQ",
         "name": "Charles Dutoit",
         "uri": "spotify:artist:0Ku5VBNL7cfGXRhp2BxXEQ"
       }
@@ -472,6 +495,7 @@
     "name": "40 Most Beautiful Piano Classics",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -501,18 +525,22 @@
     "name": "Tchaikovsky: Violin Concerto",
     "artists": [
       {
+        "id": "3MKCzCnpzw3TjUYs2v7vDA",
         "name": "Pyotr Ilyich Tchaikovsky",
         "uri": "spotify:artist:3MKCzCnpzw3TjUYs2v7vDA"
       },
       {
+        "id": "00hfOKuZEhvKKNXmVdb1We",
         "name": "Janine Jansen",
         "uri": "spotify:artist:00hfOKuZEhvKKNXmVdb1We"
       },
       {
+        "id": "5g44FyRrB0AUEdQbqW4jAo",
         "name": "Mahler Chamber Orchestra",
         "uri": "spotify:artist:5g44FyRrB0AUEdQbqW4jAo"
       },
       {
+        "id": "3sjupE75AphhTX12fgkQv6",
         "name": "Daniel Harding",
         "uri": "spotify:artist:3sjupE75AphhTX12fgkQv6"
       }
@@ -542,6 +570,7 @@
     "name": "Nevermind (Remastered)",
     "artists": [
       {
+        "id": "6olE6TJLqED3rqDCT0FyPh",
         "name": "Nirvana",
         "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
       }
@@ -571,6 +600,7 @@
     "name": "Gran Turismo 5 (Original Game Soundtrack)",
     "artists": [
       {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
         "name": "Lang Lang",
         "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
       }
@@ -600,22 +630,27 @@
     "name": "Bach: Goldberg Variations (Extended Edt.)",
     "artists": [
       {
+        "id": "5aIqB5nVVvmFsvSdExz408",
         "name": "Johann Sebastian Bach",
         "uri": "spotify:artist:5aIqB5nVVvmFsvSdExz408"
       },
       {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
         "name": "Lang Lang",
         "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
       },
       {
+        "id": "1Wx4iiPR6d1bFxxAujNLTL",
         "name": "Gottfried Heinrich Stölzel",
         "uri": "spotify:artist:1Wx4iiPR6d1bFxxAujNLTL"
       },
       {
+        "id": "5E26lyQXoDmCaf1sRmpWwu",
         "name": "Johann Gottlieb Goldberg",
         "uri": "spotify:artist:5E26lyQXoDmCaf1sRmpWwu"
       },
       {
+        "id": "2UqjDAXnDxejEyE0CzfUrZ",
         "name": "Robert Schumann",
         "uri": "spotify:artist:2UqjDAXnDxejEyE0CzfUrZ"
       }
@@ -645,6 +680,7 @@
     "name": "Le chant des sirènes",
     "artists": [
       {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
         "name": "Orelsan",
         "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
       }
@@ -674,6 +710,7 @@
     "name": "Brol La Suite",
     "artists": [
       {
+        "id": "3QVolfxko2UyCOtexhVTli",
         "name": "Angèle",
         "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
       }
@@ -703,6 +740,7 @@
     "name": "Les tentations",
     "artists": [
       {
+        "id": "41o2A93SPxIUxsy5HQjvul",
         "name": "Passi",
         "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
       }
@@ -732,6 +770,7 @@
     "name": "Civilisation",
     "artists": [
       {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
         "name": "Orelsan",
         "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
       }
@@ -761,6 +800,7 @@
     "name": "Orelsan et Gringe sont les Casseurs Flowters",
     "artists": [
       {
+        "id": "5sXx89ZqVFOUKTl5g2uiST",
         "name": "Casseurs Flowters",
         "uri": "spotify:artist:5sXx89ZqVFOUKTl5g2uiST"
       }
@@ -790,6 +830,7 @@
     "name": "Nonante-Cinq La Suite",
     "artists": [
       {
+        "id": "3QVolfxko2UyCOtexhVTli",
         "name": "Angèle",
         "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
       }
@@ -819,6 +860,7 @@
     "name": "La fête est finie - EPILOGUE",
     "artists": [
       {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
         "name": "Orelsan",
         "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
       }
@@ -848,6 +890,7 @@
     "name": "Four",
     "artists": [
       {
+        "id": "6yWyIM8jA96kl3jlCXpabB",
         "name": "Nelson Freitas",
         "uri": "spotify:artist:6yWyIM8jA96kl3jlCXpabB"
       }
@@ -877,6 +920,7 @@
     "name": "Le fabuleux destin d'Amélie Poulain (Bande originale de film)",
     "artists": [
       {
+        "id": "00sazWvoTLOqg5MFwC68Um",
         "name": "Yann Tiersen",
         "uri": "spotify:artist:00sazWvoTLOqg5MFwC68Um"
       }
@@ -906,6 +950,7 @@
     "name": "Happiness Therapy",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -935,6 +980,7 @@
     "name": "Le Poisson Rouge",
     "artists": [
       {
+        "id": "7rz6ZZErn5YFDteXKhyf3g",
         "name": "Disiz",
         "uri": "spotify:artist:7rz6ZZErn5YFDteXKhyf3g"
       }
@@ -964,6 +1010,7 @@
     "name": "Rodrigo y Gabriela (Deluxe Edition)",
     "artists": [
       {
+        "id": "7vX3cMVyW8gtDA4y855ynF",
         "name": "Rodrigo y Gabriela",
         "uri": "spotify:artist:7vX3cMVyW8gtDA4y855ynF"
       }
@@ -993,6 +1040,7 @@
     "name": "Les tentations (Édition collector 1997-2017)",
     "artists": [
       {
+        "id": "41o2A93SPxIUxsy5HQjvul",
         "name": "Passi",
         "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
       }
@@ -1022,6 +1070,7 @@
     "name": "My Worlds (International Version)",
     "artists": [
       {
+        "id": "1uNFoZAHBGtllmzznpCI3s",
         "name": "Justin Bieber",
         "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
       }
@@ -1051,6 +1100,7 @@
     "name": "Extraterrien",
     "artists": [
       {
+        "id": "0AFEmxYJqHfNUtADd6eWhc",
         "name": "Kamini",
         "uri": "spotify:artist:0AFEmxYJqHfNUtADd6eWhc"
       }
@@ -1080,10 +1130,12 @@
     "name": "Paganini: 24 Caprices",
     "artists": [
       {
+        "id": "39FC9x5PaTNYHp5hwlaY4q",
         "name": "Niccolò Paganini",
         "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
       },
       {
+        "id": "16XP6b4v1MdN8UYRBlgVKn",
         "name": "Leonidas Kavakos",
         "uri": "spotify:artist:16XP6b4v1MdN8UYRBlgVKn"
       }
@@ -1113,10 +1165,12 @@
     "name": "Paganini: 24 Capricci",
     "artists": [
       {
+        "id": "39FC9x5PaTNYHp5hwlaY4q",
         "name": "Niccolò Paganini",
         "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
       },
       {
+        "id": "4J806QjdyKrK4guMFMRzKc",
         "name": "Salvatore Accardo",
         "uri": "spotify:artist:4J806QjdyKrK4guMFMRzKc"
       }
@@ -1146,6 +1200,7 @@
     "name": "On My Mind",
     "artists": [
       {
+        "id": "62qifOWqESHtTVSZrlKRtt",
         "name": "Chris Heria",
         "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
       }
@@ -1175,6 +1230,7 @@
     "name": "Hold Me Close",
     "artists": [
       {
+        "id": "62qifOWqESHtTVSZrlKRtt",
         "name": "Chris Heria",
         "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
       }
@@ -1204,6 +1260,7 @@
     "name": "2001",
     "artists": [
       {
+        "id": "6DPYiyq5kWVQS4RGwxzPC7",
         "name": "Dr. Dre",
         "uri": "spotify:artist:6DPYiyq5kWVQS4RGwxzPC7"
       }
@@ -1233,6 +1290,7 @@
     "name": "Discovery",
     "artists": [
       {
+        "id": "4tZwfgrHOc3mvqYlEYSvVi",
         "name": "Daft Punk",
         "uri": "spotify:artist:4tZwfgrHOc3mvqYlEYSvVi"
       }
@@ -1262,6 +1320,7 @@
     "name": "Born to Do It",
     "artists": [
       {
+        "id": "2JyWXPbkqI5ZJa3gwqVa0c",
         "name": "Craig David",
         "uri": "spotify:artist:2JyWXPbkqI5ZJa3gwqVa0c"
       }
@@ -1291,6 +1350,7 @@
     "name": "COWBOY BEBOP (Original Motion Picture Soundtrack)",
     "artists": [
       {
+        "id": "3U3zr5PCRa9ty74uN46iBa",
         "name": "SEATBELTS",
         "uri": "spotify:artist:3U3zr5PCRa9ty74uN46iBa"
       }
@@ -1320,10 +1380,12 @@
     "name": "Songs From a World Apart",
     "artists": [
       {
+        "id": "36fU1D7VBlwnCf293gMzhT",
         "name": "Lévon Minassian",
         "uri": "spotify:artist:36fU1D7VBlwnCf293gMzhT"
       },
       {
+        "id": "2fJb06JRcuBWypwj46TQZj",
         "name": "Armand Amar",
         "uri": "spotify:artist:2fJb06JRcuBWypwj46TQZj"
       }
@@ -1353,6 +1415,7 @@
     "name": "Drop",
     "artists": [
       {
+        "id": "6GTRLqqiBPUqaOgyxOraHp",
         "name": "StreamBeats by Harris Heller",
         "uri": "spotify:artist:6GTRLqqiBPUqaOgyxOraHp"
       }
@@ -1382,6 +1445,7 @@
     "name": "Dirty Dancing (Original Motion Picture Soundtrack)",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -1411,6 +1475,7 @@
     "name": "NGRTD",
     "artists": [
       {
+        "id": "5DW7NxqQ2875JtjuV7KMn4",
         "name": "Youssoupha",
         "uri": "spotify:artist:5DW7NxqQ2875JtjuV7KMn4"
       }
@@ -1440,6 +1505,7 @@
     "name": "Less Is More (Deluxe)",
     "artists": [
       {
+        "id": "7f5Zgnp2spUuuzKplmRkt7",
         "name": "Lost Frequencies",
         "uri": "spotify:artist:7f5Zgnp2spUuuzKplmRkt7"
       }
@@ -1469,6 +1535,7 @@
     "name": "Nevermind (Deluxe Edition)",
     "artists": [
       {
+        "id": "6olE6TJLqED3rqDCT0FyPh",
         "name": "Nirvana",
         "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
       }
@@ -1498,10 +1565,12 @@
     "name": "Mari Trini Con los Panchos",
     "artists": [
       {
+        "id": "0CVHw8AAgA5brxfblp1lsQ",
         "name": "Mari Trini",
         "uri": "spotify:artist:0CVHw8AAgA5brxfblp1lsQ"
       },
       {
+        "id": "3Ker27Wbb9OcUHGs54JIAz",
         "name": "Los Panchos",
         "uri": "spotify:artist:3Ker27Wbb9OcUHGs54JIAz"
       }
@@ -1531,6 +1600,7 @@
     "name": "Crash Landing on You (Original Television Soundtrack)",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -1560,6 +1630,7 @@
     "name": "TRON: Legacy - The Complete Edition (Original Motion Picture Soundtrack)",
     "artists": [
       {
+        "id": "4tZwfgrHOc3mvqYlEYSvVi",
         "name": "Daft Punk",
         "uri": "spotify:artist:4tZwfgrHOc3mvqYlEYSvVi"
       }
@@ -1589,6 +1660,7 @@
     "name": "Una Mattina",
     "artists": [
       {
+        "id": "2uFUBdaVGtyMqckSeCl0Qj",
         "name": "Ludovico Einaudi",
         "uri": "spotify:artist:2uFUBdaVGtyMqckSeCl0Qj"
       }
@@ -1618,6 +1690,7 @@
     "name": "Workout Music",
     "artists": [
       {
+        "id": "62qifOWqESHtTVSZrlKRtt",
         "name": "Chris Heria",
         "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
       }
@@ -1647,6 +1720,7 @@
     "name": "Freudian",
     "artists": [
       {
+        "id": "20wkVLutqVOYrc0kxFs7rA",
         "name": "Daniel Caesar",
         "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
       }
@@ -1676,14 +1750,17 @@
     "name": "Paganini / Spohr: Violin Concertos incld. Listening Guide",
     "artists": [
       {
+        "id": "5JdT0LYJdlPbTC58p60WTX",
         "name": "Hilary Hahn",
         "uri": "spotify:artist:5JdT0LYJdlPbTC58p60WTX"
       },
       {
+        "id": "0K6ufQj8JzIZPPkvZrEwJS",
         "name": "Swedish Radio Symphony Orchestra",
         "uri": "spotify:artist:0K6ufQj8JzIZPPkvZrEwJS"
       },
       {
+        "id": "7l8HgcLsRg3x9IbeAQjaGz",
         "name": "Eije Oue",
         "uri": "spotify:artist:7l8HgcLsRg3x9IbeAQjaGz"
       }
@@ -1713,10 +1790,12 @@
     "name": "Pasaporte",
     "artists": [
       {
+        "id": "2YnskQkgb6kTSXh9YcNzgu",
         "name": "Alexander Abreu",
         "uri": "spotify:artist:2YnskQkgb6kTSXh9YcNzgu"
       },
       {
+        "id": "05qiwKzU1RgkyqkEH1ZFlA",
         "name": "Havana D’Primera",
         "uri": "spotify:artist:05qiwKzU1RgkyqkEH1ZFlA"
       }
@@ -1746,6 +1825,7 @@
     "name": "Huey Dunbar IV",
     "artists": [
       {
+        "id": "6fhCq41xOJnMGIvFd13Oft",
         "name": "Huey Dunbar",
         "uri": "spotify:artist:6fhCq41xOJnMGIvFd13Oft"
       }
@@ -1775,6 +1855,7 @@
     "name": "2001",
     "artists": [
       {
+        "id": "6DPYiyq5kWVQS4RGwxzPC7",
         "name": "Dr. Dre",
         "uri": "spotify:artist:6DPYiyq5kWVQS4RGwxzPC7"
       }
@@ -1804,6 +1885,7 @@
     "name": "Herencia Africana",
     "artists": [
       {
+        "id": "7FIeKWN0FTtzvQ1i7Z1aTx",
         "name": "Yuri Buenaventura",
         "uri": "spotify:artist:7FIeKWN0FTtzvQ1i7Z1aTx"
       }
@@ -1833,6 +1915,7 @@
     "name": "Lindsey Stirling",
     "artists": [
       {
+        "id": "378dH6EszOLFShpRzAQkVM",
         "name": "Lindsey Stirling",
         "uri": "spotify:artist:378dH6EszOLFShpRzAQkVM"
       }
@@ -1862,6 +1945,7 @@
     "name": "Brol",
     "artists": [
       {
+        "id": "3QVolfxko2UyCOtexhVTli",
         "name": "Angèle",
         "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
       }
@@ -1891,6 +1975,7 @@
     "name": "A Lo Cubano",
     "artists": [
       {
+        "id": "2gKYxTUOqw9aPt7ljMwSHT",
         "name": "Orishas",
         "uri": "spotify:artist:2gKYxTUOqw9aPt7ljMwSHT"
       }
@@ -1920,6 +2005,7 @@
     "name": "Enter The Dru",
     "artists": [
       {
+        "id": "1255GTUKNCLCTvH9ctD4cT",
         "name": "Dru Hill",
         "uri": "spotify:artist:1255GTUKNCLCTvH9ctD4cT"
       }
@@ -1949,6 +2035,7 @@
     "name": "Parce qu'on vient de loin",
     "artists": [
       {
+        "id": "2GBDOaCl73BVUs2RerIme7",
         "name": "Corneille",
         "uri": "spotify:artist:2GBDOaCl73BVUs2RerIme7"
       }
@@ -1978,6 +2065,7 @@
     "name": "Suprême NTM",
     "artists": [
       {
+        "id": "4ko6Ysxtvx9EY9GEFslrIz",
         "name": "Suprême NTM",
         "uri": "spotify:artist:4ko6Ysxtvx9EY9GEFslrIz"
       }
@@ -2007,6 +2095,7 @@
     "name": "Parasite",
     "artists": [
       {
+        "id": "34J5kKR5szbJ5fGK7f8HCU",
         "name": "jung jaeil",
         "uri": "spotify:artist:34J5kKR5szbJ5fGK7f8HCU"
       }
@@ -2036,18 +2125,22 @@
     "name": "David Oistrakh - Concertos and Encores",
     "artists": [
       {
+        "id": "7o2OjTu0Ls0xiWl3RzjdVp",
         "name": "David Oistrakh",
         "uri": "spotify:artist:7o2OjTu0Ls0xiWl3RzjdVp"
       },
       {
+        "id": "7J7lgWyeaBpyuA6ZhCH3jL",
         "name": "Vladimir Yampolsky",
         "uri": "spotify:artist:7J7lgWyeaBpyuA6ZhCH3jL"
       },
       {
+        "id": "1DMt4oqEDfdHBeoH3BD0bk",
         "name": "USSR State Symphony Orchestra",
         "uri": "spotify:artist:1DMt4oqEDfdHBeoH3BD0bk"
       },
       {
+        "id": "1nBRaXFNbBFqcFNeB1AMg2",
         "name": "Kirill Kondrashin",
         "uri": "spotify:artist:1nBRaXFNbBFqcFNeB1AMg2"
       }
@@ -2077,6 +2170,7 @@
     "name": "Another Level",
     "artists": [
       {
+        "id": "2P3cjUru4H3fhSXXNxE9kA",
         "name": "Blackstreet",
         "uri": "spotify:artist:2P3cjUru4H3fhSXXNxE9kA"
       }
@@ -2106,10 +2200,12 @@
     "name": "A Star Is Born Soundtrack",
     "artists": [
       {
+        "id": "1HY2Jd0NmPuamShAr6KMms",
         "name": "Lady Gaga",
         "uri": "spotify:artist:1HY2Jd0NmPuamShAr6KMms"
       },
       {
+        "id": "4VIvfOurcf0vuLRxLkGnIG",
         "name": "Bradley Cooper",
         "uri": "spotify:artist:4VIvfOurcf0vuLRxLkGnIG"
       }
@@ -2139,6 +2235,7 @@
     "name": "R&B 2 Rue",
     "artists": [
       {
+        "id": "7CkiWDWPQJZrJmgFW0Q9Yq",
         "name": "Matt",
         "uri": "spotify:artist:7CkiWDWPQJZrJmgFW0Q9Yq"
       }
@@ -2168,6 +2265,7 @@
     "name": "Perdu D'Avance",
     "artists": [
       {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
         "name": "Orelsan",
         "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
       }
@@ -2197,6 +2295,7 @@
     "name": "L'Excuse",
     "artists": [
       {
+        "id": "65PTmgbjJOl2gE1AeaZOIB",
         "name": "Philemon",
         "uri": "spotify:artist:65PTmgbjJOl2gE1AeaZOIB"
       }
@@ -2226,6 +2325,7 @@
     "name": "Polaroid experience",
     "artists": [
       {
+        "id": "5DW7NxqQ2875JtjuV7KMn4",
         "name": "Youssoupha",
         "uri": "spotify:artist:5DW7NxqQ2875JtjuV7KMn4"
       }
@@ -2255,6 +2355,7 @@
     "name": "Colores (Bachata Is Taking Over!)",
     "artists": [
       {
+        "id": "4L5SLCIDWPPNGzrLraYCOS",
         "name": "Grupo Extra",
         "uri": "spotify:artist:4L5SLCIDWPPNGzrLraYCOS"
       }
@@ -2284,6 +2385,7 @@
     "name": "racine carrée",
     "artists": [
       {
+        "id": "5j4HeCoUlzhfWtjAfM1acR",
         "name": "Stromae",
         "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
       }
@@ -2313,6 +2415,7 @@
     "name": "Music For The Motion Picture Into The Wild",
     "artists": [
       {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
         "name": "Multi-interprètes",
         "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
@@ -2342,6 +2445,7 @@
     "name": "L'école du micro d'argent",
     "artists": [
       {
+        "id": "56Q6weEROZ1RsVrTak8Bm7",
         "name": "IAM",
         "uri": "spotify:artist:56Q6weEROZ1RsVrTak8Bm7"
       }

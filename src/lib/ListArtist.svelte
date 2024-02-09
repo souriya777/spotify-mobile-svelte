@@ -3,19 +3,19 @@
   import List from '@lib/List.svelte';
   import ListItem from '@lib/ListItem.svelte';
 
-  /** @type {import('@js/spotify').SpotifyPlaylist[]} */
+  /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   export let items;
 </script>
 
 <List>
   {#each items as item (item?.id)}
     <ListItem
+      isListArtist={true}
       title={item?.name}
-      owner={item?.owner?.display_name}
       images={item?.images}
       imageAlt={item?.name}
       createViewFn={() =>
-        createView('PlaylistView', {
+        createView('ArtistView', {
           id: item?.id,
         })}
     />

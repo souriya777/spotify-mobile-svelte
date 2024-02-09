@@ -3,11 +3,12 @@
   import ImageMini from '@lib/ImageMini.svelte';
 
   export let title;
-  export let owner;
+  export let owner = '';
   /** @type {import('@js/spotify').SpotifyImage[]} */
   export let images;
   export let imageAlt;
   export let createViewFn;
+  export let isListArtist = false;
 
   function goDetail() {
     const view = createViewFn();
@@ -19,7 +20,10 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li class="list-item" on:click={goDetail}>
-  <ImageMini {images} alt={imageAlt} />
+  <div class="img" class:isListArtist>
+    <ImageMini {images} alt={imageAlt} bubble={isListArtist} />
+  </div>
+
   <div class="text">
     <div class="name font-list__title">{title}</div>
     <div class="owner font-list__owner">{owner}</div>

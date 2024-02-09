@@ -5,6 +5,7 @@ import SearchView from '@lib/views/SearchView.svelte';
 import MyLibView from '@lib/views/MyLibView.svelte';
 import PlaylistView from '@lib/views/PlaylistView.svelte';
 import AlbumView from '@lib/views/AlbumView.svelte';
+import ArtistView from '@lib/views/ArtistView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
 const ROOT_VIEW_INDEX = 1;
@@ -58,6 +59,8 @@ function loadView(viewName) {
     View = PlaylistView;
   } else if ('AlbumView' === viewName) {
     View = AlbumView;
+  } else if ('ArtistView' === viewName) {
+    View = ArtistView;
   } else if ('DumbView' === viewName) {
     View = DumbView;
   }
@@ -89,24 +92,6 @@ function createDumbView() {
   });
 }
 
-/**
- * @returns {import('@js/internal').View}
- */
-function createPlaylistView(id) {
-  return createView('PlaylistView', {
-    id,
-  });
-}
-
-/**
- * @returns {import('@js/internal').View}
- */
-function createAlbumView(id) {
-  return createView('AlbumView', {
-    id,
-  });
-}
-
 function canRemoveView(viewPosition) {
   return viewPosition > 1;
 }
@@ -133,8 +118,6 @@ export {
   loadView,
   createView,
   createDumbView,
-  createPlaylistView,
-  createAlbumView,
   canRemoveView,
   isSideMenuView,
   isHomeView,

@@ -8,7 +8,7 @@
   import CollectionTrack from '@lib/CollectionTrack.svelte';
   import CollectionPlaylist from '@lib/ListPlaylist.svelte';
   import CollectionAlbum from '@lib/ListAlbum.svelte';
-  import CollectionArtist from '@lib/CollectionArtist.svelte';
+  import ListArtist from '@lib/ListArtist.svelte';
   import CollectionItem from '@lib/CollectionItem.svelte';
   // import ListFilter from '@lib/ListFilter.svelte';
   import CreatePlaylist from '@lib/CreatePlaylist.svelte';
@@ -135,7 +135,7 @@
 {#if $displayFilter.artistOn}
   <h2>Artists</h2>
 
-  <CollectionArtist items={artists} />
+  <ListArtist items={artists} />
 {/if}
 
 <style>

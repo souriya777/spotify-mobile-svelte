@@ -10,10 +10,12 @@
       "name": "Liszt - My Piano Hero",
       "artists": [
         {
+          "id": "1385hLNbrnbCJGokfH2ac2",
           "name": "Franz Liszt",
           "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
         },
         {
+          "id": "1YZhNFBxkEB5UKTgMDvot4",
           "name": "Lang Lang",
           "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
         }
@@ -38,10 +40,12 @@
     },
     "artists": [
       {
+        "id": "1385hLNbrnbCJGokfH2ac2",
         "name": "Franz Liszt",
         "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
       },
       {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
         "name": "Lang Lang",
         "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
       }

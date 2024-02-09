@@ -15,7 +15,6 @@ DRY -> Single Source of Truth
 🌱 OBJECTIF **POUVOIR LIRE MES PLAYLISTS & ALBUMS**
 
 - feat(playlist/playlist-detail): adopt old code to new
-  -- feat(my-lib): can display `artist` list
   -- feat(playlist): dynamize sorts
   -- mv `PlaylistView` -> `CollectionDetailView`
   -- change background meta color based on "navigating rgb"

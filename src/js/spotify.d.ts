@@ -36,6 +36,7 @@ export interface SpotifySavedAlbum extends SpotifyAlbum {
 }
 
 export type SpotifyArtist = {
+  id: string;
   name: string;
   uri: string;
 };

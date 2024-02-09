@@ -20,7 +20,7 @@ import PLAYLIST_KARAOKE_TRACKS_JSON from './data/playlist-karaoke-tracks.json';
 import ALBUM_ORELSAN_TRACKS_JSON from './data/album-orelsan-tracks.json';
 import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
 import ALBUMS_RECENTLY_ADDED_JSON from './data/albums-recently-added.json';
-import MY_FOLLOWING_ARTITSTS_JSON from './data/my-following-artists.json';
+import MY_FOLLOWING_ARTISTS_JSON from './data/my-following-artists.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
 import LAST_SONG_JSON from './data/last-song.json';
 import QUEUE_JSON from './data/queue.json';
@@ -155,7 +155,7 @@ test(`getMySavedAlbumsSortedRecentlyAdded returns SpotifyAlbum[] sorted by recen
 
 test(`/me/following returns SpotifySearchArtist[]`, async () => {
   const actual = await SpotifyApi.getMyFollowedArtists();
-  const expected = [...MY_FOLLOWING_ARTITSTS_JSON];
+  const expected = [...MY_FOLLOWING_ARTISTS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 

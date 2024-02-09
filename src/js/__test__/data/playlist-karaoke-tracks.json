@@ -10,6 +10,7 @@
       "name": "Je me souviens",
       "artists": [
         {
+          "id": "3msewJ0hXf2THwcdYjGeOA",
           "name": "Ménélik",
           "uri": "spotify:artist:3msewJ0hXf2THwcdYjGeOA"
         }
@@ -34,6 +35,7 @@
     },
     "artists": [
       {
+        "id": "3msewJ0hXf2THwcdYjGeOA",
         "name": "Ménélik",
         "uri": "spotify:artist:3msewJ0hXf2THwcdYjGeOA"
       }
@@ -50,6 +52,7 @@
       "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
       "artists": [
         {
+          "id": "28W9apMi2vgk9O9LnkijIC",
           "name": "Jersey Boys",
           "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
         }
@@ -74,6 +77,7 @@
     },
     "artists": [
       {
+        "id": "4QTd2YuZS6ShgqWfeREdB3",
         "name": "John Lloyd Young",
         "uri": "spotify:artist:4QTd2YuZS6ShgqWfeREdB3"
       }
@@ -90,6 +94,7 @@
       "name": "Pop Music",
       "artists": [
         {
+          "id": "21h26EWdy9snENqbeAZorA",
           "name": "Thierry Hazard",
           "uri": "spotify:artist:21h26EWdy9snENqbeAZorA"
         }
@@ -114,6 +119,7 @@
     },
     "artists": [
       {
+        "id": "21h26EWdy9snENqbeAZorA",
         "name": "Thierry Hazard",
         "uri": "spotify:artist:21h26EWdy9snENqbeAZorA"
       }
@@ -130,6 +136,7 @@
       "name": "20eme anniversaire",
       "artists": [
         {
+          "id": "1u9tovPnCMYuZiV3EMZqDV",
           "name": "Mike Brant",
           "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
         }
@@ -154,6 +161,7 @@
     },
     "artists": [
       {
+        "id": "1u9tovPnCMYuZiV3EMZqDV",
         "name": "Mike Brant",
         "uri": "spotify:artist:1u9tovPnCMYuZiV3EMZqDV"
       }
@@ -170,6 +178,7 @@
       "name": "Maxi Tubes - Vol. 11 / The best Maxi Hits of the 90's",
       "artists": [
         {
+          "id": "3v8aLEr4YjxhS91UUeaNPD",
           "name": "Gilles David Orchestra",
           "uri": "spotify:artist:3v8aLEr4YjxhS91UUeaNPD"
         }
@@ -194,6 +203,7 @@
     },
     "artists": [
       {
+        "id": "3v8aLEr4YjxhS91UUeaNPD",
         "name": "Gilles David Orchestra",
         "uri": "spotify:artist:3v8aLEr4YjxhS91UUeaNPD"
       }
@@ -210,6 +220,7 @@
       "name": "La fête est finie",
       "artists": [
         {
+          "id": "4FpJcNgOvIpSBeJgRg3OfN",
           "name": "Orelsan",
           "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
         }
@@ -234,6 +245,7 @@
     },
     "artists": [
       {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
         "name": "Orelsan",
         "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
       }
@@ -250,6 +262,7 @@
       "name": "Perdu D'Avance",
       "artists": [
         {
+          "id": "4FpJcNgOvIpSBeJgRg3OfN",
           "name": "Orelsan",
           "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
         }
@@ -274,6 +287,7 @@
     },
     "artists": [
       {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
         "name": "Orelsan",
         "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
       }
@@ -290,6 +304,7 @@
       "name": "Panique Celtique",
       "artists": [
         {
+          "id": "6k68jYvlUy3CXOwhG1NDBL",
           "name": "Manau",
           "uri": "spotify:artist:6k68jYvlUy3CXOwhG1NDBL"
         }
@@ -314,6 +329,7 @@
     },
     "artists": [
       {
+        "id": "6k68jYvlUy3CXOwhG1NDBL",
         "name": "Manau",
         "uri": "spotify:artist:6k68jYvlUy3CXOwhG1NDBL"
       }
@@ -330,6 +346,7 @@
       "name": "Les Plus Belles Chansons De Claude François",
       "artists": [
         {
+          "id": "0P2p1bqVyP2EgqubwjTBUJ",
           "name": "Claude François",
           "uri": "spotify:artist:0P2p1bqVyP2EgqubwjTBUJ"
         }
@@ -354,10 +371,12 @@
     },
     "artists": [
       {
+        "id": "0P2p1bqVyP2EgqubwjTBUJ",
         "name": "Claude François",
         "uri": "spotify:artist:0P2p1bqVyP2EgqubwjTBUJ"
       },
       {
+        "id": "38dqh4zX6r6OBMW0cjtjSI",
         "name": "Frédérique",
         "uri": "spotify:artist:38dqh4zX6r6OBMW0cjtjSI"
       }
@@ -374,6 +393,7 @@
       "name": "Do You Love Me",
       "artists": [
         {
+          "id": "2ugPdplEWBmyU6EcIzlcY1",
           "name": "The Contours",
           "uri": "spotify:artist:2ugPdplEWBmyU6EcIzlcY1"
         }
@@ -398,6 +418,7 @@
     },
     "artists": [
       {
+        "id": "2ugPdplEWBmyU6EcIzlcY1",
         "name": "The Contours",
         "uri": "spotify:artist:2ugPdplEWBmyU6EcIzlcY1"
       }
@@ -414,6 +435,7 @@
       "name": "Millennium",
       "artists": [
         {
+          "id": "5rSXSAkZ67PYJSvpUpkOr7",
           "name": "Backstreet Boys",
           "uri": "spotify:artist:5rSXSAkZ67PYJSvpUpkOr7"
         }
@@ -438,6 +460,7 @@
     },
     "artists": [
       {
+        "id": "5rSXSAkZ67PYJSvpUpkOr7",
         "name": "Backstreet Boys",
         "uri": "spotify:artist:5rSXSAkZ67PYJSvpUpkOr7"
       }
@@ -454,6 +477,7 @@
       "name": "Le son des années 80",
       "artists": [
         {
+          "id": "5jsIYrxcANUkZQPfCdfEWe",
           "name": "Partenaire Particulier",
           "uri": "spotify:artist:5jsIYrxcANUkZQPfCdfEWe"
         }
@@ -478,6 +502,7 @@
     },
     "artists": [
       {
+        "id": "5jsIYrxcANUkZQPfCdfEWe",
         "name": "Partenaire Particulier",
         "uri": "spotify:artist:5jsIYrxcANUkZQPfCdfEWe"
       }
@@ -494,6 +519,7 @@
       "name": "Whenever You Need Somebody",
       "artists": [
         {
+          "id": "0gxyHStUsqpMadRV0Di1Qt",
           "name": "Rick Astley",
           "uri": "spotify:artist:0gxyHStUsqpMadRV0Di1Qt"
         }
@@ -518,6 +544,7 @@
     },
     "artists": [
       {
+        "id": "0gxyHStUsqpMadRV0Di1Qt",
         "name": "Rick Astley",
         "uri": "spotify:artist:0gxyHStUsqpMadRV0Di1Qt"
       }
@@ -534,6 +561,7 @@
       "name": "Please Please Me (Remastered)",
       "artists": [
         {
+          "id": "3WrFJ7ztbogyGnTHbHJFl2",
           "name": "The Beatles",
           "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
         }
@@ -558,6 +586,7 @@
     },
     "artists": [
       {
+        "id": "3WrFJ7ztbogyGnTHbHJFl2",
         "name": "The Beatles",
         "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
       }
@@ -574,6 +603,7 @@
       "name": "Sherry and 11 Other Hits",
       "artists": [
         {
+          "id": "6mcrZQmgzFGRWf7C0SObou",
           "name": "Frankie Valli & The Four Seasons",
           "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
         }
@@ -598,6 +628,7 @@
     },
     "artists": [
       {
+        "id": "6mcrZQmgzFGRWf7C0SObou",
         "name": "Frankie Valli & The Four Seasons",
         "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
       }
@@ -614,6 +645,7 @@
       "name": "Aquarium (Special Edition)",
       "artists": [
         {
+          "id": "6kBjAFKyd0he7LiA5GQ3Gz",
           "name": "Aqua",
           "uri": "spotify:artist:6kBjAFKyd0he7LiA5GQ3Gz"
         }
@@ -638,6 +670,7 @@
     },
     "artists": [
       {
+        "id": "6kBjAFKyd0he7LiA5GQ3Gz",
         "name": "Aqua",
         "uri": "spotify:artist:6kBjAFKyd0he7LiA5GQ3Gz"
       }
@@ -654,6 +687,7 @@
       "name": "2001",
       "artists": [
         {
+          "id": "6DPYiyq5kWVQS4RGwxzPC7",
           "name": "Dr. Dre",
           "uri": "spotify:artist:6DPYiyq5kWVQS4RGwxzPC7"
         }
@@ -678,10 +712,12 @@
     },
     "artists": [
       {
+        "id": "6DPYiyq5kWVQS4RGwxzPC7",
         "name": "Dr. Dre",
         "uri": "spotify:artist:6DPYiyq5kWVQS4RGwxzPC7"
       },
       {
+        "id": "7dGJo4pcD2V6oG8kP0tJRR",
         "name": "Eminem",
         "uri": "spotify:artist:7dGJo4pcD2V6oG8kP0tJRR"
       }
@@ -698,6 +734,7 @@
       "name": "Années 80",
       "artists": [
         {
+          "id": "0LyfQWJT6nXafLPZqxe9Of",
           "name": "Multi-interprètes",
           "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
         }
@@ -722,6 +759,7 @@
     },
     "artists": [
       {
+        "id": "6BGRCwCR7pQWXqWNhBE2vf",
         "name": "Images",
         "uri": "spotify:artist:6BGRCwCR7pQWXqWNhBE2vf"
       }
@@ -738,6 +776,7 @@
       "name": "Jardins d'enfants (Expanded Edition)",
       "artists": [
         {
+          "id": "3EeGYcRZaklMqgjWNhPrzu",
           "name": "Début De Soirée",
           "uri": "spotify:artist:3EeGYcRZaklMqgjWNhPrzu"
         }
@@ -762,6 +801,7 @@
     },
     "artists": [
       {
+        "id": "3EeGYcRZaklMqgjWNhPrzu",
         "name": "Début De Soirée",
         "uri": "spotify:artist:3EeGYcRZaklMqgjWNhPrzu"
       }
@@ -778,6 +818,7 @@
       "name": "Come Into My Life (The Album)",
       "artists": [
         {
+          "id": "3OqTvcWgb0xaainosGVvuZ",
           "name": "Gala",
           "uri": "spotify:artist:3OqTvcWgb0xaainosGVvuZ"
         }
@@ -802,6 +843,7 @@
     },
     "artists": [
       {
+        "id": "3OqTvcWgb0xaainosGVvuZ",
         "name": "Gala",
         "uri": "spotify:artist:3OqTvcWgb0xaainosGVvuZ"
       }
@@ -818,6 +860,7 @@
       "name": "Zest Of",
       "artists": [
         {
+          "id": "3FLS6y4AR3126l4D06V0ZD",
           "name": "Zazie",
           "uri": "spotify:artist:3FLS6y4AR3126l4D06V0ZD"
         }
@@ -842,10 +885,12 @@
     },
     "artists": [
       {
+        "id": "7H9BHRpRnP55YwZpFLAVmd",
         "name": "Axel Bauer",
         "uri": "spotify:artist:7H9BHRpRnP55YwZpFLAVmd"
       },
       {
+        "id": "3FLS6y4AR3126l4D06V0ZD",
         "name": "Zazie",
         "uri": "spotify:artist:3FLS6y4AR3126l4D06V0ZD"
       }
@@ -862,6 +907,7 @@
       "name": "Bohemian Rhapsody (The Original Soundtrack)",
       "artists": [
         {
+          "id": "1dfeR4HaWDbWqFHLkxsg1d",
           "name": "Queen",
           "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
         }
@@ -886,6 +932,7 @@
     },
     "artists": [
       {
+        "id": "1dfeR4HaWDbWqFHLkxsg1d",
         "name": "Queen",
         "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
       }
@@ -902,6 +949,7 @@
       "name": "Rita Mitsouko",
       "artists": [
         {
+          "id": "7CdlYgtOoxBtNjuDeIxSPM",
           "name": "Les Rita Mitsouko",
           "uri": "spotify:artist:7CdlYgtOoxBtNjuDeIxSPM"
         }
@@ -926,6 +974,7 @@
     },
     "artists": [
       {
+        "id": "7CdlYgtOoxBtNjuDeIxSPM",
         "name": "Les Rita Mitsouko",
         "uri": "spotify:artist:7CdlYgtOoxBtNjuDeIxSPM"
       }
@@ -942,6 +991,7 @@
       "name": "Telephone Illimité",
       "artists": [
         {
+          "id": "3fQq9bb2ZKNv24V1A4vwBK",
           "name": "Téléphone",
           "uri": "spotify:artist:3fQq9bb2ZKNv24V1A4vwBK"
         }
@@ -966,6 +1016,7 @@
     },
     "artists": [
       {
+        "id": "3fQq9bb2ZKNv24V1A4vwBK",
         "name": "Téléphone",
         "uri": "spotify:artist:3fQq9bb2ZKNv24V1A4vwBK"
       }
@@ -982,6 +1033,7 @@
       "name": "Il était une fois",
       "artists": [
         {
+          "id": "1QQlg9J5PEMv9cpOOJPUvR",
           "name": "Il Etait Une Fois",
           "uri": "spotify:artist:1QQlg9J5PEMv9cpOOJPUvR"
         }
@@ -1006,6 +1058,7 @@
     },
     "artists": [
       {
+        "id": "1QQlg9J5PEMv9cpOOJPUvR",
         "name": "Il Etait Une Fois",
         "uri": "spotify:artist:1QQlg9J5PEMv9cpOOJPUvR"
       }
@@ -1022,14 +1075,17 @@
       "name": "La La Land (Original Motion Picture Soundtrack)",
       "artists": [
         {
+          "id": "2snm3HmsnDUDxbIChdl2Oj",
           "name": "Justin Hurwitz",
           "uri": "spotify:artist:2snm3HmsnDUDxbIChdl2Oj"
         },
         {
+          "id": "1A2uplrPcSu6bqDaRp7Xs9",
           "name": "Justin Paul",
           "uri": "spotify:artist:1A2uplrPcSu6bqDaRp7Xs9"
         },
         {
+          "id": "0qKRRwXdVtrVIEdPFr8vvo",
           "name": "Benj Pasek",
           "uri": "spotify:artist:0qKRRwXdVtrVIEdPFr8vvo"
         }
@@ -1054,6 +1110,7 @@
     },
     "artists": [
       {
+        "id": "6kXm2YCtdUOpRYNKeKhfue",
         "name": "Ryan Gosling",
         "uri": "spotify:artist:6kXm2YCtdUOpRYNKeKhfue"
       }
@@ -1070,6 +1127,7 @@
       "name": "Like a Virgin",
       "artists": [
         {
+          "id": "6tbjWDEIzxoDsBA1FuhfPW",
           "name": "Madonna",
           "uri": "spotify:artist:6tbjWDEIzxoDsBA1FuhfPW"
         }
@@ -1094,6 +1152,7 @@
     },
     "artists": [
       {
+        "id": "6tbjWDEIzxoDsBA1FuhfPW",
         "name": "Madonna",
         "uri": "spotify:artist:6tbjWDEIzxoDsBA1FuhfPW"
       }
@@ -1110,6 +1169,7 @@
       "name": "Step By Step",
       "artists": [
         {
+          "id": "55qiaow2sDYtjqu1mwRua6",
           "name": "New Kids On The Block",
           "uri": "spotify:artist:55qiaow2sDYtjqu1mwRua6"
         }
@@ -1134,6 +1194,7 @@
     },
     "artists": [
       {
+        "id": "55qiaow2sDYtjqu1mwRua6",
         "name": "New Kids On The Block",
         "uri": "spotify:artist:55qiaow2sDYtjqu1mwRua6"
       }
@@ -1150,6 +1211,7 @@
       "name": "Liberté",
       "artists": [
         {
+          "id": "4qJ1NPJIburUjxcucKOhvu",
           "name": "Gilbert Montagné",
           "uri": "spotify:artist:4qJ1NPJIburUjxcucKOhvu"
         }
@@ -1174,6 +1236,7 @@
     },
     "artists": [
       {
+        "id": "4qJ1NPJIburUjxcucKOhvu",
         "name": "Gilbert Montagné",
         "uri": "spotify:artist:4qJ1NPJIburUjxcucKOhvu"
       }
@@ -1190,6 +1253,7 @@
       "name": "Eternelle",
       "artists": [
         {
+          "id": "1WPcVNert9hn7mHsPKDn7j",
           "name": "Édith Piaf",
           "uri": "spotify:artist:1WPcVNert9hn7mHsPKDn7j"
         }
@@ -1214,6 +1278,7 @@
     },
     "artists": [
       {
+        "id": "1WPcVNert9hn7mHsPKDn7j",
         "name": "Édith Piaf",
         "uri": "spotify:artist:1WPcVNert9hn7mHsPKDn7j"
       }
