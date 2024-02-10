@@ -5,6 +5,7 @@
   export let hasArtists = false;
   export let hasPlaylists = false;
   export let hasAlbums = false;
+  export let callback = null;
 
   const BUTTON_MARGIN_INLINE_END_PX = 8;
 
@@ -35,21 +36,32 @@
   $: albumActive = $displayFilter.albumActive;
   $: artistActive = $displayFilter.artistActive;
 
-  $: callbackPlaylist = () => {
+  function close() {
+    callback?.();
+    displayFilter.filterNone();
+  }
+
+  $: togglePlaylist = () => {
+    callback?.();
+
     if (playlistActive) {
       displayFilter.filterNone();
     } else {
       displayFilter.filterPlaylistOnly();
     }
   };
-  $: callbackAlbum = () => {
+  $: toggleAlbum = () => {
+    callback?.();
+
     if (albumActive) {
       displayFilter.filterNone();
     } else {
       displayFilter.filterAlbumOnly();
     }
   };
-  $: callbackArtist = () => {
+  $: toggleArtist = () => {
+    callback?.();
+
     if (artistActive) {
       displayFilter.filterNone();
     } else {
@@ -73,7 +85,7 @@
       svgSize={14}
       hasAccent={false}
       bubbleNano={true}
-      callback={displayFilter.filterNone}
+      callback={close}
     ></Button>
   </li>
 
@@ -83,7 +95,7 @@
         filled={true}
         hasAccent={playlistActive}
         accent={playlistActive}
-        callback={callbackPlaylist}
+        callback={togglePlaylist}
       >
         Playlists
       </Button>
@@ -92,7 +104,7 @@
 
   {#if hasAlbums}
     <li class="album" bind:this={ALBUM_HTML}>
-      <Button filled={true} hasAccent={albumActive} accent={albumActive} callback={callbackAlbum}>
+      <Button filled={true} hasAccent={albumActive} accent={albumActive} callback={toggleAlbum}>
         Albums
       </Button>
     </li>
@@ -100,12 +112,7 @@
 
   {#if hasArtists}
     <li class="artist" bind:this={ALBUM_HTML}>
-      <Button
-        filled={true}
-        hasAccent={artistActive}
-        accent={artistActive}
-        callback={callbackArtist}
-      >
+      <Button filled={true} hasAccent={artistActive} accent={artistActive} callback={toggleArtist}>
         Artists
       </Button>
     </li>
@@ -169,6 +176,6 @@
   }
 
   .playlistActive .close {
-    transition: opacity 2s var(--transition-opacity);
+    transition-delay: 0.2s;
   }
 </style>

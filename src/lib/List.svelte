@@ -26,9 +26,4 @@
   :global(.list.gridMode li .text) {
     padding: unset;
   }
-
-  :global(.list.gridMode li img) {
-    width: 100%;
-    height: unset;
-  }
 </style>

@@ -22,6 +22,7 @@
   let albums = [];
   /** @type {import('@js/spotify').SpotifySearchArtist[]} */
   let artists = [];
+  let fade = false;
 
   $: recentlyPlayedUris = new Set(recentlyPlayed.map((item) => item?.uri));
   $: removeDuplicate = (item) => !recentlyPlayedUris.has(item?.uri);
@@ -113,6 +114,7 @@
         hasAlbums={albums.length > 0}
         hasPlaylists={playlists.length > 0}
         hasArtists={artists.length > 0}
+        callback={() => (fade = true)}
       />
     </div>
   </svelte:fragment>
@@ -130,15 +132,17 @@
     </div>
   </div>
 
-  {#if $displayFilter.playlistActive}
-    <ListPlaylist items={playlists} />
-  {:else if $displayFilter.albumActive}
-    <ListAlbum items={albums} />
-  {:else if $displayFilter.artistActive}
-    <ListArtist items={artists} />
-  {:else}
-    <ListMyLib items={MY_LIB} />
-  {/if}
+  <div class:fade on:animationend={() => (fade = false)}>
+    {#if $displayFilter.playlistActive}
+      <ListPlaylist items={playlists} />
+    {:else if $displayFilter.albumActive}
+      <ListAlbum items={albums} />
+    {:else if $displayFilter.artistActive}
+      <ListArtist items={artists} />
+    {:else}
+      <ListMyLib items={MY_LIB} />
+    {/if}
+  </div>
 </ViewRoot>
 
 <style>
@@ -150,5 +154,24 @@
 
   .sort {
     background-color: chocolate;
+  }
+
+  .fade {
+    animation: fade 0.5s linear;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
