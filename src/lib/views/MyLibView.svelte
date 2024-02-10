@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { userId, displayFilter, gridMode } from '@js/store';
+  import { userId, displayFilter, gridMode, likedTracks } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Button from '@lib/Button.svelte';
@@ -64,6 +64,10 @@
 
     // ARTISTS
     SpotifyApi.getMyFollowedArtists().then((items) => (artists = items));
+
+    // LIKED TRACKS
+    console.log('TODO');
+    SpotifyApi.getLikedTracks().then((items) => ($likedTracks = items));
   });
 
   async function sortPlaylistBySpotify() {

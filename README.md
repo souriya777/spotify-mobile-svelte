@@ -13,15 +13,21 @@ DRY -> Single Source of Truth
 # MVP TODO
 
 - feat(playlist/playlist-detail): adopt old code to new
-  -- change background meta color based on "navigating rgb"
-  -- feat(my-lib): tune all
   -- feat(playlist-detail): can play the playlist via green button
+- feat(playlist): dynamize sorts
+  -- change background meta color based on "navigating rgb"
 - feat(album-detail): can view details
 - feat(album-detail): can play a song
-  -- remove `Collection*`
-- feat(playlist): dynamize sorts
+- remove `Collection*`
+- feat(my-lib): tune UI
+- fix(search): can search like old code
+- fix(search): remove `ListFilterSAVE`
+- feat(search): manage back search in browser (no dependent of char by char input)
 - 🥳🥳🥳🥳🥳 check : `refactor` in `main` ????
 
+- feat(artist-detail): ui
+- feat(artist-detail): ux
+- feat(artist-detail): js
 - fix(playlist): spotify bug "recently-added" order
   -- see <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
 - feat(playlist): can favorite song
@@ -29,9 +35,13 @@ DRY -> Single Source of Truth
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
+- feat(search): can favourite playlist
+- feat(search): can favourite album
+- feat(search): can favourite song
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
 
+- feat(search): tune it
 - feat(playlist): can add to queue
 - feat(album): can add to queue
 - feat(queue): design it
@@ -51,12 +61,6 @@ DRY -> Single Source of Truth
 - feat(device): can switch device `ChangeDevice.svelte`
 - feat(device): disconnect other player to make it more robust
 - feat(device): can manage other players
-- fix(search): remove `ListFilterSAVE`
-- feat(search): tune it
-- feat(search): manage back search in browser (no dependent of char by char input)
-- feat(search): can favourite playlist
-- feat(search): can favourite album
-- feat(search): can favourite song
 - feat(playlist/album): scroll snap on image go next song
 - feat(menu): design it
 - feat(menu): useview transition API as "svelte.dev menu"
@@ -69,6 +73,7 @@ DRY -> Single Source of Truth
 - feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
 
+- what to do with `Notification.svelte` ?
 - //learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
 - fix(eslint): resolve problems shown in vscode
