@@ -13,7 +13,6 @@ DRY -> Single Source of Truth
 # MVP TODO
 
 - feat(playlist/playlist-detail): adopt old code to new
-  -- feat(playlist-detail): can play the playlist via green button
 - feat(playlist): dynamize sorts
   -- change background meta color based on "navigating rgb"
 - feat(album-detail): can view details
@@ -81,6 +80,8 @@ DRY -> Single Source of Truth
   `const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });`
 - fix `BetaLikedImg`
 - TODO/FIXME uncomment
+- in SpotifyApi => `// FIXME sometimes we have error
+// [spotify-player.js]: Failed to perform playback: Cannot perform operation; no list was loaded.`
 - ux(loading) : add spotify logo (ball)
 - ui(accessibility): implement accessibility (eg. `aria-hidden`) ?
 - -- refactor: detailImage => <NoteSvg size={64} />
@@ -88,6 +89,8 @@ DRY -> Single Source of Truth
 - refactor(solver): remove old solver
 - refactor(button): use use:onTap
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
+- refactor(fonts): group fonts together by size
+- perf(list): spotify endpoint `/me/albums` is very slow...
 - perf(list): move liked track loading elsewhere ? (`MyLibView`)
 - perf(user-profile): picture in cache ?
 - perf(user-profile): user info in cache ?

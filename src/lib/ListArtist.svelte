@@ -7,7 +7,7 @@
 </script>
 
 <List>
-  {#each items as item (item?.id)}
+  {#each items as item (item?.uri)}
     <ListItemArtist {item} />
   {/each}
 </List>

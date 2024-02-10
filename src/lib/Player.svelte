@@ -40,7 +40,7 @@
     <div class="bar" role="button" tabindex="0" on:click={minimizePlayer} on:keyup={minimizePlayer}>
       <Button
         type="primary"
-        svg="arrow-down"
+        svg="charette-down"
         svgFlexJustify="flex-start"
         hasAccent={false}
         callback={minimizePlayer}

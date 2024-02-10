@@ -29,7 +29,6 @@
 
 <style>
   .options-panel {
-    position: relative;
     display: grid;
     grid-template-rows: 1fr var(--height-nav);
     height: 100%;

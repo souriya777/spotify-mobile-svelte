@@ -28,7 +28,7 @@
   <button on:click={() => window.navigator.vibrate(200)}>vibrate</button>
   <button on:click={() => SpotifyApi.me()}>me</button>
   <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
-  <button on:click={() => SpotifyApi.myLibRecentlyPlayed()}>my-lib-recently</button>
+  <button on:click={() => SpotifyApi.getMyLibRecentlyPlayed()}>my-lib-recently</button>
   <button on:click={() => SpotifyApi.getQueue()}>queue</button>
   <button on:click={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
   <button on:click={() => SpotifyApi.getPlaylistsSortedBySpotify($userId)}

@@ -177,8 +177,8 @@ test(`/me/player/recently-played returns SpotifySong[]`, async () => {
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`myLibRecentlyPlayed() returns array of: SpotifyPlaylist, SpotifyAlbum, SpotifyArtist`, async () => {
-  const actual = await SpotifyApi.myLibRecentlyPlayed();
+test(`getMyLibRecentlyPlayed() returns array of: SpotifyPlaylist, SpotifyAlbum, SpotifyArtist`, async () => {
+  const actual = await SpotifyApi.getMyLibRecentlyPlayed();
   const expected = [...MY_LIB_RECENTLY_PLAYED_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });

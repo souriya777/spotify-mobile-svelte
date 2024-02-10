@@ -10,7 +10,7 @@
 <List>
   <ListItemPlaylistLiked />
 
-  {#each items as item (item?.id)}
+  {#each items as item (item?.uri)}
     <ListItemPlaylist {item} />
   {/each}
 </List>

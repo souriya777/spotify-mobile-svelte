@@ -3,21 +3,21 @@
   import BottomPanel from '@lib/BottomPanel.svelte';
   import Options from '@lib/Options.svelte';
 
-  let openBottomPanelForMe;
-  let closeBottomPanelForMe;
+  let openForMe;
+  let closeForMe;
 
-  $: if ($optionsFull && openBottomPanelForMe) {
-    openBottomPanelForMe();
-  } else if (!$optionsFull && closeBottomPanelForMe) {
-    closeBottomPanelForMe();
+  $: if ($optionsFull) {
+    openForMe?.();
+  } else {
+    closeForMe?.();
   }
 </script>
 
 <BottomPanel
   bounce={true}
   callbackAfterClose={() => ($optionsFull = false)}
-  bind:openBottomPanelForMe
-  bind:closeBottomPanelForMe
+  bind:openForMe
+  bind:closeForMe
 >
   <Options />
 </BottomPanel>

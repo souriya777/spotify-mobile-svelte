@@ -3,21 +3,21 @@
   import Player from '@lib/Player.svelte';
   import BottomPanel from '@lib/BottomPanel.svelte';
 
-  let openBottomPanelForMe;
-  let closeBottomPanelForMe;
+  let openForMe;
+  let closeForMe;
 
-  $: if ($playerFull && openBottomPanelForMe) {
-    openBottomPanelForMe();
-  } else if (!$playerFull && closeBottomPanelForMe) {
-    closeBottomPanelForMe();
+  $: if ($playerFull) {
+    openForMe?.();
+  } else if (!$playerFull) {
+    closeForMe?.();
   }
 </script>
 
 <BottomPanel
   blur={$optionsFull}
   callbackAfterClose={() => ($playerFull = false)}
-  bind:openBottomPanelForMe
-  bind:closeBottomPanelForMe
+  bind:openForMe
+  bind:closeForMe
 >
   <Player />
 </BottomPanel>

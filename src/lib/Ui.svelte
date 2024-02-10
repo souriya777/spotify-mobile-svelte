@@ -13,6 +13,7 @@
   import PlayerMiniNav from '@lib/PlayerMiniNav.svelte';
   import PlayerBottomPanel from '@lib/PlayerBottomPanel.svelte';
   import OptionsBottomPanel from '@lib/OptionsBottomPanel.svelte';
+  import ListSortBottomPanelMini from '@lib/ListSortBottomPanelMini.svelte';
 
   export const slidePrevAndRemoveForMe = () => (isRemovingView = true);
   export const addAndSlideNextForMe = () => (isAddingView = true);
@@ -385,6 +386,10 @@
 
   <div class="fixed">
     <OptionsBottomPanel />
+  </div>
+
+  <div class="fixed">
+    <ListSortBottomPanelMini />
   </div>
 </div>
 

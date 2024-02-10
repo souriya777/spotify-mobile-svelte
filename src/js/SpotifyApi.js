@@ -49,7 +49,16 @@ import SpotifySearch from '@js/SpotifySearch';
 import { isArrayEmpty } from '@js/souriya-utils';
 import { isNotEmpty } from '@js/string-utils';
 import SpotifySavedAlbum from '@js/SpotifySavedAlbum';
-import { sortListByName, sortListByAddedAt, sortImagesBySizeAsc } from '@js/spotify-utils';
+import {
+  sortListByName,
+  sortListByAddedAt,
+  sortImagesBySizeAsc,
+  sortPlayListByCreator,
+  sortListByNameReverse,
+  sortPlayListByCreatorReverse,
+  sortAlbumtByCreatorReverse,
+  sortAlbumtByCreator,
+} from '@js/spotify-utils';
 import SpotifyAlbum from '@js/SpotifyAlbum';
 import SpotifySearchArtist from '@js/SpotifySearchArtist';
 
@@ -206,6 +215,8 @@ class SpotifyApi {
   }
 
   async play() {
+    // FIXME sometimes we have error
+    // [spotify-player.js]: Failed to perform playback: Cannot perform operation; no list was loaded.
     get(player).resume();
     LOGGER.log('play');
   }
@@ -234,8 +245,15 @@ class SpotifyApi {
   }
 
   pause() {
+    // FIXME sometimes we have error
+    // [spotify-player.js]: Failed to perform playback: Cannot perform operation; no list was loaded.
     get(player).pause();
     LOGGER.log('pause');
+  }
+
+  resume() {
+    this.#put(`/me/player/play`);
+    LOGGER.log('resume');
   }
 
   previous() {
@@ -290,11 +308,24 @@ class SpotifyApi {
 
   /**
    * @param {string} userId
+   * @param {boolean} reverse
    * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
    */
-  async getPlaylistsSortedAlphabetically(userId) {
+  async getPlaylistsSortedAlphabetically(userId, reverse = false) {
     const playlists = await this.#getAllPlaylists(userId);
-    return playlists?.sort(sortListByName);
+    const sortFn = reverse ? sortListByNameReverse : sortListByName;
+    return playlists?.sort(sortFn);
+  }
+
+  /**
+   * @param {string} userId
+   * @param {boolean} reverse
+   * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
+   */
+  async getPlaylistsSortedByCreator(userId, reverse = false) {
+    const playlists = await this.#getAllPlaylists(userId);
+    const sortFn = reverse ? sortPlayListByCreatorReverse : sortPlayListByCreator;
+    return playlists?.sort(sortFn);
   }
 
   /**
@@ -388,6 +419,28 @@ class SpotifyApi {
     return albums?.sort(sortListByAddedAt);
   }
 
+  /**
+   * @param {boolean} reverse
+   * @returns {Promise<import('@js/spotify').SpotifySavedAlbum[]>}
+   */
+  async getAlbumsSortedAlphabetically(reverse = false) {
+    /** @type {import('@js/spotify').SpotifySavedAlbum[]} */
+    const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
+    const sortFn = reverse ? sortListByNameReverse : sortListByName;
+    return albums?.sort(sortFn);
+  }
+
+  /**
+   * @param {boolean} reverse
+   * @returns {Promise<import('@js/spotify').SpotifySavedAlbum[]>}
+   */
+  async getAlbumsSortedByCreator(reverse = false) {
+    /** @type {import('@js/spotify').SpotifySavedAlbum[]} */
+    const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
+    const sortFn = reverse ? sortAlbumtByCreatorReverse : sortAlbumtByCreator;
+    return albums?.sort(sortFn);
+  }
+
   /** @return {Promise<import('@js/spotify').SpotifySearchArtist[]>} */
   async getMyFollowedArtists() {
     /** @type {import('@js/spotify').SpotifySearchArtist[]} */
@@ -396,6 +449,16 @@ class SpotifyApi {
       'SpotifyArtistCursor',
     );
     return artists;
+  }
+
+  /**
+   * @param {boolean} reverse
+   * @returns {Promise<import('@js/spotify').SpotifySearchArtist[]>}
+   */
+  async getMyFollowedArtistsSortedAlphabetically(reverse = false) {
+    const artists = await this.getMyFollowedArtists();
+    const sortFn = reverse ? sortListByNameReverse : sortListByName;
+    return artists?.sort(sortFn);
   }
 
   /**
@@ -420,8 +483,8 @@ class SpotifyApi {
     return new SpotifySongCursor(data)?.items;
   }
 
-  /** @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>}*/
-  async myLibRecentlyPlayed() {
+  /** @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>} */
+  async getMyLibRecentlyPlayed() {
     const SONGS = await this.getRecentlyPlayedSongs();
 
     const PROMISES = [];
@@ -499,6 +562,16 @@ class SpotifyApi {
     } catch (err) {
       LOGGER.error(err);
     }
+  }
+
+  /**
+   * @param {boolean} reverse
+   *  @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>}
+   */
+  async getMyLibRecentlyPlayedSortedAlphabetically(reverse = false) {
+    const recentlyPlayed = await this.getMyLibRecentlyPlayed();
+    const sortFn = reverse ? sortListByNameReverse : sortListByName;
+    return recentlyPlayed?.sort(sortFn);
   }
 
   /**

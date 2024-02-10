@@ -3,6 +3,7 @@ import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
 import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
 import { DEFAULT_PLAYING_RGB } from '@js/palette-utils';
+import { LIST_SORT_IDS } from '@js/list-sort-utils';
 
 // ACCESS
 const accessToken = writableLocalStorage('accessToken', '');
@@ -29,6 +30,16 @@ const artistsDisplay = derived(artists, ($artists) =>
 );
 const likedTracks = writable([]);
 
+// MY LIB
+/** @type {import('svelte/store').Writable<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifyArtist)[]>} */
+const myLibRecentlyPlayed = writable([]);
+/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyPlaylist[]>} */
+const myLibPlaylists = writable([]);
+/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyAlbum[]>} */
+const myLibAlbums = writable([]);
+/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifySearchArtist[]>} */
+const myLibArtists = writable([]);
+
 // DEVICE
 const deviceId = writableLocalStorage('deviceId', '');
 /** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyDevice[]>} */
@@ -51,6 +62,7 @@ const scrollTop = writable(0);
 const player = writable(null);
 const playerFull = writable(false);
 const optionsFull = writable(false);
+const listSortOptionsFull = writable(false);
 const shuffleState = writable(false);
 const repeatState = writable(SpotifyRepeatState.OFF);
 const playing = writable(false);
@@ -115,22 +127,14 @@ function currentView() {
   }
 }
 
-// TODO move
 /** @param {import('@js/internal').View} view */
 function addView(view) {
   currentView().update((views) => [...views, { ...view }]);
 }
-// TODO move
+
 function removeView() {
   currentView().update((views) => [...views.slice(0, -1)]);
 }
-
-// DEPRECATED
-// function goRootView() {
-//   if (get(currentView()).length > ROOT_VIEW_INDEX) {
-//     get(slidePrevAndRemoveForMe)?.();
-//   }
-// }
 
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
@@ -139,6 +143,7 @@ const gridMode = writable(false);
 const isSideMenuVisible = writable(false);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 const navigatingRgb = writable();
+const listSortId = writable(LIST_SORT_IDS.RECENTS);
 const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
 
@@ -155,6 +160,7 @@ export {
   player,
   playerFull,
   optionsFull,
+  listSortOptionsFull,
   playerStateTrackUri,
   trackUri,
   trackName,
@@ -166,6 +172,10 @@ export {
   artists,
   artistsDisplay,
   likedTracks,
+  myLibRecentlyPlayed,
+  myLibPlaylists,
+  myLibAlbums,
+  myLibArtists,
   shuffleState,
   repeatState,
   playing,
@@ -186,6 +196,7 @@ export {
   removeView,
   playingRgb,
   navigatingRgb,
+  listSortId,
   addAndSlideNextForMe,
   slidePrevAndRemoveForMe,
   uiTimestamp,

@@ -4,30 +4,37 @@
   export const openForMe = () => (opened = true);
   export const closeForMe = () => (opened = false);
   export let callbackAfterClose = () => {};
-  export let blur = false;
-  export let bounce = false;
 
   /** @type {HTMLElement} */
   let PANEL_HTML;
+  /** @type {HTMLElement} */
+  let CONTENT_HTML;
   let opened = false;
   let initialY = 0;
   let y = 0;
   let prevTranslateY = 0;
+  let isTouchOnContent = false;
 
+  $: CONTENT_HEIGHT = CONTENT_HTML?.clientHeight ?? 0;
+  $: PANEL_HEIGHT = $screenHeight ?? 0;
+  $: MINIMUM_SWIPE_Y = CONTENT_HEIGHT / 3;
   $: deltaY = y - initialY;
   $: translateY = prevTranslateY + deltaY;
   $: isBottomSwipe = deltaY > 0;
-  $: PANEL_HEIGHT = $screenHeight ?? 0;
-  $: MINIMUM_SWIPE_Y = PANEL_HEIGHT / 3;
   $: canSwipe = Math.abs(deltaY) >= MINIMUM_SWIPE_Y;
 
   function start(e) {
     const touch = [...e.changedTouches].at(0);
     initialY = touch.pageY;
     y = touch.pageY;
+    isTouchOnContent = initialY >= CONTENT_HTML?.offsetTop;
   }
 
   function move(e) {
+    if (!isTouchOnContent) {
+      return;
+    }
+
     const touch = [...e.changedTouches].at(0);
     y = touch.pageY;
 
@@ -47,7 +54,7 @@
       callbackAfterClose();
     } else {
       translateY = 0;
-      PANEL_HTML.style.transition = `transform var(--transition-bottom-panel)`;
+      PANEL_HTML.style.transition = `transform var(--transition-bottom-panel-mini)`;
       translate(PANEL_HTML, translateY);
       prevTranslateY = translateY;
     }
@@ -72,13 +79,15 @@
       PANEL_HTML.style.transition = '';
     }
   }
+
+  function clickOutside() {
+    callbackAfterClose();
+  }
 </script>
 
 <div
-  class="bottom-panel"
+  class="bottom-panel-mini"
   class:opened
-  class:blur
-  class:bounce
   bind:this={PANEL_HTML}
   on:touchstart={start}
   on:touchend={end}
@@ -92,31 +101,23 @@
     translateY:{translateY}
     prevTranslateY:{prevTranslateY}
   </code> -->
-  <slot />
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div class="listen-click-outside" on:click={clickOutside}></div>
+  <div class="content" bind:this={CONTENT_HTML}>
+    <slot />
+  </div>
 </div>
 
 <style>
-  .bottom-panel {
+  .bottom-panel-mini {
     height: 0;
-    transition: height var(--transition-bottom-panel);
+    display: grid;
+    grid-template-rows: 1fr 29.8rem;
+    transition: height var(--transition-bottom-panel-mini);
   }
 
   .opened {
     height: 100dvh;
-    transition: height var(--transition-bottom-panel);
-  }
-
-  .blur::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(20px);
-    z-index: var(--z-index-near);
-  }
-
-  .opened.bounce {
-    transition: height 0.3s cubic-bezier(0.16, 0.81, 0.25, 1.15);
   }
 </style>

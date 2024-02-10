@@ -9,8 +9,6 @@ import ArtistView from '@lib/views/ArtistView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
 const ROOT_VIEW_INDEX = 1;
-// DEPRECATED
-// const ROOT_VIEW_INDEX = 2; // side menu + root view
 const VIEW_ID_PREFIX = 'view-';
 const SIDE_MENU_VIEW = {
   id: `${VIEW_ID_PREFIX}side-menu`,

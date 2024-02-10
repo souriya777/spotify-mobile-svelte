@@ -7,7 +7,7 @@
 </script>
 
 <List>
-  {#each items as item (item?.id)}
+  {#each items as item (item?.uri)}
     <ListItemAlbum {item} />
   {/each}
 </List>

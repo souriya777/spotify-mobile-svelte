@@ -111,11 +111,29 @@
       d="M6 3h15v15.167a3.5 3.5 0 1 1-3.5-3.5H19V5H8v13.167a3.5 3.5 0 1 1-3.5-3.5H6V3zm0 13.667H4.5a1.5 1.5 0 1 0 1.5 1.5v-1.5zm13 0h-1.5a1.5 1.5 0 1 0 1.5 1.5v-1.5z"
     ></path>
   </svg>
-{:else if 'arrow-down' === name.toLocaleLowerCase()}
+{:else if 'charette-down' === name.toLocaleLowerCase()}
   <svg {...SVG_PROPERTIES} {viewBox}>
     <path
       d="M2.793 8.043a1 1 0 0 1 1.414 0L12 15.836l7.793-7.793a1 1 0 1 1 1.414 1.414L12 18.664 2.793 9.457a1 1 0 0 1 0-1.414z"
     ></path>
+  </svg>
+{:else if 'arrow-up' === name.toLocaleLowerCase() || 'arrow-down' === name.toLocaleLowerCase()}
+  {@const style = 'arrow-down' === name.toLocaleLowerCase() ? 'transform: rotate(180deg)' : ''}
+  <svg
+    {...SVG_PROPERTIES}
+    {viewBox}
+    clip-rule="evenodd"
+    fill-rule="evenodd"
+    stroke-linejoin="round"
+    stroke-miterlimit="2"
+    {style}
+  >
+    <path
+      d="m18.787 9.473s-4.505-4.502-6.259-6.255c-.147-.146-.339-.22-.53-.22-.192 0-.384.074-.531.22-1.753 1.753-6.256 6.252-6.256 6.252-.147.147-.219.339-.217.532.001.19.075.38.221.525.292.293.766.295 1.056.004l4.977-4.976v14.692c0 .414.336.75.75.75.413 0 .75-.336.75-.75v-14.692l4.978 4.978c.289.29.762.287 1.055-.006.145-.145.219-.335.221-.525.002-.192-.07-.384-.215-.529z"
+      stroke="currentColor"
+      stroke-width="2"
+      fill-rule="nonzero"
+    />
   </svg>
 {:else if 'cross' === name.toLocaleLowerCase()}
   <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">
@@ -181,6 +199,12 @@
   <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">
     <path
       d="M1 1h6v6H1V1zm1.5 1.5v3h3v-3h-3zM1 9h6v6H1V9zm1.5 1.5v3h3v-3h-3zM9 1h6v6H9V1zm1.5 1.5v3h3v-3h-3zM9 9h6v6H9V9zm1.5 1.5v3h3v-3h-3z"
+    ></path>
+  </svg>
+{:else if 'checked' === name.toLocaleLowerCase()}
+  <svg {...SVG_PROPERTIES} viewBox="0 0 16 16">
+    <path
+      d="M15.53 2.47a.75.75 0 0 1 0 1.06L4.907 14.153.47 9.716a.75.75 0 0 1 1.06-1.06l3.377 3.376L14.47 2.47a.75.75 0 0 1 1.06 0z"
     ></path>
   </svg>
 {/if}
