@@ -184,7 +184,7 @@
   }
 
   .sort-direction {
-    transform: translateY(4px);
+    transform: translateY(0.4rem);
   }
 
   .close {

@@ -20,7 +20,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<li class="list-item" on:click={goDetail}>
+<li class="list-item" class:isListArtist on:click={goDetail}>
   <div class="img">
     {#if isListArtist}
       <ImgMini {images} alt={imageAlt} bubble={true}>

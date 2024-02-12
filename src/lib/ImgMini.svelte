@@ -14,12 +14,15 @@
   $: image = $gridMode ? imageCover : imageMini;
 </script>
 
-<!-- {$gridMode}{JSON.stringify(image)} -->
-<div class:bubble class:gridMode={$gridMode} aria-label={alt}>
+<div class="img-mini" class:bubble aria-label={alt}>
   {#if images.length > 0}
-    <div class="img-container">
-      <div class="img" style={`background-image: url('${image?.url}')`}></div>
-    </div>
+    {#if $gridMode && !bubble}
+      <img src={image?.url} {alt} />
+    {:else}
+      <div class="img-container">
+        <div class="img" style={`background-image: url('${image?.url}')`}></div>
+      </div>
+    {/if}
   {:else}
     <div class="empty-img">
       {#if $$slots['empty-img']}
@@ -32,17 +35,15 @@
 </div>
 
 <style>
+  .img-mini {
+    height: 100%;
+  }
+
   .img-container,
   .empty-img {
     width: var(--size-img-mini);
     height: var(--size-img-mini);
     overflow: hidden;
-  }
-
-  .gridMode .img-container,
-  .gridMode .empty-img {
-    width: var(--size-img-cover);
-    height: var(--size-img-cover);
   }
 
   .img {
@@ -58,7 +59,7 @@
     background-color: var(--color-primary-highlight);
   }
 
-  .bubble {
+  .bubble .img-container {
     border-radius: 50%;
   }
 </style>

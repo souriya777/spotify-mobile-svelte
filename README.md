@@ -13,8 +13,6 @@ DRY -> Single Source of Truth
 # MVP TODO
 
 - FEAT(PLAYLIST/PLAYLIST-DETAIL): ADOPT OLD CODE TO NEW
-  -- feat(my-lib): change background meta color based on "navigating rgb"
-- feat(my-lib): tune UI
 - fix(search): can search like old code
 - fix(search): remove `ListFilterSAVE`
 - feat(search): manage back search in browser (no dependent of char by char input)

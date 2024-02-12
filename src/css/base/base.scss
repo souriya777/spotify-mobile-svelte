@@ -17,6 +17,8 @@
   --size-button-bubble-nano: 3.2rem;
   --size-img-mini: 6.4rem;
   --size-img-cover: 12.8rem;
+  --size-img-empty-note-grid-mode: 7rem;
+  --size-img-artist-grid-mode: 15rem;
   --height-nav: 9.2rem;
   --height-player-mini: 5.8rem;
   --height-nav-and-player-mini: calc(var(--height-nav) + var(--height-player-mini));
@@ -26,10 +28,10 @@
 
   --padding-bottom-phone: 4.4rem;
   --padding-block-player: 1rem;
-  --padding-block-library: 1rem;
+  --padding-block-library: 1.4rem;
   --padding-block-bottom-panel: 2.4rem;
   --padding-inline-player: 2.4rem;
-  --padding-inline-library: 1.2rem;
+  --padding-inline-library: 1.4rem;
   --padding-inline-bottom-panel: 2.4rem;
   --padding-space-player: 0.6rem;
 
