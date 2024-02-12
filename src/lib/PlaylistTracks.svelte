@@ -17,7 +17,7 @@
 </script>
 
 <ul>
-  {#each tracks as track, i (track?.id)}
+  {#each tracks as track, i (track?.uri)}
     {@const album = track?.album}
     {@const uri = track?.uri}
     {@const artist = track?.artists?.map((t) => t?.name).join(', ')}

@@ -1,7 +1,13 @@
 <script>
-  import { afterUpdate } from 'svelte';
+  import { afterUpdate, onDestroy, onMount } from 'svelte';
   import SpotifyApi from '@js/SpotifyApi';
-  import { navigatingRgb, scrollTop, shuffleState, slidePrevAndRemoveForMe } from '@js/store';
+  import {
+    isNavigatingHasPriority,
+    navigatingRgb,
+    scrollTop,
+    shuffleState,
+    slidePrevAndRemoveForMe,
+  } from '@js/store';
   import { lightenDarkenColor } from '@js/palette-utils';
   import DetailCover from '@lib/DetailCover.svelte';
   import DetailTitle from '@lib/DetailTitle.svelte';
@@ -52,6 +58,14 @@
     );
     fakePlayPauseStyle = `transform: translate3d(0, -${translateY}px, 0)`;
   }
+
+  onMount(() => {
+    $isNavigatingHasPriority = true;
+  });
+
+  onDestroy(() => {
+    $isNavigatingHasPriority = false;
+  });
 
   afterUpdate(() => {
     if (DESC_HTML) {

@@ -143,6 +143,7 @@ const gridMode = writable(false);
 const isSideMenuVisible = writable(false);
 const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
 const navigatingRgb = writable();
+const isNavigatingHasPriority = writable(false);
 const listSortId = writable(LIST_SORT_IDS.RECENTS);
 const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
@@ -196,6 +197,7 @@ export {
   removeView,
   playingRgb,
   navigatingRgb,
+  isNavigatingHasPriority,
   listSortId,
   addAndSlideNextForMe,
   slidePrevAndRemoveForMe,

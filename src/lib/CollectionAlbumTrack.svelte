@@ -9,7 +9,7 @@
 </script>
 
 <List>
-  {#each items as track (track?.id)}
+  {#each items as track (track?.uri)}
     {@const artist = track?.artists?.map((t) => t?.name).join(', ')}
 
     <li>

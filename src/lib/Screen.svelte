@@ -1,8 +1,9 @@
 <script>
   import {
     scrollTop,
-    playingRgb,
-    navigatingRgb,
+    playingRgb as playingRgbStore,
+    navigatingRgb as navigatingRgbStore,
+    isNavigatingHasPriority,
     playerFull,
     imageCoverUrl,
     resizeTimestamp,
@@ -18,10 +19,11 @@
   $: if (SCREEN_HTML?.clientHeight) {
     $screenHeight = SCREEN_HTML.clientHeight;
   }
-  $: rgb = `rgb(${$playingRgb.join(',')})`;
+  $: playingRgb = `rgb(${$playingRgbStore?.join(',')})`;
+  $: navigatingRgb = `rgb(${$navigatingRgbStore?.join(',')})`;
   $: style = `
-    --playing-rgb: ${rgb};
-    --navigating-rgb: rgb(${$navigatingRgb?.join(',')})
+    --playing-rgb: ${playingRgb};
+    --navigating-rgb: ${navigatingRgb};
   `;
 
   function handleScroll(e) {
@@ -34,7 +36,11 @@
 </script>
 
 <svelte:head>
-  <meta name="theme-color" content={$playerFull ? rgb : 'var(--color-primary)'} />
+  {#if $isNavigatingHasPriority && !$playerFull}
+    <meta name="theme-color" content={navigatingRgb} />
+  {:else}
+    <meta name="theme-color" content={$playerFull ? playingRgb : 'var(--color-primary)'} />
+  {/if}
 </svelte:head>
 
 <svelte:window on:resize={handleResize} />

@@ -12,17 +12,18 @@ DRY -> Single Source of Truth
 
 # MVP TODO
 
-- feat(playlist/playlist-detail): adopt old code to new
-- feat(playlist): dynamize sorts
-  -- change background meta color based on "navigating rgb"
-- feat(album-detail): can view details
-- feat(album-detail): can play a song
-- remove `Collection*`
+- FEAT(PLAYLIST/PLAYLIST-DETAIL): ADOPT OLD CODE TO NEW
+  -- feat(my-lib): change background meta color based on "navigating rgb"
 - feat(my-lib): tune UI
 - fix(search): can search like old code
 - fix(search): remove `ListFilterSAVE`
 - feat(search): manage back search in browser (no dependent of char by char input)
+- feat(album-detail): can view details
+- feat(album-detail): can play a song
+- remove `Collection*`
 - 🥳🥳🥳🥳🥳 check : `refactor` in `main` ????
+
+- perf : mv sync my-lib from `onMount`
 
 - feat(artist-detail): ui
 - feat(artist-detail): ux
