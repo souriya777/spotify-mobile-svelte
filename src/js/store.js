@@ -149,7 +149,8 @@ const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
 
 // FILTER
-const displayFilter = createDisplayFilter();
+const displayFilterMyLib = createDisplayFilter();
+const displayFilterSearch = createDisplayFilter();
 
 export {
   accessToken,
@@ -193,6 +194,7 @@ export {
   scrollTop,
   viewName,
   VIEWS,
+  currentView,
   addView,
   removeView,
   playingRgb,
@@ -206,5 +208,6 @@ export {
   screenHeight,
   gridMode,
   isSideMenuVisible,
-  displayFilter,
+  displayFilterMyLib,
+  displayFilterSearch,
 };

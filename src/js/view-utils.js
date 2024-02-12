@@ -1,3 +1,5 @@
+import { get } from 'svelte/store';
+import { currentView, slidePrevAndRemoveForMe } from '@js/store';
 import { getTimestamp } from '@js/date-utils';
 import SideMenuView from '@lib/views/SideMenuView.svelte';
 import HomeView from '@lib/views/HomeView.svelte';
@@ -8,7 +10,8 @@ import AlbumView from '@lib/views/AlbumView.svelte';
 import ArtistView from '@lib/views/ArtistView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
 
-const ROOT_VIEW_INDEX = 1;
+const ROOT_VIEW_INDEX = 1; // side menu -> <root view>
+
 const VIEW_ID_PREFIX = 'view-';
 const SIDE_MENU_VIEW = {
   id: `${VIEW_ID_PREFIX}side-menu`,
@@ -66,6 +69,12 @@ function loadView(viewName) {
   return View;
 }
 
+function goRootView() {
+  if (get(currentView()).length > ROOT_VIEW_INDEX + 1) {
+    get(slidePrevAndRemoveForMe)?.();
+  }
+}
+
 /**
  * @param {string} viewName
  * @param {object} props
@@ -114,6 +123,7 @@ export {
   SEARCH_DEFAULT_VIEWS,
   MY_LIB_DEFAULT_VIEWS,
   loadView,
+  goRootView,
   createView,
   createDumbView,
   canRemoveView,

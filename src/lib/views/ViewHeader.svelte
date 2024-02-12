@@ -16,9 +16,7 @@
     <slot name="right" />
   </div>
 
-  <div class="bottom">
-    <slot name="bottom" />
-  </div>
+  <slot name="bottom" />
 </header>
 
 <style>
@@ -26,7 +24,7 @@
     display: flex;
     flex-direction: column;
     padding-block: 4rem 2rem;
-    padding-inline: var(--padding-inline-library);
+    padding-inline: var(--padding-inline-view-content);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
   }
 
@@ -34,10 +32,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-  }
-
-  .bottom {
-    margin-block-start: 1rem;
   }
 
   .left {

@@ -172,7 +172,7 @@
     display: flex;
     align-items: center;
     height: var(--height-detail-header);
-    padding-inline-start: var(--padding-inline-library);
+    padding-inline-start: var(--padding-inline-view-content);
   }
 
   .img {
@@ -201,7 +201,7 @@
   .desc,
   .content {
     position: relative;
-    padding-inline: var(--padding-inline-library);
+    padding-inline: var(--padding-inline-view-content);
     z-index: var(--z-index-near);
   }
 
@@ -222,7 +222,7 @@
   .fake-play-pause {
     position: sticky;
     top: var(--height-detail-header);
-    right: var(--padding-inline-library);
+    right: var(--padding-inline-view-content);
     display: none;
     float: right;
     z-index: var(--z-index-nearest);

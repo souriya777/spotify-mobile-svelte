@@ -32,7 +32,7 @@
     display: grid;
     grid-template-rows: 1fr var(--height-nav);
     height: 100%;
-    background-color: var(--color-options-blur);
+    background-color: var(--background-color-options-blur);
   }
 
   .content {

@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import {
-    displayFilter,
+    displayFilterMyLib,
     gridMode,
     likedTracks,
     myLibRecentlyPlayed,
@@ -20,10 +20,11 @@
   import Svg from '@lib/svg/Svg.svelte';
   import ListMyLib from '@lib/ListMyLib.svelte';
   import ListSortButton from '@lib/ListSortButton.svelte';
+  import FadeEffect from '@lib/FadeEffect.svelte';
 
   const DISPLAY_MODE_ICON_SIZE = 14;
 
-  let fade = false;
+  let startFadeEffect;
 
   $: recentlyPlayedUris = new Set($myLibRecentlyPlayed.map((item) => item?.uri));
   $: removeDuplicate = (item) => !recentlyPlayedUris.has(item?.uri);
@@ -77,7 +78,7 @@
         hasPlaylists={$myLibPlaylists.length > 0}
         hasAlbums={$myLibAlbums.length > 0}
         hasArtists={$myLibArtists.length > 0}
-        callback={() => (fade = true)}
+        callback={startFadeEffect}
       />
     </div>
   </svelte:fragment>
@@ -97,17 +98,17 @@
     </div>
   </div>
 
-  <div class:fade on:animationend={() => (fade = false)}>
-    {#if $displayFilter.playlistActive}
+  <FadeEffect bind:start={startFadeEffect}>
+    {#if $displayFilterMyLib.playlistActive}
       <ListPlaylist items={$myLibPlaylists} />
-    {:else if $displayFilter.albumActive}
+    {:else if $displayFilterMyLib.albumActive}
       <ListAlbum items={$myLibAlbums} />
-    {:else if $displayFilter.artistActive}
+    {:else if $displayFilterMyLib.artistActive}
       <ListArtist items={$myLibArtists} />
     {:else}
       <ListMyLib items={MY_LIB} />
     {/if}
-  </div>
+  </FadeEffect>
 </ViewRoot>
 
 <style>
@@ -115,24 +116,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .fade {
-    animation: fade 0.5s linear;
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 1;
-    }
-    33% {
-      opacity: 0;
-    }
-    66% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 </style>

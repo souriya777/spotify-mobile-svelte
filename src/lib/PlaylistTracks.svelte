@@ -4,9 +4,6 @@
   import ImgMini from '@lib/ImgMini.svelte';
   import AnimatedEqualizer from '@lib/AnimatedEqualizer.svelte';
 
-  // TODO fix space
-  // TODO font-size
-  // TODO remove CollectionTrackSECONDARY_ACTIONS
   export let playlistUri;
   /** @type {import('@js/spotify').SpotifyTrack[]} */
   export let tracks;

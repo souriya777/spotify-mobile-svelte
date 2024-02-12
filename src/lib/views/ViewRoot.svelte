@@ -31,7 +31,7 @@
   .view__content {
     position: relative;
     padding-block-end: var(--padding-block-library);
-    padding-inline: var(--padding-inline-library);
+    padding-inline: var(--padding-inline-view-content);
     z-index: var(--z-index-near);
   }
 

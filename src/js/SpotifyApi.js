@@ -665,11 +665,11 @@ class SpotifyApi {
       return;
     }
 
-    const q = query;
-    const offset = 0;
-    const data = await this.#get(
-      `/search?q=${q}&type=album%2Cplaylist%2Ctrack%2Cartist&offset=${offset}`,
-    );
+    const OFFSET = 0;
+    const q = encodeURIComponent(query);
+    const url = `/search?q=${q}&type=album%2Cplaylist%2Ctrack%2Cartist&offset=${OFFSET}`;
+    const data = await this.#get(url);
+    LOGGER.log(`search "${q}"`);
     return new SpotifySearch(data);
   }
 

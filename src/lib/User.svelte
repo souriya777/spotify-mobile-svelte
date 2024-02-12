@@ -6,8 +6,17 @@
   $: style = `--picture-url: ${userPictureUrl};`;
 </script>
 
-<div class="user" {style}>
-  <div class="img" class:mini style={`background-image: url(${userPictureUrl})`}></div>
+<div class="user" class:userPictureUrl {style}>
+  {#if userPictureUrl}
+    <div class="img" class:mini style={`background-image: url(${userPictureUrl})`}></div>
+  {:else}
+    <div class="no-img" class:mini>
+      <div class="initial">
+        {username?.charAt(0)?.toUpperCase()}
+      </div>
+    </div>
+  {/if}
+
   {#if username}
     <p class="username">{username}</p>
   {/if}
@@ -17,6 +26,10 @@
   .user {
     display: flex;
     align-items: center;
+  }
+
+  .user:not(.userPictureUrl) .username {
+    transform: translateY(0.2rem);
   }
 
   .img {
@@ -36,5 +49,17 @@
   .username {
     margin-inline-start: 0.6rem;
     transform: translateY(0.3rem);
+  }
+
+  .no-img {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  .initial {
+    transform: translateY(0.2rem);
   }
 </style>

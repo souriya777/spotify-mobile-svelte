@@ -1,4 +1,5 @@
 <script>
+  import { viewName } from '@js/store';
   import List from '@lib/List.svelte';
   import ListItemPlaylist from '@lib/ListItemPlaylist.svelte';
   import ListItemPlaylistLiked from '@lib/ListItemPlaylistLiked.svelte';
@@ -8,7 +9,9 @@
 </script>
 
 <List>
-  <ListItemPlaylistLiked />
+  {#if $viewName !== 'search'}
+    <ListItemPlaylistLiked />
+  {/if}
 
   {#each items as item (item?.uri)}
     <ListItemPlaylist {item} />

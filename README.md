@@ -12,20 +12,17 @@ DRY -> Single Source of Truth
 
 # MVP TODO
 
-- FEAT(PLAYLIST/PLAYLIST-DETAIL): ADOPT OLD CODE TO NEW
-- fix(search): can search like old code
-- fix(search): remove `ListFilterSAVE`
-- feat(search): manage back search in browser (no dependent of char by char input)
+- feat(search): ui
+- feat(search): manage offset results
+- feat(search): can show previous search
 - feat(album-detail): can view details
 - feat(album-detail): can play a song
 - remove `Collection*`
-- 🥳🥳🥳🥳🥳 check : `refactor` in `main` ????
+- 🥳🥳🥳🥳🥳 check ADOPT OLD CODE TO NEW : `refactor` in `main` ????
 
-- perf : mv sync my-lib from `onMount`
-
+- feat(artist-detail): js
 - feat(artist-detail): ui
 - feat(artist-detail): ux
-- feat(artist-detail): js
 - fix(playlist): spotify bug "recently-added" order
   -- see <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
 - feat(playlist): can favorite song
@@ -33,15 +30,14 @@ DRY -> Single Source of Truth
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
 - feat(liked-song): can unlike song
-- feat(search): can favourite playlist
-- feat(search): can favourite album
-- feat(search): can favourite song
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
+- perf : mv sync my-lib from `onMount`
 
-- feat(search): tune it
 - feat(playlist): can add to queue
 - feat(album): can add to queue
+- feat(artist): can add to queue
+- feat(search): can add to queue
 - feat(queue): design it
 - feat(queue): what is default queue ?
 - feat(queue): can remove song

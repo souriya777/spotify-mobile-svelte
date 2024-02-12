@@ -1,19 +1,19 @@
 <script>
-  import { gridMode } from '@js/store';
+  import { gridMode, viewName } from '@js/store';
 </script>
 
-<ul class="list" class:gridMode={$gridMode}><slot /></ul>
+<ul class="list" class:mylib={$viewName === 'mylib'} class:gridMode={$gridMode}><slot /></ul>
 
 <style>
-  .list {
-    padding-block-start: var(--padding-block-library);
+  .mylib.list {
     padding-block-end: var(--height-nav-and-player-mini);
+    padding-block-start: var(--padding-block-library);
   }
 
   .gridMode {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    column-gap: var(--padding-inline-library);
+    column-gap: var(--padding-inline-view-content);
     row-gap: 1.5rem;
   }
 

@@ -1,5 +1,5 @@
 <script>
-  import { listSortOptionsFull, listSortId, displayFilter } from '@js/store';
+  import { listSortOptionsFull, listSortId, displayFilterMyLib } from '@js/store';
   import {
     LIST_SORT_OPTIONS_MAP,
     LIST_SORT_IDS,
@@ -25,7 +25,7 @@
   function determineSortFn() {
     let sortFn;
 
-    if ($displayFilter.playlistActive) {
+    if ($displayFilterMyLib.playlistActive) {
       switch ($listSortId) {
         case LIST_SORT_IDS.RECENTS:
           sortFn = () => sortPlaylistsBySpotify();
@@ -37,7 +37,7 @@
           sortFn = (reverse) => sortPlaylistsByCreator(reverse);
           break;
       }
-    } else if ($displayFilter.albumActive) {
+    } else if ($displayFilterMyLib.albumActive) {
       switch ($listSortId) {
         case LIST_SORT_IDS.RECENTS:
           sortFn = () => sortAlbumsBySpotify();
@@ -49,7 +49,7 @@
           sortFn = (reverse) => sortAlbumsByCreator(reverse);
           break;
       }
-    } else if ($displayFilter.artistActive) {
+    } else if ($displayFilterMyLib.artistActive) {
       if (LIST_SORT_IDS.RECENTS === $listSortId) {
         sortFn = () => sortArtistsBySpotify();
       } else if (LIST_SORT_IDS.AZ === $listSortId) {
@@ -96,10 +96,10 @@
       {#each LIST_SORT_OPTIONS_MAP.entries() as [key, { id, label, canReverse }] (key)}
         {@const isSelected = id === $listSortId}
         {@const canShowOption =
-          $displayFilter.playlistActive ||
-          $displayFilter.albumActive ||
-          ($displayFilter.artistActive && key !== LIST_SORT_IDS.CREATOR) ||
-          (!$displayFilter.atLeastOneActive && key !== LIST_SORT_IDS.CREATOR)}
+          $displayFilterMyLib.playlistActive ||
+          $displayFilterMyLib.albumActive ||
+          ($displayFilterMyLib.artistActive && key !== LIST_SORT_IDS.CREATOR) ||
+          (!$displayFilterMyLib.atLeastOneActive && key !== LIST_SORT_IDS.CREATOR)}
 
         {#if canShowOption}
           <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->

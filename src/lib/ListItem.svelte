@@ -43,7 +43,7 @@
 <style>
   .list-item {
     display: flex;
-    padding-block-end: var(--padding-inline-library);
+    padding-block-end: var(--padding-inline-view-content);
   }
 
   .text {
