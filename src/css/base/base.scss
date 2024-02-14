@@ -41,8 +41,10 @@
   --border-radius-bottom-panel-mini: 1rem;
   --shadow-cover: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
   --shadow-list-filter-shift__right: 8px;
-  --shadow-list-filter-begin: var(--shadow-list-filter-shift__right) 0px 11px 2px var(--color-primary);
-  --shadow-list-filter-end: calc(-1 * var(--shadow-list-filter-shift__right)) 0px 11px 2px var(--color-primary);
+  --shadow-list-filter-begin: var(--shadow-list-filter-shift__right) 0px 11px 2px
+    var(--color-primary);
+  --shadow-list-filter-end: calc(-1 * var(--shadow-list-filter-shift__right)) 0px 11px 2px
+    var(--color-primary);
   --transition-bottom-panel: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
   --transition-bottom-panel-mini: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
   --transition-background: 200ms ease-in-out;

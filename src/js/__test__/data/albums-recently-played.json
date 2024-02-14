@@ -3,6 +3,8 @@
     "id": "76GfvhqqDDIq7CWPLGgQag",
     "uri": "spotify:album:76GfvhqqDDIq7CWPLGgQag",
     "name": "Bach, J.S.: Sonatas & Partitas",
+    "release_date": "1968-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "5aIqB5nVVvmFsvSdExz408",
@@ -38,6 +40,8 @@
     "id": "6EwTLRHMROD853Kv1lAMex",
     "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
     "name": "Multitude",
+    "release_date": "2022-07-27",
+    "album_type": "album",
     "artists": [
       {
         "id": "5j4HeCoUlzhfWtjAfM1acR",
@@ -68,6 +72,8 @@
     "id": "6uyslsVGFsHKzdGUosFwBM",
     "uri": "spotify:album:6uyslsVGFsHKzdGUosFwBM",
     "name": "racine carrée",
+    "release_date": "2013-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "5j4HeCoUlzhfWtjAfM1acR",
@@ -98,6 +104,8 @@
     "id": "2n5AOB0lGse7qp38HvVROB",
     "uri": "spotify:album:2n5AOB0lGse7qp38HvVROB",
     "name": "(500) Days of Summer (Music from the Motion Picture)",
+    "release_date": "2009-07-10",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -128,6 +136,8 @@
     "id": "7dooHm6waaNjfbhwL6g2Lb",
     "uri": "spotify:album:7dooHm6waaNjfbhwL6g2Lb",
     "name": "Liszt: Études D'execution Trascendante & Wagner: Tannhäuser, Ouverture",
+    "release_date": "2009-02-03",
+    "album_type": "album",
     "artists": [
       {
         "id": "1385hLNbrnbCJGokfH2ac2",
@@ -163,6 +173,8 @@
     "id": "70CWcZa5F1uq0xmkMBOtah",
     "uri": "spotify:album:70CWcZa5F1uq0xmkMBOtah",
     "name": "Chopin: Etudes - Lang Lang",
+    "release_date": "2012",
+    "album_type": "album",
     "artists": [
       {
         "id": "7y97mc3bZRFXzT2szRM4L4",
@@ -198,6 +210,8 @@
     "id": "39Hh5k01di42nUCLn8Wxqu",
     "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
     "name": "Liszt - My Piano Hero",
+    "release_date": "2011-08-22",
+    "album_type": "album",
     "artists": [
       {
         "id": "1385hLNbrnbCJGokfH2ac2",
@@ -233,6 +247,8 @@
     "id": "5G5rgQHzdQnw32SI0WjIo5",
     "uri": "spotify:album:5G5rgQHzdQnw32SI0WjIo5",
     "name": "Get Rich Or Die Tryin'",
+    "release_date": "2003-02-06",
+    "album_type": "album",
     "artists": [
       {
         "id": "3q7HBObVc0L8jNeTe5Gofh",
@@ -263,6 +279,8 @@
     "id": "0ylbO515jtrovpxr1drKdF",
     "uri": "spotify:album:0ylbO515jtrovpxr1drKdF",
     "name": "Lang Lang: The Chopin Album",
+    "release_date": "2012-10-22",
+    "album_type": "album",
     "artists": [
       {
         "id": "7y97mc3bZRFXzT2szRM4L4",
@@ -298,6 +316,8 @@
     "id": "5c6qzKZJpCxUmYJeO7ND7F",
     "uri": "spotify:album:5c6qzKZJpCxUmYJeO7ND7F",
     "name": "Heifetz: Tchaikovsky & Mendelssohn Concertos",
+    "release_date": "1987",
+    "album_type": "album",
     "artists": [
       {
         "id": "7yaBUcdjmqPP2vIv6F5bFD",
@@ -328,6 +348,8 @@
     "id": "13xlpKbai3GGoMSr75lOeX",
     "uri": "spotify:album:13xlpKbai3GGoMSr75lOeX",
     "name": "Into The Wild (Music For The Motion Picture)",
+    "release_date": "2007-09-18",
+    "album_type": "album",
     "artists": [
       {
         "id": "0mXTJETA4XUa12MmmXxZJh",
@@ -358,6 +380,8 @@
     "id": "7oWx4auBp2kCb54VkRCCUq",
     "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
     "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
+    "release_date": "2014-06-20",
+    "album_type": "album",
     "artists": [
       {
         "id": "28W9apMi2vgk9O9LnkijIC",
@@ -388,6 +412,8 @@
     "id": "1ibYM4abQtSVQFQWvDSo4J",
     "uri": "spotify:album:1ibYM4abQtSVQFQWvDSo4J",
     "name": "Daydream",
+    "release_date": "1995-10-03",
+    "album_type": "album",
     "artists": [
       {
         "id": "4iHNK0tOyZPYnBU7nGAgpQ",
@@ -418,6 +444,8 @@
     "id": "5w3m2Moqe9dcVHSzIUfmsE",
     "uri": "spotify:album:5w3m2Moqe9dcVHSzIUfmsE",
     "name": "Dreamgirls (Music from the Motion Picture)",
+    "release_date": "2006-01-09",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -448,6 +476,8 @@
     "id": "7EyPl6rQopcaTSJY5B711D",
     "uri": "spotify:album:7EyPl6rQopcaTSJY5B711D",
     "name": "Accardo Plays Paganini- Complete Recordings",
+    "release_date": "2000-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "39FC9x5PaTNYHp5hwlaY4q",
@@ -493,6 +523,8 @@
     "id": "26bQ8ka40C7SjHhqyNrqoj",
     "uri": "spotify:album:26bQ8ka40C7SjHhqyNrqoj",
     "name": "40 Most Beautiful Piano Classics",
+    "release_date": "2011-06-28",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -523,6 +555,8 @@
     "id": "1E7V8YSMBzpyuGVHrXT7ZW",
     "uri": "spotify:album:1E7V8YSMBzpyuGVHrXT7ZW",
     "name": "Tchaikovsky: Violin Concerto",
+    "release_date": "2008-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "3MKCzCnpzw3TjUYs2v7vDA",
@@ -568,6 +602,8 @@
     "id": "2UJcKiJxNryhL050F5Z1Fk",
     "uri": "spotify:album:2UJcKiJxNryhL050F5Z1Fk",
     "name": "Nevermind (Remastered)",
+    "release_date": "1991-09-26",
+    "album_type": "album",
     "artists": [
       {
         "id": "6olE6TJLqED3rqDCT0FyPh",
@@ -598,6 +634,8 @@
     "id": "2fopqZRJz4oYR3ftxBAUWy",
     "uri": "spotify:album:2fopqZRJz4oYR3ftxBAUWy",
     "name": "Gran Turismo 5 (Original Game Soundtrack)",
+    "release_date": "2010-11-29",
+    "album_type": "album",
     "artists": [
       {
         "id": "1YZhNFBxkEB5UKTgMDvot4",
@@ -628,6 +666,8 @@
     "id": "3syYFlKHyCm7zb4otxwD95",
     "uri": "spotify:album:3syYFlKHyCm7zb4otxwD95",
     "name": "Bach: Goldberg Variations (Extended Edt.)",
+    "release_date": "2021-02-12",
+    "album_type": "album",
     "artists": [
       {
         "id": "5aIqB5nVVvmFsvSdExz408",
@@ -678,6 +718,8 @@
     "id": "5GfsaNstrK8rszTX5XYtXU",
     "uri": "spotify:album:5GfsaNstrK8rszTX5XYtXU",
     "name": "Le chant des sirènes",
+    "release_date": "2011-09-26",
+    "album_type": "album",
     "artists": [
       {
         "id": "4FpJcNgOvIpSBeJgRg3OfN",
@@ -708,6 +750,8 @@
     "id": "2UrPmvaX5X76LIzE6Cfiqu",
     "uri": "spotify:album:2UrPmvaX5X76LIzE6Cfiqu",
     "name": "Brol La Suite",
+    "release_date": "2019-11-07",
+    "album_type": "album",
     "artists": [
       {
         "id": "3QVolfxko2UyCOtexhVTli",
@@ -738,6 +782,8 @@
     "id": "6x6I3lpDmXNGGrRdaC6ktL",
     "uri": "spotify:album:6x6I3lpDmXNGGrRdaC6ktL",
     "name": "Les tentations",
+    "release_date": "1997-05-21",
+    "album_type": "album",
     "artists": [
       {
         "id": "41o2A93SPxIUxsy5HQjvul",
@@ -768,6 +814,8 @@
     "id": "2o2GBOfy2GG9oKYZgfZkur",
     "uri": "spotify:album:2o2GBOfy2GG9oKYZgfZkur",
     "name": "Civilisation",
+    "release_date": "2021-11-19",
+    "album_type": "album",
     "artists": [
       {
         "id": "4FpJcNgOvIpSBeJgRg3OfN",
@@ -798,6 +846,8 @@
     "id": "2TGMa7UcpLmLkPhn1p3Ff4",
     "uri": "spotify:album:2TGMa7UcpLmLkPhn1p3Ff4",
     "name": "Orelsan et Gringe sont les Casseurs Flowters",
+    "release_date": "2013-11-18",
+    "album_type": "album",
     "artists": [
       {
         "id": "5sXx89ZqVFOUKTl5g2uiST",
@@ -828,6 +878,8 @@
     "id": "2hQ9QcZ4VkoeBdBo1JNG64",
     "uri": "spotify:album:2hQ9QcZ4VkoeBdBo1JNG64",
     "name": "Nonante-Cinq La Suite",
+    "release_date": "2023-02-16",
+    "album_type": "album",
     "artists": [
       {
         "id": "3QVolfxko2UyCOtexhVTli",
@@ -858,6 +910,8 @@
     "id": "5nyLaTsztHW8mI1KAWeGkS",
     "uri": "spotify:album:5nyLaTsztHW8mI1KAWeGkS",
     "name": "La fête est finie - EPILOGUE",
+    "release_date": "2018-11-16",
+    "album_type": "album",
     "artists": [
       {
         "id": "4FpJcNgOvIpSBeJgRg3OfN",
@@ -888,6 +942,8 @@
     "id": "796mwl4j1EFonUd7zdA6g5",
     "uri": "spotify:album:796mwl4j1EFonUd7zdA6g5",
     "name": "Four",
+    "release_date": "2016-04-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "6yWyIM8jA96kl3jlCXpabB",
@@ -918,6 +974,8 @@
     "id": "5REnhhd1rjGtdvmSGKf89c",
     "uri": "spotify:album:5REnhhd1rjGtdvmSGKf89c",
     "name": "Le fabuleux destin d'Amélie Poulain (Bande originale de film)",
+    "release_date": "2001-04-23",
+    "album_type": "album",
     "artists": [
       {
         "id": "00sazWvoTLOqg5MFwC68Um",
@@ -948,6 +1006,8 @@
     "id": "2oHUGMpScQKwHtQw95dZLZ",
     "uri": "spotify:album:2oHUGMpScQKwHtQw95dZLZ",
     "name": "Happiness Therapy",
+    "release_date": "2013-02-18",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -978,6 +1038,8 @@
     "id": "289Fqj7ymVK3DcbgXPKkBm",
     "uri": "spotify:album:289Fqj7ymVK3DcbgXPKkBm",
     "name": "Le Poisson Rouge",
+    "release_date": "2000-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "7rz6ZZErn5YFDteXKhyf3g",
@@ -1008,6 +1070,8 @@
     "id": "0OJA0WEHoOoTF6D8pGRDlv",
     "uri": "spotify:album:0OJA0WEHoOoTF6D8pGRDlv",
     "name": "Rodrigo y Gabriela (Deluxe Edition)",
+    "release_date": "2006",
+    "album_type": "album",
     "artists": [
       {
         "id": "7vX3cMVyW8gtDA4y855ynF",
@@ -1038,6 +1102,8 @@
     "id": "27Birnw4KzX0h2cVKBLheh",
     "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh",
     "name": "Les tentations (Édition collector 1997-2017)",
+    "release_date": "2017-11-17",
+    "album_type": "album",
     "artists": [
       {
         "id": "41o2A93SPxIUxsy5HQjvul",
@@ -1068,6 +1134,8 @@
     "id": "0ALfQaGYSvcRNV5OLbixA3",
     "uri": "spotify:album:0ALfQaGYSvcRNV5OLbixA3",
     "name": "My Worlds (International Version)",
+    "release_date": "2010-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "1uNFoZAHBGtllmzznpCI3s",
@@ -1098,6 +1166,8 @@
     "id": "5WrJgstjRAPiS3x4GjEPQG",
     "uri": "spotify:album:5WrJgstjRAPiS3x4GjEPQG",
     "name": "Extraterrien",
+    "release_date": "2009-11-27",
+    "album_type": "album",
     "artists": [
       {
         "id": "0AFEmxYJqHfNUtADd6eWhc",
@@ -1128,6 +1198,8 @@
     "id": "03axqfxRqRe9p3LwiTh4GX",
     "uri": "spotify:album:03axqfxRqRe9p3LwiTh4GX",
     "name": "Paganini: 24 Caprices",
+    "release_date": "1994-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "39FC9x5PaTNYHp5hwlaY4q",
@@ -1163,6 +1235,8 @@
     "id": "1xGcZ2k4CX1haXxCMPm2Jl",
     "uri": "spotify:album:1xGcZ2k4CX1haXxCMPm2Jl",
     "name": "Paganini: 24 Capricci",
+    "release_date": "1990-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "39FC9x5PaTNYHp5hwlaY4q",
@@ -1198,6 +1272,8 @@
     "id": "51bIaARfKerKLsB25ouVQ2",
     "uri": "spotify:album:51bIaARfKerKLsB25ouVQ2",
     "name": "On My Mind",
+    "release_date": "2018-09-06",
+    "album_type": "single",
     "artists": [
       {
         "id": "62qifOWqESHtTVSZrlKRtt",
@@ -1228,6 +1304,8 @@
     "id": "3hCYcpUfJHIFsv87liuqeJ",
     "uri": "spotify:album:3hCYcpUfJHIFsv87liuqeJ",
     "name": "Hold Me Close",
+    "release_date": "2020-04-10",
+    "album_type": "single",
     "artists": [
       {
         "id": "62qifOWqESHtTVSZrlKRtt",
@@ -1258,6 +1336,8 @@
     "id": "7q2B4M5EiBkqrlsNW8lB7N",
     "uri": "spotify:album:7q2B4M5EiBkqrlsNW8lB7N",
     "name": "2001",
+    "release_date": "1999-11-16",
+    "album_type": "album",
     "artists": [
       {
         "id": "6DPYiyq5kWVQS4RGwxzPC7",
@@ -1288,6 +1368,8 @@
     "id": "2noRn2Aes5aoNVsU6iWThc",
     "uri": "spotify:album:2noRn2Aes5aoNVsU6iWThc",
     "name": "Discovery",
+    "release_date": "2001-03-12",
+    "album_type": "album",
     "artists": [
       {
         "id": "4tZwfgrHOc3mvqYlEYSvVi",
@@ -1318,6 +1400,8 @@
     "id": "5TedEgCbtmvDnXzUtXEFJY",
     "uri": "spotify:album:5TedEgCbtmvDnXzUtXEFJY",
     "name": "Born to Do It",
+    "release_date": "2000-08-14",
+    "album_type": "album",
     "artists": [
       {
         "id": "2JyWXPbkqI5ZJa3gwqVa0c",
@@ -1348,6 +1432,8 @@
     "id": "1XoE7ZirQ3gjxq8HIzTJU9",
     "uri": "spotify:album:1XoE7ZirQ3gjxq8HIzTJU9",
     "name": "COWBOY BEBOP (Original Motion Picture Soundtrack)",
+    "release_date": "1998-05-21",
+    "album_type": "album",
     "artists": [
       {
         "id": "3U3zr5PCRa9ty74uN46iBa",
@@ -1378,6 +1464,8 @@
     "id": "3i1Z5tXLX7VKGGTjiOrcJU",
     "uri": "spotify:album:3i1Z5tXLX7VKGGTjiOrcJU",
     "name": "Songs From a World Apart",
+    "release_date": "2006-03-09",
+    "album_type": "album",
     "artists": [
       {
         "id": "36fU1D7VBlwnCf293gMzhT",
@@ -1413,6 +1501,8 @@
     "id": "1mARKMZVJY8ezLEs2K9j3d",
     "uri": "spotify:album:1mARKMZVJY8ezLEs2K9j3d",
     "name": "Drop",
+    "release_date": "2021-04-02",
+    "album_type": "album",
     "artists": [
       {
         "id": "6GTRLqqiBPUqaOgyxOraHp",
@@ -1443,6 +1533,8 @@
     "id": "0mtLFaQ3hL371jsNraRo9g",
     "uri": "spotify:album:0mtLFaQ3hL371jsNraRo9g",
     "name": "Dirty Dancing (Original Motion Picture Soundtrack)",
+    "release_date": "1987-09-24",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -1473,6 +1565,8 @@
     "id": "3UCtCwB9nl9meUYM52Z8t5",
     "uri": "spotify:album:3UCtCwB9nl9meUYM52Z8t5",
     "name": "NGRTD",
+    "release_date": "2015",
+    "album_type": "album",
     "artists": [
       {
         "id": "5DW7NxqQ2875JtjuV7KMn4",
@@ -1503,6 +1597,8 @@
     "id": "4LZfrG7nvMvXhz4AQDqAN3",
     "uri": "spotify:album:4LZfrG7nvMvXhz4AQDqAN3",
     "name": "Less Is More (Deluxe)",
+    "release_date": "2017-07-28",
+    "album_type": "album",
     "artists": [
       {
         "id": "7f5Zgnp2spUuuzKplmRkt7",
@@ -1533,6 +1629,8 @@
     "id": "2uEf3r9i2bnxwJQsxQ0xQ7",
     "uri": "spotify:album:2uEf3r9i2bnxwJQsxQ0xQ7",
     "name": "Nevermind (Deluxe Edition)",
+    "release_date": "1991-09-26",
+    "album_type": "album",
     "artists": [
       {
         "id": "6olE6TJLqED3rqDCT0FyPh",
@@ -1563,6 +1661,8 @@
     "id": "1ak1aKu5l4UwtM1zh7UiMC",
     "uri": "spotify:album:1ak1aKu5l4UwtM1zh7UiMC",
     "name": "Mari Trini Con los Panchos",
+    "release_date": "2001-09-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "0CVHw8AAgA5brxfblp1lsQ",
@@ -1598,6 +1698,8 @@
     "id": "46paHZ8Md6AICwfjybLjOM",
     "uri": "spotify:album:46paHZ8Md6AICwfjybLjOM",
     "name": "Crash Landing on You (Original Television Soundtrack)",
+    "release_date": "2020-02-16",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -1628,6 +1730,8 @@
     "id": "3AMXFnwHWXCvNr5NCCpLZI",
     "uri": "spotify:album:3AMXFnwHWXCvNr5NCCpLZI",
     "name": "TRON: Legacy - The Complete Edition (Original Motion Picture Soundtrack)",
+    "release_date": "2010-12-03",
+    "album_type": "album",
     "artists": [
       {
         "id": "4tZwfgrHOc3mvqYlEYSvVi",
@@ -1658,6 +1762,8 @@
     "id": "0Ryad9M1b1MxSjgXdHCh1c",
     "uri": "spotify:album:0Ryad9M1b1MxSjgXdHCh1c",
     "name": "Una Mattina",
+    "release_date": "2004-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "2uFUBdaVGtyMqckSeCl0Qj",
@@ -1688,6 +1794,8 @@
     "id": "7LxBrkZXrZZTLHRiDEJfqx",
     "uri": "spotify:album:7LxBrkZXrZZTLHRiDEJfqx",
     "name": "Workout Music",
+    "release_date": "2019-11-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "62qifOWqESHtTVSZrlKRtt",
@@ -1718,6 +1826,8 @@
     "id": "3xybjP7r2VsWzwvDQipdM0",
     "uri": "spotify:album:3xybjP7r2VsWzwvDQipdM0",
     "name": "Freudian",
+    "release_date": "2017-08-25",
+    "album_type": "album",
     "artists": [
       {
         "id": "20wkVLutqVOYrc0kxFs7rA",
@@ -1748,6 +1858,8 @@
     "id": "52A9oIcEgY9llf0hQ3d0Bb",
     "uri": "spotify:album:52A9oIcEgY9llf0hQ3d0Bb",
     "name": "Paganini / Spohr: Violin Concertos incld. Listening Guide",
+    "release_date": "2006-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "5JdT0LYJdlPbTC58p60WTX",
@@ -1788,6 +1900,8 @@
     "id": "55bxux5NGwsurOUlXfT2cv",
     "uri": "spotify:album:55bxux5NGwsurOUlXfT2cv",
     "name": "Pasaporte",
+    "release_date": "2013-03-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "2YnskQkgb6kTSXh9YcNzgu",
@@ -1823,6 +1937,8 @@
     "id": "0bosuo6IFI5MPs29r4vVcV",
     "uri": "spotify:album:0bosuo6IFI5MPs29r4vVcV",
     "name": "Huey Dunbar IV",
+    "release_date": "2010-03-03",
+    "album_type": "album",
     "artists": [
       {
         "id": "6fhCq41xOJnMGIvFd13Oft",
@@ -1853,6 +1969,8 @@
     "id": "0qRYw8PUU2AE7MPTvC9AwF",
     "uri": "spotify:album:0qRYw8PUU2AE7MPTvC9AwF",
     "name": "2001",
+    "release_date": "1999-11-16",
+    "album_type": "album",
     "artists": [
       {
         "id": "6DPYiyq5kWVQS4RGwxzPC7",
@@ -1883,6 +2001,8 @@
     "id": "5nGcPv2kxjBJ3Mk0QPXZnm",
     "uri": "spotify:album:5nGcPv2kxjBJ3Mk0QPXZnm",
     "name": "Herencia Africana",
+    "release_date": "2012-01-06",
+    "album_type": "album",
     "artists": [
       {
         "id": "7FIeKWN0FTtzvQ1i7Z1aTx",
@@ -1913,6 +2033,8 @@
     "id": "58kRTFztL9vdX3lnwugShN",
     "uri": "spotify:album:58kRTFztL9vdX3lnwugShN",
     "name": "Lindsey Stirling",
+    "release_date": "2013-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "378dH6EszOLFShpRzAQkVM",
@@ -1943,6 +2065,8 @@
     "id": "6KSvWFf4g4PrIldtchJsTC",
     "uri": "spotify:album:6KSvWFf4g4PrIldtchJsTC",
     "name": "Brol",
+    "release_date": "2018-10-05",
+    "album_type": "album",
     "artists": [
       {
         "id": "3QVolfxko2UyCOtexhVTli",
@@ -1973,6 +2097,8 @@
     "id": "3zXdL8n7OMWKY156NgUZ4m",
     "uri": "spotify:album:3zXdL8n7OMWKY156NgUZ4m",
     "name": "A Lo Cubano",
+    "release_date": "1999",
+    "album_type": "album",
     "artists": [
       {
         "id": "2gKYxTUOqw9aPt7ljMwSHT",
@@ -2003,6 +2129,8 @@
     "id": "6L5uROBQ5wy3MOPI334RHE",
     "uri": "spotify:album:6L5uROBQ5wy3MOPI334RHE",
     "name": "Enter The Dru",
+    "release_date": "1998-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "1255GTUKNCLCTvH9ctD4cT",
@@ -2033,6 +2161,8 @@
     "id": "5VMa7BgPzwjGfEPiGaJSPv",
     "uri": "spotify:album:5VMa7BgPzwjGfEPiGaJSPv",
     "name": "Parce qu'on vient de loin",
+    "release_date": "2003",
+    "album_type": "album",
     "artists": [
       {
         "id": "2GBDOaCl73BVUs2RerIme7",
@@ -2063,6 +2193,8 @@
     "id": "3eG7SaLEdlmKLapewG6m4J",
     "uri": "spotify:album:3eG7SaLEdlmKLapewG6m4J",
     "name": "Suprême NTM",
+    "release_date": "1998-04-20",
+    "album_type": "album",
     "artists": [
       {
         "id": "4ko6Ysxtvx9EY9GEFslrIz",
@@ -2093,6 +2225,8 @@
     "id": "2XRuEEbhMF9Q4TcJBw4GqP",
     "uri": "spotify:album:2XRuEEbhMF9Q4TcJBw4GqP",
     "name": "Parasite",
+    "release_date": "2019-05-30",
+    "album_type": "album",
     "artists": [
       {
         "id": "34J5kKR5szbJ5fGK7f8HCU",
@@ -2123,6 +2257,8 @@
     "id": "2pr82skmvIlEQ1BsFShcgN",
     "uri": "spotify:album:2pr82skmvIlEQ1BsFShcgN",
     "name": "David Oistrakh - Concertos and Encores",
+    "release_date": "2008-01-01",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "7o2OjTu0Ls0xiWl3RzjdVp",
@@ -2168,6 +2304,8 @@
     "id": "2zGZLQiFl9UubtrVmtIkbi",
     "uri": "spotify:album:2zGZLQiFl9UubtrVmtIkbi",
     "name": "Another Level",
+    "release_date": "1996-09-09",
+    "album_type": "album",
     "artists": [
       {
         "id": "2P3cjUru4H3fhSXXNxE9kA",
@@ -2198,6 +2336,8 @@
     "id": "4sLtOBOzn4s3GDUv3c5oJD",
     "uri": "spotify:album:4sLtOBOzn4s3GDUv3c5oJD",
     "name": "A Star Is Born Soundtrack",
+    "release_date": "2018-10-05",
+    "album_type": "album",
     "artists": [
       {
         "id": "1HY2Jd0NmPuamShAr6KMms",
@@ -2233,6 +2373,8 @@
     "id": "0z5gpNFBHGUIN0N2uWeRDu",
     "uri": "spotify:album:0z5gpNFBHGUIN0N2uWeRDu",
     "name": "R&B 2 Rue",
+    "release_date": "2001-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "7CkiWDWPQJZrJmgFW0Q9Yq",
@@ -2263,6 +2405,8 @@
     "id": "17UiqpQyl8T8vVxz2Towjy",
     "uri": "spotify:album:17UiqpQyl8T8vVxz2Towjy",
     "name": "Perdu D'Avance",
+    "release_date": "2009-02-16",
+    "album_type": "album",
     "artists": [
       {
         "id": "4FpJcNgOvIpSBeJgRg3OfN",
@@ -2293,6 +2437,8 @@
     "id": "7lgL74zTYxeVUXV0h8c2U7",
     "uri": "spotify:album:7lgL74zTYxeVUXV0h8c2U7",
     "name": "L'Excuse",
+    "release_date": "2007-05-21",
+    "album_type": "album",
     "artists": [
       {
         "id": "65PTmgbjJOl2gE1AeaZOIB",
@@ -2323,6 +2469,8 @@
     "id": "1Ba5s6JWCai3QpL17pOqwv",
     "uri": "spotify:album:1Ba5s6JWCai3QpL17pOqwv",
     "name": "Polaroid experience",
+    "release_date": "2018-09-28",
+    "album_type": "album",
     "artists": [
       {
         "id": "5DW7NxqQ2875JtjuV7KMn4",
@@ -2353,6 +2501,8 @@
     "id": "0e60AWHAGO3t7mNZPImsKA",
     "uri": "spotify:album:0e60AWHAGO3t7mNZPImsKA",
     "name": "Colores (Bachata Is Taking Over!)",
+    "release_date": "2017-04-28",
+    "album_type": "album",
     "artists": [
       {
         "id": "4L5SLCIDWPPNGzrLraYCOS",
@@ -2383,6 +2533,8 @@
     "id": "4WW3ME0M2dUoAK5hmbXsN7",
     "uri": "spotify:album:4WW3ME0M2dUoAK5hmbXsN7",
     "name": "racine carrée",
+    "release_date": "2013-01-01",
+    "album_type": "album",
     "artists": [
       {
         "id": "5j4HeCoUlzhfWtjAfM1acR",
@@ -2413,6 +2565,8 @@
     "id": "0iyWxTBrrClm4XW0pz5V7S",
     "uri": "spotify:album:0iyWxTBrrClm4XW0pz5V7S",
     "name": "Music For The Motion Picture Into The Wild",
+    "release_date": "2007",
+    "album_type": "compilation",
     "artists": [
       {
         "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -2443,6 +2597,8 @@
     "id": "3atPIVCVIIgak6KeB1ANnK",
     "uri": "spotify:album:3atPIVCVIIgak6KeB1ANnK",
     "name": "L'école du micro d'argent",
+    "release_date": "1997",
+    "album_type": "album",
     "artists": [
       {
         "id": "56Q6weEROZ1RsVrTak8Bm7",

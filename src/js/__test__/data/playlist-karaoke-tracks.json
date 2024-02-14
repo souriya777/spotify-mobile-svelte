@@ -8,6 +8,8 @@
       "id": "7pdSRW28eg63tKiCyyOUFo",
       "uri": "spotify:album:7pdSRW28eg63tKiCyyOUFo",
       "name": "Je me souviens",
+      "release_date": "1997",
+      "album_type": "album",
       "artists": [
         {
           "id": "3msewJ0hXf2THwcdYjGeOA",
@@ -50,6 +52,8 @@
       "id": "7oWx4auBp2kCb54VkRCCUq",
       "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
       "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
+      "release_date": "2014-06-20",
+      "album_type": "album",
       "artists": [
         {
           "id": "28W9apMi2vgk9O9LnkijIC",
@@ -92,6 +96,8 @@
       "id": "5z3xsBn9ATJ8PjSLVPp1tm",
       "uri": "spotify:album:5z3xsBn9ATJ8PjSLVPp1tm",
       "name": "Pop Music",
+      "release_date": "1990-11-23",
+      "album_type": "album",
       "artists": [
         {
           "id": "21h26EWdy9snENqbeAZorA",
@@ -134,6 +140,8 @@
       "id": "45feqbqIXi45boCrjlo0cV",
       "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
       "name": "20eme anniversaire",
+      "release_date": "1995-03-22",
+      "album_type": "compilation",
       "artists": [
         {
           "id": "1u9tovPnCMYuZiV3EMZqDV",
@@ -176,6 +184,8 @@
       "id": "2Qr2ggacy3vRRSg6unVFqk",
       "uri": "spotify:album:2Qr2ggacy3vRRSg6unVFqk",
       "name": "Maxi Tubes - Vol. 11 / The best Maxi Hits of the 90's",
+      "release_date": "2007-02-19",
+      "album_type": "album",
       "artists": [
         {
           "id": "3v8aLEr4YjxhS91UUeaNPD",
@@ -218,6 +228,8 @@
       "id": "04mHlwou1RaPDo8SigFfKf",
       "uri": "spotify:album:04mHlwou1RaPDo8SigFfKf",
       "name": "La fête est finie",
+      "release_date": "2017-10-20",
+      "album_type": "album",
       "artists": [
         {
           "id": "4FpJcNgOvIpSBeJgRg3OfN",
@@ -260,6 +272,8 @@
       "id": "17UiqpQyl8T8vVxz2Towjy",
       "uri": "spotify:album:17UiqpQyl8T8vVxz2Towjy",
       "name": "Perdu D'Avance",
+      "release_date": "2009-02-16",
+      "album_type": "album",
       "artists": [
         {
           "id": "4FpJcNgOvIpSBeJgRg3OfN",
@@ -302,6 +316,8 @@
       "id": "1i7e6Cu4N6zhbhvJ4lNw6G",
       "uri": "spotify:album:1i7e6Cu4N6zhbhvJ4lNw6G",
       "name": "Panique Celtique",
+      "release_date": "1998",
+      "album_type": "album",
       "artists": [
         {
           "id": "6k68jYvlUy3CXOwhG1NDBL",
@@ -344,6 +360,8 @@
       "id": "6ee87DJAkjCghFeSVSCnx5",
       "uri": "spotify:album:6ee87DJAkjCghFeSVSCnx5",
       "name": "Les Plus Belles Chansons De Claude François",
+      "release_date": "2004-09-13",
+      "album_type": "compilation",
       "artists": [
         {
           "id": "0P2p1bqVyP2EgqubwjTBUJ",
@@ -391,6 +409,8 @@
       "id": "4HuyjUy5tgr9Q725kUkKrv",
       "uri": "spotify:album:4HuyjUy5tgr9Q725kUkKrv",
       "name": "Do You Love Me",
+      "release_date": "2012-12-24",
+      "album_type": "album",
       "artists": [
         {
           "id": "2ugPdplEWBmyU6EcIzlcY1",
@@ -433,6 +453,8 @@
       "id": "5ySxm9hxBNss01WCL7GLyQ",
       "uri": "spotify:album:5ySxm9hxBNss01WCL7GLyQ",
       "name": "Millennium",
+      "release_date": "1999-05-18",
+      "album_type": "album",
       "artists": [
         {
           "id": "5rSXSAkZ67PYJSvpUpkOr7",
@@ -475,6 +497,8 @@
       "id": "4cQIJjzFnwSFIQjz3MFkol",
       "uri": "spotify:album:4cQIJjzFnwSFIQjz3MFkol",
       "name": "Le son des années 80",
+      "release_date": "2009-03-06",
+      "album_type": "album",
       "artists": [
         {
           "id": "5jsIYrxcANUkZQPfCdfEWe",
@@ -517,6 +541,8 @@
       "id": "5Z9iiGl2FcIfa3BMiv6OIw",
       "uri": "spotify:album:5Z9iiGl2FcIfa3BMiv6OIw",
       "name": "Whenever You Need Somebody",
+      "release_date": "1987-11-12",
+      "album_type": "album",
       "artists": [
         {
           "id": "0gxyHStUsqpMadRV0Di1Qt",
@@ -559,6 +585,8 @@
       "id": "3KzAvEXcqJKBF97HrXwlgf",
       "uri": "spotify:album:3KzAvEXcqJKBF97HrXwlgf",
       "name": "Please Please Me (Remastered)",
+      "release_date": "1963-03-22",
+      "album_type": "album",
       "artists": [
         {
           "id": "3WrFJ7ztbogyGnTHbHJFl2",
@@ -601,6 +629,8 @@
       "id": "18rFAAWrT2wzvWckYmoLnE",
       "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
       "name": "Sherry and 11 Other Hits",
+      "release_date": "1962-10-01",
+      "album_type": "album",
       "artists": [
         {
           "id": "6mcrZQmgzFGRWf7C0SObou",
@@ -643,6 +673,8 @@
       "id": "3hHmYc6mrl6NkmRW1ZwYvm",
       "uri": "spotify:album:3hHmYc6mrl6NkmRW1ZwYvm",
       "name": "Aquarium (Special Edition)",
+      "release_date": "1997-01-01",
+      "album_type": "album",
       "artists": [
         {
           "id": "6kBjAFKyd0he7LiA5GQ3Gz",
@@ -685,6 +717,8 @@
       "id": "7q2B4M5EiBkqrlsNW8lB7N",
       "uri": "spotify:album:7q2B4M5EiBkqrlsNW8lB7N",
       "name": "2001",
+      "release_date": "1999-11-16",
+      "album_type": "album",
       "artists": [
         {
           "id": "6DPYiyq5kWVQS4RGwxzPC7",
@@ -732,6 +766,8 @@
       "id": "65cIV3m5T5U4mRtwFYWZRP",
       "uri": "spotify:album:65cIV3m5T5U4mRtwFYWZRP",
       "name": "Années 80",
+      "release_date": "2011-08-22",
+      "album_type": "compilation",
       "artists": [
         {
           "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -774,6 +810,8 @@
       "id": "7vQX4wnzkplVHuTClsB034",
       "uri": "spotify:album:7vQX4wnzkplVHuTClsB034",
       "name": "Jardins d'enfants (Expanded Edition)",
+      "release_date": "1989-01-01",
+      "album_type": "album",
       "artists": [
         {
           "id": "3EeGYcRZaklMqgjWNhPrzu",
@@ -816,6 +854,8 @@
       "id": "3vcwGUl0WiJVssOR1dXEbe",
       "uri": "spotify:album:3vcwGUl0WiJVssOR1dXEbe",
       "name": "Come Into My Life (The Album)",
+      "release_date": "1997-11-17",
+      "album_type": "album",
       "artists": [
         {
           "id": "3OqTvcWgb0xaainosGVvuZ",
@@ -858,6 +898,8 @@
       "id": "2V35cFfGuCGeY4Hktlab3D",
       "uri": "spotify:album:2V35cFfGuCGeY4Hktlab3D",
       "name": "Zest Of",
+      "release_date": "2016-05-27",
+      "album_type": "compilation",
       "artists": [
         {
           "id": "3FLS6y4AR3126l4D06V0ZD",
@@ -905,6 +947,8 @@
       "id": "6i6folBtxKV28WX3msQ4FE",
       "uri": "spotify:album:6i6folBtxKV28WX3msQ4FE",
       "name": "Bohemian Rhapsody (The Original Soundtrack)",
+      "release_date": "2018-10-19",
+      "album_type": "album",
       "artists": [
         {
           "id": "1dfeR4HaWDbWqFHLkxsg1d",
@@ -947,6 +991,8 @@
       "id": "6QAwEZobDncmTn1wgu7J3k",
       "uri": "spotify:album:6QAwEZobDncmTn1wgu7J3k",
       "name": "Rita Mitsouko",
+      "release_date": "1984-01-04",
+      "album_type": "album",
       "artists": [
         {
           "id": "7CdlYgtOoxBtNjuDeIxSPM",
@@ -989,6 +1035,8 @@
       "id": "3Fep1OihcXjxJJIfAOhPob",
       "uri": "spotify:album:3Fep1OihcXjxJJIfAOhPob",
       "name": "Telephone Illimité",
+      "release_date": "2006-11-17",
+      "album_type": "album",
       "artists": [
         {
           "id": "3fQq9bb2ZKNv24V1A4vwBK",
@@ -1031,6 +1079,8 @@
       "id": "6XctQR3X9ezhRFtR3fVCXQ",
       "uri": "spotify:album:6XctQR3X9ezhRFtR3fVCXQ",
       "name": "Il était une fois",
+      "release_date": "2012-03-28",
+      "album_type": "compilation",
       "artists": [
         {
           "id": "1QQlg9J5PEMv9cpOOJPUvR",
@@ -1073,6 +1123,8 @@
       "id": "3GU8BzFEAdFSRjc8jZkL3S",
       "uri": "spotify:album:3GU8BzFEAdFSRjc8jZkL3S",
       "name": "La La Land (Original Motion Picture Soundtrack)",
+      "release_date": "2016-12-09",
+      "album_type": "album",
       "artists": [
         {
           "id": "2snm3HmsnDUDxbIChdl2Oj",
@@ -1125,6 +1177,8 @@
       "id": "2IU9ftOgyRL2caQGWK1jjX",
       "uri": "spotify:album:2IU9ftOgyRL2caQGWK1jjX",
       "name": "Like a Virgin",
+      "release_date": "1984-11-12",
+      "album_type": "album",
       "artists": [
         {
           "id": "6tbjWDEIzxoDsBA1FuhfPW",
@@ -1167,6 +1221,8 @@
       "id": "4dCdnfD0shXGuHtyTOtx8q",
       "uri": "spotify:album:4dCdnfD0shXGuHtyTOtx8q",
       "name": "Step By Step",
+      "release_date": "1990-06-04",
+      "album_type": "album",
       "artists": [
         {
           "id": "55qiaow2sDYtjqu1mwRua6",
@@ -1209,6 +1265,8 @@
       "id": "7Jsx6b2L9AshOKrTFkrNQu",
       "uri": "spotify:album:7Jsx6b2L9AshOKrTFkrNQu",
       "name": "Liberté",
+      "release_date": "2001-01-01",
+      "album_type": "album",
       "artists": [
         {
           "id": "4qJ1NPJIburUjxcucKOhvu",
@@ -1251,6 +1309,8 @@
       "id": "2k3nz0I7mJzegtkooii4za",
       "uri": "spotify:album:2k3nz0I7mJzegtkooii4za",
       "name": "Eternelle",
+      "release_date": "1987-10-31",
+      "album_type": "album",
       "artists": [
         {
           "id": "1WPcVNert9hn7mHsPKDn7j",

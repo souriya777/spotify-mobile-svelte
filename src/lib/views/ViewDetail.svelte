@@ -16,8 +16,8 @@
   import DetailPlayPause from '@lib/DetailPlayPause.svelte';
 
   export let title = '';
-  /** @type {import('@js/spotify').SpotifyImage}*/
-  export let cover;
+  /** @type {import('@js/spotify').SpotifyImage[]}*/
+  export let images;
 
   const NB_PX_BEFORE_CHANGE_HEADER_BACKGROUND = 30;
 
@@ -96,7 +96,7 @@
 
   <div class="gradient" bind:this={GRADIENT_HTML}>
     <div class="img" bind:this={IMG_HTML}>
-      <DetailCover image={cover} alt={title} canAnimate={!descReachedHeader} />
+      <DetailCover {images} alt={title} canAnimate={!descReachedHeader} />
     </div>
 
     <div class="desc" bind:this={DESC_HTML}>
@@ -110,6 +110,10 @@
 
       <div class="desc__owner font-collection-detail-owner">
         <slot name="desc__owner" />
+      </div>
+
+      <div class="desc__type-year font-collection-detail-year">
+        <slot name="desc__type-year" />
       </div>
 
       <div class="actions">
@@ -205,8 +209,16 @@
     z-index: var(--z-index-near);
   }
 
+  .content {
+    padding-block-end: calc(var(--height-nav) + var(--height-player-mini) + 1rem);
+  }
+
   .desc__owner {
     margin-block-start: 0.8rem;
+  }
+
+  .desc__type-year {
+    margin-block-start: 1rem;
   }
 
   .actions {

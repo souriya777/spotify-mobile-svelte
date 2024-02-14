@@ -9,6 +9,8 @@ class SpotifyAlbum {
     this.id = fromApi?.id;
     this.uri = fromApi?.uri;
     this.name = fromApi?.name;
+    this.release_date = fromApi?.release_date;
+    this.album_type = fromApi?.album_type;
     this.artists = fromApi?.artists?.map((item) => new SpotifyArtist(item));
     this.images = fromApi?.images?.map((img) => new SpotifyImage(img));
   }

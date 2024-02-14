@@ -10,16 +10,25 @@ Beta: https://spotify-mobile-svelte-test.vercel.app/
 KISS
 DRY -> Single Source of Truth
 
-# MVP TODO
+# MVP
 
-- feat(search): ui
+- feat(search): can show `tracks`
 - feat(search): manage offset results
-- feat(search): can show previous search
-- feat(album-detail): can view details
-- feat(album-detail): can play a song
+  -- create basic button
+  -- manage call api
+  -- test unit ?
+  -- manage scroll down detection
+- feat(search): ui
+  -- draw on paper the ui
+  -- create input
+  -- 🟢store : create variable that store previous search
+  -- can show previous search
+  -- can click on search result and go to detail
+  -- can back to search ?
 - remove `Collection*`
 - 🥳🥳🥳🥳🥳 check ADOPT OLD CODE TO NEW : `refactor` in `main` ????
 
+- search in playlist
 - feat(artist-detail): js
 - feat(artist-detail): ui
 - feat(artist-detail): ux
@@ -29,15 +38,17 @@ DRY -> Single Source of Truth
 - feat(album): can remove album from my favorite
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
+  => CollectionAlbumTrackSECONDARY_ACTION.svelte
+- feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
 - feat(liked-song): can unlike song
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
 - perf : mv sync my-lib from `onMount`
-
 - feat(playlist): can add to queue
 - feat(album): can add to queue
 - feat(artist): can add to queue
 - feat(search): can add to queue
+- refactor(old-code): manage secondary actions
 - feat(queue): design it
 - feat(queue): what is default queue ?
 - feat(queue): can remove song
@@ -48,7 +59,6 @@ DRY -> Single Source of Truth
 
 - feat(list-playlist): make api call for playlist cover
   -- replace grid-mode image with playlist cover
-- feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
 - when drag progress, why /me/player/devices is called ????
 - feat(scroll): make beautiful scroll indicator
 - feat(nav): even if I click twice on nav-item, it bounce
@@ -98,7 +108,7 @@ DRY -> Single Source of Truth
 - perf(lazy-load): view in order to optimize processing ?
 - perf: manage `429` cases => when someone has a lot of playlists, or have a lots of songs in playlists
 - perf(realtime) : sync when ?
-  -- when play track in a playlist, I have to sync to have animated-equalizer appears... ($playerStateTrackUri === uri)
+  -- sync after play track on ListItem ?
 - perf(service-worker): strategy `what`, `when`
 - perf(cache): find a strategy
   -- how knowing which track are contained in liked playlist ?

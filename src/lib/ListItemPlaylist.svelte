@@ -1,5 +1,5 @@
 <script>
-  import { createView } from '@js/view-utils';
+  import { goDetail } from '@js/view-utils';
   import ListItem from '@lib/ListItem.svelte';
 
   /** @type {import('@js/spotify').SpotifyPlaylist} */
@@ -11,12 +11,14 @@
 </script>
 
 <ListItem
+  uri={item?.uri}
   title={item?.name}
   {owner}
   images={item?.images}
   imageAlt={item?.name}
-  createViewFn={() =>
-    createView('PlaylistView', {
+  callbackFn={() =>
+    goDetail('PlaylistView', {
       id: item?.id,
+      uri: item?.uri,
     })}
 />

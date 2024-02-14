@@ -1,9 +1,10 @@
 <script>
   import { scrollTop } from '@js/store';
+  import { sortImagesBySizeAsc } from '@js/spotify-utils';
   import ImgUrlColorSolver from '@lib/ImgUrlColorSolver.svelte';
 
-  /** @type {import('@js/spotify').SpotifyImage}*/
-  export let image;
+  /** @type {import('@js/spotify').SpotifyImage[]}*/
+  export let images = [];
   export let alt;
   export let canAnimate = false;
 
@@ -14,6 +15,9 @@
   let scale;
   let opacity;
 
+  $: sorted = sortImagesBySizeAsc(images);
+  $: imageMini = sorted?.at(0);
+  $: imageCover = sorted?.at(1) ?? imageMini;
   $: IMG_HEIGHT = IMG_HTML?.clientHeight ?? 0;
   $: style = `
     scale: ${scale};
@@ -28,10 +32,10 @@
   }
 </script>
 
-<ImgUrlColorSolver imageUrl={image?.url} isPlayingRgb={false} />
+<ImgUrlColorSolver imageUrl={imageCover?.url} isPlayingRgb={false} />
 
 <div class="detail-cover" {style} bind:this={DETAIL_COVER_HTML}>
-  <img src={image?.url} {alt} bind:this={IMG_HTML} />
+  <img src={imageCover?.url} {alt} bind:this={IMG_HTML} />
 </div>
 
 <style>

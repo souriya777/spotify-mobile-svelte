@@ -1,0 +1,36 @@
+{
+  "id": "70CWcZa5F1uq0xmkMBOtah",
+  "uri": "spotify:album:70CWcZa5F1uq0xmkMBOtah",
+  "name": "Chopin: Etudes - Lang Lang",
+  "release_date": "2012",
+  "album_type": "album",
+  "artists": [
+    {
+      "id": "7y97mc3bZRFXzT2szRM4L4",
+      "name": "Frédéric Chopin",
+      "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
+    },
+    {
+      "id": "1YZhNFBxkEB5UKTgMDvot4",
+      "name": "Lang Lang",
+      "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab67616d0000b273bcb68837fd15ac0d546ef639",
+      "height": 640,
+      "width": 640
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02bcb68837fd15ac0d546ef639",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00004851bcb68837fd15ac0d546ef639",
+      "height": 64,
+      "width": 64
+    }
+  ]
+}

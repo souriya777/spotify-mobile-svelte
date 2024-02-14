@@ -49,17 +49,17 @@
     line-height: 2rem;
   }
 
-  :global(.list.gridMode .isListArtist) {
+  :global(.list.gridMode .bubbleImage) {
     margin-block-end: 1.4rem;
   }
 
-  :global(.list.gridMode .isListArtist .img-container) {
+  :global(.list.gridMode .bubbleImage .img-container) {
     height: var(--size-img-artist-grid-mode);
     width: var(--size-img-artist-grid-mode);
   }
 
-  :global(.list.gridMode .isListArtist .img),
-  :global(.list.gridMode .isListArtist .text) {
+  :global(.list.gridMode .bubbleImage .img),
+  :global(.list.gridMode .bubbleImage .text) {
     margin-inline: auto;
   }
 </style>

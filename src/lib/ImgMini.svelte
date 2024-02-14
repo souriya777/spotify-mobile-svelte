@@ -11,7 +11,9 @@
   $: sorted = sortImagesBySizeAsc(images);
   $: imageMini = sorted?.at(0);
   $: imageCover = sorted?.at(1) ?? imageMini;
-  $: image = $gridMode ? imageCover : imageMini;
+  // the quality of "imageMini" (64x64) seems to be not beautiful on my iphone...
+  // $: image = $gridMode ? imageCover : imageMini;
+  $: image = imageCover;
 </script>
 
 <div class="img-mini" class:bubble aria-label={alt}>

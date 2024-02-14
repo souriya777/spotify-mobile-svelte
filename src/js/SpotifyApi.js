@@ -8,7 +8,6 @@ import {
   accessToken,
   userId,
   player,
-  playerStateTrackUri,
   trackName,
   albumName,
   imageMiniUrl,
@@ -27,9 +26,9 @@ import {
   userPictureUrl,
   userDisplayName,
   trackUri,
+  forbiddenContextUri,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
-import SpotifySongCursor from '@js/SpotifySongCursor';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
 import SpotifyPlaybackState from '@js/SpotifyPlaybackState';
 import SpotifyQueue from '@js/SpotifyQueue';
@@ -175,8 +174,7 @@ class SpotifyApi {
       const spotifyPlayerState = this.extractPlayerStateFrom(playerState);
 
       playbackState = SpotifyPlaybackStateAdapter.adapt(spotifyPlayerState);
-
-      track = SpotifyTrackAdapter.adapt(spotifyPlayerState);
+      track = SpotifyTrackAdapter.adaptPlayerState(spotifyPlayerState);
     } else {
       try {
         playbackState = await this.getPlaybackState();
@@ -230,18 +228,33 @@ class SpotifyApi {
 
   /**
    * @param {string} contextUri
+   * @param {string} currentTrackUri
    * @param {number} indexPosition
    */
-  async playTrackWithContext(contextUri, indexPosition) {
-    this.#put(`/me/player/play`, {
-      context_uri: contextUri,
-      offset: {
-        position: indexPosition,
-      },
-    });
-    // FIXME
-    // trackUri.set(uri);
-    LOGGER.log('playTrackWithContext', contextUri, indexPosition);
+  async playTrackWithContext(contextUri, currentTrackUri, indexPosition) {
+    try {
+      await this.#put(`/me/player/play`, {
+        context_uri: contextUri,
+        offset: {
+          position: indexPosition,
+        },
+      });
+
+      trackUri.set(currentTrackUri);
+      playing.set(true);
+      LOGGER.log('playTrackWithContext', contextUri, indexPosition);
+    } catch (err) {
+      const status = err?.response?.status;
+      if (status === SpotifyStatus.FORBIDDEN) {
+        // add context uri in forbidden list
+        forbiddenContextUri.update((list) => {
+          if (!list?.find((uri) => uri === contextUri)) {
+            return [...list, contextUri];
+          }
+          return list;
+        });
+      }
+    }
   }
 
   pause() {
@@ -394,6 +407,15 @@ class SpotifyApi {
 
   /**
    * @param {string} albumId
+   * @returns {Promise<import('@js/spotify').SpotifyAlbum}
+   */
+  async getAlbum(albumId) {
+    const album = await this.#get(`/albums/${albumId}`);
+    return new SpotifyAlbum(album);
+  }
+
+  /**
+   * @param {string} albumId
    * @returns {Promise<import('@js/spotify').SpotifyAlbumTrack[]>}
    */
   async getAlbumTracks(albumId) {
@@ -479,8 +501,11 @@ class SpotifyApi {
 
   /** @returns {Promise<import('@js/spotify').SpotifySong[]>} */
   async getRecentlyPlayedSongs() {
-    const data = await this.#get(`/me/player/recently-played?limit=50`);
-    return new SpotifySongCursor(data)?.items;
+    const recently = await this.#iterateOverCursor(
+      `/me/player/recently-played?limit=50`,
+      'SpotifySongCursor',
+    );
+    return recently;
   }
 
   /** @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>} */
@@ -792,7 +817,7 @@ class SpotifyApi {
 
   /** @param {import('@js/spotify').SpotifyTrack} track */
   #writeStoreTrackInfos(track) {
-    playerStateTrackUri.set(track?.uri);
+    trackUri.set(track?.uri);
     trackName.set(track?.name);
     durationMs.set(track?.duration_ms);
     albumName.set(track?.album?.name);
@@ -873,13 +898,12 @@ class SpotifyApi {
    */
   async #put(endpoint, data) {
     try {
-      AXIOS_INSTANCE()
-        .put(this.#url(endpoint), data)
-        .then((response) => this.#axiosResponse(response, 'PUT', endpoint))
-        .catch((err) => console.log('🔵', err));
+      const response = await AXIOS_INSTANCE().put(this.#url(endpoint), data);
+      return await this.#axiosResponse(response, 'PUT', endpoint);
     } catch (err) {
-      console.log('🟡', err);
+      console.log('#put', err);
       this.#axiosError(err);
+      throw err;
     }
   }
 
@@ -939,7 +963,7 @@ class SpotifyApi {
       const errorJSON = err?.toJSON();
       // @ts-ignore
       status = errorJSON?.status;
-      LOGGER.error('🌱', errorJSON.toString(), status);
+      LOGGER.error('🌱', JSON.stringify(errorJSON), status);
     }
 
     if (SpotifyStatus.UNAUTHORIZED === status) {
@@ -947,9 +971,9 @@ class SpotifyApi {
       this.forceAuthorization();
     } else if (SpotifyStatus.BAD_REQUEST === status) {
       LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
+    } else if (SpotifyStatus.FORBIDDEN === status) {
+      LOGGER.error('Spotify returns 403 -> FORBIDDEN');
     }
-
-    throw err;
   }
 }
 

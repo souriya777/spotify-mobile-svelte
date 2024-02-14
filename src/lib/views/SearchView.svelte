@@ -89,6 +89,7 @@
   <FadeEffect bind:start={startFadeEffect}>
     {#if $displayFilterSearch.trackOn}
       <h3>1st tracks</h3>
+      {firstTracks}
       <!-- <CollectionTrack items={firstTracks} /> -->
     {/if}
 

@@ -1,5 +1,5 @@
 import { get } from 'svelte/store';
-import { currentView, slidePrevAndRemoveForMe } from '@js/store';
+import { currentView, slidePrevAndRemoveForMe, addView, addAndSlideNextForMe } from '@js/store';
 import { getTimestamp } from '@js/date-utils';
 import SideMenuView from '@lib/views/SideMenuView.svelte';
 import HomeView from '@lib/views/HomeView.svelte';
@@ -103,6 +103,12 @@ function canRemoveView(viewPosition) {
   return viewPosition > 1;
 }
 
+function goDetail(viewName, optionsView) {
+  const view = createView(viewName, { ...optionsView });
+  addView(view);
+  get(addAndSlideNextForMe)?.();
+}
+
 /**
  * @param {number} position
  */
@@ -127,6 +133,7 @@ export {
   createView,
   createDumbView,
   canRemoveView,
+  goDetail,
   isSideMenuView,
   isHomeView,
 };

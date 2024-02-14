@@ -9,6 +9,8 @@
         "id": "1qJHc9bytwRnbvN2tctlDL",
         "uri": "spotify:album:1qJHc9bytwRnbvN2tctlDL",
         "name": "Dark Places",
+        "release_date": "2021-06-07",
+        "album_type": "single",
         "artists": [
           {
             "id": "2jvTYwyzxK1FVYGEoKfZLQ",
@@ -67,6 +69,8 @@
         "id": "2dWojT5wPowGSARgpHAENj",
         "uri": "spotify:album:2dWojT5wPowGSARgpHAENj",
         "name": "We Control",
+        "release_date": "2022-04-08",
+        "album_type": "single",
         "artists": [
           {
             "id": "4h8IEOdrg60WM5XGyNOCVU",
@@ -115,6 +119,8 @@
         "id": "6L9vJcQPmdPQC7KYAgpk3k",
         "uri": "spotify:album:6L9vJcQPmdPQC7KYAgpk3k",
         "name": "Overdrive EP",
+        "release_date": "2023-05-17",
+        "album_type": "single",
         "artists": [
           {
             "id": "1lJhME1ZpzsEa5M0wW6Mso",
@@ -163,6 +169,8 @@
         "id": "2B6iCfl7t7bv8ZGc3f7KPZ",
         "uri": "spotify:album:2B6iCfl7t7bv8ZGc3f7KPZ",
         "name": "Stratosphere - The Remixes",
+        "release_date": "2021-02-12",
+        "album_type": "single",
         "artists": [
           {
             "id": "0Z2EpubIhxnq4B6PV0I8n3",
@@ -216,6 +224,8 @@
         "id": "1fTPCs8ZaLC8KBq1iiWWLM",
         "uri": "spotify:album:1fTPCs8ZaLC8KBq1iiWWLM",
         "name": "Stay With Me",
+        "release_date": "2017-12-04",
+        "album_type": "single",
         "artists": [
           {
             "id": "37U9sPqTZMd7AKJCWgcvkt",
@@ -264,6 +274,8 @@
         "id": "3dVJGlYK0tr62K6MKnKPys",
         "uri": "spotify:album:3dVJGlYK0tr62K6MKnKPys",
         "name": "Kontakt 05: Adrenaline Machine",
+        "release_date": "2021-02-05",
+        "album_type": "single",
         "artists": [
           {
             "id": "3SEw2qamdOWyVZtzKxWTTg",
@@ -332,6 +344,8 @@
         "id": "0C24gM4unxLDwJNa0ax8LP",
         "uri": "spotify:album:0C24gM4unxLDwJNa0ax8LP",
         "name": "Gravity",
+        "release_date": "2023-02-17",
+        "album_type": "single",
         "artists": [
           {
             "id": "6TVdVlY6irsNPkMHT2HkfD",
@@ -380,6 +394,8 @@
         "id": "6hHi4OlpNnto3GNoLQyUG9",
         "uri": "spotify:album:6hHi4OlpNnto3GNoLQyUG9",
         "name": "Close Your Eyes EP",
+        "release_date": "2023-03-31",
+        "album_type": "single",
         "artists": [
           {
             "id": "4eFbq5PZgW7YbtA65PP4wS",
@@ -428,6 +444,8 @@
         "id": "68yEeHuIGikcVlyBo5UHvI",
         "uri": "spotify:album:68yEeHuIGikcVlyBo5UHvI",
         "name": "2084",
+        "release_date": "2023-05-05",
+        "album_type": "single",
         "artists": [
           {
             "id": "7orlzf5LTqSnCzURkZFebN",
@@ -476,6 +494,8 @@
         "id": "5D7QfnijsdNFc3KvKcQQFt",
         "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
         "name": "Les tentations",
+        "release_date": "1997-01-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "41o2A93SPxIUxsy5HQjvul",
@@ -524,6 +544,8 @@
         "id": "5D7QfnijsdNFc3KvKcQQFt",
         "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
         "name": "Les tentations",
+        "release_date": "1997-01-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "41o2A93SPxIUxsy5HQjvul",
@@ -582,6 +604,8 @@
         "id": "5D7QfnijsdNFc3KvKcQQFt",
         "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
         "name": "Les tentations",
+        "release_date": "1997-01-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "41o2A93SPxIUxsy5HQjvul",
@@ -630,6 +654,8 @@
         "id": "6EwTLRHMROD853Kv1lAMex",
         "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
         "name": "Multitude",
+        "release_date": "2022-07-27",
+        "album_type": "album",
         "artists": [
           {
             "id": "5j4HeCoUlzhfWtjAfM1acR",
@@ -678,6 +704,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -726,6 +754,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -774,6 +804,8 @@
         "id": "7eugEzpVGg4umQRaFD4ocg",
         "uri": "spotify:album:7eugEzpVGg4umQRaFD4ocg",
         "name": "50 Best Hits",
+        "release_date": "1965-07-11",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -822,6 +854,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -870,6 +904,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -918,6 +954,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -966,6 +1004,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -1014,6 +1054,8 @@
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
         "name": "Presenting The 5 Satins",
+        "release_date": "1957-11-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "2YP02JRa1JLejrg3XTssJS",
@@ -1062,6 +1104,8 @@
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "release_date": "2019-03-24",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1110,6 +1154,8 @@
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
         "name": "Reprises",
+        "release_date": "2017-09-04",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1158,6 +1204,8 @@
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
         "name": "Reprises",
+        "release_date": "2017-09-04",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1206,6 +1254,8 @@
         "id": "0DunPxU8C8FXeHpEKBIzts",
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
         "name": "Despacito",
+        "release_date": "2019-07-06",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1254,6 +1304,8 @@
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "release_date": "2019-03-24",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1302,6 +1354,8 @@
         "id": "1k8zteiBvZDtW1BlnXPVZ8",
         "uri": "spotify:album:1k8zteiBvZDtW1BlnXPVZ8",
         "name": "Bella Ciao",
+        "release_date": "2018-05-17",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1350,6 +1404,8 @@
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
         "name": "Reprises",
+        "release_date": "2017-09-04",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1398,6 +1454,8 @@
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
         "name": "Reprises, Vol. 2",
+        "release_date": "2019-03-24",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",
@@ -1446,6 +1504,8 @@
         "id": "7Dzfcj8tp9CUmkD6kXAqcb",
         "uri": "spotify:album:7Dzfcj8tp9CUmkD6kXAqcb",
         "name": "All I Have to Do Is Dream",
+        "release_date": "2019-07-12",
+        "album_type": "album",
         "artists": [
           {
             "id": "4ACplpEqD6JIVgKrafauzs",
@@ -1494,6 +1554,8 @@
         "id": "5cFL3OKYGj71I8i2uQ7YGp",
         "uri": "spotify:album:5cFL3OKYGj71I8i2uQ7YGp",
         "name": "\"They're Off and Rolling\" Says Archie",
+        "release_date": "1957-05-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "4ACplpEqD6JIVgKrafauzs",
@@ -1542,6 +1604,8 @@
         "id": "78RuPW4tEcalOQQEW85Sxz",
         "uri": "spotify:album:78RuPW4tEcalOQQEW85Sxz",
         "name": "The Everly Brothers' Best",
+        "release_date": "1959-05-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "4ACplpEqD6JIVgKrafauzs",
@@ -1590,6 +1654,8 @@
         "id": "78RuPW4tEcalOQQEW85Sxz",
         "uri": "spotify:album:78RuPW4tEcalOQQEW85Sxz",
         "name": "The Everly Brothers' Best",
+        "release_date": "1959-05-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "4ACplpEqD6JIVgKrafauzs",
@@ -1638,6 +1704,8 @@
         "id": "6EMFcjkD4LHxfwqfJlPjsb",
         "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
         "name": "Johnny Tillotson's Best",
+        "release_date": "1962-01-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "36msvw9B10rxW90NSQ2794",
@@ -1686,6 +1754,8 @@
         "id": "6EMFcjkD4LHxfwqfJlPjsb",
         "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
         "name": "Johnny Tillotson's Best",
+        "release_date": "1962-01-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "36msvw9B10rxW90NSQ2794",
@@ -1734,6 +1804,8 @@
         "id": "68yEeHuIGikcVlyBo5UHvI",
         "uri": "spotify:album:68yEeHuIGikcVlyBo5UHvI",
         "name": "2084",
+        "release_date": "2023-05-05",
+        "album_type": "single",
         "artists": [
           {
             "id": "7orlzf5LTqSnCzURkZFebN",
@@ -1782,6 +1854,8 @@
         "id": "2VmU63FIBsGgQYItCvsYkl",
         "uri": "spotify:album:2VmU63FIBsGgQYItCvsYkl",
         "name": "The Duke Of Earl",
+        "release_date": "1962-01-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "52uMkSFt2RVO6XxTEt5VeW",
@@ -1830,6 +1904,8 @@
         "id": "29RWikz0slFF5Izww4G6rb",
         "uri": "spotify:album:29RWikz0slFF5Izww4G6rb",
         "name": "Les idoles américaines du rhythm and blues : The Clovers, Vol. 1",
+        "release_date": "2019-11-28",
+        "album_type": "album",
         "artists": [
           {
             "id": "0ckkj0a9CvIJr4h84B0OlN",
@@ -1878,6 +1954,8 @@
         "id": "0mtLFaQ3hL371jsNraRo9g",
         "uri": "spotify:album:0mtLFaQ3hL371jsNraRo9g",
         "name": "Dirty Dancing (Original Motion Picture Soundtrack)",
+        "release_date": "1987-09-24",
+        "album_type": "compilation",
         "artists": [
           {
             "id": "0LyfQWJT6nXafLPZqxe9Of",
@@ -1931,6 +2009,8 @@
         "id": "7AgI5vniflcbh86Znea7yM",
         "uri": "spotify:album:7AgI5vniflcbh86Znea7yM",
         "name": "Under the Boardwalk",
+        "release_date": "1964-06-01",
+        "album_type": "album",
         "artists": [
           {
             "id": "1FqqOl9itIUpXr4jZPIVoT",
@@ -1979,6 +2059,8 @@
         "id": "0g3mvAod8Y0xt4d4tJOWJa",
         "uri": "spotify:album:0g3mvAod8Y0xt4d4tJOWJa",
         "name": "Nathan Michael Shawn Wanya",
+        "release_date": "2000-08-30",
+        "album_type": "album",
         "artists": [
           {
             "id": "6O74knDqdv3XaWtkII7Xjp",
@@ -2027,6 +2109,8 @@
         "id": "3jknvlUSe6D9Oyn2E3JBLO",
         "uri": "spotify:album:3jknvlUSe6D9Oyn2E3JBLO",
         "name": "Cooleyhighharmony (Bonus Tracks Version)",
+        "release_date": "1991-04-30",
+        "album_type": "album",
         "artists": [
           {
             "id": "6O74knDqdv3XaWtkII7Xjp",
@@ -2075,6 +2159,8 @@
         "id": "2S8NKCht9cDIZGhcfQsW68",
         "uri": "spotify:album:2S8NKCht9cDIZGhcfQsW68",
         "name": "A Casual Look",
+        "release_date": "2007-02-26",
+        "album_type": "album",
         "artists": [
           {
             "id": "1n0PTPiHxmlkU7ND1HVFZQ",
@@ -2123,6 +2209,8 @@
         "id": "1mP0kFIDxcbuXnPhTPCo7v",
         "uri": "spotify:album:1mP0kFIDxcbuXnPhTPCo7v",
         "name": "Presenting The Moonglows",
+        "release_date": "1953-03-04",
+        "album_type": "album",
         "artists": [
           {
             "id": "1sZwQg2rvSlGhkG218SouM",
@@ -2171,6 +2259,8 @@
         "id": "39Hh5k01di42nUCLn8Wxqu",
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
         "name": "Liszt - My Piano Hero",
+        "release_date": "2011-08-22",
+        "album_type": "album",
         "artists": [
           {
             "id": "1385hLNbrnbCJGokfH2ac2",
@@ -2229,6 +2319,8 @@
         "id": "1i7e6Cu4N6zhbhvJ4lNw6G",
         "uri": "spotify:album:1i7e6Cu4N6zhbhvJ4lNw6G",
         "name": "Panique Celtique",
+        "release_date": "1998",
+        "album_type": "album",
         "artists": [
           {
             "id": "6k68jYvlUy3CXOwhG1NDBL",
@@ -2277,6 +2369,8 @@
         "id": "7ubO2LZJZFpyhiWMZkRwcH",
         "uri": "spotify:album:7ubO2LZJZFpyhiWMZkRwcH",
         "name": "2000",
+        "release_date": "2023-03-17",
+        "album_type": "album",
         "artists": [
           {
             "id": "0tmwSHipWxN12fsoLcFU3B",
@@ -2325,6 +2419,8 @@
         "id": "3tiEnone5M9hFCnmk9j6xj",
         "uri": "spotify:album:3tiEnone5M9hFCnmk9j6xj",
         "name": "Les démons de minuit - EP",
+        "release_date": "2016-05-23",
+        "album_type": "single",
         "artists": [
           {
             "id": "6BGRCwCR7pQWXqWNhBE2vf",
@@ -2373,6 +2469,8 @@
         "id": "2sBB17RXTamvj7Ncps15AK",
         "uri": "spotify:album:2sBB17RXTamvj7Ncps15AK",
         "name": "lovely (with Khalid)",
+        "release_date": "2018-04-19",
+        "album_type": "single",
         "artists": [
           {
             "id": "6qqNVTkY8uBg9cP3Jd7DAH",
@@ -2431,6 +2529,8 @@
         "id": "0DunPxU8C8FXeHpEKBIzts",
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
         "name": "Despacito",
+        "release_date": "2019-07-06",
+        "album_type": "single",
         "artists": [
           {
             "id": "0PUi9O36OMwere5DTyayAq",

@@ -15,7 +15,6 @@ const userDisplayName = writableLocalStorage('userDisplayName', '');
 const userPictureUrl = writableLocalStorage('userPictureUrl', '');
 
 // SPOTIFY ITEMS
-const playerStateTrackUri = writable('');
 const trackUri = writable('');
 const trackName = writable('');
 const albumUri = writable('');
@@ -29,6 +28,7 @@ const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
 );
 const likedTracks = writable([]);
+const forbiddenContextUri = writableLocalStorage('forbiddenContextUri', []);
 
 // MY LIB
 /** @type {import('svelte/store').Writable<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifyArtist)[]>} */
@@ -117,6 +117,10 @@ const VIEWS = derived(
   },
 );
 
+const contextUri = derived([viewName, VIEWS_MY_LIB], ([$viewName, $VIEWS_MY_LIB]) => {
+  return $viewName !== 'mylib' ? '' : $VIEWS_MY_LIB.at(-1)?.props?.uri;
+});
+
 function currentView() {
   if ('home' === get(viewName)) {
     return VIEWS_HOME;
@@ -163,7 +167,6 @@ export {
   playerFull,
   optionsFull,
   listSortOptionsFull,
-  playerStateTrackUri,
   trackUri,
   trackName,
   albumName,
@@ -174,6 +177,7 @@ export {
   artists,
   artistsDisplay,
   likedTracks,
+  forbiddenContextUri,
   myLibRecentlyPlayed,
   myLibPlaylists,
   myLibAlbums,
@@ -194,6 +198,7 @@ export {
   scrollTop,
   viewName,
   VIEWS,
+  contextUri,
   currentView,
   addView,
   removeView,
