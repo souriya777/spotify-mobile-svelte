@@ -12,21 +12,21 @@ DRY -> Single Source of Truth
 
 # MVP
 
+- feat(search): ui
+  -- design
+  -- can show previous search
+  -- can click on search result and go to detail
+  -- can back to search ?
 - feat(search): can show `tracks`
 - feat(search): manage offset results
   -- create basic button
   -- manage call api
   -- test unit ?
   -- manage scroll down detection
-- feat(search): ui
-  -- draw on paper the ui
-  -- create input
-  -- 🟢store : create variable that store previous search
-  -- can show previous search
-  -- can click on search result and go to detail
-  -- can back to search ?
-- remove `Collection*`
-- 🥳🥳🥳🥳🥳 check ADOPT OLD CODE TO NEW : `refactor` in `main` ????
+
+- CODE REVIEW
+
+- refresh-token for new token => prevent redirect ?
 
 - search in playlist
 - feat(artist-detail): js
@@ -40,6 +40,7 @@ DRY -> Single Source of Truth
 - feat(liked-song): which api call to know if a song is in favourite ?
   => CollectionAlbumTrackSECONDARY_ACTION.svelte
 - feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
+- remove `Collection*`
 - feat(liked-song): can unlike song
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist

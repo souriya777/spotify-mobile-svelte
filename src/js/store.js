@@ -56,6 +56,7 @@ const appReady = derived(
 );
 const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
 const searchQuery = writableLocalStorage('searchQuery', '');
+const previousSearchQuery = writableLocalStorage('previousSearchQuery', []);
 const scrollTop = writable(0);
 
 // PLAYER
@@ -195,6 +196,7 @@ export {
   appReady,
   serviceWorkerNotification,
   searchQuery,
+  previousSearchQuery,
   scrollTop,
   viewName,
   VIEWS,

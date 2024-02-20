@@ -1,10 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-  import { searchQuery } from '@js/store';
-  import { debounce } from '@js/souriya-utils';
-  import { isEmpty } from '@js/string-utils';
-  import SpotifyApi from '@js/SpotifyApi';
-  import { displayFilterSearch } from '@js/store';
+  import { displayFilterSearch, previousSearchQuery } from '@js/store';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   // import CollectionTrack from '@lib/PlaylistTracks.svelte';
   import CollectionAlbum from '@lib/ListAlbum.svelte';
@@ -13,13 +8,13 @@
   import ListPlaylist from '@lib/ListPlaylist.svelte';
   import ListFilter from '@lib/ListFilter.svelte';
   import FadeEffect from '@lib/FadeEffect.svelte';
-
-  const DEBOUNCE_SEARCH_MS = 750;
+  import SearchInput from '@lib/SearchInput.svelte';
 
   /** @type {import('@js/spotify').SpotifySearch}
    */
   let searchResult = null;
   let startFadeEffect;
+  let isInputFocused = false;
 
   $: firstTracks = searchResult?.tracks?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
   $: firstArtists = searchResult?.artists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
@@ -29,44 +24,21 @@
   // $: nextTracks = searchResult?.tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
   $: nextArtists = searchResult?.artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
   $: nextAlbums = searchResult?.albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-
-  $: queryUrl = window.location.href.match(/(?<=search\/).*/i)?.[0] ?? '';
-  $: decodedQueryUrl = decodeURI(queryUrl);
-
-  onMount(() => {
-    search($searchQuery);
-  });
-
-  const updateQuery = (e) => {
-    const query = e?.target?.value;
-
-    if (!query) {
-      return;
-    }
-
-    search(query);
-  };
-
-  function search(query) {
-    if (isEmpty(query)) {
-      return;
-    }
-
-    $searchQuery = query;
-
-    debounce(async () => {
-      searchResult = await SpotifyApi.search(query);
-    }, DEBOUNCE_SEARCH_MS);
-  }
 </script>
 
 <ViewRoot title="Search">
-  <input
-    type="text"
-    placeholder="What do you want to listen to ?"
-    on:input={updateQuery}
-    bind:value={decodedQueryUrl}
+  <SearchInput
+    focused={isInputFocused}
+    on:focus={() => (isInputFocused = true)}
+    on:cancel={() => (isInputFocused = false)}
   />
+
+  <div class="previous-search">
+    TODO only on click search's item
+    {JSON.stringify($previousSearchQuery)}
+  </div>
+
+  <div class="suggestion">TODO suggestion</div>
 
   <!-- FIXME -->
   <!-- <ListFilter
