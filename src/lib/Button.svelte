@@ -98,8 +98,8 @@
     width: unset;
     padding-inline: 1.7rem;
     border-radius: 1.8rem;
-    background-color: var(--color-primary-highlight);
-    color: var(--color-on-primary-highlight);
+    background-color: var(--color-primary-elevated);
+    color: var(--color-on-primary-elevated);
     transition:
       background-color 300ms ease,
       color 300ms ease;
@@ -121,8 +121,8 @@
   .bubbleNano {
     height: var(--size-button-bubble-nano);
     width: var(--size-button-bubble-nano);
-    background-color: var(--color-primary-highlight);
-    color: var(--color-on-primary-highlight);
+    background-color: var(--color-primary-elevated);
+    color: var(--color-on-primary-elevated);
   }
 
   .accent {

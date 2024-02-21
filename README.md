@@ -12,17 +12,18 @@ DRY -> Single Source of Truth
 
 # MVP
 
-- feat(search): ui
-  -- design
-  -- can show previous search
-  -- can click on search result and go to detail
-  -- can back to search ?
+- feat(search): basic functionnalities
+  -- feat(search): when clicked twice on search nav, focus input
+  -- feat(search): merge MyLibList with SearchResultList
+  -- feat(search): can show previous search
+  -- feat(search): can click on search result and go to detail
+  -- feat(search): can back to search ?
 - feat(search): can show `tracks`
 - feat(search): manage offset results
-  -- create basic button
-  -- manage call api
-  -- test unit ?
-  -- manage scroll down detection
+  -- feat(search): create basic button
+  -- feat(search): manage call api
+  -- feat(search): test unit ?
+  -- feat(search): manage scroll down detection
 
 - CODE REVIEW
 

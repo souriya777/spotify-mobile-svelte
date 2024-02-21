@@ -1,12 +1,13 @@
 :root {
   --color-primary: #121212;
-  --color-primary-highlight: #282828;
+  --color-primary-highlight: #1a1a1a;
+  --color-primary-elevated: #282828;
   --color-secondary: #fff;
   --color-tertiary: #b3b3b3;
   --color-accent: #1ed760;
   --color-on-primary: var(--color-secondary);
   --color-on-accent: #000;
-  --color-on-primary-highlight: var(--color-secondary);
+  --color-on-primary-elevated: var(--color-secondary);
   --background-color-options-blur: rgba(18, 18, 18, 0.2);
   --background-color-list-filter: rgba(18, 18, 18, 0.7);
 
@@ -27,7 +28,7 @@
   --height-detail-header: 6rem;
   --width-scrolling-text-blur: 1rem;
 
-  --padding-bottom-phone: 4.4rem;
+  --padding-block-end-phone: 4.4rem;
   --padding-block-player: 1rem;
   --padding-block-library: 1.4rem;
   --padding-block-bottom-panel: 2.4rem;
@@ -41,10 +42,8 @@
   --border-radius-bottom-panel-mini: 1rem;
   --shadow-cover: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
   --shadow-list-filter-shift__right: 8px;
-  --shadow-list-filter-begin: var(--shadow-list-filter-shift__right) 0px 11px 2px
-    var(--color-primary);
-  --shadow-list-filter-end: calc(-1 * var(--shadow-list-filter-shift__right)) 0px 11px 2px
-    var(--color-primary);
+  --shadow-list-filter-begin: var(--shadow-list-filter-shift__right) 0px 11px 2px var(--color-primary);
+  --shadow-list-filter-end: calc(-1 * var(--shadow-list-filter-shift__right)) 0px 11px 2px var(--color-primary);
   --transition-bottom-panel: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
   --transition-bottom-panel-mini: 0.25s cubic-bezier(0.26, 0.66, 0.43, 0.76);
   --transition-background: 200ms ease-in-out;
@@ -109,8 +108,8 @@ ul {
 }
 
 .highlight-area {
-  background-color: var(--color-primary-highlight);
-  color: var(--color-on-primary-highlight);
+  background-color: var(--color-primary-elevated);
+  color: var(--color-on-primary-elevated);
   padding: 1rem;
 }
 

@@ -2,7 +2,7 @@ import { writable, derived, get } from 'svelte/store';
 import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
 import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
-import { DEFAULT_PLAYING_RGB } from '@js/palette-utils';
+import { DEFAULT_BACKGROUND_HIGHLIGHT_RGB } from '@js/palette-utils';
 import { LIST_SORT_IDS } from '@js/list-sort-utils';
 
 // ACCESS
@@ -146,7 +146,7 @@ const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
 const gridMode = writable(false);
 const isSideMenuVisible = writable(false);
-const playingRgb = writable([...DEFAULT_PLAYING_RGB]);
+const playingRgb = writable([...DEFAULT_BACKGROUND_HIGHLIGHT_RGB]);
 const navigatingRgb = writable();
 const isNavigatingHasPriority = writable(false);
 const listSortId = writable(LIST_SORT_IDS.RECENTS);
@@ -156,6 +156,9 @@ const slidePrevAndRemoveForMe = writable();
 // FILTER
 const displayFilterMyLib = createDisplayFilter();
 const displayFilterSearch = createDisplayFilter();
+
+// EVENT
+const eventBus = writable({});
 
 export {
   accessToken,
@@ -217,4 +220,5 @@ export {
   isSideMenuVisible,
   displayFilterMyLib,
   displayFilterSearch,
+  eventBus,
 };

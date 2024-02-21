@@ -137,7 +137,7 @@
     height: 100%;
     padding-block-start: var(--padding-block-bottom-panel);
     padding-inline: var(--padding-inline-bottom-panel);
-    background-color: var(--color-primary-highlight);
+    background-color: var(--color-primary-elevated);
     border-top-left-radius: var(--border-radius-bottom-panel-mini);
     border-top-right-radius: var(--border-radius-bottom-panel-mini);
   }

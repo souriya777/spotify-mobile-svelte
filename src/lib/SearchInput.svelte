@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { previousSearchQuery, searchQuery } from '@js/store';
+  import { previousSearchQuery, searchQuery, eventBus } from '@js/store';
   import { debounce } from '@js/souriya-utils';
   import { isEmpty } from '@js/string-utils';
   import SpotifyApi from '@js/SpotifyApi';
@@ -12,6 +12,12 @@
   const dispatch = createEventDispatcher();
 
   let value = '';
+
+  // TODO factorize
+  $: if ($eventBus?.type === 'search-input-focus-event' && $eventBus?.data?.timestamp != null) {
+    console.log('$eventBus', $eventBus, $eventBus?.data?.timestamp);
+    $eventBus = {};
+  }
 
   function search() {
     if (isEmpty(value)) {
@@ -33,22 +39,24 @@
 </script>
 
 <div class="search-input" class:focused>
-  <div class="icon">
-    <Svg name="loupe" />
+  <div class="input-container">
+    <div class="icon">
+      <Svg name="loupe" />
+    </div>
+    <input
+      type="text"
+      placeholder="What do you want to listen to?"
+      class:font-search-input-focus={focused}
+      bind:value
+      on:input={search}
+      on:focus
+    />
+    <button on:click={cancel}>Cancel</button>
   </div>
-  <input
-    type="text"
-    placeholder="What do you want to listen to?"
-    class:font-search-input-focus={focused}
-    bind:value
-    on:input={search}
-    on:focus
-  />
-  <button on:click={cancel}>Cancel</button>
 </div>
 
 <style>
-  .search-input {
+  .input-container {
     display: flex;
     align-items: center;
     color: var(--color-primary);
@@ -95,21 +103,28 @@
   }
 
   .focused {
+    margin-inline: calc(-1 * var(--padding-inline-view-content));
+    padding-block: 1rem 0.8rem;
+    padding-inline: var(--padding-inline-view-content);
+    background-color: var(--color-primary-highlight);
+  }
+
+  .focused .input-container {
     height: 3.2rem;
   }
 
   .focused .icon {
     padding-inline: 0.4rem;
-    background-color: var(--color-primary-highlight);
-    color: var(--color-on-primary-highlight);
+    background-color: var(--color-primary-elevated);
+    color: var(--color-on-primary-elevated);
   }
 
-  :global(.search-input .focused .icon svg) {
+  :global(.search-input.focused .icon svg) {
     height: 1.8rem;
   }
 
   .focused input {
-    background-color: var(--color-primary-highlight);
+    background-color: var(--color-primary-elevated);
     color: var(--color-secondary);
     caret-color: var(--color-accent);
   }

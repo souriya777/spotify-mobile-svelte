@@ -27,7 +27,7 @@
 <style>
   nav {
     width: 100%;
-    padding-block: 1.6rem var(--padding-bottom-phone);
+    padding-block: 1.6rem var(--padding-block-end-phone);
     height: var(--height-nav);
     background-image: linear-gradient(
       to bottom,

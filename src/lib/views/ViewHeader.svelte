@@ -1,6 +1,7 @@
 <script>
   import { userPictureUrl } from '@js/store';
   import User from '@lib/User.svelte';
+
   export let title = '';
 
   $: style = `--picture-url: ${$userPictureUrl};`;

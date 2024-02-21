@@ -5,7 +5,7 @@
     hasMinimumContrast,
     sortByHighToLowContrast,
     lightenDarkenColor,
-    DEFAULT_PLAYING_RGB,
+    DEFAULT_BACKGROUND_HIGHLIGHT_RGB,
   } from '@js/palette-utils';
   import { navigatingRgb, playingRgb } from '@js/store';
   import ColorThief from 'colorthief';
@@ -28,7 +28,7 @@
   /** @type {HTMLImageElement} */
   let imgHtml;
   let palette = [];
-  let dominantColor = [...DEFAULT_PLAYING_RGB];
+  let dominantColor = [...DEFAULT_BACKGROUND_HIGHLIGHT_RGB];
   let contrastColor1 = null;
   let contrastColor2 = null;
 
@@ -52,7 +52,7 @@
       ? getPlayerBackgroundRgb(contrastColor1, contrastColor2)
       : contrastColor1 && !contrastColor2
         ? contrastColor1
-        : [...DEFAULT_PLAYING_RGB];
+        : [...DEFAULT_BACKGROUND_HIGHLIGHT_RGB];
   $: blendContrastDarkerColor = lightenDarkenColor(blendContrastColor, DARKER_FACTOR);
   $: highestColor = highestContrast(dominantColor, blendContrastColor, blendContrastDarkerColor);
   $: if (highestColor) {

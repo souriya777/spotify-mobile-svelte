@@ -58,7 +58,7 @@
   .empty-img {
     display: grid;
     place-content: center;
-    background-color: var(--color-primary-highlight);
+    background-color: var(--color-primary-elevated);
   }
 
   .bubble .img-container {

@@ -1,4 +1,6 @@
-const DEFAULT_PLAYING_RGB = [40, 40, 40];
+const DEFAULT_BACKGROUND_RGB = [18, 18, 18];
+const DEFAULT_BACKGROUND_ELEVATED_RGB = [26, 26, 26];
+const DEFAULT_BACKGROUND_HIGHLIGHT_RGB = [40, 40, 40];
 const BLENDED_COLOR_AFTER_START_COLOR_INDEX = 1;
 const CONTRAST_MIN_RATIO = 4.5;
 const RED_LUMINANCE = 0.2126;
@@ -193,7 +195,9 @@ export {
   _contrast,
   _calculateRgbFactors,
   _blendPalette,
-  DEFAULT_PLAYING_RGB,
+  DEFAULT_BACKGROUND_RGB,
+  DEFAULT_BACKGROUND_ELEVATED_RGB,
+  DEFAULT_BACKGROUND_HIGHLIGHT_RGB,
   generatePalette,
   getPlayerBackgroundRgb,
   hasMinimumContrast,

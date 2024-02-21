@@ -414,7 +414,7 @@
 
   ul > :first-child {
     width: calc(100% - var(--side-menu-smaller-width));
-    background-color: var(--color-primary-highlight);
+    background-color: var(--color-primary-elevated);
   }
 
   ul > :nth-child(2),

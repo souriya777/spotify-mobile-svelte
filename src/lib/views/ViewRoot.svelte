@@ -3,13 +3,14 @@
 
   export let title = '';
   export let header = true;
+  export let contentFull = false;
 
   /** @type {HTMLElement} */
   let VIEW;
 </script>
 
-<div class="view" bind:this={VIEW}>
-  {#if header}
+<div class="view" class:contentFull bind:this={VIEW}>
+  {#if header && !contentFull}
     <ViewHeader {title}>
       <div slot="right" class="right"><slot name="header__right" /></div>
       <div slot="bottom"><slot name="header__bottom" /></div>
@@ -17,9 +18,7 @@
   {/if}
 
   <div class="view__content">
-    <div class="view__content-text">
-      <slot />
-    </div>
+    <slot />
   </div>
 </div>
 
@@ -32,11 +31,8 @@
     position: relative;
     padding-block-end: var(--padding-block-library);
     padding-inline: var(--padding-inline-view-content);
-    z-index: var(--z-index-near);
-  }
-
-  .view__content-text {
     background-color: var(--color-primary);
+    z-index: var(--z-index-near);
   }
 
   .right {
