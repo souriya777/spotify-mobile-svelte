@@ -5,7 +5,7 @@
 <ul class="list" class:mylib={$viewName === 'mylib'} class:gridMode={$gridMode}><slot /></ul>
 
 <style>
-  .mylib.list {
+  .list {
     padding-block-end: var(--height-nav-and-player-mini);
     padding-block-start: var(--padding-block-library);
   }

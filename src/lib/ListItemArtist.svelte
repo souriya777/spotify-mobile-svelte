@@ -4,7 +4,9 @@
 
   /** @type {import('@js/spotify').SpotifySearchArtist} */
   export let item;
-  export let owner = '';
+  export let hasPrefix = false;
+
+  $: owner = hasPrefix ? `Artist` : '';
 </script>
 
 <ListItem

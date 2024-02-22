@@ -1,9 +1,8 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { previousSearchQuery, searchQuery } from '@js/store';
+  import { searchQuery } from '@js/store';
   import { debounce } from '@js/souriya-utils';
   import { isEmpty } from '@js/string-utils';
-  import SpotifyApi from '@js/SpotifyApi';
   import Svg from '@lib/svg/Svg.svelte';
 
   export let focused;
@@ -27,8 +26,9 @@
     $searchQuery = value;
 
     debounce(async () => {
-      previousSearchQuery.update((arr) => [...arr, value]);
-      SpotifyApi.search(value).then((result) => console.log(result));
+      dispatch('valid', {
+        value,
+      });
     }, DEBOUNCE_SEARCH_MS);
   }
 

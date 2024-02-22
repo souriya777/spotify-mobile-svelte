@@ -6,31 +6,50 @@
     previousSearchQuery,
     eventBus,
   } from '@js/store';
+  import { DEFAULT_BACKGROUND_ELEVATED_RGB, DEFAULT_BACKGROUND_RGB } from '@js/palette-utils';
+  import { SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT } from '@js/spotify-utils';
+  import SpotifyApi from '@js/SpotifyApi';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
-  // import CollectionTrack from '@lib/PlaylistTracks.svelte';
-  import CollectionAlbum from '@lib/ListAlbum.svelte';
-  import ListArtist from '@lib/ListArtist.svelte';
-  import { SPOTIFY_FIRST_RESULTS_LIMIT } from '@js/spotify-utils';
-  import ListPlaylist from '@lib/ListPlaylist.svelte';
   import ListFilter from '@lib/ListFilter.svelte';
+  import ListAll from '@lib/ListAll.svelte';
+  import ListPlaylist from '@lib/ListPlaylist.svelte';
+  import ListAlbum from '@lib/ListAlbum.svelte';
+  import ListArtist from '@lib/ListArtist.svelte';
   import FadeEffect from '@lib/FadeEffect.svelte';
   import SearchInput from '@lib/SearchInput.svelte';
-  import { DEFAULT_BACKGROUND_ELEVATED_RGB, DEFAULT_BACKGROUND_RGB } from '@js/palette-utils';
+  import ListTrack from '@lib/ListTrack.svelte';
 
   /** @type {import('@js/spotify').SpotifySearch} */
   let searchResult = null;
   let startFadeEffect;
   let isInputFocused = false;
-  let hasResult = false;
+  let searchValue = '';
 
   $: firstTracks = searchResult?.tracks?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
   $: firstArtists = searchResult?.artists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstPlaylists = searchResult?.playlists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
   $: firstAlbums = searchResult?.albums?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstPlaylists = searchResult?.playlists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
 
-  // $: nextTracks = searchResult?.tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: nextArtists = searchResult?.artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: nextAlbums = searchResult?.albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: nextTracks =
+    searchResult?.tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+  $: nextArtists =
+    searchResult?.artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+  $: nextAlbums =
+    searchResult?.albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+  $: nextPlaylists =
+    searchResult?.playlists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+
+  $: RESULTS = [
+    ...firstTracks,
+    ...firstArtists,
+    ...firstAlbums,
+    ...firstPlaylists,
+    ...nextTracks,
+    ...nextArtists,
+    ...nextAlbums,
+    ...nextPlaylists,
+  ];
+  $: hasResult = RESULTS?.length > 0;
 
   $: {
     if (isInputFocused) {
@@ -46,16 +65,22 @@
     $eventBus = null;
     isInputFocused = true;
   }
+
+  function search(e) {
+    searchValue = e.detail.value;
+    // FIXME
+    // previousSearchQuery.update((arr) => [...arr, value]);
+    SpotifyApi.search(searchValue).then((result) => (searchResult = result));
+  }
 </script>
 
 <ViewRoot title="Search" contentFull={isInputFocused}>
   <SearchInput
     focused={isInputFocused}
+    on:valid={search}
     on:focus={() => (isInputFocused = true)}
     on:cancel={() => (isInputFocused = false)}
   />
-
-  <button on:click={() => (hasResult = !hasResult)}>hasResult:{hasResult}</button>
 
   {#if hasResult}
     <div class="previous-search">
@@ -65,65 +90,37 @@
 
     <div class="suggestion">TODO suggestion</div>
 
-    <!-- FIXME -->
-    <!-- <ListFilter
+    <ListFilter
       isMyLib={false}
       hasTracks={firstTracks.length > 0}
       hasArtists={firstArtists.length > 0}
       hasAlbums={firstAlbums.length > 0}
       hasPlaylists={firstPlaylists.length > 0}
       callback={startFadeEffect}
-    /> -->
-    <ListFilter
-      isMyLib={false}
-      hasTracks={true}
-      hasArtists={true}
-      hasAlbums={true}
-      hasPlaylists={true}
-      callback={startFadeEffect}
     />
 
     <FadeEffect bind:start={startFadeEffect}>
-      {#if $displayFilterSearch.trackOn}
-        <h3>1st tracks</h3>
-        {firstTracks}
-        <!-- <CollectionTrack items={firstTracks} /> -->
-      {/if}
-
-      {#if $displayFilterSearch.artistOn}
-        <h3>1st artists</h3>
-        <ListArtist items={firstArtists} />
-      {/if}
-
-      {#if $displayFilterSearch.playlistOn}
-        <h3>1st playlists</h3>
-        <ListPlaylist items={firstPlaylists} />
-      {/if}
-
-      {#if $displayFilterSearch.albumOn}
-        <h3>1st albums</h3>
-        <CollectionAlbum items={firstAlbums} />
-      {/if}
-
-      {#if $displayFilterSearch.trackOn}
-        <h3>next tracks</h3>
-        TODO
-        <!-- <CollectionTrack items={nextTracks} /> -->
-      {/if}
-
-      {#if $displayFilterSearch.artistOn}
-        <h3>next artists</h3>
-        <ListArtist items={nextArtists} />
-      {/if}
-
-      {#if $displayFilterSearch.playlistOn}
-        <h3>next playlists</h3>
-      {/if}
-
-      {#if $displayFilterSearch.albumOn}
-        <h3>next albums</h3>
-        <CollectionAlbum items={nextAlbums} />
+      {#if $displayFilterSearch.trackActive}
+        <ListTrack items={[]} />
+      {:else if $displayFilterSearch.playlistActive}
+        <ListPlaylist items={[]} />
+      {:else if $displayFilterSearch.albumActive}
+        <ListAlbum items={[]} />
+      {:else if $displayFilterSearch.artistActive}
+        <ListArtist items={[]} />
+      {:else}
+        <ListAll items={RESULTS} hasPrefix={true}>
+          <div class="view-all" slot="end">
+            View all results for &lsquo;{searchValue}&rsquo;
+          </div>
+        </ListAll>
       {/if}
     </FadeEffect>
   {/if}
 </ViewRoot>
+
+<style>
+  .view-all {
+    color: var(--color-accent);
+  }
+</style>

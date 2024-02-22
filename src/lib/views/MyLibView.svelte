@@ -10,15 +10,16 @@
     myLibArtists,
   } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
+  import { sortMyLibBySpotify } from '@js/list-sort-utils';
   import { SPOTIFY_FIRST_RESULTS_LIMIT } from '@js/spotify-utils';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Button from '@lib/Button.svelte';
   import ListPlaylist from '@lib/ListPlaylist.svelte';
   import ListAlbum from '@lib/ListAlbum.svelte';
-  import ListFilter from '@lib/ListFilter.svelte';
   import ListArtist from '@lib/ListArtist.svelte';
+  import ListFilter from '@lib/ListFilter.svelte';
   import Svg from '@lib/svg/Svg.svelte';
-  import ListMyLib from '@lib/ListMyLib.svelte';
+  import ListAll from '@lib/ListAll.svelte';
   import ListSortButton from '@lib/ListSortButton.svelte';
   import FadeEffect from '@lib/FadeEffect.svelte';
 
@@ -53,6 +54,9 @@
   onMount(() => {
     // LIKED TRACKS
     SpotifyApi.getLikedTracks().then((items) => ($likedTracks = items));
+
+    // MY LIB
+    sortMyLibBySpotify();
   });
 </script>
 
@@ -106,7 +110,7 @@
     {:else if $displayFilterMyLib.artistActive}
       <ListArtist items={$myLibArtists} />
     {:else}
-      <ListMyLib items={MY_LIB} />
+      <ListAll items={MY_LIB} showLikedPlaylist={true} />
     {/if}
   </FadeEffect>
 </ViewRoot>

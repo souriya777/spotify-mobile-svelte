@@ -7,7 +7,7 @@
   export let hasPrefix = false;
 
   $: displayName = item?.owner?.display_name;
-  $: owner = hasPrefix ? `playlist &bull; ${displayName}` : displayName;
+  $: owner = hasPrefix ? `Playlist &bull; ${displayName}` : displayName;
 </script>
 
 <ListItem
