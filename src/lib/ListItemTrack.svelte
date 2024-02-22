@@ -1,5 +1,5 @@
 <script>
-  import { goDetail } from '@js/view-utils';
+  import SpotifyApi from '@js/SpotifyApi';
   import ListItem from '@lib/ListItem.svelte';
 
   /** @type {import('@js/spotify').SpotifyTrack} */
@@ -16,9 +16,5 @@
   {owner}
   images={item?.album?.images}
   imageAlt={item?.name}
-  callbackFn={() =>
-    goDetail('TrackView', {
-      id: item?.id,
-      uri: item?.uri,
-    })}
+  callbackFn={() => SpotifyApi.playTrack(item?.uri)}
 />

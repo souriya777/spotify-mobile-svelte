@@ -13,9 +13,8 @@ DRY -> Single Source of Truth
 # MVP
 
 - feat(search): basic functionnalities
-  -- feat(search): can click on search result and go to detail
   -- feat(search): can show previous search
-  -- feat(search): can back to search ?
+  -- feat(search): show suggestion... how ?
 - feat(search): manage offset results
   -- feat(search): create basic button
   -- feat(search): manage call api
@@ -94,6 +93,7 @@ DRY -> Single Source of Truth
 - refactor(button): use use:onTap
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
 - refactor(fonts): group fonts together by size
+- perf: mylib or search view always do call api when "backed" (eg. when goDetail)
 - perf(list): spotify endpoint `/me/albums` is very slow...
 - perf(list): move liked track loading elsewhere ? (`MyLibView`)
 - perf(user-profile): picture in cache ?

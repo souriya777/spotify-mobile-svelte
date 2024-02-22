@@ -44,5 +44,5 @@
     />
   </svelte:fragment>
 
-  <Tracks uri={playlist?.uri} {tracks} />
+  <Tracks contextUri={playlist?.uri} {tracks} />
 </ViewDetail>

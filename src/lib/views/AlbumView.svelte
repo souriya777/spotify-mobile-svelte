@@ -39,5 +39,5 @@
       album?.album_type?.slice(1)}&nbsp;&bull;&nbsp;{album?.release_date?.slice(0, 4)}
   </svelte:fragment>
 
-  <Tracks hideImage={true} uri={album?.uri} {tracks} />
+  <Tracks hideImage={true} contextUri={album?.uri} {tracks} />
 </ViewDetail>

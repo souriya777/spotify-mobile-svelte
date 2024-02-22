@@ -12,7 +12,7 @@
 
   /** @type {HTMLElement} */
   let INPUT_HTML;
-  let value = '';
+  let value = $searchQuery ? $searchQuery : '';
 
   $: if (focused === true && INPUT_HTML) {
     INPUT_HTML.focus();
@@ -23,12 +23,8 @@
       return;
     }
 
-    $searchQuery = value;
-
     debounce(async () => {
-      dispatch('valid', {
-        value,
-      });
+      $searchQuery = value;
     }, DEBOUNCE_SEARCH_MS);
   }
 

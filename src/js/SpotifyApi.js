@@ -216,6 +216,7 @@ class SpotifyApi {
     // FIXME sometimes we have error
     // [spotify-player.js]: Failed to perform playback: Cannot perform operation; no list was loaded.
     get(player).resume();
+    playing.set(true);
     LOGGER.log('play');
   }
 
@@ -223,15 +224,16 @@ class SpotifyApi {
   async playTrack(uri) {
     this.#put(`/me/player/play`, { uris: [uri] });
     trackUri.set(uri);
+    playing.set(true);
     LOGGER.log('playTrack', uri);
   }
 
   /**
-   * @param {string} contextUri
    * @param {string} currentTrackUri
+   * @param {string} contextUri
    * @param {number} indexPosition
    */
-  async playTrackWithContext(contextUri, currentTrackUri, indexPosition) {
+  async playTrackWithContext(currentTrackUri, contextUri, indexPosition) {
     try {
       await this.#put(`/me/player/play`, {
         context_uri: contextUri,
@@ -242,7 +244,7 @@ class SpotifyApi {
 
       trackUri.set(currentTrackUri);
       playing.set(true);
-      LOGGER.log('playTrackWithContext', contextUri, indexPosition);
+      LOGGER.log('playTrackWithContext', currentTrackUri, contextUri, indexPosition);
     } catch (err) {
       const status = err?.response?.status;
       if (status === SpotifyStatus.FORBIDDEN) {

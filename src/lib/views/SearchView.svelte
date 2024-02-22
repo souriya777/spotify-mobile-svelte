@@ -3,6 +3,7 @@
     displayFilterSearch,
     isNavigatingHasPriority,
     navigatingRgb,
+    searchQuery,
     previousSearchQuery,
     eventBus,
   } from '@js/store';
@@ -18,26 +19,28 @@
   import FadeEffect from '@lib/FadeEffect.svelte';
   import SearchInput from '@lib/SearchInput.svelte';
   import ListTrack from '@lib/ListTrack.svelte';
+  import { isNotEmpty } from '@js/string-utils';
 
   /** @type {import('@js/spotify').SpotifySearch} */
   let searchResult = null;
   let startFadeEffect;
   let isInputFocused = false;
-  let searchValue = '';
 
-  $: firstTracks = searchResult?.tracks?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstArtists = searchResult?.artists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstAlbums = searchResult?.albums?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstPlaylists = searchResult?.playlists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: tracks = searchResult?.tracks;
+  $: artists = searchResult?.artists;
+  $: albums = searchResult?.albums;
+  $: playlists = searchResult?.playlists;
 
-  $: nextTracks =
-    searchResult?.tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
-  $: nextArtists =
-    searchResult?.artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
-  $: nextAlbums =
-    searchResult?.albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+  $: firstTracks = tracks?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstArtists = artists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstAlbums = albums?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+  $: firstPlaylists = playlists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
+
+  $: nextTracks = tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+  $: nextArtists = artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+  $: nextAlbums = albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
   $: nextPlaylists =
-    searchResult?.playlists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
+    playlists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
 
   $: RESULTS = [
     ...firstTracks,
@@ -66,11 +69,23 @@
     isInputFocused = true;
   }
 
-  function search(e) {
-    searchValue = e.detail.value;
+  $: if (isNotEmpty($searchQuery)) {
+    isInputFocused = true;
+    search();
+  } else {
+    isInputFocused = false;
+    searchResult = null;
+  }
+
+  function search() {
     // FIXME
     // previousSearchQuery.update((arr) => [...arr, value]);
-    SpotifyApi.search(searchValue).then((result) => (searchResult = result));
+    SpotifyApi.search($searchQuery).then((result) => (searchResult = result));
+  }
+
+  function cancel() {
+    isInputFocused = false;
+    $searchQuery = '';
   }
 </script>
 
@@ -79,7 +94,7 @@
     focused={isInputFocused}
     on:valid={search}
     on:focus={() => (isInputFocused = true)}
-    on:cancel={() => (isInputFocused = false)}
+    on:cancel={cancel}
   />
 
   {#if hasResult}
@@ -101,17 +116,17 @@
 
     <FadeEffect bind:start={startFadeEffect}>
       {#if $displayFilterSearch.trackActive}
-        <ListTrack items={[]} />
-      {:else if $displayFilterSearch.playlistActive}
-        <ListPlaylist items={[]} />
-      {:else if $displayFilterSearch.albumActive}
-        <ListAlbum items={[]} />
+        <ListTrack items={tracks} />
       {:else if $displayFilterSearch.artistActive}
-        <ListArtist items={[]} />
+        <ListArtist items={artists} />
+      {:else if $displayFilterSearch.albumActive}
+        <ListAlbum items={albums} />
+      {:else if $displayFilterSearch.playlistActive}
+        <ListPlaylist items={playlists} />
       {:else}
         <ListAll items={RESULTS} hasPrefix={true}>
           <div class="view-all" slot="end">
-            View all results for &lsquo;{searchValue}&rsquo;
+            View all results for &lsquo;{$searchQuery}&rsquo;
           </div>
         </ListAll>
       {/if}

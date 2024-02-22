@@ -1,17 +1,11 @@
 <script>
-  import { trackUri } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
   import ListItem from '@lib/ListItem.svelte';
 
-  export let uri = null;
+  export let contextUri = null;
   /** @type {import('@js/spotify').SpotifyTrack[]} */
   export let tracks;
   export let hideImage = false;
-
-  function play(indexPosition, currentTrackUri) {
-    $trackUri = currentTrackUri;
-    SpotifyApi.playTrackWithContext(uri, currentTrackUri, indexPosition);
-  }
 </script>
 
 <ul>
@@ -25,7 +19,7 @@
       owner={artist}
       images={album?.images}
       imageAlt={album?.name}
-      callbackFn={() => play(i, track?.uri)}
+      callbackFn={() => SpotifyApi.playTrackWithContext(track?.uri, contextUri, i)}
     />
   {/each}
 </ul>
