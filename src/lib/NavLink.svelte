@@ -1,6 +1,5 @@
 <script>
   import { viewName as viewNameStore, eventBus } from '@js/store';
-  import { getTimestamp } from '@js/date-utils';
   import { goRootView } from '@js/view-utils';
 
   export let label;
@@ -16,7 +15,6 @@
 
   function goto() {
     const IS_NAV_SEARCH_DOUBLE_CLICKED = $viewNameStore === viewName && viewName === 'search';
-    console.log('goto', $viewNameStore, viewName, IS_NAV_SEARCH_DOUBLE_CLICKED);
     bounce = true;
     isAnimationPlayed = false;
     $viewNameStore = viewName;
@@ -25,9 +23,6 @@
     if (IS_NAV_SEARCH_DOUBLE_CLICKED) {
       eventBus.set({
         type: 'search-input-focus-event',
-        data: {
-          timestamp: getTimestamp(),
-        },
       });
     }
   }

@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { previousSearchQuery, searchQuery, eventBus } from '@js/store';
+  import { previousSearchQuery, searchQuery } from '@js/store';
   import { debounce } from '@js/souriya-utils';
   import { isEmpty } from '@js/string-utils';
   import SpotifyApi from '@js/SpotifyApi';
@@ -11,12 +11,12 @@
   const DEBOUNCE_SEARCH_MS = 750;
   const dispatch = createEventDispatcher();
 
+  /** @type {HTMLElement} */
+  let INPUT_HTML;
   let value = '';
 
-  // TODO factorize
-  $: if ($eventBus?.type === 'search-input-focus-event' && $eventBus?.data?.timestamp != null) {
-    console.log('$eventBus', $eventBus, $eventBus?.data?.timestamp);
-    $eventBus = {};
+  $: if (focused === true && INPUT_HTML) {
+    INPUT_HTML.focus();
   }
 
   function search() {
@@ -48,6 +48,7 @@
       placeholder="What do you want to listen to?"
       class:font-search-input-focus={focused}
       bind:value
+      bind:this={INPUT_HTML}
       on:input={search}
       on:focus
     />

@@ -4,6 +4,7 @@
     isNavigatingHasPriority,
     navigatingRgb,
     previousSearchQuery,
+    eventBus,
   } from '@js/store';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   // import CollectionTrack from '@lib/PlaylistTracks.svelte';
@@ -39,6 +40,11 @@
       $navigatingRgb = DEFAULT_BACKGROUND_RGB;
       $isNavigatingHasPriority = false;
     }
+  }
+
+  $: if ($eventBus?.type === 'search-input-focus-event') {
+    $eventBus = null;
+    isInputFocused = true;
   }
 </script>
 

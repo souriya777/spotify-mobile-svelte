@@ -5,3 +5,10 @@ export type View = {
     [key: string]: any;
   };
 };
+
+export type EventBus = {
+  type: 'search-input-focus-event';
+  data?: {
+    [key: string]: any;
+  };
+};

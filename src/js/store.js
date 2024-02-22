@@ -158,7 +158,8 @@ const displayFilterMyLib = createDisplayFilter();
 const displayFilterSearch = createDisplayFilter();
 
 // EVENT
-const eventBus = writable({});
+/** @type {import('svelte/store').Writable<import('@js/internal').EventBus>} */
+const eventBus = writable(null);
 
 export {
   accessToken,
