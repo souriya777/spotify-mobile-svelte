@@ -8,7 +8,11 @@
     eventBus,
   } from '@js/store';
   import { DEFAULT_BACKGROUND_ELEVATED_RGB, DEFAULT_BACKGROUND_RGB } from '@js/palette-utils';
-  import { SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT } from '@js/spotify-utils';
+  import {
+    SPOTIFY_FIRST_RESULTS_LIMIT,
+    SPOTIFY_SECOND_RESULTS_LIMIT,
+    extractSuggestionsFromSpotifySearch,
+  } from '@js/spotify-utils';
   import SpotifyApi from '@js/SpotifyApi';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   import ListFilter from '@lib/ListFilter.svelte';
@@ -20,6 +24,7 @@
   import SearchInput from '@lib/SearchInput.svelte';
   import ListTrack from '@lib/ListTrack.svelte';
   import { isNotEmpty } from '@js/string-utils';
+  import SearchSuggestions from '@lib/SearchSuggestions.svelte';
 
   /** @type {import('@js/spotify').SpotifySearch} */
   let searchResult = null;
@@ -53,6 +58,8 @@
     ...nextPlaylists,
   ];
   $: hasResult = RESULTS?.length > 0;
+
+  $: SUGGESTIONS = extractSuggestionsFromSpotifySearch($searchQuery, searchResult);
 
   $: {
     if (isInputFocused) {
@@ -103,7 +110,11 @@
       {JSON.stringify($previousSearchQuery)}
     </div>
 
-    <div class="suggestion">TODO suggestion</div>
+    {#if SUGGESTIONS}
+      <div class="suggestion">
+        <SearchSuggestions suggestions={SUGGESTIONS} />
+      </div>
+    {/if}
 
     <ListFilter
       isMyLib={false}

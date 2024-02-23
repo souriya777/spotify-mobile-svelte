@@ -1,8 +1,8 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { isEmpty, isNotEmpty } from '@js/string-utils';
   import { searchQuery } from '@js/store';
   import { debounce } from '@js/souriya-utils';
-  import { isEmpty } from '@js/string-utils';
   import Svg from '@lib/svg/Svg.svelte';
 
   export let focused;
@@ -12,7 +12,7 @@
 
   /** @type {HTMLElement} */
   let INPUT_HTML;
-  let value = $searchQuery ? $searchQuery : '';
+  $: value = isNotEmpty($searchQuery) ? $searchQuery : '';
 
   $: if (focused === true && INPUT_HTML) {
     INPUT_HTML.focus();

@@ -1,93 +1,31 @@
 {
   "albums": [
     {
-      "id": "0FqBcVayol7wTMCAkzFcRN",
-      "uri": "spotify:album:0FqBcVayol7wTMCAkzFcRN",
+      "id": "1JfxfAV7yRy49R8ec1gAme",
+      "uri": "spotify:album:1JfxfAV7yRy49R8ec1gAme",
       "name": "Sherry",
-      "release_date": "2022-01-11",
+      "release_date": "2006-01-20",
       "album_type": "single",
       "artists": [
         {
-          "id": "6U4AfG84hnUE6pzjoS1cz5",
-          "name": "Pallaso",
-          "uri": "spotify:artist:6U4AfG84hnUE6pzjoS1cz5"
+          "id": "0TQUgpZqEnfluYEfKQBYB6",
+          "name": "Henri Salvador",
+          "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
         }
       ],
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b273939ced393a830fec905d2fb4",
+          "url": "https://i.scdn.co/image/ab67616d0000b2730d77b9d13a3ac78307a85a92",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e02939ced393a830fec905d2fb4",
+          "url": "https://i.scdn.co/image/ab67616d00001e020d77b9d13a3ac78307a85a92",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00004851939ced393a830fec905d2fb4",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "1zDZx8d8k4TsbKO1MR2TKk",
-      "uri": "spotify:album:1zDZx8d8k4TsbKO1MR2TKk",
-      "name": "Sherry",
-      "release_date": "2020-06-19",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "3oabe0TbaTk6yWddPOmgu1",
-          "name": "We the Commas",
-          "uri": "spotify:artist:3oabe0TbaTk6yWddPOmgu1"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b273717bd0d6897c804137f5722e",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e02717bd0d6897c804137f5722e",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00004851717bd0d6897c804137f5722e",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "47uPjSO5bNHnD8nbPv9NM5",
-      "uri": "spotify:album:47uPjSO5bNHnD8nbPv9NM5",
-      "name": "Sherry Baby",
-      "release_date": "2014-11-07",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "7FlzgTmmg7QUdg4t03rs7L",
-          "name": "Stayin' Alive Group",
-          "uri": "spotify:artist:7FlzgTmmg7QUdg4t03rs7L"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b27393d70bccfe7b915b2710164c",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e0293d70bccfe7b915b2710164c",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000485193d70bccfe7b915b2710164c",
+          "url": "https://i.scdn.co/image/ab67616d000048510d77b9d13a3ac78307a85a92",
           "height": 64,
           "width": 64
         }
@@ -130,279 +68,31 @@
       ]
     },
     {
-      "id": "1iNdy5mlsxdjbXgbMg1c8W",
-      "uri": "spotify:album:1iNdy5mlsxdjbXgbMg1c8W",
-      "name": "เธอไม่ได้สอนให้ฉันอยู่คนเดียว",
-      "release_date": "2023-02-09",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "3Uzr5SP3rk1GL9OdPYL0Rz",
-          "name": "SHERRY",
-          "uri": "spotify:artist:3Uzr5SP3rk1GL9OdPYL0Rz"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b2732a2bc4f03b6ce3af5cdb8974",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e022a2bc4f03b6ce3af5cdb8974",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d000048512a2bc4f03b6ce3af5cdb8974",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "0kShvXbnNGA7o4ux8d9rMo",
-      "uri": "spotify:album:0kShvXbnNGA7o4ux8d9rMo",
-      "name": "Sherry",
-      "release_date": "2016-05-16",
+      "id": "0tgfJiDoRCPLiOGApN218b",
+      "uri": "spotify:album:0tgfJiDoRCPLiOGApN218b",
+      "name": "The Very Best Of Sheryl Crow",
+      "release_date": "2003-01-01",
       "album_type": "compilation",
       "artists": [
         {
-          "id": "0LyfQWJT6nXafLPZqxe9Of",
-          "name": "Multi-interprètes",
-          "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
         }
       ],
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b273bb2dd3da66c13cac021a5bb3",
+          "url": "https://i.scdn.co/image/ab67616d0000b273e28a65bfeaf7899f4cf6fc29",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e02bb2dd3da66c13cac021a5bb3",
+          "url": "https://i.scdn.co/image/ab67616d00001e02e28a65bfeaf7899f4cf6fc29",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00004851bb2dd3da66c13cac021a5bb3",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "1JfxfAV7yRy49R8ec1gAme",
-      "uri": "spotify:album:1JfxfAV7yRy49R8ec1gAme",
-      "name": "Sherry",
-      "release_date": "2006-01-20",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "0TQUgpZqEnfluYEfKQBYB6",
-          "name": "Henri Salvador",
-          "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b2730d77b9d13a3ac78307a85a92",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e020d77b9d13a3ac78307a85a92",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d000048510d77b9d13a3ac78307a85a92",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "2PxaEhpoKp7qCbSUtVIRYw",
-      "uri": "spotify:album:2PxaEhpoKp7qCbSUtVIRYw",
-      "name": "Cherry Coco",
-      "release_date": "2021-08-25",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "5QjMLsuHSXIyF9GbWoVky1",
-          "name": "Oniisha",
-          "uri": "spotify:artist:5QjMLsuHSXIyF9GbWoVky1"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b273563bcb87871fc56ffd68986e",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e02563bcb87871fc56ffd68986e",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00004851563bcb87871fc56ffd68986e",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "4vDpfevGVUAKRrowAzVqxx",
-      "uri": "spotify:album:4vDpfevGVUAKRrowAzVqxx",
-      "name": "Sherry",
-      "release_date": "2004-11-30",
-      "album_type": "album",
-      "artists": [
-        {
-          "id": "3E1183KUB3zNns8aU66tQT",
-          "name": "Sherry?",
-          "uri": "spotify:artist:3E1183KUB3zNns8aU66tQT"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b273174e06814a672fc18a87d8d2",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e02174e06814a672fc18a87d8d2",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00004851174e06814a672fc18a87d8d2",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "5uk1t8nXjdZTL1gwSPZdO6",
-      "uri": "spotify:album:5uk1t8nXjdZTL1gwSPZdO6",
-      "name": "Sherry",
-      "release_date": "2023-06-22",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "1VUXLwVBAqI3zqKGQ2Bx9h",
-          "name": "Hiromi",
-          "uri": "spotify:artist:1VUXLwVBAqI3zqKGQ2Bx9h"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b2734dc6eac84188ecae94154493",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e024dc6eac84188ecae94154493",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d000048514dc6eac84188ecae94154493",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "6AR71gOzOT0AwJIbPG7V7o",
-      "uri": "spotify:album:6AR71gOzOT0AwJIbPG7V7o",
-      "name": "Sherry",
-      "release_date": "2006-01-20",
-      "album_type": "single",
-      "artists": [
-        {
-          "id": "60U5Nsvpj5mJics5PcIkmd",
-          "name": "Les Chats Sauvages",
-          "uri": "spotify:artist:60U5Nsvpj5mJics5PcIkmd"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b2730f8acd5644d29ee649692635",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e020f8acd5644d29ee649692635",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d000048510f8acd5644d29ee649692635",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "38lNDVewnZj8bsCGIlchky",
-      "uri": "spotify:album:38lNDVewnZj8bsCGIlchky",
-      "name": "The Sherry Lee Show",
-      "release_date": "2023-09-08",
-      "album_type": "album",
-      "artists": [
-        {
-          "id": "0iVed2Qu7dmL0pIYCj1Xw8",
-          "name": "Jackie DeShannon",
-          "uri": "spotify:artist:0iVed2Qu7dmL0pIYCj1Xw8"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b2734bcf5a226a01dbda716e3220",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e024bcf5a226a01dbda716e3220",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d000048514bcf5a226a01dbda716e3220",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "6ljCA01dvLkqbry8cCdvbD",
-      "uri": "spotify:album:6ljCA01dvLkqbry8cCdvbD",
-      "name": "Sherry",
-      "release_date": "2006-01-20",
-      "album_type": "album",
-      "artists": [
-        {
-          "id": "6mcrZQmgzFGRWf7C0SObou",
-          "name": "Frankie Valli & The Four Seasons",
-          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
-        }
-      ],
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b273b025f04ab360692ab671d3a8",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e02b025f04ab360692ab671d3a8",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00004851b025f04ab360692ab671d3a8",
+          "url": "https://i.scdn.co/image/ab67616d00004851e28a65bfeaf7899f4cf6fc29",
           "height": 64,
           "width": 64
         }
@@ -440,6 +130,161 @@
       ]
     },
     {
+      "id": "6Jqv3AJesDpDYTkZzw0NLG",
+      "uri": "spotify:album:6Jqv3AJesDpDYTkZzw0NLG",
+      "name": "Jerez, Xères, Sherry",
+      "release_date": "1998-01-31",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "7g7Eo3k1tAuC6WxQ2oY2an",
+          "name": "La Macanita",
+          "uri": "spotify:artist:7g7Eo3k1tAuC6WxQ2oY2an"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f8e7b951e6d53d7fab2350fb",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f8e7b951e6d53d7fab2350fb",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f8e7b951e6d53d7fab2350fb",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6AR71gOzOT0AwJIbPG7V7o",
+      "uri": "spotify:album:6AR71gOzOT0AwJIbPG7V7o",
+      "name": "Sherry",
+      "release_date": "2006-01-20",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "60U5Nsvpj5mJics5PcIkmd",
+          "name": "Les Chats Sauvages",
+          "uri": "spotify:artist:60U5Nsvpj5mJics5PcIkmd"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2730f8acd5644d29ee649692635",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e020f8acd5644d29ee649692635",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048510f8acd5644d29ee649692635",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5udRC0gBhtIHDUtLJUwLYf",
+      "uri": "spotify:album:5udRC0gBhtIHDUtLJUwLYf",
+      "name": "Best Of",
+      "release_date": "2009-01-05",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "4KBk9hwqFYtGS3DlZJiCsQ",
+          "name": "Eddy Mitchell",
+          "uri": "spotify:artist:4KBk9hwqFYtGS3DlZJiCsQ"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739bee247216e6df1ccd0862bc",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029bee247216e6df1ccd0862bc",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519bee247216e6df1ccd0862bc",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0FqBcVayol7wTMCAkzFcRN",
+      "uri": "spotify:album:0FqBcVayol7wTMCAkzFcRN",
+      "name": "Sherry",
+      "release_date": "2022-01-11",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "6U4AfG84hnUE6pzjoS1cz5",
+          "name": "Pallaso",
+          "uri": "spotify:artist:6U4AfG84hnUE6pzjoS1cz5"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273939ced393a830fec905d2fb4",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02939ced393a830fec905d2fb4",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851939ced393a830fec905d2fb4",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2HALrEPEj4qSZ9aUQ95ElQ",
+      "uri": "spotify:album:2HALrEPEj4qSZ9aUQ95ElQ",
+      "name": "SHERRY",
+      "release_date": "2020-05-08",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "63A4odffbg9Iim3nYjKaYB",
+          "name": "Sherry-ou",
+          "uri": "spotify:artist:63A4odffbg9Iim3nYjKaYB"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273bf5a020f471f5fcd891237d3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02bf5a020f471f5fcd891237d3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851bf5a020f471f5fcd891237d3",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
       "id": "3it7hqsNPi6YrZjpWAU5W2",
       "uri": "spotify:album:3it7hqsNPi6YrZjpWAU5W2",
       "name": "Connections",
@@ -465,6 +310,37 @@
         },
         {
           "url": "https://i.scdn.co/image/ab67616d00004851a4b0d6204e0a1f3a90af7887",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0I1iezuwcQDATLumFtVjpX",
+      "uri": "spotify:album:0I1iezuwcQDATLumFtVjpX",
+      "name": "Sheryfa Luna",
+      "release_date": "2007-01-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "5BPQfQJaq5Hx0636gwk4uA",
+          "name": "Sheryfa Luna",
+          "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b8c62a768b0f7c2cc168efbc",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b8c62a768b0f7c2cc168efbc",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b8c62a768b0f7c2cc168efbc",
           "height": 64,
           "width": 64
         }
@@ -502,62 +378,93 @@
       ]
     },
     {
-      "id": "1g94L1WYjokPGJ9Kj5JGvO",
-      "uri": "spotify:album:1g94L1WYjokPGJ9Kj5JGvO",
-      "name": "Tecumsah Lane",
-      "release_date": "2022-03-03",
-      "album_type": "single",
+      "id": "3FiplT4vIgWCRwLZSn0EDd",
+      "uri": "spotify:album:3FiplT4vIgWCRwLZSn0EDd",
+      "name": "Sheryl Crow",
+      "release_date": "1996-09-24",
+      "album_type": "album",
       "artists": [
         {
-          "id": "0CIQgNxgfEkY9Szpn5lAKO",
-          "name": "Sherry Sharp",
-          "uri": "spotify:artist:0CIQgNxgfEkY9Szpn5lAKO"
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
         }
       ],
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b27333865ea94bca44965cdbfc6d",
+          "url": "https://i.scdn.co/image/ab67616d0000b273a192258deb7084638a5f3a47",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e0233865ea94bca44965cdbfc6d",
+          "url": "https://i.scdn.co/image/ab67616d00001e02a192258deb7084638a5f3a47",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d0000485133865ea94bca44965cdbfc6d",
+          "url": "https://i.scdn.co/image/ab67616d00004851a192258deb7084638a5f3a47",
           "height": 64,
           "width": 64
         }
       ]
     },
     {
-      "id": "6KLdyUiMVFKaYKoFYiGGBV",
-      "uri": "spotify:album:6KLdyUiMVFKaYKoFYiGGBV",
-      "name": "Mother's Day",
-      "release_date": "2021-05-25",
+      "id": "3o23FSpxNHKSC4sfxhucJp",
+      "uri": "spotify:album:3o23FSpxNHKSC4sfxhucJp",
+      "name": "The Lonely Turtle",
+      "release_date": "2021-08-20",
       "album_type": "single",
       "artists": [
         {
-          "id": "47req48j8mLt69nZaBrial",
-          "name": "Sherry Novak",
-          "uri": "spotify:artist:47req48j8mLt69nZaBrial"
+          "id": "7bx1kBLW47pR2XvBd4T7wT",
+          "name": "Sherry Grayson",
+          "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
         }
       ],
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b2732f13a1b3ec2a73f1735423ae",
+          "url": "https://i.scdn.co/image/ab67616d0000b2731c0f569ebeafb3acff6b2387",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e022f13a1b3ec2a73f1735423ae",
+          "url": "https://i.scdn.co/image/ab67616d00001e021c0f569ebeafb3acff6b2387",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d000048512f13a1b3ec2a73f1735423ae",
+          "url": "https://i.scdn.co/image/ab67616d000048511c0f569ebeafb3acff6b2387",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3XjJKI70s58ZJ7bg8Oyyvc",
+      "uri": "spotify:album:3XjJKI70s58ZJ7bg8Oyyvc",
+      "name": "Everything You Do (Sherry)",
+      "release_date": "2024-02-22",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "7iqGNIAJsAtAqIERgdqAYy",
+          "name": "Songfinch",
+          "uri": "spotify:artist:7iqGNIAJsAtAqIERgdqAYy"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27394a772cfe3f4bb619fcd2e4f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0294a772cfe3f4bb619fcd2e4f",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485194a772cfe3f4bb619fcd2e4f",
           "height": 64,
           "width": 64
         }
@@ -595,31 +502,124 @@
       ]
     },
     {
-      "id": "3o23FSpxNHKSC4sfxhucJp",
-      "uri": "spotify:album:3o23FSpxNHKSC4sfxhucJp",
-      "name": "The Lonely Turtle",
-      "release_date": "2021-08-20",
-      "album_type": "single",
+      "id": "4q7YWh6QoxRwV9jLYQgbbQ",
+      "uri": "spotify:album:4q7YWh6QoxRwV9jLYQgbbQ",
+      "name": "Vénus",
+      "release_date": "2008-01-01",
+      "album_type": "album",
       "artists": [
         {
-          "id": "7bx1kBLW47pR2XvBd4T7wT",
-          "name": "Sherry Grayson",
-          "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
+          "id": "5BPQfQJaq5Hx0636gwk4uA",
+          "name": "Sheryfa Luna",
+          "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA"
         }
       ],
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b2731c0f569ebeafb3acff6b2387",
+          "url": "https://i.scdn.co/image/ab67616d0000b273f4dd19572128d8197f4862f6",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e021c0f569ebeafb3acff6b2387",
+          "url": "https://i.scdn.co/image/ab67616d00001e02f4dd19572128d8197f4862f6",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d000048511c0f569ebeafb3acff6b2387",
+          "url": "https://i.scdn.co/image/ab67616d00004851f4dd19572128d8197f4862f6",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "621OhgnZJ7Pz8iUazct1In",
+      "uri": "spotify:album:621OhgnZJ7Pz8iUazct1In",
+      "name": "Cherry Bomb",
+      "release_date": "2015-04-13",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "4V8LLVI7PbaPR0K2TGSxFF",
+          "name": "Tyler, The Creator",
+          "uri": "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e4bf0d3d9e0224a30ca5f665",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e4bf0d3d9e0224a30ca5f665",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e4bf0d3d9e0224a30ca5f665",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7H5FkCA6cTDBX3wtvIbN8s",
+      "uri": "spotify:album:7H5FkCA6cTDBX3wtvIbN8s",
+      "name": "NCT #127 CHERRY BOMB– The 3rd Mini Album",
+      "release_date": "2017-06-14",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "7f4ignuCJhLXfZ9giKT7rH",
+          "name": "NCT 127",
+          "uri": "spotify:artist:7f4ignuCJhLXfZ9giKT7rH"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738d47b664117ca39e7b1acfc9",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028d47b664117ca39e7b1acfc9",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518d47b664117ca39e7b1acfc9",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5VIBDz0S6RFTFbTw8GTwKS",
+      "uri": "spotify:album:5VIBDz0S6RFTFbTw8GTwKS",
+      "name": "The Last Good Album",
+      "release_date": "2023-06-20",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "5azWSYXVoLKYKHlR5zNJ7i",
+          "name": "Sharry Mann",
+          "uri": "spotify:artist:5azWSYXVoLKYKHlR5zNJ7i"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738b7fe8c507a3ee8ea4e7d1d0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028b7fe8c507a3ee8ea4e7d1d0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518b7fe8c507a3ee8ea4e7d1d0",
           "height": 64,
           "width": 64
         }
@@ -650,66 +650,44 @@
       ]
     },
     {
-      "id": "4TKTii6gnOnUXQHyuo9JaD",
-      "name": "Sheryl Crow",
-      "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab6761610000e5ebf27acad0bc622073d9cab662",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616100005174f27acad0bc622073d9cab662",
-          "height": 320,
-          "width": 320
-        },
-        {
-          "url": "https://i.scdn.co/image/ab6761610000f178f27acad0bc622073d9cab662",
-          "height": 160,
-          "width": 160
-        }
-      ]
-    },
-    {
       "id": "3Uzr5SP3rk1GL9OdPYL0Rz",
       "name": "SHERRY",
       "uri": "spotify:artist:3Uzr5SP3rk1GL9OdPYL0Rz",
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab6761610000e5eb4568517697e5affc7e20ccbe",
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc92f55c2c61471f2dcc27805",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab676161000051744568517697e5affc7e20ccbe",
+          "url": "https://i.scdn.co/image/ab67616100005174c92f55c2c61471f2dcc27805",
           "height": 320,
           "width": 320
         },
         {
-          "url": "https://i.scdn.co/image/ab6761610000f1784568517697e5affc7e20ccbe",
+          "url": "https://i.scdn.co/image/ab6761610000f178c92f55c2c61471f2dcc27805",
           "height": 160,
           "width": 160
         }
       ]
     },
     {
-      "id": "5udY4J3ruydRyg98yxTRHw",
-      "name": "Sherry Finzer",
-      "uri": "spotify:artist:5udY4J3ruydRyg98yxTRHw",
+      "id": "4TKTii6gnOnUXQHyuo9JaD",
+      "name": "Sheryl Crow",
+      "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD",
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab6761610000e5eba14a0f2753385628c401812b",
+          "url": "https://i.scdn.co/image/ab6761610000e5eb962c94da847bcc4ef21c4ad9",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616100005174a14a0f2753385628c401812b",
+          "url": "https://i.scdn.co/image/ab67616100005174962c94da847bcc4ef21c4ad9",
           "height": 320,
           "width": 320
         },
         {
-          "url": "https://i.scdn.co/image/ab6761610000f178a14a0f2753385628c401812b",
+          "url": "https://i.scdn.co/image/ab6761610000f178962c94da847bcc4ef21c4ad9",
           "height": 160,
           "width": 160
         }
@@ -738,6 +716,116 @@
       ]
     },
     {
+      "id": "76ofGeLRBabrg897HgfH5D",
+      "name": "Sherry Fino",
+      "uri": "spotify:artist:76ofGeLRBabrg897HgfH5D",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb2267b834169ec5c064e7d941",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051742267b834169ec5c064e7d941",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1782267b834169ec5c064e7d941",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "0qKzket0i9hSMVGTV9fnZe",
+      "name": "Sherry",
+      "uri": "spotify:artist:0qKzket0i9hSMVGTV9fnZe",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb41b6d3bc548173e5c177b3db",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517441b6d3bc548173e5c177b3db",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17841b6d3bc548173e5c177b3db",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "5udY4J3ruydRyg98yxTRHw",
+      "name": "Sherry Finzer",
+      "uri": "spotify:artist:5udY4J3ruydRyg98yxTRHw",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eba14a0f2753385628c401812b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174a14a0f2753385628c401812b",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178a14a0f2753385628c401812b",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "7yXoZBxVtotSwkjbjBPYKc",
+      "name": "Sherry",
+      "uri": "spotify:artist:7yXoZBxVtotSwkjbjBPYKc",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb658057b8e2dd5a2c0dbc99ef",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174658057b8e2dd5a2c0dbc99ef",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178658057b8e2dd5a2c0dbc99ef",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "090VebphoycdEyH165iMqc",
+      "name": "Shirley Bassey",
+      "uri": "spotify:artist:090VebphoycdEyH165iMqc",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebde2373604d3f33221eda2e64",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174de2373604d3f33221eda2e64",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178de2373604d3f33221eda2e64",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
       "id": "2JACl2MnidXPb6QeRrsaVB",
       "name": "Sherry Dyanne",
       "uri": "spotify:artist:2JACl2MnidXPb6QeRrsaVB",
@@ -760,209 +848,50 @@
       ]
     },
     {
-      "id": "0qKzket0i9hSMVGTV9fnZe",
-      "name": "Sherry",
-      "uri": "spotify:artist:0qKzket0i9hSMVGTV9fnZe",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab6761610000e5eb8d382d6f1e0bc1d1fe2b9899",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab676161000051748d382d6f1e0bc1d1fe2b9899",
-          "height": 320,
-          "width": 320
-        },
-        {
-          "url": "https://i.scdn.co/image/ab6761610000f1788d382d6f1e0bc1d1fe2b9899",
-          "height": 160,
-          "width": 160
-        }
-      ]
-    },
-    {
-      "id": "11jVqRZocVEgdDPyiKOcXG",
-      "name": "Sherry",
-      "uri": "spotify:artist:11jVqRZocVEgdDPyiKOcXG",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab6761610000e5ebefd2995a7a72b215199ac93e",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616100005174efd2995a7a72b215199ac93e",
-          "height": 320,
-          "width": 320
-        },
-        {
-          "url": "https://i.scdn.co/image/ab6761610000f178efd2995a7a72b215199ac93e",
-          "height": 160,
-          "width": 160
-        }
-      ]
-    },
-    {
       "id": "1pJVaxQ71H2YqpQnMunMls",
       "name": "Sherry",
       "uri": "spotify:artist:1pJVaxQ71H2YqpQnMunMls",
       "images": []
     },
     {
-      "id": "0YO48xfbjsR7ab2jIsP0hd",
-      "name": "sherrydoctor",
-      "uri": "spotify:artist:0YO48xfbjsR7ab2jIsP0hd",
+      "id": "75kXlozrol8uF89yCEnV29",
+      "name": "Sherry St.Germain",
+      "uri": "spotify:artist:75kXlozrol8uF89yCEnV29",
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b273a26b12b16402d9601f737f69",
+          "url": "https://i.scdn.co/image/ab67616d0000b273b916a50559285021d75a77ac",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e02a26b12b16402d9601f737f69",
+          "url": "https://i.scdn.co/image/ab67616d00001e02b916a50559285021d75a77ac",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00004851a26b12b16402d9601f737f69",
+          "url": "https://i.scdn.co/image/ab67616d00004851b916a50559285021d75a77ac",
           "height": 64,
           "width": 64
         }
       ]
     },
     {
-      "id": "3CDKmzJu6uwEGnPLLZffpD",
-      "name": "Frankie Valli",
-      "uri": "spotify:artist:3CDKmzJu6uwEGnPLLZffpD",
+      "id": "0oOet2f43PA68X5RxKobEy",
+      "name": "Shreya Ghoshal",
+      "uri": "spotify:artist:0oOet2f43PA68X5RxKobEy",
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab6772690000c46cb8af37ba12c1ad7ebcc63c25",
-          "height": 1000,
-          "width": 1000
-        },
-        {
-          "url": "https://i.scdn.co/image/ab6772690000dd22b8af37ba12c1ad7ebcc63c25",
+          "url": "https://i.scdn.co/image/ab6761610000e5eb36a7262247318ff0f1ad00da",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab6772690000bac3b8af37ba12c1ad7ebcc63c25",
-          "height": 200,
-          "width": 200
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67726900008f74b8af37ba12c1ad7ebcc63c25",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "61LAVgfVbkRLgNHEDveOyh",
-      "name": "Cherrymoon Trax",
-      "uri": "spotify:artist:61LAVgfVbkRLgNHEDveOyh",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b273887546e13b3f923cf6380e1d",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e02887546e13b3f923cf6380e1d",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00004851887546e13b3f923cf6380e1d",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "1NGm9l6KIw1ACUlEKiew9j",
-      "name": "Sherryx",
-      "uri": "spotify:artist:1NGm9l6KIw1ACUlEKiew9j",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab6761610000e5eb15bef496cfc61d307e3ae143",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab6761610000517415bef496cfc61d307e3ae143",
+          "url": "https://i.scdn.co/image/ab6761610000517436a7262247318ff0f1ad00da",
           "height": 320,
           "width": 320
         },
         {
-          "url": "https://i.scdn.co/image/ab6761610000f17815bef496cfc61d307e3ae143",
-          "height": 160,
-          "width": 160
-        }
-      ]
-    },
-    {
-      "id": "0CIQgNxgfEkY9Szpn5lAKO",
-      "name": "Sherry Sharp",
-      "uri": "spotify:artist:0CIQgNxgfEkY9Szpn5lAKO",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b27333865ea94bca44965cdbfc6d",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e0233865ea94bca44965cdbfc6d",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000485133865ea94bca44965cdbfc6d",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "0oRnnHXorbTBdUYEZtC327",
-      "name": "Sherry Nellis",
-      "uri": "spotify:artist:0oRnnHXorbTBdUYEZtC327",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b27366ef2693baf5b257bdcb60db",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e0266ef2693baf5b257bdcb60db",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000485166ef2693baf5b257bdcb60db",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "7bx1kBLW47pR2XvBd4T7wT",
-      "name": "Sherry Grayson",
-      "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab6761610000e5ebb98107ce41945ff53b1f1969",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616100005174b98107ce41945ff53b1f1969",
-          "height": 320,
-          "width": 320
-        },
-        {
-          "url": "https://i.scdn.co/image/ab6761610000f178b98107ce41945ff53b1f1969",
+          "url": "https://i.scdn.co/image/ab6761610000f17836a7262247318ff0f1ad00da",
           "height": 160,
           "width": 160
         }
@@ -991,44 +920,44 @@
       ]
     },
     {
-      "id": "75kXlozrol8uF89yCEnV29",
-      "name": "Sherry St.Germain",
-      "uri": "spotify:artist:75kXlozrol8uF89yCEnV29",
+      "id": "5azWSYXVoLKYKHlR5zNJ7i",
+      "name": "Sharry Mann",
+      "uri": "spotify:artist:5azWSYXVoLKYKHlR5zNJ7i",
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67616d0000b273b916a50559285021d75a77ac",
+          "url": "https://i.scdn.co/image/ab6761610000e5eb41c796593174a4d31c5e6048",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://i.scdn.co/image/ab67616d00001e02b916a50559285021d75a77ac",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616d00004851b916a50559285021d75a77ac",
-          "height": 64,
-          "width": 64
-        }
-      ]
-    },
-    {
-      "id": "6mcrZQmgzFGRWf7C0SObou",
-      "name": "Frankie Valli & The Four Seasons",
-      "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab6761610000e5ebb327bc619c6db2f9dce5f431",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://i.scdn.co/image/ab67616100005174b327bc619c6db2f9dce5f431",
+          "url": "https://i.scdn.co/image/ab6761610000517441c796593174a4d31c5e6048",
           "height": 320,
           "width": 320
         },
         {
-          "url": "https://i.scdn.co/image/ab6761610000f178b327bc619c6db2f9dce5f431",
+          "url": "https://i.scdn.co/image/ab6761610000f17841c796593174a4d31c5e6048",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "7bx1kBLW47pR2XvBd4T7wT",
+      "name": "Sherry Grayson",
+      "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb98107ce41945ff53b1f1969",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174b98107ce41945ff53b1f1969",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178b98107ce41945ff53b1f1969",
           "height": 160,
           "width": 160
         }
@@ -1055,30 +984,75 @@
           "width": 160
         }
       ]
+    },
+    {
+      "id": "3oje7VFSEa4S9FSmuxyC5Q",
+      "name": "Les sheriff",
+      "uri": "spotify:artist:3oje7VFSEa4S9FSmuxyC5Q",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb28919bae803959a33684f84b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517428919bae803959a33684f84b",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17828919bae803959a33684f84b",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "3NyNPJaemMYsL14DK2tO01",
+      "name": "Cheryl",
+      "uri": "spotify:artist:3NyNPJaemMYsL14DK2tO01",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb581bef826c6d454a6a61d453",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174581bef826c6d454a6a61d453",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178581bef826c6d454a6a61d453",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "6UfoTQXaV3DuqtDVjZIxwZ",
+      "name": "Cheryl Lynn",
+      "uri": "spotify:artist:6UfoTQXaV3DuqtDVjZIxwZ",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/eb8be14e43cabaeed524a213d84e5f885b4269b3",
+          "height": 559,
+          "width": 426
+        },
+        {
+          "url": "https://i.scdn.co/image/00a313f534c26b4f6ab3aa8c5500daf3d63741be",
+          "height": 262,
+          "width": 200
+        },
+        {
+          "url": "https://i.scdn.co/image/000405ffa940349c271ee9c05f094efd1632feb2",
+          "height": 84,
+          "width": 64
+        }
+      ]
     }
   ],
   "playlists": [
-    {
-      "id": "7fi1Iu6PiTHeplRzW6bRpX",
-      "uri": "spotify:playlist:7fi1Iu6PiTHeplRzW6bRpX",
-      "name": "The Sherry Formula Chill Lofi Beats ☕ to Study/Work/Relax to [LIVE 24/7]",
-      "description": "",
-      "owner": {
-        "id": "k4nh49ligzfkinrcr423nmp9z",
-        "display_name": "wee"
-      },
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67706c0000bebb4d48bf3d60aff5f05a80f325",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/7fi1Iu6PiTHeplRzW6bRpX/tracks",
-        "total": 263
-      }
-    },
     {
       "id": "0GAtzhraDm7arRDSoxk8mL",
       "uri": "spotify:playlist:0GAtzhraDm7arRDSoxk8mL",
@@ -1111,357 +1085,24 @@
       }
     },
     {
-      "id": "13v9LLrgvlHT2dUssGZCid",
-      "uri": "spotify:playlist:13v9LLrgvlHT2dUssGZCid",
-      "name": "sherry playlist",
+      "id": "7fi1Iu6PiTHeplRzW6bRpX",
+      "uri": "spotify:playlist:7fi1Iu6PiTHeplRzW6bRpX",
+      "name": "The Sherry Formula Chill Lofi Beats ☕ to Study/Work/Relax to [LIVE 24/7]",
       "description": "",
       "owner": {
-        "id": "g0dh3silfhkfolgmx2vnzbwku",
-        "display_name": "Sherry"
+        "id": "k4nh49ligzfkinrcr423nmp9z",
+        "display_name": "wee"
       },
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67706c0000bebbfffbca3090e28baaf3368c66",
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb4d48bf3d60aff5f05a80f325",
           "height": null,
           "width": null
         }
       ],
       "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/13v9LLrgvlHT2dUssGZCid/tracks",
-        "total": 757
-      }
-    },
-    {
-      "id": "4QzPmvMN5pjw9Ey0XAiXfc",
-      "uri": "spotify:playlist:4QzPmvMN5pjw9Ey0XAiXfc",
-      "name": "Echo - Israel and New Breed",
-      "description": "",
-      "owner": {
-        "id": "jbhkyzinykj7n2hlwt0koam06",
-        "display_name": "Benjamin Koch"
-      },
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d0000b27388a5c4eebe51aba375d4dfc6",
-          "height": 640,
-          "width": 640
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/4QzPmvMN5pjw9Ey0XAiXfc/tracks",
-        "total": 7
-      }
-    },
-    {
-      "id": "5HsgTqR14Z3iiMiUZYsGxd",
-      "uri": "spotify:playlist:5HsgTqR14Z3iiMiUZYsGxd",
-      "name": "Sherry’s",
-      "description": "",
-      "owner": {
-        "id": "w8h77ud5n19c19x43ys0mha4e",
-        "display_name": "Sherry Loh"
-      },
-      "images": [
-        {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b27370a002a07c7e78abbe128abbab67616d0000b2737908e9c7623e23dffebe8694ab67616d0000b273d3c4115120677fb9d6fc7938ab67616d0000b273d8946e4e14cbce7eb4a2d7c5",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b27370a002a07c7e78abbe128abbab67616d0000b2737908e9c7623e23dffebe8694ab67616d0000b273d3c4115120677fb9d6fc7938ab67616d0000b273d8946e4e14cbce7eb4a2d7c5",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b27370a002a07c7e78abbe128abbab67616d0000b2737908e9c7623e23dffebe8694ab67616d0000b273d3c4115120677fb9d6fc7938ab67616d0000b273d8946e4e14cbce7eb4a2d7c5",
-          "height": 60,
-          "width": 60
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/5HsgTqR14Z3iiMiUZYsGxd/tracks",
-        "total": 86
-      }
-    },
-    {
-      "id": "7BpvXqS5wTeH9y9ANUmfeN",
-      "uri": "spotify:playlist:7BpvXqS5wTeH9y9ANUmfeN",
-      "name": "Sherry ",
-      "description": "",
-      "owner": {
-        "id": "31nnbvd3yroyvut4lqxfehftypya",
-        "display_name": "Sherry Clark"
-      },
-      "images": [
-        {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b27315ace351957a4b42de8714fdab67616d0000b2733b3cf088f8ec06348b4fcf4bab67616d0000b2735f07097bc5df2955df311db0ab67616d0000b27379344bf3db7c45540fc026e7",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b27315ace351957a4b42de8714fdab67616d0000b2733b3cf088f8ec06348b4fcf4bab67616d0000b2735f07097bc5df2955df311db0ab67616d0000b27379344bf3db7c45540fc026e7",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b27315ace351957a4b42de8714fdab67616d0000b2733b3cf088f8ec06348b4fcf4bab67616d0000b2735f07097bc5df2955df311db0ab67616d0000b27379344bf3db7c45540fc026e7",
-          "height": 60,
-          "width": 60
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/7BpvXqS5wTeH9y9ANUmfeN/tracks",
-        "total": 54
-      }
-    },
-    {
-      "id": "3GOPBDe8ZdfN0M8K8dH3jm",
-      "uri": "spotify:playlist:3GOPBDe8ZdfN0M8K8dH3jm",
-      "name": "Puerto Sherryyy 23",
-      "description": "",
-      "owner": {
-        "id": "31q2wuoosoe2jb4a5suuzutcg2vy",
-        "display_name": "carlossuarezm"
-      },
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67706c0000bebbbc601d174de0021fa1535f48",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/3GOPBDe8ZdfN0M8K8dH3jm/tracks",
-        "total": 31
-      }
-    },
-    {
-      "id": "0suXXM9RLlcNE2R2DjjBsg",
-      "uri": "spotify:playlist:0suXXM9RLlcNE2R2DjjBsg",
-      "name": "sherry",
-      "description": "",
-      "owner": {
-        "id": "yc1p568jq69e4ptcqmqvtda0n",
-        "display_name": "Sherry"
-      },
-      "images": [
-        {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b2730c3a1b46b6b846dfdfbc6a7dab67616d0000b27341be6d9cf0ec0067d095a072ab67616d0000b2737e42a53ea7f2ad4f36ab23a5ab67616d0000b273e4ecf4545405fb61706db860",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b2730c3a1b46b6b846dfdfbc6a7dab67616d0000b27341be6d9cf0ec0067d095a072ab67616d0000b2737e42a53ea7f2ad4f36ab23a5ab67616d0000b273e4ecf4545405fb61706db860",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b2730c3a1b46b6b846dfdfbc6a7dab67616d0000b27341be6d9cf0ec0067d095a072ab67616d0000b2737e42a53ea7f2ad4f36ab23a5ab67616d0000b273e4ecf4545405fb61706db860",
-          "height": 60,
-          "width": 60
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/0suXXM9RLlcNE2R2DjjBsg/tracks",
-        "total": 1153
-      }
-    },
-    {
-      "id": "37i9dQZF1EIWnynLr0DYXm",
-      "uri": "spotify:playlist:37i9dQZF1EIWnynLr0DYXm",
-      "name": "Mix SHERRY",
-      "description": "<a href=spotify:playlist:37i9dQZF1EIWb5rW356Zi2>FREEHAND</a>, <a href=spotify:playlist:37i9dQZF1EIZfp713rmtgs>AYLA's</a> et <a href=spotify:playlist:37i9dQZF1EIVr66pCwRvos>PURPEECH</a>",
-      "owner": {
-        "id": "spotify",
-        "display_name": "Spotify"
-      },
-      "images": [
-        {
-          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/3Uzr5SP3rk1GL9OdPYL0Rz/fr/large",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIWnynLr0DYXm/tracks",
-        "total": 50
-      }
-    },
-    {
-      "id": "2mIZLaoVFWD0GlteerMuVo",
-      "uri": "spotify:playlist:2mIZLaoVFWD0GlteerMuVo",
-      "name": "Sherry",
-      "description": "",
-      "owner": {
-        "id": "31bl75goh6mmrzqkqiqgpanjz5fe",
-        "display_name": "Sherry Walker"
-      },
-      "images": [
-        {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b2731185c8bf06cbdb44b0a596a1ab67616d0000b27322e4168b05eee8ad21209425ab67616d0000b273300dd939c3081ff12fa69284ab67616d0000b273c4391dcea9cbe6596f316e3c",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b2731185c8bf06cbdb44b0a596a1ab67616d0000b27322e4168b05eee8ad21209425ab67616d0000b273300dd939c3081ff12fa69284ab67616d0000b273c4391dcea9cbe6596f316e3c",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b2731185c8bf06cbdb44b0a596a1ab67616d0000b27322e4168b05eee8ad21209425ab67616d0000b273300dd939c3081ff12fa69284ab67616d0000b273c4391dcea9cbe6596f316e3c",
-          "height": 60,
-          "width": 60
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/2mIZLaoVFWD0GlteerMuVo/tracks",
-        "total": 1874
-      }
-    },
-    {
-      "id": "37i9dQZF1EIZDEn0HiSA4k",
-      "uri": "spotify:playlist:37i9dQZF1EIZDEn0HiSA4k",
-      "name": "Mix Sherry Maan",
-      "description": "<a href=spotify:playlist:37i9dQZF1EIVqUdajzZNkR>Sharry Mann</a>, <a href=spotify:playlist:37i9dQZF1EIVsoN2QYioqP>Geeta Zaildar</a> et <a href=spotify:playlist:37i9dQZF1EIYpjoBG0zbOR>Deep Karan</a>",
-      "owner": {
-        "id": "spotify",
-        "display_name": "Spotify"
-      },
-      "images": [
-        {
-          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/5muis5Lg8989ZMH8dl3szz/fr/large",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIZDEn0HiSA4k/tracks",
-        "total": 50
-      }
-    },
-    {
-      "id": "1YaQRjCYkq68Z3h7atVgNU",
-      "uri": "spotify:playlist:1YaQRjCYkq68Z3h7atVgNU",
-      "name": "Sherry",
-      "description": "",
-      "owner": {
-        "id": "gyrinyxk749jh0h1zyug3zlvc",
-        "display_name": "Bowronsherry"
-      },
-      "images": [
-        {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b27320e08c8cc23f404d723b5647ab67616d0000b27332e373f2988bc6596a542d1cab67616d0000b27384c53fa832dfa265192419c5ab67616d0000b273bf01fd0986a195d485922167",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b27320e08c8cc23f404d723b5647ab67616d0000b27332e373f2988bc6596a542d1cab67616d0000b27384c53fa832dfa265192419c5ab67616d0000b273bf01fd0986a195d485922167",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b27320e08c8cc23f404d723b5647ab67616d0000b27332e373f2988bc6596a542d1cab67616d0000b27384c53fa832dfa265192419c5ab67616d0000b273bf01fd0986a195d485922167",
-          "height": 60,
-          "width": 60
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/1YaQRjCYkq68Z3h7atVgNU/tracks",
-        "total": 934
-      }
-    },
-    {
-      "id": "37i9dQZF1DZ06evO3ef3qb",
-      "uri": "spotify:playlist:37i9dQZF1DZ06evO3ef3qb",
-      "name": "This Is Sherry Finzer",
-      "description": "This Is Sherry Finzer. Les titres incontournables, réunis dans une seule et même playlist.",
-      "owner": {
-        "id": "spotify",
-        "display_name": "Spotify"
-      },
-      "images": [
-        {
-          "url": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO3ef3qb-large.jpg",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3ef3qb/tracks",
-        "total": 50
-      }
-    },
-    {
-      "id": "08cj1CxsYuAtpim4ybh0EZ",
-      "uri": "spotify:playlist:08cj1CxsYuAtpim4ybh0EZ",
-      "name": "sherryleeplayplaylist",
-      "description": "",
-      "owner": {
-        "id": "milosaur",
-        "display_name": "milosaur"
-      },
-      "images": [
-        {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b27333c52ca8309741c6999ca742ab67616d0000b273647377a36072bd08e44dd32bab67616d0000b273c34064a3c5e4a25892a091f3ab67616d0000b273f996112a93f587975046dc42",
-          "height": 640,
-          "width": 640
-        },
-        {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b27333c52ca8309741c6999ca742ab67616d0000b273647377a36072bd08e44dd32bab67616d0000b273c34064a3c5e4a25892a091f3ab67616d0000b273f996112a93f587975046dc42",
-          "height": 300,
-          "width": 300
-        },
-        {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b27333c52ca8309741c6999ca742ab67616d0000b273647377a36072bd08e44dd32bab67616d0000b273c34064a3c5e4a25892a091f3ab67616d0000b273f996112a93f587975046dc42",
-          "height": 60,
-          "width": 60
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/08cj1CxsYuAtpim4ybh0EZ/tracks",
-        "total": 1159
-      }
-    },
-    {
-      "id": "37i9dQZF1E4ClM1cs50JCn",
-      "uri": "spotify:playlist:37i9dQZF1E4ClM1cs50JCn",
-      "name": "Radio SHERRY",
-      "description": "",
-      "owner": {
-        "id": "spotify",
-        "display_name": "Spotify"
-      },
-      "images": [
-        {
-          "url": "https://seeded-session-images.scdn.co/v1/img/artist/3Uzr5SP3rk1GL9OdPYL0Rz/fr",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E4ClM1cs50JCn/tracks",
-        "total": 50
-      }
-    },
-    {
-      "id": "37i9dQZF1DZ06evO1WZ6PR",
-      "uri": "spotify:playlist:37i9dQZF1DZ06evO1WZ6PR",
-      "name": "This Is Mark Sherry",
-      "description": "This Is Mark Sherry. Les titres incontournables, réunis dans une seule et même playlist.",
-      "owner": {
-        "id": "spotify",
-        "display_name": "Spotify"
-      },
-      "images": [
-        {
-          "url": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO1WZ6PR-large.jpg",
-          "height": null,
-          "width": null
-        }
-      ],
-      "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO1WZ6PR/tracks",
-        "total": 51
+        "href": "https://api.spotify.com/v1/playlists/7fi1Iu6PiTHeplRzW6bRpX/tracks",
+        "total": 274
       }
     },
     {
@@ -1486,48 +1127,246 @@
       }
     },
     {
-      "id": "1yrDLXcPLcTJGZq5PXW9wE",
-      "uri": "spotify:playlist:1yrDLXcPLcTJGZq5PXW9wE",
-      "name": "Sherry’s 😜",
+      "id": "3UvNEFpbzEVWXa9amsNNNn",
+      "uri": "spotify:playlist:3UvNEFpbzEVWXa9amsNNNn",
+      "name": "Sherry",
       "description": "",
       "owner": {
-        "id": "5ffje2spkb2yvjob8iobkjwx3",
-        "display_name": "Sherrymelody"
+        "id": "sherrycaines",
+        "display_name": "sherrycaines"
       },
       "images": [
         {
-          "url": "https://mosaic.scdn.co/640/ab67616d0000b273037fdf3967f20c4191ed0a39ab67616d0000b273a7c826d5515f58372a8bdf71ab67616d0000b273b3f92dcb98574d7289199556ab67616d0000b273e143aaf03dcd26eea18d5f8d",
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2731db27fa11dbafa67857da8f3ab67616d0000b273540fc1d083eac5bcff8dad21ab67616d0000b2737947bf3e8af32378de181b41ab67616d0000b273c1faca501ed4c2752524da96",
           "height": 640,
           "width": 640
         },
         {
-          "url": "https://mosaic.scdn.co/300/ab67616d0000b273037fdf3967f20c4191ed0a39ab67616d0000b273a7c826d5515f58372a8bdf71ab67616d0000b273b3f92dcb98574d7289199556ab67616d0000b273e143aaf03dcd26eea18d5f8d",
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2731db27fa11dbafa67857da8f3ab67616d0000b273540fc1d083eac5bcff8dad21ab67616d0000b2737947bf3e8af32378de181b41ab67616d0000b273c1faca501ed4c2752524da96",
           "height": 300,
           "width": 300
         },
         {
-          "url": "https://mosaic.scdn.co/60/ab67616d0000b273037fdf3967f20c4191ed0a39ab67616d0000b273a7c826d5515f58372a8bdf71ab67616d0000b273b3f92dcb98574d7289199556ab67616d0000b273e143aaf03dcd26eea18d5f8d",
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2731db27fa11dbafa67857da8f3ab67616d0000b273540fc1d083eac5bcff8dad21ab67616d0000b2737947bf3e8af32378de181b41ab67616d0000b273c1faca501ed4c2752524da96",
           "height": 60,
           "width": 60
         }
       ],
       "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/1yrDLXcPLcTJGZq5PXW9wE/tracks",
-        "total": 244
+        "href": "https://api.spotify.com/v1/playlists/3UvNEFpbzEVWXa9amsNNNn/tracks",
+        "total": 763
       }
     },
     {
-      "id": "37i9dQZF1E4neYz4jSjLyY",
-      "uri": "spotify:playlist:37i9dQZF1E4neYz4jSjLyY",
-      "name": "Radio Sherry Maan",
-      "description": "",
+      "id": "37i9dQZF1EIZDEn0HiSA4k",
+      "uri": "spotify:playlist:37i9dQZF1EIZDEn0HiSA4k",
+      "name": "Mix Sherry Maan",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIVsoN2QYioqP>Geeta Zaildar</a>, <a href=spotify:playlist:37i9dQZF1EIVOuHagU424y>Kamal Grewal</a> et <a href=spotify:playlist:37i9dQZF1EIZyXHIikAAnB>Lehmber Hussainpuri</a>",
       "owner": {
         "id": "spotify",
         "display_name": "Spotify"
       },
       "images": [
         {
-          "url": "https://seeded-session-images.scdn.co/v1/img/artist/5muis5Lg8989ZMH8dl3szz/fr",
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/5muis5Lg8989ZMH8dl3szz/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIZDEn0HiSA4k/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1EIWnynLr0DYXm",
+      "uri": "spotify:playlist:37i9dQZF1EIWnynLr0DYXm",
+      "name": "Mix SHERRY",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIZfp713rmtgs>AYLA's</a>, <a href=spotify:playlist:37i9dQZF1EIWMDf5xylJZe>Lower Mansion</a> et <a href=spotify:playlist:37i9dQZF1EIVr66pCwRvos>PURPEECH</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/3Uzr5SP3rk1GL9OdPYL0Rz/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIWnynLr0DYXm/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "0r0672w35odw09ZqnyRzSc",
+      "uri": "spotify:playlist:0r0672w35odw09ZqnyRzSc",
+      "name": "Sherry's playlist",
+      "description": "",
+      "owner": {
+        "id": "w5rkmg4i80xc4mnd7x1xqn4ln",
+        "display_name": "Emeline"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb708018d1f9ba43df3c282073",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0r0672w35odw09ZqnyRzSc/tracks",
+        "total": 168
+      }
+    },
+    {
+      "id": "5Vi5Hw4YIYAjwj950pV206",
+      "uri": "spotify:playlist:5Vi5Hw4YIYAjwj950pV206",
+      "name": "Sherry",
+      "description": "",
+      "owner": {
+        "id": "31vbqwufwd7ahx7o6hvwtyzele44",
+        "display_name": "Kahinga"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2733c9df4c3afb30980eec2674eab67616d0000b27398455157f7ab8cd9782abca6ab67616d0000b273b0a09ea4547fd2a06422a93bab67616d0000b273b3f2b8cc0b393f77b0cb454f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2733c9df4c3afb30980eec2674eab67616d0000b27398455157f7ab8cd9782abca6ab67616d0000b273b0a09ea4547fd2a06422a93bab67616d0000b273b3f2b8cc0b393f77b0cb454f",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2733c9df4c3afb30980eec2674eab67616d0000b27398455157f7ab8cd9782abca6ab67616d0000b273b0a09ea4547fd2a06422a93bab67616d0000b273b3f2b8cc0b393f77b0cb454f",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5Vi5Hw4YIYAjwj950pV206/tracks",
+        "total": 20
+      }
+    },
+    {
+      "id": "7wSTevPtEnE9hORNMlHrIk",
+      "uri": "spotify:playlist:7wSTevPtEnE9hORNMlHrIk",
+      "name": "Sherry Cask Strenght",
+      "description": "",
+      "owner": {
+        "id": "1126121042",
+        "display_name": "Raphaël Blanc"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2732818f0c77ac8d338a1db9961ab67616d0000b27360079d49347274db9e6c8155ab67616d0000b273d0bfa26307c3575b4282fb21ab67616d0000b273ff6dbdb76c0cce850eb706e3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2732818f0c77ac8d338a1db9961ab67616d0000b27360079d49347274db9e6c8155ab67616d0000b273d0bfa26307c3575b4282fb21ab67616d0000b273ff6dbdb76c0cce850eb706e3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2732818f0c77ac8d338a1db9961ab67616d0000b27360079d49347274db9e6c8155ab67616d0000b273d0bfa26307c3575b4282fb21ab67616d0000b273ff6dbdb76c0cce850eb706e3",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/7wSTevPtEnE9hORNMlHrIk/tracks",
+        "total": 450
+      }
+    },
+    {
+      "id": "01757UCfdJFRwAHv84oL1o",
+      "uri": "spotify:playlist:01757UCfdJFRwAHv84oL1o",
+      "name": "FIRST FILL SHERRY BUTT",
+      "description": "",
+      "owner": {
+        "id": "119003752",
+        "display_name": "SHERRY BUTT"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27314faaf2983212c4aa62a7bfbab67616d0000b273b3bd6493ad6e29dcd2ad5a37ab67616d0000b273e9cff7dfe901f92c401f1822ab67616d0000b273edf663e5b94f4c4373989290",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27314faaf2983212c4aa62a7bfbab67616d0000b273b3bd6493ad6e29dcd2ad5a37ab67616d0000b273e9cff7dfe901f92c401f1822ab67616d0000b273edf663e5b94f4c4373989290",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27314faaf2983212c4aa62a7bfbab67616d0000b273b3bd6493ad6e29dcd2ad5a37ab67616d0000b273e9cff7dfe901f92c401f1822ab67616d0000b273edf663e5b94f4c4373989290",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/01757UCfdJFRwAHv84oL1o/tracks",
+        "total": 145
+      }
+    },
+    {
+      "id": "37i9dQZF1E8IsGtEphUrmm",
+      "uri": "spotify:playlist:37i9dQZF1E8IsGtEphUrmm",
+      "name": "Radio Sherry",
+      "description": "Avec Frankie Valli & The Four Seasons, Frankie Valli, The Righteous Brothers, The Drifters et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/track/7sqK6f8dHVx3Q1GjFrVyGl/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E8IsGtEphUrmm/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1DZ06evO3ef3qb",
+      "uri": "spotify:playlist:37i9dQZF1DZ06evO3ef3qb",
+      "name": "This Is Sherry Finzer",
+      "description": "This Is Sherry Finzer. Les titres incontournables, réunis dans une seule et même playlist.",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO3ef3qb-large.jpg",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3ef3qb/tracks",
+        "total": 51
+      }
+    },
+    {
+      "id": "37i9dQZF1E4neYz4jSjLyY",
+      "uri": "spotify:playlist:37i9dQZF1E4neYz4jSjLyY",
+      "name": "Radio Sherry Maan",
+      "description": "Avec Kulbir Jhinjher, Saippy Gill, Joban Malhi et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/5muis5Lg8989ZMH8dl3szz/fr",
           "height": null,
           "width": null
         }
@@ -1538,24 +1377,180 @@
       }
     },
     {
-      "id": "4FZBmoVSspN9Y9DNZZKgyx",
-      "uri": "spotify:playlist:4FZBmoVSspN9Y9DNZZKgyx",
-      "name": "Sherry's",
-      "description": "",
+      "id": "37i9dQZF1E8KqNJRBnnVYu",
+      "uri": "spotify:playlist:37i9dQZF1E8KqNJRBnnVYu",
+      "name": "Radio Sherry Fraser",
+      "description": "Avec Marcy Playground, The Verve Pipe, Eve 6, Everclear et bien d'autres artistes",
       "owner": {
-        "id": "l8yll1nd8gfwdsj2enme32yu0",
-        "display_name": "Sherry"
+        "id": "spotify",
+        "display_name": "Spotify"
       },
       "images": [
         {
-          "url": "https://i.scdn.co/image/ab67706c0000bebb0049e382334f4cad031d3757",
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/track/2mYHCkPg6kvBCRQPdK0QPo/fr",
           "height": null,
           "width": null
         }
       ],
       "tracks": {
-        "href": "https://api.spotify.com/v1/playlists/4FZBmoVSspN9Y9DNZZKgyx/tracks",
-        "total": 458
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E8KqNJRBnnVYu/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1E4ClM1cs50JCn",
+      "uri": "spotify:playlist:37i9dQZF1E4ClM1cs50JCn",
+      "name": "Radio SHERRY",
+      "description": "Avec Lower Mansion, SURFF, lostbeans et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/3Uzr5SP3rk1GL9OdPYL0Rz/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E4ClM1cs50JCn/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "13v9LLrgvlHT2dUssGZCid",
+      "uri": "spotify:playlist:13v9LLrgvlHT2dUssGZCid",
+      "name": "sherry playlist",
+      "description": "",
+      "owner": {
+        "id": "g0dh3silfhkfolgmx2vnzbwku",
+        "display_name": "Sherry"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebbfffbca3090e28baaf3368c66",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/13v9LLrgvlHT2dUssGZCid/tracks",
+        "total": 800
+      }
+    },
+    {
+      "id": "37i9dQZF1EIUHVloW8gqjr",
+      "uri": "spotify:playlist:37i9dQZF1EIUHVloW8gqjr",
+      "name": "Mix Sheryfa Luna",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIWO4UiqYFDpi>Corneille</a>, <a href=spotify:playlist:37i9dQZF1EIXeB1fmCjNkC>L5</a> et <a href=spotify:playlist:37i9dQZF1EIW4qPTmceGtb>TAL</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/5BPQfQJaq5Hx0636gwk4uA/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIUHVloW8gqjr/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "2XF80ZYDjpt1FckTrexfe2",
+      "uri": "spotify:playlist:2XF80ZYDjpt1FckTrexfe2",
+      "name": "Sharry mann sad song 🥺💔",
+      "description": "",
+      "owner": {
+        "id": "ax1dkd9lsksp1xc46z7c4f03d",
+        "display_name": "Uday_sran"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27309b450cfe70e0aebc62c5d88ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2738055d8503e0c3b6ce2004f2eab67616d0000b2738b7fe8c507a3ee8ea4e7d1d0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27309b450cfe70e0aebc62c5d88ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2738055d8503e0c3b6ce2004f2eab67616d0000b2738b7fe8c507a3ee8ea4e7d1d0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27309b450cfe70e0aebc62c5d88ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2738055d8503e0c3b6ce2004f2eab67616d0000b2738b7fe8c507a3ee8ea4e7d1d0",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/2XF80ZYDjpt1FckTrexfe2/tracks",
+        "total": 19
+      }
+    },
+    {
+      "id": "4h5mzlojXdPILM0h1Kp6q0",
+      "uri": "spotify:playlist:4h5mzlojXdPILM0h1Kp6q0",
+      "name": "Sharry maan sad songs ❤️‍🩹",
+      "description": "",
+      "owner": {
+        "id": "31rxlcgpgnlhsouv5xjgvqowpkiu",
+        "display_name": "Rana 🔥"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2739eace582b2cc8b2ad5523261ab67616d0000b273ae727ed95d0971a572cfe1d4ab67616d0000b273f1cc32b7923025f51cf43dc2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2739eace582b2cc8b2ad5523261ab67616d0000b273ae727ed95d0971a572cfe1d4ab67616d0000b273f1cc32b7923025f51cf43dc2",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2739eace582b2cc8b2ad5523261ab67616d0000b273ae727ed95d0971a572cfe1d4ab67616d0000b273f1cc32b7923025f51cf43dc2",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/4h5mzlojXdPILM0h1Kp6q0/tracks",
+        "total": 17
+      }
+    },
+    {
+      "id": "5Abrfhg9OXMeoCQT3ct8TY",
+      "uri": "spotify:playlist:5Abrfhg9OXMeoCQT3ct8TY",
+      "name": "Sharry mann sad song",
+      "description": "",
+      "owner": {
+        "id": "31qhn2ksnqd66sbc3bzekg4t23ge",
+        "display_name": "karanvir singh"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27309b450cfe70e0aebc62c5d88ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2738055d8503e0c3b6ce2004f2eab67616d0000b273eb9f8a2fc83d41ef9c9de656",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27309b450cfe70e0aebc62c5d88ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2738055d8503e0c3b6ce2004f2eab67616d0000b273eb9f8a2fc83d41ef9c9de656",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27309b450cfe70e0aebc62c5d88ab67616d0000b2734e07201c3c90bb3d36d3c528ab67616d0000b2738055d8503e0c3b6ce2004f2eab67616d0000b273eb9f8a2fc83d41ef9c9de656",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5Abrfhg9OXMeoCQT3ct8TY/tracks",
+        "total": 11
       }
     }
   ],
@@ -1601,6 +1596,94 @@
           "id": "4QTd2YuZS6ShgqWfeREdB3",
           "name": "John Lloyd Young",
           "uri": "spotify:artist:4QTd2YuZS6ShgqWfeREdB3"
+        }
+      ]
+    },
+    {
+      "id": "68iChBWE5tZb95QGOcMKtF",
+      "uri": "spotify:track:68iChBWE5tZb95QGOcMKtF",
+      "name": "Sherry",
+      "duration_ms": 157386,
+      "album": {
+        "id": "2Ozhdbo5v89ZdgCHlmF2fR",
+        "uri": "spotify:album:2Ozhdbo5v89ZdgCHlmF2fR",
+        "name": "20 chansons d'or",
+        "release_date": "1998",
+        "album_type": "compilation",
+        "artists": [
+          {
+            "id": "0TQUgpZqEnfluYEfKQBYB6",
+            "name": "Henri Salvador",
+            "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2735003c2594f1472457762691c",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e025003c2594f1472457762691c",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048515003c2594f1472457762691c",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0TQUgpZqEnfluYEfKQBYB6",
+          "name": "Henri Salvador",
+          "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
+        }
+      ]
+    },
+    {
+      "id": "7sqK6f8dHVx3Q1GjFrVyGl",
+      "uri": "spotify:track:7sqK6f8dHVx3Q1GjFrVyGl",
+      "name": "Sherry",
+      "duration_ms": 152160,
+      "album": {
+        "id": "18rFAAWrT2wzvWckYmoLnE",
+        "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
+        "name": "Sherry and 11 Other Hits",
+        "release_date": "1962-10-01",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "6mcrZQmgzFGRWf7C0SObou",
+            "name": "Frankie Valli & The Four Seasons",
+            "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273dee7f5252c91824a57882177",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02dee7f5252c91824a57882177",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851dee7f5252c91824a57882177",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6mcrZQmgzFGRWf7C0SObou",
+          "name": "Frankie Valli & The Four Seasons",
+          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
         }
       ]
     },
@@ -1657,7 +1740,7 @@
         "id": "5sCVURwZOOd13unG0uJmNX",
         "uri": "spotify:album:5sCVURwZOOd13unG0uJmNX",
         "name": "Jersey Boys Original Broadway Cast Recording",
-        "release_date": "2005-11-01",
+        "release_date": "2005-11-15",
         "album_type": "album",
         "artists": [
           {
@@ -1825,6 +1908,94 @@
       ]
     },
     {
+      "id": "0lfPPoWG4b3OmhieJ2YDF0",
+      "uri": "spotify:track:0lfPPoWG4b3OmhieJ2YDF0",
+      "name": "If It Makes You Happy",
+      "duration_ms": 324840,
+      "album": {
+        "id": "3FiplT4vIgWCRwLZSn0EDd",
+        "uri": "spotify:album:3FiplT4vIgWCRwLZSn0EDd",
+        "name": "Sheryl Crow",
+        "release_date": "1996-09-24",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "4TKTii6gnOnUXQHyuo9JaD",
+            "name": "Sheryl Crow",
+            "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273a192258deb7084638a5f3a47",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02a192258deb7084638a5f3a47",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a192258deb7084638a5f3a47",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+        }
+      ]
+    },
+    {
+      "id": "5pHVEIn2RwZQn38qIfB3Rz",
+      "uri": "spotify:track:5pHVEIn2RwZQn38qIfB3Rz",
+      "name": "Cheri Cheri Lady",
+      "duration_ms": 227653,
+      "album": {
+        "id": "15JQStE0eqKcRp2tYzDoRD",
+        "uri": "spotify:album:15JQStE0eqKcRp2tYzDoRD",
+        "name": "The First & Second Album (30th Anniversary Edition)",
+        "release_date": "1985",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "79bxUQsBIXO8nVLB9fYKf7",
+            "name": "Modern Talking",
+            "uri": "spotify:artist:79bxUQsBIXO8nVLB9fYKf7"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27399aab0b95eb4bb1e7e24c795",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0299aab0b95eb4bb1e7e24c795",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485199aab0b95eb4bb1e7e24c795",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "79bxUQsBIXO8nVLB9fYKf7",
+          "name": "Modern Talking",
+          "uri": "spotify:artist:79bxUQsBIXO8nVLB9fYKf7"
+        }
+      ]
+    },
+    {
       "id": "5JgS0FY22HtNpFAJTo507k",
       "uri": "spotify:track:5JgS0FY22HtNpFAJTo507k",
       "name": "Sherry Darling",
@@ -1869,36 +2040,80 @@
       ]
     },
     {
-      "id": "7sqK6f8dHVx3Q1GjFrVyGl",
-      "uri": "spotify:track:7sqK6f8dHVx3Q1GjFrVyGl",
-      "name": "Sherry",
-      "duration_ms": 152160,
+      "id": "3lecU0DYwF4UFACRcCTHCf",
+      "uri": "spotify:track:3lecU0DYwF4UFACRcCTHCf",
+      "name": "Sherry Baby",
+      "duration_ms": 147456,
       "album": {
-        "id": "18rFAAWrT2wzvWckYmoLnE",
-        "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
-        "name": "Sherry and 11 Other Hits",
-        "release_date": "1962-10-01",
-        "album_type": "album",
+        "id": "5bwB9loE0pPLoQ2rU9Pt1x",
+        "uri": "spotify:album:5bwB9loE0pPLoQ2rU9Pt1x",
+        "name": "Sherry Baby",
+        "release_date": "2020-01-27",
+        "album_type": "single",
         "artists": [
           {
-            "id": "6mcrZQmgzFGRWf7C0SObou",
-            "name": "Frankie Valli & The Four Seasons",
-            "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+            "id": "7FH3pQEQrx1ChrIszAqdfI",
+            "name": "Stevie G",
+            "uri": "spotify:artist:7FH3pQEQrx1ChrIszAqdfI"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273dee7f5252c91824a57882177",
+            "url": "https://i.scdn.co/image/ab67616d0000b273a7e8768247e5103fa49ddcba",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02dee7f5252c91824a57882177",
+            "url": "https://i.scdn.co/image/ab67616d00001e02a7e8768247e5103fa49ddcba",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851dee7f5252c91824a57882177",
+            "url": "https://i.scdn.co/image/ab67616d00004851a7e8768247e5103fa49ddcba",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "7FH3pQEQrx1ChrIszAqdfI",
+          "name": "Stevie G",
+          "uri": "spotify:artist:7FH3pQEQrx1ChrIszAqdfI"
+        }
+      ]
+    },
+    {
+      "id": "2dhwZ8n7OCodPQUJ5fT0ex",
+      "uri": "spotify:track:2dhwZ8n7OCodPQUJ5fT0ex",
+      "name": "Sherry",
+      "duration_ms": 152160,
+      "album": {
+        "id": "3y2gHDcfKpQG21SutK6ErH",
+        "uri": "spotify:album:3y2gHDcfKpQG21SutK6ErH",
+        "name": "Oldies 60's",
+        "release_date": "2017-08-10",
+        "album_type": "compilation",
+        "artists": [
+          {
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Multi-interprètes",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273f019e93a36b0be5f11a27385",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02f019e93a36b0be5f11a27385",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851f019e93a36b0be5f11a27385",
             "height": 64,
             "width": 64
           }
@@ -1909,50 +2124,6 @@
           "id": "6mcrZQmgzFGRWf7C0SObou",
           "name": "Frankie Valli & The Four Seasons",
           "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
-        }
-      ]
-    },
-    {
-      "id": "2mYHCkPg6kvBCRQPdK0QPo",
-      "uri": "spotify:track:2mYHCkPg6kvBCRQPdK0QPo",
-      "name": "Sherry Fraser",
-      "duration_ms": 170573,
-      "album": {
-        "id": "5dR0fhE3oveLRSUMMQ3oRB",
-        "uri": "spotify:album:5dR0fhE3oveLRSUMMQ3oRB",
-        "name": "Marcy Playground",
-        "release_date": "1997-01-01",
-        "album_type": "album",
-        "artists": [
-          {
-            "id": "7AQzXO3NPNQsI7oNu5rC3r",
-            "name": "Marcy Playground",
-            "uri": "spotify:artist:7AQzXO3NPNQsI7oNu5rC3r"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b27337d1e5c1ca98ce1ecd754d04",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e0237d1e5c1ca98ce1ecd754d04",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000485137d1e5c1ca98ce1ecd754d04",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "7AQzXO3NPNQsI7oNu5rC3r",
-          "name": "Marcy Playground",
-          "uri": "spotify:artist:7AQzXO3NPNQsI7oNu5rC3r"
         }
       ]
     },
@@ -2001,36 +2172,36 @@
       ]
     },
     {
-      "id": "712KZ0GwKh743ZHgrmW2NY",
-      "uri": "spotify:track:712KZ0GwKh743ZHgrmW2NY",
-      "name": "Echo",
-      "duration_ms": 255378,
+      "id": "2mYHCkPg6kvBCRQPdK0QPo",
+      "uri": "spotify:track:2mYHCkPg6kvBCRQPdK0QPo",
+      "name": "Sherry Fraser",
+      "duration_ms": 170573,
       "album": {
-        "id": "6yDHXqAdyjYi4f1FBbl8dc",
-        "uri": "spotify:album:6yDHXqAdyjYi4f1FBbl8dc",
-        "name": "Feels Like Home, Vol. 1",
-        "release_date": "2021-02-26",
+        "id": "5dR0fhE3oveLRSUMMQ3oRB",
+        "uri": "spotify:album:5dR0fhE3oveLRSUMMQ3oRB",
+        "name": "Marcy Playground",
+        "release_date": "1997-01-01",
         "album_type": "album",
         "artists": [
           {
-            "id": "77HU1Zb1VDIFvWKteJii0E",
-            "name": "Israel & New Breed",
-            "uri": "spotify:artist:77HU1Zb1VDIFvWKteJii0E"
+            "id": "7AQzXO3NPNQsI7oNu5rC3r",
+            "name": "Marcy Playground",
+            "uri": "spotify:artist:7AQzXO3NPNQsI7oNu5rC3r"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273081846ad9e99c9721e3e15b4",
+            "url": "https://i.scdn.co/image/ab67616d0000b27337d1e5c1ca98ce1ecd754d04",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02081846ad9e99c9721e3e15b4",
+            "url": "https://i.scdn.co/image/ab67616d00001e0237d1e5c1ca98ce1ecd754d04",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851081846ad9e99c9721e3e15b4",
+            "url": "https://i.scdn.co/image/ab67616d0000485137d1e5c1ca98ce1ecd754d04",
             "height": 64,
             "width": 64
           }
@@ -2038,43 +2209,43 @@
       },
       "artists": [
         {
-          "id": "77HU1Zb1VDIFvWKteJii0E",
-          "name": "Israel & New Breed",
-          "uri": "spotify:artist:77HU1Zb1VDIFvWKteJii0E"
+          "id": "7AQzXO3NPNQsI7oNu5rC3r",
+          "name": "Marcy Playground",
+          "uri": "spotify:artist:7AQzXO3NPNQsI7oNu5rC3r"
         }
       ]
     },
     {
-      "id": "1MU8rZ1EDVEcwj31rBa4Qt",
-      "uri": "spotify:track:1MU8rZ1EDVEcwj31rBa4Qt",
+      "id": "4ttAuOlD9dPKZD4aWduYa1",
+      "uri": "spotify:track:4ttAuOlD9dPKZD4aWduYa1",
       "name": "Sherry",
-      "duration_ms": 152160,
+      "duration_ms": 206564,
       "album": {
-        "id": "6mYq35s2qwh2NyS8kMGi9n",
-        "uri": "spotify:album:6mYq35s2qwh2NyS8kMGi9n",
-        "name": "Classic Oldie Hits",
-        "release_date": "2023-09-19",
+        "id": "6IrxWgwoDx7snmUlpxOKny",
+        "uri": "spotify:album:6IrxWgwoDx7snmUlpxOKny",
+        "name": "The Best of Seru Serevi",
+        "release_date": "2014-05-19",
         "album_type": "compilation",
         "artists": [
           {
-            "id": "0LyfQWJT6nXafLPZqxe9Of",
-            "name": "Multi-interprètes",
-            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+            "id": "2PnArk9fnoixMsjZG1Fs4O",
+            "name": "Seru Serevi",
+            "uri": "spotify:artist:2PnArk9fnoixMsjZG1Fs4O"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273d34c4c95e53866a0641fa966",
+            "url": "https://i.scdn.co/image/ab67616d0000b2733cf0cdbb8293ce20d0d6a4e5",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02d34c4c95e53866a0641fa966",
+            "url": "https://i.scdn.co/image/ab67616d00001e023cf0cdbb8293ce20d0d6a4e5",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851d34c4c95e53866a0641fa966",
+            "url": "https://i.scdn.co/image/ab67616d000048513cf0cdbb8293ce20d0d6a4e5",
             "height": 64,
             "width": 64
           }
@@ -2082,43 +2253,43 @@
       },
       "artists": [
         {
-          "id": "6mcrZQmgzFGRWf7C0SObou",
-          "name": "Frankie Valli & The Four Seasons",
-          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+          "id": "2PnArk9fnoixMsjZG1Fs4O",
+          "name": "Seru Serevi",
+          "uri": "spotify:artist:2PnArk9fnoixMsjZG1Fs4O"
         }
       ]
     },
     {
-      "id": "7cdnq45E9aP2XDStHg5vd7",
-      "uri": "spotify:track:7cdnq45E9aP2XDStHg5vd7",
-      "name": "Cherry Bomb",
-      "duration_ms": 138706,
+      "id": "3ZpQiJ78LKINrW9SQTgbXd",
+      "uri": "spotify:track:3ZpQiJ78LKINrW9SQTgbXd",
+      "name": "All I Wanna Do",
+      "duration_ms": 272106,
       "album": {
-        "id": "5DVNCzpvDrSEIFiU7hm8ey",
-        "uri": "spotify:album:5DVNCzpvDrSEIFiU7hm8ey",
-        "name": "The Runaways",
-        "release_date": "1976",
+        "id": "7dC6axVAeBDpRMmNtRbpwU",
+        "uri": "spotify:album:7dC6axVAeBDpRMmNtRbpwU",
+        "name": "Tuesday Night Music Club",
+        "release_date": "1993-08-03",
         "album_type": "album",
         "artists": [
           {
-            "id": "5eTq3PxbOh5vgeRXKNqPyV",
-            "name": "The Runaways",
-            "uri": "spotify:artist:5eTq3PxbOh5vgeRXKNqPyV"
+            "id": "4TKTii6gnOnUXQHyuo9JaD",
+            "name": "Sheryl Crow",
+            "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
           }
         ],
         "images": [
           {
-            "url": "https://i.scdn.co/image/ab67616d0000b273a1c553575418ca43404cb48b",
+            "url": "https://i.scdn.co/image/ab67616d0000b273b478a8ce3aac61a3675aac2a",
             "height": 640,
             "width": 640
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00001e02a1c553575418ca43404cb48b",
+            "url": "https://i.scdn.co/image/ab67616d00001e02b478a8ce3aac61a3675aac2a",
             "height": 300,
             "width": 300
           },
           {
-            "url": "https://i.scdn.co/image/ab67616d00004851a1c553575418ca43404cb48b",
+            "url": "https://i.scdn.co/image/ab67616d00004851b478a8ce3aac61a3675aac2a",
             "height": 64,
             "width": 64
           }
@@ -2126,9 +2297,9 @@
       },
       "artists": [
         {
-          "id": "5eTq3PxbOh5vgeRXKNqPyV",
-          "name": "The Runaways",
-          "uri": "spotify:artist:5eTq3PxbOh5vgeRXKNqPyV"
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
         }
       ]
     },
@@ -2177,143 +2348,6 @@
       ]
     },
     {
-      "id": "49ahYrfK6cQ0cMFqrdGyPV",
-      "uri": "spotify:track:49ahYrfK6cQ0cMFqrdGyPV",
-      "name": "Sherry",
-      "duration_ms": 64754,
-      "album": {
-        "id": "1lsLoE8KkPbRcX6Himtpno",
-        "uri": "spotify:album:1lsLoE8KkPbRcX6Himtpno",
-        "name": "Tahar Boumedienne Compilation 2023",
-        "release_date": "2023-09-17",
-        "album_type": "compilation",
-        "artists": [
-          {
-            "id": "0LyfQWJT6nXafLPZqxe9Of",
-            "name": "Multi-interprètes",
-            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b27399846998ebf3631d1c9b53c3",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e0299846998ebf3631d1c9b53c3",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000485199846998ebf3631d1c9b53c3",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "5ujHxhxEOjzfNA2ZkGNluh",
-          "name": "Mauro Rawn",
-          "uri": "spotify:artist:5ujHxhxEOjzfNA2ZkGNluh"
-        }
-      ]
-    },
-    {
-      "id": "20jjnFUWd4yMOgJP8QpEwu",
-      "uri": "spotify:track:20jjnFUWd4yMOgJP8QpEwu",
-      "name": "Your World",
-      "duration_ms": 196571,
-      "album": {
-        "id": "0JjHp7nS2lKkwalcUyrWFn",
-        "uri": "spotify:album:0JjHp7nS2lKkwalcUyrWFn",
-        "name": "My Truth",
-        "release_date": "2023-02-17",
-        "album_type": "album",
-        "artists": [
-          {
-            "id": "5ItTHwcEtFh6DEOBheMub9",
-            "name": "Jonathan McReynolds",
-            "uri": "spotify:artist:5ItTHwcEtFh6DEOBheMub9"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273030c429538639bc5d0006247",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02030c429538639bc5d0006247",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851030c429538639bc5d0006247",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "5ItTHwcEtFh6DEOBheMub9",
-          "name": "Jonathan McReynolds",
-          "uri": "spotify:artist:5ItTHwcEtFh6DEOBheMub9"
-        }
-      ]
-    },
-    {
-      "id": "6ZhORhQoBD0qndKYvpBTv2",
-      "uri": "spotify:track:6ZhORhQoBD0qndKYvpBTv2",
-      "name": "Echo (feat. Tauren Wells)",
-      "duration_ms": 236735,
-      "album": {
-        "id": "3gFcCl38Vch9JlHDP2WktC",
-        "uri": "spotify:album:3gFcCl38Vch9JlHDP2WktC",
-        "name": "Hallelujah Here Below",
-        "release_date": "2018-09-28",
-        "album_type": "album",
-        "artists": [
-          {
-            "id": "3YCKuqpv9nCsIhJ2v8SMix",
-            "name": "Elevation Worship",
-            "uri": "spotify:artist:3YCKuqpv9nCsIhJ2v8SMix"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273ce207f34412b5ac01061ea49",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02ce207f34412b5ac01061ea49",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851ce207f34412b5ac01061ea49",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "3YCKuqpv9nCsIhJ2v8SMix",
-          "name": "Elevation Worship",
-          "uri": "spotify:artist:3YCKuqpv9nCsIhJ2v8SMix"
-        },
-        {
-          "id": "3SKza3YPBri1k43LB1Tqy4",
-          "name": "Tauren Wells",
-          "uri": "spotify:artist:3SKza3YPBri1k43LB1Tqy4"
-        }
-      ]
-    },
-    {
       "id": "2pu3FDtVe5R03xt6v8sdQY",
       "uri": "spotify:track:2pu3FDtVe5R03xt6v8sdQY",
       "name": "Like A Cuddly Koala",
@@ -2354,55 +2388,6 @@
           "id": "7bx1kBLW47pR2XvBd4T7wT",
           "name": "Sherry Grayson",
           "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT"
-        }
-      ]
-    },
-    {
-      "id": "17LSHL0axqOsJbQ6C7zrzt",
-      "uri": "spotify:track:17LSHL0axqOsJbQ6C7zrzt",
-      "name": "Blue Fear (Mixed) - Mark Sherry Remix",
-      "duration_ms": 181426,
-      "album": {
-        "id": "4SzEXwtTeJpoi6epKNHXmi",
-        "uri": "spotify:album:4SzEXwtTeJpoi6epKNHXmi",
-        "name": "A State of Trance, Ibiza 2023 (Mixed by Armin van Buuren)",
-        "release_date": "2023-09-08",
-        "album_type": "album",
-        "artists": [
-          {
-            "id": "0SfsnGyD8FpIN4U4WCkBZ5",
-            "name": "Armin van Buuren",
-            "uri": "spotify:artist:0SfsnGyD8FpIN4U4WCkBZ5"
-          }
-        ],
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273970aafa8b6023774d26df5ba",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02970aafa8b6023774d26df5ba",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851970aafa8b6023774d26df5ba",
-            "height": 64,
-            "width": 64
-          }
-        ]
-      },
-      "artists": [
-        {
-          "id": "0SfsnGyD8FpIN4U4WCkBZ5",
-          "name": "Armin van Buuren",
-          "uri": "spotify:artist:0SfsnGyD8FpIN4U4WCkBZ5"
-        },
-        {
-          "id": "3mvBDVwojbFc7hmDIgoIHH",
-          "name": "Mark Sherry",
-          "uri": "spotify:artist:3mvBDVwojbFc7hmDIgoIHH"
         }
       ]
     },

@@ -1,3 +1,20 @@
+const SPOTIFY_LIKED_IMAGES_API = [
+  {
+    url: '/liked-songs-64.png',
+    height: 64,
+    width: 64,
+  },
+  {
+    url: '/liked-songs-300.png',
+    height: 300,
+    width: 300,
+  },
+];
+const SPOTIFY_FIRST_RESULTS_LIMIT = 3;
+const SPOTIFY_SECOND_RESULTS_LIMIT = 2;
+const SUGGESTIONS_MAX = 4;
+const SUGGESTIONS_BY_CATEGORY_MAX = 2;
+
 const sortListByName = (a, b) => a.name.localeCompare(b.name);
 
 const sortListByNameReverse = (a, b) => b.name.localeCompare(a.name);
@@ -22,23 +39,69 @@ function sortImagesBySizeAsc(images) {
   return images?.sort((a, b) => a.width - b.width);
 }
 
-const SPOTIFY_LIKED_IMAGES_API = [
-  {
-    url: '/liked-songs-64.png',
-    height: 64,
-    width: 64,
-  },
-  {
-    url: '/liked-songs-300.png',
-    height: 300,
-    width: 300,
-  },
-];
+/**
+ * @param {string} searchQuery
+ * @param {import('@js/spotify').SpotifySearch} spotifySearch
+ * @returns {string[]}
+ */
+function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
+  if (!searchQuery || !spotifySearch) {
+    return null;
+  }
 
-const SPOTIFY_FIRST_RESULTS_LIMIT = 3;
-const SPOTIFY_SECOND_RESULTS_LIMIT = 2;
+  const result = [];
+
+  const tracks = spotifySearch?.tracks;
+  const artists = spotifySearch?.artists;
+  const playlists = spotifySearch?.playlists;
+  let uniqueNames = new Set();
+
+  const containsName = (item) => {
+    const name = item?.name?.toLocaleLowerCase();
+    const found = name?.includes(searchQuery?.toLocaleLowerCase());
+
+    if (found && !uniqueNames.has(name)) {
+      uniqueNames.add(name);
+      return true;
+    }
+    return false;
+  };
+
+  const exactTracks = tracks.filter(containsName).map((item) => item?.name);
+  uniqueNames = new Set();
+  const exactArtists = artists.filter(containsName).map((item) => item?.name);
+  uniqueNames = new Set();
+  const exactPlaylists = playlists.filter(containsName).map((item) => item?.name);
+
+  // MAX 2 SONGS + MAX 2 ARTISTS
+  result.push(...exactTracks.slice(0, SUGGESTIONS_BY_CATEGORY_MAX));
+  result.push(...exactArtists.slice(0, SUGGESTIONS_BY_CATEGORY_MAX));
+
+  // MAX 1 PLAYLIST
+  if (result.length < SUGGESTIONS_MAX) {
+    result.push(...exactPlaylists.slice(0, 1));
+  }
+
+  // IF NO RESULT, try fill it !!!
+  if (result.length < SUGGESTIONS_MAX) {
+    result.push(...exactTracks.slice(result.length, SUGGESTIONS_MAX));
+  }
+
+  if (result.length < SUGGESTIONS_MAX) {
+    result.push(...exactArtists.slice(result.length, SUGGESTIONS_MAX));
+  }
+
+  if (result.length < SUGGESTIONS_MAX) {
+    result.push(...exactPlaylists.slice(result.length, SUGGESTIONS_MAX));
+  }
+
+  return result;
+}
 
 export {
+  SPOTIFY_LIKED_IMAGES_API,
+  SPOTIFY_FIRST_RESULTS_LIMIT,
+  SPOTIFY_SECOND_RESULTS_LIMIT,
   sortListByName,
   sortListByNameReverse,
   sortListByAddedAt,
@@ -48,7 +111,5 @@ export {
   sortAlbumtByCreator,
   sortAlbumtByCreatorReverse,
   sortImagesBySizeAsc,
-  SPOTIFY_LIKED_IMAGES_API,
-  SPOTIFY_FIRST_RESULTS_LIMIT,
-  SPOTIFY_SECOND_RESULTS_LIMIT,
+  extractSuggestionsFromSpotifySearch,
 };

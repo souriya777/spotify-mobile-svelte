@@ -1,0 +1,2455 @@
+{
+  "albums": [
+    {
+      "id": "3XQhpRdAkLI9WbFfO8h6AU",
+      "uri": "spotify:album:3XQhpRdAkLI9WbFfO8h6AU",
+      "name": "She",
+      "release_date": "2018-02-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "03uMw43UVu9MsQCcHVSGjX",
+          "name": "Alice Phoebe Lou",
+          "uri": "spotify:artist:03uMw43UVu9MsQCcHVSGjX"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f423213e58dbce8805a21251",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f423213e58dbce8805a21251",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f423213e58dbce8805a21251",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2a5Zc388o5cPMgFFzyPlwW",
+      "uri": "spotify:album:2a5Zc388o5cPMgFFzyPlwW",
+      "name": "She",
+      "release_date": "2024-02-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "0TVTXnBpCHGP6HurlGAfsg",
+          "name": "Robyn Bennett",
+          "uri": "spotify:artist:0TVTXnBpCHGP6HurlGAfsg"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2734b6517665b755d1455c948a7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e024b6517665b755d1455c948a7",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048514b6517665b755d1455c948a7",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5u0OuxRnf3FzvZR07xAxL2",
+      "uri": "spotify:album:5u0OuxRnf3FzvZR07xAxL2",
+      "name": "She Wolf (Expanded Edition)",
+      "release_date": "2009",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "0EmeFodog0BfCgMzAIvKQp",
+          "name": "Shakira",
+          "uri": "spotify:artist:0EmeFodog0BfCgMzAIvKQp"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27338abd299129f8be89e636d98",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0238abd299129f8be89e636d98",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485138abd299129f8be89e636d98",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0SQ3TIruqm1fnTgdTseDVm",
+      "uri": "spotify:album:0SQ3TIruqm1fnTgdTseDVm",
+      "name": "She",
+      "release_date": "2018-11-30",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "2FzYw9fn2ZtQ7sZma5BxuB",
+          "name": "Muthoni Drummer Queen",
+          "uri": "spotify:artist:2FzYw9fn2ZtQ7sZma5BxuB"
+        },
+        {
+          "id": "0d2cvrJfsN0fBd6WuwwlDQ",
+          "name": "Hook",
+          "uri": "spotify:artist:0d2cvrJfsN0fBd6WuwwlDQ"
+        },
+        {
+          "id": "3OLtlWxh8Ht9pL5ke6gFkd",
+          "name": "GR!",
+          "uri": "spotify:artist:3OLtlWxh8Ht9pL5ke6gFkd"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f5faabb99d6893e0e805fb3f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f5faabb99d6893e0e805fb3f",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f5faabb99d6893e0e805fb3f",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1FvdZ1oizXwF9bxogujoF0",
+      "uri": "spotify:album:1FvdZ1oizXwF9bxogujoF0",
+      "name": "She's So Unusual",
+      "release_date": "1983-10-14",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "2BTZIqw0ntH9MvilQ3ewNY",
+          "name": "Cyndi Lauper",
+          "uri": "spotify:artist:2BTZIqw0ntH9MvilQ3ewNY"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27352f532df7ba3269b0242fed9",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0252f532df7ba3269b0242fed9",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485152f532df7ba3269b0242fed9",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1Gnrd76EubInPV4KjOJ1Zr",
+      "uri": "spotify:album:1Gnrd76EubInPV4KjOJ1Zr",
+      "name": "Sheer Heart Attack (Deluxe Edition 2011 Remaster)",
+      "release_date": "1974-11-08",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "1dfeR4HaWDbWqFHLkxsg1d",
+          "name": "Queen",
+          "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27309e2ec500166cf2d5ac21050",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0209e2ec500166cf2d5ac21050",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485109e2ec500166cf2d5ac21050",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5f7axBwnXST7xzhpRMb34u",
+      "uri": "spotify:album:5f7axBwnXST7xzhpRMb34u",
+      "name": "She",
+      "release_date": "2022-02-21",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "4kYGAK2zu9EAomwj3hXkXy",
+          "name": "JP Cooper",
+          "uri": "spotify:artist:4kYGAK2zu9EAomwj3hXkXy"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b83f07334d43dff80438ec2e",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b83f07334d43dff80438ec2e",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b83f07334d43dff80438ec2e",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0I1iezuwcQDATLumFtVjpX",
+      "uri": "spotify:album:0I1iezuwcQDATLumFtVjpX",
+      "name": "Sheryfa Luna",
+      "release_date": "2007-01-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "5BPQfQJaq5Hx0636gwk4uA",
+          "name": "Sheryfa Luna",
+          "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b8c62a768b0f7c2cc168efbc",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b8c62a768b0f7c2cc168efbc",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b8c62a768b0f7c2cc168efbc",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "267szQBXEzkyOydGIaLxsU",
+      "uri": "spotify:album:267szQBXEzkyOydGIaLxsU",
+      "name": "She",
+      "release_date": "2020-01-03",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "1cmUbDFvrkMP3JaklCNwpF",
+          "name": "Vanilla Sugar",
+          "uri": "spotify:artist:1cmUbDFvrkMP3JaklCNwpF"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2734cfdd3dccbd738389b72eb09",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e024cfdd3dccbd738389b72eb09",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048514cfdd3dccbd738389b72eb09",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5OjmKUHlvsWeMmgJCC9qri",
+      "uri": "spotify:album:5OjmKUHlvsWeMmgJCC9qri",
+      "name": "She",
+      "release_date": "2019-10-11",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "4cEYh7S0lnB9zj30tzPorE",
+          "name": "Harleighblu",
+          "uri": "spotify:artist:4cEYh7S0lnB9zj30tzPorE"
+        },
+        {
+          "id": "67pW04a6jpdQR2yWqjcfxs",
+          "name": "Bluestaeb",
+          "uri": "spotify:artist:67pW04a6jpdQR2yWqjcfxs"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273db1b286834087801bec84199",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02db1b286834087801bec84199",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851db1b286834087801bec84199",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5Qhf5q6AtGqQuY9AKEEahU",
+      "uri": "spotify:album:5Qhf5q6AtGqQuY9AKEEahU",
+      "name": "She Said EP",
+      "release_date": "2024-02-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "29QojCXl3PxYDky0cH60fK",
+          "name": "Niv Ast",
+          "uri": "spotify:artist:29QojCXl3PxYDky0cH60fK"
+        },
+        {
+          "id": "6g6j6E1YiNrlKa6WkRtUMX",
+          "name": "Kimshies",
+          "uri": "spotify:artist:6g6j6E1YiNrlKa6WkRtUMX"
+        },
+        {
+          "id": "1iHLjX5K4nfcDZGj0Z2lkP",
+          "name": "Laherte",
+          "uri": "spotify:artist:1iHLjX5K4nfcDZGj0Z2lkP"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273dcf39aff3444d17881888665",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02dcf39aff3444d17881888665",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851dcf39aff3444d17881888665",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4g9ow4ZxpF3sqM8VTPFvuq",
+      "uri": "spotify:album:4g9ow4ZxpF3sqM8VTPFvuq",
+      "name": "She",
+      "release_date": "2022-02-18",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "4kYGAK2zu9EAomwj3hXkXy",
+          "name": "JP Cooper",
+          "uri": "spotify:artist:4kYGAK2zu9EAomwj3hXkXy"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27312fb704fb90454bd681a9ce4",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0212fb704fb90454bd681a9ce4",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485112fb704fb90454bd681a9ce4",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "06glmgu7XVm60LyphpYQxc",
+      "uri": "spotify:album:06glmgu7XVm60LyphpYQxc",
+      "name": "She Said (Big Jet Plane)",
+      "release_date": "2021-07-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "3HqP3nd8WI0VfHRhApPlan",
+          "name": "Trinix",
+          "uri": "spotify:artist:3HqP3nd8WI0VfHRhApPlan"
+        },
+        {
+          "id": "6DP0yD9AqeiK3V57URKt4W",
+          "name": "Queen D",
+          "uri": "spotify:artist:6DP0yD9AqeiK3V57URKt4W"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738f98a497e1c30b2dd678a450",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028f98a497e1c30b2dd678a450",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518f98a497e1c30b2dd678a450",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "30N5k5KJx8onD88AWBoAPh",
+      "uri": "spotify:album:30N5k5KJx8onD88AWBoAPh",
+      "name": "shekeyy",
+      "release_date": "2024-02-22",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "3s4Uwg1O34wAdvlBT16Z5g",
+          "name": "allosinned",
+          "uri": "spotify:artist:3s4Uwg1O34wAdvlBT16Z5g"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27336ba533c28ccefcc8bfb7fb3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0236ba533c28ccefcc8bfb7fb3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485136ba533c28ccefcc8bfb7fb3",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "62gasDL3HNWj4cytQcxfm7",
+      "uri": "spotify:album:62gasDL3HNWj4cytQcxfm7",
+      "name": "SHERPA",
+      "release_date": "2022-12-16",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "3tMXAn9bB1GcLfPaukbrSS",
+          "name": "Ajna",
+          "uri": "spotify:artist:3tMXAn9bB1GcLfPaukbrSS"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739c269f55b118997b5906dddd",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029c269f55b118997b5906dddd",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519c269f55b118997b5906dddd",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "68mtVakZM5k0cZFr9VdL2Y",
+      "uri": "spotify:album:68mtVakZM5k0cZFr9VdL2Y",
+      "name": "She Wolf (Falling to Pieces)",
+      "release_date": "2024-02-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "6pn2xmADWtsVABytR1xorc",
+          "name": "tekknological",
+          "uri": "spotify:artist:6pn2xmADWtsVABytR1xorc"
+        },
+        {
+          "id": "0bchw6MIrkOUAU5E0sP0Gd",
+          "name": "Swae Boy",
+          "uri": "spotify:artist:0bchw6MIrkOUAU5E0sP0Gd"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27313ab3df315993a879162eba1",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0213ab3df315993a879162eba1",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485113ab3df315993a879162eba1",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1WZaiOFk6sYSCHrGZWMMh4",
+      "uri": "spotify:album:1WZaiOFk6sYSCHrGZWMMh4",
+      "name": "She Wan That Ah",
+      "release_date": "2023-11-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "3Oc7o3kzzpLium0YxZPVri",
+          "name": "Ridge",
+          "uri": "spotify:artist:3Oc7o3kzzpLium0YxZPVri"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273699b80892a23bc549a30fd09",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02699b80892a23bc549a30fd09",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851699b80892a23bc549a30fd09",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0bnoOeocONcD9vlfua3HSE",
+      "uri": "spotify:album:0bnoOeocONcD9vlfua3HSE",
+      "name": "ShegueyVara 2",
+      "release_date": "2015-11-27",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "2tcoLkA9Hexz70Kuc1NTUl",
+          "name": "Gradur",
+          "uri": "spotify:artist:2tcoLkA9Hexz70Kuc1NTUl"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27377c89ddf533d9bac2d554b6a",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0277c89ddf533d9bac2d554b6a",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485177c89ddf533d9bac2d554b6a",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0Hm7Kz7QuBBYvNsr8j7elP",
+      "uri": "spotify:album:0Hm7Kz7QuBBYvNsr8j7elP",
+      "name": "Shea: The Arctic Suite, V. Sea Ice Melting (Violin-Piano Version)",
+      "release_date": "2024-02-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "0ZjUUrNDmi4N4Ey5UTMebc",
+          "name": "Jacob Shea",
+          "uri": "spotify:artist:0ZjUUrNDmi4N4Ey5UTMebc"
+        },
+        {
+          "id": "4M2W6hcJWi6Nrd3XelpO3F",
+          "name": "Eldbjørg Hemsing",
+          "uri": "spotify:artist:4M2W6hcJWi6Nrd3XelpO3F"
+        },
+        {
+          "id": "1dk8ZJIE1IET4n4LrxzD6I",
+          "name": "Håvard Gimse",
+          "uri": "spotify:artist:1dk8ZJIE1IET4n4LrxzD6I"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739471d4f1b20b9646fe939f26",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029471d4f1b20b9646fe939f26",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519471d4f1b20b9646fe939f26",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0T52wYTTd7KjMHEIgoqO0b",
+      "uri": "spotify:album:0T52wYTTd7KjMHEIgoqO0b",
+      "name": "all the things she said was a lie",
+      "release_date": "2024-02-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "2N0BopkxZUQkMLNDEuHaEJ",
+          "name": "Aega",
+          "uri": "spotify:artist:2N0BopkxZUQkMLNDEuHaEJ"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273292fc68dcacf15d807529d58",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02292fc68dcacf15d807529d58",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851292fc68dcacf15d807529d58",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "id": "5BPQfQJaq5Hx0636gwk4uA",
+      "name": "Sheryfa Luna",
+      "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb27e6dca96162a016686960ae",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517427e6dca96162a016686960ae",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17827e6dca96162a016686960ae",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "2Wk167T0fY1fABsHM5qFcI",
+      "name": "Sherine",
+      "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273cfa4e906cda39d8f62fe81e3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02cfa4e906cda39d8f62fe81e3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851cfa4e906cda39d8f62fe81e3",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5fhRcv2KU96vbXqNE2FEdu",
+      "name": "Sheila",
+      "uri": "spotify:artist:5fhRcv2KU96vbXqNE2FEdu",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb46890e8923e12999ce38c61d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517446890e8923e12999ce38c61d",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17846890e8923e12999ce38c61d",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "6eUKZXaKkcviH0Ku9w2n3V",
+      "name": "Ed Sheeran",
+      "uri": "spotify:artist:6eUKZXaKkcviH0Ku9w2n3V",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051743bcef85e105dfc42399ef0ba",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1783bcef85e105dfc42399ef0ba",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "1OFOShsIbhy1l5x73yuVyB",
+      "name": "Shenseea",
+      "uri": "spotify:artist:1OFOShsIbhy1l5x73yuVyB",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb3e4ee44e38af985e67a4682f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051743e4ee44e38af985e67a4682f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1783e4ee44e38af985e67a4682f",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "4TKTii6gnOnUXQHyuo9JaD",
+      "name": "Sheryl Crow",
+      "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb962c94da847bcc4ef21c4ad9",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174962c94da847bcc4ef21c4ad9",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178962c94da847bcc4ef21c4ad9",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "3xWktqKQxBAu4LXqLufJwW",
+      "name": "she",
+      "uri": "spotify:artist:3xWktqKQxBAu4LXqLufJwW",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb49b37b2e0d1649dc5ff112f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174b49b37b2e0d1649dc5ff112f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178b49b37b2e0d1649dc5ff112f",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "0mAIVu2rtpW9TYcbp88wqn",
+      "name": "sheng",
+      "uri": "spotify:artist:0mAIVu2rtpW9TYcbp88wqn",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8047d200bcabe0d3db2315f6",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051748047d200bcabe0d3db2315f6",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1788047d200bcabe0d3db2315f6",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "4ji5WpiCdNGiVRm829Ud3T",
+      "name": "She",
+      "uri": "spotify:artist:4ji5WpiCdNGiVRm829Ud3T",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2730199549ad74fcb9d849f6a23",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e020199549ad74fcb9d849f6a23",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048510199549ad74fcb9d849f6a23",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5GdP5J5VnVvhY0HzsYMcUK",
+      "name": "Shé",
+      "uri": "spotify:artist:5GdP5J5VnVvhY0HzsYMcUK",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8c895c7dcbcbb4ec456f9981",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051748c895c7dcbcbb4ec456f9981",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1788c895c7dcbcbb4ec456f9981",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "6162ZDzd0LT28Lxdj52jjK",
+      "name": "Sheldon",
+      "uri": "spotify:artist:6162ZDzd0LT28Lxdj52jjK",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb10078d5e7f13d0d1432f4c20",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517410078d5e7f13d0d1432f4c20",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17810078d5e7f13d0d1432f4c20",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "0voktX4WMWToR8netUjBBr",
+      "name": "Sheikh Saud Al Shuraim",
+      "uri": "spotify:artist:0voktX4WMWToR8netUjBBr",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b99736c284d938a06378ce78",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b99736c284d938a06378ce78",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b99736c284d938a06378ce78",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2RDOrhPqAM4jzTRCEb19qX",
+      "name": "Sheck Wes",
+      "uri": "spotify:artist:2RDOrhPqAM4jzTRCEb19qX",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb1709525276c11ad492f56354",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051741709525276c11ad492f56354",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1781709525276c11ad492f56354",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "3to981mLz1xdB1pk1gPgpY",
+      "name": "Sheikh Saad Al Ghamdi",
+      "uri": "spotify:artist:3to981mLz1xdB1pk1gPgpY",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2733395a25c883c5242e471777b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e023395a25c883c5242e471777b",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048513395a25c883c5242e471777b",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2NtvkyG03ApOKPBj3TcQRt",
+      "name": "Sheu",
+      "uri": "spotify:artist:2NtvkyG03ApOKPBj3TcQRt",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb3c9cf1da52e775467ca7d510",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051743c9cf1da52e775467ca7d510",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1783c9cf1da52e775467ca7d510",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "72WhEWB9Ye2fsepF699JNm",
+      "name": "Sheikh Maher Al Muaiqly",
+      "uri": "spotify:artist:72WhEWB9Ye2fsepF699JNm",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb9ab96ca6cf1b6302e1800481",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051749ab96ca6cf1b6302e1800481",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1789ab96ca6cf1b6302e1800481",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "7AflKiIRBursuADYrUWbvL",
+      "name": "Sheikh Raad Al Kurdi",
+      "uri": "spotify:artist:7AflKiIRBursuADYrUWbvL",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb0ff4f1b8113d77f33b4db58f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051740ff4f1b8113d77f33b4db58f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1780ff4f1b8113d77f33b4db58f",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "3LkkxNCsK47Af8vXoIVG0L",
+      "name": "Sherifflazone",
+      "uri": "spotify:artist:3LkkxNCsK47Af8vXoIVG0L",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb22eaced66705ad8b951499ff",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517422eaced66705ad8b951499ff",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17822eaced66705ad8b951499ff",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "1tG7s7S4sq2eFFW0QZyLbm",
+      "name": "Sheff G",
+      "uri": "spotify:artist:1tG7s7S4sq2eFFW0QZyLbm",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb39c3fc9094ea5fe5af32bd9f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517439c3fc9094ea5fe5af32bd9f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17839c3fc9094ea5fe5af32bd9f",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "2XV2N8ToJEWqBR2WpAr0A9",
+      "name": "SheyKo",
+      "uri": "spotify:artist:2XV2N8ToJEWqBR2WpAr0A9",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebfdc39c9b354ebc543501fc14",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174fdc39c9b354ebc543501fc14",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178fdc39c9b354ebc543501fc14",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    }
+  ],
+  "playlists": [
+    {
+      "id": "7deIquPkfdSr1nF3ZDAe1t",
+      "uri": "spotify:playlist:7deIquPkfdSr1nF3ZDAe1t",
+      "name": "CHILL NIGHT",
+      "description": "Playlist submissions: www.artister.org | Follow us on Instagram: @artister_org | Fresh New Music | Daily Hits | Underground Commercial Hits 🎶🎶🎶",
+      "owner": {
+        "id": "31xtco7b6t5uhmnbe6yf5khzemwi",
+        "display_name": "Artister"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb9963679af37b197f0c4e7074",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/7deIquPkfdSr1nF3ZDAe1t/tracks",
+        "total": 114
+      }
+    },
+    {
+      "id": "2F3sRoymbZUDMnEYfwxeOg",
+      "uri": "spotify:playlist:2F3sRoymbZUDMnEYfwxeOg",
+      "name": "Sherine - Busta Rhymes - I Know What You Want X ريمكس - شيرين - صبرى قليل Remix Tiktok",
+      "description": "",
+      "owner": {
+        "id": "u9ey1bmyqncyl9pmirqu60mhw",
+        "display_name": "J Rodis Music"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb435902d34622790d7a2bae6a",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/2F3sRoymbZUDMnEYfwxeOg/tracks",
+        "total": 207
+      }
+    },
+    {
+      "id": "1EsCrTFXR7QCDp9yPpDfET",
+      "uri": "spotify:playlist:1EsCrTFXR7QCDp9yPpDfET",
+      "name": "Sheikh Mansour Alsalimi",
+      "description": "Beautiful  Quran Recitation!  ",
+      "owner": {
+        "id": "31w2dw7qa5wxy3wj6vb5hitopa24",
+        "display_name": "||Zeezo Ali||"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb8dc021a80c9a9cbfb230bfaa",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/1EsCrTFXR7QCDp9yPpDfET/tracks",
+        "total": 17
+      }
+    },
+    {
+      "id": "37i9dQZF1EIW3zIEbOPAkH",
+      "uri": "spotify:playlist:37i9dQZF1EIW3zIEbOPAkH",
+      "name": "Mix Shenseea",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIVxq6qJV50Nb>Skillibeng</a>, <a href=spotify:playlist:37i9dQZF1EIYIzy0oCkRYU>Koffee</a> et <a href=spotify:playlist:37i9dQZF1EIXzjNRSTDQRi>Zum</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/1OFOShsIbhy1l5x73yuVyB/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIW3zIEbOPAkH/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1EIYd5RD0QnRvM",
+      "uri": "spotify:playlist:37i9dQZF1EIYd5RD0QnRvM",
+      "name": "Mix Sherine",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIVxGYNq8ABIw>Amr Diab</a>, <a href=spotify:playlist:37i9dQZF1EIY9QO5KYT0FF>Elissa</a> et <a href=spotify:playlist:37i9dQZF1EIYYlOcIRpMnm>Nancy Ajram</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/2Wk167T0fY1fABsHM5qFcI/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIYd5RD0QnRvM/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1EIUHVloW8gqjr",
+      "uri": "spotify:playlist:37i9dQZF1EIUHVloW8gqjr",
+      "name": "Mix Sheryfa Luna",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIWO4UiqYFDpi>Corneille</a>, <a href=spotify:playlist:37i9dQZF1EIXeB1fmCjNkC>L5</a> et <a href=spotify:playlist:37i9dQZF1EIW4qPTmceGtb>TAL</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/5BPQfQJaq5Hx0636gwk4uA/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIUHVloW8gqjr/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1DX6yRjxYCGv68",
+      "uri": "spotify:playlist:37i9dQZF1DX6yRjxYCGv68",
+      "name": "She Lit",
+      "description": "At any age, she lit.",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67706f00000003404c05dbe554812e41345d37",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6yRjxYCGv68/tracks",
+        "total": 44
+      }
+    },
+    {
+      "id": "0woC3ZZEAC5XoiQxZ6zqen",
+      "uri": "spotify:playlist:0woC3ZZEAC5XoiQxZ6zqen",
+      "name": "Sherlock Holmes - Die Originale (alle Hörspiele / alle Folgen)",
+      "description": "Mit der Sherlock Holmes Serie DIE ORIGINALE schließt sich der Kreis und Rode &amp; Groeger kehren als Holmes und Watson zurück – in den Original-Geschichten von Sir Arthur Conan Doyle. Wenn du dieser Playlist folgst, wirst du bei neuen Folgen direkt informiert. Viel Freude mit den Originalen !",
+      "owner": {
+        "id": "sherlockholmesofficial",
+        "display_name": "Sherlock Holmes"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb0ab236d6982e878b254ffdf5",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0woC3ZZEAC5XoiQxZ6zqen/tracks",
+        "total": 1354
+      }
+    },
+    {
+      "id": "37i9dQZF1E4z0mi59LyFgL",
+      "uri": "spotify:playlist:37i9dQZF1E4z0mi59LyFgL",
+      "name": "Radio Sherine",
+      "description": "Avec Assala Nasri, Ramy Sabry, Angham et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/2Wk167T0fY1fABsHM5qFcI/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E4z0mi59LyFgL/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "29Co5lBmlA2meEjgNoGJa5",
+      "uri": "spotify:playlist:29Co5lBmlA2meEjgNoGJa5",
+      "name": "Mashup Busta Rhymes - I Know What You Want X ريمكس - شيرين - صبرى قليل",
+      "description": "Mashup Busta Rhymes - I Know What You Want X ريمكس - شيرين - صبرى قليل mix remix mashup by djamil  Sherine - Sabry Aalil شيرين - صبرى قليل Mariah Carey ",
+      "owner": {
+        "id": "31bl7hppmmnud6mek2duv6tb7orq",
+        "display_name": "psikolojim yerinde değil diyorum"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb165ef92c1f897451dea6a113",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/29Co5lBmlA2meEjgNoGJa5/tracks",
+        "total": 35
+      }
+    },
+    {
+      "id": "2oFLsUcZvFx6pyyyXzRi9T",
+      "uri": "spotify:playlist:2oFLsUcZvFx6pyyyXzRi9T",
+      "name": "Sherlock Holmes Legends - Alle Hörspiele",
+      "description": "Holysofts 'Sherlock Holmes Legends' lässt die die aufregende Welt von Holmes und Watson rund um die Jahrhundertwende lebendig werden! ",
+      "owner": {
+        "id": "sherlockholmesofficial",
+        "display_name": "Sherlock Holmes"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb5a59b8165f6fc86155cf1405",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/2oFLsUcZvFx6pyyyXzRi9T/tracks",
+        "total": 381
+      }
+    },
+    {
+      "id": "17qm0rCogWaoYcVIVYM4VY",
+      "uri": "spotify:playlist:17qm0rCogWaoYcVIVYM4VY",
+      "name": "SHE GOTTA DONKK🍑🍒",
+      "description": "",
+      "owner": {
+        "id": "acstarks00",
+        "display_name": "acstarks00"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27336ccb93965b6f831fcaac80bab67616d0000b2738a6a328ced07af494400584bab67616d0000b273ba30e4d27e93015180b4924dab67616d0000b273d905e78cad304de028db39b7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27336ccb93965b6f831fcaac80bab67616d0000b2738a6a328ced07af494400584bab67616d0000b273ba30e4d27e93015180b4924dab67616d0000b273d905e78cad304de028db39b7",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27336ccb93965b6f831fcaac80bab67616d0000b2738a6a328ced07af494400584bab67616d0000b273ba30e4d27e93015180b4924dab67616d0000b273d905e78cad304de028db39b7",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/17qm0rCogWaoYcVIVYM4VY/tracks",
+        "total": 60
+      }
+    },
+    {
+      "id": "37i9dQZF1DX7UVaJQt2yR3",
+      "uri": "spotify:playlist:37i9dQZF1DX7UVaJQt2yR3",
+      "name": "Sherehe Ya Bongo",
+      "description": "Jiandae kupiga sherehe bila stress",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67706f0000000345c68fef8e7d0df8160238c7",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7UVaJQt2yR3/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1E8O5olGlTp3KQ",
+      "uri": "spotify:playlist:37i9dQZF1E8O5olGlTp3KQ",
+      "name": "Radio She Had Me At Heads Carolina",
+      "description": "Avec Cole Swindell, Chase Rice, Dustin Lynch, Tyler Farr et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/track/200x8ONbPfFzByUr3fVz46/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E8O5olGlTp3KQ/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1EIY2LEqqbNQhp",
+      "uri": "spotify:playlist:37i9dQZF1EIY2LEqqbNQhp",
+      "name": "Mix Shebeshxt",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIUJ55EmlEbPN>Kharishma</a>, <a href=spotify:playlist:37i9dQZF1EIXvDPwXgG81d>Naqua SA</a> et <a href=spotify:playlist:37i9dQZF1EIZgNrXzZkWD5>Ba Bethe Gaoshazen</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/4bDFUYafgZILBp9Yv71mCS/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIY2LEqqbNQhp/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1EIVuR1ntXSWja",
+      "uri": "spotify:playlist:37i9dQZF1EIVuR1ntXSWja",
+      "name": "Mix Shekhinah",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIY6UEhidkdTZ>Elaine</a>, <a href=spotify:playlist:37i9dQZF1EIY6yJZZr2Hgq>Samthing Soweto</a> et <a href=spotify:playlist:37i9dQZF1EIWyHLvBEgAoS>LaSauce</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/1F42GOcKAImOu4yj1b04NB/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIVuR1ntXSWja/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1EIZDEn0HiSA4k",
+      "uri": "spotify:playlist:37i9dQZF1EIZDEn0HiSA4k",
+      "name": "Mix Sherry Maan",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIVsoN2QYioqP>Geeta Zaildar</a>, <a href=spotify:playlist:37i9dQZF1EIVOuHagU424y>Kamal Grewal</a> et <a href=spotify:playlist:37i9dQZF1EIZyXHIikAAnB>Lehmber Hussainpuri</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/5muis5Lg8989ZMH8dl3szz/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIZDEn0HiSA4k/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "33HerNU7pSycPXJtfCNGfQ",
+      "uri": "spotify:playlist:33HerNU7pSycPXJtfCNGfQ",
+      "name": "Sherlock Holmes Chronicles  (Folge 1-112)",
+      "description": "Oster-Special 1 inkl., Weihnachts-Spezial 1+2+3 inkl.,  Aktuell Januar 2024, Folge 8, 25, 52, 67, 77 fehlen; ",
+      "owner": {
+        "id": "blobsalem",
+        "display_name": "blobsalem"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273212a269544e49077d6610b53",
+          "height": 640,
+          "width": 640
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/33HerNU7pSycPXJtfCNGfQ/tracks",
+        "total": 2744
+      }
+    },
+    {
+      "id": "37i9dQZF1E4qxdNaqZ9CQo",
+      "uri": "spotify:playlist:37i9dQZF1E4qxdNaqZ9CQo",
+      "name": "Radio Shenandoah",
+      "description": "Avec Restless Heart, Doug Stone, BlackHawk et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/36eTeLNx8ErucrEyRm6JOo/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E4qxdNaqZ9CQo/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "5Vre4xsKCdhhxgrWsvDDuK",
+      "uri": "spotify:playlist:5Vre4xsKCdhhxgrWsvDDuK",
+      "name": "Sherlock Holmes - Die alten Fälle (Reloaded) (alle Hörspiele / alle Folgen)",
+      "description": "Inspiriert vom großen Erfolg der Sherlock Holmes DIE NEUEN FÄLLE gibt es nun auch die alten Originale, remastered mit neuer Musik und einem üppigen Sounddesign im Stil der NEUEN FÄLLE. Wenn du dieser Playlist folgst, wirst du bei neuen Folgen direkt informiert. Viel Freude mit den alten Fällen !",
+      "owner": {
+        "id": "sherlockholmesofficial",
+        "display_name": "Sherlock Holmes"
+      },
+      "images": [
+        {
+          "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb5d6d1f1bce70e0ede88eda38",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5Vre4xsKCdhhxgrWsvDDuK/tracks",
+        "total": 1126
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "0xtN05SZDvg943I3x08KT7",
+      "uri": "spotify:track:0xtN05SZDvg943I3x08KT7",
+      "name": "Sherry",
+      "duration_ms": 126613,
+      "album": {
+        "id": "7oWx4auBp2kCb54VkRCCUq",
+        "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
+        "name": "Jersey Boys: Music from the Motion Picture and Broadway Musical",
+        "release_date": "2014-06-20",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "28W9apMi2vgk9O9LnkijIC",
+            "name": "Jersey Boys",
+            "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273a9ac825cee5e3985ea9d449d",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02a9ac825cee5e3985ea9d449d",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a9ac825cee5e3985ea9d449d",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4QTd2YuZS6ShgqWfeREdB3",
+          "name": "John Lloyd Young",
+          "uri": "spotify:artist:4QTd2YuZS6ShgqWfeREdB3"
+        }
+      ]
+    },
+    {
+      "id": "68iChBWE5tZb95QGOcMKtF",
+      "uri": "spotify:track:68iChBWE5tZb95QGOcMKtF",
+      "name": "Sherry",
+      "duration_ms": 157386,
+      "album": {
+        "id": "2Ozhdbo5v89ZdgCHlmF2fR",
+        "uri": "spotify:album:2Ozhdbo5v89ZdgCHlmF2fR",
+        "name": "20 chansons d'or",
+        "release_date": "1998",
+        "album_type": "compilation",
+        "artists": [
+          {
+            "id": "0TQUgpZqEnfluYEfKQBYB6",
+            "name": "Henri Salvador",
+            "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2735003c2594f1472457762691c",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e025003c2594f1472457762691c",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048515003c2594f1472457762691c",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0TQUgpZqEnfluYEfKQBYB6",
+          "name": "Henri Salvador",
+          "uri": "spotify:artist:0TQUgpZqEnfluYEfKQBYB6"
+        }
+      ]
+    },
+    {
+      "id": "4cS2HQ6jK80vqdY9ofpztx",
+      "uri": "spotify:track:4cS2HQ6jK80vqdY9ofpztx",
+      "name": "She Wolf",
+      "duration_ms": 188866,
+      "album": {
+        "id": "5u0OuxRnf3FzvZR07xAxL2",
+        "uri": "spotify:album:5u0OuxRnf3FzvZR07xAxL2",
+        "name": "She Wolf (Expanded Edition)",
+        "release_date": "2009",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "0EmeFodog0BfCgMzAIvKQp",
+            "name": "Shakira",
+            "uri": "spotify:artist:0EmeFodog0BfCgMzAIvKQp"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27338abd299129f8be89e636d98",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0238abd299129f8be89e636d98",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485138abd299129f8be89e636d98",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0EmeFodog0BfCgMzAIvKQp",
+          "name": "Shakira",
+          "uri": "spotify:artist:0EmeFodog0BfCgMzAIvKQp"
+        }
+      ]
+    },
+    {
+      "id": "16IzV3JdxmR3X10ZbWHlfB",
+      "uri": "spotify:track:16IzV3JdxmR3X10ZbWHlfB",
+      "name": "SHE",
+      "duration_ms": 218653,
+      "album": {
+        "id": "6WbMZYQ1SAU8HrgZSuH0xJ",
+        "uri": "spotify:album:6WbMZYQ1SAU8HrgZSuH0xJ",
+        "name": "DANCEHALL",
+        "release_date": "2018-09-07",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "1Dt1UKLtrJIW1xxRBejjos",
+            "name": "The Blaze",
+            "uri": "spotify:artist:1Dt1UKLtrJIW1xxRBejjos"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273fb8b2c04222171f2c970d6ac",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02fb8b2c04222171f2c970d6ac",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851fb8b2c04222171f2c970d6ac",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1Dt1UKLtrJIW1xxRBejjos",
+          "name": "The Blaze",
+          "uri": "spotify:artist:1Dt1UKLtrJIW1xxRBejjos"
+        }
+      ]
+    },
+    {
+      "id": "1ulV7wgYNWhulcnMrgwOuG",
+      "uri": "spotify:track:1ulV7wgYNWhulcnMrgwOuG",
+      "name": "Il avait les mots",
+      "duration_ms": 227026,
+      "album": {
+        "id": "0I1iezuwcQDATLumFtVjpX",
+        "uri": "spotify:album:0I1iezuwcQDATLumFtVjpX",
+        "name": "Sheryfa Luna",
+        "release_date": "2007-01-01",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "5BPQfQJaq5Hx0636gwk4uA",
+            "name": "Sheryfa Luna",
+            "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273b8c62a768b0f7c2cc168efbc",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02b8c62a768b0f7c2cc168efbc",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851b8c62a768b0f7c2cc168efbc",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "5BPQfQJaq5Hx0636gwk4uA",
+          "name": "Sheryfa Luna",
+          "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA"
+        }
+      ]
+    },
+    {
+      "id": "7qLXBcYW78is9LygQBziAU",
+      "uri": "spotify:track:7qLXBcYW78is9LygQBziAU",
+      "name": "Sabry Aalil",
+      "duration_ms": 289227,
+      "album": {
+        "id": "7iykGeMdxOdYtNRtYCNaMA",
+        "uri": "spotify:album:7iykGeMdxOdYtNRtYCNaMA",
+        "name": "Garh Tany",
+        "release_date": "2003-01-01",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "2Wk167T0fY1fABsHM5qFcI",
+            "name": "Sherine",
+            "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2736f5efd372331919ebd9d0fc9",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e026f5efd372331919ebd9d0fc9",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048516f5efd372331919ebd9d0fc9",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2Wk167T0fY1fABsHM5qFcI",
+          "name": "Sherine",
+          "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI"
+        }
+      ]
+    },
+    {
+      "id": "0Fs9cdPDhptWEDJmiCbkEW",
+      "uri": "spotify:track:0Fs9cdPDhptWEDJmiCbkEW",
+      "name": "She Knows (feat. Amber Coffman & Cults)",
+      "duration_ms": 296520,
+      "album": {
+        "id": "5FP9keIJnlSCKnkdVOf623",
+        "uri": "spotify:album:5FP9keIJnlSCKnkdVOf623",
+        "name": "Born Sinner (Deluxe Version)",
+        "release_date": "2013-06-18",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "6l3HvQ5sa6mXTsMTB19rO5",
+            "name": "J. Cole",
+            "uri": "spotify:artist:6l3HvQ5sa6mXTsMTB19rO5"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273c1bb124f993488cf21b269fc",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02c1bb124f993488cf21b269fc",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851c1bb124f993488cf21b269fc",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6l3HvQ5sa6mXTsMTB19rO5",
+          "name": "J. Cole",
+          "uri": "spotify:artist:6l3HvQ5sa6mXTsMTB19rO5"
+        },
+        {
+          "id": "3Oim8XBPbznAa8Jj8QzNc8",
+          "name": "Cults",
+          "uri": "spotify:artist:3Oim8XBPbznAa8Jj8QzNc8"
+        },
+        {
+          "id": "4vpGVGgxSDcCTmqYbsOnsn",
+          "name": "Amber Coffman",
+          "uri": "spotify:artist:4vpGVGgxSDcCTmqYbsOnsn"
+        }
+      ]
+    },
+    {
+      "id": "4llK75pXNWZz6KAho2Gp16",
+      "uri": "spotify:track:4llK75pXNWZz6KAho2Gp16",
+      "name": "She Will Be Loved - Radio Mix",
+      "duration_ms": 259453,
+      "album": {
+        "id": "5zClcGCSWj926AMjvBNSLc",
+        "uri": "spotify:album:5zClcGCSWj926AMjvBNSLc",
+        "name": "Songs About Jane: 10th Anniversary Edition",
+        "release_date": "2002",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "04gDigrS5kc9YWfZHwBETP",
+            "name": "Maroon 5",
+            "uri": "spotify:artist:04gDigrS5kc9YWfZHwBETP"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27392f2d790c6a97b195f66d51e",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0292f2d790c6a97b195f66d51e",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485192f2d790c6a97b195f66d51e",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "04gDigrS5kc9YWfZHwBETP",
+          "name": "Maroon 5",
+          "uri": "spotify:artist:04gDigrS5kc9YWfZHwBETP"
+        }
+      ]
+    },
+    {
+      "id": "1KYeS1A9Gc7p6zfcf2p9ee",
+      "uri": "spotify:track:1KYeS1A9Gc7p6zfcf2p9ee",
+      "name": "She",
+      "duration_ms": 134293,
+      "album": {
+        "id": "1iK6xEaibOJbTrRvdcenSi",
+        "uri": "spotify:album:1iK6xEaibOJbTrRvdcenSi",
+        "name": "Hits 80 y 90 en Inglés",
+        "release_date": "2024-02-20",
+        "album_type": "compilation",
+        "artists": [
+          {
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Multi-interprètes",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27368368b79ecd7b4ed33117600",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0268368b79ecd7b4ed33117600",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485168368b79ecd7b4ed33117600",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "7oPftvlwr6VrsViSDV7fJY",
+          "name": "Green Day",
+          "uri": "spotify:artist:7oPftvlwr6VrsViSDV7fJY"
+        }
+      ]
+    },
+    {
+      "id": "3v5ErwLaw3HOjcohP9JJcm",
+      "uri": "spotify:track:3v5ErwLaw3HOjcohP9JJcm",
+      "name": "She Doesn't Mind",
+      "duration_ms": 227786,
+      "album": {
+        "id": "0vPaS3LIPPNUsw5nU3hrvT",
+        "uri": "spotify:album:0vPaS3LIPPNUsw5nU3hrvT",
+        "name": "Tomahawk Technique",
+        "release_date": "2012-01-24",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "3Isy6kedDrgPYoTS1dazA9",
+            "name": "Sean Paul",
+            "uri": "spotify:artist:3Isy6kedDrgPYoTS1dazA9"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273162f99980b0244ebb843e256",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02162f99980b0244ebb843e256",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851162f99980b0244ebb843e256",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3Isy6kedDrgPYoTS1dazA9",
+          "name": "Sean Paul",
+          "uri": "spotify:artist:3Isy6kedDrgPYoTS1dazA9"
+        }
+      ]
+    },
+    {
+      "id": "4d6eqRtpDX7tydHJGDZUBQ",
+      "uri": "spotify:track:4d6eqRtpDX7tydHJGDZUBQ",
+      "name": "She Drives Me Crazy",
+      "duration_ms": 215773,
+      "album": {
+        "id": "6CoeDRu0SmpFtLZMcRTO2F",
+        "uri": "spotify:album:6CoeDRu0SmpFtLZMcRTO2F",
+        "name": "The Raw & The Cooked",
+        "release_date": "1988-01-01",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "20p5D2KrE8CGuOjHtxsyTp",
+            "name": "Fine Young Cannibals",
+            "uri": "spotify:artist:20p5D2KrE8CGuOjHtxsyTp"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273c573a4a852f010523c4ba383",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02c573a4a852f010523c4ba383",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851c573a4a852f010523c4ba383",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "20p5D2KrE8CGuOjHtxsyTp",
+          "name": "Fine Young Cannibals",
+          "uri": "spotify:artist:20p5D2KrE8CGuOjHtxsyTp"
+        }
+      ]
+    },
+    {
+      "id": "1GOIfWQmA3Tp6GlwcCd35K",
+      "uri": "spotify:track:1GOIfWQmA3Tp6GlwcCd35K",
+      "name": "Sheitana (feat. Ninho)",
+      "duration_ms": 199653,
+      "album": {
+        "id": "7Fr1UbMBBjPBYOOy7NQmkl",
+        "uri": "spotify:album:7Fr1UbMBBjPBYOOy7NQmkl",
+        "name": "Dans les yeux",
+        "release_date": "2018-09-21",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "1kwzW1IszUiq4Gs9BFesvW",
+            "name": "Hornet La Frappe",
+            "uri": "spotify:artist:1kwzW1IszUiq4Gs9BFesvW"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27385141f12480a9725b80c1c72",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0285141f12480a9725b80c1c72",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485185141f12480a9725b80c1c72",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1kwzW1IszUiq4Gs9BFesvW",
+          "name": "Hornet La Frappe",
+          "uri": "spotify:artist:1kwzW1IszUiq4Gs9BFesvW"
+        },
+        {
+          "id": "6Te49r3A6f5BiIgBRxH7FH",
+          "name": "Ninho",
+          "uri": "spotify:artist:6Te49r3A6f5BiIgBRxH7FH"
+        }
+      ]
+    },
+    {
+      "id": "45FCt12lQyBdxUrLtM4Uor",
+      "uri": "spotify:track:45FCt12lQyBdxUrLtM4Uor",
+      "name": "She Likes a Boy",
+      "duration_ms": 129056,
+      "album": {
+        "id": "79GumpEw4n1qXIahUOrdNv",
+        "uri": "spotify:album:79GumpEw4n1qXIahUOrdNv",
+        "name": "She Likes a Boy",
+        "release_date": "2024-01-12",
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "0Dkj3iE06TJGxGIrGCmwVf",
+            "name": "Nxdia",
+            "uri": "spotify:artist:0Dkj3iE06TJGxGIrGCmwVf"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27368b5c2950ba4404e3ac8779a",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0268b5c2950ba4404e3ac8779a",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485168b5c2950ba4404e3ac8779a",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "0Dkj3iE06TJGxGIrGCmwVf",
+          "name": "Nxdia",
+          "uri": "spotify:artist:0Dkj3iE06TJGxGIrGCmwVf"
+        }
+      ]
+    },
+    {
+      "id": "3HeZam86SuxGp1wZ3XMIjE",
+      "uri": "spotify:track:3HeZam86SuxGp1wZ3XMIjE",
+      "name": "She Said (Big Jet Plane)",
+      "duration_ms": 173750,
+      "album": {
+        "id": "06glmgu7XVm60LyphpYQxc",
+        "uri": "spotify:album:06glmgu7XVm60LyphpYQxc",
+        "name": "She Said (Big Jet Plane)",
+        "release_date": "2021-07-23",
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "3HqP3nd8WI0VfHRhApPlan",
+            "name": "Trinix",
+            "uri": "spotify:artist:3HqP3nd8WI0VfHRhApPlan"
+          },
+          {
+            "id": "6DP0yD9AqeiK3V57URKt4W",
+            "name": "Queen D",
+            "uri": "spotify:artist:6DP0yD9AqeiK3V57URKt4W"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2738f98a497e1c30b2dd678a450",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e028f98a497e1c30b2dd678a450",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048518f98a497e1c30b2dd678a450",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3HqP3nd8WI0VfHRhApPlan",
+          "name": "Trinix",
+          "uri": "spotify:artist:3HqP3nd8WI0VfHRhApPlan"
+        },
+        {
+          "id": "6DP0yD9AqeiK3V57URKt4W",
+          "name": "Queen D",
+          "uri": "spotify:artist:6DP0yD9AqeiK3V57URKt4W"
+        }
+      ]
+    },
+    {
+      "id": "4lqqbSHGGR5BRtnmnky00G",
+      "uri": "spotify:track:4lqqbSHGGR5BRtnmnky00G",
+      "name": "Shen Yeng Anthem",
+      "duration_ms": 141226,
+      "album": {
+        "id": "5ITcrOlnxhUg2uvlGNPJhT",
+        "uri": "spotify:album:5ITcrOlnxhUg2uvlGNPJhT",
+        "name": "Shen Yeng Anthem",
+        "release_date": "2018-05-25",
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "1OFOShsIbhy1l5x73yuVyB",
+            "name": "Shenseea",
+            "uri": "spotify:artist:1OFOShsIbhy1l5x73yuVyB"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2739aca00b155de315ee7c766ba",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e029aca00b155de315ee7c766ba",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048519aca00b155de315ee7c766ba",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "1OFOShsIbhy1l5x73yuVyB",
+          "name": "Shenseea",
+          "uri": "spotify:artist:1OFOShsIbhy1l5x73yuVyB"
+        }
+      ]
+    },
+    {
+      "id": "6g95dK7o7vVh8ZCnDAseU5",
+      "uri": "spotify:track:6g95dK7o7vVh8ZCnDAseU5",
+      "name": "كلام عينيه",
+      "duration_ms": 235833,
+      "album": {
+        "id": "1aCq7XjXXVc3WxPYYUrbeP",
+        "uri": "spotify:album:1aCq7XjXXVc3WxPYYUrbeP",
+        "name": "نساى",
+        "release_date": "2018-10-24",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "2Wk167T0fY1fABsHM5qFcI",
+            "name": "Sherine",
+            "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273cfa4e906cda39d8f62fe81e3",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02cfa4e906cda39d8f62fe81e3",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851cfa4e906cda39d8f62fe81e3",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2Wk167T0fY1fABsHM5qFcI",
+          "name": "Sherine",
+          "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI"
+        }
+      ]
+    },
+    {
+      "id": "5wUbZH9CTDwDfVoujQKIeb",
+      "uri": "spotify:track:5wUbZH9CTDwDfVoujQKIeb",
+      "name": "She Wan That Ah",
+      "duration_ms": 160509,
+      "album": {
+        "id": "1WZaiOFk6sYSCHrGZWMMh4",
+        "uri": "spotify:album:1WZaiOFk6sYSCHrGZWMMh4",
+        "name": "She Wan That Ah",
+        "release_date": "2023-11-17",
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "3Oc7o3kzzpLium0YxZPVri",
+            "name": "Ridge",
+            "uri": "spotify:artist:3Oc7o3kzzpLium0YxZPVri"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273699b80892a23bc549a30fd09",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02699b80892a23bc549a30fd09",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851699b80892a23bc549a30fd09",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3Oc7o3kzzpLium0YxZPVri",
+          "name": "Ridge",
+          "uri": "spotify:artist:3Oc7o3kzzpLium0YxZPVri"
+        },
+        {
+          "id": "6M76EDERzWJXx4c0HdNjqO",
+          "name": "Money Shaun",
+          "uri": "spotify:artist:6M76EDERzWJXx4c0HdNjqO"
+        }
+      ]
+    },
+    {
+      "id": "63Gl4Wqr98iJnWoNGFOQjr",
+      "uri": "spotify:track:63Gl4Wqr98iJnWoNGFOQjr",
+      "name": "الوتر الحساس",
+      "duration_ms": 261224,
+      "album": {
+        "id": "1aCq7XjXXVc3WxPYYUrbeP",
+        "uri": "spotify:album:1aCq7XjXXVc3WxPYYUrbeP",
+        "name": "نساى",
+        "release_date": "2018-10-24",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "2Wk167T0fY1fABsHM5qFcI",
+            "name": "Sherine",
+            "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273cfa4e906cda39d8f62fe81e3",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02cfa4e906cda39d8f62fe81e3",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851cfa4e906cda39d8f62fe81e3",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2Wk167T0fY1fABsHM5qFcI",
+          "name": "Sherine",
+          "uri": "spotify:artist:2Wk167T0fY1fABsHM5qFcI"
+        }
+      ]
+    },
+    {
+      "id": "6A3RkXur9HC5kVDAT51OPA",
+      "uri": "spotify:track:6A3RkXur9HC5kVDAT51OPA",
+      "name": "She Calls Me Back",
+      "duration_ms": 243815,
+      "album": {
+        "id": "6LE1TDXbNYLwBLqrNba7K0",
+        "uri": "spotify:album:6LE1TDXbNYLwBLqrNba7K0",
+        "name": "Chill Office",
+        "release_date": "2024-02-20",
+        "album_type": "compilation",
+        "artists": [
+          {
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Multi-interprètes",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e044a5e61fa245f07d4adeae",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e044a5e61fa245f07d4adeae",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e044a5e61fa245f07d4adeae",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "2RQXRUsr4IW1f3mKyKsy4B",
+          "name": "Noah Kahan",
+          "uri": "spotify:artist:2RQXRUsr4IW1f3mKyKsy4B"
+        }
+      ]
+    },
+    {
+      "id": "0G2lAulZulKHGDqVvtGf39",
+      "uri": "spotify:track:0G2lAulZulKHGDqVvtGf39",
+      "name": "Sherbet",
+      "duration_ms": 256746,
+      "album": {
+        "id": "1g2C4B3Adi9L27BLlVJdEs",
+        "uri": "spotify:album:1g2C4B3Adi9L27BLlVJdEs",
+        "name": "La route est longue",
+        "release_date": "2023-12-08",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "3IW7ScrzXmPvZhB27hmfgy",
+            "name": "Jul",
+            "uri": "spotify:artist:3IW7ScrzXmPvZhB27hmfgy"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2734967a6d7e47e5da99c4c2400",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e024967a6d7e47e5da99c4c2400",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048514967a6d7e47e5da99c4c2400",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3IW7ScrzXmPvZhB27hmfgy",
+          "name": "Jul",
+          "uri": "spotify:artist:3IW7ScrzXmPvZhB27hmfgy"
+        }
+      ]
+    }
+  ]
+}

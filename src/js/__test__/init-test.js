@@ -39,6 +39,7 @@ import LIKED_SONGS_OFFSET_650_API from './api/liked-songs-offset-650-api.json';
 import LIKED_SONGS_OFFSET_700_API from './api/liked-songs-offset-700-api.json';
 import LIKED_SONGS_OFFSET_750_API from './api/liked-songs-offset-750-api.json';
 import SEARCH_SHERRY_API from './api/search-sherry-api.json';
+import SEARCH_SHE_API from './api/search-she-api.json';
 
 const REGEX_CLIENT_ID_OR_SECRET = /\w{10,}/i;
 
@@ -155,6 +156,8 @@ function getData(method, url, data, config) {
       return { ...LIKED_SONGS_OFFSET_750_API };
     } else if (endpoint === '/search?q=sherry&type=album%2Cplaylist%2Ctrack%2Cartist&offset=0') {
       return { ...SEARCH_SHERRY_API };
+    } else if (endpoint === '/search?q=she&type=album%2Cplaylist%2Ctrack%2Cartist&offset=0') {
+      return { ...SEARCH_SHE_API };
     }
 
     return getDataForPlaylistsTracks(endpoint);
