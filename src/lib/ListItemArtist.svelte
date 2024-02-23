@@ -1,10 +1,11 @@
 <script>
-  import { goDetail } from '@js/view-utils';
+  import { goDetail, updateRecentSearch } from '@js/view-utils';
   import ListItem from '@lib/ListItem.svelte';
 
   /** @type {import('@js/spotify').SpotifySearchArtist} */
   export let item;
   export let hasPrefix = false;
+  export let hasClear = false;
 
   $: owner = hasPrefix ? `Artist` : '';
 </script>
@@ -16,9 +17,13 @@
   {owner}
   images={item?.images}
   imageAlt={item?.name}
-  callbackFn={() =>
+  {hasClear}
+  callbackFn={() => {
+    updateRecentSearch(item);
+
     goDetail('ArtistView', {
       id: item?.id,
       uri: item?.uri,
-    })}
+    });
+  }}
 />

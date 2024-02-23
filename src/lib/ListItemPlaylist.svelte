@@ -1,5 +1,5 @@
 <script>
-  import { goDetail } from '@js/view-utils';
+  import { goDetail, updateRecentSearch } from '@js/view-utils';
   import ListItem from '@lib/ListItem.svelte';
 
   /** @type {import('@js/spotify').SpotifyPlaylist} */
@@ -8,6 +8,7 @@
 
   $: displayName = item?.owner?.display_name;
   $: owner = hasPrefix ? `Playlist &bull; ${displayName}` : displayName;
+  export let hasClear = false;
 </script>
 
 <ListItem
@@ -16,9 +17,13 @@
   {owner}
   images={item?.images}
   imageAlt={item?.name}
-  callbackFn={() =>
+  {hasClear}
+  callbackFn={() => {
+    updateRecentSearch(item);
+
     goDetail('PlaylistView', {
       id: item?.id,
       uri: item?.uri,
-    })}
+    });
+  }}
 />

@@ -6,7 +6,6 @@
 
 <style>
   .list {
-    padding-block-end: var(--height-nav-and-player-mini);
     padding-block-start: var(--padding-block-library);
   }
 

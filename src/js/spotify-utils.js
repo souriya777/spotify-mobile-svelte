@@ -68,9 +68,7 @@ function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
   };
 
   const exactTracks = tracks.filter(containsName).map((item) => item?.name);
-  uniqueNames = new Set();
   const exactArtists = artists.filter(containsName).map((item) => item?.name);
-  uniqueNames = new Set();
   const exactPlaylists = playlists.filter(containsName).map((item) => item?.name);
 
   // MAX 2 SONGS + MAX 2 ARTISTS

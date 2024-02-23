@@ -9,6 +9,7 @@
   export let items;
   export let showLikedPlaylist = false;
   export let hasPrefix = false;
+  export let hasClear = false;
 </script>
 
 <List>
@@ -20,13 +21,13 @@
     {@const type = item?.uri?.split(':').at(1)}
 
     {#if 'playlist' === type}
-      <ListItemPlaylist {item} {hasPrefix} />
+      <ListItemPlaylist {item} {hasPrefix} {hasClear} />
     {:else if 'album' === type}
-      <ListItemAlbum {item} {hasPrefix} />
+      <ListItemAlbum {item} {hasPrefix} {hasClear} />
     {:else if 'artist' === type}
-      <ListItemArtist {item} {hasPrefix} />
+      <ListItemArtist {item} {hasPrefix} {hasClear} />
     {:else if 'track' === type}
-      <ListItemTrack {item} {hasPrefix} />
+      <ListItemTrack {item} {hasPrefix} {hasClear} />
     {/if}
   {/each}
 

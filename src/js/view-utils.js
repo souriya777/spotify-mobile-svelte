@@ -1,5 +1,12 @@
 import { get } from 'svelte/store';
-import { currentView, slidePrevAndRemoveForMe, addView, addAndSlideNextForMe } from '@js/store';
+import {
+  currentView,
+  slidePrevAndRemoveForMe,
+  addView,
+  addAndSlideNextForMe,
+  viewName,
+  recentSearch,
+} from '@js/store';
 import { getTimestamp } from '@js/date-utils';
 import SideMenuView from '@lib/views/SideMenuView.svelte';
 import HomeView from '@lib/views/HomeView.svelte';
@@ -9,6 +16,13 @@ import PlaylistView from '@lib/views/PlaylistView.svelte';
 import AlbumView from '@lib/views/AlbumView.svelte';
 import ArtistView from '@lib/views/ArtistView.svelte';
 import DumbView from '@lib/views/DumbView.svelte';
+
+/**
+ * @typedef {import('@js/spotify').SpotifyPlaylist} SpotifyPlaylist
+ * @typedef {import('@js/spotify').SpotifyAlbum} SpotifyAlbum
+ * @typedef {import('@js/spotify').SpotifyArtist} SpotifyArtist
+ * @typedef {import('@js/spotify').SpotifyTrack} SpotifyTrack
+ */
 
 const ROOT_VIEW_INDEX = 1; // side menu -> <root view>
 
@@ -123,6 +137,22 @@ function isHomeView(position) {
   return position === 1;
 }
 
+/**
+ * @param {SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist} spotifyItem
+ */
+function updateRecentSearch(spotifyItem) {
+  if (!spotifyItem) {
+    return;
+  }
+
+  const alreadyExists =
+    get(recentSearch)?.findIndex((item) => item?.uri === spotifyItem?.uri) !== -1;
+
+  if (get(viewName) === 'search' && !alreadyExists) {
+    recentSearch.update((arr) => [...arr, { ...spotifyItem }]);
+  }
+}
+
 export {
   ROOT_VIEW_INDEX,
   HOME_DEFAULT_VIEWS,
@@ -136,4 +166,5 @@ export {
   goDetail,
   isSideMenuView,
   isHomeView,
+  updateRecentSearch,
 };

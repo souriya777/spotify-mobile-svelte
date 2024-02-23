@@ -159,6 +159,7 @@
 <style>
   .view {
     position: relative;
+    padding-block-end: var(--height-nav-and-player-mini);
   }
 
   .header {

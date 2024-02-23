@@ -5,6 +5,16 @@ import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '
 import { DEFAULT_BACKGROUND_HIGHLIGHT_RGB } from '@js/palette-utils';
 import { LIST_SORT_IDS } from '@js/list-sort-utils';
 
+/**
+ * @typedef {import('@js/spotify').SpotifyPlaylist} SpotifyPlaylist
+ * @typedef {import('@js/spotify').SpotifyAlbum} SpotifyAlbum
+ * @typedef {import('@js/spotify').SpotifyArtist} SpotifyArtist
+ * @typedef {import('@js/spotify').SpotifyTrack} SpotifyTrack
+ * @typedef {import('@js/spotify').SpotifySearchArtist} SpotifySearchArtist
+ * @typedef {import('@js/spotify').SpotifyDevice} SpotifyDevice
+ * @typedef {import('@js/spotify').SpotifySearch} SpotifySearch
+ */
+
 // ACCESS
 const accessToken = writableLocalStorage('accessToken', '');
 const authorizationOk = writableLocalStorage('authorizationOk', false);
@@ -22,7 +32,7 @@ const albumName = writable('');
 const imageMiniUrl = writable('');
 const imageCoverUrl = writable('');
 const imageBigUrl = writable('');
-/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyArtist[]>} */
+/** @type {import('svelte/store').Writable<SpotifyArtist[]>} */
 const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
@@ -31,18 +41,18 @@ const likedTracks = writable([]);
 const forbiddenContextUri = writableLocalStorage('forbiddenContextUri', []);
 
 // MY LIB
-/** @type {import('svelte/store').Writable<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifyArtist)[]>} */
+/** @type {import('svelte/store').Writable<(SpotifyPlaylist | SpotifyAlbum | SpotifyArtist)[]>} */
 const myLibRecentlyPlayed = writable([]);
-/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyPlaylist[]>} */
+/** @type {import('svelte/store').Writable<SpotifyPlaylist[]>} */
 const myLibPlaylists = writable([]);
-/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyAlbum[]>} */
+/** @type {import('svelte/store').Writable<SpotifyAlbum[]>} */
 const myLibAlbums = writable([]);
-/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifySearchArtist[]>} */
+/** @type {import('svelte/store').Writable<SpotifySearchArtist[]>} */
 const myLibArtists = writable([]);
 
 // DEVICE
 const deviceId = writableLocalStorage('deviceId', '');
-/** @type {import('svelte/store').Writable<import('@js/spotify').SpotifyDevice[]>} */
+/** @type {import('svelte/store').Writable<SpotifyDevice[]>} */
 const devices = writable([]);
 const activeDevice = derived(devices, ($devices) => {
   return $devices.find((device) => device.is_active === true);
@@ -56,7 +66,14 @@ const appReady = derived(
 );
 const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
 const searchQuery = writableLocalStorage('searchQuery', '');
-const previousSearchQuery = writableLocalStorage('previousSearchQuery', []);
+/** @type {import('svelte/store').Writable<SpotifySearch>} */
+const searchResult = writable(null);
+const searchViewAll = writable(false);
+/** @type {import('svelte/store').Writable<Array<SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist>>} */
+const recentSearch = writableLocalStorage('recentSearch', []);
+function clearRecentSearch(uri) {
+  recentSearch.update((arr) => [...arr.filter((item) => item?.uri !== uri)]);
+}
 const scrollTop = writable(0);
 
 // PLAYER
@@ -200,7 +217,10 @@ export {
   appReady,
   serviceWorkerNotification,
   searchQuery,
-  previousSearchQuery,
+  searchResult,
+  searchViewAll,
+  recentSearch,
+  clearRecentSearch,
   scrollTop,
   viewName,
   VIEWS,

@@ -6,80 +6,112 @@
   import Svg from '@lib/svg/Svg.svelte';
 
   export let focused;
+  export let callback = null;
 
   const DEBOUNCE_SEARCH_MS = 750;
   const dispatch = createEventDispatcher();
 
   /** @type {HTMLElement} */
   let INPUT_HTML;
-  $: value = isNotEmpty($searchQuery) ? $searchQuery : '';
+  let isInputEmpty = true;
 
-  $: if (focused === true && INPUT_HTML) {
-    INPUT_HTML.focus();
+  $: if (focused) {
+    INPUT_HTML?.focus();
+  }
+
+  $: if (isEmpty($searchQuery)) {
+    isInputEmpty = true;
+  } else {
+    isInputEmpty = false;
+  }
+
+  $: if (!isInputEmpty) {
+    callback?.();
   }
 
   function search() {
-    if (isEmpty(value)) {
-      return;
-    }
-
     debounce(async () => {
-      $searchQuery = value;
+      dispatch('valid');
     }, DEBOUNCE_SEARCH_MS);
   }
 
+  function focus() {
+    dispatch('focus');
+  }
+
   function cancel() {
-    value = '';
     dispatch('cancel');
+  }
+
+  function clear() {
+    $searchQuery = '';
+    INPUT_HTML?.focus();
   }
 </script>
 
 <div class="search-input" class:focused>
-  <div class="input-container">
-    <div class="icon">
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div class="input-container" on:click={focus}>
+    <div class="icon begin">
       <Svg name="loupe" />
     </div>
     <input
       type="text"
       placeholder="What do you want to listen to?"
       class:font-search-input-focus={focused}
-      bind:value
+      bind:value={$searchQuery}
       bind:this={INPUT_HTML}
       on:input={search}
       on:focus
     />
-    <button on:click={cancel}>Cancel</button>
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="icon end" on:click={clear}>
+      {#if isNotEmpty($searchQuery)}
+        <Svg name="cross" />
+      {/if}
+    </div>
   </div>
+
+  <button class="font-search-cancel" on:click={cancel}>Cancel</button>
 </div>
 
 <style>
+  .search-input {
+    display: flex;
+  }
+
   .input-container {
     display: flex;
+    flex-grow: 1;
     align-items: center;
     color: var(--color-primary);
     height: 4.4rem;
-  }
-
-  input,
-  .icon {
-    height: 100%;
-    border-radius: 0.4rem;
   }
 
   .icon {
     display: flex;
     align-items: center;
     padding-inline: 1.4rem 1rem;
+    border-radius: 0.4rem;
+    background-color: var(--color-secondary);
+  }
+
+  .icon.begin {
     border-top-right-radius: unset;
     border-bottom-right-radius: unset;
-    background-color: var(--color-secondary);
+  }
+
+  .icon.end {
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
   }
 
   input {
     width: 100%;
     border: none;
-    border-top-left-radius: unset;
-    border-bottom-left-radius: unset;
+    border-radius: 0;
     caret-color: transparent;
   }
 
@@ -91,8 +123,14 @@
     color: inherit;
   }
 
+  input,
+  .icon {
+    height: 100%;
+  }
+
   button {
     margin-inline-start: 1.4rem;
+    padding-inline: unset;
     border: none;
     background: transparent;
     color: var(--color-secondary);
