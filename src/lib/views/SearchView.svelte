@@ -4,10 +4,11 @@
     displayFilterSearch,
     isNavigatingHasPriority,
     navigatingRgb,
+    searchFullMode,
     searchQuery,
     searchResult,
-    eventBus,
     searchViewAll,
+    eventBus,
   } from '@js/store';
   import { DEFAULT_BACKGROUND_ELEVATED_RGB, DEFAULT_BACKGROUND_RGB } from '@js/palette-utils';
   import {
@@ -25,14 +26,16 @@
   import FadeEffect from '@lib/FadeEffect.svelte';
   import SearchInput from '@lib/SearchInput.svelte';
   import ListTrack from '@lib/ListTrack.svelte';
-  import { isEmpty, isNotEmpty } from '@js/string-utils';
+  import { isEmpty } from '@js/string-utils';
   import SearchSuggestions from '@lib/SearchSuggestions.svelte';
   import RecentSearch from '@lib/RecentSearch.svelte';
 
   const TRANSITION_DURATION_MS = 150;
 
+  /** @type {HTMLElement} */
+  let SCROLL_ANCHOR_HTML;
   let startFadeEffect;
-  let isInputFocused = false;
+  let focusInput;
 
   $: tracks = $searchResult?.tracks;
   $: artists = $searchResult?.artists;
@@ -65,7 +68,7 @@
   $: SUGGESTIONS = extractSuggestionsFromSpotifySearch($searchQuery, $searchResult);
 
   $: {
-    if (isInputFocused) {
+    if ($searchFullMode) {
       $navigatingRgb = DEFAULT_BACKGROUND_ELEVATED_RGB;
       $isNavigatingHasPriority = true;
     } else {
@@ -76,13 +79,15 @@
 
   $: if ($eventBus?.type === 'search-input-focus-event') {
     $eventBus = null;
-    isInputFocused = true;
+    $searchFullMode = true;
+    focusInput?.();
   }
 
-  $: if (isNotEmpty($searchQuery)) {
-    isInputFocused = true;
-  } else {
+  $: if (isEmpty($searchQuery)) {
     $searchResult = null;
+  } else {
+    $searchFullMode = true;
+    search();
   }
 
   function search() {
@@ -94,33 +99,45 @@
   }
 
   function cancel() {
-    isInputFocused = false;
+    $searchFullMode = false;
     $searchQuery = '';
+  }
+
+  function viewAll() {
+    $searchViewAll = true;
+    startFadeEffect?.();
+    SCROLL_ANCHOR_HTML?.scrollIntoView();
   }
 </script>
 
-{#if !isInputFocused}
-  <div transition:fade={{ duration: TRANSITION_DURATION_MS }}>
+{#if !$searchFullMode}
+  <div
+    in:fade={{ delay: TRANSITION_DURATION_MS, duration: TRANSITION_DURATION_MS }}
+    out:fade={{ duration: TRANSITION_DURATION_MS }}
+  >
     <ViewRoot title="Search">
-      <SearchInput focused={isInputFocused} on:focus={() => (isInputFocused = true)} />
+      <SearchInput focused={$searchFullMode} on:focus={() => ($searchFullMode = true)} />
     </ViewRoot>
   </div>
 {:else}
-  <div transition:fade={{ delay: TRANSITION_DURATION_MS, duration: TRANSITION_DURATION_MS }}>
+  <div
+    in:fade={{ delay: TRANSITION_DURATION_MS, duration: TRANSITION_DURATION_MS }}
+    out:fade={{ duration: TRANSITION_DURATION_MS }}
+  >
+    <div class="scroll-anchor" bind:this={SCROLL_ANCHOR_HTML}></div>
     <ViewRoot title="Search" header={false}>
       <SearchInput
-        focused={isInputFocused}
+        focused={$searchFullMode}
+        bind:focusForMe={focusInput}
         on:valid={search}
-        on:focus={() => (isInputFocused = true)}
         on:cancel={cancel}
-        callback={startFadeEffect}
       />
 
       <FadeEffect bind:start={startFadeEffect}>
-        <RecentSearch {isInputFocused} />
+        <RecentSearch />
 
         {#if hasResult}
-          {#if SUGGESTIONS}
+          {#if SUGGESTIONS && !$searchViewAll}
             <div class="suggestion">
               <SearchSuggestions suggestions={SUGGESTIONS} />
             </div>
@@ -148,13 +165,15 @@
           {:else}
             <!-- svelte-ignore a11y-no-static-element-interactions -->
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div on:click={() => ($searchViewAll = true)}>
-              <ListAll items={RESULTS} hasPrefix={true}>
-                <div class="view-all" slot="end">
-                  View all results for &lsquo;{$searchQuery}&rsquo;
-                </div>
-              </ListAll>
-            </div>
+            <ListAll items={RESULTS} hasPrefix={true}>
+              <div class="view-all" slot="end">
+                {#if $searchViewAll === false}
+                  <div on:click={viewAll}>
+                    View all results for &lsquo;{$searchQuery}&rsquo;
+                  </div>
+                {/if}
+              </div>
+            </ListAll>
           {/if}
         {/if}
       </FadeEffect>

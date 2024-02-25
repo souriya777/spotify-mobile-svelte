@@ -12,13 +12,12 @@ DRY -> Single Source of Truth
 
 # MVP
 
-- feat(search): can view all searchResults
 - feat(search): manage offset results
   -- feat(search): create basic button
   -- feat(search): manage call api
   -- feat(search): test unit ?
   -- feat(search): manage scroll down detection
-- refactor <div> click by <Button>
+  - refactor <div> click by <Button>
 - CODE REVIEW
 
 - refresh-token for new token => prevent redirect ?

@@ -1,13 +1,12 @@
 <script>
   import { fade } from 'svelte/transition';
-  import { recentSearch, searchQuery } from '@js/store';
+
+  import { searchFullMode, recentSearch, searchQuery } from '@js/store';
   import { isEmpty } from '@js/string-utils';
   import ListAll from '@lib/ListAll.svelte';
 
-  export let isInputFocused;
-
   $: hasRecentSearch = $recentSearch?.length > 0;
-  $: canShowRecentSearch = isInputFocused && isEmpty($searchQuery) && hasRecentSearch;
+  $: canShowRecentSearch = $searchFullMode && isEmpty($searchQuery) && hasRecentSearch;
 
   function clearRecentSearch() {
     $recentSearch = [];

@@ -1,32 +1,23 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { isEmpty, isNotEmpty } from '@js/string-utils';
+  import { isNotEmpty } from '@js/string-utils';
   import { searchQuery } from '@js/store';
   import { debounce } from '@js/souriya-utils';
   import Svg from '@lib/svg/Svg.svelte';
 
   export let focused;
-  export let callback = null;
+  export const focusForMe = () => {
+    INPUT_HTML?.focus();
+  };
 
   const DEBOUNCE_SEARCH_MS = 750;
   const dispatch = createEventDispatcher();
 
   /** @type {HTMLElement} */
   let INPUT_HTML;
-  let isInputEmpty = true;
 
   $: if (focused) {
     INPUT_HTML?.focus();
-  }
-
-  $: if (isEmpty($searchQuery)) {
-    isInputEmpty = true;
-  } else {
-    isInputEmpty = false;
-  }
-
-  $: if (!isInputEmpty) {
-    callback?.();
   }
 
   function search() {
