@@ -66,8 +66,6 @@ const appReady = derived(
 );
 const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
 const searchQuery = writableLocalStorage('searchQuery', '');
-/** @type {import('svelte/store').Writable<SpotifySearch>} */
-const searchResult = writable(null);
 const searchFullMode = writable(false);
 const searchViewAll = writable(false);
 /** @type {import('svelte/store').Writable<Array<SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist>>} */
@@ -218,7 +216,6 @@ export {
   appReady,
   serviceWorkerNotification,
   searchQuery,
-  searchResult,
   searchFullMode,
   searchViewAll,
   recentSearch,

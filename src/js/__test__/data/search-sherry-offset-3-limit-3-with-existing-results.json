@@ -1,0 +1,733 @@
+{
+  "albums": [
+    {
+      "id": "18rFAAWrT2wzvWckYmoLnE",
+      "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
+      "name": "Sherry and 11 Other Hits",
+      "release_date": "1962-10-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "6mcrZQmgzFGRWf7C0SObou",
+          "name": "Frankie Valli & The Four Seasons",
+          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273dee7f5252c91824a57882177",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02dee7f5252c91824a57882177",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851dee7f5252c91824a57882177",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5sCVURwZOOd13unG0uJmNX",
+      "uri": "spotify:album:5sCVURwZOOd13unG0uJmNX",
+      "name": "Jersey Boys Original Broadway Cast Recording",
+      "release_date": "2005-11-15",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "28W9apMi2vgk9O9LnkijIC",
+          "name": "Jersey Boys",
+          "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273719da63af6072078bb73536d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02719da63af6072078bb73536d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851719da63af6072078bb73536d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0I1iezuwcQDATLumFtVjpX",
+      "uri": "spotify:album:0I1iezuwcQDATLumFtVjpX",
+      "name": "Sheryfa Luna",
+      "release_date": "2007-01-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "5BPQfQJaq5Hx0636gwk4uA",
+          "name": "Sheryfa Luna",
+          "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b8c62a768b0f7c2cc168efbc",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b8c62a768b0f7c2cc168efbc",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b8c62a768b0f7c2cc168efbc",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6Jqv3AJesDpDYTkZzw0NLG",
+      "uri": "spotify:album:6Jqv3AJesDpDYTkZzw0NLG",
+      "name": "Jerez, Xères, Sherry",
+      "release_date": "1998-01-31",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "7g7Eo3k1tAuC6WxQ2oY2an",
+          "name": "La Macanita",
+          "uri": "spotify:artist:7g7Eo3k1tAuC6WxQ2oY2an"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f8e7b951e6d53d7fab2350fb",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f8e7b951e6d53d7fab2350fb",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f8e7b951e6d53d7fab2350fb",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2NMSJzHJstXI2fDOgew9y7",
+      "uri": "spotify:album:2NMSJzHJstXI2fDOgew9y7",
+      "name": "ロードス島戦記　オリジナル・サウンドトラック",
+      "release_date": "1990-08-21",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "5E0E6xz5kilwVZV1z1hVt5",
+          "name": "Sherry",
+          "uri": "spotify:artist:5E0E6xz5kilwVZV1z1hVt5"
+        },
+        {
+          "id": "0T6DpeyMccTzeV3wyqJe17",
+          "name": "風のオーケストラ",
+          "uri": "spotify:artist:0T6DpeyMccTzeV3wyqJe17"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273390adf3eb55ba649bc87779c",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02390adf3eb55ba649bc87779c",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851390adf3eb55ba649bc87779c",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0tgfJiDoRCPLiOGApN218b",
+      "uri": "spotify:album:0tgfJiDoRCPLiOGApN218b",
+      "name": "The Very Best Of Sheryl Crow",
+      "release_date": "2003-01-01",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "4TKTii6gnOnUXQHyuo9JaD",
+          "name": "Sheryl Crow",
+          "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e28a65bfeaf7899f4cf6fc29",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e28a65bfeaf7899f4cf6fc29",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e28a65bfeaf7899f4cf6fc29",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "id": "4TKTii6gnOnUXQHyuo9JaD",
+      "name": "Sheryl Crow",
+      "uri": "spotify:artist:4TKTii6gnOnUXQHyuo9JaD",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb962c94da847bcc4ef21c4ad9",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174962c94da847bcc4ef21c4ad9",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178962c94da847bcc4ef21c4ad9",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "5BPQfQJaq5Hx0636gwk4uA",
+      "name": "Sheryfa Luna",
+      "uri": "spotify:artist:5BPQfQJaq5Hx0636gwk4uA",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb27e6dca96162a016686960ae",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517427e6dca96162a016686960ae",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17827e6dca96162a016686960ae",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "5udY4J3ruydRyg98yxTRHw",
+      "name": "Sherry Finzer",
+      "uri": "spotify:artist:5udY4J3ruydRyg98yxTRHw",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eba14a0f2753385628c401812b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174a14a0f2753385628c401812b",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178a14a0f2753385628c401812b",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "4wi6SmqKntxGQIZz4mXjGF",
+      "name": "Scorpio Qveen",
+      "uri": "spotify:artist:4wi6SmqKntxGQIZz4mXjGF",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2731391247eaea9b6614686730d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e021391247eaea9b6614686730d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048511391247eaea9b6614686730d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0oOet2f43PA68X5RxKobEy",
+      "name": "Shreya Ghoshal",
+      "uri": "spotify:artist:0oOet2f43PA68X5RxKobEy",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb36a7262247318ff0f1ad00da",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517436a7262247318ff0f1ad00da",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17836a7262247318ff0f1ad00da",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    },
+    {
+      "id": "7bx1kBLW47pR2XvBd4T7wT",
+      "name": "Sherry Grayson",
+      "uri": "spotify:artist:7bx1kBLW47pR2XvBd4T7wT",
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb98107ce41945ff53b1f1969",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174b98107ce41945ff53b1f1969",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178b98107ce41945ff53b1f1969",
+          "height": 160,
+          "width": 160
+        }
+      ]
+    }
+  ],
+  "playlists": [
+    {
+      "id": "0GAtzhraDm7arRDSoxk8mL",
+      "uri": "spotify:playlist:0GAtzhraDm7arRDSoxk8mL",
+      "name": "Sherry Baby",
+      "description": "",
+      "owner": {
+        "id": "williethehippo1990",
+        "display_name": "WVR99"
+      },
+      "images": [
+        {
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273135ba7637d3fe22e01d9cebbab67616d0000b2731a5b6271ae1c8497df20916eab67616d0000b27378b61a8ac95e0f48922b6990ab67616d0000b273b96c21e15c091eb98a6c88a4",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273135ba7637d3fe22e01d9cebbab67616d0000b2731a5b6271ae1c8497df20916eab67616d0000b27378b61a8ac95e0f48922b6990ab67616d0000b273b96c21e15c091eb98a6c88a4",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273135ba7637d3fe22e01d9cebbab67616d0000b2731a5b6271ae1c8497df20916eab67616d0000b27378b61a8ac95e0f48922b6990ab67616d0000b273b96c21e15c091eb98a6c88a4",
+          "height": 60,
+          "width": 60
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0GAtzhraDm7arRDSoxk8mL/tracks",
+        "total": 17
+      }
+    },
+    {
+      "id": "37i9dQZF1EIZDEn0HiSA4k",
+      "uri": "spotify:playlist:37i9dQZF1EIZDEn0HiSA4k",
+      "name": "Mix Sherry Maan",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIVsoN2QYioqP>Geeta Zaildar</a>, <a href=spotify:playlist:37i9dQZF1EIVOuHagU424y>Kamal Grewal</a> et <a href=spotify:playlist:37i9dQZF1EIZyXHIikAAnB>Lehmber Hussainpuri</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/5muis5Lg8989ZMH8dl3szz/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIZDEn0HiSA4k/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1E4neYz4jSjLyY",
+      "uri": "spotify:playlist:37i9dQZF1E4neYz4jSjLyY",
+      "name": "Radio Sherry Maan",
+      "description": "Avec Kulbir Jhinjher, Saippy Gill, Joban Malhi et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/5muis5Lg8989ZMH8dl3szz/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E4neYz4jSjLyY/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1DZ06evO2SikO4",
+      "uri": "spotify:playlist:37i9dQZF1DZ06evO2SikO4",
+      "name": "This Is Sheryl Crow",
+      "description": "This Is Sheryl Crow. Les titres incontournables, réunis dans une seule et même playlist.",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2SikO4-large.jpg",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2SikO4/tracks",
+        "total": 51
+      }
+    },
+    {
+      "id": "37i9dQZF1EIWnynLr0DYXm",
+      "uri": "spotify:playlist:37i9dQZF1EIWnynLr0DYXm",
+      "name": "Mix SHERRY",
+      "description": "<a href=spotify:playlist:37i9dQZF1EIVr66pCwRvos>PURPEECH</a>, <a href=spotify:playlist:37i9dQZF1EIZfp713rmtgs>AYLA's</a> et <a href=spotify:playlist:37i9dQZF1EIWb5rW356Zi2>FREEHAND</a>",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seed-mix-image.spotifycdn.com/v6/img/artist/3Uzr5SP3rk1GL9OdPYL0Rz/fr/large",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EIWnynLr0DYXm/tracks",
+        "total": 50
+      }
+    },
+    {
+      "id": "37i9dQZF1E4tSjpdqL0WBx",
+      "uri": "spotify:playlist:37i9dQZF1E4tSjpdqL0WBx",
+      "name": "Radio Sheryl Crow",
+      "description": "Avec Jewel, Melissa Etheridge, Lisa Loeb et bien d'autres artistes",
+      "owner": {
+        "id": "spotify",
+        "display_name": "Spotify"
+      },
+      "images": [
+        {
+          "url": "https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/4TKTii6gnOnUXQHyuo9JaD/fr",
+          "height": null,
+          "width": null
+        }
+      ],
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1E4tSjpdqL0WBx/tracks",
+        "total": 50
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "0NpvdCO506uO58D4AbKzki",
+      "uri": "spotify:track:0NpvdCO506uO58D4AbKzki",
+      "name": "Sherry",
+      "duration_ms": 152160,
+      "album": {
+        "id": "0NUEQILaBzavnzcMEs4buZ",
+        "uri": "spotify:album:0NUEQILaBzavnzcMEs4buZ",
+        "name": "The Very Best of Frankie Valli & The 4 Seasons",
+        "release_date": "2003-01-14",
+        "album_type": "compilation",
+        "artists": [
+          {
+            "id": "6mcrZQmgzFGRWf7C0SObou",
+            "name": "Frankie Valli & The Four Seasons",
+            "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273b96c21e15c091eb98a6c88a4",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02b96c21e15c091eb98a6c88a4",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851b96c21e15c091eb98a6c88a4",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6mcrZQmgzFGRWf7C0SObou",
+          "name": "Frankie Valli & The Four Seasons",
+          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+        }
+      ]
+    },
+    {
+      "id": "7sqK6f8dHVx3Q1GjFrVyGl",
+      "uri": "spotify:track:7sqK6f8dHVx3Q1GjFrVyGl",
+      "name": "Sherry",
+      "duration_ms": 152160,
+      "album": {
+        "id": "18rFAAWrT2wzvWckYmoLnE",
+        "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
+        "name": "Sherry and 11 Other Hits",
+        "release_date": "1962-10-01",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "6mcrZQmgzFGRWf7C0SObou",
+            "name": "Frankie Valli & The Four Seasons",
+            "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273dee7f5252c91824a57882177",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02dee7f5252c91824a57882177",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851dee7f5252c91824a57882177",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "6mcrZQmgzFGRWf7C0SObou",
+          "name": "Frankie Valli & The Four Seasons",
+          "uri": "spotify:artist:6mcrZQmgzFGRWf7C0SObou"
+        }
+      ]
+    },
+    {
+      "id": "5JgS0FY22HtNpFAJTo507k",
+      "uri": "spotify:track:5JgS0FY22HtNpFAJTo507k",
+      "name": "Sherry Darling",
+      "duration_ms": 243173,
+      "album": {
+        "id": "6YNIEeDWqC09YIWzhoSVLg",
+        "uri": "spotify:album:6YNIEeDWqC09YIWzhoSVLg",
+        "name": "The River",
+        "release_date": "1980-10-17",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "3eqjTLE0HfPfh78zjh6TqT",
+            "name": "Bruce Springsteen",
+            "uri": "spotify:artist:3eqjTLE0HfPfh78zjh6TqT"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2730e987064364e2b62ae1925b4",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e020e987064364e2b62ae1925b4",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048510e987064364e2b62ae1925b4",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3eqjTLE0HfPfh78zjh6TqT",
+          "name": "Bruce Springsteen",
+          "uri": "spotify:artist:3eqjTLE0HfPfh78zjh6TqT"
+        }
+      ]
+    },
+    {
+      "id": "3asQPoVfuofjPhqPtq3KDp",
+      "uri": "spotify:track:3asQPoVfuofjPhqPtq3KDp",
+      "name": "Sherry",
+      "duration_ms": 152453,
+      "album": {
+        "id": "5f7Ux7Gh4kcYnD6Iv3y685",
+        "uri": "spotify:album:5f7Ux7Gh4kcYnD6Iv3y685",
+        "name": "Lost Lullaby",
+        "release_date": "2022-02-18",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "4uHsvbEomrfo1KXllQ9K3s",
+            "name": "The Four Seasons",
+            "uri": "spotify:artist:4uHsvbEomrfo1KXllQ9K3s"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273ace3b628902982268c436155",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02ace3b628902982268c436155",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851ace3b628902982268c436155",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "4uHsvbEomrfo1KXllQ9K3s",
+          "name": "The Four Seasons",
+          "uri": "spotify:artist:4uHsvbEomrfo1KXllQ9K3s"
+        }
+      ]
+    },
+    {
+      "id": "11r0OH8zYLcBlryvnAiykT",
+      "uri": "spotify:track:11r0OH8zYLcBlryvnAiykT",
+      "name": "Sherry",
+      "duration_ms": 134506,
+      "album": {
+        "id": "5sCVURwZOOd13unG0uJmNX",
+        "uri": "spotify:album:5sCVURwZOOd13unG0uJmNX",
+        "name": "Jersey Boys Original Broadway Cast Recording",
+        "release_date": "2005-11-15",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "28W9apMi2vgk9O9LnkijIC",
+            "name": "Jersey Boys",
+            "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273719da63af6072078bb73536d",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02719da63af6072078bb73536d",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851719da63af6072078bb73536d",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "28W9apMi2vgk9O9LnkijIC",
+          "name": "Jersey Boys",
+          "uri": "spotify:artist:28W9apMi2vgk9O9LnkijIC"
+        }
+      ]
+    },
+    {
+      "id": "65y3zbw2h5jwh5qg3c7dAL",
+      "uri": "spotify:track:65y3zbw2h5jwh5qg3c7dAL",
+      "name": "Sherry",
+      "duration_ms": 151133,
+      "album": {
+        "id": "5C695UOQoQfAoPSnXT479i",
+        "uri": "spotify:album:5C695UOQoQfAoPSnXT479i",
+        "name": "Teardrops & Lost Lullabies",
+        "release_date": "2021-01-22",
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "3CDKmzJu6uwEGnPLLZffpD",
+            "name": "Frankie Valli",
+            "uri": "spotify:artist:3CDKmzJu6uwEGnPLLZffpD"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2737cccd70f08d3071bd4e0537f",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e027cccd70f08d3071bd4e0537f",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048517cccd70f08d3071bd4e0537f",
+            "height": 64,
+            "width": 64
+          }
+        ]
+      },
+      "artists": [
+        {
+          "id": "3CDKmzJu6uwEGnPLLZffpD",
+          "name": "Frankie Valli",
+          "uri": "spotify:artist:3CDKmzJu6uwEGnPLLZffpD"
+        }
+      ]
+    }
+  ]
+}

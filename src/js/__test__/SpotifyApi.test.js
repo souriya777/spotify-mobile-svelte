@@ -31,6 +31,9 @@ import QUEUE_LAST_SONG_JSON from './data/queue-last-song.json';
 import PLAYER_STATE_JSON from './data/player-state.json';
 import SINGLE_PLAYLIST_JSON from './data/single-playlist.json';
 import SEARCH_SHERRY_JSON from './data/search-sherry.json';
+import SEARCH_SHERRY_OFFSET_50_JSON from './data/search-sherry-offset-50.json';
+import SEARCH_SHERRY_OFFSET_3_LIMIT_3_JSON from './data/search-sherry-offset-3-limit-3.json';
+import SEARCH_SHERRY_OFFSET_3_LIMIT_3_WITH_EXISTING_RESULTS_JSON from './data/search-sherry-offset-3-limit-3-with-existing-results.json';
 import SEARCH_SHE_JSON from './data/search-she.json';
 import PLAYLIST_OLD_ORDER_JSON from './data/playlist-old-order.json';
 import PLAYLIST_NEW_ORDER_JSON from './data/playlist-new-order.json';
@@ -224,13 +227,38 @@ test(`transfertPlayback() not throwing exception`, async () => {
   await SpotifyApi.transfertPlayback('my-device-id-123');
 });
 
-test(`/search?q=sherry returns SpotifySearch`, async () => {
+test(`/search?q=sherry&limit=20 returns SpotifySearch`, async () => {
   const actual = await SpotifyApi.search('sherry');
   const expected = { ...SEARCH_SHERRY_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/search?q=she returns SpotifySearch`, async () => {
+test(`/search?q=sherry&offset=3&limit=3 returns SpotifySearch`, async () => {
+  const actual = await SpotifyApi.search('sherry', 3, 3);
+  const expected = { ...SEARCH_SHERRY_OFFSET_3_LIMIT_3_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/search?q=sherry&offset=3&limit=3 with existingSpotifySearch returns an "incremented" SpotifySearch`, async () => {
+  const firstResults = await SpotifyApi.search('sherry', 0, 3);
+  const actual = await SpotifyApi.search('sherry', 3, 3, firstResults);
+  const expected = { ...SEARCH_SHERRY_OFFSET_3_LIMIT_3_WITH_EXISTING_RESULTS_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/search?q=sherry&offset=50&limit=20 returns SpotifySearch`, async () => {
+  const actual = await SpotifyApi.search('sherry', 50);
+  const expected = { ...SEARCH_SHERRY_OFFSET_50_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/search?q=sherry&offset=50&limit=20 returns SpotifySearch`, async () => {
+  const actual = await SpotifyApi.search('sherry', 50);
+  const expected = { ...SEARCH_SHERRY_OFFSET_50_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/search?q=she&limit=20 returns SpotifySearch`, async () => {
   const actual = await SpotifyApi.search('she');
   const expected = { ...SEARCH_SHE_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);

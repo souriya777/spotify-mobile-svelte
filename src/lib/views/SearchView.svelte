@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import {
     displayFilterSearch,
@@ -6,14 +7,13 @@
     navigatingRgb,
     searchFullMode,
     searchQuery,
-    searchResult,
     searchViewAll,
     eventBus,
   } from '@js/store';
   import { DEFAULT_BACKGROUND_ELEVATED_RGB, DEFAULT_BACKGROUND_RGB } from '@js/palette-utils';
   import {
+    OFFSET_INCREMENT,
     SPOTIFY_FIRST_RESULTS_LIMIT,
-    SPOTIFY_SECOND_RESULTS_LIMIT,
     extractSuggestionsFromSpotifySearch,
   } from '@js/spotify-utils';
   import SpotifyApi from '@js/SpotifyApi';
@@ -29,43 +29,28 @@
   import { isEmpty } from '@js/string-utils';
   import SearchSuggestions from '@lib/SearchSuggestions.svelte';
   import RecentSearch from '@lib/RecentSearch.svelte';
+  import ScrollEndDetector from '@lib/ScrollEndDetector.svelte';
 
   const TRANSITION_DURATION_MS = 150;
 
   /** @type {HTMLElement} */
+  let VIEW_HTML;
+  /** @type {HTMLElement} */
   let SCROLL_ANCHOR_HTML;
   let startFadeEffect;
   let focusInput;
+  /** @type {import('@js/spotify').SpotifySearch} */
+  let searchResult;
+  let searchOffset = 0;
 
-  $: tracks = $searchResult?.tracks;
-  $: artists = $searchResult?.artists;
-  $: albums = $searchResult?.albums;
-  $: playlists = $searchResult?.playlists;
+  $: tracks = searchResult?.tracks ?? [];
+  $: artists = searchResult?.artists ?? [];
+  $: albums = searchResult?.albums ?? [];
+  $: playlists = searchResult?.playlists ?? [];
 
-  $: firstTracks = tracks?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstArtists = artists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstAlbums = albums?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-  $: firstPlaylists = playlists?.slice(0, SPOTIFY_FIRST_RESULTS_LIMIT) ?? [];
-
-  $: nextTracks = tracks?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
-  $: nextArtists = artists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
-  $: nextAlbums = albums?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
-  $: nextPlaylists =
-    playlists?.slice(SPOTIFY_FIRST_RESULTS_LIMIT, SPOTIFY_SECOND_RESULTS_LIMIT) ?? [];
-
-  $: RESULTS = [
-    ...firstTracks,
-    ...firstArtists,
-    ...firstAlbums,
-    ...firstPlaylists,
-    ...nextTracks,
-    ...nextArtists,
-    ...nextAlbums,
-    ...nextPlaylists,
-  ];
+  $: RESULTS = [...tracks, ...artists, ...albums, ...playlists];
+  $: SUGGESTIONS = extractSuggestionsFromSpotifySearch($searchQuery, searchResult);
   $: hasResult = RESULTS?.length > 0;
-
-  $: SUGGESTIONS = extractSuggestionsFromSpotifySearch($searchQuery, $searchResult);
 
   $: {
     if ($searchFullMode) {
@@ -79,34 +64,68 @@
 
   $: if ($eventBus?.type === 'search-input-focus-event') {
     $eventBus = null;
-    $searchFullMode = true;
-    focusInput?.();
+    $searchViewAll = false;
+
+    if ($searchFullMode) {
+      $searchQuery = '';
+      $searchFullMode = false;
+    } else {
+      $searchFullMode = true;
+      focusInput?.();
+    }
   }
 
   $: if (isEmpty($searchQuery)) {
-    $searchResult = null;
+    searchResult = null;
   } else {
     $searchFullMode = true;
-    search();
   }
 
-  function search() {
+  onMount(() => {
+    search();
+  });
+
+  async function search(increment = false) {
     if (isEmpty($searchQuery)) {
       return;
     }
 
-    SpotifyApi.search($searchQuery).then((result) => ($searchResult = result));
+    if (increment) {
+      searchResult = await SpotifyApi.search(
+        $searchQuery,
+        searchOffset,
+        OFFSET_INCREMENT,
+        searchResult,
+      );
+    } else {
+      searchResult = await SpotifyApi.search(
+        $searchQuery,
+        searchOffset,
+        SPOTIFY_FIRST_RESULTS_LIMIT,
+      );
+    }
   }
 
   function cancel() {
     $searchFullMode = false;
+    clear();
+  }
+
+  function clear() {
+    $searchViewAll = false;
     $searchQuery = '';
+    searchOffset = 0;
   }
 
   function viewAll() {
     $searchViewAll = true;
     startFadeEffect?.();
     SCROLL_ANCHOR_HTML?.scrollIntoView();
+  }
+
+  function loadNextResults() {
+    searchOffset += OFFSET_INCREMENT;
+    search(true);
   }
 </script>
 
@@ -123,14 +142,16 @@
   <div
     in:fade={{ delay: TRANSITION_DURATION_MS, duration: TRANSITION_DURATION_MS }}
     out:fade={{ duration: TRANSITION_DURATION_MS }}
+    bind:this={VIEW_HTML}
   >
     <div class="scroll-anchor" bind:this={SCROLL_ANCHOR_HTML}></div>
     <ViewRoot title="Search" header={false}>
       <SearchInput
         focused={$searchFullMode}
         bind:focusForMe={focusInput}
-        on:valid={search}
+        on:valid={() => search()}
         on:cancel={cancel}
+        on:clear={clear}
       />
 
       <FadeEffect bind:start={startFadeEffect}>
@@ -146,10 +167,10 @@
           {#if $searchViewAll}
             <ListFilter
               isMyLib={false}
-              hasTracks={firstTracks.length > 0}
-              hasArtists={firstArtists.length > 0}
-              hasAlbums={firstAlbums.length > 0}
-              hasPlaylists={firstPlaylists.length > 0}
+              hasTracks={tracks?.length > 0}
+              hasArtists={artists?.length > 0}
+              hasAlbums={albums?.length > 0}
+              hasPlaylists={playlists?.length > 0}
               callback={startFadeEffect}
             />
           {/if}
@@ -174,6 +195,10 @@
                 {/if}
               </div>
             </ListAll>
+          {/if}
+
+          {#if $searchViewAll}
+            <ScrollEndDetector callback={loadNextResults} />
           {/if}
         {/if}
       </FadeEffect>

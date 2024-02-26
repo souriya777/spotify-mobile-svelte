@@ -12,20 +12,11 @@ DRY -> Single Source of Truth
 
 # MVP
 
-- feat(search): manage offset results
-  -- feat(search): create basic button
-  -- feat(search): manage call api
-  -- feat(search): test unit ?
-  -- feat(search): manage scroll down detection
-  - refactor <div> click by <Button>
-- CODE REVIEW
+- t.u. searchResulte increment
+  -- feat(artist-detail): ui/ux
 
-- refresh-token for new token => prevent redirect ?
-
-- search in playlist
 - feat(artist-detail): js
-- feat(artist-detail): ui
-- feat(artist-detail): ux
+- search in playlist
 - fix(playlist): spotify bug "recently-added" order
   -- see <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
 - feat(playlist): can favorite song
@@ -85,6 +76,8 @@ DRY -> Single Source of Truth
 - ux(loading) : add spotify logo (ball)
 - ui(accessibility): implement accessibility (eg. `aria-hidden`) ?
 - -- refactor: detailImage => <NoteSvg size={64} />
+- refactor <div> click by <Button>
+- feat(token): refresh-token for new token => prevent redirect ?
 - refactor(aria): remove all `role="button"` ?
 - refactor(solver): remove old solver
 - refactor(button): use use:onTap

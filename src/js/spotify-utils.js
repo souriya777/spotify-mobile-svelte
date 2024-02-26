@@ -10,10 +10,10 @@ const SPOTIFY_LIKED_IMAGES_API = [
     width: 300,
   },
 ];
-const SPOTIFY_FIRST_RESULTS_LIMIT = 3;
-const SPOTIFY_SECOND_RESULTS_LIMIT = 2;
+const SPOTIFY_FIRST_RESULTS_LIMIT = 4;
 const SUGGESTIONS_MAX = 4;
-const SUGGESTIONS_BY_CATEGORY_MAX = 2;
+const SUGGESTIONS_MAX_BY_CATEGORY = 2;
+const OFFSET_INCREMENT = 3;
 
 const sortListByName = (a, b) => a.name.localeCompare(b.name);
 
@@ -45,15 +45,15 @@ function sortImagesBySizeAsc(images) {
  * @returns {string[]}
  */
 function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
-  if (!searchQuery || !spotifySearch) {
-    return null;
-  }
-
   const result = [];
 
-  const tracks = spotifySearch?.tracks;
-  const artists = spotifySearch?.artists;
-  const playlists = spotifySearch?.playlists;
+  if (!searchQuery || !spotifySearch) {
+    return result;
+  }
+
+  const tracks = spotifySearch?.tracks ? spotifySearch.tracks : [];
+  const artists = spotifySearch?.artists ? spotifySearch.artists : [];
+  const playlists = spotifySearch?.playlists ? spotifySearch.playlists : [];
   let uniqueNames = new Set();
 
   const containsName = (item) => {
@@ -72,8 +72,8 @@ function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
   const exactPlaylists = playlists.filter(containsName).map((item) => item?.name);
 
   // MAX 2 SONGS + MAX 2 ARTISTS
-  result.push(...exactTracks.slice(0, SUGGESTIONS_BY_CATEGORY_MAX));
-  result.push(...exactArtists.slice(0, SUGGESTIONS_BY_CATEGORY_MAX));
+  result.push(...exactTracks.slice(0, SUGGESTIONS_MAX_BY_CATEGORY));
+  result.push(...exactArtists.slice(0, SUGGESTIONS_MAX_BY_CATEGORY));
 
   // MAX 1 PLAYLIST
   if (result.length < SUGGESTIONS_MAX) {
@@ -99,7 +99,7 @@ function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
 export {
   SPOTIFY_LIKED_IMAGES_API,
   SPOTIFY_FIRST_RESULTS_LIMIT,
-  SPOTIFY_SECOND_RESULTS_LIMIT,
+  OFFSET_INCREMENT,
   sortListByName,
   sortListByNameReverse,
   sortListByAddedAt,

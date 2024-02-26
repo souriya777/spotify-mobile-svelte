@@ -6,7 +6,7 @@
   import ListAll from '@lib/ListAll.svelte';
 
   $: hasRecentSearch = $recentSearch?.length > 0;
-  $: canShowRecentSearch = $searchFullMode && isEmpty($searchQuery) && hasRecentSearch;
+  $: canShowRecentSearch = hasRecentSearch && $searchFullMode && isEmpty($searchQuery);
 
   function clearRecentSearch() {
     $recentSearch = [];
@@ -24,6 +24,11 @@
       </div>
     {/if}
   </div>
+{:else if isEmpty($searchQuery)}
+  <div class="no-recent">
+    <p class="font-search-no-result-title">Play what you love</p>
+    <p class="font-search-no-result-subtitle">Search for artists, songs, albums and more.</p>
+  </div>
 {/if}
 
 <style>
@@ -40,5 +45,13 @@
     border-radius: 2rem;
     background: none;
     color: var(--color-secondary);
+  }
+
+  .no-recent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50dvh;
   }
 </style>

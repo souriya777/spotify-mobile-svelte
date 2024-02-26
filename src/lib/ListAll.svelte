@@ -17,7 +17,7 @@
     <ListItemPlaylistLiked />
   {/if}
 
-  {#each items as item (item?.id)}
+  {#each items as item (item?.uri)}
     {@const type = item?.uri?.split(':').at(1)}
 
     {#if 'playlist' === type}

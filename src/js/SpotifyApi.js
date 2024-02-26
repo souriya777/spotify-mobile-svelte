@@ -685,19 +685,71 @@ class SpotifyApi {
 
   /**
    * @param {string} query
+   * @param {number} offset
+   * @param {number} limit
+   * @param {SpotifySearch} existingSpotifySearch
    * @returns {Promise<import('@js/spotify').SpotifySearch>}
    */
-  async search(query) {
+  async search(query, offset = 0, limit = 20, existingSpotifySearch = null) {
     if (!isNotEmpty(query)) {
       return;
     }
 
-    const OFFSET = 0;
     const q = encodeURIComponent(query);
-    const url = `/search?q=${q}&type=album%2Cplaylist%2Ctrack%2Cartist&offset=${OFFSET}`;
+    const url = `/search?q=${q}&type=album%2Cplaylist%2Ctrack%2Cartist&offset=${offset}&limit=${limit}`;
     const data = await this.#get(url);
     LOGGER.log(`search "${q}"`);
-    return new SpotifySearch(data);
+
+    let result;
+
+    if (existingSpotifySearch) {
+      const existingTracks = existingSpotifySearch?.tracks ? [...existingSpotifySearch.tracks] : [];
+      const existingArtists = existingSpotifySearch?.artists
+        ? [...existingSpotifySearch.artists]
+        : [];
+      const existingAlbums = existingSpotifySearch?.albums ? [...existingSpotifySearch.albums] : [];
+      const existingPlaylists = existingSpotifySearch?.playlists
+        ? [...existingSpotifySearch.playlists]
+        : [];
+
+      const dataTracks = data?.tracks?.items ? data?.tracks?.items : [];
+      const dataArtists = data?.artists?.items ? data?.artists?.items : [];
+      const dataAlbums = data?.albums?.items ? data?.albums?.items : [];
+      const dataPlaylists = data?.playlists?.items ? data?.playlists?.items : [];
+
+      const trackUris = new Set(dataTracks.map((item) => item?.uri));
+      const artistsUris = new Set(dataArtists.map((item) => item?.uri));
+      const albumsUris = new Set(dataAlbums.map((item) => item?.uri));
+      const playlistUris = new Set(dataPlaylists.map((item) => item?.uri));
+
+      const tracksWithoutDuplicates = existingTracks?.filter((item) => !trackUris.has(item?.uri));
+      const artistsWithoutDuplicates = existingArtists?.filter(
+        (item) => !artistsUris.has(item?.uri),
+      );
+      const albumsWithoutDuplicates = existingAlbums?.filter((item) => !albumsUris.has(item?.uri));
+      const playlistsWithoutDuplicates = existingPlaylists?.filter(
+        (item) => !playlistUris.has(item?.uri),
+      );
+
+      result = new SpotifySearch({
+        tracks: {
+          items: [...tracksWithoutDuplicates, ...dataTracks],
+        },
+        artists: {
+          items: [...artistsWithoutDuplicates, ...dataArtists],
+        },
+        albums: {
+          items: [...albumsWithoutDuplicates, ...dataAlbums],
+        },
+        playlists: {
+          items: [...playlistsWithoutDuplicates, ...dataPlaylists],
+        },
+      });
+    } else {
+      result = new SpotifySearch(data);
+    }
+
+    return result;
   }
 
   /** @param {string} trackId */

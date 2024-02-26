@@ -20,7 +20,7 @@
     INPUT_HTML?.focus();
   }
 
-  function search() {
+  function valid() {
     debounce(async () => {
       dispatch('valid');
     }, DEBOUNCE_SEARCH_MS);
@@ -35,7 +35,7 @@
   }
 
   function clear() {
-    $searchQuery = '';
+    dispatch('clear');
     INPUT_HTML?.focus();
   }
 </script>
@@ -53,7 +53,7 @@
       class:font-search-input-focus={focused}
       bind:value={$searchQuery}
       bind:this={INPUT_HTML}
-      on:input={search}
+      on:input={valid}
       on:focus
     />
     <!-- svelte-ignore a11y-no-static-element-interactions -->
