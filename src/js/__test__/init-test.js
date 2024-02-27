@@ -16,7 +16,25 @@ import ALBUM_CHOPIN_LANG_LANG_API_JSON from './api/album-chopin-lang_lang-api.js
 import ALBUM_ORELSAN_TRACKS_API_JSON from './api/album-orelsan-tracks-api.json';
 import MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON from './api/my-following-artists-offset-0-api.json';
 import MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON from './api/my-following-artists-offset-50-api.json';
-import SEVERAL_ARTISTS_API_JSON from './api/several-artists-api.json';
+import ME_FOLLOWING_TAYLOR_SWIFT_JSON from './api/me-following-taylor-swift-api.json';
+import ARTIST_TAYLOR_SWIFT_API_JSON from './api/artist-taylor-swift-api.json';
+import ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_ALBUMS_API_JSON from './api/artist-taylor-swift-discography-albums-api.json';
+import ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_SINGLES_API_JSON from './api/artist-taylor-swift-discography-singles-api.json';
+import ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_SINGLES_OFFSET_50_API_JSON from './api/artist-taylor-swift-discography-singles-offset-50-api.json';
+import ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_COMPILATION_API_JSON from './api/artist-taylor-swift-discography-compilations-api.json';
+import ARTIST_TAYLOR_SWIFT_TOP_TRACKS_API_JSON from './api/artist-taylor-swift-top-tracks-api.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_API_JSON from './api/artist-taylor-swift-appears-on-api.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_50_API_JSON from './api/artist-taylor-swift-appears-on-offset-50-api.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_100_API_JSON from './api/artist-taylor-swift-appears-on-offset-100-api.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_150_API_JSON from './api/artist-taylor-swift-appears-on-offset-150-api.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_200_API_JSON from './api/artist-taylor-swift-appears-on-offset-200-api.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_250_API_JSON from './api/artist-taylor-swift-appears-on-offset-250-api.json';
+import ARTIST_TAYLOR_SWIFT_RELATED_ARTISTS_API_JSON from './api/artist-taylor-swift-related-artists-api.json';
+import ARTIST_MAZE_DISCOGRAPHY_ALBUMS_API_JSON from './api/artist-maze-discography-albums-api.json';
+import ARTIST_MAZE_DISCOGRAPHY_SINGLES_API_JSON from './api/artist-maze-discography-singles-api.json';
+import ARTIST_MAZE_DISCOGRAPHY_COMPILATIONS_API_JSON from './api/artist-maze-discography-compilations-api.json';
+import ARTIST_MAZE_TOP_TRACKS_API_JSON from './api/artist-maze-top-tracks-api.json';
+import ARTISTS_SEVERAL_API_JSON from './api/artists-several-api.json';
 import RECENTLY_PLAYED_API_JSON from './api/recently-played-api.json';
 import QUEUE_API_JSON from './api/queue-api.json';
 import MY_PLAYLISTS_OFFSET_0_API_JSON from './api/my-playlists-offset-0-api.json';
@@ -39,8 +57,8 @@ import LIKED_SONGS_OFFSET_650_API from './api/liked-songs-offset-650-api.json';
 import LIKED_SONGS_OFFSET_700_API from './api/liked-songs-offset-700-api.json';
 import LIKED_SONGS_OFFSET_750_API from './api/liked-songs-offset-750-api.json';
 import SEARCH_SHERRY_API from './api/search-sherry-api.json';
-import SEARCH_SHERRY_OFFSET_0_LIMIT_3_API from './api/search-sherry-offset-0-limit-3.json';
-import SEARCH_SHERRY_OFFSET_3_LIMIT_3_API from './api/search-sherry-offset-3-limit-3.json';
+import SEARCH_SHERRY_OFFSET_0_LIMIT_3_API from './api/search-sherry-offset-0-limit-3-api.json';
+import SEARCH_SHERRY_OFFSET_3_LIMIT_3_API from './api/search-sherry-offset-3-limit-3-api.json';
 import SEARCH_SHERRY_OFFSET_50_API from './api/search-sherry-offset-50-api.json';
 import SEARCH_SHE_API from './api/search-she-api.json';
 
@@ -110,11 +128,85 @@ function getData(method, url, data, config) {
       return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_0_JSON };
     } else if (/\/me\/following\?type=artist.*&after=/g.test(endpoint)) {
       return { ...MY_FOLLOWING_ARTISTS_API_OFFSET_50_JSON };
+    } else if (endpoint === '/me/following/contains?type=artist&ids=06HL4z0CvFAxyc27GXpf02') {
+      return [...ME_FOLLOWING_TAYLOR_SWIFT_JSON];
+    } else if (endpoint === '/artists/06HL4z0CvFAxyc27GXpf02') {
+      return { ...ARTIST_TAYLOR_SWIFT_API_JSON };
+    } else if (
+      endpoint === '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=album&limit=50'
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_ALBUMS_API_JSON };
+    } else if (
+      endpoint === '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=single&limit=50'
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_SINGLES_API_JSON };
+    } else if (
+      endpoint.startsWith(
+        '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=single&offset=50&limit=50',
+      )
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_SINGLES_OFFSET_50_API_JSON };
+    } else if (
+      endpoint === '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=compilation&limit=50'
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_COMPILATION_API_JSON };
+    } else if (
+      endpoint === '/artists/0VCYEBxnERCSrT8NvEDLPh/albums?include_groups=album&limit=50'
+    ) {
+      return { ...ARTIST_MAZE_DISCOGRAPHY_ALBUMS_API_JSON };
+    } else if (
+      endpoint === '/artists/0VCYEBxnERCSrT8NvEDLPh/albums?include_groups=single&limit=50'
+    ) {
+      return { ...ARTIST_MAZE_DISCOGRAPHY_SINGLES_API_JSON };
+    } else if (
+      endpoint === '/artists/0VCYEBxnERCSrT8NvEDLPh/albums?include_groups=compilation&limit=50'
+    ) {
+      return { ...ARTIST_MAZE_DISCOGRAPHY_COMPILATIONS_API_JSON };
+    } else if (endpoint === '/artists/06HL4z0CvFAxyc27GXpf02/top-tracks?market=FR') {
+      return { ...ARTIST_TAYLOR_SWIFT_TOP_TRACKS_API_JSON };
+    } else if (
+      endpoint === '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=appears_on&limit=50'
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_APPEARS_ON_API_JSON };
+    } else if (
+      endpoint.startsWith(
+        '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=appears_on&offset=50&limit=50',
+      )
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_50_API_JSON };
+    } else if (
+      endpoint.startsWith(
+        '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=appears_on&offset=100&limit=50',
+      )
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_100_API_JSON };
+    } else if (
+      endpoint.startsWith(
+        '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=appears_on&offset=150&limit=50',
+      )
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_150_API_JSON };
+    } else if (
+      endpoint.startsWith(
+        '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=appears_on&offset=200&limit=50',
+      )
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_200_API_JSON };
+    } else if (
+      endpoint.startsWith(
+        '/artists/06HL4z0CvFAxyc27GXpf02/albums?include_groups=appears_on&offset=250&limit=50',
+      )
+    ) {
+      return { ...ARTIST_TAYLOR_SWIFT_APPEARS_ON_OFFSET_250_API_JSON };
+    } else if (endpoint === '/artists/06HL4z0CvFAxyc27GXpf02/related-artists') {
+      return { ...ARTIST_TAYLOR_SWIFT_RELATED_ARTISTS_API_JSON };
+    } else if (endpoint === '/artists/0VCYEBxnERCSrT8NvEDLPh/top-tracks?market=FR') {
+      return { ...ARTIST_MAZE_TOP_TRACKS_API_JSON };
     } else if (
       endpoint ===
       '/artists?ids=2YP02JRa1JLejrg3XTssJS,0PUi9O36OMwere5DTyayAq,4ACplpEqD6JIVgKrafauzs'
     ) {
-      return { ...SEVERAL_ARTISTS_API_JSON };
+      return { ...ARTISTS_SEVERAL_API_JSON };
     } else if (endpoint === '/me/player/recently-played?limit=50') {
       return { ...RECENTLY_PLAYED_API_JSON };
     } else if (endpoint === '/me/player/queue') {

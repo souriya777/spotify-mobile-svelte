@@ -1,5 +1,5 @@
 <script>
-  import { accessToken, userId, deviceId, player, trackName } from '@js/store';
+  import { accessToken, userId, deviceId, player, trackName, likedTracks } from '@js/store';
   import { onTap } from '@js/event-utils';
   import SpotifyApi from '@js/SpotifyApi';
 
@@ -23,9 +23,33 @@
       SpotifyApi.synchronize();
     }}>🟢🟢🟢sync</button
   >
+
+  <button use:onTap={() => SpotifyApi.getILiked('06HL4z0CvFAxyc27GXpf02', $likedTracks)}
+    >🔴I like</button
+  >
   <button use:onTap={() => SpotifyApi.getPlaybackState()}>🟢playback-state</button>
   <button use:onTap={() => SpotifyApi.getAvailableDevice()}>🟢devices</button>
   <button use:onTap={() => SpotifyApi.transfertPlayback($deviceId)}> transfert-playback </button>
+  <button use:onTap={() => SpotifyApi.getArtistDiscography('06HL4z0CvFAxyc27GXpf02')}
+    >discography</button
+  >
+  <button
+    use:onTap={async () => {
+      const discography = await SpotifyApi.getArtistDiscography('06HL4z0CvFAxyc27GXpf02');
+      const latestRelease = await SpotifyApi.getArtistLatestRelease(discography);
+      const topTracks = await SpotifyApi.getArtistTopTracks('06HL4z0CvFAxyc27GXpf02', 'FR');
+      SpotifyApi.getArtistTopReleases(latestRelease, topTracks);
+    }}>top-release</button
+  >
+  <button use:onTap={() => SpotifyApi.getArtistTopTracks('06HL4z0CvFAxyc27GXpf02', 'FR')}
+    >top-tracks</button
+  >
+  <button use:onTap={() => SpotifyApi.getArtistAppearsOn('06HL4z0CvFAxyc27GXpf02')}
+    >appears-on</button
+  >
+  <button use:onTap={() => SpotifyApi.getArtistRelatedArtists('06HL4z0CvFAxyc27GXpf02')}
+    >related-artists</button
+  >
   <button use:onTap={() => window.navigator.vibrate(200)}>vibrate</button>
   <button use:onTap={() => SpotifyApi.me()}>me</button>
   <button use:onTap={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
@@ -45,6 +69,13 @@
     >saved-albums-recently-addded</button
   >
   <button use:onTap={() => SpotifyApi.getMyFollowedArtists()}>my-followed-artist</button>
+  <button use:onTap={() => SpotifyApi.checkIfIFollowArtist('06HL4z0CvFAxyc27GXpf02')}
+    >followed tailor?</button
+  >
+  <button use:onTap={() => SpotifyApi.followArtist('06HL4z0CvFAxyc27GXpf02')}>follow tailor</button>
+  <button use:onTap={() => SpotifyApi.unfollowArtist('06HL4z0CvFAxyc27GXpf02')}
+    >unfollow tailor</button
+  >
   <button
     use:onTap={() =>
       SpotifyApi.getSeveralArtists([

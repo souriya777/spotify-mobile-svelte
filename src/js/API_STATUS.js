@@ -1,9 +1,9 @@
 /** @enum {number} */
-const SpotifyStatus = {
+const API_STATUS = {
   PLAYBACK_NOT_AVAILABLE_OR_ACTIVE: 204,
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
   FORBIDDEN: 403,
 };
 
-export default Object.freeze(SpotifyStatus);
+export default Object.freeze(API_STATUS);

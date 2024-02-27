@@ -5,6 +5,7 @@
       "uri": "spotify:track:3DP5jn2plhKVa6Xgwpux1S",
       "name": "Dark Places",
       "duration_ms": 378000,
+      "popularity": 38,
       "album": {
         "id": "1qJHc9bytwRnbvN2tctlDL",
         "uri": "spotify:album:1qJHc9bytwRnbvN2tctlDL",
@@ -65,6 +66,7 @@
       "uri": "spotify:track:5yOFawwclyaGDi450YcPfP",
       "name": "Resistance",
       "duration_ms": 207441,
+      "popularity": 47,
       "album": {
         "id": "2dWojT5wPowGSARgpHAENj",
         "uri": "spotify:album:2dWojT5wPowGSARgpHAENj",
@@ -115,6 +117,7 @@
       "uri": "spotify:track:6XmGXRgcSdCGG2u5gSmAJ9",
       "name": "Overdrive - Edit",
       "duration_ms": 254836,
+      "popularity": 59,
       "album": {
         "id": "6L9vJcQPmdPQC7KYAgpk3k",
         "uri": "spotify:album:6L9vJcQPmdPQC7KYAgpk3k",
@@ -165,6 +168,7 @@
       "uri": "spotify:track:3AKAjGhRwvRp8JoJBpNloP",
       "name": "Stratosphere - Ronnie Spiteri Remix",
       "duration_ms": 478715,
+      "popularity": 25,
       "album": {
         "id": "2B6iCfl7t7bv8ZGc3f7KPZ",
         "uri": "spotify:album:2B6iCfl7t7bv8ZGc3f7KPZ",
@@ -220,6 +224,7 @@
       "uri": "spotify:track:7twthmMegoAskip42GJocW",
       "name": "Stay With Me",
       "duration_ms": 441905,
+      "popularity": 34,
       "album": {
         "id": "1fTPCs8ZaLC8KBq1iiWWLM",
         "uri": "spotify:album:1fTPCs8ZaLC8KBq1iiWWLM",
@@ -270,6 +275,7 @@
       "uri": "spotify:track:0Z3Gina2XKfyjv46VJEInp",
       "name": "Adrenaline Machine",
       "duration_ms": 352617,
+      "popularity": 30,
       "album": {
         "id": "3dVJGlYK0tr62K6MKnKPys",
         "uri": "spotify:album:3dVJGlYK0tr62K6MKnKPys",
@@ -340,6 +346,7 @@
       "uri": "spotify:track:2EHdG8AvxtuZGLk74YQUXt",
       "name": "Gravity",
       "duration_ms": 365568,
+      "popularity": 55,
       "album": {
         "id": "0C24gM4unxLDwJNa0ax8LP",
         "uri": "spotify:album:0C24gM4unxLDwJNa0ax8LP",
@@ -390,6 +397,7 @@
       "uri": "spotify:track:5LMEeLesno77ZNzBn1ARyH",
       "name": "Deep Space",
       "duration_ms": 337386,
+      "popularity": 38,
       "album": {
         "id": "6hHi4OlpNnto3GNoLQyUG9",
         "uri": "spotify:album:6hHi4OlpNnto3GNoLQyUG9",
@@ -440,6 +448,7 @@
       "uri": "spotify:track:2rgtmHB1O8GHaLFQZTF2tR",
       "name": "2084",
       "duration_ms": 366235,
+      "popularity": 49,
       "album": {
         "id": "68yEeHuIGikcVlyBo5UHvI",
         "uri": "spotify:album:68yEeHuIGikcVlyBo5UHvI",
@@ -490,6 +499,7 @@
       "uri": "spotify:track:4LzoH2X9b7yfvqwUIeiU0U",
       "name": "L'engreneur",
       "duration_ms": 229974,
+      "popularity": 22,
       "album": {
         "id": "5D7QfnijsdNFc3KvKcQQFt",
         "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
@@ -540,6 +550,7 @@
       "uri": "spotify:track:5UzeEdYpIwLOtUnnrPk7qD",
       "name": "79 à 97",
       "duration_ms": 281603,
+      "popularity": 41,
       "album": {
         "id": "5D7QfnijsdNFc3KvKcQQFt",
         "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
@@ -600,6 +611,7 @@
       "uri": "spotify:track:4OYsjZoXGRlhpxAX36AkCF",
       "name": "Intro",
       "duration_ms": 43951,
+      "popularity": 15,
       "album": {
         "id": "5D7QfnijsdNFc3KvKcQQFt",
         "uri": "spotify:album:5D7QfnijsdNFc3KvKcQQFt",
@@ -650,6 +662,7 @@
       "uri": "spotify:track:0Z3Vt4qyrNukxFRhQvhrWG",
       "name": "Invaincu",
       "duration_ms": 125706,
+      "popularity": 50,
       "album": {
         "id": "6EwTLRHMROD853Kv1lAMex",
         "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
@@ -700,6 +713,7 @@
       "uri": "spotify:track:6xfcGSs4rj9hq6WiYNyyPv",
       "name": "A Million to One",
       "duration_ms": 148143,
+      "popularity": 19,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -750,6 +764,7 @@
       "uri": "spotify:track:1VG7rQNuuJfhinoAwtD0gy",
       "name": "Shadows",
       "duration_ms": 151898,
+      "popularity": 20,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -800,6 +815,7 @@
       "uri": "spotify:track:08KiBWh7EreFKWKSv8SIrh",
       "name": "To the Aisle",
       "duration_ms": 164511,
+      "popularity": 26,
       "album": {
         "id": "7eugEzpVGg4umQRaFD4ocg",
         "uri": "spotify:album:7eugEzpVGg4umQRaFD4ocg",
@@ -850,6 +866,7 @@
       "uri": "spotify:track:2pu3ssjsLWY2u01TvGre3X",
       "name": "Wonderful Girl",
       "duration_ms": 135722,
+      "popularity": 24,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -900,6 +917,7 @@
       "uri": "spotify:track:0Xyxv8OAOeoyBwTgfmukSG",
       "name": "Night to Remember (Fred Parris & the Satins)",
       "duration_ms": 132706,
+      "popularity": 28,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -950,6 +968,7 @@
       "uri": "spotify:track:6esJ2MdvYrP8zEE9B2SImB",
       "name": "I'll Be Seeing You",
       "duration_ms": 161202,
+      "popularity": 32,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -1000,6 +1019,7 @@
       "uri": "spotify:track:59hP33GBpniXSPryhOqiDK",
       "name": "To the Aisle",
       "duration_ms": 165040,
+      "popularity": 42,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -1050,6 +1070,7 @@
       "uri": "spotify:track:3Dd3FK9DSaoMoUKA5ZPVgw",
       "name": "In the Still of the Night",
       "duration_ms": 182520,
+      "popularity": 40,
       "album": {
         "id": "6cCH55Vq1UpCfHOFaVKegT",
         "uri": "spotify:album:6cCH55Vq1UpCfHOFaVKegT",
@@ -1100,6 +1121,7 @@
       "uri": "spotify:track:1IMqGGJRazA5aYRT3Y02K9",
       "name": "Sympathique",
       "duration_ms": 160488,
+      "popularity": 28,
       "album": {
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
@@ -1150,6 +1172,7 @@
       "uri": "spotify:track:3Arm3BlSs9GAAMHSWZCIdd",
       "name": "Tous les garçons et les filles",
       "duration_ms": 180875,
+      "popularity": 29,
       "album": {
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
@@ -1200,6 +1223,7 @@
       "uri": "spotify:track:0HkKfLlhuQrtGXofsoF0qu",
       "name": "Mistral Gagnant",
       "duration_ms": 194875,
+      "popularity": 29,
       "album": {
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
@@ -1250,6 +1274,7 @@
       "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
       "name": "Despacito",
       "duration_ms": 220846,
+      "popularity": 34,
       "album": {
         "id": "0DunPxU8C8FXeHpEKBIzts",
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
@@ -1300,6 +1325,7 @@
       "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
       "name": "La vie en rose",
       "duration_ms": 175875,
+      "popularity": 36,
       "album": {
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
@@ -1350,6 +1376,7 @@
       "uri": "spotify:track:6ioe6K8aDV0A65qz6Huzs2",
       "name": "Bella Ciao",
       "duration_ms": 171340,
+      "popularity": 36,
       "album": {
         "id": "1k8zteiBvZDtW1BlnXPVZ8",
         "uri": "spotify:album:1k8zteiBvZDtW1BlnXPVZ8",
@@ -1400,6 +1427,7 @@
       "uri": "spotify:track:6htdm2zhPzphFnHWQVQBJd",
       "name": "Le Coup de Soleil",
       "duration_ms": 225500,
+      "popularity": 41,
       "album": {
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
@@ -1450,6 +1478,7 @@
       "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
       "name": "La bohème",
       "duration_ms": 212124,
+      "popularity": 43,
       "album": {
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
@@ -1500,6 +1529,7 @@
       "uri": "spotify:track:0FCLfIht3t2vmX1IgpRi8M",
       "name": "Crying In the Rain (Single Version)",
       "duration_ms": 121453,
+      "popularity": 58,
       "album": {
         "id": "7Dzfcj8tp9CUmkD6kXAqcb",
         "uri": "spotify:album:7Dzfcj8tp9CUmkD6kXAqcb",
@@ -1550,6 +1580,7 @@
       "uri": "spotify:track:2ilqH4qO5BpS3B9keqFqDR",
       "name": "Bye Bye Love - Original Recording Remastered",
       "duration_ms": 138600,
+      "popularity": 52,
       "album": {
         "id": "5cFL3OKYGj71I8i2uQ7YGp",
         "uri": "spotify:album:5cFL3OKYGj71I8i2uQ7YGp",
@@ -1600,6 +1631,7 @@
       "uri": "spotify:track:1ETm7A2bU98kIKqFEq1RMB",
       "name": "Wake Up Little Susie - Original Hit Recording Remastered (Not the Warner Re-record)",
       "duration_ms": 121013,
+      "popularity": 52,
       "album": {
         "id": "78RuPW4tEcalOQQEW85Sxz",
         "uri": "spotify:album:78RuPW4tEcalOQQEW85Sxz",
@@ -1650,6 +1682,7 @@
       "uri": "spotify:track:5TMTNjJYJSURXA0ktKevlI",
       "name": "All I have to Do Is Dream - Original Hit Recording Remastered (Not the Warner Re-record)",
       "duration_ms": 140840,
+      "popularity": 62,
       "album": {
         "id": "78RuPW4tEcalOQQEW85Sxz",
         "uri": "spotify:album:78RuPW4tEcalOQQEW85Sxz",
@@ -1700,6 +1733,7 @@
       "uri": "spotify:track:5iJJRTXLMhWRdpzBYiXYFR",
       "name": "Dreamy Eyes",
       "duration_ms": 144093,
+      "popularity": 15,
       "album": {
         "id": "6EMFcjkD4LHxfwqfJlPjsb",
         "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
@@ -1750,6 +1784,7 @@
       "uri": "spotify:track:1ASWAH866Xn0gWeX3zC2SW",
       "name": "Poetry In Motion",
       "duration_ms": 154466,
+      "popularity": 56,
       "album": {
         "id": "6EMFcjkD4LHxfwqfJlPjsb",
         "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
@@ -1800,6 +1835,7 @@
       "uri": "spotify:track:2rgtmHB1O8GHaLFQZTF2tR",
       "name": "2084",
       "duration_ms": 366235,
+      "popularity": 49,
       "album": {
         "id": "68yEeHuIGikcVlyBo5UHvI",
         "uri": "spotify:album:68yEeHuIGikcVlyBo5UHvI",
@@ -1850,6 +1886,7 @@
       "uri": "spotify:track:6Hy22YDN9HJMRlJP1LwnJy",
       "name": "Duke of Earl",
       "duration_ms": 147841,
+      "popularity": 57,
       "album": {
         "id": "2VmU63FIBsGgQYItCvsYkl",
         "uri": "spotify:album:2VmU63FIBsGgQYItCvsYkl",
@@ -1900,6 +1937,7 @@
       "uri": "spotify:track:2AeGmIxYLKhTB123MPRDgo",
       "name": "Love Potion Number 9",
       "duration_ms": 112280,
+      "popularity": 59,
       "album": {
         "id": "29RWikz0slFF5Izww4G6rb",
         "uri": "spotify:album:29RWikz0slFF5Izww4G6rb",
@@ -1950,6 +1988,7 @@
       "uri": "spotify:track:5R2DZitRTDYtrkCoJiddct",
       "name": "Stay",
       "duration_ms": 94906,
+      "popularity": 58,
       "album": {
         "id": "0mtLFaQ3hL371jsNraRo9g",
         "uri": "spotify:album:0mtLFaQ3hL371jsNraRo9g",
@@ -2005,6 +2044,7 @@
       "uri": "spotify:track:65jrjEhWfAvysKfnojk1i0",
       "name": "Under the Boardwalk",
       "duration_ms": 161960,
+      "popularity": 71,
       "album": {
         "id": "7AgI5vniflcbh86Znea7yM",
         "uri": "spotify:album:7AgI5vniflcbh86Znea7yM",
@@ -2055,6 +2095,7 @@
       "uri": "spotify:track:1xHr747j0k3TlsFnmqTOpr",
       "name": "I Do",
       "duration_ms": 250933,
+      "popularity": 40,
       "album": {
         "id": "0g3mvAod8Y0xt4d4tJOWJa",
         "uri": "spotify:album:0g3mvAod8Y0xt4d4tJOWJa",
@@ -2105,6 +2146,7 @@
       "uri": "spotify:track:2tbSiDmrerPi24rEIBwtkh",
       "name": "In The Still Of The Nite (I'll Remember)",
       "duration_ms": 169840,
+      "popularity": 48,
       "album": {
         "id": "3jknvlUSe6D9Oyn2E3JBLO",
         "uri": "spotify:album:3jknvlUSe6D9Oyn2E3JBLO",
@@ -2155,6 +2197,7 @@
       "uri": "spotify:track:2FBtq2g0gIqcJVTdnngIzq",
       "name": "A Casual Look",
       "duration_ms": 147563,
+      "popularity": 29,
       "album": {
         "id": "2S8NKCht9cDIZGhcfQsW68",
         "uri": "spotify:album:2S8NKCht9cDIZGhcfQsW68",
@@ -2205,6 +2248,7 @@
       "uri": "spotify:track:0RVeh06Wo4Wtolrhk3LSna",
       "name": "Sincerely",
       "duration_ms": 189933,
+      "popularity": 34,
       "album": {
         "id": "1mP0kFIDxcbuXnPhTPCo7v",
         "uri": "spotify:album:1mP0kFIDxcbuXnPhTPCo7v",
@@ -2255,6 +2299,7 @@
       "uri": "spotify:track:0Jp7n6FKqGVxtXPMVYtMQr",
       "name": "Consolation No. 3 in D-Flat Major, S. 172",
       "duration_ms": 259573,
+      "popularity": 56,
       "album": {
         "id": "39Hh5k01di42nUCLn8Wxqu",
         "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
@@ -2315,6 +2360,7 @@
       "uri": "spotify:track:64gCM9yZv2jpNflclKUnXu",
       "name": "La tribu de Dana",
       "duration_ms": 287240,
+      "popularity": 65,
       "album": {
         "id": "1i7e6Cu4N6zhbhvJ4lNw6G",
         "uri": "spotify:album:1i7e6Cu4N6zhbhvJ4lNw6G",
@@ -2365,6 +2411,7 @@
       "uri": "spotify:track:3tt9i3Hhzq84dPS8H7iSiJ",
       "name": "La Bachata",
       "duration_ms": 162637,
+      "popularity": 87,
       "album": {
         "id": "7ubO2LZJZFpyhiWMZkRwcH",
         "uri": "spotify:album:7ubO2LZJZFpyhiWMZkRwcH",
@@ -2415,6 +2462,7 @@
       "uri": "spotify:track:4ePsPRmL0aXbgCY2BwOBGZ",
       "name": "Les démons de minuit (Version single)",
       "duration_ms": 236570,
+      "popularity": 55,
       "album": {
         "id": "3tiEnone5M9hFCnmk9j6xj",
         "uri": "spotify:album:3tiEnone5M9hFCnmk9j6xj",
@@ -2465,6 +2513,7 @@
       "uri": "spotify:track:0u2P5u6lvoDfwTYjAADbn4",
       "name": "lovely (with Khalid)",
       "duration_ms": 200185,
+      "popularity": 91,
       "album": {
         "id": "2sBB17RXTamvj7Ncps15AK",
         "uri": "spotify:album:2sBB17RXTamvj7Ncps15AK",
@@ -2525,6 +2574,7 @@
       "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
       "name": "Despacito",
       "duration_ms": 220846,
+      "popularity": 34,
       "album": {
         "id": "0DunPxU8C8FXeHpEKBIzts",
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",

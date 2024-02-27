@@ -1,0 +1,774 @@
+{
+  "tracks": [
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1NAmidJlEaVgA3MpcPFYGq"
+        },
+        "href": "https://api.spotify.com/v1/albums/1NAmidJlEaVgA3MpcPFYGq",
+        "id": "1NAmidJlEaVgA3MpcPFYGq",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Lover",
+        "release_date": "2019-08-23",
+        "release_date_precision": "day",
+        "total_tracks": 18,
+        "type": "album",
+        "uri": "spotify:album:1NAmidJlEaVgA3MpcPFYGq"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 178426,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG11901472"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1BxfuPKGuaTgP7aM0Bbdwr"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1BxfuPKGuaTgP7aM0Bbdwr",
+      "id": "1BxfuPKGuaTgP7aM0Bbdwr",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Cruel Summer",
+      "popularity": 100,
+      "preview_url": "https://p.scdn.co/mp3-preview/dba15da5409f3c808022cf927c0ff8581f717aa4?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:1BxfuPKGuaTgP7aM0Bbdwr"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1NAmidJlEaVgA3MpcPFYGq"
+        },
+        "href": "https://api.spotify.com/v1/albums/1NAmidJlEaVgA3MpcPFYGq",
+        "id": "1NAmidJlEaVgA3MpcPFYGq",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Lover",
+        "release_date": "2019-08-23",
+        "release_date_precision": "day",
+        "total_tracks": 18,
+        "type": "album",
+        "uri": "spotify:album:1NAmidJlEaVgA3MpcPFYGq"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 221306,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG11901473"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1dGr1c8CrMLDpV6mPbImSI",
+      "id": "1dGr1c8CrMLDpV6mPbImSI",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Lover",
+      "popularity": 94,
+      "preview_url": "https://p.scdn.co/mp3-preview/aad996e106de5278d8387dc838e8f08105dcd588?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:1dGr1c8CrMLDpV6mPbImSI"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3"
+        },
+        "href": "https://api.spotify.com/v1/albums/151w1FgRZfnKZA9FEcg9Z3",
+        "id": "151w1FgRZfnKZA9FEcg9Z3",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02bb54dde68cd23e2a268ae0f5",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851bb54dde68cd23e2a268ae0f5",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Midnights",
+        "release_date": "2022-10-21",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "type": "album",
+        "uri": "spotify:album:151w1FgRZfnKZA9FEcg9Z3"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 200690,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG12205736"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0V3wPSX9ygBnCm8psDIegu",
+      "id": "0V3wPSX9ygBnCm8psDIegu",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Anti-Hero",
+      "popularity": 93,
+      "preview_url": "https://p.scdn.co/mp3-preview/8587a38f3496e9b17e33d89c322c4b69ba899d69?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:0V3wPSX9ygBnCm8psDIegu"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/64LU4c1nfjz1t4VnGhagcg"
+        },
+        "href": "https://api.spotify.com/v1/albums/64LU4c1nfjz1t4VnGhagcg",
+        "id": "64LU4c1nfjz1t4VnGhagcg",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273904445d70d04eb24d6bb79ac",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02904445d70d04eb24d6bb79ac",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851904445d70d04eb24d6bb79ac",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "1989 (Taylor's Version)",
+        "release_date": "2023-10-26",
+        "release_date_precision": "day",
+        "total_tracks": 21,
+        "type": "album",
+        "uri": "spotify:album:64LU4c1nfjz1t4VnGhagcg"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 229477,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG12306691"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1Iq8oo9XkmmvCQiGOfORiz"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1Iq8oo9XkmmvCQiGOfORiz",
+      "id": "1Iq8oo9XkmmvCQiGOfORiz",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Is It Over Now? (Taylor's Version) (From The Vault)",
+      "popularity": 92,
+      "preview_url": "https://p.scdn.co/mp3-preview/0b79d49dd1a1cb45e9d01356c9bf5e18ee8243bb?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 21,
+      "type": "track",
+      "uri": "spotify:track:1Iq8oo9XkmmvCQiGOfORiz"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr"
+        },
+        "href": "https://api.spotify.com/v1/albums/2fenSS68JI1h4Fo296JfGr",
+        "id": "2fenSS68JI1h4Fo296JfGr",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27395f754318336a07e85ec59bc",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0295f754318336a07e85ec59bc",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485195f754318336a07e85ec59bc",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "folklore",
+        "release_date": "2020-07-24",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "type": "album",
+        "uri": "spotify:album:2fenSS68JI1h4Fo296JfGr"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 239560,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG12002836"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4R2kfaDFhslZEMJqAFNpdd"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4R2kfaDFhslZEMJqAFNpdd",
+      "id": "4R2kfaDFhslZEMJqAFNpdd",
+      "is_local": false,
+      "is_playable": true,
+      "name": "cardigan",
+      "popularity": 92,
+      "preview_url": "https://p.scdn.co/mp3-preview/45d916e1938d4a79b466905c530c26973dcf1eb3?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:4R2kfaDFhslZEMJqAFNpdd"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6DEjYFkNZh67HP7R9PSZvv"
+        },
+        "href": "https://api.spotify.com/v1/albums/6DEjYFkNZh67HP7R9PSZvv",
+        "id": "6DEjYFkNZh67HP7R9PSZvv",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273da5d5aeeabacacc1263c0f4b",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02da5d5aeeabacacc1263c0f4b",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851da5d5aeeabacacc1263c0f4b",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "reputation",
+        "release_date": "2017-11-10",
+        "release_date_precision": "day",
+        "total_tracks": 15,
+        "type": "album",
+        "uri": "spotify:album:6DEjYFkNZh67HP7R9PSZvv"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 236413,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USCJY1750006"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1R0a2iXumgCiFb7HEZ7gUE",
+      "id": "1R0a2iXumgCiFb7HEZ7gUE",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Don’t Blame Me",
+      "popularity": 92,
+      "preview_url": "https://p.scdn.co/mp3-preview/8edf06fbc7550b9c8801cc30980e1230af5d6aae?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:1R0a2iXumgCiFb7HEZ7gUE"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr"
+        },
+        "href": "https://api.spotify.com/v1/albums/2fenSS68JI1h4Fo296JfGr",
+        "id": "2fenSS68JI1h4Fo296JfGr",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27395f754318336a07e85ec59bc",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0295f754318336a07e85ec59bc",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485195f754318336a07e85ec59bc",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "folklore",
+        "release_date": "2020-07-24",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "type": "album",
+        "uri": "spotify:album:2fenSS68JI1h4Fo296JfGr"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 261922,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG12002842"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3hUxzQpSfdDqwM3ZTFQY0K"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3hUxzQpSfdDqwM3ZTFQY0K",
+      "id": "3hUxzQpSfdDqwM3ZTFQY0K",
+      "is_local": false,
+      "is_playable": true,
+      "name": "august",
+      "popularity": 90,
+      "preview_url": "https://p.scdn.co/mp3-preview/8e82ad5f6e681af7f3b261417e4187d345a9530c?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:3hUxzQpSfdDqwM3ZTFQY0K"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3"
+        },
+        "href": "https://api.spotify.com/v1/albums/151w1FgRZfnKZA9FEcg9Z3",
+        "id": "151w1FgRZfnKZA9FEcg9Z3",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02bb54dde68cd23e2a268ae0f5",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851bb54dde68cd23e2a268ae0f5",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Midnights",
+        "release_date": "2022-10-21",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "type": "album",
+        "uri": "spotify:album:151w1FgRZfnKZA9FEcg9Z3"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 204852,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUG12205717"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7KokYm8cMIXCsGVmUvKtqf"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7KokYm8cMIXCsGVmUvKtqf",
+      "id": "7KokYm8cMIXCsGVmUvKtqf",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Karma",
+      "popularity": 88,
+      "preview_url": "https://p.scdn.co/mp3-preview/31e410e6e408754b4f1fb190c72f559b8f636831?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 11,
+      "type": "track",
+      "uri": "spotify:track:7KokYm8cMIXCsGVmUvKtqf"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1yGbNOtRIgdIiGHOEBaZWf"
+        },
+        "href": "https://api.spotify.com/v1/albums/1yGbNOtRIgdIiGHOEBaZWf",
+        "id": "1yGbNOtRIgdIiGHOEBaZWf",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27352b2a3824413eefe9e33817a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0252b2a3824413eefe9e33817a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485152b2a3824413eefe9e33817a",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "1989 (Deluxe)",
+        "release_date": "2014-01-01",
+        "release_date_precision": "day",
+        "total_tracks": 19,
+        "type": "album",
+        "uri": "spotify:album:1yGbNOtRIgdIiGHOEBaZWf"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 231826,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USCJY1431309"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1u8c2t2Cy7UBoG4ArRcF5g"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1u8c2t2Cy7UBoG4ArRcF5g",
+      "id": "1u8c2t2Cy7UBoG4ArRcF5g",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Blank Space",
+      "popularity": 87,
+      "preview_url": "https://p.scdn.co/mp3-preview/a4930adb3f973bf4b162940844b8ccc46277dc16?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:1u8c2t2Cy7UBoG4ArRcF5g"
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+            },
+            "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift",
+            "type": "artist",
+            "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5q3jthpn2h59P7pe2gmAl7"
+        },
+        "href": "https://api.spotify.com/v1/albums/5q3jthpn2h59P7pe2gmAl7",
+        "id": "5q3jthpn2h59P7pe2gmAl7",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734fe1868aa6838eb595f3673a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024fe1868aa6838eb595f3673a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514fe1868aa6838eb595f3673a",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "You're Losing Me (From The Vault)",
+        "release_date": "2023-11-29",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:5q3jthpn2h59P7pe2gmAl7"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+          },
+          "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "type": "artist",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 277831,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUG12302772"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3CWq0pAKKTWb0K4yiglDc4"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3CWq0pAKKTWb0K4yiglDc4",
+      "id": "3CWq0pAKKTWb0K4yiglDc4",
+      "is_local": false,
+      "is_playable": true,
+      "name": "You’re Losing Me (From The Vault)",
+      "popularity": 90,
+      "preview_url": "https://p.scdn.co/mp3-preview/2870d5f173cc25d2783587c3efd33e5beb1b51ac?cid=d51e1d66994042fa9350ba9490433360",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3CWq0pAKKTWb0K4yiglDc4"
+    }
+  ]
+}

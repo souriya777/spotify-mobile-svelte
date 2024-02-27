@@ -3,6 +3,7 @@
   "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
   "name": "La bohème",
   "duration_ms": 212124,
+  "popularity": 42,
   "album": {
     "id": "2ZXfseyFf7ybI97jaxciPn",
     "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",

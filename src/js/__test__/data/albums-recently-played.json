@@ -37,74 +37,143 @@
     "added_at": "2016-09-23T15:09:41.000Z"
   },
   {
-    "id": "6EwTLRHMROD853Kv1lAMex",
-    "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
-    "name": "Multitude",
-    "release_date": "2022-07-27",
+    "id": "64LU4c1nfjz1t4VnGhagcg",
+    "uri": "spotify:album:64LU4c1nfjz1t4VnGhagcg",
+    "name": "1989 (Taylor's Version)",
+    "release_date": "2023-10-26",
     "album_type": "album",
     "artists": [
       {
-        "id": "5j4HeCoUlzhfWtjAfM1acR",
-        "name": "Stromae",
-        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b2736af3a93773dcb59a67ab2953",
+        "url": "https://i.scdn.co/image/ab67616d0000b273904445d70d04eb24d6bb79ac",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e026af3a93773dcb59a67ab2953",
+        "url": "https://i.scdn.co/image/ab67616d00001e02904445d70d04eb24d6bb79ac",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d000048516af3a93773dcb59a67ab2953",
+        "url": "https://i.scdn.co/image/ab67616d00004851904445d70d04eb24d6bb79ac",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2023-07-18T07:13:38.000Z"
+    "added_at": "2024-02-28T23:22:25.000Z"
   },
   {
-    "id": "6uyslsVGFsHKzdGUosFwBM",
-    "uri": "spotify:album:6uyslsVGFsHKzdGUosFwBM",
-    "name": "racine carrée",
-    "release_date": "2013-01-01",
-    "album_type": "album",
+    "id": "3s1uBurAzg61IQYXRc3B3h",
+    "uri": "spotify:album:3s1uBurAzg61IQYXRc3B3h",
+    "name": "folklore: the saltbox house chapter",
+    "release_date": "2020-08-27",
+    "album_type": "compilation",
     "artists": [
       {
-        "id": "5j4HeCoUlzhfWtjAfM1acR",
-        "name": "Stromae",
-        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273ab580fab750cc9baf0d52b5c",
+        "url": "https://i.scdn.co/image/ab67616d0000b273e83db93e7001dc684da96128",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02ab580fab750cc9baf0d52b5c",
+        "url": "https://i.scdn.co/image/ab67616d00001e02e83db93e7001dc684da96128",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851ab580fab750cc9baf0d52b5c",
+        "url": "https://i.scdn.co/image/ab67616d00004851e83db93e7001dc684da96128",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2023-01-13T17:58:09.000Z"
+    "added_at": "2024-02-28T19:17:44.000Z"
   },
   {
-    "id": "2n5AOB0lGse7qp38HvVROB",
-    "uri": "spotify:album:2n5AOB0lGse7qp38HvVROB",
-    "name": "(500) Days of Summer (Music from the Motion Picture)",
-    "release_date": "2009-07-10",
+    "id": "1xGcZ2k4CX1haXxCMPm2Jl",
+    "uri": "spotify:album:1xGcZ2k4CX1haXxCMPm2Jl",
+    "name": "Paganini: 24 Capricci",
+    "release_date": "1990-01-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "39FC9x5PaTNYHp5hwlaY4q",
+        "name": "Niccolò Paganini",
+        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
+      },
+      {
+        "id": "4J806QjdyKrK4guMFMRzKc",
+        "name": "Salvatore Accardo",
+        "uri": "spotify:artist:4J806QjdyKrK4guMFMRzKc"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735d9b839dfbd981a2f036ef55",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025d9b839dfbd981a2f036ef55",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515d9b839dfbd981a2f036ef55",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-10-19T12:54:14.000Z"
+  },
+  {
+    "id": "0UrbIea2sXlvZfMhD9PkFA",
+    "uri": "spotify:album:0UrbIea2sXlvZfMhD9PkFA",
+    "name": "Adieu les monstres",
+    "release_date": "2023-05-05",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "0UgxFqJmwkpojz4mHBsRpD",
+        "name": "KALIKA",
+        "uri": "spotify:artist:0UgxFqJmwkpojz4mHBsRpD"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2738c7cdda9819e539679ee40bf",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e028c7cdda9819e539679ee40bf",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048518c7cdda9819e539679ee40bf",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-19T18:54:27.000Z"
+  },
+  {
+    "id": "1lb206sGMTJryXF66FpT0k",
+    "uri": "spotify:album:1lb206sGMTJryXF66FpT0k",
+    "name": "Crash Landing on You (Original Television Soundtrack)",
+    "release_date": "2020-02-16",
     "album_type": "compilation",
     "artists": [
       {
@@ -115,59 +184,22 @@
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b2738c2d226f555a702986a85bc0",
+        "url": "https://i.scdn.co/image/ab67616d0000b2735ef4486e9f7fe6457ccaab8f",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e028c2d226f555a702986a85bc0",
+        "url": "https://i.scdn.co/image/ab67616d00001e025ef4486e9f7fe6457ccaab8f",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d000048518c2d226f555a702986a85bc0",
+        "url": "https://i.scdn.co/image/ab67616d000048515ef4486e9f7fe6457ccaab8f",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2022-01-25T08:20:31.000Z"
-  },
-  {
-    "id": "7dooHm6waaNjfbhwL6g2Lb",
-    "uri": "spotify:album:7dooHm6waaNjfbhwL6g2Lb",
-    "name": "Liszt: Études D'execution Trascendante & Wagner: Tannhäuser, Ouverture",
-    "release_date": "2009-02-03",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "1385hLNbrnbCJGokfH2ac2",
-        "name": "Franz Liszt",
-        "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-      },
-      {
-        "id": "2bwEHQxmBXe3yeoIBNfgbW",
-        "name": "György Cziffra",
-        "uri": "spotify:artist:2bwEHQxmBXe3yeoIBNfgbW"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2736cdd39108538a89628fdbaea",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e026cdd39108538a89628fdbaea",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048516cdd39108538a89628fdbaea",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2018-11-11T21:58:03.000Z"
+    "added_at": "2024-02-11T09:57:16.000Z"
   },
   {
     "id": "70CWcZa5F1uq0xmkMBOtah",
@@ -207,174 +239,100 @@
     "added_at": "2019-03-29T09:18:56.000Z"
   },
   {
-    "id": "39Hh5k01di42nUCLn8Wxqu",
-    "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
-    "name": "Liszt - My Piano Hero",
-    "release_date": "2011-08-22",
+    "id": "6EMFcjkD4LHxfwqfJlPjsb",
+    "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
+    "name": "Johnny Tillotson's Best",
+    "release_date": "1962-01-01",
     "album_type": "album",
     "artists": [
       {
-        "id": "1385hLNbrnbCJGokfH2ac2",
-        "name": "Franz Liszt",
-        "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
-      },
-      {
-        "id": "1YZhNFBxkEB5UKTgMDvot4",
-        "name": "Lang Lang",
-        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+        "id": "36msvw9B10rxW90NSQ2794",
+        "name": "Johnny Tillotson",
+        "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+        "url": "https://i.scdn.co/image/ab67616d0000b27385ed238114401e0711858519",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+        "url": "https://i.scdn.co/image/ab67616d00001e0285ed238114401e0711858519",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+        "url": "https://i.scdn.co/image/ab67616d0000485185ed238114401e0711858519",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2022-04-21T08:19:12.000Z"
+    "added_at": "2023-12-25T17:37:11.000Z"
   },
   {
-    "id": "5G5rgQHzdQnw32SI0WjIo5",
-    "uri": "spotify:album:5G5rgQHzdQnw32SI0WjIo5",
-    "name": "Get Rich Or Die Tryin'",
-    "release_date": "2003-02-06",
+    "id": "3xybjP7r2VsWzwvDQipdM0",
+    "uri": "spotify:album:3xybjP7r2VsWzwvDQipdM0",
+    "name": "Freudian",
+    "release_date": "2017-08-25",
     "album_type": "album",
     "artists": [
       {
-        "id": "3q7HBObVc0L8jNeTe5Gofh",
-        "name": "50 Cent",
-        "uri": "spotify:artist:3q7HBObVc0L8jNeTe5Gofh"
+        "id": "20wkVLutqVOYrc0kxFs7rA",
+        "name": "Daniel Caesar",
+        "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273d843fabb75fef14010e30cae",
+        "url": "https://i.scdn.co/image/ab67616d0000b2733138f891f3075c9c5d944037",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02d843fabb75fef14010e30cae",
+        "url": "https://i.scdn.co/image/ab67616d00001e023138f891f3075c9c5d944037",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851d843fabb75fef14010e30cae",
+        "url": "https://i.scdn.co/image/ab67616d000048513138f891f3075c9c5d944037",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2019-01-19T08:35:30.000Z"
+    "added_at": "2020-06-19T08:52:18.000Z"
   },
   {
-    "id": "0ylbO515jtrovpxr1drKdF",
-    "uri": "spotify:album:0ylbO515jtrovpxr1drKdF",
-    "name": "Lang Lang: The Chopin Album",
-    "release_date": "2012-10-22",
-    "album_type": "album",
+    "id": "26bQ8ka40C7SjHhqyNrqoj",
+    "uri": "spotify:album:26bQ8ka40C7SjHhqyNrqoj",
+    "name": "40 Most Beautiful Piano Classics",
+    "release_date": "2011-06-28",
+    "album_type": "compilation",
     "artists": [
       {
-        "id": "7y97mc3bZRFXzT2szRM4L4",
-        "name": "Frédéric Chopin",
-        "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
-      },
-      {
-        "id": "1YZhNFBxkEB5UKTgMDvot4",
-        "name": "Lang Lang",
-        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273a5ce972031744697ffa86c6f",
+        "url": "https://i.scdn.co/image/ab67616d0000b2735f6972ebe670054306cbe7be",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02a5ce972031744697ffa86c6f",
+        "url": "https://i.scdn.co/image/ab67616d00001e025f6972ebe670054306cbe7be",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851a5ce972031744697ffa86c6f",
+        "url": "https://i.scdn.co/image/ab67616d000048515f6972ebe670054306cbe7be",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2021-01-23T17:21:58.000Z"
-  },
-  {
-    "id": "5c6qzKZJpCxUmYJeO7ND7F",
-    "uri": "spotify:album:5c6qzKZJpCxUmYJeO7ND7F",
-    "name": "Heifetz: Tchaikovsky & Mendelssohn Concertos",
-    "release_date": "1987",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "7yaBUcdjmqPP2vIv6F5bFD",
-        "name": "Jascha Heifetz",
-        "uri": "spotify:artist:7yaBUcdjmqPP2vIv6F5bFD"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2732245352cb80f40d21899ae77",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e022245352cb80f40d21899ae77",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048512245352cb80f40d21899ae77",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2018-07-08T09:16:54.000Z"
-  },
-  {
-    "id": "13xlpKbai3GGoMSr75lOeX",
-    "uri": "spotify:album:13xlpKbai3GGoMSr75lOeX",
-    "name": "Into The Wild (Music For The Motion Picture)",
-    "release_date": "2007-09-18",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "0mXTJETA4XUa12MmmXxZJh",
-        "name": "Eddie Vedder",
-        "uri": "spotify:artist:0mXTJETA4XUa12MmmXxZJh"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2733ed52339ae78ac1b695e8d80",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e023ed52339ae78ac1b695e8d80",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048513ed52339ae78ac1b695e8d80",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-08-30T20:38:36.000Z"
+    "added_at": "2023-01-12T15:17:23.000Z"
   },
   {
     "id": "7oWx4auBp2kCb54VkRCCUq",
@@ -441,36 +399,322 @@
     "added_at": "2019-04-10T18:27:43.000Z"
   },
   {
-    "id": "5w3m2Moqe9dcVHSzIUfmsE",
-    "uri": "spotify:album:5w3m2Moqe9dcVHSzIUfmsE",
-    "name": "Dreamgirls (Music from the Motion Picture)",
-    "release_date": "2006-01-09",
-    "album_type": "compilation",
+    "id": "03axqfxRqRe9p3LwiTh4GX",
+    "uri": "spotify:album:03axqfxRqRe9p3LwiTh4GX",
+    "name": "Paganini: 24 Caprices",
+    "release_date": "1994-01-01",
+    "album_type": "album",
     "artists": [
       {
-        "id": "0LyfQWJT6nXafLPZqxe9Of",
-        "name": "Multi-interprètes",
-        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+        "id": "39FC9x5PaTNYHp5hwlaY4q",
+        "name": "Niccolò Paganini",
+        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
+      },
+      {
+        "id": "16XP6b4v1MdN8UYRBlgVKn",
+        "name": "Leonidas Kavakos",
+        "uri": "spotify:artist:16XP6b4v1MdN8UYRBlgVKn"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b2734ff6b691780844247bc981ea",
+        "url": "https://i.scdn.co/image/ab67616d0000b2739e04cda776a6738b24543b8a",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e024ff6b691780844247bc981ea",
+        "url": "https://i.scdn.co/image/ab67616d00001e029e04cda776a6738b24543b8a",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d000048514ff6b691780844247bc981ea",
+        "url": "https://i.scdn.co/image/ab67616d000048519e04cda776a6738b24543b8a",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2023-08-19T00:08:37.000Z"
+    "added_at": "2022-10-21T10:06:13.000Z"
+  },
+  {
+    "id": "27Birnw4KzX0h2cVKBLheh",
+    "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh",
+    "name": "Les tentations (Édition collector 1997-2017)",
+    "release_date": "2017-11-17",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "41o2A93SPxIUxsy5HQjvul",
+        "name": "Passi",
+        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e458b538238c7e4ecf548d61",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e458b538238c7e4ecf548d61",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e458b538238c7e4ecf548d61",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-05-06T14:28:11.000Z"
+  },
+  {
+    "id": "6KSvWFf4g4PrIldtchJsTC",
+    "uri": "spotify:album:6KSvWFf4g4PrIldtchJsTC",
+    "name": "Brol",
+    "release_date": "2018-10-05",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "3QVolfxko2UyCOtexhVTli",
+        "name": "Angèle",
+        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2732433cb43f0f2f0f23b7c8b82",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e022433cb43f0f2f0f23b7c8b82",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048512433cb43f0f2f0f23b7c8b82",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-01-04T10:15:33.000Z"
+  },
+  {
+    "id": "6EwTLRHMROD853Kv1lAMex",
+    "uri": "spotify:album:6EwTLRHMROD853Kv1lAMex",
+    "name": "Multitude",
+    "release_date": "2022-07-27",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "5j4HeCoUlzhfWtjAfM1acR",
+        "name": "Stromae",
+        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736af3a93773dcb59a67ab2953",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026af3a93773dcb59a67ab2953",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516af3a93773dcb59a67ab2953",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T07:13:38.000Z"
+  },
+  {
+    "id": "39Hh5k01di42nUCLn8Wxqu",
+    "uri": "spotify:album:39Hh5k01di42nUCLn8Wxqu",
+    "name": "Liszt - My Piano Hero",
+    "release_date": "2011-08-22",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "1385hLNbrnbCJGokfH2ac2",
+        "name": "Franz Liszt",
+        "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+      },
+      {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273dc7e831d880de1c90d621379",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02dc7e831d880de1c90d621379",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851dc7e831d880de1c90d621379",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-04-21T08:19:12.000Z"
+  },
+  {
+    "id": "7dooHm6waaNjfbhwL6g2Lb",
+    "uri": "spotify:album:7dooHm6waaNjfbhwL6g2Lb",
+    "name": "Liszt: Études D'execution Trascendante & Wagner: Tannhäuser, Ouverture",
+    "release_date": "2009-02-03",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "1385hLNbrnbCJGokfH2ac2",
+        "name": "Franz Liszt",
+        "uri": "spotify:artist:1385hLNbrnbCJGokfH2ac2"
+      },
+      {
+        "id": "2bwEHQxmBXe3yeoIBNfgbW",
+        "name": "György Cziffra",
+        "uri": "spotify:artist:2bwEHQxmBXe3yeoIBNfgbW"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2736cdd39108538a89628fdbaea",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e026cdd39108538a89628fdbaea",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048516cdd39108538a89628fdbaea",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-11-11T21:58:03.000Z"
+  },
+  {
+    "id": "569wvkM5oUgXj0KGbTBu28",
+    "uri": "spotify:album:569wvkM5oUgXj0KGbTBu28",
+    "name": "Beethoven: Violin Sonatas Nos. 1-10",
+    "release_date": "1980-09-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "2wOqMjp9TyABvtHdOSOTUS",
+        "name": "Ludwig van Beethoven",
+        "uri": "spotify:artist:2wOqMjp9TyABvtHdOSOTUS"
+      },
+      {
+        "id": "1QoKB19XVwnNwlKDjyYYe8",
+        "name": "Henryk Szeryng",
+        "uri": "spotify:artist:1QoKB19XVwnNwlKDjyYYe8"
+      },
+      {
+        "id": "7GH65UbP1uRY9HtNvq4R9Y",
+        "name": "Ingrid Haebler",
+        "uri": "spotify:artist:7GH65UbP1uRY9HtNvq4R9Y"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273294b57cbee5f03724fcc0975",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02294b57cbee5f03724fcc0975",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851294b57cbee5f03724fcc0975",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-10-18T12:56:28.000Z"
+  },
+  {
+    "id": "5c6qzKZJpCxUmYJeO7ND7F",
+    "uri": "spotify:album:5c6qzKZJpCxUmYJeO7ND7F",
+    "name": "Heifetz: Tchaikovsky & Mendelssohn Concertos",
+    "release_date": "1987",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "7yaBUcdjmqPP2vIv6F5bFD",
+        "name": "Jascha Heifetz",
+        "uri": "spotify:artist:7yaBUcdjmqPP2vIv6F5bFD"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2732245352cb80f40d21899ae77",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e022245352cb80f40d21899ae77",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048512245352cb80f40d21899ae77",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-07-08T09:16:54.000Z"
+  },
+  {
+    "id": "3i1Z5tXLX7VKGGTjiOrcJU",
+    "uri": "spotify:album:3i1Z5tXLX7VKGGTjiOrcJU",
+    "name": "Songs From a World Apart",
+    "release_date": "2006-03-09",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "36fU1D7VBlwnCf293gMzhT",
+        "name": "Lévon Minassian",
+        "uri": "spotify:artist:36fU1D7VBlwnCf293gMzhT"
+      },
+      {
+        "id": "2fJb06JRcuBWypwj46TQZj",
+        "name": "Armand Amar",
+        "uri": "spotify:artist:2fJb06JRcuBWypwj46TQZj"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a7ed1458c34fdc6e07db303d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a7ed1458c34fdc6e07db303d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a7ed1458c34fdc6e07db303d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-12-02T08:50:10.000Z"
   },
   {
     "id": "7EyPl6rQopcaTSJY5B711D",
@@ -518,149 +762,6 @@
       }
     ],
     "added_at": "2019-02-19T13:57:27.000Z"
-  },
-  {
-    "id": "26bQ8ka40C7SjHhqyNrqoj",
-    "uri": "spotify:album:26bQ8ka40C7SjHhqyNrqoj",
-    "name": "40 Most Beautiful Piano Classics",
-    "release_date": "2011-06-28",
-    "album_type": "compilation",
-    "artists": [
-      {
-        "id": "0LyfQWJT6nXafLPZqxe9Of",
-        "name": "Multi-interprètes",
-        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2735f6972ebe670054306cbe7be",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e025f6972ebe670054306cbe7be",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048515f6972ebe670054306cbe7be",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-01-12T15:17:23.000Z"
-  },
-  {
-    "id": "1E7V8YSMBzpyuGVHrXT7ZW",
-    "uri": "spotify:album:1E7V8YSMBzpyuGVHrXT7ZW",
-    "name": "Tchaikovsky: Violin Concerto",
-    "release_date": "2008-01-01",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "3MKCzCnpzw3TjUYs2v7vDA",
-        "name": "Pyotr Ilyich Tchaikovsky",
-        "uri": "spotify:artist:3MKCzCnpzw3TjUYs2v7vDA"
-      },
-      {
-        "id": "00hfOKuZEhvKKNXmVdb1We",
-        "name": "Janine Jansen",
-        "uri": "spotify:artist:00hfOKuZEhvKKNXmVdb1We"
-      },
-      {
-        "id": "5g44FyRrB0AUEdQbqW4jAo",
-        "name": "Mahler Chamber Orchestra",
-        "uri": "spotify:artist:5g44FyRrB0AUEdQbqW4jAo"
-      },
-      {
-        "id": "3sjupE75AphhTX12fgkQv6",
-        "name": "Daniel Harding",
-        "uri": "spotify:artist:3sjupE75AphhTX12fgkQv6"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b273b82f01d5e00e2581f3252b86",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e02b82f01d5e00e2581f3252b86",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00004851b82f01d5e00e2581f3252b86",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-08-08T10:49:08.000Z"
-  },
-  {
-    "id": "2UJcKiJxNryhL050F5Z1Fk",
-    "uri": "spotify:album:2UJcKiJxNryhL050F5Z1Fk",
-    "name": "Nevermind (Remastered)",
-    "release_date": "1991-09-26",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "6olE6TJLqED3rqDCT0FyPh",
-        "name": "Nirvana",
-        "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b273fbc71c99f9c1296c56dd51b6",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e02fbc71c99f9c1296c56dd51b6",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00004851fbc71c99f9c1296c56dd51b6",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-08-05T21:21:15.000Z"
-  },
-  {
-    "id": "2fopqZRJz4oYR3ftxBAUWy",
-    "uri": "spotify:album:2fopqZRJz4oYR3ftxBAUWy",
-    "name": "Gran Turismo 5 (Original Game Soundtrack)",
-    "release_date": "2010-11-29",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "1YZhNFBxkEB5UKTgMDvot4",
-        "name": "Lang Lang",
-        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b27318b9afc962978bce3c7b4e1d",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e0218b9afc962978bce3c7b4e1d",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000485118b9afc962978bce3c7b4e1d",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-08-06T09:15:53.000Z"
   },
   {
     "id": "3syYFlKHyCm7zb4otxwD95",
@@ -715,132 +816,290 @@
     "added_at": "2022-07-08T16:58:30.000Z"
   },
   {
-    "id": "5GfsaNstrK8rszTX5XYtXU",
-    "uri": "spotify:album:5GfsaNstrK8rszTX5XYtXU",
-    "name": "Le chant des sirènes",
-    "release_date": "2011-09-26",
+    "id": "1E7V8YSMBzpyuGVHrXT7ZW",
+    "uri": "spotify:album:1E7V8YSMBzpyuGVHrXT7ZW",
+    "name": "Tchaikovsky: Violin Concerto",
+    "release_date": "2008-01-01",
     "album_type": "album",
     "artists": [
       {
-        "id": "4FpJcNgOvIpSBeJgRg3OfN",
-        "name": "Orelsan",
-        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+        "id": "3MKCzCnpzw3TjUYs2v7vDA",
+        "name": "Pyotr Ilyich Tchaikovsky",
+        "uri": "spotify:artist:3MKCzCnpzw3TjUYs2v7vDA"
+      },
+      {
+        "id": "00hfOKuZEhvKKNXmVdb1We",
+        "name": "Janine Jansen",
+        "uri": "spotify:artist:00hfOKuZEhvKKNXmVdb1We"
+      },
+      {
+        "id": "5g44FyRrB0AUEdQbqW4jAo",
+        "name": "Mahler Chamber Orchestra",
+        "uri": "spotify:artist:5g44FyRrB0AUEdQbqW4jAo"
+      },
+      {
+        "id": "3sjupE75AphhTX12fgkQv6",
+        "name": "Daniel Harding",
+        "uri": "spotify:artist:3sjupE75AphhTX12fgkQv6"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b27342a91184c215f8a95b5f77ec",
+        "url": "https://i.scdn.co/image/ab67616d0000b273b82f01d5e00e2581f3252b86",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e0242a91184c215f8a95b5f77ec",
+        "url": "https://i.scdn.co/image/ab67616d00001e02b82f01d5e00e2581f3252b86",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d0000485142a91184c215f8a95b5f77ec",
+        "url": "https://i.scdn.co/image/ab67616d00004851b82f01d5e00e2581f3252b86",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2018-11-06T09:11:58.000Z"
+    "added_at": "2023-08-08T10:49:08.000Z"
   },
   {
-    "id": "2UrPmvaX5X76LIzE6Cfiqu",
-    "uri": "spotify:album:2UrPmvaX5X76LIzE6Cfiqu",
-    "name": "Brol La Suite",
-    "release_date": "2019-11-07",
-    "album_type": "album",
+    "id": "2CctXoafUF5PO4JZ3L7o0G",
+    "uri": "spotify:album:2CctXoafUF5PO4JZ3L7o0G",
+    "name": "Six Flying Dragons (Original Television Soundtrack)",
+    "release_date": "2016-04-04",
+    "album_type": "compilation",
     "artists": [
       {
-        "id": "3QVolfxko2UyCOtexhVTli",
-        "name": "Angèle",
-        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273df8a2ed8111de3161c4a4c30",
+        "url": "https://i.scdn.co/image/ab67616d0000b2733a9de7ccb57f051777f67c6d",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02df8a2ed8111de3161c4a4c30",
+        "url": "https://i.scdn.co/image/ab67616d00001e023a9de7ccb57f051777f67c6d",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851df8a2ed8111de3161c4a4c30",
+        "url": "https://i.scdn.co/image/ab67616d000048513a9de7ccb57f051777f67c6d",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2023-07-18T07:14:55.000Z"
+    "added_at": "2023-12-16T17:29:12.000Z"
   },
   {
-    "id": "6x6I3lpDmXNGGrRdaC6ktL",
-    "uri": "spotify:album:6x6I3lpDmXNGGrRdaC6ktL",
-    "name": "Les tentations",
-    "release_date": "1997-05-21",
-    "album_type": "album",
+    "id": "3vUzPu0xGmacwqVujWAict",
+    "uri": "spotify:album:3vUzPu0xGmacwqVujWAict",
+    "name": "Motown Greatest Hits",
+    "release_date": "2019-08-16",
+    "album_type": "compilation",
     "artists": [
       {
-        "id": "41o2A93SPxIUxsy5HQjvul",
-        "name": "Passi",
-        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b27327a70ad0bcea12d93a43cc91",
+        "url": "https://i.scdn.co/image/ab67616d0000b273d4d774adcdc5e2ba2c4e1541",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e0227a70ad0bcea12d93a43cc91",
+        "url": "https://i.scdn.co/image/ab67616d00001e02d4d774adcdc5e2ba2c4e1541",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d0000485127a70ad0bcea12d93a43cc91",
+        "url": "https://i.scdn.co/image/ab67616d00004851d4d774adcdc5e2ba2c4e1541",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2021-06-06T07:54:22.000Z"
+    "added_at": "2023-12-20T07:20:44.000Z"
   },
   {
-    "id": "2o2GBOfy2GG9oKYZgfZkur",
-    "uri": "spotify:album:2o2GBOfy2GG9oKYZgfZkur",
-    "name": "Civilisation",
-    "release_date": "2021-11-19",
+    "id": "5yuG2LEkf7QA9ZGIXldCmy",
+    "uri": "spotify:album:5yuG2LEkf7QA9ZGIXldCmy",
+    "name": "Recomposed By Max Richter: Vivaldi, The Four Seasons",
+    "release_date": "2014-01-01",
     "album_type": "album",
     "artists": [
       {
-        "id": "4FpJcNgOvIpSBeJgRg3OfN",
-        "name": "Orelsan",
-        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+        "id": "2VZNmg4vCnew4Pavo8zDdW",
+        "name": "Max Richter",
+        "uri": "spotify:artist:2VZNmg4vCnew4Pavo8zDdW"
+      },
+      {
+        "id": "59r5UU2HOytn9V5uMZ5Vur",
+        "name": "Daniel Hope",
+        "uri": "spotify:artist:59r5UU2HOytn9V5uMZ5Vur"
+      },
+      {
+        "id": "19z3Is8jPDFmLphrQ2w2Du",
+        "name": "Konzerthaus Kammerorchester Berlin",
+        "uri": "spotify:artist:19z3Is8jPDFmLphrQ2w2Du"
+      },
+      {
+        "id": "1pNP4idjNnhPXDLi0Jz12R",
+        "name": "Andre de Ridder",
+        "uri": "spotify:artist:1pNP4idjNnhPXDLi0Jz12R"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b27358ba1ea637001f9a15e55a92",
+        "url": "https://i.scdn.co/image/ab67616d0000b2737ead2c02fb48674b6bac7cc4",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e0258ba1ea637001f9a15e55a92",
+        "url": "https://i.scdn.co/image/ab67616d00001e027ead2c02fb48674b6bac7cc4",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d0000485158ba1ea637001f9a15e55a92",
+        "url": "https://i.scdn.co/image/ab67616d000048517ead2c02fb48674b6bac7cc4",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2022-06-15T21:35:55.000Z"
+    "added_at": "2023-12-14T21:34:37.000Z"
+  },
+  {
+    "id": "7LxBrkZXrZZTLHRiDEJfqx",
+    "uri": "spotify:album:7LxBrkZXrZZTLHRiDEJfqx",
+    "name": "Workout Music",
+    "release_date": "2019-11-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "62qifOWqESHtTVSZrlKRtt",
+        "name": "Chris Heria",
+        "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e452d6f03675585a12a90456",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e452d6f03675585a12a90456",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e452d6f03675585a12a90456",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2020-11-28T21:52:00.000Z"
+  },
+  {
+    "id": "13xlpKbai3GGoMSr75lOeX",
+    "uri": "spotify:album:13xlpKbai3GGoMSr75lOeX",
+    "name": "Into The Wild (Music For The Motion Picture)",
+    "release_date": "2007-09-18",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "0mXTJETA4XUa12MmmXxZJh",
+        "name": "Eddie Vedder",
+        "uri": "spotify:artist:0mXTJETA4XUa12MmmXxZJh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733ed52339ae78ac1b695e8d80",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023ed52339ae78ac1b695e8d80",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513ed52339ae78ac1b695e8d80",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-30T20:38:36.000Z"
+  },
+  {
+    "id": "2fopqZRJz4oYR3ftxBAUWy",
+    "uri": "spotify:album:2fopqZRJz4oYR3ftxBAUWy",
+    "name": "Gran Turismo 5 (Original Game Soundtrack)",
+    "release_date": "2010-11-29",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27318b9afc962978bce3c7b4e1d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0218b9afc962978bce3c7b4e1d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485118b9afc962978bce3c7b4e1d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-06T09:15:53.000Z"
+  },
+  {
+    "id": "2UJcKiJxNryhL050F5Z1Fk",
+    "uri": "spotify:album:2UJcKiJxNryhL050F5Z1Fk",
+    "name": "Nevermind (Remastered)",
+    "release_date": "1991-09-26",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "6olE6TJLqED3rqDCT0FyPh",
+        "name": "Nirvana",
+        "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273fbc71c99f9c1296c56dd51b6",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02fbc71c99f9c1296c56dd51b6",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851fbc71c99f9c1296c56dd51b6",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-08-05T21:21:15.000Z"
   },
   {
     "id": "2TGMa7UcpLmLkPhn1p3Ff4",
@@ -907,6 +1166,38 @@
     "added_at": "2023-07-18T07:15:29.000Z"
   },
   {
+    "id": "2UrPmvaX5X76LIzE6Cfiqu",
+    "uri": "spotify:album:2UrPmvaX5X76LIzE6Cfiqu",
+    "name": "Brol La Suite",
+    "release_date": "2019-11-07",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "3QVolfxko2UyCOtexhVTli",
+        "name": "Angèle",
+        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273df8a2ed8111de3161c4a4c30",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02df8a2ed8111de3161c4a4c30",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851df8a2ed8111de3161c4a4c30",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-07-18T07:14:55.000Z"
+  },
+  {
     "id": "5nyLaTsztHW8mI1KAWeGkS",
     "uri": "spotify:album:5nyLaTsztHW8mI1KAWeGkS",
     "name": "La fête est finie - EPILOGUE",
@@ -937,102 +1228,6 @@
       }
     ],
     "added_at": "2023-07-18T07:12:57.000Z"
-  },
-  {
-    "id": "796mwl4j1EFonUd7zdA6g5",
-    "uri": "spotify:album:796mwl4j1EFonUd7zdA6g5",
-    "name": "Four",
-    "release_date": "2016-04-01",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "6yWyIM8jA96kl3jlCXpabB",
-        "name": "Nelson Freitas",
-        "uri": "spotify:artist:6yWyIM8jA96kl3jlCXpabB"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b273c43372364469d51d0a921747",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e02c43372364469d51d0a921747",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00004851c43372364469d51d0a921747",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2019-10-02T19:29:48.000Z"
-  },
-  {
-    "id": "5REnhhd1rjGtdvmSGKf89c",
-    "uri": "spotify:album:5REnhhd1rjGtdvmSGKf89c",
-    "name": "Le fabuleux destin d'Amélie Poulain (Bande originale de film)",
-    "release_date": "2001-04-23",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "00sazWvoTLOqg5MFwC68Um",
-        "name": "Yann Tiersen",
-        "uri": "spotify:artist:00sazWvoTLOqg5MFwC68Um"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b273569e86314606acd889922d39",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e02569e86314606acd889922d39",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00004851569e86314606acd889922d39",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2020-09-23T09:30:59.000Z"
-  },
-  {
-    "id": "2oHUGMpScQKwHtQw95dZLZ",
-    "uri": "spotify:album:2oHUGMpScQKwHtQw95dZLZ",
-    "name": "Happiness Therapy",
-    "release_date": "2013-02-18",
-    "album_type": "compilation",
-    "artists": [
-      {
-        "id": "0LyfQWJT6nXafLPZqxe9Of",
-        "name": "Multi-interprètes",
-        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b273ba7a6a539504a387e6f651ab",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e02ba7a6a539504a387e6f651ab",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00004851ba7a6a539504a387e6f651ab",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2020-08-07T10:22:42.000Z"
   },
   {
     "id": "289Fqj7ymVK3DcbgXPKkBm",
@@ -1099,38 +1294,6 @@
     "added_at": "2023-05-12T07:20:38.000Z"
   },
   {
-    "id": "27Birnw4KzX0h2cVKBLheh",
-    "uri": "spotify:album:27Birnw4KzX0h2cVKBLheh",
-    "name": "Les tentations (Édition collector 1997-2017)",
-    "release_date": "2017-11-17",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "41o2A93SPxIUxsy5HQjvul",
-        "name": "Passi",
-        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b273e458b538238c7e4ecf548d61",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e02e458b538238c7e4ecf548d61",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00004851e458b538238c7e4ecf548d61",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-05-06T14:28:11.000Z"
-  },
-  {
     "id": "0ALfQaGYSvcRNV5OLbixA3",
     "uri": "spotify:album:0ALfQaGYSvcRNV5OLbixA3",
     "name": "My Worlds (International Version)",
@@ -1163,6 +1326,38 @@
     "added_at": "2023-01-18T19:18:37.000Z"
   },
   {
+    "id": "6uyslsVGFsHKzdGUosFwBM",
+    "uri": "spotify:album:6uyslsVGFsHKzdGUosFwBM",
+    "name": "racine carrée",
+    "release_date": "2013-01-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "5j4HeCoUlzhfWtjAfM1acR",
+        "name": "Stromae",
+        "uri": "spotify:artist:5j4HeCoUlzhfWtjAfM1acR"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273ab580fab750cc9baf0d52b5c",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ab580fab750cc9baf0d52b5c",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851ab580fab750cc9baf0d52b5c",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-01-13T17:58:09.000Z"
+  },
+  {
     "id": "5WrJgstjRAPiS3x4GjEPQG",
     "uri": "spotify:album:5WrJgstjRAPiS3x4GjEPQG",
     "name": "Extraterrien",
@@ -1193,80 +1388,6 @@
       }
     ],
     "added_at": "2022-11-06T20:05:45.000Z"
-  },
-  {
-    "id": "03axqfxRqRe9p3LwiTh4GX",
-    "uri": "spotify:album:03axqfxRqRe9p3LwiTh4GX",
-    "name": "Paganini: 24 Caprices",
-    "release_date": "1994-01-01",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "39FC9x5PaTNYHp5hwlaY4q",
-        "name": "Niccolò Paganini",
-        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
-      },
-      {
-        "id": "16XP6b4v1MdN8UYRBlgVKn",
-        "name": "Leonidas Kavakos",
-        "uri": "spotify:artist:16XP6b4v1MdN8UYRBlgVKn"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2739e04cda776a6738b24543b8a",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e029e04cda776a6738b24543b8a",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048519e04cda776a6738b24543b8a",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2022-10-21T10:06:13.000Z"
-  },
-  {
-    "id": "1xGcZ2k4CX1haXxCMPm2Jl",
-    "uri": "spotify:album:1xGcZ2k4CX1haXxCMPm2Jl",
-    "name": "Paganini: 24 Capricci",
-    "release_date": "1990-01-01",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "39FC9x5PaTNYHp5hwlaY4q",
-        "name": "Niccolò Paganini",
-        "uri": "spotify:artist:39FC9x5PaTNYHp5hwlaY4q"
-      },
-      {
-        "id": "4J806QjdyKrK4guMFMRzKc",
-        "name": "Salvatore Accardo",
-        "uri": "spotify:artist:4J806QjdyKrK4guMFMRzKc"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2735d9b839dfbd981a2f036ef55",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e025d9b839dfbd981a2f036ef55",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048515d9b839dfbd981a2f036ef55",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2022-10-19T12:54:14.000Z"
   },
   {
     "id": "51bIaARfKerKLsB25ouVQ2",
@@ -1333,6 +1454,38 @@
     "added_at": "2022-06-26T05:44:10.000Z"
   },
   {
+    "id": "2o2GBOfy2GG9oKYZgfZkur",
+    "uri": "spotify:album:2o2GBOfy2GG9oKYZgfZkur",
+    "name": "Civilisation",
+    "release_date": "2021-11-19",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
+        "name": "Orelsan",
+        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27358ba1ea637001f9a15e55a92",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0258ba1ea637001f9a15e55a92",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485158ba1ea637001f9a15e55a92",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2022-06-15T21:35:55.000Z"
+  },
+  {
     "id": "7q2B4M5EiBkqrlsNW8lB7N",
     "uri": "spotify:album:7q2B4M5EiBkqrlsNW8lB7N",
     "name": "2001",
@@ -1379,17 +1532,17 @@
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273b33d46dfa2635a47eebf63b2",
+        "url": "https://i.scdn.co/image/ab67616d0000b27348905438b9c1153978d9fbf4",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02b33d46dfa2635a47eebf63b2",
+        "url": "https://i.scdn.co/image/ab67616d00001e0248905438b9c1153978d9fbf4",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851b33d46dfa2635a47eebf63b2",
+        "url": "https://i.scdn.co/image/ab67616d0000485148905438b9c1153978d9fbf4",
         "height": 64,
         "width": 64
       }
@@ -1461,41 +1614,36 @@
     "added_at": "2022-01-30T00:55:27.000Z"
   },
   {
-    "id": "3i1Z5tXLX7VKGGTjiOrcJU",
-    "uri": "spotify:album:3i1Z5tXLX7VKGGTjiOrcJU",
-    "name": "Songs From a World Apart",
-    "release_date": "2006-03-09",
-    "album_type": "album",
+    "id": "2n5AOB0lGse7qp38HvVROB",
+    "uri": "spotify:album:2n5AOB0lGse7qp38HvVROB",
+    "name": "(500) Days of Summer (Music from the Motion Picture)",
+    "release_date": "2009-07-10",
+    "album_type": "compilation",
     "artists": [
       {
-        "id": "36fU1D7VBlwnCf293gMzhT",
-        "name": "Lévon Minassian",
-        "uri": "spotify:artist:36fU1D7VBlwnCf293gMzhT"
-      },
-      {
-        "id": "2fJb06JRcuBWypwj46TQZj",
-        "name": "Armand Amar",
-        "uri": "spotify:artist:2fJb06JRcuBWypwj46TQZj"
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273a7ed1458c34fdc6e07db303d",
+        "url": "https://i.scdn.co/image/ab67616d0000b2738c2d226f555a702986a85bc0",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02a7ed1458c34fdc6e07db303d",
+        "url": "https://i.scdn.co/image/ab67616d00001e028c2d226f555a702986a85bc0",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851a7ed1458c34fdc6e07db303d",
+        "url": "https://i.scdn.co/image/ab67616d000048518c2d226f555a702986a85bc0",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2021-12-02T08:50:10.000Z"
+    "added_at": "2022-01-25T08:20:31.000Z"
   },
   {
     "id": "1mARKMZVJY8ezLEs2K9j3d",
@@ -1695,6 +1843,38 @@
     "added_at": "2021-06-09T13:22:31.000Z"
   },
   {
+    "id": "6x6I3lpDmXNGGrRdaC6ktL",
+    "uri": "spotify:album:6x6I3lpDmXNGGrRdaC6ktL",
+    "name": "Les tentations",
+    "release_date": "1997-05-21",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "41o2A93SPxIUxsy5HQjvul",
+        "name": "Passi",
+        "uri": "spotify:artist:41o2A93SPxIUxsy5HQjvul"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27327a70ad0bcea12d93a43cc91",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0227a70ad0bcea12d93a43cc91",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485127a70ad0bcea12d93a43cc91",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-06-06T07:54:22.000Z"
+  },
+  {
     "id": "46paHZ8Md6AICwfjybLjOM",
     "uri": "spotify:album:46paHZ8Md6AICwfjybLjOM",
     "name": "Crash Landing on You (Original Television Soundtrack)",
@@ -1725,6 +1905,43 @@
       }
     ],
     "added_at": "2021-01-25T08:04:26.000Z"
+  },
+  {
+    "id": "0ylbO515jtrovpxr1drKdF",
+    "uri": "spotify:album:0ylbO515jtrovpxr1drKdF",
+    "name": "Lang Lang: The Chopin Album",
+    "release_date": "2012-10-22",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "7y97mc3bZRFXzT2szRM4L4",
+        "name": "Frédéric Chopin",
+        "uri": "spotify:artist:7y97mc3bZRFXzT2szRM4L4"
+      },
+      {
+        "id": "1YZhNFBxkEB5UKTgMDvot4",
+        "name": "Lang Lang",
+        "uri": "spotify:artist:1YZhNFBxkEB5UKTgMDvot4"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273a5ce972031744697ffa86c6f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02a5ce972031744697ffa86c6f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851a5ce972031744697ffa86c6f",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2021-01-23T17:21:58.000Z"
   },
   {
     "id": "3AMXFnwHWXCvNr5NCCpLZI",
@@ -1791,68 +2008,68 @@
     "added_at": "2021-01-11T19:40:37.000Z"
   },
   {
-    "id": "7LxBrkZXrZZTLHRiDEJfqx",
-    "uri": "spotify:album:7LxBrkZXrZZTLHRiDEJfqx",
-    "name": "Workout Music",
-    "release_date": "2019-11-01",
+    "id": "5REnhhd1rjGtdvmSGKf89c",
+    "uri": "spotify:album:5REnhhd1rjGtdvmSGKf89c",
+    "name": "Le fabuleux destin d'Amélie Poulain (Bande originale de film)",
+    "release_date": "2001-04-23",
     "album_type": "album",
     "artists": [
       {
-        "id": "62qifOWqESHtTVSZrlKRtt",
-        "name": "Chris Heria",
-        "uri": "spotify:artist:62qifOWqESHtTVSZrlKRtt"
+        "id": "00sazWvoTLOqg5MFwC68Um",
+        "name": "Yann Tiersen",
+        "uri": "spotify:artist:00sazWvoTLOqg5MFwC68Um"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273e452d6f03675585a12a90456",
+        "url": "https://i.scdn.co/image/ab67616d0000b273569e86314606acd889922d39",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02e452d6f03675585a12a90456",
+        "url": "https://i.scdn.co/image/ab67616d00001e02569e86314606acd889922d39",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851e452d6f03675585a12a90456",
+        "url": "https://i.scdn.co/image/ab67616d00004851569e86314606acd889922d39",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2020-11-28T21:52:00.000Z"
+    "added_at": "2020-09-23T09:30:59.000Z"
   },
   {
-    "id": "3xybjP7r2VsWzwvDQipdM0",
-    "uri": "spotify:album:3xybjP7r2VsWzwvDQipdM0",
-    "name": "Freudian",
-    "release_date": "2017-08-25",
-    "album_type": "album",
+    "id": "2oHUGMpScQKwHtQw95dZLZ",
+    "uri": "spotify:album:2oHUGMpScQKwHtQw95dZLZ",
+    "name": "Happiness Therapy",
+    "release_date": "2013-02-18",
+    "album_type": "compilation",
     "artists": [
       {
-        "id": "20wkVLutqVOYrc0kxFs7rA",
-        "name": "Daniel Caesar",
-        "uri": "spotify:artist:20wkVLutqVOYrc0kxFs7rA"
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
       }
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b2733138f891f3075c9c5d944037",
+        "url": "https://i.scdn.co/image/ab67616d0000b273ba7a6a539504a387e6f651ab",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e023138f891f3075c9c5d944037",
+        "url": "https://i.scdn.co/image/ab67616d00001e02ba7a6a539504a387e6f651ab",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d000048513138f891f3075c9c5d944037",
+        "url": "https://i.scdn.co/image/ab67616d00004851ba7a6a539504a387e6f651ab",
         "height": 64,
         "width": 64
       }
     ],
-    "added_at": "2020-06-19T08:52:18.000Z"
+    "added_at": "2020-08-07T10:22:42.000Z"
   },
   {
     "id": "52A9oIcEgY9llf0hQ3d0Bb",
@@ -2062,38 +2279,6 @@
     "added_at": "2020-01-22T09:12:04.000Z"
   },
   {
-    "id": "6KSvWFf4g4PrIldtchJsTC",
-    "uri": "spotify:album:6KSvWFf4g4PrIldtchJsTC",
-    "name": "Brol",
-    "release_date": "2018-10-05",
-    "album_type": "album",
-    "artists": [
-      {
-        "id": "3QVolfxko2UyCOtexhVTli",
-        "name": "Angèle",
-        "uri": "spotify:artist:3QVolfxko2UyCOtexhVTli"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2732433cb43f0f2f0f23b7c8b82",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e022433cb43f0f2f0f23b7c8b82",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048512433cb43f0f2f0f23b7c8b82",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2020-01-04T10:15:33.000Z"
-  },
-  {
     "id": "3zXdL8n7OMWKY156NgUZ4m",
     "uri": "spotify:album:3zXdL8n7OMWKY156NgUZ4m",
     "name": "A Lo Cubano",
@@ -2156,6 +2341,38 @@
       }
     ],
     "added_at": "2019-10-14T16:06:51.000Z"
+  },
+  {
+    "id": "796mwl4j1EFonUd7zdA6g5",
+    "uri": "spotify:album:796mwl4j1EFonUd7zdA6g5",
+    "name": "Four",
+    "release_date": "2016-04-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "6yWyIM8jA96kl3jlCXpabB",
+        "name": "Nelson Freitas",
+        "uri": "spotify:artist:6yWyIM8jA96kl3jlCXpabB"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273c43372364469d51d0a921747",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02c43372364469d51d0a921747",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851c43372364469d51d0a921747",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-10-02T19:29:48.000Z"
   },
   {
     "id": "5VMa7BgPzwjGfEPiGaJSPv",
@@ -2466,6 +2683,38 @@
     "added_at": "2019-02-07T12:36:18.000Z"
   },
   {
+    "id": "5G5rgQHzdQnw32SI0WjIo5",
+    "uri": "spotify:album:5G5rgQHzdQnw32SI0WjIo5",
+    "name": "Get Rich Or Die Tryin'",
+    "release_date": "2003-02-06",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "3q7HBObVc0L8jNeTe5Gofh",
+        "name": "50 Cent",
+        "uri": "spotify:artist:3q7HBObVc0L8jNeTe5Gofh"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d843fabb75fef14010e30cae",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d843fabb75fef14010e30cae",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d843fabb75fef14010e30cae",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2019-01-19T08:35:30.000Z"
+  },
+  {
     "id": "1Ba5s6JWCai3QpL17pOqwv",
     "uri": "spotify:album:1Ba5s6JWCai3QpL17pOqwv",
     "name": "Polaroid experience",
@@ -2528,6 +2777,38 @@
       }
     ],
     "added_at": "2018-11-06T09:23:36.000Z"
+  },
+  {
+    "id": "5GfsaNstrK8rszTX5XYtXU",
+    "uri": "spotify:album:5GfsaNstrK8rszTX5XYtXU",
+    "name": "Le chant des sirènes",
+    "release_date": "2011-09-26",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "4FpJcNgOvIpSBeJgRg3OfN",
+        "name": "Orelsan",
+        "uri": "spotify:artist:4FpJcNgOvIpSBeJgRg3OfN"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27342a91184c215f8a95b5f77ec",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0242a91184c215f8a95b5f77ec",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485142a91184c215f8a95b5f77ec",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2018-11-06T09:11:58.000Z"
   },
   {
     "id": "4WW3ME0M2dUoAK5hmbXsN7",
@@ -2608,17 +2889,17 @@
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b27376438cc21de1d139cd68d528",
+        "url": "https://i.scdn.co/image/ab67616d0000b27365716918209ccc6bac2af278",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e0276438cc21de1d139cd68d528",
+        "url": "https://i.scdn.co/image/ab67616d00001e0265716918209ccc6bac2af278",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d0000485176438cc21de1d139cd68d528",
+        "url": "https://i.scdn.co/image/ab67616d0000485165716918209ccc6bac2af278",
         "height": 64,
         "width": 64
       }

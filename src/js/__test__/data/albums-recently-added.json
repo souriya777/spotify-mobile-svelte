@@ -1,5 +1,318 @@
 [
   {
+    "id": "64LU4c1nfjz1t4VnGhagcg",
+    "uri": "spotify:album:64LU4c1nfjz1t4VnGhagcg",
+    "name": "1989 (Taylor's Version)",
+    "release_date": "2023-10-26",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273904445d70d04eb24d6bb79ac",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02904445d70d04eb24d6bb79ac",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851904445d70d04eb24d6bb79ac",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-28T23:22:25.000Z"
+  },
+  {
+    "id": "3s1uBurAzg61IQYXRc3B3h",
+    "uri": "spotify:album:3s1uBurAzg61IQYXRc3B3h",
+    "name": "folklore: the saltbox house chapter",
+    "release_date": "2020-08-27",
+    "album_type": "compilation",
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e83db93e7001dc684da96128",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e83db93e7001dc684da96128",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e83db93e7001dc684da96128",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-28T19:17:44.000Z"
+  },
+  {
+    "id": "0UrbIea2sXlvZfMhD9PkFA",
+    "uri": "spotify:album:0UrbIea2sXlvZfMhD9PkFA",
+    "name": "Adieu les monstres",
+    "release_date": "2023-05-05",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "0UgxFqJmwkpojz4mHBsRpD",
+        "name": "KALIKA",
+        "uri": "spotify:artist:0UgxFqJmwkpojz4mHBsRpD"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2738c7cdda9819e539679ee40bf",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e028c7cdda9819e539679ee40bf",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048518c7cdda9819e539679ee40bf",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-19T18:54:27.000Z"
+  },
+  {
+    "id": "1lb206sGMTJryXF66FpT0k",
+    "uri": "spotify:album:1lb206sGMTJryXF66FpT0k",
+    "name": "Crash Landing on You (Original Television Soundtrack)",
+    "release_date": "2020-02-16",
+    "album_type": "compilation",
+    "artists": [
+      {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735ef4486e9f7fe6457ccaab8f",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e025ef4486e9f7fe6457ccaab8f",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048515ef4486e9f7fe6457ccaab8f",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-11T09:57:16.000Z"
+  },
+  {
+    "id": "6EMFcjkD4LHxfwqfJlPjsb",
+    "uri": "spotify:album:6EMFcjkD4LHxfwqfJlPjsb",
+    "name": "Johnny Tillotson's Best",
+    "release_date": "1962-01-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "36msvw9B10rxW90NSQ2794",
+        "name": "Johnny Tillotson",
+        "uri": "spotify:artist:36msvw9B10rxW90NSQ2794"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b27385ed238114401e0711858519",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e0285ed238114401e0711858519",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000485185ed238114401e0711858519",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-12-25T17:37:11.000Z"
+  },
+  {
+    "id": "3vUzPu0xGmacwqVujWAict",
+    "uri": "spotify:album:3vUzPu0xGmacwqVujWAict",
+    "name": "Motown Greatest Hits",
+    "release_date": "2019-08-16",
+    "album_type": "compilation",
+    "artists": [
+      {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273d4d774adcdc5e2ba2c4e1541",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02d4d774adcdc5e2ba2c4e1541",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851d4d774adcdc5e2ba2c4e1541",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-12-20T07:20:44.000Z"
+  },
+  {
+    "id": "2CctXoafUF5PO4JZ3L7o0G",
+    "uri": "spotify:album:2CctXoafUF5PO4JZ3L7o0G",
+    "name": "Six Flying Dragons (Original Television Soundtrack)",
+    "release_date": "2016-04-04",
+    "album_type": "compilation",
+    "artists": [
+      {
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Multi-interprètes",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2733a9de7ccb57f051777f67c6d",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e023a9de7ccb57f051777f67c6d",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048513a9de7ccb57f051777f67c6d",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-12-16T17:29:12.000Z"
+  },
+  {
+    "id": "5yuG2LEkf7QA9ZGIXldCmy",
+    "uri": "spotify:album:5yuG2LEkf7QA9ZGIXldCmy",
+    "name": "Recomposed By Max Richter: Vivaldi, The Four Seasons",
+    "release_date": "2014-01-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "2VZNmg4vCnew4Pavo8zDdW",
+        "name": "Max Richter",
+        "uri": "spotify:artist:2VZNmg4vCnew4Pavo8zDdW"
+      },
+      {
+        "id": "59r5UU2HOytn9V5uMZ5Vur",
+        "name": "Daniel Hope",
+        "uri": "spotify:artist:59r5UU2HOytn9V5uMZ5Vur"
+      },
+      {
+        "id": "19z3Is8jPDFmLphrQ2w2Du",
+        "name": "Konzerthaus Kammerorchester Berlin",
+        "uri": "spotify:artist:19z3Is8jPDFmLphrQ2w2Du"
+      },
+      {
+        "id": "1pNP4idjNnhPXDLi0Jz12R",
+        "name": "Andre de Ridder",
+        "uri": "spotify:artist:1pNP4idjNnhPXDLi0Jz12R"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b2737ead2c02fb48674b6bac7cc4",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e027ead2c02fb48674b6bac7cc4",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d000048517ead2c02fb48674b6bac7cc4",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-12-14T21:34:37.000Z"
+  },
+  {
+    "id": "569wvkM5oUgXj0KGbTBu28",
+    "uri": "spotify:album:569wvkM5oUgXj0KGbTBu28",
+    "name": "Beethoven: Violin Sonatas Nos. 1-10",
+    "release_date": "1980-09-01",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "2wOqMjp9TyABvtHdOSOTUS",
+        "name": "Ludwig van Beethoven",
+        "uri": "spotify:artist:2wOqMjp9TyABvtHdOSOTUS"
+      },
+      {
+        "id": "1QoKB19XVwnNwlKDjyYYe8",
+        "name": "Henryk Szeryng",
+        "uri": "spotify:artist:1QoKB19XVwnNwlKDjyYYe8"
+      },
+      {
+        "id": "7GH65UbP1uRY9HtNvq4R9Y",
+        "name": "Ingrid Haebler",
+        "uri": "spotify:artist:7GH65UbP1uRY9HtNvq4R9Y"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273294b57cbee5f03724fcc0975",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02294b57cbee5f03724fcc0975",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851294b57cbee5f03724fcc0975",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2023-10-18T12:56:28.000Z"
+  },
+  {
     "id": "13xlpKbai3GGoMSr75lOeX",
     "uri": "spotify:album:13xlpKbai3GGoMSr75lOeX",
     "name": "Into The Wild (Music For The Motion Picture)",
@@ -30,38 +343,6 @@
       }
     ],
     "added_at": "2023-08-30T20:38:36.000Z"
-  },
-  {
-    "id": "5w3m2Moqe9dcVHSzIUfmsE",
-    "uri": "spotify:album:5w3m2Moqe9dcVHSzIUfmsE",
-    "name": "Dreamgirls (Music from the Motion Picture)",
-    "release_date": "2006-01-09",
-    "album_type": "compilation",
-    "artists": [
-      {
-        "id": "0LyfQWJT6nXafLPZqxe9Of",
-        "name": "Multi-interprètes",
-        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://i.scdn.co/image/ab67616d0000b2734ff6b691780844247bc981ea",
-        "height": 640,
-        "width": 640
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d00001e024ff6b691780844247bc981ea",
-        "height": 300,
-        "width": 300
-      },
-      {
-        "url": "https://i.scdn.co/image/ab67616d000048514ff6b691780844247bc981ea",
-        "height": 64,
-        "width": 64
-      }
-    ],
-    "added_at": "2023-08-19T00:08:37.000Z"
   },
   {
     "id": "1E7V8YSMBzpyuGVHrXT7ZW",
@@ -864,17 +1145,17 @@
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b273b33d46dfa2635a47eebf63b2",
+        "url": "https://i.scdn.co/image/ab67616d0000b27348905438b9c1153978d9fbf4",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e02b33d46dfa2635a47eebf63b2",
+        "url": "https://i.scdn.co/image/ab67616d00001e0248905438b9c1153978d9fbf4",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00004851b33d46dfa2635a47eebf63b2",
+        "url": "https://i.scdn.co/image/ab67616d0000485148905438b9c1153978d9fbf4",
         "height": 64,
         "width": 64
       }
@@ -2576,17 +2857,17 @@
     ],
     "images": [
       {
-        "url": "https://i.scdn.co/image/ab67616d0000b27376438cc21de1d139cd68d528",
+        "url": "https://i.scdn.co/image/ab67616d0000b27365716918209ccc6bac2af278",
         "height": 640,
         "width": 640
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d00001e0276438cc21de1d139cd68d528",
+        "url": "https://i.scdn.co/image/ab67616d00001e0265716918209ccc6bac2af278",
         "height": 300,
         "width": 300
       },
       {
-        "url": "https://i.scdn.co/image/ab67616d0000485176438cc21de1d139cd68d528",
+        "url": "https://i.scdn.co/image/ab67616d0000485165716918209ccc6bac2af278",
         "height": 64,
         "width": 64
       }

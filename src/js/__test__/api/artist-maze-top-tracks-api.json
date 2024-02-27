@@ -1,0 +1,774 @@
+{
+  "tracks": [
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 152266,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927217"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0tZWOYeG9SjVcZQqWYIlC0"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0tZWOYeG9SjVcZQqWYIlC0",
+      "id": "0tZWOYeG9SjVcZQqWYIlC0",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Holy Thursday",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/de8fa806af92c4ed853e58a6d9518ccb6445c1fa?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:0tZWOYeG9SjVcZQqWYIlC0"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 137720,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927264"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3mfMiK4eSis4K1sZMxJWht"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3mfMiK4eSis4K1sZMxJWht",
+      "id": "3mfMiK4eSis4K1sZMxJWht",
+      "is_local": false,
+      "is_playable": true,
+      "name": "The Ecchoing Green",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/5eabbea2d4f29932653e78a05da2a7449f25f1c3?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 13,
+      "type": "track",
+      "uri": "spotify:track:3mfMiK4eSis4K1sZMxJWht"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 197626,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927258"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6hHHCG28AIilRY0ztmt1X6"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6hHHCG28AIilRY0ztmt1X6",
+      "id": "6hHHCG28AIilRY0ztmt1X6",
+      "is_local": false,
+      "is_playable": true,
+      "name": "A Cradle Song",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/257ff7ecd722e0dbf87cac948d27091bd6902840?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:6hHHCG28AIilRY0ztmt1X6"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 256545,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927254"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7JS4aWlbM8EUOisWK37JAP"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7JS4aWlbM8EUOisWK37JAP",
+      "id": "7JS4aWlbM8EUOisWK37JAP",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Introduction & Earth's Answer",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/bdd261e12976c111de7a0fb4fb51bd5edcef4b86?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:7JS4aWlbM8EUOisWK37JAP"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 228146,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927262"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0LYbg8vUZQJnHa0fZj9lAz"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0LYbg8vUZQJnHa0fZj9lAz",
+      "id": "0LYbg8vUZQJnHa0fZj9lAz",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Night",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/d8b0fb8440c455327b150ff1a6852ca7628180d0?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 14,
+      "type": "track",
+      "uri": "spotify:track:0LYbg8vUZQJnHa0fZj9lAz"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 123866,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927263"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7wsOJEN7yJc733ENYZjyK0"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7wsOJEN7yJc733ENYZjyK0",
+      "id": "7wsOJEN7yJc733ENYZjyK0",
+      "is_local": false,
+      "is_playable": true,
+      "name": "The Tyger",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/176bcfdc2df29ab758ee2f3f3b180b1f5dc96146?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 12,
+      "type": "track",
+      "uri": "spotify:track:7wsOJEN7yJc733ENYZjyK0"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 207200,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927255"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/77BR9wDx8GY6reipK6daiN"
+      },
+      "href": "https://api.spotify.com/v1/tracks/77BR9wDx8GY6reipK6daiN",
+      "id": "77BR9wDx8GY6reipK6daiN",
+      "is_local": false,
+      "is_playable": true,
+      "name": "London",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/50d71df4650f43dd0484f66bfce73e4834c2886c?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:77BR9wDx8GY6reipK6daiN"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 104653,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927260"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4EGZPAkAq5rRxTCEkrcpmU"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4EGZPAkAq5rRxTCEkrcpmU",
+      "id": "4EGZPAkAq5rRxTCEkrcpmU",
+      "is_local": false,
+      "is_playable": true,
+      "name": "The Angel",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/0b214b131dba1b2c28d9523789b62c0f03a19a2b?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:4EGZPAkAq5rRxTCEkrcpmU"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 142213,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927219"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4BQtLSyeVdVNnXqRwcRiZD"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4BQtLSyeVdVNnXqRwcRiZD",
+      "id": "4BQtLSyeVdVNnXqRwcRiZD",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Nurse's Song",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/917db0accb26e7663cbfa8717909717db8049a00?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:4BQtLSyeVdVNnXqRwcRiZD"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+            "id": "0VCYEBxnERCSrT8NvEDLPh",
+            "name": "Children of the Maze",
+            "type": "artist",
+            "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4cxCLMq3xDR2B4eaNX1BeN"
+        },
+        "href": "https://api.spotify.com/v1/albums/4cxCLMq3xDR2B4eaNX1BeN",
+        "id": "4cxCLMq3xDR2B4eaNX1BeN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Songs of Innocence - Songs of Experience",
+        "release_date": "2020-12-14",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0VCYEBxnERCSrT8NvEDLPh"
+          },
+          "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh",
+          "id": "0VCYEBxnERCSrT8NvEDLPh",
+          "name": "Children of the Maze",
+          "type": "artist",
+          "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 204546,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "FR9W11927218"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0CKIDZAPVjXn80M7PGNUeB"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0CKIDZAPVjXn80M7PGNUeB",
+      "id": "0CKIDZAPVjXn80M7PGNUeB",
+      "is_local": false,
+      "is_playable": true,
+      "name": "On Another's Sorrow",
+      "popularity": 0,
+      "preview_url": "https://p.scdn.co/mp3-preview/81ad9c3d122ff45cd7fb36c44977eef3bffda604?cid=be4ae675c4e84eae88327846078637a7",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:0CKIDZAPVjXn80M7PGNUeB"
+    }
+  ]
+}

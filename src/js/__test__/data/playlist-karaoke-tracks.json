@@ -4,6 +4,7 @@
     "uri": "spotify:track:6YLqn80B9AoFnUFUBG1JId",
     "name": "Bye Bye - Refugee Camp Band Remix",
     "duration_ms": 239133,
+    "popularity": 52,
     "album": {
       "id": "7pdSRW28eg63tKiCyyOUFo",
       "uri": "spotify:album:7pdSRW28eg63tKiCyyOUFo",
@@ -48,6 +49,7 @@
     "uri": "spotify:track:0xtN05SZDvg943I3x08KT7",
     "name": "Sherry",
     "duration_ms": 126613,
+    "popularity": 28,
     "album": {
       "id": "7oWx4auBp2kCb54VkRCCUq",
       "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
@@ -92,6 +94,7 @@
     "uri": "spotify:track:6zW9AITRbwNwvSt293g2z8",
     "name": "Le jerk",
     "duration_ms": 235666,
+    "popularity": 1,
     "album": {
       "id": "5z3xsBn9ATJ8PjSLVPp1tm",
       "uri": "spotify:album:5z3xsBn9ATJ8PjSLVPp1tm",
@@ -136,6 +139,7 @@
     "uri": "spotify:track:3xPNasHy69FFGxyxYApJPS",
     "name": "Laisse moi t'aimer",
     "duration_ms": 203093,
+    "popularity": 50,
     "album": {
       "id": "45feqbqIXi45boCrjlo0cV",
       "uri": "spotify:album:45feqbqIXi45boCrjlo0cV",
@@ -180,6 +184,7 @@
     "uri": "spotify:track:6aUBM9VhcKKgNbZhUTXAdN",
     "name": "Isabelle a les yeux bleux",
     "duration_ms": 184826,
+    "popularity": 28,
     "album": {
       "id": "2Qr2ggacy3vRRSg6unVFqk",
       "uri": "spotify:album:2Qr2ggacy3vRRSg6unVFqk",
@@ -224,6 +229,7 @@
     "uri": "spotify:track:2ICdvchXmDh5mdLyyL2opB",
     "name": "Basique",
     "duration_ms": 163986,
+    "popularity": 59,
     "album": {
       "id": "04mHlwou1RaPDo8SigFfKf",
       "uri": "spotify:album:04mHlwou1RaPDo8SigFfKf",
@@ -268,6 +274,7 @@
     "uri": "spotify:track:4UVDKEPTgMQXv9UlIqVTcA",
     "name": "Pour Le Pire",
     "duration_ms": 214400,
+    "popularity": 57,
     "album": {
       "id": "17UiqpQyl8T8vVxz2Towjy",
       "uri": "spotify:album:17UiqpQyl8T8vVxz2Towjy",
@@ -312,6 +319,7 @@
     "uri": "spotify:track:64gCM9yZv2jpNflclKUnXu",
     "name": "La tribu de Dana",
     "duration_ms": 287240,
+    "popularity": 63,
     "album": {
       "id": "1i7e6Cu4N6zhbhvJ4lNw6G",
       "uri": "spotify:album:1i7e6Cu4N6zhbhvJ4lNw6G",
@@ -356,6 +364,7 @@
     "uri": "spotify:track:2Wd4Yu2RtYZjSmzLLaghNZ",
     "name": "Le téléphone pleure",
     "duration_ms": 239933,
+    "popularity": 44,
     "album": {
       "id": "6ee87DJAkjCghFeSVSCnx5",
       "uri": "spotify:album:6ee87DJAkjCghFeSVSCnx5",
@@ -405,6 +414,7 @@
     "uri": "spotify:track:0MRYsngZv8UGICDehOYuYJ",
     "name": "Do You Love Me",
     "duration_ms": 174195,
+    "popularity": 46,
     "album": {
       "id": "4HuyjUy5tgr9Q725kUkKrv",
       "uri": "spotify:album:4HuyjUy5tgr9Q725kUkKrv",
@@ -449,6 +459,7 @@
     "uri": "spotify:track:47BBI51FKFwOMlIiX6m8ya",
     "name": "I Want It That Way",
     "duration_ms": 213306,
+    "popularity": 83,
     "album": {
       "id": "5ySxm9hxBNss01WCL7GLyQ",
       "uri": "spotify:album:5ySxm9hxBNss01WCL7GLyQ",
@@ -493,6 +504,7 @@
     "uri": "spotify:track:0S4dVpqBLnBFj4wdB4UDMd",
     "name": "Partenaire Particulier",
     "duration_ms": 246440,
+    "popularity": 65,
     "album": {
       "id": "4cQIJjzFnwSFIQjz3MFkol",
       "uri": "spotify:album:4cQIJjzFnwSFIQjz3MFkol",
@@ -537,6 +549,7 @@
     "uri": "spotify:track:4cOdK2wGLETKBW3PvgPWqT",
     "name": "Never Gonna Give You Up",
     "duration_ms": 213573,
+    "popularity": 81,
     "album": {
       "id": "5Z9iiGl2FcIfa3BMiv6OIw",
       "uri": "spotify:album:5Z9iiGl2FcIfa3BMiv6OIw",
@@ -581,6 +594,7 @@
     "uri": "spotify:track:5ZBeML7Lf3FMEVviTyvi8l",
     "name": "Twist And Shout - Remastered 2009",
     "duration_ms": 155226,
+    "popularity": 78,
     "album": {
       "id": "3KzAvEXcqJKBF97HrXwlgf",
       "uri": "spotify:album:3KzAvEXcqJKBF97HrXwlgf",
@@ -625,6 +639,7 @@
     "uri": "spotify:track:00meczE1jpLTX0BBzIGrAR",
     "name": "Big Girls Don't Cry",
     "duration_ms": 148013,
+    "popularity": 63,
     "album": {
       "id": "18rFAAWrT2wzvWckYmoLnE",
       "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
@@ -669,6 +684,7 @@
     "uri": "spotify:track:5ZrDlcxIDZyjOzHdYW1ydr",
     "name": "Barbie Girl",
     "duration_ms": 197960,
+    "popularity": 81,
     "album": {
       "id": "3hHmYc6mrl6NkmRW1ZwYvm",
       "uri": "spotify:album:3hHmYc6mrl6NkmRW1ZwYvm",
@@ -713,6 +729,7 @@
     "uri": "spotify:track:7iXF2W9vKmDoGAhlHdpyIa",
     "name": "Forgot About Dre",
     "duration_ms": 222293,
+    "popularity": 81,
     "album": {
       "id": "7q2B4M5EiBkqrlsNW8lB7N",
       "uri": "spotify:album:7q2B4M5EiBkqrlsNW8lB7N",
@@ -762,6 +779,7 @@
     "uri": "spotify:track:5WN9rvrv8Sxt9WzNaGXa31",
     "name": "Les Démons De Minuit",
     "duration_ms": 231408,
+    "popularity": 49,
     "album": {
       "id": "65cIV3m5T5U4mRtwFYWZRP",
       "uri": "spotify:album:65cIV3m5T5U4mRtwFYWZRP",
@@ -806,6 +824,7 @@
     "uri": "spotify:track:1vBXixLz7cVLLTdR4Xe8aL",
     "name": "Nuit de folie",
     "duration_ms": 254960,
+    "popularity": 56,
     "album": {
       "id": "7vQX4wnzkplVHuTClsB034",
       "uri": "spotify:album:7vQX4wnzkplVHuTClsB034",
@@ -850,6 +869,7 @@
     "uri": "spotify:track:3u5N55tHf7hXATSQrjBh2q",
     "name": "Freed From Desire",
     "duration_ms": 213394,
+    "popularity": 81,
     "album": {
       "id": "3vcwGUl0WiJVssOR1dXEbe",
       "uri": "spotify:album:3vcwGUl0WiJVssOR1dXEbe",
@@ -894,6 +914,7 @@
     "uri": "spotify:track:3Bm0nNhVCTVZ285r6lg4NJ",
     "name": "À ma place - Radio Edit",
     "duration_ms": 263026,
+    "popularity": 22,
     "album": {
       "id": "2V35cFfGuCGeY4Hktlab3D",
       "uri": "spotify:album:2V35cFfGuCGeY4Hktlab3D",
@@ -943,6 +964,7 @@
     "uri": "spotify:track:7iAqvWLgZzXvH38lA06QZg",
     "name": "I Want To Break Free",
     "duration_ms": 223080,
+    "popularity": 72,
     "album": {
       "id": "6i6folBtxKV28WX3msQ4FE",
       "uri": "spotify:album:6i6folBtxKV28WX3msQ4FE",
@@ -987,6 +1009,7 @@
     "uri": "spotify:track:43THPstJP6RXLMd7ryXyNf",
     "name": "Marcia Baïla",
     "duration_ms": 335746,
+    "popularity": 58,
     "album": {
       "id": "6QAwEZobDncmTn1wgu7J3k",
       "uri": "spotify:album:6QAwEZobDncmTn1wgu7J3k",
@@ -1031,6 +1054,7 @@
     "uri": "spotify:track:3yOaL1e5FtOjUU7FAJjKpG",
     "name": "Ça c'est vraiment toi - Remasterisé en 2006",
     "duration_ms": 268480,
+    "popularity": 50,
     "album": {
       "id": "3Fep1OihcXjxJJIfAOhPob",
       "uri": "spotify:album:3Fep1OihcXjxJJIfAOhPob",
@@ -1075,6 +1099,7 @@
     "uri": "spotify:track:2YrrqkKoOZJuJNEfDc3CP2",
     "name": "J'ai encore rêvé d'elle",
     "duration_ms": 220586,
+    "popularity": 48,
     "album": {
       "id": "6XctQR3X9ezhRFtR3fVCXQ",
       "uri": "spotify:album:6XctQR3X9ezhRFtR3fVCXQ",
@@ -1119,6 +1144,7 @@
     "uri": "spotify:track:5BMwpS4iYKR30kq9U9beaT",
     "name": "City Of Stars",
     "duration_ms": 111240,
+    "popularity": 66,
     "album": {
       "id": "3GU8BzFEAdFSRjc8jZkL3S",
       "uri": "spotify:album:3GU8BzFEAdFSRjc8jZkL3S",
@@ -1173,6 +1199,7 @@
     "uri": "spotify:track:1ZPlNanZsJSPK5h9YZZFbZ",
     "name": "Like a Virgin",
     "duration_ms": 218626,
+    "popularity": 73,
     "album": {
       "id": "2IU9ftOgyRL2caQGWK1jjX",
       "uri": "spotify:album:2IU9ftOgyRL2caQGWK1jjX",
@@ -1217,6 +1244,7 @@
     "uri": "spotify:track:6J6RWKCPN5RFKHUKEUFjxS",
     "name": "Step by Step",
     "duration_ms": 267293,
+    "popularity": 62,
     "album": {
       "id": "4dCdnfD0shXGuHtyTOtx8q",
       "uri": "spotify:album:4dCdnfD0shXGuHtyTOtx8q",
@@ -1261,6 +1289,7 @@
     "uri": "spotify:track:7MFWYTlrC81IGpb0Jwgdu7",
     "name": "On va s'aimer",
     "duration_ms": 246826,
+    "popularity": 61,
     "album": {
       "id": "7Jsx6b2L9AshOKrTFkrNQu",
       "uri": "spotify:album:7Jsx6b2L9AshOKrTFkrNQu",
@@ -1305,6 +1334,7 @@
     "uri": "spotify:track:0qAtbrY5DNGHtAl1L0CQzS",
     "name": "Milord",
     "duration_ms": 270440,
+    "popularity": 41,
     "album": {
       "id": "2k3nz0I7mJzegtkooii4za",
       "uri": "spotify:album:2k3nz0I7mJzegtkooii4za",

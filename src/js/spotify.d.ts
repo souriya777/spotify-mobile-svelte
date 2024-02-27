@@ -1,3 +1,5 @@
+import type DISCOGRAPHY_TYPE from '@js/DISCOGRAPHY_TYPE';
+
 export type SpotifySong = {
   track: SpotifyTrack;
   context: SpotifyContext;
@@ -9,18 +11,19 @@ export type SpotifyTrack = {
   uri: string;
   name: string;
   duration_ms: number;
+  popularity: number;
   album: SpotifyAlbum;
   artists: SpotifyArtist[];
 };
 
 export type SpotifyAlbum = {
-  id?: string;
+  id: string;
   uri: string;
   name: string;
   release_date: string;
   album_type: string;
   images: SpotifyImage[];
-  artists?: SpotifyArtist[];
+  artists: SpotifyArtist[];
 };
 
 export type SpotifyAlbumTrack = {
@@ -41,6 +44,7 @@ export type SpotifyArtist = {
   id: string;
   name: string;
   uri: string;
+  images: SpotifyImage[];
 };
 
 export type SpotifyPlaylist = {
@@ -105,7 +109,7 @@ export interface SpotifyPlaylistCursor extends Cursor {
 }
 
 export interface SpotifyArtistCursor extends Cursor {
-  items: SpotifySearchArtist[];
+  items: SpotifyArtist[];
 }
 
 export type SpotifyAlbumItemCursor = {
@@ -175,11 +179,18 @@ export type SpotifyPlayerMetadataItem = {
 
 export type SpotifySearch = {
   albums: SpotifyAlbum[];
-  artists: SpotifySearchArtist[];
+  artists: SpotifyArtist[];
   playlists: SpotifyPlaylist[];
   tracks: SpotifyTrack[];
 };
 
-export interface SpotifySearchArtist extends SpotifyArtist {
-  images: SpotifyImage[];
-}
+export type SpotifyDiscography = {
+  albums: SpotifyAlbum[];
+  singles: SpotifyAlbum[];
+  compilations: SpotifyAlbum[];
+};
+
+export type SpotifyDiscographyType = {
+  type: string;
+  items: SpotifyAlbum[];
+};

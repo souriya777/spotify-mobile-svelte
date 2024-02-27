@@ -4,6 +4,7 @@
     "uri": "spotify:track:42VUw4BNwMDV8UvmhmaDUP",
     "name": "La bohème",
     "duration_ms": 212124,
+    "popularity": 42,
     "album": {
       "id": "2ZXfseyFf7ybI97jaxciPn",
       "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
@@ -49,6 +50,7 @@
       "uri": "spotify:track:6htdm2zhPzphFnHWQVQBJd",
       "name": "Le Coup de Soleil",
       "duration_ms": 225500,
+      "popularity": 39,
       "album": {
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
@@ -93,6 +95,7 @@
       "uri": "spotify:track:45CCySE3zyd4CXMYQE7ICw",
       "name": "La vie en rose",
       "duration_ms": 175875,
+      "popularity": 36,
       "album": {
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
@@ -137,6 +140,7 @@
       "uri": "spotify:track:6ioe6K8aDV0A65qz6Huzs2",
       "name": "Bella Ciao",
       "duration_ms": 171340,
+      "popularity": 35,
       "album": {
         "id": "1k8zteiBvZDtW1BlnXPVZ8",
         "uri": "spotify:album:1k8zteiBvZDtW1BlnXPVZ8",
@@ -181,6 +185,7 @@
       "uri": "spotify:track:2HOkyI0Gtw7UPPgcCKPaGo",
       "name": "Despacito",
       "duration_ms": 220846,
+      "popularity": 32,
       "album": {
         "id": "0DunPxU8C8FXeHpEKBIzts",
         "uri": "spotify:album:0DunPxU8C8FXeHpEKBIzts",
@@ -225,6 +230,7 @@
       "uri": "spotify:track:3Arm3BlSs9GAAMHSWZCIdd",
       "name": "Tous les garçons et les filles",
       "duration_ms": 180875,
+      "popularity": 29,
       "album": {
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
@@ -269,6 +275,7 @@
       "uri": "spotify:track:0HkKfLlhuQrtGXofsoF0qu",
       "name": "Mistral Gagnant",
       "duration_ms": 194875,
+      "popularity": 29,
       "album": {
         "id": "7sKaU8XdMB2DqUtkd6Li67",
         "uri": "spotify:album:7sKaU8XdMB2DqUtkd6Li67",
@@ -313,6 +320,7 @@
       "uri": "spotify:track:1IMqGGJRazA5aYRT3Y02K9",
       "name": "Sympathique",
       "duration_ms": 160488,
+      "popularity": 27,
       "album": {
         "id": "2ZXfseyFf7ybI97jaxciPn",
         "uri": "spotify:album:2ZXfseyFf7ybI97jaxciPn",
@@ -357,6 +365,7 @@
       "uri": "spotify:track:4PtAtIm8JeOdLG61Bwy96A",
       "name": "Voyage voyage",
       "duration_ms": 211094,
+      "popularity": 21,
       "album": {
         "id": "3ol1OlBfANygZVAzfXrf4t",
         "uri": "spotify:album:3ol1OlBfANygZVAzfXrf4t",
@@ -401,6 +410,7 @@
       "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
       "name": "Je te laisserai des mots",
       "duration_ms": 156144,
+      "popularity": 21,
       "album": {
         "id": "2T65seryc9hVIYicQVF1Ph",
         "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",
@@ -445,6 +455,7 @@
       "uri": "spotify:track:1Qt7qKMFqnuHPDXHNcEHzB",
       "name": "Je te laisserai des mots",
       "duration_ms": 156144,
+      "popularity": 21,
       "album": {
         "id": "2T65seryc9hVIYicQVF1Ph",
         "uri": "spotify:album:2T65seryc9hVIYicQVF1Ph",

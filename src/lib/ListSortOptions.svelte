@@ -2,8 +2,6 @@
   import { listSortOptionsFull, listSortType, displayFilterMyLib } from '@js/store';
   import { onTap } from '@js/event-utils';
   import {
-    LIST_SORT_OPTIONS_MAP,
-    LIST_SORT_TYPE,
     sortPlaylistsBySpotify,
     sortPlaylistsAlphabetically,
     sortPlaylistsByCreator,
@@ -15,6 +13,8 @@
     sortMyLibBySpotify,
     sortMyLibAlphabetically,
   } from '@js/list-sort-utils';
+  import LIST_SORT_OPTIONS_MAP from '@js/LIST_SORT_OPTIONS_MAP';
+  import LIST_SORT_TYPE from '@js/LIST_SORT_TYPE';
   import Svg from '@lib/svg/Svg.svelte';
 
   const SVG_SIZE = 16;

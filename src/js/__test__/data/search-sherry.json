@@ -1560,6 +1560,7 @@
       "uri": "spotify:track:0xtN05SZDvg943I3x08KT7",
       "name": "Sherry",
       "duration_ms": 126613,
+      "popularity": 29,
       "album": {
         "id": "7oWx4auBp2kCb54VkRCCUq",
         "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
@@ -1604,6 +1605,7 @@
       "uri": "spotify:track:68iChBWE5tZb95QGOcMKtF",
       "name": "Sherry",
       "duration_ms": 157386,
+      "popularity": 1,
       "album": {
         "id": "2Ozhdbo5v89ZdgCHlmF2fR",
         "uri": "spotify:album:2Ozhdbo5v89ZdgCHlmF2fR",
@@ -1648,6 +1650,7 @@
       "uri": "spotify:track:7sqK6f8dHVx3Q1GjFrVyGl",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 64,
       "album": {
         "id": "18rFAAWrT2wzvWckYmoLnE",
         "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
@@ -1692,6 +1695,7 @@
       "uri": "spotify:track:0NpvdCO506uO58D4AbKzki",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 55,
       "album": {
         "id": "0NUEQILaBzavnzcMEs4buZ",
         "uri": "spotify:album:0NUEQILaBzavnzcMEs4buZ",
@@ -1736,6 +1740,7 @@
       "uri": "spotify:track:11r0OH8zYLcBlryvnAiykT",
       "name": "Sherry",
       "duration_ms": 134506,
+      "popularity": 47,
       "album": {
         "id": "5sCVURwZOOd13unG0uJmNX",
         "uri": "spotify:album:5sCVURwZOOd13unG0uJmNX",
@@ -1780,6 +1785,7 @@
       "uri": "spotify:track:3asQPoVfuofjPhqPtq3KDp",
       "name": "Sherry",
       "duration_ms": 152453,
+      "popularity": 27,
       "album": {
         "id": "5f7Ux7Gh4kcYnD6Iv3y685",
         "uri": "spotify:album:5f7Ux7Gh4kcYnD6Iv3y685",
@@ -1824,6 +1830,7 @@
       "uri": "spotify:track:2aEuA8PSqLa17Y4hKPj5rr",
       "name": "Cheri Cheri Lady",
       "duration_ms": 226333,
+      "popularity": 83,
       "album": {
         "id": "1JDlLoZugxdneiaTnGyaKr",
         "uri": "spotify:album:1JDlLoZugxdneiaTnGyaKr",
@@ -1868,6 +1875,7 @@
       "uri": "spotify:track:65y3zbw2h5jwh5qg3c7dAL",
       "name": "Sherry",
       "duration_ms": 151133,
+      "popularity": 34,
       "album": {
         "id": "5C695UOQoQfAoPSnXT479i",
         "uri": "spotify:album:5C695UOQoQfAoPSnXT479i",
@@ -1912,6 +1920,7 @@
       "uri": "spotify:track:0lfPPoWG4b3OmhieJ2YDF0",
       "name": "If It Makes You Happy",
       "duration_ms": 324840,
+      "popularity": 67,
       "album": {
         "id": "3FiplT4vIgWCRwLZSn0EDd",
         "uri": "spotify:album:3FiplT4vIgWCRwLZSn0EDd",
@@ -1956,6 +1965,7 @@
       "uri": "spotify:track:5pHVEIn2RwZQn38qIfB3Rz",
       "name": "Cheri Cheri Lady",
       "duration_ms": 227653,
+      "popularity": 62,
       "album": {
         "id": "15JQStE0eqKcRp2tYzDoRD",
         "uri": "spotify:album:15JQStE0eqKcRp2tYzDoRD",
@@ -2000,6 +2010,7 @@
       "uri": "spotify:track:5JgS0FY22HtNpFAJTo507k",
       "name": "Sherry Darling",
       "duration_ms": 243173,
+      "popularity": 50,
       "album": {
         "id": "6YNIEeDWqC09YIWzhoSVLg",
         "uri": "spotify:album:6YNIEeDWqC09YIWzhoSVLg",
@@ -2044,6 +2055,7 @@
       "uri": "spotify:track:3lecU0DYwF4UFACRcCTHCf",
       "name": "Sherry Baby",
       "duration_ms": 147456,
+      "popularity": 16,
       "album": {
         "id": "5bwB9loE0pPLoQ2rU9Pt1x",
         "uri": "spotify:album:5bwB9loE0pPLoQ2rU9Pt1x",
@@ -2088,6 +2100,7 @@
       "uri": "spotify:track:2dhwZ8n7OCodPQUJ5fT0ex",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 46,
       "album": {
         "id": "3y2gHDcfKpQG21SutK6ErH",
         "uri": "spotify:album:3y2gHDcfKpQG21SutK6ErH",
@@ -2132,6 +2145,7 @@
       "uri": "spotify:track:5KACKGdD8LATLXaFitTbLS",
       "name": "Sherry Darling - Live at Madison Square Garden, New York, NY - 09/22/79",
       "duration_ms": 371880,
+      "popularity": 32,
       "album": {
         "id": "00V1MSXp0ral9K394aItww",
         "uri": "spotify:album:00V1MSXp0ral9K394aItww",
@@ -2176,6 +2190,7 @@
       "uri": "spotify:track:2mYHCkPg6kvBCRQPdK0QPo",
       "name": "Sherry Fraser",
       "duration_ms": 170573,
+      "popularity": 44,
       "album": {
         "id": "5dR0fhE3oveLRSUMMQ3oRB",
         "uri": "spotify:album:5dR0fhE3oveLRSUMMQ3oRB",
@@ -2220,6 +2235,7 @@
       "uri": "spotify:track:4ttAuOlD9dPKZD4aWduYa1",
       "name": "Sherry",
       "duration_ms": 206564,
+      "popularity": 4,
       "album": {
         "id": "6IrxWgwoDx7snmUlpxOKny",
         "uri": "spotify:album:6IrxWgwoDx7snmUlpxOKny",
@@ -2264,6 +2280,7 @@
       "uri": "spotify:track:3ZpQiJ78LKINrW9SQTgbXd",
       "name": "All I Wanna Do",
       "duration_ms": 272106,
+      "popularity": 75,
       "album": {
         "id": "7dC6axVAeBDpRMmNtRbpwU",
         "uri": "spotify:album:7dC6axVAeBDpRMmNtRbpwU",
@@ -2308,6 +2325,7 @@
       "uri": "spotify:track:6qlGdLKLBFIh6LZjnWb2Dq",
       "name": "Sherry Mi-Saï",
       "duration_ms": 214842,
+      "popularity": 35,
       "album": {
         "id": "0o7budYWrQllVgvRr5GGC0",
         "uri": "spotify:album:0o7budYWrQllVgvRr5GGC0",
@@ -2352,6 +2370,7 @@
       "uri": "spotify:track:2pu3FDtVe5R03xt6v8sdQY",
       "name": "Like A Cuddly Koala",
       "duration_ms": 105602,
+      "popularity": 58,
       "album": {
         "id": "2msMQl2f7f8Qz1s4XmCMyU",
         "uri": "spotify:album:2msMQl2f7f8Qz1s4XmCMyU",
@@ -2396,6 +2415,7 @@
       "uri": "spotify:track:3BP8NM3UsTTtCP85BpzW4S",
       "name": "The Lonely Turtle",
       "duration_ms": 128000,
+      "popularity": 58,
       "album": {
         "id": "3o23FSpxNHKSC4sfxhucJp",
         "uri": "spotify:album:3o23FSpxNHKSC4sfxhucJp",

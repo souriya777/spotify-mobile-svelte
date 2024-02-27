@@ -1,0 +1,66 @@
+[
+  {
+    "id": "64LU4c1nfjz1t4VnGhagcg",
+    "uri": "spotify:album:64LU4c1nfjz1t4VnGhagcg",
+    "name": "1989 (Taylor's Version)",
+    "release_date": "2023-10-26",
+    "album_type": "album",
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273904445d70d04eb24d6bb79ac",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02904445d70d04eb24d6bb79ac",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851904445d70d04eb24d6bb79ac",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-28T23:22:25.000Z"
+  },
+  {
+    "id": "3s1uBurAzg61IQYXRc3B3h",
+    "uri": "spotify:album:3s1uBurAzg61IQYXRc3B3h",
+    "name": "folklore: the saltbox house chapter",
+    "release_date": "2020-08-27",
+    "album_type": "compilation",
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d0000b273e83db93e7001dc684da96128",
+        "height": 640,
+        "width": 640
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02e83db93e7001dc684da96128",
+        "height": 300,
+        "width": 300
+      },
+      {
+        "url": "https://i.scdn.co/image/ab67616d00004851e83db93e7001dc684da96128",
+        "height": 64,
+        "width": 64
+      }
+    ],
+    "added_at": "2024-02-28T19:17:44.000Z"
+  }
+]

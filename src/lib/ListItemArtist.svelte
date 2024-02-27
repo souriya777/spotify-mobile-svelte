@@ -4,7 +4,7 @@
   import { goDetail } from '@js/view-utils';
   import ListItem from '@lib/ListItem.svelte';
 
-  /** @type {import('@js/spotify').SpotifySearchArtist} */
+  /** @type {import('@js/spotify').SpotifyArtist} */
   export let item;
   export let hasPrefix = false;
   export let hasClear = false;

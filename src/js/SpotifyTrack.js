@@ -10,6 +10,7 @@ class SpotifyTrack {
     this.uri = fromApi?.uri;
     this.name = fromApi?.name;
     this.duration_ms = fromApi?.duration_ms;
+    this.popularity = fromApi.popularity;
     this.album = new SpotifyAlbum(fromApi?.album);
     this.artists = fromApi?.artists?.map((item) => new SpotifyArtist(item));
   }

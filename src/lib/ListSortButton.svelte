@@ -2,7 +2,7 @@
   import { listSortOptionsFull, listSortType } from '@js/store';
   import { onTap } from '@js/event-utils';
   import ArrowDownUpSvg from '@lib/svg/ArrowDownUpSvg.svelte';
-  import { LIST_SORT_OPTIONS_MAP } from '@js/list-sort-utils';
+  import LIST_SORT_OPTIONS_MAP from '@js/LIST_SORT_OPTIONS_MAP';
 
   $: label = LIST_SORT_OPTIONS_MAP.get($listSortType)?.label;
 </script>

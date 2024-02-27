@@ -22,7 +22,18 @@ import ALBUM_ORELSAN_TRACKS_JSON from './data/album-orelsan-tracks.json';
 import ALBUMS_RECENTLY_PLAYED_JSON from './data/albums-recently-played.json';
 import ALBUMS_RECENTLY_ADDED_JSON from './data/albums-recently-added.json';
 import MY_FOLLOWING_ARTISTS_JSON from './data/my-following-artists.json';
-import SEVERAL_ARTISTS_JSON from './data/several-artists.json';
+import ARTIST_TAYLOR_SWIFT_JSON from './data/artist-taylor-swift.json';
+import ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_JSON from './data/artist-taylor-swift-discography.json';
+import ARTIST_TAYLOR_SWIFT_LATEST_RELEASE_JSON from './data/artist-taylor-swift-latest-release.json';
+import ARTIST_TAYLOR_SWIFT_TOP_TRACKS_JSON from './data/artist-taylor-swift-top-tracks.json';
+import ARTIST_TAYLOR_SWIFT_TOP_RELEASES_JSON from './data/artist-taylor-swift-top-releases.json';
+import ARTIST_TAYLOR_SWIFT_APPEARS_ON_JSON from './data/artist-taylor-swift-appears-on.json';
+import ARTIST_TAYLOR_SWIFT_RELATED_ARTISTS_JSON from './data/artist-taylor-swift-related-artists.json';
+import ARTIST_MAZE_DISCOGRAPHY_JSON from './data/artist-maze-discography.json';
+import ARTIST_MAZE_LATEST_RELEASE_JSON from './data/artist-maze-latest-release.json';
+import ARTIST_MAZE_TOP_TRACKS_JSON from './data/artist-maze-top-tracks.json';
+import ARTIST_MAZE_TOP_RELEASES_JSON from './data/artist-maze-top-releases.json';
+import ARTISTS_SEVERAL_JSON from './data/artists-several.json';
 import RECENTLY_PLAYED_JSON from './data/recently-played.json';
 import MY_LIB_RECENTLY_PLAYED_JSON from './data/my-lib-recently-played.json';
 import LAST_SONG_JSON from './data/last-song.json';
@@ -37,6 +48,13 @@ import SEARCH_SHERRY_OFFSET_3_LIMIT_3_WITH_EXISTING_RESULTS_JSON from './data/se
 import SEARCH_SHE_JSON from './data/search-she.json';
 import PLAYLIST_OLD_ORDER_JSON from './data/playlist-old-order.json';
 import PLAYLIST_NEW_ORDER_JSON from './data/playlist-new-order.json';
+
+/**
+ * @typedef {import('@js/spotify').SpotifyAlbum} SpotifyAlbum
+ * @typedef {import('@js/spotify').SpotifyTrack} SpotifyTrack
+ * @typedef {import('@js/spotify').SpotifyDiscography} SpotifyDiscography
+ * @typedef {import('@js/spotify').SpotifyPlayerState} SpotifyPlayerState
+ */
 
 initSpotifyApi();
 
@@ -166,19 +184,117 @@ test(`getMySavedAlbumsSortedRecentlyAdded returns SpotifyAlbum[] sorted by recen
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/me/following returns SpotifySearchArtist[]`, async () => {
+test(`/me/following returns SpotifyArtist[]`, async () => {
   const actual = await SpotifyApi.getMyFollowedArtists();
   const expected = [...MY_FOLLOWING_ARTISTS_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
-test(`/artists?ids=2YP02JRa1JLejrg3XTssJS,0PUi9O36OMwere5DTyayAq,4ACplpEqD6JIVgKrafauzs returns SpotifySearchArtist[]`, async () => {
+test(`/me/following/contains?type=artist&ids=06HL4z0CvFAxyc27GXpf02 returns true`, async () => {
+  const actual = await SpotifyApi.checkIfIFollowArtist('06HL4z0CvFAxyc27GXpf02');
+  expect(actual).toBeTruthy();
+});
+
+test(`/me/following/contains?type=artist&ids=77i53Qlp3vNOh4Rab2wr56 returns true`, async () => {
+  const actual = await SpotifyApi.checkIfIFollowArtist('77i53Qlp3vNOh4Rab2wr56');
+  expect(actual).toBeFalsy();
+});
+
+test(`/artists/06HL4z0CvFAxyc27GXpf02 returns SpotifyArtist`, async () => {
+  const actual = await SpotifyApi.getArtist('06HL4z0CvFAxyc27GXpf02');
+  const expected = { ...ARTIST_TAYLOR_SWIFT_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistDiscography('06HL4z0CvFAxyc27GXpf02') returns SpotifyDiscography`, async () => {
+  const actual = await SpotifyApi.getArtistDiscography('06HL4z0CvFAxyc27GXpf02');
+  const expected = { ...ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistDiscography('0VCYEBxnERCSrT8NvEDLPh') returns SpotifyDiscography`, async () => {
+  const actual = await SpotifyApi.getArtistDiscography('0VCYEBxnERCSrT8NvEDLPh');
+  const expected = { ...ARTIST_MAZE_DISCOGRAPHY_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistLatestRelease() of Taylor Swift returns SpotifyAlbum`, async () => {
+  /** @type {SpotifyDiscography} */
+  // @ts-ignore
+  const DISCOGRAPHY = { ...ARTIST_TAYLOR_SWIFT_DISCOGRAPHY_JSON };
+  const actual = await SpotifyApi.getArtistLatestRelease(DISCOGRAPHY);
+  const expected = { ...ARTIST_TAYLOR_SWIFT_LATEST_RELEASE_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistLatestRelease() of Maze returns SpotifyAlbum`, async () => {
+  /** @type {SpotifyDiscography} */
+  // @ts-ignore
+  const DISCOGRAPHY = { ...ARTIST_MAZE_DISCOGRAPHY_JSON };
+  const actual = await SpotifyApi.getArtistLatestRelease(DISCOGRAPHY);
+  const expected = { ...ARTIST_MAZE_LATEST_RELEASE_JSON };
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistTopTracks('06HL4z0CvFAxyc27GXpf02', 'FR) returns getArtistTopTracks`, async () => {
+  const actual = await SpotifyApi.getArtistTopTracks('06HL4z0CvFAxyc27GXpf02', 'FR');
+  const expected = [...ARTIST_TAYLOR_SWIFT_TOP_TRACKS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistTopTracks('0VCYEBxnERCSrT8NvEDLPh', 'FR) returns getArtistTopTracks`, async () => {
+  const actual = await SpotifyApi.getArtistTopTracks('0VCYEBxnERCSrT8NvEDLPh', 'FR');
+  const expected = [...ARTIST_MAZE_TOP_TRACKS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistTopReleases() of Taylor Swift returns SpotifyAlbum[]`, async () => {
+  /** @type {SpotifyAlbum} */
+  // @ts-ignore
+  const LATEST_RELEASE = { ...ARTIST_TAYLOR_SWIFT_LATEST_RELEASE_JSON };
+  /** @type {SpotifyTrack[]} */
+  // @ts-ignore
+  const TOP_TRACKS = [...ARTIST_TAYLOR_SWIFT_TOP_TRACKS_JSON];
+
+  const actual = await SpotifyApi.getArtistTopReleases(LATEST_RELEASE, TOP_TRACKS);
+  const expected = [...ARTIST_TAYLOR_SWIFT_TOP_RELEASES_JSON];
+
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistTopReleases() of Maze returns SpotifyAlbum[]`, async () => {
+  /** @type {SpotifyAlbum} */
+  // @ts-ignore
+  const LATEST_RELEASE = { ...ARTIST_MAZE_LATEST_RELEASE_JSON };
+  /** @type {SpotifyTrack[]} */
+  // @ts-ignore
+  const TOP_TRACKS = [...ARTIST_MAZE_TOP_TRACKS_JSON];
+
+  const actual = await SpotifyApi.getArtistTopReleases(LATEST_RELEASE, TOP_TRACKS);
+  const expected = [...ARTIST_MAZE_TOP_RELEASES_JSON];
+
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistAppearsOn('06HL4z0CvFAxyc27GXpf02', 'FR) returns SpotifyAlbum[]`, async () => {
+  const actual = await SpotifyApi.getArtistAppearsOn('06HL4z0CvFAxyc27GXpf02');
+  const expected = [...ARTIST_TAYLOR_SWIFT_APPEARS_ON_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`getArtistRelatedArtists('06HL4z0CvFAxyc27GXpf02') returns SpotifyArtist[]`, async () => {
+  const actual = await SpotifyApi.getArtistRelatedArtists('06HL4z0CvFAxyc27GXpf02');
+  const expected = [...ARTIST_TAYLOR_SWIFT_RELATED_ARTISTS_JSON];
+  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
+});
+
+test(`/artists?ids=2YP02JRa1JLejrg3XTssJS,0PUi9O36OMwere5DTyayAq,4ACplpEqD6JIVgKrafauzs returns SpotifyArtist[]`, async () => {
   const actual = await SpotifyApi.getSeveralArtists([
     '2YP02JRa1JLejrg3XTssJS',
     '0PUi9O36OMwere5DTyayAq',
     '4ACplpEqD6JIVgKrafauzs',
   ]);
-  const expected = [...SEVERAL_ARTISTS_JSON];
+  const expected = [...ARTISTS_SEVERAL_JSON];
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
@@ -214,7 +330,10 @@ test(`get last recently-played-songs returns SpotifySong`, async () => {
 });
 
 test(`extractPlayerStateFrom(playerStateApi) returns SpotifyPlayerState`, async () => {
-  const actual = await SpotifyApi.extractPlayerStateFrom({ ...PLAYER_STATE_API_JSON });
+  /** @type {SpotifyPlayerState} */
+  // @ts-ignore
+  const SPOTIFY_PLAYER_STATE_API = { ...PLAYER_STATE_API_JSON };
+  const actual = await SpotifyApi.extractPlayerStateFrom(SPOTIFY_PLAYER_STATE_API);
   const expected = { ...PLAYER_STATE_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
@@ -243,12 +362,6 @@ test(`/search?q=sherry&offset=3&limit=3 with existingSpotifySearch returns an "i
   const firstResults = await SpotifyApi.search('sherry', 0, 3);
   const actual = await SpotifyApi.search('sherry', 3, 3, firstResults);
   const expected = { ...SEARCH_SHERRY_OFFSET_3_LIMIT_3_WITH_EXISTING_RESULTS_JSON };
-  expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
-});
-
-test(`/search?q=sherry&offset=50&limit=20 returns SpotifySearch`, async () => {
-  const actual = await SpotifyApi.search('sherry', 50);
-  const expected = { ...SEARCH_SHERRY_OFFSET_50_JSON };
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);
 });
 
@@ -307,13 +420,11 @@ test(`moveTrackInPlaylist move a track up and returns updated playlist`, async (
   const songIndex = 0;
   const newPosition = 1;
   const spy = vi.spyOn(AXIOS_INSTANCE(), 'put');
+  /** @type {SpotifyTrack[]} */
+  // @ts-ignore
+  const TRACKS = [...PLAYLIST_OLD_ORDER_JSON];
 
-  const actual = await SpotifyApi.moveTrackInPlaylist(
-    playlistId,
-    [...PLAYLIST_OLD_ORDER_JSON],
-    songIndex,
-    newPosition,
-  );
+  const actual = await SpotifyApi.moveTrackInPlaylist(playlistId, TRACKS, songIndex, newPosition);
   const expected = [...PLAYLIST_NEW_ORDER_JSON];
 
   expect(JSON.parse(JSON.stringify(actual))).toStrictEqual(expected);

@@ -34,7 +34,7 @@ import SpotifyPlaybackState from '@js/SpotifyPlaybackState';
 import SpotifyQueue from '@js/SpotifyQueue';
 import SpotifyTrack from '@js/SpotifyTrack';
 import QueueEmptyError from '@js/QueueEmptyError';
-import SpotifyStatus from '@js/SpotifyStatus';
+import API_STATUS from '@js/API_STATUS';
 import SpotifyDeviceList from '@js/SpotifyDeviceList';
 import SpotifyPlayerState from '@js/SpotifyPlayerState';
 import SpotifyPlaybackStateAdapter from '@js/SpotifyPlaybackStateAdapter';
@@ -57,9 +57,15 @@ import {
   sortPlayListByCreatorReverse,
   sortAlbumtByCreatorReverse,
   sortAlbumtByCreator,
+  findArtistLikedTracks,
+  findArtistLikedReleases,
 } from '@js/spotify-utils';
 import SpotifyAlbum from '@js/SpotifyAlbum';
-import SpotifySearchArtist from '@js/SpotifySearchArtist';
+import SpotifyArtist from '@js/SpotifyArtist';
+import DISCOGRAPHY_TYPE from '@js/DISCOGRAPHY_TYPE';
+import SpotifyDiscography from '@js/SpotifyDiscography';
+import SpotifyDiscographyType from '@js/SpotifyDiscographyType';
+import DISCOGRAPHY_TYPE_MAPPING from '@js/DISCOGRAPHY_TYPE_MAPPING';
 
 /**
  * @typedef {import('@js/spotify').SpotifyDevice} SpotifyDevice
@@ -179,7 +185,6 @@ class SpotifyApi {
 
     if (playerState) {
       const spotifyPlayerState = this.extractPlayerStateFrom(playerState);
-
       playbackState = SpotifyPlaybackStateAdapter.adapt(spotifyPlayerState);
       track = SpotifyTrackAdapter.adaptPlayerState(spotifyPlayerState);
     } else {
@@ -254,7 +259,7 @@ class SpotifyApi {
       LOGGER.log('playTrackWithContext', currentTrackUri, contextUri, indexPosition);
     } catch (err) {
       const status = err?.response?.status;
-      if (status === SpotifyStatus.FORBIDDEN) {
+      if (status === API_STATUS.FORBIDDEN) {
         // add context uri in forbidden list
         unavailableContextUri.update((list) => {
           if (!list?.find((uri) => uri === contextUri)) {
@@ -393,6 +398,22 @@ class SpotifyApi {
   }
 
   /**
+   * @param {string} artistId
+   * @param {SpotifyTrack[]} likedTracks
+   */
+  async getILiked(artistId = '', likedTracks = []) {
+    // FIXME perf : move elsewhere ? instead use $myLibAlbums
+    const artistLikedTracks = findArtistLikedTracks(artistId, likedTracks) ?? [];
+    const myAlbums = await this.getMySavedAlbumsSortedRecentlyPlayed();
+    const likedReleases = findArtistLikedReleases(artistId, myAlbums);
+
+    console.log('artistLikedTracks', artistLikedTracks);
+    console.log('likedReleases', likedReleases);
+
+    return;
+  }
+
+  /**
    * @param {string} playlistId
    * @returns {Promise<SpotifyPlaylist>}
    */
@@ -472,9 +493,9 @@ class SpotifyApi {
     return albums?.sort(sortFn);
   }
 
-  /** @return {Promise<SpotifySearchArtist[]>} */
+  /** @return {Promise<SpotifyArtist[]>} */
   async getMyFollowedArtists() {
-    /** @type {SpotifySearchArtist[]} */
+    /** @type {SpotifyArtist[]} */
     const artists = await this.#iterateOverCursor(
       `/me/following?type=artist&limit=50`,
       'SpotifyArtistCursor',
@@ -483,8 +504,32 @@ class SpotifyApi {
   }
 
   /**
+   * @param {string} artistId
+   * @returns {Promise<boolean>}
+   */
+  async checkIfIFollowArtist(artistId) {
+    /** @type {boolean[]} */
+    const data = await this.#get(`/me/following/contains?type=artist&ids=${artistId}`);
+    return data?.[0];
+  }
+
+  /** @param {string} artistId  */
+  async followArtist(artistId) {
+    this.#put(`/me/following?type=artist&ids=${artistId}`, {
+      ids: [artistId],
+    });
+  }
+
+  /** @param {string} artistId  */
+  async unfollowArtist(artistId) {
+    this.#delete(`/me/following?type=artist&ids=${artistId}`, {
+      ids: [artistId],
+    });
+  }
+
+  /**
    * @param {boolean} reverse
-   * @returns {Promise<SpotifySearchArtist[]>}
+   * @returns {Promise<SpotifyArtist[]>}
    */
   async getMyFollowedArtistsSortedAlphabetically(reverse = false) {
     const artists = await this.getMyFollowedArtists();
@@ -493,8 +538,138 @@ class SpotifyApi {
   }
 
   /**
+   * @param {string} artistId
+   * @returns {Promise<SpotifyArtist>}
+   */
+  async getArtist(artistId) {
+    const data = await this.#get(`/artists/${artistId}`);
+    return new SpotifyArtist(data);
+  }
+
+  /**
+   * @param {string} artistId
+   * @param {string} type
+   * @returns {Promise<SpotifyDiscographyType>}
+   */
+  async getDiscographyItem(artistId, type = DISCOGRAPHY_TYPE.ALBUM) {
+    return this.#iterateOverCursor(
+      `/artists/${artistId}/albums?include_groups=${type}&limit=50`,
+      'SpotifyAlbumCursor',
+    ).then((data) => {
+      if (!data) {
+        return null;
+      }
+      const sortedData = [...data]?.sort((a, b) => b?.release_date - a?.release_date);
+      return new SpotifyDiscographyType(type, sortedData);
+    });
+  }
+
+  /**
+   * @param {string} artistId
+   * @returns {Promise<SpotifyDiscography>}
+   */
+  async getArtistDiscography(artistId) {
+    const PROMISES = Object.values(DISCOGRAPHY_TYPE).map(async (type) => {
+      return await this.getDiscographyItem(artistId, type);
+    });
+    const data = await Promise.all(PROMISES);
+
+    const discography = new SpotifyDiscography();
+
+    data?.forEach((dataItem) => {
+      if (dataItem) {
+        const { type, items } = dataItem;
+        discography[DISCOGRAPHY_TYPE_MAPPING[type]] = items?.map((item) => new SpotifyAlbum(item));
+      }
+    });
+
+    return discography;
+  }
+
+  /**
+   * @param {SpotifyDiscography} discography
+   * @returns {Promise<SpotifyAlbum>}
+   */
+  async getArtistLatestRelease(discography) {
+    if (!discography) {
+      return;
+    }
+
+    const { albums, singles, compilations } = discography;
+    const album = albums?.at(0);
+    const single = singles?.at(0);
+    const compilation = compilations?.at(0);
+
+    let result = album;
+
+    if (single?.release_date > result.release_date) {
+      result = single;
+    }
+
+    if (compilation?.release_date > result.release_date) {
+      result = compilation;
+    }
+
+    return result;
+  }
+
+  /**
+   * @param {string} artistId
+   * @param {string} market
+   * @returns {Promise<SpotifyTrack[]>}
+   */
+  async getArtistTopTracks(artistId, market = 'FR') {
+    /** @type {SpotifySearch} */
+    const data = await this.#get(`/artists/${artistId}/top-tracks?market=${market}`);
+    return data?.tracks
+      ?.map((item) => new SpotifyTrack(item))
+      ?.sort((a, b) => b.popularity - a.popularity);
+  }
+
+  /**
+   * @param {SpotifyAlbum} latestRelease
+   * @param {SpotifyTrack[]} topTracks
+   * @returns {Promise<SpotifyAlbum[]>}
+   */
+  async getArtistTopReleases(latestRelease, topTracks = []) {
+    // latest release is alwayse the first
+    const result = [latestRelease];
+    const uniqueUris = new Set([latestRelease?.uri]);
+
+    topTracks.forEach((track) => {
+      const album = track?.album;
+
+      if (!uniqueUris.has(album?.uri)) {
+        uniqueUris.add(album?.uri);
+        result.push(album);
+      }
+    });
+
+    return result;
+  }
+
+  /**
+   * @param {string} artistId
+   * @returns {Promise<SpotifyAlbum[]>}
+   */
+  async getArtistAppearsOn(artistId) {
+    const discography = await this.getDiscographyItem(artistId, 'appears_on');
+    return discography?.items?.map((item) => new SpotifyAlbum(item));
+  }
+
+  /**
+   * @param {string} artistId
+   * @returns {Promise<SpotifyArtist[]>}
+   */
+  async getArtistRelatedArtists(artistId) {
+    /** @type {SpotifySearch} */
+    const data = await this.#get(`/artists/${artistId}/related-artists`);
+    return data?.artists?.map((item) => new SpotifyArtist(item));
+  }
+
+  /**
    * @param {string[]} artistsIds
-   * @returns {Promise<SpotifySearchArtist[]>}
+   * @returns {Promise<SpotifyArtist[]>}
    */
   async getSeveralArtists(artistsIds) {
     if (!artistsIds || artistsIds.length === 0) {
@@ -504,7 +679,7 @@ class SpotifyApi {
     /** @type {SpotifySearch} */
     const search = await this.#get(`/artists?ids=${artistsIds.join(',')}`);
 
-    const artists = search?.artists?.map((artist) => new SpotifySearchArtist(artist));
+    const artists = search?.artists?.map((artist) => new SpotifyArtist(artist));
     return artists;
   }
 
@@ -517,16 +692,16 @@ class SpotifyApi {
     return recently;
   }
 
-  /** @returns {Promise<(SpotifyPlaylist | SpotifyAlbum | SpotifySearchArtist)[]>} */
+  /** @returns {Promise<(SpotifyPlaylist | SpotifyAlbum | SpotifyArtist)[]>} */
   async getMyLibRecentlyPlayed() {
     const SONGS = await this.getRecentlyPlayedSongs();
 
-    const PROMISES = [];
+    // const PROMISES = [];
     const MY_LIB_MINIMAL = [];
     const ALREADY_FETCHED_ALBUMS = new Map();
-    const playlistIds = new Map();
-    const albumsIds = new Map();
-    const artistsIds = new Map();
+    const playlistIds = new Set();
+    const albumsIds = new Set();
+    const artistsIds = new Set();
 
     const extractItemsToFetchFromSongs = ({ track, context }) => {
       const type = context?.type;
@@ -534,7 +709,7 @@ class SpotifyApi {
       const albumId = track?.album?.id;
 
       if ((!type || type === 'album') && !albumsIds.has(albumId)) {
-        albumsIds.set(albumId, true);
+        albumsIds.add(albumId);
         MY_LIB_MINIMAL.push({
           type: 'album',
           id: albumId,
@@ -550,13 +725,13 @@ class SpotifyApi {
           }),
         );
       } else if (type === 'playlist' && !playlistIds.has(id)) {
-        playlistIds.set(id, true);
+        playlistIds.add(id);
         MY_LIB_MINIMAL.push({
           type,
           id,
         });
       } else if (type === 'artist' && !artistsIds.has(id)) {
-        artistsIds.set(id, true);
+        artistsIds.add(id);
         MY_LIB_MINIMAL.push({
           type,
           id,
@@ -566,11 +741,12 @@ class SpotifyApi {
 
     SONGS?.forEach(extractItemsToFetchFromSongs);
 
-    // put all PLAYLISTS PROMISES
-    Array.from(playlistIds.keys())?.map((id) => PROMISES.push(this.getPlaylistDetails(id)));
-
-    // put all ARTISTS PROMISES
-    PROMISES.push(this.getSeveralArtists(Array.from(artistsIds.keys())));
+    const PROMISES = [
+      // put all PLAYLISTS PROMISES
+      ...Array.from(playlistIds.keys()).map((id) => this.getPlaylistDetails(id)),
+      // put all ARTISTS PROMISES
+      this.getSeveralArtists(Array.from(artistsIds.keys())),
+    ];
 
     try {
       const fetchedPlaylistOrArtist = await Promise.all(PROMISES);
@@ -600,7 +776,7 @@ class SpotifyApi {
 
   /**
    * @param {boolean} reverse
-   *  @returns {Promise<(SpotifyPlaylist | SpotifyAlbum | SpotifySearchArtist)[]>}
+   *  @returns {Promise<(SpotifyPlaylist | SpotifyAlbum | SpotifyArtist)[]>}
    */
   async getMyLibRecentlyPlayedSortedAlphabetically(reverse = false) {
     const recentlyPlayed = await this.getMyLibRecentlyPlayed();
@@ -707,54 +883,31 @@ class SpotifyApi {
     const data = await this.#get(url);
     LOGGER.log(`search "${q}"`);
 
-    let result;
-
-    if (existingSpotifySearch) {
-      const existingTracks = existingSpotifySearch?.tracks ? [...existingSpotifySearch.tracks] : [];
-      const existingArtists = existingSpotifySearch?.artists
-        ? [...existingSpotifySearch.artists]
-        : [];
-      const existingAlbums = existingSpotifySearch?.albums ? [...existingSpotifySearch.albums] : [];
-      const existingPlaylists = existingSpotifySearch?.playlists
-        ? [...existingSpotifySearch.playlists]
-        : [];
-
-      const dataTracks = data?.tracks?.items ? data?.tracks?.items : [];
-      const dataArtists = data?.artists?.items ? data?.artists?.items : [];
-      const dataAlbums = data?.albums?.items ? data?.albums?.items : [];
-      const dataPlaylists = data?.playlists?.items ? data?.playlists?.items : [];
-
-      const trackUris = new Set(dataTracks.map((item) => item?.uri));
-      const artistsUris = new Set(dataArtists.map((item) => item?.uri));
-      const albumsUris = new Set(dataAlbums.map((item) => item?.uri));
-      const playlistUris = new Set(dataPlaylists.map((item) => item?.uri));
-
-      const tracksWithoutDuplicates = existingTracks?.filter((item) => !trackUris.has(item?.uri));
-      const artistsWithoutDuplicates = existingArtists?.filter(
-        (item) => !artistsUris.has(item?.uri),
-      );
-      const albumsWithoutDuplicates = existingAlbums?.filter((item) => !albumsUris.has(item?.uri));
-      const playlistsWithoutDuplicates = existingPlaylists?.filter(
-        (item) => !playlistUris.has(item?.uri),
-      );
-
-      result = new SpotifySearch({
-        tracks: {
-          items: [...tracksWithoutDuplicates, ...dataTracks],
-        },
-        artists: {
-          items: [...artistsWithoutDuplicates, ...dataArtists],
-        },
-        albums: {
-          items: [...albumsWithoutDuplicates, ...dataAlbums],
-        },
-        playlists: {
-          items: [...playlistsWithoutDuplicates, ...dataPlaylists],
-        },
-      });
-    } else {
-      result = new SpotifySearch(data);
+    if (!existingSpotifySearch) {
+      return new SpotifySearch(data);
     }
+
+    const mergeResults = (existingItems, newItems) => [
+      ...existingItems.filter(
+        (item) => !new Set(newItems.map((newItem) => newItem?.uri)).has(item?.uri),
+      ),
+      ...newItems,
+    ];
+
+    const result = new SpotifySearch({
+      tracks: {
+        items: mergeResults(existingSpotifySearch?.tracks ?? [], data?.tracks?.items ?? []),
+      },
+      artists: {
+        items: mergeResults(existingSpotifySearch?.artists ?? [], data?.artists?.items ?? []),
+      },
+      albums: {
+        items: mergeResults(existingSpotifySearch?.albums ?? [], data?.albums?.items ?? []),
+      },
+      playlists: {
+        items: mergeResults(existingSpotifySearch?.playlists ?? [], data?.playlists?.items ?? []),
+      },
+    });
 
     return result;
   }
@@ -890,11 +1043,9 @@ class SpotifyApi {
     }
   }
 
-  async #iterateOverCursor(endpoint, cursorType) {
-    let accumulator = [];
-
-    let data = await this.#get(endpoint);
-    let cursor = CursorFactory.createCursor(cursorType, data);
+  async #iterateOverCursor(endpoint, cursorType, accumulator = []) {
+    const data = await this.#get(endpoint);
+    const cursor = CursorFactory.createCursor(cursorType, data);
 
     if (cursor?.items) {
       accumulator = [...accumulator, ...cursor.items];
@@ -902,13 +1053,7 @@ class SpotifyApi {
 
     while (cursor?.next) {
       const endpoint = /(?<=api.spotify.com\/v1).*/g.exec(cursor.next)?.[0];
-
-      data = await this.#get(endpoint);
-      cursor = CursorFactory.createCursor(cursorType, data);
-
-      if (cursor?.items) {
-        accumulator = [...accumulator, ...cursor.items];
-      }
+      return this.#iterateOverCursor(endpoint, cursorType, accumulator);
     }
 
     return accumulator;
@@ -996,7 +1141,7 @@ class SpotifyApi {
     if (
       endpoint === '/me/player' &&
       method === 'GET' &&
-      SpotifyStatus.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status
+      API_STATUS.PLAYBACK_NOT_AVAILABLE_OR_ACTIVE === status
     ) {
       const err = `Spotify returns 204 -> playback not available or active (${get(deviceId)}`;
       LOGGER.error(err);
@@ -1027,12 +1172,12 @@ class SpotifyApi {
       LOGGER.error('🌱', JSON.stringify(errorJSON), status);
     }
 
-    if (SpotifyStatus.UNAUTHORIZED === status) {
+    if (API_STATUS.UNAUTHORIZED === status) {
       LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
       this.forceAuthorization();
-    } else if (SpotifyStatus.BAD_REQUEST === status) {
+    } else if (API_STATUS.BAD_REQUEST === status) {
       LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
-    } else if (SpotifyStatus.FORBIDDEN === status) {
+    } else if (API_STATUS.FORBIDDEN === status) {
       LOGGER.error('Spotify returns 403 -> FORBIDDEN');
     }
   }

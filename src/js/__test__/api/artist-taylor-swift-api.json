@@ -1,0 +1,33 @@
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+  },
+  "followers": {
+    "href": null,
+    "total": 1.02438897e8
+  },
+  "genres": ["pop"],
+  "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02?locale=fr%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8%2Ces%3Bq%3D0.7%2Cnl%3Bq%3D0.6",
+  "id": "06HL4z0CvFAxyc27GXpf02",
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab6761610000e5eb859e4c14fa59296c8649e0e4",
+      "height": 640.0,
+      "width": 640.0
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616100005174859e4c14fa59296c8649e0e4",
+      "height": 320.0,
+      "width": 320.0
+    },
+    {
+      "url": "https://i.scdn.co/image/ab6761610000f178859e4c14fa59296c8649e0e4",
+      "height": 160.0,
+      "width": 160.0
+    }
+  ],
+  "name": "Taylor Swift",
+  "popularity": 100.0,
+  "type": "artist",
+  "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+}

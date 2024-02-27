@@ -3,6 +3,7 @@
  * @typedef {import('@js/spotify').SpotifyAlbum} SpotifyAlbum
  * @typedef {import('@js/spotify').SpotifyArtist} SpotifyArtist
  * @typedef {import('@js/spotify').SpotifyTrack} SpotifyTrack
+ * @typedef {import('@js/spotify').SpotifyDiscography} SpotifyDiscography
  */
 
 const SPOTIFY_FIRST_RESULTS_LIMIT = 4;
@@ -123,6 +124,44 @@ function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
   return result;
 }
 
+/**
+ * @param {string} artistId
+ * @param {SpotifyTrack[]} likedTracks
+ * @returns {SpotifyTrack[]}
+ */
+function findArtistLikedTracks(artistId = '', likedTracks = []) {
+  const result = [];
+
+  likedTracks.forEach((track) => {
+    track?.artists.forEach((artist) => {
+      if (artist?.id === artistId) {
+        result.push(track);
+      }
+    });
+  });
+
+  return result;
+}
+
+/**
+ * @param {string} artistId
+ * @param {SpotifyAlbum[]} albums
+ * @returns {SpotifyAlbum[]}
+ */
+function findArtistLikedReleases(artistId = '', albums = []) {
+  const result = [];
+
+  albums.forEach((album) => {
+    album?.artists?.forEach((artist) => {
+      if (artist?.id === artistId) {
+        result.push(album);
+      }
+    });
+  });
+
+  return result;
+}
+
 export {
   SPOTIFY_FIRST_RESULTS_LIMIT,
   OFFSET_INCREMENT,
@@ -138,4 +177,6 @@ export {
   sortImagesBySizeAsc,
   updateRecentSearch,
   extractSuggestionsFromSpotifySearch,
+  findArtistLikedTracks,
+  findArtistLikedReleases,
 };

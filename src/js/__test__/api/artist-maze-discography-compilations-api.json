@@ -1,0 +1,9 @@
+{
+  "href": "https://api.spotify.com/v1/artists/0VCYEBxnERCSrT8NvEDLPh/albums?include_groups=compilation&offset=0&limit=50&locale=fr,en-US;q=0.9,en;q=0.8,es;q=0.7,nl;q=0.6",
+  "items": [],
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 0
+}

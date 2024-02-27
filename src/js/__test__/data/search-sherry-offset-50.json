@@ -1471,6 +1471,7 @@
       "uri": "spotify:track:6FOwrAMALEMj43JaWC2d92",
       "name": "Sherry",
       "duration_ms": 153106,
+      "popularity": 8,
       "album": {
         "id": "4SHKA23gfA2VmD2221q8PS",
         "uri": "spotify:album:4SHKA23gfA2VmD2221q8PS",
@@ -1515,6 +1516,7 @@
       "uri": "spotify:track:00meczE1jpLTX0BBzIGrAR",
       "name": "Big Girls Don't Cry",
       "duration_ms": 148013,
+      "popularity": 65,
       "album": {
         "id": "18rFAAWrT2wzvWckYmoLnE",
         "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
@@ -1559,6 +1561,7 @@
       "uri": "spotify:track:5GGCMDZ2RQbW3T2vrjPFWI",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 6,
       "album": {
         "id": "2PynUTsLOnXxbzWsFgkwpZ",
         "uri": "spotify:album:2PynUTsLOnXxbzWsFgkwpZ",
@@ -1603,6 +1606,7 @@
       "uri": "spotify:track:5zhtZuF9V05PLmAWfXoIg3",
       "name": "Sherry",
       "duration_ms": 153106,
+      "popularity": 7,
       "album": {
         "id": "4HKHTV0ReUgH6oEmTwm3rj",
         "uri": "spotify:album:4HKHTV0ReUgH6oEmTwm3rj",
@@ -1647,6 +1651,7 @@
       "uri": "spotify:track:6rsy5Mky2gtfXabA61bLsq",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 9,
       "album": {
         "id": "5hAdZsrx3T4eJFSUgPAeB1",
         "uri": "spotify:album:5hAdZsrx3T4eJFSUgPAeB1",
@@ -1691,6 +1696,7 @@
       "uri": "spotify:track:5tTb05IZgEIStJz1WkkXJH",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 1,
       "album": {
         "id": "4MtgIgCno7sorML9u4Q167",
         "uri": "spotify:album:4MtgIgCno7sorML9u4Q167",
@@ -1735,6 +1741,7 @@
       "uri": "spotify:track:5iHayTRqNcIcv31fjthoEq",
       "name": "Sherry - 2007 Remaster",
       "duration_ms": 160306,
+      "popularity": 22,
       "album": {
         "id": "3pHhaj3QpeY9kYNhRX1hbl",
         "uri": "spotify:album:3pHhaj3QpeY9kYNhRX1hbl",
@@ -1779,6 +1786,7 @@
       "uri": "spotify:track:7fw8qwG2cmqDtcphPyZOxs",
       "name": "風のファンタジア",
       "duration_ms": 217000,
+      "popularity": 30,
       "album": {
         "id": "2NMSJzHJstXI2fDOgew9y7",
         "uri": "spotify:album:2NMSJzHJstXI2fDOgew9y7",
@@ -1828,6 +1836,7 @@
       "uri": "spotify:track:2IOFZdYYkFxEHVz1w34PoL",
       "name": "Cherry",
       "duration_ms": 259186,
+      "popularity": 75,
       "album": {
         "id": "7xV2TzoaVc0ycW7fwBwAml",
         "uri": "spotify:album:7xV2TzoaVc0ycW7fwBwAml",
@@ -1872,6 +1881,7 @@
       "uri": "spotify:track:59WCrUzM6xRjbw4xiBtXUg",
       "name": "Sherry",
       "duration_ms": 93719,
+      "popularity": 3,
       "album": {
         "id": "0M5FNJVXeaqCmj5EudGzBk",
         "uri": "spotify:album:0M5FNJVXeaqCmj5EudGzBk",
@@ -1936,6 +1946,7 @@
       "uri": "spotify:track:3rRc28YVN0zn19x8GsakOY",
       "name": "Sherry Darling - Live at The Agora, Cleveland, OH - 8/9/1978",
       "duration_ms": 249546,
+      "popularity": 21,
       "album": {
         "id": "09rNh6weVS43LVc4sRt5WV",
         "uri": "spotify:album:09rNh6weVS43LVc4sRt5WV",
@@ -1980,6 +1991,7 @@
       "uri": "spotify:track:0uZzEeHn1XtYJxwrw6BThZ",
       "name": "Sherry Coco",
       "duration_ms": 158446,
+      "popularity": 32,
       "album": {
         "id": "1buulNx3kXm0YU9s8l38fb",
         "uri": "spotify:album:1buulNx3kXm0YU9s8l38fb",
@@ -2024,6 +2036,7 @@
       "uri": "spotify:track:59qLNlfD5QNeyy6Uxdsyof",
       "name": "ทฤษฎี",
       "duration_ms": 129875,
+      "popularity": 27,
       "album": {
         "id": "1Rm3jQDmcCYiVFvesOAfxd",
         "uri": "spotify:album:1Rm3jQDmcCYiVFvesOAfxd",
@@ -2068,6 +2081,7 @@
       "uri": "spotify:track:2xQYaf0wcBb8PQeY39uRBS",
       "name": "Hostel",
       "duration_ms": 322954,
+      "popularity": 56,
       "album": {
         "id": "3zVzALNXgXOJ29argKYXEa",
         "uri": "spotify:album:3zVzALNXgXOJ29argKYXEa",
@@ -2112,6 +2126,7 @@
       "uri": "spotify:track:6N2Aw0uDsj428QiD0NgcdS",
       "name": "ยอมแล้ว",
       "duration_ms": 247000,
+      "popularity": 28,
       "album": {
         "id": "7sC7V3mtmPTi6LbziZupW8",
         "uri": "spotify:album:7sC7V3mtmPTi6LbziZupW8",
@@ -2156,6 +2171,7 @@
       "uri": "spotify:track:2LI5SUqw9nVscZOXcNu3j5",
       "name": "Skitty",
       "duration_ms": 128647,
+      "popularity": 27,
       "album": {
         "id": "2UiebCVF3Rdy6yojhqa9Ek",
         "uri": "spotify:album:2UiebCVF3Rdy6yojhqa9Ek",
@@ -2210,6 +2226,7 @@
       "uri": "spotify:track:2BO5hfBLJdpeqh8nJzayew",
       "name": "Nit allei",
       "duration_ms": 186046,
+      "popularity": 1,
       "album": {
         "id": "5IWKM4THXuuX9uGWxB0MFk",
         "uri": "spotify:album:5IWKM4THXuuX9uGWxB0MFk",
@@ -2254,6 +2271,7 @@
       "uri": "spotify:track:6oRjhKuLzTbgVwaKJTlxNT",
       "name": "Halluzinogen",
       "duration_ms": 213616,
+      "popularity": 1,
       "album": {
         "id": "5IWKM4THXuuX9uGWxB0MFk",
         "uri": "spotify:album:5IWKM4THXuuX9uGWxB0MFk",
@@ -2298,6 +2316,7 @@
       "uri": "spotify:track:763djtvLAPkAhk6t5oOUoi",
       "name": "Fireflies",
       "duration_ms": 184342,
+      "popularity": 41,
       "album": {
         "id": "5hCRHq9hCkIzpV7dOXNYOp",
         "uri": "spotify:album:5hCRHq9hCkIzpV7dOXNYOp",
@@ -2352,6 +2371,7 @@
       "uri": "spotify:track:6O5gpewXqjKXMURkCW70Gb",
       "name": "Swag",
       "duration_ms": 173167,
+      "popularity": 47,
       "album": {
         "id": "5VIBDz0S6RFTFbTw8GTwKS",
         "uri": "spotify:album:5VIBDz0S6RFTFbTw8GTwKS",

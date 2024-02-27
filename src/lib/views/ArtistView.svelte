@@ -5,7 +5,7 @@
   import Tracks from '@lib/Tracks.svelte';
   import User from '@lib/User.svelte';
 
-  export let id;
+  // export let id;
 
   /** @type {import('@js/spotify').SpotifyTrack[]} */
   let tracks = [];
@@ -22,7 +22,7 @@
 
   onMount(() => {
     // SpotifyApi.getTracks(id).then((items) => (tracks = items));
-    SpotifyApi.getPlaylistDetails(id).then((item) => (playlist = item));
+    // SpotifyApi.getPlaylistDetails(id).then((item) => (playlist = item));
   });
 
   // TODO factorize with PlaylistView

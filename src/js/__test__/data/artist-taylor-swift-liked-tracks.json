@@ -1,0 +1,137 @@
+[
+  {
+    "id": "24emu3sabKISjRkrys28jq",
+    "uri": "spotify:track:24emu3sabKISjRkrys28jq",
+    "name": "Lavender Haze",
+    "duration_ms": 202395,
+    "popularity": 71,
+    "album": {
+      "id": "1fnJ7k0bllNfL1kVdNVW1A",
+      "uri": "spotify:album:1fnJ7k0bllNfL1kVdNVW1A",
+      "name": "Midnights (The Til Dawn Edition)",
+      "release_date": "2023-05-26",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273fa747621a53c8e2cc436dee0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02fa747621a53c8e2cc436dee0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851fa747621a53c8e2cc436dee0",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ]
+  },
+  {
+    "id": "7G6TDmGJXDoBaV6NGj3Yic",
+    "uri": "spotify:track:7G6TDmGJXDoBaV6NGj3Yic",
+    "name": "You Belong With Me",
+    "duration_ms": 230506,
+    "popularity": 50,
+    "album": {
+      "id": "08CWGiv27MVQhYpuTtvx83",
+      "uri": "spotify:album:08CWGiv27MVQhYpuTtvx83",
+      "name": "Fearless (International Version)",
+      "release_date": "2008-11-11",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273516c279fe91ae3f6a79b23da",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02516c279fe91ae3f6a79b23da",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851516c279fe91ae3f6a79b23da",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ]
+  },
+  {
+    "id": "5xPsybHWRHbTYO44xnREY5",
+    "uri": "spotify:track:5xPsybHWRHbTYO44xnREY5",
+    "name": "Love Story",
+    "duration_ms": 233933,
+    "popularity": 50,
+    "album": {
+      "id": "08CWGiv27MVQhYpuTtvx83",
+      "uri": "spotify:album:08CWGiv27MVQhYpuTtvx83",
+      "name": "Fearless (International Version)",
+      "release_date": "2008-11-11",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273516c279fe91ae3f6a79b23da",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02516c279fe91ae3f6a79b23da",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851516c279fe91ae3f6a79b23da",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    "artists": [
+      {
+        "id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+      }
+    ]
+  }
+]

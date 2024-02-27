@@ -1,0 +1,3359 @@
+{
+  "albums": [
+    {
+      "id": "1o59UpKw81iHR0HPiSkJR0",
+      "uri": "spotify:album:1o59UpKw81iHR0HPiSkJR0",
+      "name": "1989 (Taylor's Version) [Deluxe]",
+      "release_date": "2023-10-27",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273dc2bacae1dca83d26e2b1949",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02dc2bacae1dca83d26e2b1949",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851dc2bacae1dca83d26e2b1949",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "64LU4c1nfjz1t4VnGhagcg",
+      "uri": "spotify:album:64LU4c1nfjz1t4VnGhagcg",
+      "name": "1989 (Taylor's Version)",
+      "release_date": "2023-10-26",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273904445d70d04eb24d6bb79ac",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02904445d70d04eb24d6bb79ac",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851904445d70d04eb24d6bb79ac",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5AEDGbliTTfjOB8TSm1sxt",
+      "uri": "spotify:album:5AEDGbliTTfjOB8TSm1sxt",
+      "name": "Speak Now (Taylor's Version)",
+      "release_date": "2023-07-07",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2730b04da4f224b51ff86e0a481",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e020b04da4f224b51ff86e0a481",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048510b04da4f224b51ff86e0a481",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1fnJ7k0bllNfL1kVdNVW1A",
+      "uri": "spotify:album:1fnJ7k0bllNfL1kVdNVW1A",
+      "name": "Midnights (The Til Dawn Edition)",
+      "release_date": "2023-05-26",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273fa747621a53c8e2cc436dee0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02fa747621a53c8e2cc436dee0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851fa747621a53c8e2cc436dee0",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3lS1y25WAhcqJDATJK70Mq",
+      "uri": "spotify:album:3lS1y25WAhcqJDATJK70Mq",
+      "name": "Midnights (3am Edition)",
+      "release_date": "2022-10-22",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e0b60c608586d88252b8fbc0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e0b60c608586d88252b8fbc0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e0b60c608586d88252b8fbc0",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "151w1FgRZfnKZA9FEcg9Z3",
+      "uri": "spotify:album:151w1FgRZfnKZA9FEcg9Z3",
+      "name": "Midnights",
+      "release_date": "2022-10-21",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02bb54dde68cd23e2a268ae0f5",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851bb54dde68cd23e2a268ae0f5",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6kZ42qRrzov54LcAk4onW9",
+      "uri": "spotify:album:6kZ42qRrzov54LcAk4onW9",
+      "name": "Red (Taylor's Version)",
+      "release_date": "2021-11-12",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273318443aab3531a0558e79a4d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02318443aab3531a0558e79a4d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851318443aab3531a0558e79a4d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4hDok0OAJd57SGIT8xuWJH",
+      "uri": "spotify:album:4hDok0OAJd57SGIT8xuWJH",
+      "name": "Fearless (Taylor's Version)",
+      "release_date": "2021-04-09",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273a48964b5d9a3d6968ae3e0de",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02a48964b5d9a3d6968ae3e0de",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851a48964b5d9a3d6968ae3e0de",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6AORtDjduMM3bupSWzbTSG",
+      "uri": "spotify:album:6AORtDjduMM3bupSWzbTSG",
+      "name": "evermore (deluxe version)",
+      "release_date": "2021-01-07",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27390fd9741e1838115cd90b3b6",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0290fd9741e1838115cd90b3b6",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485190fd9741e1838115cd90b3b6",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2Xoteh7uEpea4TohMxjtaq",
+      "uri": "spotify:album:2Xoteh7uEpea4TohMxjtaq",
+      "name": "evermore",
+      "release_date": "2020-12-11",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27333b8541201f1ef38941024be",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0233b8541201f1ef38941024be",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485133b8541201f1ef38941024be",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0PZ7lAru5FDFHuirTkWe9Z",
+      "uri": "spotify:album:0PZ7lAru5FDFHuirTkWe9Z",
+      "name": "folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]",
+      "release_date": "2020-11-25",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273045514e3ed4e1767a7c3ece5",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02045514e3ed4e1767a7c3ece5",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851045514e3ed4e1767a7c3ece5",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1pzvBxYgT6OVwJLtHkrdQK",
+      "uri": "spotify:album:1pzvBxYgT6OVwJLtHkrdQK",
+      "name": "folklore (deluxe version)",
+      "release_date": "2020-08-18",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273c288028c2592f400dd0b9233",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02c288028c2592f400dd0b9233",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851c288028c2592f400dd0b9233",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2fenSS68JI1h4Fo296JfGr",
+      "uri": "spotify:album:2fenSS68JI1h4Fo296JfGr",
+      "name": "folklore",
+      "release_date": "2020-07-24",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27395f754318336a07e85ec59bc",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0295f754318336a07e85ec59bc",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485195f754318336a07e85ec59bc",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1NAmidJlEaVgA3MpcPFYGq",
+      "uri": "spotify:album:1NAmidJlEaVgA3MpcPFYGq",
+      "name": "Lover",
+      "release_date": "2019-08-23",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6DEjYFkNZh67HP7R9PSZvv",
+      "uri": "spotify:album:6DEjYFkNZh67HP7R9PSZvv",
+      "name": "reputation",
+      "release_date": "2017-11-10",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273da5d5aeeabacacc1263c0f4b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02da5d5aeeabacacc1263c0f4b",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851da5d5aeeabacacc1263c0f4b",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1MPAXuTVL2Ej5x0JHiSPq8",
+      "uri": "spotify:album:1MPAXuTVL2Ej5x0JHiSPq8",
+      "name": "reputation Stadium Tour Surprise Song Playlist",
+      "release_date": "2017-11-09",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27363d77f99117b28af9f656918",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0263d77f99117b28af9f656918",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485163d77f99117b28af9f656918",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1yGbNOtRIgdIiGHOEBaZWf",
+      "uri": "spotify:album:1yGbNOtRIgdIiGHOEBaZWf",
+      "name": "1989 (Deluxe)",
+      "release_date": "2014-01-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27352b2a3824413eefe9e33817a",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0252b2a3824413eefe9e33817a",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485152b2a3824413eefe9e33817a",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5fy0X0JmZRZnVa2UEicIOl",
+      "uri": "spotify:album:5fy0X0JmZRZnVa2UEicIOl",
+      "name": "1989",
+      "release_date": "2014-01-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b7e976d2b35c767f9012cb72",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b7e976d2b35c767f9012cb72",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b7e976d2b35c767f9012cb72",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1KVKqWeRuXsJDLTW0VuD29",
+      "uri": "spotify:album:1KVKqWeRuXsJDLTW0VuD29",
+      "name": "Red (Deluxe Edition)",
+      "release_date": "2012-10-22",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273254c8a09649551438b20f4c0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02254c8a09649551438b20f4c0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851254c8a09649551438b20f4c0",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6fyR4wBPwLHKcRtxgd4sGh",
+      "uri": "spotify:album:6fyR4wBPwLHKcRtxgd4sGh",
+      "name": "Speak Now World Tour Live",
+      "release_date": "2010-10-25",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273be4ec62353ee75fa11f6d6f7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02be4ec62353ee75fa11f6d6f7",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851be4ec62353ee75fa11f6d6f7",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6Ar2o9KCqcyYF9J0aQP3au",
+      "uri": "spotify:album:6Ar2o9KCqcyYF9J0aQP3au",
+      "name": "Speak Now",
+      "release_date": "2010-10-25",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d0eae3c1661a96570f0ca7bd",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d0eae3c1661a96570f0ca7bd",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d0eae3c1661a96570f0ca7bd",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6S6JQWzUrJVcJLK4fi74Fw",
+      "uri": "spotify:album:6S6JQWzUrJVcJLK4fi74Fw",
+      "name": "Speak Now (Deluxe Package)",
+      "release_date": "2010-01-01",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e1bc852a04501952c765d5cd",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e1bc852a04501952c765d5cd",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e1bc852a04501952c765d5cd",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2gP2LMVcIFgVczSJqn340t",
+      "uri": "spotify:album:2gP2LMVcIFgVczSJqn340t",
+      "name": "Fearless (Platinum Edition)",
+      "release_date": "2008-11-11",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27373b565ab9d713e8d5586aac2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0273b565ab9d713e8d5586aac2",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485173b565ab9d713e8d5586aac2",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "08CWGiv27MVQhYpuTtvx83",
+      "uri": "spotify:album:08CWGiv27MVQhYpuTtvx83",
+      "name": "Fearless (International Version)",
+      "release_date": "2008-11-11",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273516c279fe91ae3f6a79b23da",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02516c279fe91ae3f6a79b23da",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851516c279fe91ae3f6a79b23da",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1ycoesYxIFymXWebfmz828",
+      "uri": "spotify:album:1ycoesYxIFymXWebfmz828",
+      "name": "Live From Clear Channel Stripped 2008",
+      "release_date": "2008-06-28",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273c031e8322b3e8684536ed6d0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02c031e8322b3e8684536ed6d0",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851c031e8322b3e8684536ed6d0",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5eyZZoQEFQWRHkV2xgAeBw",
+      "uri": "spotify:album:5eyZZoQEFQWRHkV2xgAeBw",
+      "name": "Taylor Swift",
+      "release_date": "2006-10-24",
+      "album_type": "album",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273c909d4e47de2ab0636f46d64",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02c909d4e47de2ab0636f46d64",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851c909d4e47de2ab0636f46d64",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    }
+  ],
+  "singles": [
+    {
+      "id": "5q3jthpn2h59P7pe2gmAl7",
+      "uri": "spotify:album:5q3jthpn2h59P7pe2gmAl7",
+      "name": "You're Losing Me (From The Vault)",
+      "release_date": "2023-11-29",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2734fe1868aa6838eb595f3673a",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e024fe1868aa6838eb595f3673a",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048514fe1868aa6838eb595f3673a",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "12A1Byk8EpqzaHSw12nKyW",
+      "uri": "spotify:album:12A1Byk8EpqzaHSw12nKyW",
+      "name": "The Cruelest Summer",
+      "release_date": "2023-10-19",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273905c0872bdf4e1787a6bb5da",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02905c0872bdf4e1787a6bb5da",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851905c0872bdf4e1787a6bb5da",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6eKdbTio5viiwJ5FE5J8wU",
+      "uri": "spotify:album:6eKdbTio5viiwJ5FE5J8wU",
+      "name": "Lavender Haze (Acoustic Version)",
+      "release_date": "2023-03-31",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f233c37dddd971caf61515cf",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f233c37dddd971caf61515cf",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f233c37dddd971caf61515cf",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5LyzI39gkePgpHz38bEQIr",
+      "uri": "spotify:album:5LyzI39gkePgpHz38bEQIr",
+      "name": "Lavender Haze (Remixes)",
+      "release_date": "2023-03-03",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f7c84273e5c8ecb7594b4357",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f7c84273e5c8ecb7594b4357",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f7c84273e5c8ecb7594b4357",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5h060Rb0cfAGuny0L51zqV",
+      "uri": "spotify:album:5h060Rb0cfAGuny0L51zqV",
+      "name": "Lavender Haze (Felix Jaehn Remix)",
+      "release_date": "2023-02-10",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "4bL2B6hmLlMWnUEZnorEtG",
+          "name": "Felix Jaehn",
+          "uri": "spotify:artist:4bL2B6hmLlMWnUEZnorEtG"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27390212229c9230e320fe0ecd3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0290212229c9230e320fe0ecd3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485190212229c9230e320fe0ecd3",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5vgWXUueeEU2labRz6TlNv",
+      "uri": "spotify:album:5vgWXUueeEU2labRz6TlNv",
+      "name": "Anti-Hero (Acoustic Version)",
+      "release_date": "2022-11-25",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2730fc559ebbed8b0b100ad206c",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e020fc559ebbed8b0b100ad206c",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048510fc559ebbed8b0b100ad206c",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "20wq0dFrgEhhulGXqnb4A6",
+      "uri": "spotify:album:20wq0dFrgEhhulGXqnb4A6",
+      "name": "Anti-Hero (ILLENIUM Remix)",
+      "release_date": "2022-11-18",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "45eNHdiiabvmbp4erw26rg",
+          "name": "ILLENIUM",
+          "uri": "spotify:artist:45eNHdiiabvmbp4erw26rg"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273eb7289d463cd524a93b722c9",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02eb7289d463cd524a93b722c9",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851eb7289d463cd524a93b722c9",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7irmI5g3OLC1gUXlxysOWt",
+      "uri": "spotify:album:7irmI5g3OLC1gUXlxysOWt",
+      "name": "Anti-Hero (Remixes)",
+      "release_date": "2022-11-11",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739954fa9f0ba8534c3897b59d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029954fa9f0ba8534c3897b59d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519954fa9f0ba8534c3897b59d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "18DEtVsRVQ4rxqnOIAPwRB",
+      "uri": "spotify:album:18DEtVsRVQ4rxqnOIAPwRB",
+      "name": "Anti-Hero (feat. Bleachers)",
+      "release_date": "2022-11-08",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "2eam0iDomRHGBypaDQLwWI",
+          "name": "Bleachers",
+          "uri": "spotify:artist:2eam0iDomRHGBypaDQLwWI"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27350a1e24dde78df1d0ebc68ef",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0250a1e24dde78df1d0ebc68ef",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485150a1e24dde78df1d0ebc68ef",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5Bwg2XxrjTlrNy6BC7KQZf",
+      "uri": "spotify:album:5Bwg2XxrjTlrNy6BC7KQZf",
+      "name": "Carolina (From The Motion Picture “Where The Crawdads Sing”)",
+      "release_date": "2022-06-24",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2732c683c1b9fa1b711499408f7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e022c683c1b9fa1b711499408f7",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048512c683c1b9fa1b711499408f7",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2O1NYIBQCUobrL97A2Unk8",
+      "uri": "spotify:album:2O1NYIBQCUobrL97A2Unk8",
+      "name": "All Too Well (10 Minute Version) (The Short Film)",
+      "release_date": "2022-06-11",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738e16c6e20dbed531a9006d58",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028e16c6e20dbed531a9006d58",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518e16c6e20dbed531a9006d58",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3In1CblWZswwun5MhOa10y",
+      "uri": "spotify:album:3In1CblWZswwun5MhOa10y",
+      "name": "This Love (Taylor’s Version)",
+      "release_date": "2022-05-06",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b7fe6e9265a84c3b6eb66d34",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b7fe6e9265a84c3b6eb66d34",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b7fe6e9265a84c3b6eb66d34",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0vkAczpFKCazPKaoLtnBr0",
+      "uri": "spotify:album:0vkAczpFKCazPKaoLtnBr0",
+      "name": "The Joker And The Queen (feat. Taylor Swift)",
+      "release_date": "2022-02-11",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "6eUKZXaKkcviH0Ku9w2n3V",
+          "name": "Ed Sheeran",
+          "uri": "spotify:artist:6eUKZXaKkcviH0Ku9w2n3V"
+        },
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27389aff4625958eac8d16535c7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0289aff4625958eac8d16535c7",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485189aff4625958eac8d16535c7",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6d8IUfMwq7HGCnR2efXjdm",
+      "uri": "spotify:album:6d8IUfMwq7HGCnR2efXjdm",
+      "name": "Message In A Bottle (Fat Max G Remix) (Taylor’s Version)",
+      "release_date": "2022-01-21",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e53252ce47982a3d555a6b3b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e53252ce47982a3d555a6b3b",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e53252ce47982a3d555a6b3b",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5f4rbgZJhYp4hgswKri00b",
+      "uri": "spotify:album:5f4rbgZJhYp4hgswKri00b",
+      "name": "Christmas Tree Farm (Old Timey Version)",
+      "release_date": "2021-11-22",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738538f5677d3ffe87257ac6c2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028538f5677d3ffe87257ac6c2",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518538f5677d3ffe87257ac6c2",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4qgs0gHJBgycj5SKqafFOB",
+      "uri": "spotify:album:4qgs0gHJBgycj5SKqafFOB",
+      "name": "All Too Well (Sad Girl Autumn Version) - Recorded at Long Pond Studios",
+      "release_date": "2021-11-18",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27370f88b5ee2da16d3f3929fea",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0270f88b5ee2da16d3f3929fea",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485170f88b5ee2da16d3f3929fea",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1qEs8XpGGduMUF7jfAs5l3",
+      "uri": "spotify:album:1qEs8XpGGduMUF7jfAs5l3",
+      "name": "The More Red (Taylor’s Version) Chapter",
+      "release_date": "2021-11-12",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e508c5f5080d8a6c9db576df",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e508c5f5080d8a6c9db576df",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e508c5f5080d8a6c9db576df",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4eZKjfeKPSwd6NYsmlKjuR",
+      "uri": "spotify:album:4eZKjfeKPSwd6NYsmlKjuR",
+      "name": "Safe & Sound (Taylor's Version)",
+      "release_date": "2021-11-12",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "4TCXgdDPm10ensLNCVnIYa",
+          "name": "Joy Williams",
+          "uri": "spotify:artist:4TCXgdDPm10ensLNCVnIYa"
+        },
+        {
+          "id": "1yDI9pWnlrJmi9kZn3gkCb",
+          "name": "John Paul White",
+          "uri": "spotify:artist:1yDI9pWnlrJmi9kZn3gkCb"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2734f719ea76d1b7048664b8fec",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e024f719ea76d1b7048664b8fec",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048514f719ea76d1b7048664b8fec",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6AeF9IkXFpHz5H3wUNX3L3",
+      "uri": "spotify:album:6AeF9IkXFpHz5H3wUNX3L3",
+      "name": "Eyes Open (Taylor's Version)",
+      "release_date": "2021-11-12",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d5cc403148a5161b4561cf61",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d5cc403148a5161b4561cf61",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d5cc403148a5161b4561cf61",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5hxKw2PurC0i1VVJMAntDU",
+      "uri": "spotify:album:5hxKw2PurC0i1VVJMAntDU",
+      "name": "Wildest Dreams (Taylor's Version)",
+      "release_date": "2021-09-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273eb10050f6fe8e2783a91a4b1",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02eb10050f6fe8e2783a91a4b1",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851eb10050f6fe8e2783a91a4b1",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "49yiYOnz2UyaNl72xvDERt",
+      "uri": "spotify:album:49yiYOnz2UyaNl72xvDERt",
+      "name": "Renegade (Pop Version)",
+      "release_date": "2021-08-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "7gXy60xRcwYujBFoYHnR2O",
+          "name": "Big Red Machine",
+          "uri": "spotify:artist:7gXy60xRcwYujBFoYHnR2O"
+        },
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f0b56f34301a37d015cbb678",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f0b56f34301a37d015cbb678",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f0b56f34301a37d015cbb678",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "40cMfQDrBCDmOaWZuNEmKq",
+      "uri": "spotify:album:40cMfQDrBCDmOaWZuNEmKq",
+      "name": "the lakes (original version)",
+      "release_date": "2021-07-24",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2737d60bda8f85d66599c3fe851",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e027d60bda8f85d66599c3fe851",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048517d60bda8f85d66599c3fe851",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5C41iVpK8HXCe3qlLL3I38",
+      "uri": "spotify:album:5C41iVpK8HXCe3qlLL3I38",
+      "name": "willow (90's trend remix)",
+      "release_date": "2021-06-14",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27348ea2c0fbc6682c6d10d91aa",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0248ea2c0fbc6682c6d10d91aa",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485148ea2c0fbc6682c6d10d91aa",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6MMVrrxnNgGKg04ze1Pemw",
+      "uri": "spotify:album:6MMVrrxnNgGKg04ze1Pemw",
+      "name": "The More Fearless (Taylor’s Version) Chapter",
+      "release_date": "2021-04-09",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2734beb2774135270cedfa28338",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e024beb2774135270cedfa28338",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048514beb2774135270cedfa28338",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6IZm7NfvWyXp952VF36Z5F",
+      "uri": "spotify:album:6IZm7NfvWyXp952VF36Z5F",
+      "name": "If This Was A Movie (Taylor’s Version)",
+      "release_date": "2021-04-09",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273afe932e498abc159219bd2f3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02afe932e498abc159219bd2f3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851afe932e498abc159219bd2f3",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2MbdQUj7tAaaBBhUwJE3KG",
+      "uri": "spotify:album:2MbdQUj7tAaaBBhUwJE3KG",
+      "name": "Mr. Perfectly Fine (Taylor’s Version) (From The Vault)",
+      "release_date": "2021-04-07",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27345731927c3396bb4c0276543",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0245731927c3396bb4c0276543",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485145731927c3396bb4c0276543",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5xd9LleY1wqsgKVTwLoXYI",
+      "uri": "spotify:album:5xd9LleY1wqsgKVTwLoXYI",
+      "name": "You All Over Me (feat. Maren Morris) (Taylor’s Version) (From The Vault)",
+      "release_date": "2021-03-26",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b7afb31fe699dae7c34eea1b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b7afb31fe699dae7c34eea1b",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b7afb31fe699dae7c34eea1b",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3x4gaf5IPyFQNrxZY07CXA",
+      "uri": "spotify:album:3x4gaf5IPyFQNrxZY07CXA",
+      "name": "Love Story (Taylor's Version) [Elvira Remix]",
+      "release_date": "2021-03-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f2d3584898505ffee9cacfde",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f2d3584898505ffee9cacfde",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f2d3584898505ffee9cacfde",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4j2syEjl3h1To8KbRgvmJn",
+      "uri": "spotify:album:4j2syEjl3h1To8KbRgvmJn",
+      "name": "Love Story (Taylor’s Version)",
+      "release_date": "2021-02-12",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273877ea8fa223c26f19aaef92d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02877ea8fa223c26f19aaef92d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851877ea8fa223c26f19aaef92d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5lIglDJlPaEoqVl2hhi3O0",
+      "uri": "spotify:album:5lIglDJlPaEoqVl2hhi3O0",
+      "name": "Christmas Tree Farm (Recorded Live at the 2019 iHeartRadio Jingle Ball)",
+      "release_date": "2020-12-19",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273052249de01e68c82c8cf0858",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02052249de01e68c82c8cf0858",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851052249de01e68c82c8cf0858",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6WzAiEDGTU7KmEyGwLpBXB",
+      "uri": "spotify:album:6WzAiEDGTU7KmEyGwLpBXB",
+      "name": "willow (the witch collection)",
+      "release_date": "2020-12-16",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738312c50a6b9046d7dea5de12",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028312c50a6b9046d7dea5de12",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518312c50a6b9046d7dea5de12",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5rZ2dHO8pco3A7cYToyvR0",
+      "uri": "spotify:album:5rZ2dHO8pco3A7cYToyvR0",
+      "name": "willow (moonlit witch version)",
+      "release_date": "2020-12-16",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273ec07f0fc562d46804df394b4",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02ec07f0fc562d46804df394b4",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851ec07f0fc562d46804df394b4",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "77wvNMSdOowJgpJx1kcKqc",
+      "uri": "spotify:album:77wvNMSdOowJgpJx1kcKqc",
+      "name": "willow (lonely witch version)",
+      "release_date": "2020-12-15",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27373008bd7709ea6419803264f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0273008bd7709ea6419803264f",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485173008bd7709ea6419803264f",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "23u5rTisTUAWuQxaDft11P",
+      "uri": "spotify:album:23u5rTisTUAWuQxaDft11P",
+      "name": "willow [dancing witch version (Elvira remix)]",
+      "release_date": "2020-12-13",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e141efa4999ddb4b52512a7c",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e141efa4999ddb4b52512a7c",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e141efa4999ddb4b52512a7c",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5smqkYeHq9jKRbaXpy3TpL",
+      "uri": "spotify:album:5smqkYeHq9jKRbaXpy3TpL",
+      "name": "betty (Live from the 2020 Academy of Country Music Awards)",
+      "release_date": "2020-09-18",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2736761ef4b8f9e8b2007f4d8c3",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e026761ef4b8f9e8b2007f4d8c3",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048516761ef4b8f9e8b2007f4d8c3",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3kqqalY92DENp7FiztDOjH",
+      "uri": "spotify:album:3kqqalY92DENp7FiztDOjH",
+      "name": "cardigan (cabin in candlelight version)",
+      "release_date": "2020-07-30",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27326ade10c17424417bd06f1d6",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0226ade10c17424417bd06f1d6",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485126ade10c17424417bd06f1d6",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4CF0YV0iNyfKoDt9jHbGj7",
+      "uri": "spotify:album:4CF0YV0iNyfKoDt9jHbGj7",
+      "name": "Cornelia Street (Live From Paris)",
+      "release_date": "2020-05-18",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273eec5bf14fcf7c92ec8166027",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02eec5bf14fcf7c92ec8166027",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851eec5bf14fcf7c92ec8166027",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1w1zVWd1JmsqAgfCw117Ra",
+      "uri": "spotify:album:1w1zVWd1JmsqAgfCw117Ra",
+      "name": "You Need To Calm Down (Live From Paris)",
+      "release_date": "2020-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738546aa90c89127a13f02c73d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028546aa90c89127a13f02c73d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518546aa90c89127a13f02c73d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2A1msASmUbUdaZyeOxpbAD",
+      "uri": "spotify:album:2A1msASmUbUdaZyeOxpbAD",
+      "name": "The Archer (Live From Paris)",
+      "release_date": "2020-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273cde19bd5377f06eb0bca3256",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02cde19bd5377f06eb0bca3256",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851cde19bd5377f06eb0bca3256",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1jIp7CChnwdj9zUCvPxzQ7",
+      "uri": "spotify:album:1jIp7CChnwdj9zUCvPxzQ7",
+      "name": "ME! (Live From Paris)",
+      "release_date": "2020-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d8f29c3584e77996dd2f9950",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d8f29c3584e77996dd2f9950",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d8f29c3584e77996dd2f9950",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7hvsmGyWH2kJS5X4E4t039",
+      "uri": "spotify:album:7hvsmGyWH2kJS5X4E4t039",
+      "name": "Lover (Live From Paris)",
+      "release_date": "2020-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d29b148f84d0cd04ebdbe919",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d29b148f84d0cd04ebdbe919",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d29b148f84d0cd04ebdbe919",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5nDpkszadFMGW6ZSYM9Q1V",
+      "uri": "spotify:album:5nDpkszadFMGW6ZSYM9Q1V",
+      "name": "Death By A Thousand Cuts (Live From Paris)",
+      "release_date": "2020-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2737864c044d3fa4ac3814ca667",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e027864c044d3fa4ac3814ca667",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048517864c044d3fa4ac3814ca667",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2apcAEM6coXOMnHitrpRDk",
+      "uri": "spotify:album:2apcAEM6coXOMnHitrpRDk",
+      "name": "Daylight (Live From Paris)",
+      "release_date": "2020-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739638abe9135aed2817baf686",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029638abe9135aed2817baf686",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519638abe9135aed2817baf686",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6l7iXnb2Y4yDR9zag3kckA",
+      "uri": "spotify:album:6l7iXnb2Y4yDR9zag3kckA",
+      "name": "The Man (Live From Paris)",
+      "release_date": "2020-02-18",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739a6d517fc78fb707bed067c2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029a6d517fc78fb707bed067c2",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519a6d517fc78fb707bed067c2",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5sZIjREu3s225wwqJkgsYV",
+      "uri": "spotify:album:5sZIjREu3s225wwqJkgsYV",
+      "name": "You're Not Sorry (CSI Remix)",
+      "release_date": "2020-02-07",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e8ae61ef7ff5c29b9f84828f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e8ae61ef7ff5c29b9f84828f",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e8ae61ef7ff5c29b9f84828f",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1iab5rfjNpGhoPlFzPyp4k",
+      "uri": "spotify:album:1iab5rfjNpGhoPlFzPyp4k",
+      "name": "Love Story (Pop Mix)",
+      "release_date": "2020-02-07",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d676631cbb331a320db57b64",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d676631cbb331a320db57b64",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d676631cbb331a320db57b64",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2Z2KdJE0nGGu0qdWA45mza",
+      "uri": "spotify:album:2Z2KdJE0nGGu0qdWA45mza",
+      "name": "Love Story (Digital Dog Remix)",
+      "release_date": "2020-02-07",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273c4d3acdcb5d53a2a3856786e",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02c4d3acdcb5d53a2a3856786e",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851c4d3acdcb5d53a2a3856786e",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5LGsh3kexUfi3qkIIxb8vK",
+      "uri": "spotify:album:5LGsh3kexUfi3qkIIxb8vK",
+      "name": "Only The Young (Featured in Miss Americana)",
+      "release_date": "2020-01-31",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2734aa13f6de271d8403a82e4a8",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e024aa13f6de271d8403a82e4a8",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048514aa13f6de271d8403a82e4a8",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "5JnnrTE35MQagEnEkFthiF",
+      "uri": "spotify:album:5JnnrTE35MQagEnEkFthiF",
+      "name": "Christmas Tree Farm",
+      "release_date": "2019-12-06",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b550071a3fa8e03f6a83f313",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b550071a3fa8e03f6a83f313",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b550071a3fa8e03f6a83f313",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "6Ou4LWiU2Vu2V7KdHzw9At",
+      "uri": "spotify:album:6Ou4LWiU2Vu2V7KdHzw9At",
+      "name": "Lover (First Dance Remix)",
+      "release_date": "2019-11-26",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273affd87a5167957a7adbf8e37",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02affd87a5167957a7adbf8e37",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851affd87a5167957a7adbf8e37",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2UfvnX1YYeC2cExMQTMbXC",
+      "uri": "spotify:album:2UfvnX1YYeC2cExMQTMbXC",
+      "name": "Lover (Remix) [feat. Shawn Mendes]",
+      "release_date": "2019-11-13",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "7n2wHs1TKAczGzO7Dd2rGr",
+          "name": "Shawn Mendes",
+          "uri": "spotify:artist:7n2wHs1TKAczGzO7Dd2rGr"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27359457bdb1edb5c6417f3baa2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0259457bdb1edb5c6417f3baa2",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485159457bdb1edb5c6417f3baa2",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1Uauz6ql2dIPvIOH4JiuhD",
+      "uri": "spotify:album:1Uauz6ql2dIPvIOH4JiuhD",
+      "name": "All Of The Girls You Loved Before",
+      "release_date": "2019-08-23",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738481d8f15859aa5bae75ee17",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028481d8f15859aa5bae75ee17",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518481d8f15859aa5bae75ee17",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "531nfs5NPsmkRC1LJb1cdj",
+      "uri": "spotify:album:531nfs5NPsmkRC1LJb1cdj",
+      "name": "You Need To Calm Down (Clean Bandit Remix)",
+      "release_date": "2019-08-20",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "6MDME20pz9RveH9rEXvrOM",
+          "name": "Clean Bandit",
+          "uri": "spotify:artist:6MDME20pz9RveH9rEXvrOM"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739911942b4845c29ad3ad1224",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029911942b4845c29ad3ad1224",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519911942b4845c29ad3ad1224",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7gU675c7KZ54MzEcL1O3px",
+      "uri": "spotify:album:7gU675c7KZ54MzEcL1O3px",
+      "name": "Delicate (Seeb Remix)",
+      "release_date": "2018-06-08",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "5iNrZmtVMtYev5M9yoWpEq",
+          "name": "Seeb",
+          "uri": "spotify:artist:5iNrZmtVMtYev5M9yoWpEq"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2737809d9723e21370fe5926a7c",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e027809d9723e21370fe5926a7c",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048517809d9723e21370fe5926a7c",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7HEXQkjBNiZilJcTWXwLOA",
+      "uri": "spotify:album:7HEXQkjBNiZilJcTWXwLOA",
+      "name": "Delicate (Sawyr And Ryan Tedder Mix)",
+      "release_date": "2018-05-25",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "0IvBGOcv9xzgOrgGQGMMgp",
+          "name": "Sawyr",
+          "uri": "spotify:artist:0IvBGOcv9xzgOrgGQGMMgp"
+        },
+        {
+          "id": "4we5S2VLjgY9KzIzApL1KI",
+          "name": "Ryan Tedder",
+          "uri": "spotify:artist:4we5S2VLjgY9KzIzApL1KI"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d8032a149cd86c879c9df63a",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d8032a149cd86c879c9df63a",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d8032a149cd86c879c9df63a",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "74utZeTCeaXy01BjOddyv8",
+      "uri": "spotify:album:74utZeTCeaXy01BjOddyv8",
+      "name": "Spotify Singles",
+      "release_date": "2018-04-13",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273bae8f095c58e137855f6d230",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02bae8f095c58e137855f6d230",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851bae8f095c58e137855f6d230",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "45fMDoh9dhhQicddIZzhKM",
+      "uri": "spotify:album:45fMDoh9dhhQicddIZzhKM",
+      "name": "...Ready For It? (BloodPop® Remix)",
+      "release_date": "2017-12-01",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        },
+        {
+          "id": "1okJ4NC308qbtY9LyHn6DO",
+          "name": "BloodPop®",
+          "uri": "spotify:artist:1okJ4NC308qbtY9LyHn6DO"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d41ccf8f43721c045a969300",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d41ccf8f43721c045a969300",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d41ccf8f43721c045a969300",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1Tv3rrFNdXGtTeP1plX2xE",
+      "uri": "spotify:album:1Tv3rrFNdXGtTeP1plX2xE",
+      "name": "Bad Blood",
+      "release_date": "2015-05-17",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2737941dc6a3a023016acbe3d06",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e027941dc6a3a023016acbe3d06",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048517941dc6a3a023016acbe3d06",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4vkDxA22dFzObjOY1nnXPk",
+      "uri": "spotify:album:4vkDxA22dFzObjOY1nnXPk",
+      "name": "Wildest Dreams (R3hab Remix)",
+      "release_date": "2015-01-01",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b8d01ff84dc531f884d90928",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b8d01ff84dc531f884d90928",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b8d01ff84dc531f884d90928",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "11e4xCXllbvk8pWc1cCas1",
+      "uri": "spotify:album:11e4xCXllbvk8pWc1cCas1",
+      "name": "Sweeter Than Fiction",
+      "release_date": "2013-10-21",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273a8d770d373f0bb3f0818526c",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02a8d770d373f0bb3f0818526c",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851a8d770d373f0bb3f0818526c",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7CoqvPGCLHm7LbgH2Pz9aY",
+      "uri": "spotify:album:7CoqvPGCLHm7LbgH2Pz9aY",
+      "name": "Everything Has Changed (Remix)",
+      "release_date": "2013-01-01",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b27365a688af20f457a034ce167d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e0265a688af20f457a034ce167d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000485165a688af20f457a034ce167d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4T5606j6qpkQrWlwbKPLOp",
+      "uri": "spotify:album:4T5606j6qpkQrWlwbKPLOp",
+      "name": "Ronan",
+      "release_date": "2012-09-08",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273dbe6e4dd1b2a61e375a12c63",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02dbe6e4dd1b2a61e375a12c63",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851dbe6e4dd1b2a61e375a12c63",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7cfhaRiLqBzuAzc6Q24nyW",
+      "uri": "spotify:album:7cfhaRiLqBzuAzc6Q24nyW",
+      "name": "Today Was A Fairytale",
+      "release_date": "2011-02-15",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2738d3b185c6a110a479e01e3c4",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e028d3b185c6a110a479e01e3c4",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048518d3b185c6a110a479e01e3c4",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "7vzYp7FrKnTRoktBYsx9SF",
+      "uri": "spotify:album:7vzYp7FrKnTRoktBYsx9SF",
+      "name": "The Taylor Swift Holiday Collection",
+      "release_date": "2008-12-02",
+      "album_type": "single",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2732a0face7d69df61c20a6db2b",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e022a0face7d69df61c20a6db2b",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048512a0face7d69df61c20a6db2b",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    }
+  ],
+  "compilations": [
+    {
+      "id": "4o0wVh13FT8batNO2tEar1",
+      "uri": "spotify:album:4o0wVh13FT8batNO2tEar1",
+      "name": "Red (Taylor’s Version): The Slow Motion Chapter",
+      "release_date": "2022-01-19",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739951d6662fbb99cfd5497c11",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029951d6662fbb99cfd5497c11",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519951d6662fbb99cfd5497c11",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "04Ki4xEu2JWsMVBWtx97TX",
+      "uri": "spotify:album:04Ki4xEu2JWsMVBWtx97TX",
+      "name": "Red (Taylor’s Version): From The Vault Chapter",
+      "release_date": "2022-01-19",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d969ad6fcaca272d9dbc44ee",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d969ad6fcaca272d9dbc44ee",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d969ad6fcaca272d9dbc44ee",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0VI6ZyP6Bw2XrEnzbHKdrt",
+      "uri": "spotify:album:0VI6ZyP6Bw2XrEnzbHKdrt",
+      "name": "Red (Taylor’s Version): She Wrote A Song About Me Chapter",
+      "release_date": "2022-01-18",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2733f567f80e04236810b2fa18d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e023f567f80e04236810b2fa18d",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048513f567f80e04236810b2fa18d",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1ZkjQ4WBB99Rq5eFGqENNX",
+      "uri": "spotify:album:1ZkjQ4WBB99Rq5eFGqENNX",
+      "name": "Red (Taylor’s Version): Could You Be The One Chapter",
+      "release_date": "2022-01-13",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739baf4fbc67ea2565f70653ab",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029baf4fbc67ea2565f70653ab",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519baf4fbc67ea2565f70653ab",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2RklLGgcSnaQ6tR9l81lRS",
+      "uri": "spotify:album:2RklLGgcSnaQ6tR9l81lRS",
+      "name": "Fearless (Taylor’s Version): The From The Vault Chapter",
+      "release_date": "2021-05-26",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f34b96ecac0f525381d87fdc",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f34b96ecac0f525381d87fdc",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f34b96ecac0f525381d87fdc",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0XCoR1j5Sa2su9uDS9AScR",
+      "uri": "spotify:album:0XCoR1j5Sa2su9uDS9AScR",
+      "name": "Fearless (Taylor’s Version): The I Remember What You Said Last Night Chapter",
+      "release_date": "2021-05-24",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2739b70e3eec70566056e113166",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e029b70e3eec70566056e113166",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048519b70e3eec70566056e113166",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "1iZR600UW2HCS3L7p5kNB8",
+      "uri": "spotify:album:1iZR600UW2HCS3L7p5kNB8",
+      "name": "Fearless (Taylor's Version): The Kissing In The Rain Chapter",
+      "release_date": "2021-05-19",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273f17698cadf460b48917c5ac1",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02f17698cadf460b48917c5ac1",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851f17698cadf460b48917c5ac1",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "4Vs9aG0KwsHUCVhQ5kGgxv",
+      "uri": "spotify:album:4Vs9aG0KwsHUCVhQ5kGgxv",
+      "name": "Fearless (Taylor's Version): The Halfway Out The Door Chapter",
+      "release_date": "2021-05-13",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273aea0751014bf29e2326c41b7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02aea0751014bf29e2326c41b7",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851aea0751014bf29e2326c41b7",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "29TDKlVwdu8TqifC3WN86l",
+      "uri": "spotify:album:29TDKlVwdu8TqifC3WN86l",
+      "name": "the \"ladies lunching\" chapter",
+      "release_date": "2021-02-04",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2732f900f3470b25613705126e2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e022f900f3470b25613705126e2",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048512f900f3470b25613705126e2",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "41CRQN8AWPjZk6cz4JmM49",
+      "uri": "spotify:album:41CRQN8AWPjZk6cz4JmM49",
+      "name": "the \"forever is the sweetest con\" chapter",
+      "release_date": "2021-01-28",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d613453f843d7170ee41e93e",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d613453f843d7170ee41e93e",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d613453f843d7170ee41e93e",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0MdAkmLrx2k4zgACOUVyM9",
+      "uri": "spotify:album:0MdAkmLrx2k4zgACOUVyM9",
+      "name": "the \"dropped your hand while dancing\" chapter",
+      "release_date": "2021-01-21",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b2737fd5f9af2c92c5d86e7db732",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e027fd5f9af2c92c5d86e7db732",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d000048517fd5f9af2c92c5d86e7db732",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "27cx8eVCV4xMwJEYJNl1nw",
+      "uri": "spotify:album:27cx8eVCV4xMwJEYJNl1nw",
+      "name": "folklore: the yeah I showed up at your party chapter",
+      "release_date": "2020-09-21",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d7004b0da78a8aefa965ca55",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d7004b0da78a8aefa965ca55",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d7004b0da78a8aefa965ca55",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3s1uBurAzg61IQYXRc3B3h",
+      "uri": "spotify:album:3s1uBurAzg61IQYXRc3B3h",
+      "name": "folklore: the saltbox house chapter",
+      "release_date": "2020-08-27",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273e83db93e7001dc684da96128",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02e83db93e7001dc684da96128",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851e83db93e7001dc684da96128",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "3V35ukro7RnYjnscZ56pRB",
+      "uri": "spotify:album:3V35ukro7RnYjnscZ56pRB",
+      "name": "folklore: the sleepless nights chapter",
+      "release_date": "2020-08-24",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273d546b4f8e8a2a042e6a0ca88",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02d546b4f8e8a2a042e6a0ca88",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851d546b4f8e8a2a042e6a0ca88",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "0UYykkGEPRrLfarEeclJQ7",
+      "uri": "spotify:album:0UYykkGEPRrLfarEeclJQ7",
+      "name": "folklore: the escapism chapter",
+      "release_date": "2020-08-21",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273633436535d6f47863e0ff13e",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02633436535d6f47863e0ff13e",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851633436535d6f47863e0ff13e",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "2KLFL8R9r2ubCQxbBxgLT7",
+      "uri": "spotify:album:2KLFL8R9r2ubCQxbBxgLT7",
+      "name": "The More Lover Chapter",
+      "release_date": "2019-08-23",
+      "album_type": "compilation",
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift",
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab67616d0000b273b40f953d9ebdc956544e28a5",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00001e02b40f953d9ebdc956544e28a5",
+          "height": 300,
+          "width": 300
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616d00004851b40f953d9ebdc956544e28a5",
+          "height": 64,
+          "width": 64
+        }
+      ]
+    }
+  ]
+}

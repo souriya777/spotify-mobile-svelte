@@ -1546,6 +1546,7 @@
       "uri": "spotify:track:0xtN05SZDvg943I3x08KT7",
       "name": "Sherry",
       "duration_ms": 126613,
+      "popularity": 29,
       "album": {
         "id": "7oWx4auBp2kCb54VkRCCUq",
         "uri": "spotify:album:7oWx4auBp2kCb54VkRCCUq",
@@ -1590,6 +1591,7 @@
       "uri": "spotify:track:68iChBWE5tZb95QGOcMKtF",
       "name": "Sherry",
       "duration_ms": 157386,
+      "popularity": 1,
       "album": {
         "id": "2Ozhdbo5v89ZdgCHlmF2fR",
         "uri": "spotify:album:2Ozhdbo5v89ZdgCHlmF2fR",
@@ -1634,6 +1636,7 @@
       "uri": "spotify:track:4cS2HQ6jK80vqdY9ofpztx",
       "name": "She Wolf",
       "duration_ms": 188866,
+      "popularity": 76,
       "album": {
         "id": "5u0OuxRnf3FzvZR07xAxL2",
         "uri": "spotify:album:5u0OuxRnf3FzvZR07xAxL2",
@@ -1678,6 +1681,7 @@
       "uri": "spotify:track:16IzV3JdxmR3X10ZbWHlfB",
       "name": "SHE",
       "duration_ms": 218653,
+      "popularity": 65,
       "album": {
         "id": "6WbMZYQ1SAU8HrgZSuH0xJ",
         "uri": "spotify:album:6WbMZYQ1SAU8HrgZSuH0xJ",
@@ -1722,6 +1726,7 @@
       "uri": "spotify:track:1ulV7wgYNWhulcnMrgwOuG",
       "name": "Il avait les mots",
       "duration_ms": 227026,
+      "popularity": 66,
       "album": {
         "id": "0I1iezuwcQDATLumFtVjpX",
         "uri": "spotify:album:0I1iezuwcQDATLumFtVjpX",
@@ -1766,6 +1771,7 @@
       "uri": "spotify:track:7qLXBcYW78is9LygQBziAU",
       "name": "Sabry Aalil",
       "duration_ms": 289227,
+      "popularity": 76,
       "album": {
         "id": "7iykGeMdxOdYtNRtYCNaMA",
         "uri": "spotify:album:7iykGeMdxOdYtNRtYCNaMA",
@@ -1810,6 +1816,7 @@
       "uri": "spotify:track:0Fs9cdPDhptWEDJmiCbkEW",
       "name": "She Knows (feat. Amber Coffman & Cults)",
       "duration_ms": 296520,
+      "popularity": 79,
       "album": {
         "id": "5FP9keIJnlSCKnkdVOf623",
         "uri": "spotify:album:5FP9keIJnlSCKnkdVOf623",
@@ -1864,6 +1871,7 @@
       "uri": "spotify:track:4llK75pXNWZz6KAho2Gp16",
       "name": "She Will Be Loved - Radio Mix",
       "duration_ms": 259453,
+      "popularity": 85,
       "album": {
         "id": "5zClcGCSWj926AMjvBNSLc",
         "uri": "spotify:album:5zClcGCSWj926AMjvBNSLc",
@@ -1908,6 +1916,7 @@
       "uri": "spotify:track:1KYeS1A9Gc7p6zfcf2p9ee",
       "name": "She",
       "duration_ms": 134293,
+      "popularity": 0,
       "album": {
         "id": "1iK6xEaibOJbTrRvdcenSi",
         "uri": "spotify:album:1iK6xEaibOJbTrRvdcenSi",
@@ -1952,6 +1961,7 @@
       "uri": "spotify:track:3v5ErwLaw3HOjcohP9JJcm",
       "name": "She Doesn't Mind",
       "duration_ms": 227786,
+      "popularity": 59,
       "album": {
         "id": "0vPaS3LIPPNUsw5nU3hrvT",
         "uri": "spotify:album:0vPaS3LIPPNUsw5nU3hrvT",
@@ -1996,6 +2006,7 @@
       "uri": "spotify:track:4d6eqRtpDX7tydHJGDZUBQ",
       "name": "She Drives Me Crazy",
       "duration_ms": 215773,
+      "popularity": 78,
       "album": {
         "id": "6CoeDRu0SmpFtLZMcRTO2F",
         "uri": "spotify:album:6CoeDRu0SmpFtLZMcRTO2F",
@@ -2040,6 +2051,7 @@
       "uri": "spotify:track:1GOIfWQmA3Tp6GlwcCd35K",
       "name": "Sheitana (feat. Ninho)",
       "duration_ms": 199653,
+      "popularity": 66,
       "album": {
         "id": "7Fr1UbMBBjPBYOOy7NQmkl",
         "uri": "spotify:album:7Fr1UbMBBjPBYOOy7NQmkl",
@@ -2089,6 +2101,7 @@
       "uri": "spotify:track:45FCt12lQyBdxUrLtM4Uor",
       "name": "She Likes a Boy",
       "duration_ms": 129056,
+      "popularity": 77,
       "album": {
         "id": "79GumpEw4n1qXIahUOrdNv",
         "uri": "spotify:album:79GumpEw4n1qXIahUOrdNv",
@@ -2133,6 +2146,7 @@
       "uri": "spotify:track:3HeZam86SuxGp1wZ3XMIjE",
       "name": "She Said (Big Jet Plane)",
       "duration_ms": 173750,
+      "popularity": 74,
       "album": {
         "id": "06glmgu7XVm60LyphpYQxc",
         "uri": "spotify:album:06glmgu7XVm60LyphpYQxc",
@@ -2187,6 +2201,7 @@
       "uri": "spotify:track:4lqqbSHGGR5BRtnmnky00G",
       "name": "Shen Yeng Anthem",
       "duration_ms": 141226,
+      "popularity": 70,
       "album": {
         "id": "5ITcrOlnxhUg2uvlGNPJhT",
         "uri": "spotify:album:5ITcrOlnxhUg2uvlGNPJhT",
@@ -2231,6 +2246,7 @@
       "uri": "spotify:track:6g95dK7o7vVh8ZCnDAseU5",
       "name": "كلام عينيه",
       "duration_ms": 235833,
+      "popularity": 77,
       "album": {
         "id": "1aCq7XjXXVc3WxPYYUrbeP",
         "uri": "spotify:album:1aCq7XjXXVc3WxPYYUrbeP",
@@ -2275,6 +2291,7 @@
       "uri": "spotify:track:5wUbZH9CTDwDfVoujQKIeb",
       "name": "She Wan That Ah",
       "duration_ms": 160509,
+      "popularity": 48,
       "album": {
         "id": "1WZaiOFk6sYSCHrGZWMMh4",
         "uri": "spotify:album:1WZaiOFk6sYSCHrGZWMMh4",
@@ -2324,6 +2341,7 @@
       "uri": "spotify:track:63Gl4Wqr98iJnWoNGFOQjr",
       "name": "الوتر الحساس",
       "duration_ms": 261224,
+      "popularity": 75,
       "album": {
         "id": "1aCq7XjXXVc3WxPYYUrbeP",
         "uri": "spotify:album:1aCq7XjXXVc3WxPYYUrbeP",
@@ -2368,6 +2386,7 @@
       "uri": "spotify:track:6A3RkXur9HC5kVDAT51OPA",
       "name": "She Calls Me Back",
       "duration_ms": 243815,
+      "popularity": 0,
       "album": {
         "id": "6LE1TDXbNYLwBLqrNba7K0",
         "uri": "spotify:album:6LE1TDXbNYLwBLqrNba7K0",
@@ -2412,6 +2431,7 @@
       "uri": "spotify:track:0G2lAulZulKHGDqVvtGf39",
       "name": "Sherbet",
       "duration_ms": 256746,
+      "popularity": 60,
       "album": {
         "id": "1g2C4B3Adi9L27BLlVJdEs",
         "uri": "spotify:album:1g2C4B3Adi9L27BLlVJdEs",

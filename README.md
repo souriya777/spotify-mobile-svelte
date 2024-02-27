@@ -12,21 +12,29 @@ DRY -> Single Source of Truth
 
 # MVP
 
-- code review
 - feat(artist-detail): ui/ux
-- feat(artist-detail): js
+  // TODO see more 5->10
+  -- TODO filter "Popular releases" (4) "Albums" "Singles and EP" "Compilations" (DESKTOP)
+  -- sort by date-desc discography
+  -- label "latest Release &bull; Single"
 - search in playlist
 - fix(playlist): spotify bug "recently-added" order
   -- see <RenamePlaylist playlistId={list?.id} playlistName={list?.name} />
-- feat(playlist): can favorite song
+- feat(playlist): can (un)like song
+- feat(album): can (un)like song
+- feat(track): can (un)like directly
+- feat(liked-song): can unlike song
 - feat(album): can remove album from my favorite
-- feat(album): can favorite song
+- feat(liked): can browse Liked playlist
 - feat(liked-song): which api call to know if a song is in favourite ?
   => CollectionAlbumTrackSECONDARY_ACTION.svelte
-- feat(liked): can browse Liked playlist
+
+- refactor(old-code): manage secondary actions
+- feat(playlist): follow playlist
+- feat(playlist): check if user follow playlist
+- feat(playlist): unfollow playlist
 - feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
 - remove `Collection*`
-- feat(liked-song): can unlike song
 - feat(playlist): can delete playlist
 - feat(playlist): can rename playlist
 - perf : mv sync my-lib from `onMount`
@@ -34,15 +42,15 @@ DRY -> Single Source of Truth
 - feat(album): can add to queue
 - feat(artist): can add to queue
 - feat(search): can add to queue
-- refactor(old-code): manage secondary actions
 - feat(queue): design it
 - feat(queue): what is default queue ?
 - feat(queue): can remove song
 - feat(queue): can clear queue
 - feat(queue): extract track_window next_tracks ?
 - feat(queue): can auto-load queue
-- feat(queue): swiper shortcut "add to queue" ???
+- feat(queue): can "add to queue" via swipe
 
+- bug list-playlist grid : when no image
 - feat(list-playlist): make api call for playlist cover
   -- replace grid-mode image with playlist cover
 - when drag progress, why /me/player/devices is called ????
@@ -55,6 +63,7 @@ DRY -> Single Source of Truth
 - feat(menu): design it
 - feat(menu): useview transition API as "svelte.dev menu"
 - feat(router): one stack views by `route` ? use Router.svelte ?
+
 - feat(app): add a direct shortcut
 - feat(logout): can logout
 - feat(player): pause écouteurs bluetooth ?
@@ -62,7 +71,6 @@ DRY -> Single Source of Truth
 - feat(player): load song in advance ?
 - feat(player): move `$player.activateElement()` elsewhere (because we want to auto-sync without clicking)
 - feat(desktop): do something with `Phone.svelte` & `PhoneScreen.svelte`
-
 - what to do with `Notification.svelte` ?
 - //learn.svelte.dev/tutorial/updating-arrays-and-objects
   "...won't trigger reactivity on obj.foo.bar, unless you follow it up with obj = obj"
@@ -83,7 +91,20 @@ DRY -> Single Source of Truth
 - refactor : what doing with `Phone*.svelte` ?
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
 - refactor(fonts): group fonts together by size
+
+- perf() $myLibAlbums in cache, because it's very slow
+- FIXME perf
+- `getMySavedAlbumsSortedRecentlyPlayed` => load myalbums => useful in mylib & artits views...
+
+```
+async function sortAlbumsBySpotify() {
+  const items = await SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed();
+  myLibAlbums.set(items);
+  }
+```
+
 - perf: mylib or search view always do call api when "backed" (eg. when goDetail)
+- perf(): test `slow 3G`
 - perf(sync): FIXME do the same with mylib ?
 - perf(list): spotify endpoint `/me/albums` is very slow...
 - perf(list): move liked track loading elsewhere ? (`MyLibView`)
@@ -167,6 +188,10 @@ Note for `private` API:
 
 - Some operation, like `sorting playlist`, are unavailable in PUBLIC API... So we can't have exactly the same functionnalities or results as `native client spotify` or `web player spotify`
 - "pinning" a playlist is unvailable too
+
+some API endpoints are broken (eg. retrieve the discography of Taylor Swift, I have no results)...
+My questions on the spotify's forum :
+https://community.spotify.com/t5/Spotify-for-Developers/Pagination-does-not-work-on-v1-artists-id-albums/m-p/5644793#M10955
 
 # commit message
 

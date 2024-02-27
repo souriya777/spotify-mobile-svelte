@@ -2,7 +2,7 @@
   import List from '@lib/List.svelte';
   import ListItemArtist from '@lib/ListItemArtist.svelte';
 
-  /** @type {import('@js/spotify').SpotifySearchArtist[]} */
+  /** @type {import('@js/spotify').SpotifyArtist[]} */
   export let items;
 </script>
 

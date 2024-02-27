@@ -470,6 +470,7 @@
       "uri": "spotify:track:0NpvdCO506uO58D4AbKzki",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 55,
       "album": {
         "id": "0NUEQILaBzavnzcMEs4buZ",
         "uri": "spotify:album:0NUEQILaBzavnzcMEs4buZ",
@@ -514,6 +515,7 @@
       "uri": "spotify:track:7sqK6f8dHVx3Q1GjFrVyGl",
       "name": "Sherry",
       "duration_ms": 152160,
+      "popularity": 64,
       "album": {
         "id": "18rFAAWrT2wzvWckYmoLnE",
         "uri": "spotify:album:18rFAAWrT2wzvWckYmoLnE",
@@ -558,6 +560,7 @@
       "uri": "spotify:track:5JgS0FY22HtNpFAJTo507k",
       "name": "Sherry Darling",
       "duration_ms": 243173,
+      "popularity": 50,
       "album": {
         "id": "6YNIEeDWqC09YIWzhoSVLg",
         "uri": "spotify:album:6YNIEeDWqC09YIWzhoSVLg",
@@ -602,6 +605,7 @@
       "uri": "spotify:track:3asQPoVfuofjPhqPtq3KDp",
       "name": "Sherry",
       "duration_ms": 152453,
+      "popularity": 27,
       "album": {
         "id": "5f7Ux7Gh4kcYnD6Iv3y685",
         "uri": "spotify:album:5f7Ux7Gh4kcYnD6Iv3y685",
@@ -646,6 +650,7 @@
       "uri": "spotify:track:11r0OH8zYLcBlryvnAiykT",
       "name": "Sherry",
       "duration_ms": 134506,
+      "popularity": 47,
       "album": {
         "id": "5sCVURwZOOd13unG0uJmNX",
         "uri": "spotify:album:5sCVURwZOOd13unG0uJmNX",
@@ -690,6 +695,7 @@
       "uri": "spotify:track:65y3zbw2h5jwh5qg3c7dAL",
       "name": "Sherry",
       "duration_ms": 151133,
+      "popularity": 35,
       "album": {
         "id": "5C695UOQoQfAoPSnXT479i",
         "uri": "spotify:album:5C695UOQoQfAoPSnXT479i",

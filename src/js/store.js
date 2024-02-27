@@ -3,14 +3,13 @@ import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
 import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
 import { DEFAULT_BACKGROUND_HIGHLIGHT_RGB } from '@js/palette-utils';
-import { LIST_SORT_TYPE } from '@js/list-sort-utils';
+import LIST_SORT_TYPE from '@js/LIST_SORT_TYPE';
 
 /**
  * @typedef {import('@js/spotify').SpotifyPlaylist} SpotifyPlaylist
  * @typedef {import('@js/spotify').SpotifyAlbum} SpotifyAlbum
  * @typedef {import('@js/spotify').SpotifyArtist} SpotifyArtist
  * @typedef {import('@js/spotify').SpotifyTrack} SpotifyTrack
- * @typedef {import('@js/spotify').SpotifySearchArtist} SpotifySearchArtist
  * @typedef {import('@js/spotify').SpotifyDevice} SpotifyDevice
  * @typedef {import('@js/spotify').SpotifySearch} SpotifySearch
  */
@@ -36,6 +35,7 @@ const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
 );
+/** @type {import('svelte/store').Writable<SpotifyTrack[]>} */
 const likedTracks = writable([]);
 const unavailableContextUri = writableLocalStorage('unavailableContextUri', []);
 
@@ -46,7 +46,7 @@ const myLibRecentlyPlayed = writable([]);
 const myLibPlaylists = writable([]);
 /** @type {import('svelte/store').Writable<SpotifyAlbum[]>} */
 const myLibAlbums = writable([]);
-/** @type {import('svelte/store').Writable<SpotifySearchArtist[]>} */
+/** @type {import('svelte/store').Writable<SpotifyArtist[]>} */
 const myLibArtists = writable([]);
 
 // DEVICE

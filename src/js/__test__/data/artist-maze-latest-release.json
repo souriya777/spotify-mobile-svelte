@@ -1,0 +1,31 @@
+{
+  "id": "4cxCLMq3xDR2B4eaNX1BeN",
+  "uri": "spotify:album:4cxCLMq3xDR2B4eaNX1BeN",
+  "name": "Songs of Innocence - Songs of Experience",
+  "release_date": "2020-12-14",
+  "album_type": "album",
+  "artists": [
+    {
+      "id": "0VCYEBxnERCSrT8NvEDLPh",
+      "name": "Children of the Maze",
+      "uri": "spotify:artist:0VCYEBxnERCSrT8NvEDLPh"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab67616d0000b2736bf13e048a39b122f81bdd61",
+      "height": 640,
+      "width": 640
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e026bf13e048a39b122f81bdd61",
+      "height": 300,
+      "width": 300
+    },
+    {
+      "url": "https://i.scdn.co/image/ab67616d000048516bf13e048a39b122f81bdd61",
+      "height": 64,
+      "width": 64
+    }
+  ]
+}
