@@ -1,4 +1,5 @@
 <script>
+  import { onTap } from '@js/event-utils';
   import List from '@lib/List.svelte';
   import CollectionItem from '@lib/ListItem.svelte';
   import SpotifyApi from '@js/SpotifyApi';
@@ -22,10 +23,10 @@
 
     <li>
       {track.uri}
-      <button on:click={() => SpotifyApi.unlikeTrack(track.id)}>🤍</button>
-      <button on:click={() => SpotifyApi.likeTrack(track.id)}>💚</button>
+      <button use:onTap={() => SpotifyApi.unlikeTrack(track.id)}>🤍</button>
+      <button use:onTap={() => SpotifyApi.likeTrack(track.id)}>💚</button>
       <button
-        on:click={() =>
+        use:onTap={() =>
           SpotifyApi.addSongToMultiplePlaylists(track.uri, [
             '3lZmcYRykUqUkjoH1tChCe',
             '5iLCxA1kjRDD9xpLD9Ym2z',
@@ -34,8 +35,8 @@
 
       {#if playlistId}
         <div>
-          <button on:click={() => move(i, i - 1)}>⬆️</button>
-          <button on:click={() => move(i, i + 1)}>⬇️</button>
+          <button use:onTap={() => move(i, i - 1)}>⬆️</button>
+          <button use:onTap={() => move(i, i + 1)}>⬇️</button>
         </div>
       {/if}
 

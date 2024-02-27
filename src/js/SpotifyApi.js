@@ -26,7 +26,7 @@ import {
   userPictureUrl,
   userDisplayName,
   trackUri,
-  forbiddenContextUri,
+  unavailableContextUri,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
@@ -60,6 +60,13 @@ import {
 } from '@js/spotify-utils';
 import SpotifyAlbum from '@js/SpotifyAlbum';
 import SpotifySearchArtist from '@js/SpotifySearchArtist';
+
+/**
+ * @typedef {import('@js/spotify').SpotifyDevice} SpotifyDevice
+ * @typedef {import('@js/spotify').SpotifySong} SpotifySong
+ * @typedef {import('@js/spotify').SpotifyAlbumTrack} SpotifyAlbumTrack
+ * @typedef {import('@js/spotify').SpotifyAlbumItemCursor} SpotifyAlbumItemCursor
+ */
 
 const LOGGER = Logger.getNewInstance('SpotifyApi.js');
 
@@ -138,7 +145,7 @@ class SpotifyApi {
     return new SpotifyUser(data);
   }
 
-  /** @param {null | import('@js/spotify').SpotifyPlayerState} playerState */
+  /** @param {null | SpotifyPlayerState} playerState */
   async synchronize(playerState = null) {
     // FIXME seems that synchronization is disrupted if we accept
     // an unique notification in perdiod of time
@@ -191,7 +198,7 @@ class SpotifyApi {
     this.#writeStoreTrackInfos(track);
   }
 
-  /** @returns {Promise<import('@js/spotify').SpotifyPlaybackState>} */
+  /** @returns {Promise<SpotifyPlaybackState>} */
   async getPlaybackState() {
     const data = await this.#get('/me/player');
     return new SpotifyPlaybackState(data);
@@ -205,7 +212,7 @@ class SpotifyApi {
     });
   }
 
-  /** @returns {Promise<import('@js/spotify').SpotifyDevice[]>} */
+  /** @returns {Promise<SpotifyDevice[]>} */
   async getAvailableDevice() {
     const data = await this.#get('/me/player/devices');
     const deviceList = new SpotifyDeviceList(data);
@@ -249,7 +256,7 @@ class SpotifyApi {
       const status = err?.response?.status;
       if (status === SpotifyStatus.FORBIDDEN) {
         // add context uri in forbidden list
-        forbiddenContextUri.update((list) => {
+        unavailableContextUri.update((list) => {
           if (!list?.find((uri) => uri === contextUri)) {
             return [...list, contextUri];
           }
@@ -315,7 +322,7 @@ class SpotifyApi {
 
   /**
    * @param {string} userId
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
+   * @returns {Promise<SpotifyPlaylist[]>}
    */
   async getPlaylistsSortedBySpotify(userId) {
     return await this.#getAllPlaylists(userId);
@@ -324,7 +331,7 @@ class SpotifyApi {
   /**
    * @param {string} userId
    * @param {boolean} reverse
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
+   * @returns {Promise<SpotifyPlaylist[]>}
    */
   async getPlaylistsSortedAlphabetically(userId, reverse = false) {
     const playlists = await this.#getAllPlaylists(userId);
@@ -335,7 +342,7 @@ class SpotifyApi {
   /**
    * @param {string} userId
    * @param {boolean} reverse
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
+   * @returns {Promise<SpotifyPlaylist[]>}
    */
   async getPlaylistsSortedByCreator(userId, reverse = false) {
     const playlists = await this.#getAllPlaylists(userId);
@@ -345,7 +352,7 @@ class SpotifyApi {
 
   /**
    * @param {string} userId
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
+   * @returns {Promise<SpotifyPlaylist[]>}
    */
   async getPlaylistsSortedAddedAtFIXME(userId) {
     const playlists = await this.#getAllPlaylists(userId);
@@ -359,8 +366,8 @@ class SpotifyApi {
   }
 
   /**
-   * @param {import('@js/spotify').SpotifyPlaylist} playlist
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist>}
+   * @param {SpotifyPlaylist} playlist
+   * @returns {Promise<SpotifyPlaylist>}
    */
   async extendPlaylistWithAddeAt(playlist) {
     const result = new SpotifyPlaylist({ ...playlist });
@@ -378,16 +385,16 @@ class SpotifyApi {
     return result;
   }
 
-  /** @returns {Promise<import('@js/spotify').SpotifyTrack[]>} */
+  /** @returns {Promise<SpotifyTrack[]>} */
   async getLikedTracks() {
-    /** @type {import('@js/spotify').SpotifySong[]} */
+    /** @type {SpotifySong[]} */
     const tracks = await this.#iterateOverCursor(`/me/tracks?limit=50`, 'SpotifySongCursor');
     return tracks?.sort(sortListByAddedAt).map((song) => song?.track);
   }
 
   /**
    * @param {string} playlistId
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist>}
+   * @returns {Promise<SpotifyPlaylist>}
    */
   async getPlaylistDetails(playlistId) {
     const result = await this.#get(`/playlists/${playlistId}`);
@@ -396,10 +403,10 @@ class SpotifyApi {
 
   /**
    * @param {string} playlistId
-   * @returns {Promise<import('@js/spotify').SpotifyTrack[]>}
+   * @returns {Promise<SpotifyTrack[]>}
    */
   async getPlaylistTracks(playlistId) {
-    /** @type {import('@js/spotify').SpotifySong[]} */
+    /** @type {SpotifySong[]} */
     const songs = await this.#iterateOverCursor(
       `/playlists/${playlistId}/tracks?limit=50`,
       'SpotifySongCursor',
@@ -409,7 +416,7 @@ class SpotifyApi {
 
   /**
    * @param {string} albumId
-   * @returns {Promise<import('@js/spotify').SpotifyAlbum}
+   * @returns {Promise<SpotifyAlbum>}
    */
   async getAlbum(albumId) {
     const album = await this.#get(`/albums/${albumId}`);
@@ -418,10 +425,10 @@ class SpotifyApi {
 
   /**
    * @param {string} albumId
-   * @returns {Promise<import('@js/spotify').SpotifyAlbumTrack[]>}
+   * @returns {Promise<SpotifyAlbumTrack[]>}
    */
   async getAlbumTracks(albumId) {
-    /** @type {import('@js/spotify').SpotifyAlbumTrack[]} */
+    /** @type {SpotifyAlbumTrack[]} */
     const tracks = await this.#iterateOverCursor(
       `/albums/${albumId}/tracks`,
       'SpotifyAlbumTrackCursor',
@@ -429,26 +436,26 @@ class SpotifyApi {
     return tracks;
   }
 
-  /** @return {Promise<import('@js/spotify').SpotifySavedAlbum[]>} */
+  /** @return {Promise<SpotifySavedAlbum[]>} */
   async getMySavedAlbumsSortedRecentlyPlayed() {
-    /** @type {import('@js/spotify').SpotifyAlbumItemCursor[]} */
+    /** @type {SpotifyAlbumItemCursor[]} */
     const albums = await this.#iterateOverCursor(`/me/albums?limit=50`, 'SpotifyAlbumCursor');
     return albums?.map((item) => new SpotifySavedAlbum(item));
   }
 
-  /** @return {Promise<import('@js/spotify').SpotifySavedAlbum[]>} */
+  /** @return {Promise<SpotifySavedAlbum[]>} */
   async getMySavedAlbumsSortedRecentlyAdded() {
-    /** @type {import('@js/spotify').SpotifySavedAlbum[]} */
+    /** @type {SpotifySavedAlbum[]} */
     const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
     return albums?.sort(sortListByAddedAt);
   }
 
   /**
    * @param {boolean} reverse
-   * @returns {Promise<import('@js/spotify').SpotifySavedAlbum[]>}
+   * @returns {Promise<SpotifySavedAlbum[]>}
    */
   async getAlbumsSortedAlphabetically(reverse = false) {
-    /** @type {import('@js/spotify').SpotifySavedAlbum[]} */
+    /** @type {SpotifySavedAlbum[]} */
     const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
     const sortFn = reverse ? sortListByNameReverse : sortListByName;
     return albums?.sort(sortFn);
@@ -456,18 +463,18 @@ class SpotifyApi {
 
   /**
    * @param {boolean} reverse
-   * @returns {Promise<import('@js/spotify').SpotifySavedAlbum[]>}
+   * @returns {Promise<SpotifySavedAlbum[]>}
    */
   async getAlbumsSortedByCreator(reverse = false) {
-    /** @type {import('@js/spotify').SpotifySavedAlbum[]} */
+    /** @type {SpotifySavedAlbum[]} */
     const albums = await this.getMySavedAlbumsSortedRecentlyPlayed();
     const sortFn = reverse ? sortAlbumtByCreatorReverse : sortAlbumtByCreator;
     return albums?.sort(sortFn);
   }
 
-  /** @return {Promise<import('@js/spotify').SpotifySearchArtist[]>} */
+  /** @return {Promise<SpotifySearchArtist[]>} */
   async getMyFollowedArtists() {
-    /** @type {import('@js/spotify').SpotifySearchArtist[]} */
+    /** @type {SpotifySearchArtist[]} */
     const artists = await this.#iterateOverCursor(
       `/me/following?type=artist&limit=50`,
       'SpotifyArtistCursor',
@@ -477,7 +484,7 @@ class SpotifyApi {
 
   /**
    * @param {boolean} reverse
-   * @returns {Promise<import('@js/spotify').SpotifySearchArtist[]>}
+   * @returns {Promise<SpotifySearchArtist[]>}
    */
   async getMyFollowedArtistsSortedAlphabetically(reverse = false) {
     const artists = await this.getMyFollowedArtists();
@@ -487,21 +494,21 @@ class SpotifyApi {
 
   /**
    * @param {string[]} artistsIds
-   * @returns {Promise<import('@js/spotify').SpotifySearchArtist[]>}
+   * @returns {Promise<SpotifySearchArtist[]>}
    */
   async getSeveralArtists(artistsIds) {
     if (!artistsIds || artistsIds.length === 0) {
       return;
     }
 
-    /** @type {import('@js/spotify').SpotifySearch} */
+    /** @type {SpotifySearch} */
     const search = await this.#get(`/artists?ids=${artistsIds.join(',')}`);
 
     const artists = search?.artists?.map((artist) => new SpotifySearchArtist(artist));
     return artists;
   }
 
-  /** @returns {Promise<import('@js/spotify').SpotifySong[]>} */
+  /** @returns {Promise<SpotifySong[]>} */
   async getRecentlyPlayedSongs() {
     const recently = await this.#iterateOverCursor(
       `/me/player/recently-played?limit=50`,
@@ -510,7 +517,7 @@ class SpotifyApi {
     return recently;
   }
 
-  /** @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>} */
+  /** @returns {Promise<(SpotifyPlaylist | SpotifyAlbum | SpotifySearchArtist)[]>} */
   async getMyLibRecentlyPlayed() {
     const SONGS = await this.getRecentlyPlayedSongs();
 
@@ -593,7 +600,7 @@ class SpotifyApi {
 
   /**
    * @param {boolean} reverse
-   *  @returns {Promise<(import('@js/spotify').SpotifyPlaylist | import('@js/spotify').SpotifyAlbum | import('@js/spotify').SpotifySearchArtist)[]>}
+   *  @returns {Promise<(SpotifyPlaylist | SpotifyAlbum | SpotifySearchArtist)[]>}
    */
   async getMyLibRecentlyPlayedSortedAlphabetically(reverse = false) {
     const recentlyPlayed = await this.getMyLibRecentlyPlayed();
@@ -602,7 +609,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('@js/spotify').SpotifyQueue>}
+   * @returns {Promise<SpotifyQueue>}
    * @throws QueueEmptyError
    */
   async getQueue() {
@@ -617,7 +624,7 @@ class SpotifyApi {
   }
 
   /**
-   * @returns {Promise<import('@js/spotify').SpotifyTrack>}
+   * @returns {Promise<SpotifyTrack>}
    * @throws QueueEmptyError
    */
   async getQueueLastSong() {
@@ -635,8 +642,8 @@ class SpotifyApi {
   }
 
   /**
-   * @param {import('@js/spotify').SpotifyPlayerState} playerStateApi
-   * @returns {import('@js/spotify').SpotifyPlayerState}
+   * @param {SpotifyPlayerState} playerStateApi
+   * @returns {SpotifyPlayerState}
    */
   extractPlayerStateFrom(playerStateApi) {
     return new SpotifyPlayerState(playerStateApi);
@@ -688,7 +695,7 @@ class SpotifyApi {
    * @param {number} offset
    * @param {number} limit
    * @param {SpotifySearch} existingSpotifySearch
-   * @returns {Promise<import('@js/spotify').SpotifySearch>}
+   * @returns {Promise<SpotifySearch>}
    */
   async search(query, offset = 0, limit = 20, existingSpotifySearch = null) {
     if (!isNotEmpty(query)) {
@@ -786,10 +793,10 @@ class SpotifyApi {
 
   /**
    * @param {string} playlistId
-   * @param {import('@js/spotify').SpotifyTrack[]} tracks
+   * @param {SpotifyTrack[]} tracks
    * @param {number} songIndex
    * @param {number} newIndex
-   * @returns {Promise<import('@js/spotify').SpotifyTrack[]>}
+   * @returns {Promise<SpotifyTrack[]>}
    */
   async moveTrackInPlaylist(playlistId, tracks, songIndex, newIndex) {
     if (isArrayEmpty(tracks)) {
@@ -824,7 +831,7 @@ class SpotifyApi {
 
   /**
    * @param {string} userId
-   * @returns {Promise<import('@js/spotify').SpotifyPlaylist[]>}
+   * @returns {Promise<SpotifyPlaylist[]>}
    */
   async #getAllPlaylists(userId) {
     return this.#iterateOverCursor(`/users/${userId}/playlists?limit=50`, 'SpotifyPlaylistCursor');
@@ -861,7 +868,7 @@ class SpotifyApi {
     return areTimestampsSeparateBy(existingTimestamp, timestamp, this.#API_NOTIFICATION_DELAY_MS);
   }
 
-  /** @param {import('@js/spotify').SpotifyPlaybackState} playbackState */
+  /** @param {SpotifyPlaybackState} playbackState */
   #writeStorePlaybackInfos(playbackState) {
     shuffleState.set(playbackState?.shuffle_state);
     repeatState.set(playbackState?.repeat_state);
@@ -869,7 +876,7 @@ class SpotifyApi {
     progressMs.set(playbackState?.progress_ms);
   }
 
-  /** @param {import('@js/spotify').SpotifyTrack} track */
+  /** @param {SpotifyTrack} track */
   #writeStoreTrackInfos(track) {
     trackUri.set(track?.uri);
     trackName.set(track?.name);

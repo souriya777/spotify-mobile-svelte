@@ -11,7 +11,7 @@
   <div class="top">
     <div class="left">
       <User userPictureUrl={$userPictureUrl} />
-      <div class="title font-title">{title}</div>
+      <div class="title font-2_4 line-height-normal font-bold">{title}</div>
     </div>
 
     <slot name="right" />
@@ -26,7 +26,7 @@
     flex-direction: column;
     padding-block: 4rem 2rem;
     padding-inline: var(--padding-inline-view-content);
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.4);
   }
 
   .top {

@@ -6,6 +6,7 @@
    * @param {string} playlistId
    */
 
+  import { onTap } from '@js/event-utils';
   import SpotifyApi from '@js/SpotifyApi';
 
   export let playlistId;
@@ -15,4 +16,4 @@
   }
 </script>
 
-<button on:click={deletePlaylist}>-playlist</button>
+<button use:onTap={deletePlaylist}>-playlist</button>

@@ -6,6 +6,8 @@
     sortByHighToLowContrast,
     lightenDarkenColor,
     DEFAULT_BACKGROUND_HIGHLIGHT_RGB,
+    DEFAULT_TEXT_RGB,
+    DARKER_FACTOR,
   } from '@js/palette-utils';
   import { navigatingRgb, playingRgb } from '@js/store';
   import ColorThief from 'colorthief';
@@ -20,10 +22,8 @@
    */
 
   export let imageUrl;
-  export let textColor = [255, 255, 255];
+  export let textColor = DEFAULT_TEXT_RGB;
   export let isPlayingRgb = true;
-
-  const DARKER_FACTOR = -20;
 
   /** @type {HTMLImageElement} */
   let imgHtml;
@@ -70,6 +70,7 @@
   // $: blendContrastDarkerColorStyle = `background-color: rgb(${blendContrastDarkerColor[0]}, ${blendContrastDarkerColor[1]}, ${blendContrastDarkerColor[2]})`;
 
   function getDominantColor() {
+    // @ts-ignore
     const colorThief = new ColorThief();
     const color = colorThief.getColor(imgHtml);
     dominantColor = [...color];

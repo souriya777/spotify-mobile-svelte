@@ -1,6 +1,7 @@
 <script>
+  import { viewName, searchRecent } from '@js/store';
+  import { updateRecentSearch } from '@js/spotify-utils';
   import SpotifyApi from '@js/SpotifyApi';
-  import { updateRecentSearch } from '@js/view-utils';
   import ListItem from '@lib/ListItem.svelte';
 
   /** @type {import('@js/spotify').SpotifyTrack} */
@@ -20,7 +21,7 @@
   imageAlt={item?.name}
   {hasClear}
   callbackFn={() => {
-    updateRecentSearch(item);
+    $searchRecent = updateRecentSearch($viewName, $searchRecent, item);
 
     SpotifyApi.playTrack(item?.uri);
   }}

@@ -8,7 +8,7 @@
   let iconSize;
 
   $: if (big) {
-    iconName = activeDevice?.type === 'Computer' ? 'computer' : 'smartphone';
+    iconName = $activeDevice?.type === 'Computer' ? 'computer' : 'smartphone';
     iconSize = 14;
   } else {
     iconName = 'device-listened';

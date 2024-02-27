@@ -5,8 +5,8 @@ import { likedTracks } from '@js/store';
 const LOGGER = Logger.getNewInstance('sync-utils.js');
 
 async function loadVitalData() {
-  //
-  console.log('loadVitalData');
+  console.log('FIXME loadVitalData');
+  // FIXME do the same with mylib ?
   loadLikedTracks();
 }
 

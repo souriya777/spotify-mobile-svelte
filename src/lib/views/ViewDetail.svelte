@@ -1,5 +1,6 @@
 <script>
   import { afterUpdate, onDestroy, onMount } from 'svelte';
+  import { onTap } from '@js/event-utils';
   import SpotifyApi from '@js/SpotifyApi';
   import {
     isNavigatingHasPriority,
@@ -39,17 +40,18 @@
 
   $: IMG_HEIGHT = IMG_HTML?.clientHeight ?? 0;
   $: DARKER_COLOR = $navigatingRgb ? lightenDarkenColor($navigatingRgb, -40) : [18, 18, 18];
+  $: HALF_PLAY_PAUSE_BUTTON_HEIGHT = PLAY_PAUSE_BUTTON_HEIGHT / 2;
   $: canDarkenHeaderBackground = $scrollTop >= NB_PX_BEFORE_CHANGE_HEADER_BACKGROUND;
   $: descReachedHeader = IMG_HEIGHT != 0 && $scrollTop >= IMG_HEIGHT;
+  $: initialTranslateYPlayPause = GRADIENT_HEIGHT - PLAY_PAUSE_BUTTON_HEIGHT;
+  $: canDisplayFakePlayPauseButton = $scrollTop >= initialTranslateYPlayPause;
+
   $: headerStyle = canDarkenHeaderBackground ? `background: rgb(${DARKER_COLOR})` : '';
   $: style = `
     --color-base: rgb(${$navigatingRgb?.join(',')});
     --color-darker: rgb(${DARKER_COLOR?.join(',')});
     --height-desc: -${DESC_HEIGHT}px;
   `;
-  $: HALF_PLAY_PAUSE_BUTTON_HEIGHT = PLAY_PAUSE_BUTTON_HEIGHT / 2;
-  $: initialTranslateYPlayPause = GRADIENT_HEIGHT - PLAY_PAUSE_BUTTON_HEIGHT;
-  $: canDisplayFakePlayPauseButton = $scrollTop >= initialTranslateYPlayPause;
 
   $: if (canDisplayFakePlayPauseButton) {
     const translateY = Math.min(
@@ -82,9 +84,7 @@
 
 <div class="view" {style}>
   <div class="header" style={headerStyle} bind:this={HEADER_HTML}>
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="back" on:click={() => $slidePrevAndRemoveForMe?.()}>
+    <div class="back" use:onTap={() => $slidePrevAndRemoveForMe?.()}>
       <Svg name="back" size={16} />
     </div>
     <DetailTitle {title} canAnimate={descReachedHeader} coverHeight={IMG_HEIGHT} />
@@ -100,19 +100,19 @@
     </div>
 
     <div class="desc" bind:this={DESC_HTML}>
-      <div class="font-collection-detail-title">
+      <div class="font-2_4 font-bold line-height-1_1">
         <slot name="desc__title" />
       </div>
 
-      <div class="desc__detail two-rows font-collection-detail">
+      <div class="desc__detail two-rows font-1_3 tertiary">
         <slot name="desc__detail" />
       </div>
 
-      <div class="desc__owner font-collection-detail-owner">
+      <div class="desc__owner font-1_4 font-bold line-height-2_2">
         <slot name="desc__owner" />
       </div>
 
-      <div class="desc__type-year font-collection-detail-year">
+      <div class="desc__type-year font-1_4 line-height-2_2 tertiary">
         <slot name="desc__type-year" />
       </div>
 

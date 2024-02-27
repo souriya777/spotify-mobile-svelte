@@ -1,5 +1,6 @@
 <script>
   import { screenHeight } from '@js/store';
+  import { onTap } from '@js/event-utils';
 
   export const openForMe = () => (opened = true);
   export const closeForMe = () => (opened = false);
@@ -101,9 +102,7 @@
     translateY:{translateY}
     prevTranslateY:{prevTranslateY}
   </code> -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div class="listen-click-outside" on:click={clickOutside}></div>
+  <div class="listen-click-outside" use:onTap={clickOutside}></div>
   <div class="content" bind:this={CONTENT_HTML}>
     <slot />
   </div>

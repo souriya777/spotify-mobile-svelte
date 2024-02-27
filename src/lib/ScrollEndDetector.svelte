@@ -4,16 +4,14 @@
   /** @type {HTMLElement} */
   let END_HTML;
 
-  function detectEnd(entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        callback?.();
-      }
-    });
-  }
-
   function observeEnd(node) {
-    const observer = new IntersectionObserver(detectEnd);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          callback?.();
+        }
+      });
+    });
     observer.observe(node);
     return {
       destroy: () => observer.disconnect(),

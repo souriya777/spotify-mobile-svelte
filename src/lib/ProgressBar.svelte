@@ -1,6 +1,7 @@
 <script>
   import { durationMs, progressMs, playing } from '@js/store';
   import SpotifyApi from '@js/SpotifyApi';
+  import { onTap } from '@js/event-utils';
 
   export let isMini = false;
 
@@ -87,7 +88,7 @@
 
 <!-- DEBUG -->
 <!-- <button
-  on:click={() => {
+  use:onTap={() => {
     $player.activateElement();
     SpotifyApi.synchronize();
   }}>🟢🟢🟢sync</button
@@ -110,11 +111,8 @@
   class:progressbarNormal={!isMini}
   class:progressbarMini={isMini}
   {style}
-  on:click={clickProgressBar}
-  on:keyup={clickProgressBar}
+  use:onTap={clickProgressBar}
   bind:this={progressBarHtml}
-  role="button"
-  tabindex="0"
 >
   {#key reloadTimestamp}
     <div class="progress animation" style={animationStyle} bind:this={progressHtml}></div>

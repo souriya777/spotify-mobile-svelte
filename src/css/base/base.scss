@@ -96,11 +96,40 @@ ul {
 
 .secondary {
   color: var(--color-secondary);
+}
+
+.tertiary {
   color: var(--color-tertiary);
 }
 
-.text-accent {
+.accent {
   color: var(--color-accent);
+}
+
+.line-height-normal {
+  line-height: normal;
+}
+
+.line-height-1_1 {
+  line-height: 1.1;
+}
+
+.line-height-2_2 {
+  line-height: 2.2rem;
+}
+
+.one-row {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.two-rows {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .accent-area {
@@ -124,18 +153,4 @@ ul {
 
 .prevent-click {
   pointer-events: none;
-}
-
-.one-row {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-}
-
-.two-rows {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
 }

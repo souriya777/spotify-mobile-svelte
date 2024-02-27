@@ -1,4 +1,5 @@
 const DEFAULT_BACKGROUND_RGB = [18, 18, 18];
+const DEFAULT_TEXT_RGB = [255, 255, 255];
 const DEFAULT_BACKGROUND_ELEVATED_RGB = [26, 26, 26];
 const DEFAULT_BACKGROUND_HIGHLIGHT_RGB = [40, 40, 40];
 const BLENDED_COLOR_AFTER_START_COLOR_INDEX = 1;
@@ -7,6 +8,7 @@ const RED_LUMINANCE = 0.2126;
 const GREEN_LUMINANCE = 0.7152;
 const BLUE_LUMINANCE = 0.0722;
 const GAMMA = 2.4;
+const DARKER_FACTOR = -20;
 
 /**
  * @param {Array.<number, number, number>} rgb
@@ -196,8 +198,10 @@ export {
   _calculateRgbFactors,
   _blendPalette,
   DEFAULT_BACKGROUND_RGB,
+  DEFAULT_TEXT_RGB,
   DEFAULT_BACKGROUND_ELEVATED_RGB,
   DEFAULT_BACKGROUND_HIGHLIGHT_RGB,
+  DARKER_FACTOR,
   generatePalette,
   getPlayerBackgroundRgb,
   hasMinimumContrast,

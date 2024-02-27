@@ -1,6 +1,7 @@
 <script>
   import { onDestroy, onMount } from 'svelte';
   import { isScreenLocked } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import NoSleep from 'nosleep.js';
 
   const REFRESH_MS = 5000;
@@ -80,17 +81,17 @@
 <div>
   {log}
   {#if lock != null}
-    <button bind:this={button} on:click={releaseLock}>🪟</button>
+    <button bind:this={button} use:onTap={releaseLock}>🪟</button>
   {:else}
-    <button bind:this={button} on:click={requestLockScreen}>🔒</button>
+    <button bind:this={button} use:onTap={requestLockScreen}>🔒</button>
   {/if}
   {lock}
 
   <div>
     {#if $isScreenLocked}
-      <button on:click={sleep}>😴</button>
+      <button use:onTap={sleep}>😴</button>
     {:else}
-      <button on:click={awake}>🥱</button>
+      <button use:onTap={awake}>🥱</button>
     {/if}
     {$isScreenLocked}
   </div>

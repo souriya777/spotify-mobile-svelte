@@ -11,6 +11,7 @@
     durationMs,
     resizeTimestamp,
   } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import { millisToMinuteSecond } from '@js/time-utils';
   import SpotifyApi from '@js/SpotifyApi';
   import SpotifyRepeatState from '@js/SpotifyRepeatState';
@@ -37,7 +38,7 @@
 
 {#key $resizeTimestamp}
   <div class="player" bind:this={playerHtml}>
-    <div class="bar" role="button" tabindex="0" on:click={minimizePlayer} on:keyup={minimizePlayer}>
+    <div class="bar" use:onTap={minimizePlayer}>
       <Button
         type="primary"
         svg="charette-down"
@@ -45,7 +46,7 @@
         hasAccent={false}
         callback={minimizePlayer}
       />
-      <p class="font-player-small">Liked Songs</p>
+      <p class="font-1_2">Liked Songs</p>
       <Button
         type="primary"
         svg="three-dots"
@@ -60,7 +61,7 @@
     <div class="song">
       <div class="song__text">
         <ScrollingText>
-          <div class="track font-title">{$trackName}</div>
+          <div class="track line-height-normal font-2_4 font-bold">{$trackName}</div>
         </ScrollingText>
         <ScrollingText>
           <div class="artist">{$artistsDisplay}</div>
@@ -90,7 +91,7 @@
 
     <div class="progress">
       <ProgressBar />
-      <div class="time font-player-small">
+      <div class="time font-1_2">
         <div class="begin">{progress_m_ss}</div>
         <div class="end">{duration_m_ss}</div>
       </div>

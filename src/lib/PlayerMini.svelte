@@ -10,6 +10,7 @@
     trackName,
     artistsDisplay,
   } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import Img from '@lib/Img.svelte';
   import Button from '@lib/Button.svelte';
   import Svg from '@lib/svg/Svg.svelte';
@@ -38,15 +39,7 @@
   }
 </script>
 
-<div
-  class="player-mini font-player-mini"
-  {style}
-  role="button"
-  tabindex="0"
-  on:click={expandPlayer}
-  on:keyup={expandPlayer}
-  bind:this={playerMiniHtml}
->
+<div class="player-mini font-1_3" {style} use:onTap={expandPlayer} bind:this={playerMiniHtml}>
   <div class="img">
     {#if $imageMiniUrl}
       <Img src={$imageMiniUrl} alt={$albumName} radius={true} />
@@ -61,7 +54,7 @@
     <span class="artist">{$artistsDisplay}</span>
 
     <svelte:fragment slot="bottom">
-      <p class="device-name font-player-mini__device">
+      <p class="device-name font-1_1">
         <ActiveDeviceName />
       </p>
     </svelte:fragment>

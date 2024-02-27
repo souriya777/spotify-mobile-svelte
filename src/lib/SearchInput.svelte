@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { onClick, onTap } from '@js/event-utils';
   import { isNotEmpty } from '@js/string-utils';
   import { searchQuery } from '@js/store';
   import { debounce } from '@js/souriya-utils';
@@ -41,31 +42,28 @@
 </script>
 
 <div class="search-input" class:focused>
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div class="input-container" on:click={focus}>
+  <div class="input-container" use:onClick={focus}>
     <div class="icon begin">
       <Svg name="loupe" />
     </div>
     <input
       type="text"
       placeholder="What do you want to listen to?"
-      class:font-search-input-focus={focused}
+      class:font-1_4={focused}
+      class:line-height-2_2={focused}
       bind:value={$searchQuery}
       bind:this={INPUT_HTML}
       on:input={valid}
       on:focus
     />
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="icon end" on:click={clear}>
+    <div class="icon end" use:onTap={clear}>
       {#if isNotEmpty($searchQuery)}
         <Svg name="cross" />
       {/if}
     </div>
   </div>
 
-  <button class="font-search-cancel" on:click={cancel}>Cancel</button>
+  <button class="font-1_4 line-height-2_2" use:onTap={cancel}>Cancel</button>
 </div>
 
 <style>

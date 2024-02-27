@@ -1,5 +1,6 @@
 <script>
   import Svg from '@lib/svg/Svg.svelte';
+  import { onTap } from '@js/event-utils';
 
   export let callback;
   export let canCallback = true;
@@ -14,10 +15,11 @@
   export let reverseAccent = false;
   export let bubbleMini = false;
   export let bubbleNano = false;
-  export let bubble = false || bubbleMini || bubbleNano;
+  export let bubble = bubbleMini || bubbleNano;
   export let bottomDot = false;
 
   const BOTTOM_DOT_HALF_SIZE_PX = 4;
+
   let bottomDotStyle = '';
 
   $: if (bottomDot) {
@@ -41,7 +43,7 @@
       return;
     }
 
-    callback();
+    callback?.();
 
     if (hasAccent) {
       accent = !accent;
@@ -58,9 +60,9 @@
   class:bubble
   class:bubbleMini
   class:bubbleNano
-  class:font-button-filled={filled}
+  class:font-1_3={filled}
   {style}
-  on:click|stopPropagation={handleClick}
+  use:onTap={handleClick}
 >
   {#if svg}
     <span class="icon">

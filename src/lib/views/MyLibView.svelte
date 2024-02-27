@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { onTap } from '@js/event-utils';
   import {
     displayFilterMyLib,
     gridMode,
@@ -91,9 +92,7 @@
     <div class="sort">
       <ListSortButton />
     </div>
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div on:click={() => ($gridMode = !$gridMode)}>
+    <div use:onTap={() => ($gridMode = !$gridMode)}>
       {#if $gridMode}
         <Svg name="list-mode" size={DISPLAY_MODE_ICON_SIZE} />
       {:else}

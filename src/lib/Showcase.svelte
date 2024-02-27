@@ -8,7 +8,7 @@
 
 <div class="showcase">
   normal
-  <div class="text-accent">accent</div>
+  <div class="accent">accent</div>
   <div class="accent-area">accent-area</div>
   <div class="highlight-area">highlight-area</div>
 

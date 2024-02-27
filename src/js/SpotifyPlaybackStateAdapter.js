@@ -1,6 +1,6 @@
 import SpotifyTrack from '@js/SpotifyTrack';
 import SpotifyPlaybackState from '@js/SpotifyPlaybackState';
-import SpotifyRepeatMode from './SpotifyRepeatMode';
+import SpotifyRepeatMode from '@js/SpotifyRepeatMode';
 
 class SpotifyPlaybackStateAdapter {
   /**

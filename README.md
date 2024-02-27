@@ -12,9 +12,8 @@ DRY -> Single Source of Truth
 
 # MVP
 
-- t.u. searchResulte increment
-  -- feat(artist-detail): ui/ux
-
+- code review
+- feat(artist-detail): ui/ux
 - feat(artist-detail): js
 - search in playlist
 - fix(playlist): spotify bug "recently-added" order
@@ -24,6 +23,7 @@ DRY -> Single Source of Truth
 - feat(album): can favorite song
 - feat(liked-song): which api call to know if a song is in favourite ?
   => CollectionAlbumTrackSECONDARY_ACTION.svelte
+- feat(liked): can browse Liked playlist
 - feat(playlist): what to do with secondary actions ? `CollectionTrackSECONDARY_ACTIONS.svelte`
 - remove `Collection*`
 - feat(liked-song): can unlike song
@@ -72,18 +72,19 @@ DRY -> Single Source of Truth
 - fix `BetaLikedImg`
 - TODO/FIXME uncomment
 - in SpotifyApi => `// FIXME sometimes we have error
-// [spotify-player.js]: Failed to perform playback: Cannot perform operation; no list was loaded.`
+- remove Showcase.svelte
+  // [spotify-player.js]: Failed to perform playback: Cannot perform operation; no list was loaded.`
 - ux(loading) : add spotify logo (ball)
 - ui(accessibility): implement accessibility (eg. `aria-hidden`) ?
 - -- refactor: detailImage => <NoteSvg size={64} />
 - refactor <div> click by <Button>
+- improvement -- small left shadow on listFilter 1st item
 - feat(token): refresh-token for new token => prevent redirect ?
-- refactor(aria): remove all `role="button"` ?
-- refactor(solver): remove old solver
-- refactor(button): use use:onTap
+- refactor : what doing with `Phone*.svelte` ?
 - refactor(string-utils): found in code where can I use `isEmpty` from `string-utils`
 - refactor(fonts): group fonts together by size
 - perf: mylib or search view always do call api when "backed" (eg. when goDetail)
+- perf(sync): FIXME do the same with mylib ?
 - perf(list): spotify endpoint `/me/albums` is very slow...
 - perf(list): move liked track loading elsewhere ? (`MyLibView`)
 - perf(user-profile): picture in cache ?

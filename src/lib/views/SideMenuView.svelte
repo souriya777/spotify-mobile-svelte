@@ -1,5 +1,6 @@
 <script>
   import { isSideMenuVisible } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import ViewRoot from '@lib/views/ViewRoot.svelte';
   import Showcase from '@lib/Showcase.svelte';
   import SpotifyApi from '@js/SpotifyApi';
@@ -23,6 +24,6 @@
 <ViewRoot>
   <div class="side-menu" class:visible={$isSideMenuVisible} use:observeVisible>
     <Showcase />
-    <button on:click={SpotifyApi.forceAuthorization}>🗑️ FORCE</button>
+    <button use:onTap={SpotifyApi.forceAuthorization}>🗑️ FORCE</button>
   </div>
 </ViewRoot>

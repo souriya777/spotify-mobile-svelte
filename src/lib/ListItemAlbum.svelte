@@ -1,5 +1,7 @@
 <script>
-  import { goDetail, updateRecentSearch } from '@js/view-utils';
+  import { viewName, searchRecent } from '@js/store';
+  import { updateRecentSearch } from '@js/spotify-utils';
+  import { goDetail } from '@js/view-utils';
   import ListItem from '@lib/ListItem.svelte';
 
   /** @type {import('@js/spotify').SpotifyAlbum} */
@@ -19,7 +21,7 @@
   imageAlt={item?.name}
   {hasClear}
   callbackFn={() => {
-    updateRecentSearch(item);
+    $searchRecent = updateRecentSearch($viewName, $searchRecent, item);
 
     goDetail('AlbumView', {
       id: item?.id,

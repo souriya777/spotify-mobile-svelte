@@ -1,5 +1,6 @@
 <script>
   import { serviceWorkerNotification } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import Logger from '@js/Logger';
 
   const LOGGER = Logger.getNewInstance('RegisterServiceWorker.svelte');
@@ -42,6 +43,6 @@
 {#if displayRefresh}
   <div>
     A new version of the app is available.
-    <button on:click={refreshServiceWorker}>Refresh to update</button>
+    <button use:onTap={refreshServiceWorker}>Refresh to update</button>
   </div>
 {/if}

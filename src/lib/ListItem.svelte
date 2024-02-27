@@ -1,8 +1,15 @@
 <script>
-  import { trackUri, playing, forbiddenContextUri, contextUri, clearRecentSearch } from '@js/store';
+  import {
+    trackUri,
+    playing,
+    unavailableContextUri,
+    contextUri,
+    clearRecentSearch,
+  } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import ImgMini from '@lib/ImgMini.svelte';
   import DefaultArtistSvg from '@lib/svg/DefaultArtistSvg.svelte';
-  import AnimatedEqualizer from './AnimatedEqualizer.svelte';
+  import AnimatedEqualizer from '@lib/AnimatedEqualizer.svelte';
   import { onMount } from 'svelte';
   import Svg from '@lib/svg/Svg.svelte';
 
@@ -17,30 +24,22 @@
   export let hideImage = false;
   export let hasClear = false;
 
-  let isDeactivateBecauseForbidden = false;
+  let isUnvailable = false;
 
   $: isCurrentlyPlaying = $trackUri === uri;
 
   onMount(() => {
-    isDeactivateBecauseForbidden = $forbiddenContextUri.find((uri) => uri === $contextUri) != null;
+    isUnvailable = $unavailableContextUri.find((uri) => uri === $contextUri) != null;
   });
 
   function handleClick() {
-    if (!isDeactivateBecauseForbidden) {
+    if (!isUnvailable) {
       callbackFn?.();
     }
   }
 </script>
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<li
-  class="list-item"
-  class:hideImage
-  class:bubbleImage
-  class:isDeactivateBecauseForbidden
-  on:click={handleClick}
->
+<li class="list-item" class:hideImage class:bubbleImage class:isUnvailable use:onTap={handleClick}>
   {#if !hideImage}
     <div class="img">
       {#if bubbleImage}
@@ -56,20 +55,18 @@
   {/if}
 
   <div class="text">
-    <div class="name one-row font-list__title" class:isCurrentlyPlaying>
+    <div class="name one-row line-height-2_2" class:isCurrentlyPlaying>
       {#if isCurrentlyPlaying}
         <AnimatedEqualizer pause={!$playing} />
       {/if}
       {title}
     </div>
     <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-    <div class="owner one-row font-list__owner">{@html owner}</div>
+    <div class="owner one-row font-1_4 line-height-2_2">{@html owner}</div>
   </div>
 
   {#if hasClear}
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="cross" on:click|stopPropagation={() => clearRecentSearch(uri)}>
+    <div class="cross" use:onTap={() => clearRecentSearch(uri)}>
       <Svg name="cross" size={16} />
     </div>
   {/if}
@@ -98,7 +95,7 @@
     color: var(--color-accent);
   }
 
-  .isDeactivateBecauseForbidden {
+  .isUnvailable {
     opacity: 0.4;
   }
 

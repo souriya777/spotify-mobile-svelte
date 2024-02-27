@@ -3,6 +3,7 @@
   import CollectionItem from '@lib/ListItem.svelte';
   import SpotifyApi from '@js/SpotifyApi';
   import AddToPlaylist from '@lib/AddToPlaylist.svelte';
+  import { onTap } from '@js/event-utils';
 
   /** @type {import('@js/spotify').SpotifyAlbumTrack[]} */
   export let items;
@@ -14,10 +15,10 @@
 
     <li>
       {track.uri}
-      <button on:click={() => SpotifyApi.unlikeTrack(track.id)}>🤍</button>
-      <button on:click={() => SpotifyApi.likeTrack(track.id)}>💚</button>
+      <button use:onTap={() => SpotifyApi.unlikeTrack(track.id)}>🤍</button>
+      <button use:onTap={() => SpotifyApi.likeTrack(track.id)}>💚</button>
       <button
-        on:click={() =>
+        use:onTap={() =>
           SpotifyApi.addSongToMultiplePlaylists(track.uri, [
             '3lZmcYRykUqUkjoH1tChCe',
             '5iLCxA1kjRDD9xpLD9Ym2z',

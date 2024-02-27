@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import { onTap } from '@js/event-utils';
   import {
     displayFilterSearch,
     isNavigatingHasPriority,
@@ -184,12 +185,10 @@
           {:else if $displayFilterSearch.playlistActive}
             <ListPlaylist items={playlists} />
           {:else}
-            <!-- svelte-ignore a11y-no-static-element-interactions -->
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <ListAll items={RESULTS} hasPrefix={true}>
               <div class="view-all" slot="end">
                 {#if $searchViewAll === false}
-                  <div on:click={viewAll}>
+                  <div use:onTap={viewAll}>
                     View all results for &lsquo;{$searchQuery}&rsquo;
                   </div>
                 {/if}

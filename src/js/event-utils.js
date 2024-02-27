@@ -1,6 +1,23 @@
+function onClick(node, callback) {
+  function myEvent(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    callback();
+  }
+
+  node.addEventListener('click', myEvent);
+
+  return {
+    destroy() {
+      node.removeEventListener('click', myEvent);
+    },
+  };
+}
+
 function onTap(node, callback) {
   function myEvent(e) {
     e.stopPropagation();
+    e.preventDefault();
     callback();
   }
 
@@ -15,4 +32,4 @@ function onTap(node, callback) {
   };
 }
 
-export { onTap };
+export { onClick, onTap };

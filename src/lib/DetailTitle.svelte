@@ -37,7 +37,7 @@
   `;
 </script>
 
-<div class="font-collection-detail-header" {style} bind:this={TITLE_HTML}>
+<div class="font-bold" {style} bind:this={TITLE_HTML}>
   {title}
 </div>
 

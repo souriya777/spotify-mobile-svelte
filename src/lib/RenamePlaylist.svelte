@@ -1,4 +1,5 @@
 <script>
+  import { onTap } from '@js/event-utils';
   import SpotifyApi from '@js/SpotifyApi';
 
   export let playlistId;
@@ -14,4 +15,4 @@
 </script>
 
 <input type="text" bind:value={newName} />
-<button on:click={rename}>rename🔴</button>
+<button use:onTap={rename}>rename🔴</button>

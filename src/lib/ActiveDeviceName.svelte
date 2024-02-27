@@ -1,11 +1,11 @@
 <script>
   import { activeDevice } from '@js/store';
-  import DeviceIcon from './DeviceIcon.svelte';
+  import DeviceIcon from '@lib/DeviceIcon.svelte';
 
   export let bigIcon = false;
 </script>
 
-<div class="active-device-name" class:font-player-small={bigIcon}>
+<div class="active-device-name" class:font-1_2={bigIcon}>
   {#if $activeDevice?.name}
     &nbsp;
     <span class="active-device-name__listen">

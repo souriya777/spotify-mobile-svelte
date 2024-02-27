@@ -1,33 +1,33 @@
 <script>
   import { fade } from 'svelte/transition';
-
-  import { searchFullMode, recentSearch, searchQuery } from '@js/store';
+  import { searchFullMode, searchRecent, searchQuery } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import { isEmpty } from '@js/string-utils';
   import ListAll from '@lib/ListAll.svelte';
 
-  $: hasRecentSearch = $recentSearch?.length > 0;
+  $: hasRecentSearch = $searchRecent?.length > 0;
   $: canShowRecentSearch = hasRecentSearch && $searchFullMode && isEmpty($searchQuery);
 
   function clearRecentSearch() {
-    $recentSearch = [];
+    $searchRecent = [];
   }
 </script>
 
 {#if canShowRecentSearch}
   <div class="recent-search" transition:fade={{ delay: 250, duration: 0.1 }}>
-    <p class="font-recent-search">Recent searches</p>
-    <ListAll items={$recentSearch} hasPrefix={true} hasClear={true} />
+    <p class="font-bold font-1_8">Recent searches</p>
+    <ListAll items={$searchRecent} hasPrefix={true} hasClear={true} />
 
     {#if hasRecentSearch}
-      <div class="clear font-recent-search-clear">
-        <button on:click={clearRecentSearch}>Clear recent searches</button>
+      <div class="clear font-1_3 font-bold">
+        <button use:onTap={clearRecentSearch}>Clear recent searches</button>
       </div>
     {/if}
   </div>
 {:else if isEmpty($searchQuery)}
   <div class="no-recent">
-    <p class="font-search-no-result-title">Play what you love</p>
-    <p class="font-search-no-result-subtitle">Search for artists, songs, albums and more.</p>
+    <p class="font-2_4 font-bold">Play what you love</p>
+    <p class="font-1_3">Search for artists, songs, albums and more.</p>
   </div>
 {/if}
 

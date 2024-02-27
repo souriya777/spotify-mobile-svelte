@@ -1,3 +1,14 @@
+/**
+ * @typedef {import('@js/spotify').SpotifyPlaylist} SpotifyPlaylist
+ * @typedef {import('@js/spotify').SpotifyAlbum} SpotifyAlbum
+ * @typedef {import('@js/spotify').SpotifyArtist} SpotifyArtist
+ * @typedef {import('@js/spotify').SpotifyTrack} SpotifyTrack
+ */
+
+const SPOTIFY_FIRST_RESULTS_LIMIT = 4;
+const SUGGESTIONS_MAX = 4;
+const SUGGESTIONS_MAX_BY_CATEGORY = 2;
+const OFFSET_INCREMENT = 3;
 const SPOTIFY_LIKED_IMAGES_API = [
   {
     url: '/liked-songs-64.png',
@@ -10,10 +21,6 @@ const SPOTIFY_LIKED_IMAGES_API = [
     width: 300,
   },
 ];
-const SPOTIFY_FIRST_RESULTS_LIMIT = 4;
-const SUGGESTIONS_MAX = 4;
-const SUGGESTIONS_MAX_BY_CATEGORY = 2;
-const OFFSET_INCREMENT = 3;
 
 const sortListByName = (a, b) => a.name.localeCompare(b.name);
 
@@ -37,6 +44,26 @@ const sortAlbumtByCreatorReverse = (a, b) =>
 
 function sortImagesBySizeAsc(images) {
   return images?.sort((a, b) => a.width - b.width);
+}
+
+/**
+ * @param {string} viewName
+ * @param {Array<SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist>} searchRecent
+ * @param {SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist} spotifyItem
+ * @returns {Array<SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist>}
+ */
+function updateRecentSearch(viewName, searchRecent, spotifyItem) {
+  if (!viewName || !searchRecent || !spotifyItem) {
+    return;
+  }
+
+  const alreadyExists = searchRecent?.findIndex((item) => item?.uri === spotifyItem?.uri) !== -1;
+
+  if (viewName === 'search' && !alreadyExists) {
+    return [...searchRecent, { ...spotifyItem }];
+  }
+
+  return searchRecent;
 }
 
 /**
@@ -97,9 +124,9 @@ function extractSuggestionsFromSpotifySearch(searchQuery, spotifySearch) {
 }
 
 export {
-  SPOTIFY_LIKED_IMAGES_API,
   SPOTIFY_FIRST_RESULTS_LIMIT,
   OFFSET_INCREMENT,
+  SPOTIFY_LIKED_IMAGES_API,
   sortListByName,
   sortListByNameReverse,
   sortListByAddedAt,
@@ -109,5 +136,6 @@ export {
   sortAlbumtByCreator,
   sortAlbumtByCreatorReverse,
   sortImagesBySizeAsc,
+  updateRecentSearch,
   extractSuggestionsFromSpotifySearch,
 };

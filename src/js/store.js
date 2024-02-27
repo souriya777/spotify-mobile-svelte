@@ -3,7 +3,7 @@ import { createDisplayFilter, writableLocalStorage } from '@js/store-utils';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
 import { HOME_DEFAULT_VIEWS, MY_LIB_DEFAULT_VIEWS, SEARCH_DEFAULT_VIEWS } from '@js/view-utils';
 import { DEFAULT_BACKGROUND_HIGHLIGHT_RGB } from '@js/palette-utils';
-import { LIST_SORT_IDS } from '@js/list-sort-utils';
+import { LIST_SORT_TYPE } from '@js/list-sort-utils';
 
 /**
  * @typedef {import('@js/spotify').SpotifyPlaylist} SpotifyPlaylist
@@ -31,14 +31,13 @@ const albumUri = writable('');
 const albumName = writable('');
 const imageMiniUrl = writable('');
 const imageCoverUrl = writable('');
-const imageBigUrl = writable('');
 /** @type {import('svelte/store').Writable<SpotifyArtist[]>} */
 const artists = writable([]);
 const artistsDisplay = derived(artists, ($artists) =>
   $artists?.map((item) => item.name).join(', '),
 );
 const likedTracks = writable([]);
-const forbiddenContextUri = writableLocalStorage('forbiddenContextUri', []);
+const unavailableContextUri = writableLocalStorage('unavailableContextUri', []);
 
 // MY LIB
 /** @type {import('svelte/store').Writable<(SpotifyPlaylist | SpotifyAlbum | SpotifyArtist)[]>} */
@@ -65,15 +64,16 @@ const appReady = derived(
   ([$authorizationOk, $accessToken, $deviceId]) => $authorizationOk && $accessToken && $deviceId,
 );
 const serviceWorkerNotification = writableLocalStorage('serviceWorkerNotification', false);
+
+// SEARCH
 const searchQuery = writableLocalStorage('searchQuery', '');
 const searchFullMode = writable(false);
 const searchViewAll = writable(false);
 /** @type {import('svelte/store').Writable<Array<SpotifyTrack | SpotifyArtist | SpotifyAlbum| SpotifyPlaylist>>} */
-const recentSearch = writableLocalStorage('recentSearch', []);
+const searchRecent = writableLocalStorage('searchRecent', []);
 function clearRecentSearch(uri) {
-  recentSearch.update((arr) => [...arr.filter((item) => item?.uri !== uri)]);
+  searchRecent.update((arr) => [...arr.filter((item) => item?.uri !== uri)]);
 }
-const scrollTop = writable(0);
 
 // PLAYER
 const player = writable(null);
@@ -114,6 +114,7 @@ const realTimeProgressMs = derived(
 );
 
 // UI
+const scrollTop = writable(0);
 const viewName = writableLocalStorage('viewName', 'home');
 /** @type {import('svelte/store').Writable<import('@js/internal').View[]>} */
 const VIEWS_HOME = writableLocalStorage('VIEWS_HOME', [...HOME_DEFAULT_VIEWS]);
@@ -165,7 +166,7 @@ const isSideMenuVisible = writable(false);
 const playingRgb = writable([...DEFAULT_BACKGROUND_HIGHLIGHT_RGB]);
 const navigatingRgb = writable();
 const isNavigatingHasPriority = writable(false);
-const listSortId = writable(LIST_SORT_IDS.RECENTS);
+const listSortType = writable(LIST_SORT_TYPE.RECENTS);
 const addAndSlideNextForMe = writable();
 const slidePrevAndRemoveForMe = writable();
 
@@ -194,11 +195,10 @@ export {
   albumUri,
   imageMiniUrl,
   imageCoverUrl,
-  imageBigUrl,
   artists,
   artistsDisplay,
   likedTracks,
-  forbiddenContextUri,
+  unavailableContextUri,
   myLibRecentlyPlayed,
   myLibPlaylists,
   myLibAlbums,
@@ -218,7 +218,7 @@ export {
   searchQuery,
   searchFullMode,
   searchViewAll,
-  recentSearch,
+  searchRecent,
   clearRecentSearch,
   scrollTop,
   viewName,
@@ -230,7 +230,7 @@ export {
   playingRgb,
   navigatingRgb,
   isNavigatingHasPriority,
-  listSortId,
+  listSortType,
   addAndSlideNextForMe,
   slidePrevAndRemoveForMe,
   uiTimestamp,

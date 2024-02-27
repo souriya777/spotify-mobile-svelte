@@ -61,7 +61,8 @@
     background-color: var(--color-primary-elevated);
   }
 
-  .bubble .img-container {
+  .bubble .img-container,
+  .bubble .empty-img {
     border-radius: 50%;
   }
 </style>

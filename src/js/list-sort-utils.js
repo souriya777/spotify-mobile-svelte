@@ -1,9 +1,8 @@
 import { get } from 'svelte/store';
 import { myLibRecentlyPlayed, myLibPlaylists, myLibAlbums, myLibArtists, userId } from '@js/store';
-
 import SpotifyApi from '@js/SpotifyApi';
 
-const LIST_SORT_IDS = {
+const LIST_SORT_TYPE = {
   RECENTS: 'recents',
   AZ: 'az',
   CREATOR: 'creator',
@@ -11,25 +10,25 @@ const LIST_SORT_IDS = {
 
 const LIST_SORT_OPTIONS_MAP = new Map([
   [
-    LIST_SORT_IDS.RECENTS,
+    LIST_SORT_TYPE.RECENTS,
     {
-      id: LIST_SORT_IDS.RECENTS,
+      id: LIST_SORT_TYPE.RECENTS,
       label: 'Recents',
       canReverse: false,
     },
   ],
   [
-    LIST_SORT_IDS.AZ,
+    LIST_SORT_TYPE.AZ,
     {
-      id: LIST_SORT_IDS.AZ,
+      id: LIST_SORT_TYPE.AZ,
       label: 'A-Z',
       canReverse: true,
     },
   ],
   [
-    LIST_SORT_IDS.CREATOR,
+    LIST_SORT_TYPE.CREATOR,
     {
-      id: LIST_SORT_IDS.CREATOR,
+      id: LIST_SORT_TYPE.CREATOR,
       label: 'Creator',
       canReverse: true,
     },
@@ -112,7 +111,7 @@ async function sortArtistsAlphabetically(reverse = false) {
 // }
 
 export {
-  LIST_SORT_IDS,
+  LIST_SORT_TYPE,
   LIST_SORT_OPTIONS_MAP,
   sortMyLibBySpotify,
   sortMyLibAlphabetically,

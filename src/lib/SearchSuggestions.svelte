@@ -1,5 +1,6 @@
 <script>
   import { searchQuery } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import Svg from '@lib/svg/Svg.svelte';
 
   /** @type {string[]} */
@@ -26,9 +27,7 @@
 
 <ul>
   {#each splitSuggestions as { suggestion, begin, end }}
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <li on:click={() => updateSuggestion(suggestion)}>
+    <li use:onTap={() => updateSuggestion(suggestion)}>
       <div class="icon">
         <Svg name="loupe" size={16} />
       </div>

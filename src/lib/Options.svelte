@@ -1,6 +1,7 @@
 <script>
   import { optionsFull } from '@js/store';
   import ImgCover from '@lib/ImgCover.svelte';
+  import { onTap } from '@js/event-utils';
 
   function close() {
     $optionsFull = false;
@@ -16,15 +17,7 @@
       <li>3rd actions</li>
     </ul>
   </div>
-  <div
-    class:close--visible={$optionsFull}
-    on:click={close}
-    on:keyup={close}
-    role="button"
-    tabindex="0"
-  >
-    Close
-  </div>
+  <div class:close--visible={$optionsFull} use:onTap={close}>Close</div>
 </div>
 
 <style>

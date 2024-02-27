@@ -1,5 +1,6 @@
 <script>
   import { accessToken, userId, deviceId, player, trackName } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import SpotifyApi from '@js/SpotifyApi';
 
   let _OPEN = true;
@@ -15,42 +16,42 @@
     <li>🎵song.:{$trackName}</li>
   </ul>
 
-  <button on:click={SpotifyApi.forceAuthorization}>🗑️ FORCE</button>
+  <button use:onTap={SpotifyApi.forceAuthorization}>🗑️ FORCE</button>
   <button
-    on:click={() => {
+    use:onTap={() => {
       $player.activateElement();
       SpotifyApi.synchronize();
     }}>🟢🟢🟢sync</button
   >
-  <button on:click={() => SpotifyApi.getPlaybackState()}>🟢playback-state</button>
-  <button on:click={() => SpotifyApi.getAvailableDevice()}>🟢devices</button>
-  <button on:click={() => SpotifyApi.transfertPlayback($deviceId)}> transfert-playback </button>
-  <button on:click={() => window.navigator.vibrate(200)}>vibrate</button>
-  <button on:click={() => SpotifyApi.me()}>me</button>
-  <button on:click={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
-  <button on:click={() => SpotifyApi.getMyLibRecentlyPlayed()}>my-lib-recently</button>
-  <button on:click={() => SpotifyApi.getQueue()}>queue</button>
-  <button on:click={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
-  <button on:click={() => SpotifyApi.getPlaylistsSortedBySpotify($userId)}
+  <button use:onTap={() => SpotifyApi.getPlaybackState()}>🟢playback-state</button>
+  <button use:onTap={() => SpotifyApi.getAvailableDevice()}>🟢devices</button>
+  <button use:onTap={() => SpotifyApi.transfertPlayback($deviceId)}> transfert-playback </button>
+  <button use:onTap={() => window.navigator.vibrate(200)}>vibrate</button>
+  <button use:onTap={() => SpotifyApi.me()}>me</button>
+  <button use:onTap={() => SpotifyApi.getRecentlyPlayedSongs()}>recently-played-songs</button>
+  <button use:onTap={() => SpotifyApi.getMyLibRecentlyPlayed()}>my-lib-recently</button>
+  <button use:onTap={() => SpotifyApi.getQueue()}>queue</button>
+  <button use:onTap={() => SpotifyApi.getQueueLastSong()}>last-queue</button>
+  <button use:onTap={() => SpotifyApi.getPlaylistsSortedBySpotify($userId)}
     >playlists-recently-added</button
   >
-  <button on:click={() => SpotifyApi.getPlaylistsSortedAlphabetically($userId)}
+  <button use:onTap={() => SpotifyApi.getPlaylistsSortedAlphabetically($userId)}
     >playlists ABC</button
   >
-  <button on:click={() => SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed()}
+  <button use:onTap={() => SpotifyApi.getMySavedAlbumsSortedRecentlyPlayed()}
     >saved-albums-recently-played</button
   >
-  <button on:click={() => SpotifyApi.getMySavedAlbumsSortedRecentlyAdded()}
+  <button use:onTap={() => SpotifyApi.getMySavedAlbumsSortedRecentlyAdded()}
     >saved-albums-recently-addded</button
   >
-  <button on:click={() => SpotifyApi.getMyFollowedArtists()}>my-followed-artist</button>
+  <button use:onTap={() => SpotifyApi.getMyFollowedArtists()}>my-followed-artist</button>
   <button
-    on:click={() =>
+    use:onTap={() =>
       SpotifyApi.getSeveralArtists([
         '0PUi9O36OMwere5DTyayAq',
         '36msvw9B10rxW90NSQ2794',
         '4ACplpEqD6JIVgKrafauzs',
       ])}>several-artists</button
   >
-  <button on:click={() => SpotifyApi.disconnect()}>disconnect</button>
+  <button use:onTap={() => SpotifyApi.disconnect()}>disconnect</button>
 </details>

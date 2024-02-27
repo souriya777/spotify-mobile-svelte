@@ -1,17 +1,18 @@
 <script>
   import { viewName as viewNameStore, eventBus } from '@js/store';
   import { goRootView } from '@js/view-utils';
+  import { onTap } from '@js/event-utils';
 
   export let label;
   export let viewName;
   export let isActive = false;
 
-  $: style = `--animation: 250ms cubic-bezier(0.4, 0, 0.23, 1)`;
-
   /** @type {HTMLElement} */
   let ANIMATION_HTML;
   let bounce = false;
   let isAnimationPlayed = false;
+
+  $: style = `--animation: 250ms cubic-bezier(0.4, 0, 0.23, 1)`;
 
   function goto() {
     const IS_NAV_SEARCH_DOUBLE_CLICKED = $viewNameStore === viewName && viewName === 'search';
@@ -37,7 +38,7 @@
   }
 </script>
 
-<a href="/" on:click|preventDefault={goto}>
+<a href="/" use:onTap={goto}>
   <div
     bind:this={ANIMATION_HTML}
     class="nav-item font-small"

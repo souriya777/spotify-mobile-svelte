@@ -1,8 +1,9 @@
 <script>
-  import { listSortOptionsFull, listSortId, displayFilterMyLib } from '@js/store';
+  import { listSortOptionsFull, listSortType, displayFilterMyLib } from '@js/store';
+  import { onTap } from '@js/event-utils';
   import {
     LIST_SORT_OPTIONS_MAP,
-    LIST_SORT_IDS,
+    LIST_SORT_TYPE,
     sortPlaylistsBySpotify,
     sortPlaylistsAlphabetically,
     sortPlaylistsByCreator,
@@ -18,47 +19,47 @@
 
   const SVG_SIZE = 16;
   const SORT_ASC = {
-    [LIST_SORT_IDS.AZ]: true,
-    [LIST_SORT_IDS.CREATOR]: true,
+    [LIST_SORT_TYPE.AZ]: true,
+    [LIST_SORT_TYPE.CREATOR]: true,
   };
 
   function determineSortFn() {
     let sortFn;
 
     if ($displayFilterMyLib.playlistActive) {
-      switch ($listSortId) {
-        case LIST_SORT_IDS.RECENTS:
+      switch ($listSortType) {
+        case LIST_SORT_TYPE.RECENTS:
           sortFn = () => sortPlaylistsBySpotify();
           break;
-        case LIST_SORT_IDS.AZ:
+        case LIST_SORT_TYPE.AZ:
           sortFn = (reverse) => sortPlaylistsAlphabetically(reverse);
           break;
-        case LIST_SORT_IDS.CREATOR:
+        case LIST_SORT_TYPE.CREATOR:
           sortFn = (reverse) => sortPlaylistsByCreator(reverse);
           break;
       }
     } else if ($displayFilterMyLib.albumActive) {
-      switch ($listSortId) {
-        case LIST_SORT_IDS.RECENTS:
+      switch ($listSortType) {
+        case LIST_SORT_TYPE.RECENTS:
           sortFn = () => sortAlbumsBySpotify();
           break;
-        case LIST_SORT_IDS.AZ:
+        case LIST_SORT_TYPE.AZ:
           sortFn = (reverse) => sortAlbumsAlphabetically(reverse);
           break;
-        case LIST_SORT_IDS.CREATOR:
+        case LIST_SORT_TYPE.CREATOR:
           sortFn = (reverse) => sortAlbumsByCreator(reverse);
           break;
       }
     } else if ($displayFilterMyLib.artistActive) {
-      if (LIST_SORT_IDS.RECENTS === $listSortId) {
+      if (LIST_SORT_TYPE.RECENTS === $listSortType) {
         sortFn = () => sortArtistsBySpotify();
-      } else if (LIST_SORT_IDS.AZ === $listSortId) {
+      } else if (LIST_SORT_TYPE.AZ === $listSortType) {
         sortFn = (reverse) => sortArtistsAlphabetically(reverse);
       }
     } else {
-      if (LIST_SORT_IDS.RECENTS === $listSortId) {
+      if (LIST_SORT_TYPE.RECENTS === $listSortType) {
         sortFn = () => sortMyLibBySpotify();
-      } else if (LIST_SORT_IDS.AZ === $listSortId) {
+      } else if (LIST_SORT_TYPE.AZ === $listSortType) {
         sortFn = (reverse) => sortMyLibAlphabetically(reverse);
       }
     }
@@ -67,15 +68,15 @@
   }
 
   function select(id) {
-    $listSortId = id;
+    $listSortType = id;
     const option = LIST_SORT_OPTIONS_MAP.get(id);
 
     if (option.canReverse) {
       SORT_ASC[id] = !SORT_ASC[id];
     } else {
       // reset all sorting
-      SORT_ASC[LIST_SORT_IDS.AZ] = true;
-      SORT_ASC[LIST_SORT_IDS.CREATOR] = true;
+      SORT_ASC[LIST_SORT_TYPE.AZ] = true;
+      SORT_ASC[LIST_SORT_TYPE.CREATOR] = true;
     }
 
     const mySortFn = determineSortFn();
@@ -91,20 +92,18 @@
 
 <div class="list-sort-options">
   <div class="content">
-    <div class="sort-by font-bottom-panel-small">Sort by</div>
+    <div class="sort-by font-1_3 font-bold">Sort by</div>
     <ul>
       {#each LIST_SORT_OPTIONS_MAP.entries() as [key, { id, label, canReverse }] (key)}
-        {@const isSelected = id === $listSortId}
+        {@const isSelected = id === $listSortType}
         {@const canShowOption =
           $displayFilterMyLib.playlistActive ||
           $displayFilterMyLib.albumActive ||
-          ($displayFilterMyLib.artistActive && key !== LIST_SORT_IDS.CREATOR) ||
-          (!$displayFilterMyLib.atLeastOneActive && key !== LIST_SORT_IDS.CREATOR)}
+          ($displayFilterMyLib.artistActive && key !== LIST_SORT_TYPE.CREATOR) ||
+          (!$displayFilterMyLib.atLeastOneActive && key !== LIST_SORT_TYPE.CREATOR)}
 
         {#if canShowOption}
-          <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-          <!-- svelte-ignore a11y-click-events-have-key-events -->
-          <li class:selected={isSelected} on:click={() => select(id)}>
+          <li class:selected={isSelected} use:onTap={() => select(id)}>
             <div class="label">
               <div class="text">
                 {label}
@@ -127,7 +126,7 @@
       {/each}
     </ul>
   </div>
-  <div class="close" on:click={close} on:keyup={close} role="button" tabindex="0">Cancel</div>
+  <div class="close" use:onTap={close}>Cancel</div>
 </div>
 
 <style>

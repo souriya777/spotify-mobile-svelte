@@ -1,4 +1,5 @@
 <script>
+  import { onTap } from '@js/event-utils';
   import SpotifyApi from '@js/SpotifyApi';
   import { userId } from '@js/store';
 
@@ -12,4 +13,4 @@
 </script>
 
 <input type="text" bind:value={name} placeholder="new playlist name" />
-<button on:click={create}>+playlist</button>
+<button use:onTap={create}>+playlist</button>
