@@ -28,4 +28,20 @@ function getTranslateXY(element) {
   };
 }
 
-export { BROWSER_DEVICE, isBrowserSupportTouchEvents, getTranslateXY };
+/**
+ * @param {HTMLElement} element
+ * @returns {number}
+ */
+function getWidth(element) {
+  if (!element) {
+    return 0;
+  }
+
+  const fullWidth = element.getBoundingClientRect().width;
+  const margin = parseFloat(getComputedStyle(element).marginInline) * 2;
+  const padding = parseFloat(getComputedStyle(element).paddingInline) * 2;
+  const borderWidth = parseFloat(getComputedStyle(element).borderWidth) * 2;
+  return fullWidth - padding - margin - borderWidth;
+}
+
+export { BROWSER_DEVICE, isBrowserSupportTouchEvents, getTranslateXY, getWidth };

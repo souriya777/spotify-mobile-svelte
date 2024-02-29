@@ -5,10 +5,8 @@
   import Showcase from '@lib/Showcase.svelte';
   import SpotifyApi from '@js/SpotifyApi';
 
-  let observer;
-
   function observeVisible(node) {
-    observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         isSideMenuVisible.set(entries[0].isIntersecting);
       },

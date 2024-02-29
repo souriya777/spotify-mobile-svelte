@@ -158,6 +158,7 @@ function removeView() {
   currentView().update((views) => [...views.slice(0, -1)]);
 }
 
+const fixedTopComponent = writable(null);
 const uiTimestamp = writable(-1);
 const resizeTimestamp = writable(-1);
 const screenHeight = writable(0);
@@ -165,6 +166,7 @@ const gridMode = writable(false);
 const isSideMenuVisible = writable(false);
 const playingRgb = writable([...DEFAULT_BACKGROUND_HIGHLIGHT_RGB]);
 const navigatingRgb = writable();
+const navigatingPriorityRgb = writable();
 const isNavigatingHasPriority = writable(false);
 const listSortType = writable(LIST_SORT_TYPE.RECENTS);
 const addAndSlideNextForMe = writable();
@@ -229,10 +231,12 @@ export {
   removeView,
   playingRgb,
   navigatingRgb,
+  navigatingPriorityRgb,
   isNavigatingHasPriority,
   listSortType,
   addAndSlideNextForMe,
   slidePrevAndRemoveForMe,
+  fixedTopComponent,
   uiTimestamp,
   resizeTimestamp,
   screenHeight,

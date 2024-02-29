@@ -44,7 +44,9 @@ function createPlayer(accessToken) {
 
     SPOTIFY_PLAYER.on('authentication_error', ({ message }) => {
       LOGGER.error('Failed to authenticate:', message);
-      SpotifyApi.forceAuthorization();
+      // FIXME
+      // SpotifyApi.forceAuthorization();
+      SpotifyApi.initAccessToken();
     });
 
     SPOTIFY_PLAYER.on('account_error', ({ message }) => {

@@ -160,6 +160,10 @@ test(`hexToRgb('231e48') is [35, 30, 72]`, async () => {
   expect(hexToRgb('#231e48')).toEqual([35, 30, 72]);
 });
 
+test(`lightenDarkenColor([120, 39, 61]) is [96, 31, 49]`, async () => {
+  expect(lightenDarkenColor([120, 39, 61])).toEqual([96, 31, 49]);
+});
+
 test(`lightenDarkenColor([120, 39, 61], -20) is [96, 31, 49]`, async () => {
   expect(lightenDarkenColor([120, 39, 61], -20)).toEqual([96, 31, 49]);
 });

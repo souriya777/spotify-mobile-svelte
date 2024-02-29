@@ -27,6 +27,7 @@ import {
   userDisplayName,
   trackUri,
   unavailableContextUri,
+  authorizationOk,
 } from '@js/store';
 import SpotifyUser from '@js/SpotifyUser';
 import SpotifyRepeatState from '@js/SpotifyRepeatState';
@@ -83,10 +84,17 @@ class SpotifyApi {
 
   goToAuthorizeUrl() {
     window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${
-      this.#CLIENT_ID
-    }&scope=${encodeURIComponent(this.#SCOPES)}&redirect_uri=${encodeURIComponent(
-      this.#REDIRECT_URI,
+      SpotifyApi.#CLIENT_ID
+    }&scope=${encodeURIComponent(SpotifyApi.#SCOPES)}&redirect_uri=${encodeURIComponent(
+      SpotifyApi.#REDIRECT_URI,
     )}`;
+  }
+
+  // TODO => use refresh token only ?
+  refreshToken() {
+    accessToken.set(null);
+    authorizationOk.set(false);
+    window.location.href = '/';
   }
 
   forceAuthorization() {
@@ -99,15 +107,15 @@ class SpotifyApi {
 
     const data = new URLSearchParams({
       code: authorizationCode,
-      redirect_uri: this.#REDIRECT_URI,
+      redirect_uri: SpotifyApi.#REDIRECT_URI,
       grant_type: 'authorization_code',
-      client_id: this.#CLIENT_ID,
-      client_secret: this.#CLIENT_SECRET,
+      client_id: SpotifyApi.#CLIENT_ID,
+      client_secret: SpotifyApi.#CLIENT_SECRET,
     }).toString();
 
     const headers = {
       'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: `Basic ${window.btoa(`${this.#CLIENT_ID}:${this.#CLIENT_SECRET}`)}`,
+      Authorization: `Basic ${window.btoa(`${SpotifyApi.#CLIENT_ID}:${SpotifyApi.#CLIENT_SECRET}`)}`,
     };
 
     try {
@@ -975,12 +983,12 @@ class SpotifyApi {
     return [...cloneItems];
   }
 
-  #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-  #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
-  #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
-  #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
-  #API_NOTIFICATION_DELAY_MS = Number(`${import.meta.env.VITE_API_NOTIFICATION_DELAY_MS}`);
-  #API_URL = 'https://api.spotify.com/v1';
+  static #CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+  static #CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+  static #REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
+  static #SCOPES = import.meta.env.VITE_SPOTIFY_SCOPES;
+  static #API_NOTIFICATION_DELAY_MS = Number(`${import.meta.env.VITE_API_NOTIFICATION_DELAY_MS}`);
+  static #API_URL = 'https://api.spotify.com/v1';
 
   /**
    * @param {string} userId
@@ -1018,7 +1026,11 @@ class SpotifyApi {
    */
   #isPlayerNotificationValid(timestamp) {
     const existingTimestamp = get(apiTimestamp);
-    return areTimestampsSeparateBy(existingTimestamp, timestamp, this.#API_NOTIFICATION_DELAY_MS);
+    return areTimestampsSeparateBy(
+      existingTimestamp,
+      timestamp,
+      SpotifyApi.#API_NOTIFICATION_DELAY_MS,
+    );
   }
 
   /** @param {SpotifyPlaybackState} playbackState */
@@ -1060,7 +1072,7 @@ class SpotifyApi {
   }
 
   #url(endpoint) {
-    return `${this.#API_URL}${endpoint}`;
+    return `${SpotifyApi.#API_URL}${endpoint}`;
   }
 
   /**
@@ -1174,7 +1186,9 @@ class SpotifyApi {
 
     if (API_STATUS.UNAUTHORIZED === status) {
       LOGGER.error('Spotify returns 401 -> UNAUTHORIZED');
-      this.forceAuthorization();
+      // FIXME
+      // this.forceAuthorization();
+      this.initAccessToken();
     } else if (API_STATUS.BAD_REQUEST === status) {
       LOGGER.error('SOURIYA... DO SOMETHING PLEASE 🕯️');
     } else if (API_STATUS.FORBIDDEN === status) {

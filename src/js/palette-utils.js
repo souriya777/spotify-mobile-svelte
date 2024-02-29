@@ -2,6 +2,7 @@ const DEFAULT_BACKGROUND_RGB = [18, 18, 18];
 const DEFAULT_TEXT_RGB = [255, 255, 255];
 const DEFAULT_BACKGROUND_ELEVATED_RGB = [26, 26, 26];
 const DEFAULT_BACKGROUND_HIGHLIGHT_RGB = [40, 40, 40];
+const TERTIARY_COLOR = [179, 179, 179];
 const BLENDED_COLOR_AFTER_START_COLOR_INDEX = 1;
 const CONTRAST_MIN_RATIO = 4.5;
 const RED_LUMINANCE = 0.2126;
@@ -171,7 +172,7 @@ function hexToRgb(hex) {
  * @param {number} percent
  * @returns
  */
-function lightenDarkenColor(rgb, percent) {
+function lightenDarkenColor(rgb, percent = DARKER_FACTOR) {
   let r = rgb[0];
   let g = rgb[1];
   let b = rgb[2];
@@ -201,6 +202,7 @@ export {
   DEFAULT_TEXT_RGB,
   DEFAULT_BACKGROUND_ELEVATED_RGB,
   DEFAULT_BACKGROUND_HIGHLIGHT_RGB,
+  TERTIARY_COLOR,
   DARKER_FACTOR,
   generatePalette,
   getPlayerBackgroundRgb,

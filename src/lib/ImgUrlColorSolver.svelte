@@ -7,7 +7,6 @@
     lightenDarkenColor,
     DEFAULT_BACKGROUND_HIGHLIGHT_RGB,
     DEFAULT_TEXT_RGB,
-    DARKER_FACTOR,
   } from '@js/palette-utils';
   import { navigatingRgb, playingRgb } from '@js/store';
   import ColorThief from 'colorthief';
@@ -53,7 +52,7 @@
       : contrastColor1 && !contrastColor2
         ? contrastColor1
         : [...DEFAULT_BACKGROUND_HIGHLIGHT_RGB];
-  $: blendContrastDarkerColor = lightenDarkenColor(blendContrastColor, DARKER_FACTOR);
+  $: blendContrastDarkerColor = lightenDarkenColor(blendContrastColor);
   $: highestColor = highestContrast(dominantColor, blendContrastColor, blendContrastDarkerColor);
   $: if (highestColor) {
     // UPDATE STORE

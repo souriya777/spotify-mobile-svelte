@@ -61,7 +61,7 @@ initSpotifyApi();
 test(`goToAuthorizeUrl() redirect to a generated a spotify-authorization-url"`, async () => {
   SpotifyApi.goToAuthorizeUrl();
   expect(window.location.href).toEqual(
-    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state%20user-follow-read%20playlist-modify-public%20playlist-modify-private%20user-library-modify&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
+    'https://accounts.spotify.com/authorize?response_type=code&client_id=be4ae675c4e84eae88327846078637a7&scope=streaming%20user-modify-playback-state%20user-read-currently-playing%20user-read-private%20user-read-email%20user-library-read%20playlist-read-private%20user-read-recently-played%20playlist-read-collaborative%20user-read-playback-state%20user-follow-read%20playlist-modify-public%20playlist-modify-private%20user-library-modify%20user-follow-modify&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fspotify-tokens%2F',
   );
 });
 

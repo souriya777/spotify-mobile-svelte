@@ -16,7 +16,8 @@
     <li>🎵song.:{$trackName}</li>
   </ul>
 
-  <button use:onTap={SpotifyApi.forceAuthorization}>🗑️ FORCE</button>
+  <button use:onTap={SpotifyApi.forceAuthorization}>🗑️FORCE</button>
+  <button use:onTap={SpotifyApi.refreshToken}>🪙token</button>
   <button
     use:onTap={() => {
       $player.activateElement();

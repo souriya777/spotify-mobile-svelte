@@ -3,6 +3,7 @@
     scrollTop,
     playingRgb as playingRgbStore,
     navigatingRgb as navigatingRgbStore,
+    navigatingPriorityRgb as navigatingPriorityRgbStore,
     isNavigatingHasPriority,
     playerFull,
     imageCoverUrl,
@@ -21,6 +22,9 @@
   }
   $: playingRgb = `rgb(${$playingRgbStore?.join(',')})`;
   $: navigatingRgb = `rgb(${$navigatingRgbStore?.join(',')})`;
+  $: navigatingPriorityRgb = $navigatingPriorityRgbStore
+    ? `rgb(${$navigatingPriorityRgbStore?.join(',')})`
+    : null;
   $: style = `
     --playing-rgb: ${playingRgb};
     --navigating-rgb: ${navigatingRgb};
@@ -37,7 +41,10 @@
 
 <svelte:head>
   {#if $isNavigatingHasPriority && !$playerFull}
-    <meta name="theme-color" content={navigatingRgb} />
+    <meta
+      name="theme-color"
+      content={navigatingPriorityRgb ? navigatingPriorityRgb : navigatingRgb}
+    />
   {:else}
     <meta name="theme-color" content={$playerFull ? playingRgb : 'var(--color-primary)'} />
   {/if}

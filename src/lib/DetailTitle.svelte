@@ -1,9 +1,7 @@
 <script>
-  import { scrollTop } from '@js/store';
-
   export let title = '';
-  export let canAnimate = false;
-  export let coverHeight = 0;
+  export let titleReachedHeader = false;
+  export let scrollTopTitle = 0;
 
   const TITLE_HEIGHT_PX = 16;
   const TITLE_HEIGHT_CALCULATED_PX = TITLE_HEIGHT_PX * 2;
@@ -14,26 +12,24 @@
 
   /** @type {HTMLElement} */
   let TITLE_HTML;
+  let y;
   let opacity;
-  let translateY;
 
-  $: if (TITLE_HTML && canAnimate) {
-    const scrollY = $scrollTop - coverHeight;
+  $: if (TITLE_HTML && titleReachedHeader) {
+    y = MAX_TRANSLATE_Y_PERCENT - scrollTopTitle * TRANSLATE_COEF;
+    y = Math.max(Math.trunc(y), 0);
 
-    opacity = scrollY * OPACITY_COEF;
+    opacity = scrollTopTitle * OPACITY_COEF;
     opacity = Math.min(parseFloat(opacity.toFixed(2)), 1);
-
-    translateY = MAX_TRANSLATE_Y_PERCENT - scrollY * TRANSLATE_COEF;
-    translateY = Math.max(Math.trunc(translateY), 0);
   }
 
-  $: if (!canAnimate) {
+  $: if (!titleReachedHeader) {
     opacity = 0;
   }
 
   $: style = `
+    transform: translateY(${y}%);
     opacity: ${opacity};
-    transform: translate3d(-5%, ${translateY}%, 0);
   `;
 </script>
 

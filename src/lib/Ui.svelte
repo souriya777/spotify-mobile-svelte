@@ -1,6 +1,12 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { VIEWS, uiTimestamp, resizeTimestamp, isSideMenuVisible } from '@js/store';
+  import {
+    VIEWS,
+    uiTimestamp,
+    resizeTimestamp,
+    isSideMenuVisible,
+    fixedTopComponent,
+  } from '@js/store';
   import {
     canRemoveView,
     loadView,
@@ -14,6 +20,7 @@
   import PlayerBottomPanel from '@lib/PlayerBottomPanel.svelte';
   import OptionsBottomPanel from '@lib/OptionsBottomPanel.svelte';
   import ListSortBottomPanelMini from '@lib/ListSortBottomPanelMini.svelte';
+  import { UI_SLIDE_DURATION_MS, loadComponent } from '@/js/ui-utils';
 
   export const slidePrevAndRemoveForMe = () => (isRemovingView = true);
   export const addAndSlideNextForMe = () => (isAddingView = true);
@@ -21,8 +28,7 @@
   export const goNextForMe = () => slideNext(true);
 
   const DOM_OPERATION_TIMEOUT_MS = 100;
-  const SLIDE_DURATION_MS = 450;
-  const SLIDE_STYLE = `transform ${SLIDE_DURATION_MS}ms cubic-bezier(.23,.7,.33,.91)`;
+  const SLIDE_STYLE = `transform ${UI_SLIDE_DURATION_MS}ms cubic-bezier(.23,.7,.33,.91)`;
   const SLIDE_SIDE_MENU_STYLE = `transform 100ms cubic-bezier(.67,.36,.3,.9)`;
   const TOUCH_AREA_WIDTH = 70;
   const PREV_VIEW_OFFSET_PERCENT = 30;
@@ -322,7 +328,7 @@
     setTimeout(() => {
       dispatch('removeSlide');
       setTimeout(() => cleanDomBinding(), DOM_OPERATION_TIMEOUT_MS);
-    }, SLIDE_DURATION_MS);
+    }, UI_SLIDE_DURATION_MS);
   }
 
   function cleanDomBinding() {
@@ -376,20 +382,29 @@
     </ul>
   {/key}
 
-  <div class="fixed" class:prevent-click={$isSideMenuVisible} bind:this={FIXED_HTML}>
+  <div class="fixed fixed--bottom" class:prevent-click={$isSideMenuVisible} bind:this={FIXED_HTML}>
     <PlayerMiniNav />
   </div>
 
-  <div class="fixed" class:prevent-click={$isSideMenuVisible}>
+  <div class="fixed fixed--bottom" class:prevent-click={$isSideMenuVisible}>
     <PlayerBottomPanel />
   </div>
 
-  <div class="fixed">
+  <div class="fixed fixed--bottom">
     <OptionsBottomPanel />
   </div>
 
-  <div class="fixed">
+  <div class="fixed fixed--bottom">
     <ListSortBottomPanelMini />
+  </div>
+
+  <div class="fixed fixed--top">
+    {#if $fixedTopComponent && $fixedTopComponent.viewName && $fixedTopComponent.props}
+      <svelte:component
+        this={loadComponent($fixedTopComponent.viewName)}
+        {...$fixedTopComponent.props}
+      />
+    {/if}
   </div>
 </div>
 
@@ -428,9 +443,16 @@
 
   .fixed {
     position: fixed;
-    bottom: 0;
     width: 100%;
     z-index: var(--z-index-near);
+  }
+
+  .fixed--bottom {
+    bottom: 0;
+  }
+
+  .fixed--top {
+    top: 0;
   }
 
   .isSliding {

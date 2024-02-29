@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import SpotifyApi from '@js/SpotifyApi';
-  import ViewDetail from '@lib/views/ViewDetail.svelte';
+  import ViewDetail from '@/lib/views/ViewDetail.svelte';
   import Tracks from '@lib/Tracks.svelte';
   import User from '@lib/User.svelte';
   import SpotifyTrackAdapter from '@js/SpotifyTrackAdapter';

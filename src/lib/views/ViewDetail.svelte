@@ -1,56 +1,125 @@
 <script>
   import { afterUpdate, onDestroy, onMount } from 'svelte';
-  import { onTap } from '@js/event-utils';
-  import SpotifyApi from '@js/SpotifyApi';
   import {
     isNavigatingHasPriority,
     navigatingRgb,
+    navigatingPriorityRgb,
     scrollTop,
-    shuffleState,
-    slidePrevAndRemoveForMe,
+    fixedTopComponent,
   } from '@js/store';
   import { lightenDarkenColor } from '@js/palette-utils';
   import DetailCover from '@lib/DetailCover.svelte';
-  import DetailTitle from '@lib/DetailTitle.svelte';
-  import Button from '@lib/Button.svelte';
-  import Svg from '@lib/svg/Svg.svelte';
   import DetailPlayPause from '@lib/DetailPlayPause.svelte';
+  import DetailActions from '@lib/DetailActions.svelte';
+  import DetailCoverArtist from '@/lib/DetailCoverArtist.svelte';
+  import DetailHeader from '@lib/DetailHeader.svelte';
+  import DetailTitleArtist from '@lib/DetailTitleArtist.svelte';
 
   export let title = '';
   /** @type {import('@js/spotify').SpotifyImage[]}*/
   export let images;
+  export let isArtist = false;
 
   const NB_PX_BEFORE_CHANGE_HEADER_BACKGROUND = 30;
+  const MARGIN_BLOCK_START_DESC_PX = 20;
 
   /** @type {HTMLElement} */
-  let HEADER_HTML;
-  /** @type {HTMLElement} */
   let DESC_HTML;
-  /** @type {HTMLElement} */
-  let IMG_HTML;
   /** @type {HTMLElement} */
   let GRADIENT_HTML;
   /** @type {HTMLElement} */
   let PLAY_PAUSE_BUTTON_HTML;
+  /** @type {HTMLElement} */
+  let ARTIST_TITLE_HTML;
+
   let DESC_HEIGHT = 0;
   let GRADIENT_HEIGHT = 0;
   let PLAY_PAUSE_BUTTON_HEIGHT = 0;
-  let FIXME_favorite = false;
   let fakePlayPauseStyle = '';
+  let imgHeight;
+  let lightColorRgb;
+  let darkColorRgb;
+  let backgroundColorRgb;
+  let titleArtistHeight;
 
-  $: IMG_HEIGHT = IMG_HTML?.clientHeight ?? 0;
-  $: DARKER_COLOR = $navigatingRgb ? lightenDarkenColor($navigatingRgb, -40) : [18, 18, 18];
+  $: if ($navigatingRgb) {
+    lightColorRgb = $navigatingRgb;
+    darkColorRgb = lightenDarkenColor($navigatingRgb);
+  }
+
+  $: HEADER_HEIGHT_PX =
+    parseInt(
+      getComputedStyle(document.documentElement).getPropertyValue('--height-detail-header'),
+    ) * 10;
   $: HALF_PLAY_PAUSE_BUTTON_HEIGHT = PLAY_PAUSE_BUTTON_HEIGHT / 2;
+  $: COVER_HEIGHT = isArtist
+    ? imgHeight - HEADER_HEIGHT_PX - titleArtistHeight
+    : imgHeight + MARGIN_BLOCK_START_DESC_PX;
   $: canDarkenHeaderBackground = $scrollTop >= NB_PX_BEFORE_CHANGE_HEADER_BACKGROUND;
-  $: descReachedHeader = IMG_HEIGHT != 0 && $scrollTop >= IMG_HEIGHT;
+  $: titleReachedHeader = $scrollTop >= COVER_HEIGHT;
+  const BACK_BUTTON_TRANSITION_NB_PX = 35;
+  // $: titleNearHeaderBegin =
+  //   imgHeight - HEADER_HEIGHT_PX - titleArtistHeight - BACK_BUTTON_TRANSITION_NB_PX;
+  $: titleNearHeaderBegin =
+    imgHeight - HEADER_HEIGHT_PX - titleArtistHeight - BACK_BUTTON_TRANSITION_NB_PX;
+  $: titleNearHeaderEnd = titleNearHeaderBegin + BACK_BUTTON_TRANSITION_NB_PX;
   $: initialTranslateYPlayPause = GRADIENT_HEIGHT - PLAY_PAUSE_BUTTON_HEIGHT;
-  $: canDisplayFakePlayPauseButton = $scrollTop >= initialTranslateYPlayPause;
+  $: canDisplayFakePlayPauseButton = !isArtist && $scrollTop >= initialTranslateYPlayPause;
+  $: scrollY = $scrollTop - COVER_HEIGHT;
+  $: scrollTopTitle = $scrollTop - COVER_HEIGHT;
+  $: console.log('scrollY', scrollY, '$scrollTop', $scrollTop, 'COVER_HEIGHT', COVER_HEIGHT);
+  $: playPauseButtonToHeaderBarHeight =
+    imgHeight - HEADER_HEIGHT_PX + PLAY_PAUSE_BUTTON_HEIGHT - $scrollTop;
+  $: startFake = imgHeight - HEADER_HEIGHT_PX - $scrollTop;
+  $: canAnimateFakePlayPause = startFake <= 0 && startFake >= -HALF_PLAY_PAUSE_BUTTON_HEIGHT;
+  // $: console.log(
+  //   '$scrollTop',
+  //   $scrollTop,
+  //   'HEADER_HEIGHT_PX',
+  //   HEADER_HEIGHT_PX,
+  //   'playPauseButtonToHeaderBarHeight',
+  //   playPauseButtonToHeaderBarHeight,
+  //   'startFake',
+  //   startFake,
+  //   'canAnimate',
+  //   titleReachedHeader,
+  //   'canAnimateFakePlayPause',
+  //   `${canAnimateFakePlayPause ? '🟢' : '🔴'}`,
+  // );
 
-  $: headerStyle = canDarkenHeaderBackground ? `background: rgb(${DARKER_COLOR})` : '';
+  $: if (canDarkenHeaderBackground) {
+    backgroundColorRgb = darkColorRgb;
+    $navigatingPriorityRgb = darkColorRgb;
+  } else {
+    backgroundColorRgb = lightColorRgb;
+    $navigatingPriorityRgb = null;
+  }
+
+  $: if (isArtist) {
+    $fixedTopComponent = {
+      viewName: 'DetailHeaderBar',
+      props: {
+        title,
+        // FIXME TODO here the bug
+        scrollY: playPauseButtonToHeaderBarHeight,
+        scrollTopTitle,
+        backgroundColorRgb,
+        // FIXME to delete canAnimate ?
+        canAnimate: titleReachedHeader,
+        titleReachedHeader,
+        scrollTopBegin: titleNearHeaderBegin,
+        scrollTopEnd: titleNearHeaderEnd,
+        canAnimateFakePlayPause,
+        floating: true,
+      },
+    };
+  }
+
   $: style = `
-    --color-base: rgb(${$navigatingRgb?.join(',')});
-    --color-darker: rgb(${DARKER_COLOR?.join(',')});
+    --color-gradient-1: rgb(${lightColorRgb});
+    --color-gradient-2: rgb(${darkColorRgb});
     --height-desc: -${DESC_HEIGHT}px;
+    --margin-block-start-desc: ${MARGIN_BLOCK_START_DESC_PX}px;
   `;
 
   $: if (canDisplayFakePlayPauseButton) {
@@ -67,6 +136,7 @@
 
   onDestroy(() => {
     $isNavigatingHasPriority = false;
+    $fixedTopComponent = null;
   });
 
   afterUpdate(() => {
@@ -83,71 +153,65 @@
 </script>
 
 <div class="view" {style}>
-  <div class="header" style={headerStyle} bind:this={HEADER_HTML}>
-    <div class="back" use:onTap={() => $slidePrevAndRemoveForMe?.()}>
-      <Svg name="back" size={16} />
+  {#if isArtist}
+    <div class="sticky-cover-artist">
+      <DetailCoverArtist
+        {images}
+        alt={title}
+        {backgroundColorRgb}
+        on:imgHeight={(e) => (imgHeight = e.detail)}
+      />
     </div>
-    <DetailTitle {title} canAnimate={descReachedHeader} coverHeight={IMG_HEIGHT} />
-  </div>
+  {:else}
+    <DetailHeader {title} {scrollY} {scrollTopTitle} {backgroundColorRgb} {titleReachedHeader} />
+  {/if}
 
-  <div class="fake-play-pause" class:canDisplayFakePlayPauseButton style={fakePlayPauseStyle}>
-    <DetailPlayPause />
-  </div>
+  {#if canDisplayFakePlayPauseButton}
+    <div class="fake-play-pause" style={fakePlayPauseStyle}>
+      <DetailPlayPause />
+    </div>
+  {/if}
 
   <div class="gradient" bind:this={GRADIENT_HTML}>
-    <div class="img" bind:this={IMG_HTML}>
-      <DetailCover {images} alt={title} canAnimate={!descReachedHeader} />
-    </div>
+    {#if !isArtist}
+      <div class="sticky-cover">
+        <DetailCover
+          {images}
+          alt={title}
+          canAnimate={!titleReachedHeader}
+          on:imgHeight={(e) => (imgHeight = e.detail)}
+        />
+      </div>
+    {/if}
 
     <div class="desc" bind:this={DESC_HTML}>
-      <div class="font-2_4 font-bold line-height-1_1">
-        <slot name="desc__title" />
-      </div>
-
-      <div class="desc__detail two-rows font-1_3 tertiary">
-        <slot name="desc__detail" />
-      </div>
-
-      <div class="desc__owner font-1_4 font-bold line-height-2_2">
-        <slot name="desc__owner" />
-      </div>
-
-      <div class="desc__type-year font-1_4 line-height-2_2 tertiary">
-        <slot name="desc__type-year" />
-      </div>
-
-      <div class="actions">
-        {#if FIXME_favorite}
-          <Button
-            type="secondary"
-            svg="heart-full"
-            hasAccent={true}
-            accent={true}
-            callback={() => (FIXME_favorite = false)}
+      {#if isArtist}
+        <div bind:this={ARTIST_TITLE_HTML}>
+          <DetailTitleArtist
+            title={`${title},${imgHeight},${HEADER_HEIGHT_PX},${titleArtistHeight}`}
+            backgroundColorRgb={darkColorRgb}
+            on:title-artist-height={(e) => (titleArtistHeight = e.detail)}
           />
-        {:else}
-          <Button type="secondary" svg="heart" callback={() => (FIXME_favorite = true)} />
-        {/if}
-
-        <div>
-          <Button
-            type="secondary"
-            svg="shuffle"
-            svgFlexJustify="flex-start"
-            accent={$shuffleState}
-            bottomDot={$shuffleState}
-            callback={() => SpotifyApi.shuffle()}
-          />
-
-          <div
-            class="play-pause-button"
-            class:canDisplayFakePlayPauseButton
-            bind:this={PLAY_PAUSE_BUTTON_HTML}
-          >
-            <DetailPlayPause />
-          </div>
         </div>
-      </div>
+      {:else}
+        <div class="desc__title two-rows font-2_4 font-bold line-height-1_1">
+          <slot name="desc__title" />
+        </div>
+
+        <div class="two-rows font-1_3 tertiary">
+          <slot name="desc__detail" />
+        </div>
+
+        <div class="desc__owner font-1_4 font-bold line-height-2_2">
+          <slot name="desc__owner" />
+        </div>
+
+        <div class="desc__type-year font-1_4 line-height-2_2 tertiary">
+          <slot name="desc__type-year" />
+        </div>
+      {/if}
+
+      <DetailActions {isArtist} bind:PLAY_PAUSE_BUTTON_HTML />
     </div>
   </div>
 
@@ -162,44 +226,30 @@
     padding-block-end: var(--height-nav-and-player-mini);
   }
 
-  .header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    background-color: var(--navigating-rgb);
-    transition: background-color var(--transition-background);
-    z-index: var(--z-index-nearest);
-  }
-
-  .back {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: var(--height-detail-header);
-    padding-inline-start: var(--padding-inline-view-content);
-  }
-
-  .img {
+  .sticky-cover {
     position: sticky;
     top: var(--height-detail-header);
     display: flex;
     justify-content: center;
   }
 
+  .sticky-cover-artist {
+    position: sticky;
+    top: 0;
+  }
+
   .gradient {
     background: linear-gradient(
       to bottom,
-      var(--color-base) 0%,
-      var(--color-darker) 60%,
-      var(--color-darker) 80%,
+      var(--color-gradient-1) 0%,
+      var(--color-gradient-2) 60%,
+      var(--color-gradient-2) 80%,
       var(--color-primary) 100%
     );
     transition: background var(--transition-background);
   }
 
   .desc {
-    margin-block-start: 2rem;
     background-color: transparent;
   }
 
@@ -214,34 +264,23 @@
     padding-block-end: calc(var(--height-nav) + var(--height-player-mini) + 1rem);
   }
 
+  .desc__title {
+    margin-block-start: var(--margin-block-start-desc);
+  }
+
   .desc__owner {
     margin-block-start: 0.8rem;
   }
 
   .desc__type-year {
-    margin-block-start: 1rem;
-  }
-
-  .actions {
-    display: flex;
-    justify-content: space-between;
-    margin-block: 0.8rem 1.8rem;
-  }
-
-  .play-pause-button {
-    display: inline-block;
+    margin-block: 1rem 0.8rem;
   }
 
   .fake-play-pause {
     position: sticky;
     top: var(--height-detail-header);
     right: var(--padding-inline-view-content);
-    display: none;
     float: right;
     z-index: var(--z-index-nearest);
-  }
-
-  .canDisplayFakePlayPauseButton.fake-play-pause {
-    display: block;
   }
 </style>

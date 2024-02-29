@@ -12,7 +12,23 @@ DRY -> Single Source of Truth
 
 # MVP
 
+- fonts in cache
+- improve debug display
+- can (de)activate <img> loading
+  -- placeholder image
+- can I play song with very poor connection ?
+- track vitals initial loading
+  -- should I enable (de)activation ?
+  -- should I cache few resources (eg. Liked Songs)
+
+- transmettre un "scroll Y" utile
+- mocker le tout
 - feat(artist-detail): ui/ux
+  -- `canAnimate` & `canShowFakePlayPause`
+  -- rename `scrollY` => it can be confused => in fact it's `descToHeaderBarLength`
+  -- externalize in 2 separate Components FakePlayPause
+  -- factorize `DetailCover`
+  -- clean
   // TODO see more 5->10
   -- TODO filter "Popular releases" (4) "Albums" "Singles and EP" "Compilations" (DESKTOP)
   -- sort by date-desc discography
@@ -103,6 +119,7 @@ async function sortAlbumsBySpotify() {
   }
 ```
 
+- FIXME SpotifyApi.forceAuthorization();
 - perf: mylib or search view always do call api when "backed" (eg. when goDetail)
 - perf(): test `slow 3G`
 - perf(sync): FIXME do the same with mylib ?
